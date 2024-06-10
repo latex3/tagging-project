@@ -1,8 +1,6 @@
-# tagging-project
+# The LaTeX Tagged PDF repository
 
-Issues related to the tagging project
-
-<https://www.latex-project.org/publications/indexbytopic/pdf/>
+See <https://www.latex-project.org/publications/indexbytopic/pdf/>
 
 This repository does not contain any code.
 
@@ -12,7 +10,7 @@ project. The code for this project is split over several other repositories
 place to  keep any more general topics or issues that cut across the 
 different repositories in a single place. 
 
-If an issue recorded here requires changes in the other repositories 
+If an issue that is recorded here requires changes in the other repositories 
 sub-issues can then be opened (by us) in those repositories and linked back, 
 or, if such changes are confined to a single repository, the issue could be 
 transferred there -- whatever is more appropriate. 
@@ -20,6 +18,10 @@ transferred there -- whatever is more appropriate.
 ## Examples documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project
 
 Under "Discussions" there is a page with [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72) that have been produced March 2024 using the then current prototype code. Check them out.
+
+## Using the LaTeX prototype for accessible PDF
+
+We have written a few guidelines explaining how to [use the prototype for generating accessible PDFs](https://github.com/latex3/tagging-project/blob/main/prototype-usage-instructions.md). The documentation will be updated whenever we alter the still temporary interfaces.
 
 ## License
 
