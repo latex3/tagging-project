@@ -19,6 +19,8 @@ transferred there -- whatever is more appropriate.
 
 Under "Discussions" there is a page with [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72) that have been produced March 2024 using the then current prototype code. Check them out.
 
+PDF 1.7 versions of the documents (also generated automatically by altering the `\DocumentMetadata` declaration) are now also available, see the page [PDF/UA-1 Examples by the LaTeX Project](https://github.com/latex3/tagging-project/discussions/82) for details.
+
 ## Using the LaTeX prototype for accessible PDF
 
 We have written a few guidelines explaining how to [use the prototype for generating accessible PDFs](https://github.com/latex3/tagging-project/blob/main/prototype-usage-instructions.md). The documentation will be updated whenever we alter the still temporary interfaces.
