@@ -1,0 +1,118 @@
+
+% !TEX TS-program = lualatex-dev
+
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+%\tagpdfsetup{math/mathml/write-dummy}
+\documentclass{article}
+
+\setcounter{secnumdepth}{-1}
+
+\usepackage[sfdefault]{noto-sans}
+\usepackage{notomath}
+\input{glyphtounicode-ntx}
+
+\AtBeginDocument{\prehyphenchar"AD }
+
+\begin{document}
+
+
+\title{Sample MathML Expressions}
+\maketitle
+
+\section{Color matrices}
+
+For each color space is defined a $3\times 3$ forward matrix $MX_i$
+for converting an RGB triplet to a CIE XYZ tristimulus value.  This
+conversion takes the form $XYZ = MX_i \cdot RGB$.  The forward
+matrices $MX$ are calculated from the color primaries and white point
+using the equation:
+\[
+MX_i =
+\left[
+  \begin{Bmatrix} r_i \\ g_i \\ b_i \end{Bmatrix}
+  \times
+  \left(
+  \frac{w_i}{w_i \cdot y}
+  \cdot
+  \begin{Bmatrix} r_i \\ g_i \\ b_i \end{Bmatrix}^{-1}
+  \right)
+\right]^T
+\]
+where
+\begin{description}
+\item[\mdseries $i$]
+  is one of SD, HD and UHD (HDR uses same matrix as UHD),
+  
+\item[\mdseries $r_i, g_i, b_i$ and $w_i$]
+
+  are the $xyz$ triplets for the red, green, blue primaries and the
+  white point of the color space $i$,
+  
+\item[\mdseries $w_i \cdot y$] is the $y$ value
+  of $w_i$, an $xyz$ value being an $xy$ chromaticity coordinate
+  appended with $z = 1 - x - y$, and
+
+\item[\mdseries $\cdot$ (dot)]
+  indicates the matrix product or inner product.
+\end{description}
+
+The resulting matrices are
+\begin{align*}
+  MX_{HD} &=
+  \begin{Bmatrix}
+    0.412391 & 0.357584 & 0.180481 \\
+    0.212639 & 0.715169 & 0.072192 \\
+    0.019331 & 0.119195 & 0.950532 
+  \end{Bmatrix}
+\\
+  MX_{SD} &=
+  \begin{Bmatrix}
+    0.430554 & 0.341550 & 0.178352 \\
+    0.222004 & 0.706655 & 0.071341 \\
+    0.020182 & 0.129553 & 0.939322 
+  \end{Bmatrix}
+\\
+  MX_{UHD} &=
+  \begin{Bmatrix}
+    0.636958 & 0.144617 & 0.168881 \\
+    0.2627 & 0.677998   & 0.059302 \\
+    0      & 0.028073   & 1.060990    
+  \end{Bmatrix}
+\end{align*}
+
+The matrices for converting from linear RGB values in HD space to linear RGB values in the SD or
+UHD color space are obtained by combining forward and inverse matrices. The numerical values for
+the matrices are:
+\begin{align*}
+  M_S &= (MX_{SD})^{-1} \cdot MX_{HD} =
+  \begin{Bmatrix}
+     0.957815 & 0.0421852 & 0 \\
+     0 & 1. & 0 \\
+     0 & -0.0119341 & 1.01193
+  \end{Bmatrix}
+\\
+  M_U &= (MX_{UHD})^{-1} \cdot MX_{HD} =
+  \begin{Bmatrix}
+    0.627404 & 0.329283 & 0.043313 \\
+    0.069098 & 0.919540 & 0.011362 \\
+    0.016391 & 0.088013 & 0.895595
+  \end{Bmatrix}
+\end{align*}
+
+\section{Transfer functions}
+
+The domain and range are $[0,1]$ for all transfer functions used in this paper.
+
+\end{document}
+
+

@@ -1,0 +1,71 @@
+%% Overview over tagpdfsetup keys
+%% The keys are split in a number of key pathes. 
+\tagpdfsetup{table/header-rows=1}
+\begin{tabular}{lllll}
+\toprule
+new key name    & old key name & value            &type   & defined in \\\midrule
+ ???            & root-AF      & string           &code   &tagpdf-struct\\[4pt]\midrule
+%% activate key path
+%% activate` is used for keys that enable 
+%% general, typically document wide tagging options 
+%% related  to the PDF processing.
+
+activate        & activate        & boolean         &meta  & tagpdf \\
+activate/all    & activate-all    & boolean         &meta & tagpdf\\
+activate/mc     & activate-mc     & boolean         &bool  & tagpdf\\  
+activate/spaces & interwordspace  & boolean         &code  & tagpdf-space\\
+activate/struct & activate-struct & boolean         &bool  & tagpdf\\  
+activate/struct-dest & no-struct-dest&boolean       &bool  & tagpdf\\
+activate/tagunmarked& tagunmarked & boolean         &bool & tagpdf\\
+activate/tree   & activate-tree   & boolean         &bool  & tagpdf\\[4pt]\midrule  
+% temporary until tagging-sockets are in the kernel:
+% activate/socket & ---             & boolean         & bool & tagpdf\\
+%% role key path. For everything related to tag and attribute names
+%% adds mathml to the global rolemap, should perhaps be default
+role/mathml-tags & mathml-tags    & boolean          &bool  & tagpdf-roles\\
+role/new-tag     & add-new-tag    & string           &code  & tagpdf-roles\\
+role/new-attribute&newattribute   & string           &code  & tagpdf-struct\\
+% values: latex, pdf, default is latex, with pdf only PDF-tags are used
+role/map-tags      & ---            & choice           & code & tagpdf-roles\\[4pt]\midrule
+%% debug key path
+%% for logging and showing
+debug/show       &various          &choice            &code  & various \\ 
+debug/show=para  & paratagging-show&    ---           &code  & tagpdf-user\\
+debug/show=paraOff&                &    ---           &code  & tagpdf-user\\
+debug/show=spaces & show-spaces    &    ---           &code  & tagpdf-spaces\\
+debug/show=spacesOff& ---          &    ---           &code  & tagpdf-spaces\\
+debug/log        & log             & choice           &code  & tagpdf \\
+debug/uncompress & uncompress      &  ---             &code  & tagpdf\\[4pt]\midrule  
+%% viewer key path.
+%% viewer keys influence some display options in a pdf viewer. 
+%% There is an overlap with similar "non-tagging" options. 
+% TODO viewer/display-title   
+%% show mathml-files in attachment pane (old mathml-panel) 
+viewer/pane/mathml &  ---          &  boolean         &bool  &latex-lab-math (dev)\\
+viewer/pane/mathsource& ---        &boolean           &bool  &latex-lab-math (dev)\\
+viewer/startstructure & ---        &number            &code  &tagpdf-tree \\[4pt]\midrule
+%%% Document element keys
+%%  page key path 
+page/tabsorder  &tabsorder         & choice          & code & tagpdf\\   
+page/exclude-header-footer & exclude-header-footer &choice & code &tagpdf-user\\[4pt]\midrule
+%% para key path
+para/tagging     &paratagging      &boolean          &bool  &tagpdf-user\\
+para/tag         &paratag          &string           &code  &tagpdf-user\\
+para/maintag     &---              &string           &code  &tagpdf-user\\
+para/flattened   &---              &boolean          &bool  &tagpdf-user\\[4pt]\midrule
+%% math key path
+% use the /Alt key, currently clashes with mathml-AF in foxit, 
+% so false if mathml handling is activated
+math/alt/use     &---              &boolean          &bool  &latex-lab-math\\
+math/mathml/write-dummy & ---      &---              &code  &latex-lab-math\\
+% mathml source files:
+math/mathml/sources &---           & clist           &clist &latex-lab-math\\
+math/mathml/AF      &---           &boolean          &bool  &latex-lab-math\\
+math/tex/AF       & ---            &boolean          &bool  &latex-lab-math\\[4pt]\midrule
+% TODO math/alt/type = source|manual|     (later)                                                                               
+%% table key path
+% true/false/layout
+table/tagging     & table-tagging  &choice           &code  &latex-lab-table\\
+table/header-rows & table-header-rows& clist         &clist &latex-lab-table\\
+\bottomrule
+\end{tabular}

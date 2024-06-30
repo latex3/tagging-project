@@ -1,0 +1,20 @@
+#!/bin/bash
+# validate (or not)  files to Arlington PDF 2.0 profile
+# assumes verapdf arlington-pdf-model-checker script or bat file is in the path
+
+cd pdf20
+
+rm -f arlington.log arlington2.log
+for i in  *.pdf
+do
+(
+echo ""
+echo "======================"
+echo $i
+echo "----------------------"
+arlington-pdf-model-checker $i | tee -a arlington.log  |  grep isCompliant 
+echo ""
+echo "======================"
+echo ""
+) | tee -a arlington2.log
+done

@@ -1,0 +1,213 @@
+\DocumentMetadata{
+ lang=en,
+   pdfversion=2.0,
+   pdfstandard=ua-2,
+   uncompress,
+   pdfstandard=a-4f,
+   testphase = {phase-III,math,title}}
+ % \tagpdfsetup{math/mathml/write-dummy}
+ 
+\documentclass[a4paper,12pt,twoside]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+%% Define a compact list environment
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%      Specify whether exam, resit/delayed 1st sit or coursetest     %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\ctype
+\ctype=2	%   1    for Main Series UG Examination,  
+ 		%   2    for ALL  Resit/Delayed First Sit, 
+             	%   3    for Coursetest
+              	%   4    for Delayed  First Sit Main Series UG Examination,  
+%% See phyexam.sty for definitions of \ctype options.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx,amsmath,amsfonts,ifthen,calc, phyexam, latexsym, amssymb}
+\hypersetup{pdftitle=MODULE TITLE EXAM}
+\usepackage[mathscr]{euscript}
+\usepackage{pdfcomment}  % Use to insert alt-text for figures as tooltips
+\pagestyle{exambody}
+\ExplSyntaxOn
+\makeatletter
+\pdfxform_new:nnn {tooltip/AP}{}
+  { { \opacity_select:n{0}\rule{\paperwidth}{\paperheight} }}
+\pdf_object_new:n {tooltip/AP}
+\pdf_object_write:nne {tooltip/AP}{dict}{/N <</Yes~\pdfxform_ref:n{tooltip/AP}~/Off~\pdfxform_ref:n{tooltip/AP}>>}
+\renewcommand{\pc@annot@tooltip}%
+{%
+  /TU~(\pc@pdfenc@contents)\space%
+  /Contents~(\pc@pdfenc@contents)\space%<<<<<<<<<<<<
+  /T~(tooltip \thezref@unique)\space%
+  /C~[ ]\space%
+  /FT/Btn\space%
+  /F~516\space% Print=true + ToggleNoView = false instead of 768
+  /Ff~65536\space%
+  /H/N\space%
+  /BS~<< /W~0 >>\space%
+  /AP~\pdf_object_ref:n{tooltip/AP}
+}
+\ExplSyntaxOff
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  Specify Academic Session. This must be in the format 201X--1X+1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\renewcommand{\cyear}{2021-2}  
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     Set Course Title, Code, Rubric, Time
+%%%     Choose one of the rubrics.
+%%%     State Author or Paper Coordinator
+%%%     Set Version Number, default =1  or as advised by Examinations Office.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ctitle}{MODULE TITLE}
+\newcommand{\ccode}{PHY-XXXXY}
+\newcommand{\crubricone}{
+\textbf{Timings}\\
+This examination paper will be available for 24 hours, from 9:30AM UK time.\\
+It is recommended you spend a maximum of \textbf{2 hours} completing this examination. 
+Students entitled to Assessment Adjustments: You should apply any
+extra or rest break time to which you are entitled in addition, up to the maximum 24-hour limit.\\\\
+\textbf{Instructions}\\
+Answer \textbf{ANY THREE out of the four questions}\\\\
+You are advised to spend an equal amount of time on each question.\\
+The breakdown of marks within each question is indicated by the percentage figures in square brackets on the right.\\\\
+\textbf{Word count}\\
+No question in this assessment has a maximum word count. You are expected to include concise and clear explanations in your working. No question requires prose answers beyond brief sentences.\\\\
+\textbf{Additional materials}\\
+There are no additional materials for this paper.
+}
+\newcommand{\crubrictwo}{
+\textbf{Academic Integrity}\\
+To maintain academic integrity students are required:
+\begin{itemize*}
+\item Not to keep an electronic copy of this paper or share the content with others.
+\item To ensure that all work produced is solely their own. Students are
+  advised that their work will be checked using text matching software
+  to determine any similarity with the work of other students or with
+  other published materials.
+\item To be aware that the University policy regarding plagiarism and
+  collusion will apply to this examination.
+  \href{https://www.uea.ac.uk/about/university-information/university-governance/academic-calendar/section-3/general-regulations/university-policy-on-plagiarism-and-collusion}{You
+  can view the policy here}.
+\end{itemize*}
+\textbf{Submission}
+\begin{itemize*}
+\item The submission point for this examination will close at 9:30AM
+  UK time, 24 hours after being made available. It is recommended that you submit your exam script as soon as completed.
+\item All answers must be submitted as a \textbf{SINGLE} Word or pdf
+  document (and you \textbf{MUST} include your student number in the file name), unless otherwise instructed.
+\item Guidance on submitting un-typed answers, such as diagrams and
+  graphs, can be found on Blackboard, below this paper.
+\end{itemize*}
+} 
+
+\newcommand{\ctime}{2 Hours}
+\newcommand{\cauthor}{Dr Module Organiser, PHY}
+\newcommand{\cversion}{Version 1}
+
+%\cpnumbersetting THIS APPLIES ONLY TO CONCESSION PAPERS, NO CHANGE OTHERWISE.
+%\newcommand{\cpnumber}{1000354672}    %concession paper student registration number, blank out if needed.
+\newcommand{\cpnumber}{\phantom{XXXXXXX}} %concession paper student registration umber 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%       Put your own macros here      %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{phymacros}   % Put user-defined commands in this file and uncomment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Document starts         %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\titlep
+%\baselineskip=22pt  % Not used.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%             General instructions to candidates (if required)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Not used
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%              Begin exam proper          %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{center}
+% \textbf{PART I}\\  %Uncomment if dividing exam into parts
+Answer \emph{THREE} of the questions 1--4
+%\end{center}
+  
+\questionsbegin  % This begins enumerating the questions 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Question 1                 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item
+  Answer \emph{all} parts (a)--(c) % Instructions can be put here
+  \qitemsbegin %If different parts of the question are in different files, put \qitemsbegin outside
+  \input{Q1ab.tex}
+  \input{Q1c.tex}
+  \qitemsend
+  \clearpage  %Use clearpage if needed to begin next question on a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Question 2                 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item 
+  Answer \emph{all} parts (a)--(c)
+  \input{Q2.tex}
+
+%\questionsend  %If dividing into several parts, put a \questionsend command at the end of each part
+
+\clearpage
+
+%% Unomment and modify as needed to begin the next part:
+%\begin{center}
+%  \textbf{PART II}\\
+%Answer \emph{EITHER} Question 3 \emph{OR} Question 4
+%\end{center}
+
+% Reset qnum if exam broken into parts, necessitating interrupting \questionsbegin ... \questionsend:
+%\questionsbegin \setcounter{qnum}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Question 3                 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item 
+  Answer \emph{all} parts (a)--(c)
+  \input{Q3.tex}
+
+%\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Question 4                 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item \input{Q4.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                  END OF PAPER                %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}   \bf END OF PAPER  \end{center}  \vfill
+\thispagestyle{end}
+\questionsend
+
+\end{document} 

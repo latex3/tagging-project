@@ -1,0 +1,201 @@
+
+%%%% PHY exam style %%%%%%%%%
+%%%% Originally created for MTH. 2018--- updated by JS with the help of Sam Morley
+%%%% This style file has been amended as needed by Magnus Borgh for PHY needs. Solutions are frequently ad hoc and less than elegant. Use with caution and be prepared to make own modifications, but do so with care.
+
+\usepackage{verbatim}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\usepackage[top=1.0in,bottom=1.0in,right=1.0in,left=1.0in]{geometry}
+\setlength\headsep{1.7cm}
+
+
+\newcommand{\ps@exambody}{
+\renewcommand\@oddhead{\hfil\textbf{\thepage}\hfil\oddpagehead{\ccode}{\cversion}}
+%\renewcommand\@evenhead{\evenpagehead{\ccode}{\cversion}\hfil\textbf{-
+%\thepage~-}\hfil}
+\renewcommand\@evenhead{\hfil\textbf{\thepage}\hfil\oddpagehead{\ccode}{\cversion}}
+\renewcommand{\@evenfoot}{%\bf\ccode \hfill \cversion
+}
+}
+
+
+
+%%%%  Question counters    %%%%%%%%%%
+\newcounter{qnum}    \newcounter{qitem}    \newcounter{qqitem}
+\setcounter{qnum}{1} \setcounter{qitem}{1}  \setcounter{qqitem}{1}
+\newcommand{\questionsbegin}{\begin{list}{\bf\arabic{qnum}.}
+    {\usecounter{qnum}\setlength{\rightmargin}{-0cm}
+      \setlength{\leftmargin}{0.55cm}}
+    \setlength{\parskip}{12pt}
+  }
+\newcommand{\questionsend}{\end{list}}
+
+\newcommand{\qitemsbegin}{\begin{list}{(\alph{qitem})}
+    {\usecounter{qitem}
+      \setlength{\rightmargin}{-0cm}
+      \setlength{\leftmargin}{0.6cm}
+      \setlength{\itemsep}{12pt}
+    }
+    \setlength{\parskip}{12pt}
+  }
+\newcommand{\qitemsend}{\end{list}}
+
+\newcommand{\qqitemsbegin}{\begin{list}{(\roman{qqitem})}
+    {\usecounter{qqitem}
+      \setlength{\rightmargin}{-0cm}
+      \setlength{\leftmargin}{0.7cm}
+      \setlength{\itemsep}{2pt}
+      % \setlength{\topsep}{100pt}
+    }
+    \setlength{\parskip}{12pt}
+  }
+\newcommand{\qqitemsend}{\end{list}}
+
+
+%\renewcommand{\@oddfoot}{\bf
+%%\ccode \hfill   PLEASE TURN OVER \hfill \cversion}}
+%\hfill   PLEASE TURN OVER }}
+
+
+
+
+\newcommand\oddpagehead[2]{\parbox[t]{0pt}{%
+                          \makebox[0pt][r]{{#1}}\\%
+                          \makebox[0pt][r]{{#2}}}}
+\newcommand\evenpagehead[2]{\parbox[t]{0pt}{%
+                           \makebox[0pt][l]{{#1}}\\%
+                           \makebox[0pt][l]{{#2}}}}
+
+% activated by \pagestyle{end}
+\newcommand{\ps@end}{
+\renewcommand\@oddhead{\hfil\textbf{\thepage}\hfil\oddpagehead{(\ccode)}{\cversion}}
+%\renewcommand\@evenhead{\evenpagehead{(\ccode)}{\cversion}\hfil\textbf{-
+%\thepage~-}\hfil}
+\renewcommand\@evenhead{\hfil\textbf{\thepage}\hfil\oddpagehead{(\ccode)}{\cversion}}
+\renewcommand{\@evenfoot}{}   
+\renewcommand{\@oddfoot}{}   
+}
+
+
+
+
+\newcommand{\cyear}{2018 --19}  
+\ifnum\ctype=1 \newcommand{\ctext}{June Assessment Period \cyear}\else
+\ifnum\ctype=12 \newcommand{\ctext}{Main Series UG Online Examination\, \cyear}\else
+\ifnum\ctype=14 \newcommand{\ctext}{Main Series UG/PG Examination\, \cyear}\else
+\ifnum\ctype=2 \newcommand{\ctext}{August Assessment Period \cyear}\else
+\ifnum\ctype=22 \newcommand{\ctext}{UG Reassessment or Delayed First
+  Sit Online Examination\, \cyear}\else
+\ifnum\ctype=3 \newcommand{\ctext}{UG Autumn Coursetest\, \cyear}\else
+\ifnum\ctype=4 \newcommand{\ctext}{Main Series Reassessment/Delayed First Sit Examination\\ $\mbox{}$ \hfill \cyear}\else
+\newcommand{\ctext}{\relax}\fi\fi\fi\fi\fi\fi\fi
+
+\newcommand{\checkr}[1]{
+\ifthenelse{\equal{#1}{1}}
+{{{[#1\%]}}}%
+{{{[#1\%]}}}%
+}
+
+\newcommand{\mmark}[1]{{\hspace*{0.01mm}
+\hfill\hspace*{0.01mm}\nolinebreak
+\hfill\mbox{\checkr{#1}}\\[-20pt]}}
+\newcommand{\mtag}[1]{{\tag*{\mbox{\checkr{#1}}}}}
+
+\renewcommand{\labelenumi}{{\bf \theenumi}}
+
+\setlength{\parindent}{0pt}
+\mathsurround=1.8pt
+\newlength{\qnh}
+\newlength{\qnd}
+\newlength{\qnl}
+\newsavebox{\qrbox}
+\newlength{\qwidth}
+
+\setlength{\qwidth}{\textwidth-\leftmargin-\rightmargin}
+
+\setlength{\itemsep}{50pt plus 5pt minus 5pt}
+%\setlength{\itemsep}{1cm}
+
+\def\repeatheader{
+\phantom{a}\hfill {\bf \large UNIVERSITY OF EAST ANGLIA\\[3pt]}
+\phantom{a}\hfill {\large School of Chemistry\\[3pt] \phantom{a}\hfill \large\ctext \normalsize\\[3pt]}
+\phantom{a}\hfill {\large{\cversion\\[13pt]} \normalsize}
+%\phantom{a}\hfill {\large\bf \cpnumber \normalsize}\par
+}
+
+%\newenvironment{titlep}  {
+\newcommand{\titlep}  {
+% \phantom{a}\hfill {\bf \large UNIVERSITY OF EAST ANGLIA}\\[3pt]
+% \phantom{a}\hfill \large Physics\\[3pt]
+% \phantom{a}\hfill \large\ctext \normalsize\\[3pt]
+% %\phantom{a}\hfill \large{\bf \cpnumber\\[3pt]}
+% \normalsize \phantom{a}\hfill \large\cversion \normalsize\\[3pt]
+
+%\renewcommand\@oddhead{\hfil\textbf{\thepage}\hfil}
+\renewcommand\@oddhead{\hfil\textbf{\thepage}\hfil}
+\renewcommand\@evenhead{\hfil\textbf{\thepage}\hfil\oddpagehead{(\ccode)}{\cversion}}
+%\let\@evenhead\@oddhead
+\renewcommand{\@evenfoot}{}  
+\renewcommand{\@oddfoot}{}  
+
+\repeatheader
+
+\vspace{1.0cm}
+
+{\large \bf \ccode 
+
+%\vspace{0.3cm}
+
+\ctitle } 
+
+\vspace{1.0cm}
+
+%Time allowed for parts I and II: \ctime 
+
+%\vspace{0.5cm}
+\crubricone
+
+\vfill 
+\hfill {\bf \ccode} %\hfill {\bf \cauthor }
+
+%\vspace{0.5cm}
+\hfill { Copyright of the University of East Anglia}  %\hfill {%\cversion
+
+%\vspace{0.5cm}
+
+
+\clearpage
+% \renewcommand\@oddhead{\hfil\textbf{\thepage}\hfil\oddpagehead{(\ccode)}{\cversion}}
+% %\renewcommand\@evenhead{\evenpagehead{\ccode}{\cversion}\hfil\textbf{-
+% %\thepage~-}\hfil}
+% \renewcommand\@evenhead{\hfil\textbf{\thepage}\hfil\oddpagehead{(\ccode)}{\cversion}}
+
+%\repeatheader
+%\vspace{2cm}
+
+\crubrictwo
+%\vspace{1cm}
+%\textbf{Do not take this paper out of the examinations room.}
+
+%\vspace{10.0\lineskip}
+%{\bf Notes are not permitted in this examination.}
+
+%\vspace{10.0\lineskip}
+%%\vspace{1.4cm}
+%{\bf Do not turn over until you are told to do so by the Invigilator.}
+
+% \vfill 
+% \hfill {\bf (\ccode)} %\hfill {\bf \cauthor }
+
+% %\vspace{0.2cm}
+% \hfill { Copyright of the University of East Anglia}  %\hfill {%\cversion
+% %}\hspace{-0.15cm}
+\pagestyle{exambody}
+%\thispagestyle{empty}
+\clearpage
+}
+
+\renewcommand\labelenumii{{\rm(\roman{enumii})}}
+\renewcommand\theenumii{\roman{enumii}}
+\renewcommand\labelenumiii{{\rm(\alph{enumiii})}}
+\renewcommand\theenumiii{\alph{enumiii}}

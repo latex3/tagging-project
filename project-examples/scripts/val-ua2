@@ -1,0 +1,17 @@
+#!/bin/bash
+# validate (or not)  files to PDF/UA-2
+# assumes verapdf script or bat file is in the path
+
+cd pdf20
+
+for i in  *.pdf
+do
+echo ""
+echo "======================"
+echo $i
+echo "----------------------"
+verapdf  -f ua2 $i 2>&1 | grep -E "errorMessage|validationReport " | sort | uniq
+echo ""
+echo "======================"
+echo ""
+done

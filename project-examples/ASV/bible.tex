@@ -1,0 +1,428 @@
+% !Mode:: "TeX:UTF-8:Main"
+
+%%% NOTE
+%%%%%%%%
+%%% This document uses a custom heading hierarchy and
+%%% uses the contributed memoir LaTeX document class that
+%%% has not yet been updated to support PDF tagging structures.
+%%%
+%%% As such, the preamble to the document has a lot of low level tex code
+%%% that should not be taken as an example of how Tagged LaTeX documents
+%%% need to be marked up. It is expected that much of this code will not
+%%% be needed eventually.
+%%%
+%%% The important thing to notice, is that the main body of the document
+%%% (in asv.tex) has no specific markup for tagging at all. Once the definitions
+%%% are set up in the preamble here, the tagging of the text is automatic.
+%%%
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4,
+% uncompress % too big for ngpdf
+}
+%
+
+%  Save \@starttoc
+\makeatletter
+\let\ori@starttoc\@starttoc
+\makeatother
+
+\documentclass[
+  twoside,hidelinks
+  ]{memoir}
+
+
+
+\RequirePackage{geometry}
+% twoside letter paper but with equal margins for online reading
+\geometry{top=2cm,bottom=3cm,inner=1.75cm,outer=1.75cm,heightrounded}
+
+
+\usepackage{graphicx}
+
+\ExplSyntaxOn
+
+\makeatletter
+% Short book names in the PDF outline
+\AddToHookWithArguments{cmd/chapter/before}
+                       {\def\ch@pt@c{\texorpdfstring{#3}{#2}}}
+\makeatother
+
+\newcounter{bookchapter}
+\counterwithin{verse}{bookchapter}
+\counterwithin{bookchapter}{chapter}
+
+\setcounter{book}{0}
+\bool_new:c{is_first_verse}
+\bool_new:c{is_first_chap}
+
+
+
+\ExplSyntaxOff
+
+\usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
+\hypersetup{pdftitle=The Bible, pdfdisplaydoctitle}
+
+\usepackage{titlesec}
+
+
+\hyphenation{hypocr-is-ies meshel-em-iah}
+
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{\MakeUppercase{#1}}}
+
+\usepackage[lining]{ebgaramond}
+
+% 8pt extra space restores baseline grid for the following two column text
+ \titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{8pt}{\huge}
+
+
+\usepackage{microtype}
+
+
+\setlength{\parindent}{1em}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  adaptions tagging etc
+%%% attributes and tags
+\tagpdfsetup
+ {
+  newattribute={sup}{/O /Layout /TextPosition /Sup},
+  add-new-tag=Frontmatter/Sect,
+  add-new-tag=Frontmatter-Title/H1,
+  add-new-tag=Testament/Sect,
+  add-new-tag=Testament-Title/H1,
+  add-new-tag=Book/Sect,
+  add-new-tag=Book-Title/H2,
+  add-new-tag=Chapter/Sect,
+  add-new-tag=Chapter-Title/H3,
+  add-new-tag=verse/P
+ }
+
+%%% unique destinations:
+\renewcommand\theHverse{\thechapter.\thebookchapter.\theverse}
+\renewcommand\theHbookchapter{\thechapter.\thebookchapter}
+
+\ExplSyntaxOn
+%%% add structure to bookchapter
+\DeclareDocumentCommand{\bookchapter}{om}{
+  % #2 number, not used
+  % #1 Title
+  \par
+  % as chapter resets the paratag we reset it in bookchapter:
+  \tagpdfsetup{paratag=verse}
+  \tagtool{unittag=Chapter}
+  % Separate chapters with a bit of space
+  \vspace{2ex plus 2ex minus .2ex}
+
+  % Fancy chapter numbers
+  \begingroup
+   \tagpdfsetup{paratag=Chapter-Title}
+   \noindent
+   \refstepcounter{bookchapter}
+   \smash{\scalebox{1.8}[2]{\arabic{bookchapter}}}
+   \IfValueT{#1}{\space#1}
+   \tagmcend\tagstructend % end H2
+  \endgroup
+  \IfValueTF{#1}{\\\ignorespaces}{\kern2pt\relax}
+  
+
+  % Set prohibit typesetting the index of the first verse
+  \bool_set_true:c{is_first_verse}
+}
+
+
+
+%%% Restore \verse and remove the destination by using
+%%% \stepcounter instead of \refstepcounter.
+%%%  Make every verse its own structure
+
+\AtBeginDocument{
+  \DeclareDocumentCommand{\verse}{m}{
+ %   #1 verse number not used
+  % Step the verse counter
+  \stepcounter{verse}
+  % If this is the first verse, don't typeset its little index
+  \noindent
+   \bool_if:cTF{is_first_verse}
+    {\bool_set_false:c{is_first_verse}
+     \tagstructbegin{tag=verse}\tagmcbegin{}
+    }
+    {\tagmcend\tagstructend\tagstructbegin{tag=verse}\tagstructbegin{tag=Span,attribute-class=sup}
+    \tagmcbegin{}
+     \textsuperscript{\arabic{verse}}
+     \tagmcend
+     \tagstructend
+     \tagmcbegin{}
+     }
+  }}
+\ExplSyntaxOff
+ 
+%%% tableofcontents + header.
+\makeatletter
+\def\f@rtoc{}
+% memoir catches in this the optional argument of chapter
+\def\ch@pt@c{}
+%restore \@starttoc
+\let\@starttoc\ori@starttoc
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+\renewcommand*\l@part[2]{%
+ \ifnum \c@tocdepth >-2\relax
+   \addpenalty{-\@highpenalty}%
+   \addvspace{2.25em \@plus\p@}%
+   \setlength\@tempdima{3em}%
+   \begingroup
+     \parindent \z@ \rightskip \@pnumwidth
+     \parfillskip -\@pnumwidth
+     {\leavevmode
+      \large \bfseries
+      \UseHookWithArguments{contentsline/text/before}{4}
+        {\toclevel@part}{#1}{#2}{\@contentsline@destination}%%
+      \csname contentsline@text@-1@format\endcsname{#1}%
+      \UseHookWithArguments{contentsline/text/after}{4}
+        {\toclevel@part}{#1}{#2}{\@contentsline@destination}%%
+      \hfil
+      \hb@xt@\@pnumwidth{\hss
+      \UseHookWithArguments{contentsline/page/before}{4}
+        {\toclevel@part}{#1}{#2}{\@contentsline@destination}%%
+      #2%
+      \UseHookWithArguments{contentsline/page/after}{4}
+        {\toclevel@part}{#1}{#2}{\@contentsline@destination}%%
+                         \kern-\p@\kern\p@}}\par
+      \nobreak
+   \endgroup
+ \fi}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      \UseHookWithArguments{contentsline/text/before}{4}
+       {\toclevel@chapter}{#1}{#2}{\@contentsline@destination}%
+      \csname contentsline@text@0@format\endcsname
+        {#1}%
+      \UseHookWithArguments{contentsline/text/after}{4}
+       {\toclevel@chapter}{#1}{#2}{\@contentsline@destination}%
+       \nobreak\hfil
+      \nobreak\hb@xt@\@pnumwidth{\hss
+       \UseHookWithArguments{contentsline/page/before}{4}
+        {\toclevel@chapter}{#1}{#2}{\@contentsline@destination}%
+       #2%
+       \UseHookWithArguments{contentsline/page/after}{4}
+        {\toclevel@chapter}{#1}{#2}{\@contentsline@destination}%
+                                 \kern-\p@\kern\p@}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+% move the refstepcounter into the spanning head (general memoir issue)
+\def\@chapter[#1]#2{%
+  \m@mpn@new@chaptrue%
+  \m@mpn@new@schapfalse%
+  \def\f@rbdy{#2}%
+  \ifx\ch@pt@c\@empty % no optional args
+    \def\f@rtoc{#2}%
+    \def\f@rhdr{#2}%
+  \else                  % at least one opt arg
+    \let\f@rtoc\ch@pt@c
+    \ifx\@empty#1\@empty
+      \let\f@rhdr\ch@pt@c
+    \else
+      \def\f@rhdr{#1}%
+    \fi
+  \fi
+  \m@m@Andfalse
+  \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter
+      \m@m@Andtrue
+    \fi
+  \fi
+  \ifm@m@And
+    %\refstepcounter{chapter}%
+  \fi
+  \ifartopt
+    \@makechapterhead{#2}%
+    \@afterheading
+    \chaptermark{\f@rhdr}%
+  \else
+    \chaptermark{\f@rhdr}
+    \insertchapterspace
+    \if@twocolumn
+      \@topnewpage[\ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}]%
+    \else
+      \ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}%
+    \fi
+    \@afterheading
+  \fi
+  \@nameuse{chapter@f@rtoc@before@write@hook}%
+  \mempreaddchaptertotochook%
+  \ifm@m@And
+    \ifanappendix
+      \addcontentsline{toc}{appendix}{%
+        \protect\chapternumberline{\thechapter}\f@rtoc}%
+      \memappchapinfo{\thechapter}{\f@rtoc}{\f@rhdr}{#2}%
+    \else
+      \addcontentsline{toc}{chapter}{%
+        \protect\chapternumberline{\thechapter}\f@rtoc}%
+      \memchapinfo{\thechapter}{\f@rtoc}{\f@rhdr}{#2}%
+    \fi
+  \else
+    \addcontentsline{toc}{chapter}{\f@rtoc}%
+    \ifanappendix
+      \memappchapinfo{}{\f@rtoc}{\f@rhdr}{#2}%
+    \else
+      \memchapinfo{}{\f@rtoc}{\f@rhdr}{#2}%
+    \fi
+  \fi
+  \mempostaddchaptertotochook%
+  \ifheadnameref\ExpandArgs{V}\M@gettitle\f@rhdr\else\ExpandArgs{V}\M@gettitle\f@rtoc\fi%
+  \memendofchapterhook%
+}
+
+% uses some internal memoir commands so revert them too
+\def\numberline#1{\hb@xt@\@tempdima{#1\hfil}}  
+\let\chapternumberline\numberline
+\let\partnumberline\numberline
+
+% don't use lmtt
+\def\UrlFont{\rmfamily}
+
+\makeatother
+%% nicer tags
+\ExplSyntaxOn
+\tl_new:N\l_tag_chapter_tag_tl
+\tl_set:Nn\l_tag_chapter_tag_tl{Frontmatter}
+
+\AddToHook{cmd/mainmatter/before}{\tl_set:Nn\l_tag_chapter_tag_tl{Book}}
+
+\keys_define:nn { tag / tool} 
+  {
+    ,sec-start-part .code:n = 
+      {
+        \bool_if:NT\l__tag_sec_Sect_bool
+          {
+            \__tag_sec_end:n   {-1} 
+            \__tag_sec_begin:nn{-1}{tag=Testament}
+          }  
+         \tag_struct_begin:n{tag=Testament-Title,title=#1}
+         \tagtool{para-flattened}
+         \tl_set:Nn\l__tag_para_main_tag_tl {NonStruct}
+         \tl_set:Nn\l__tag_para_tag_tl {Span}
+      }
+    ,sec-stop-part .code:n = {\__tag_sec_end_display: \tagtool{para-flattened=false}}  
+    ,sec-start-chapter .code:n =
+     {
+       \bool_if:NT\l__tag_sec_Sect_bool
+         {
+           \__tag_sec_end:n   {0} 
+           \__tag_sec_begin:nn{0}{tag=\l_tag_chapter_tag_tl}
+         }  
+        \tl_set:Ne\l_tmpa_tl{\text_purify:n{#1}}          
+        \tag_struct_begin:n{tag=\l_tag_chapter_tag_tl-Title,title-o=\l_tmpa_tl}
+        \tagtool{para-flattened}
+        \tl_set:Nn\l__tag_para_tag_tl {Span}  
+     }
+     
+   }  
+%% For benchmarking, needs tagpdf develop   
+% \RequirePackage{l3benchmark}
+% \tag_check_benchmark_on:
+ \ExplSyntaxOff
+
+%%% End tagging adaptions.
+\emergencystretch=8pt
+
+% looseness is needed in some cases if a new chapter falls at top of
+% a column and the previous column is a line short with no stretch.
+% Add via a wrapper so easily disabled
+\def\adjustlooseness#1{\unskip{\looseness=#1\par}}
+
+\begin{document}
+
+\frontmatter
+\thispagestyle{empty}
+
+\vspace*{1cm}
+
+% Switch to center
+% (as a \hbox/\centerline it doesn't trigger para tagging)
+\begin{center}
+\tagstructbegin{tag=title}
+
+{\HUGE\leavevmode\MakeLinkTarget*{title}\bookmark[dest=title]{The Bible}\textbf{THE BIBLE}}
+
+\vspace{1cm}
+{\huge\textbf{American Standard Version}}
+
+\tagstructend
+
+\vspace{2in}
+
+Original publication 1901 by Thomas Nelson \& Sons
+
+\end{center}
+
+\clearpage
+\thispagestyle{empty}
+
+\chapter{Notes}
+
+\begingroup
+  \setlength\parindent{0pt}
+  \setlength\parskip{\bigskipamount}
+
+
+The text of the American Standard version of the Bible was provided by
+Wikimedia wikisource\\
+\textbf{\url{https://en.wikisource.org/wiki/Bible_(American_Standard)}}\\
+as plain text.
+
+The file contained the notice
+
+\begin{quote}
+This work is in the public domain in the United States because it was
+published before January 1, 1929.
+  
+\end{quote}
+
+
+  
+\LaTeX\ Project, March 2024.
+
+\endgroup
+
+\clearpage
+\tableofcontents
+
+\mainmatter
+\twocolumn
+
+\input{asv}
+
+
+
+
+\end{document}

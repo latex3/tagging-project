@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Arlington checker $1 a single file or a directory
+# output goes to terminal and arlington.log
+
+# https://github.com/pdf-association/arlington-pdf-model/tree/master/TestGrammar
+
+# set to installed arlington-pdf-model directory after compiling the sources
+# from the above
+
+ARLDIR=/home/pdfa/arlington-pdf-model
+
+export LD_LIBRARY_PATH=$ARLDIR/bin/linux:$LD_LIBRARY_PATH
+
+export PATH=$ARLDIR/bin/linux:$PATH
+
+TestGrammar_d -b  --no-color -o arlington.log -t $ARLDIR/tsv/latest/ --pdf $1

@@ -1,0 +1,489 @@
+% from https://gutenberg.org/ebooks/47464
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                                                         %
+% The Project Gutenberg EBook of The Theory of Spectra and Atomic         %
+% Constitution, by Niels (Niels Henrik David) Bohr                        %
+%                                                                         %
+% This eBook is for the use of anyone anywhere in the United States and most
+% other parts of the world at no cost and with almost no restrictions     %
+% whatsoever.  You may copy it, give it away or re-use it under the terms of
+% the Project Gutenberg License included with this eBook or online at     %
+% www.gutenberg.org.  If you are not located in the United States, you'll have
+% to check the laws of the country where you are located before using this ebook.
+%                                                                         %
+%                                                                         %
+%                                                                         %
+% Title: The Theory of Spectra and Atomic Constitution                    %
+%        Three Essays                                                     %
+%                                                                         %
+% Author: Niels (Niels Henrik David) Bohr                                 %
+%                                                                         %
+% Release Date: November 26, 2014 [EBook #47464]                          %
+% Most recently updated: June 11, 2021                         %
+%                                                                         %
+% Language: English                                                       %
+%                                                                         %
+% Character set encoding: UTF-8                                           %
+%                                                                         %
+% *** START OF THIS PROJECT GUTENBERG EBOOK THEORY OF SPECTRA ***         %
+%                                                                         %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\def\ebook{47464}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%% Packages and substitutions:                                      %%
+%%                                                                  %%
+%% book:     Required.                                              %%
+%% inputenc: Latin-1 text encoding. Required.                       %%
+%%                                                                  %%
+%% ifthen:   Logical conditionals. Required.                        %%
+%%                                                                  %%
+%% amsmath:  AMS mathematics enhancements. Required.                %%
+%% amssymb:  Additional mathematical symbols. Required.             %%
+%%                                                                  %%
+%% alltt:    Fixed-width font environment. Required.                %%
+%%                                                                  %%
+%% indentfirst: Indent first paragraph of each section. Optional.   %%
+%% array:    Array enhancements. Required.                          %%
+%%                                                                  %%
+%% footmisc: Start footnote numbering on each page. Required.       %%
+%%                                                                  %%
+%% graphicx: Standard interface for graphics inclusion. Required.   %%
+%%                                                                  %%
+%% calc:     Length calculations. Required.                         %%
+%%                                                                  %%
+%% fancyhdr: Enhanced running headers and footers. Required.        %%
+%%                                                                  %%
+%% geometry: Enhanced page layout package. Required.                %%
+%% hyperref: Hypertext embellishments for pdf output. Required.     %%
+%%                                                                  %%
+%%                                                                  %%
+%% Producer's Comments:                                             %%
+%%                                                                  %%
+%%   OCR text for this ebook was obtained on Nov. 21, 2014, from    %%
+%%   http://www.archive.org/details/theoryofspectraa00bohr.         %%
+%%                                                                  %%
+%%   Minor changes to the original are noted in this file in two    %%
+%%   ways:                                                          %%
+%%     1. \Chg{}{} and \Add{} for modernization and consistency:    %%
+%%       * "excentric" modernized to "eccentric".                   %%
+%%       * "can not" uniformized to "cannot".                       %%
+%%       * "ultra-violet" and "infra-red" hyphenated uniformly.     %%
+%%                                                                  %%
+%%     2. [** TN: Note]s for other remarks.                         %%
+%%                                                                  %%
+%% Compilation Flags:                                               %%
+%%                                                                  %%
+%%   The following behavior may be controlled by a boolean flag.    %%
+%%                                                                  %%
+%%   ForPrinting (false by default):                                %%
+%%   If false, compile a screen optimized file (one-sided layout,   %%
+%%   blue hyperlinks). If true, print-optimized PDF file: Larger    %%
+%%   text block, two-sided layout, black hyperlinks.                %%
+%%                                                                  %%
+%%                                                                  %%
+%% PDF pages: 209 (if ForPrinting set to false)                     %%
+%% PDF page size: 4.5 x 6.5" (non-standard)                         %%
+%%                                                                  %%
+%% Summary of log file:                                             %%
+%% * Two underfull hboxes. (No visual problems.)                    %%
+%%                                                                  %%
+%% Compile History:                                                 %%
+%%                                                                  %%
+%% November, 2014: (Andrew D. Hwang)                                %%
+%%             texlive2012, GNU/Linux                               %%
+%%                                                                  %%
+%% Command block:                                                   %%
+%%                                                                  %%
+%%     pdflatex x4                                                  %%
+%%                                                                  %%
+%%                                                                  %%
+%% November 2014: pglatex.                                          %%
+%%   Compile this project with:                                     %%
+%%   pdflatex 47464-t.tex ..... FOUR times                          %%
+%%                                                                  %%
+%%   pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian)   %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listfiles
+\DocumentMetadata{
+ lang=en,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ testphase=
+   {
+    phase-III, %lists,footnotes,sectioning,
+               %toc,marginpar,bibliography,floats,
+               %graphics ...
+    math,  
+    table, %tabular, tabularx, longtable
+    title  %maketitle
+   }
+ }
+\tagpdfsetup{math/mathml/write-dummy}
+\documentclass[12pt]{book}[2005/09/16]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}[2006/05/05]
+
+\usepackage{ifthen}[2001/05/26]  %% Logical conditionals
+
+\usepackage{amsmath}[2000/07/18] %% Displayed equations
+\usepackage{amssymb}[2002/01/22] %% and additional symbols
+
+\usepackage{alltt}[1997/06/16]   %% boilerplate, credits, license
+
+\IfFileExists{indentfirst.sty}{%
+  \usepackage{indentfirst}[1995/11/23]
+}{}
+
+\usepackage{array}[2008/09/09]
+
+\usepackage[perpage,symbol]{footmisc}[2005/03/17]
+
+\usepackage{graphicx}[1999/02/16]%% For diagrams
+
+\usepackage{calc}[2005/08/06]
+
+\usepackage{fancyhdr} %% For running heads
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Interlude:  Set up PRINTING (default) or SCREEN VIEWING %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ForPrinting=true                     false (default)
+% Asymmetric margins                   Symmetric margins
+% 1 : 1.6 text block aspect ratio      3 : 4 text block aspect ratio
+% Black hyperlinks                     Blue hyperlinks
+% Start major marker pages recto       No blank verso pages
+%
+\newboolean{ForPrinting}
+
+%% UNCOMMENT the next line for a PRINT-OPTIMIZED VERSION of the text %%
+%\setboolean{ForPrinting}{true}
+
+%% Initialize values to ForPrinting=false
+\newcommand{\Margins}{hmarginratio=1:1}     % Symmetric margins
+\newcommand{\HLinkColor}{blue}              % Hyperlink color
+\newcommand{\PDFPageLayout}{SinglePage}
+\newcommand{\TransNote}{Transcriber's Note}
+\newcommand{\TransNoteCommon}{%
+  The camera-quality files for this public-domain ebook may be
+  downloaded \textit{gratis} at
+  \begin{center}
+    \texttt{www.gutenberg.org/ebooks/\ebook}.
+  \end{center}
+
+  This ebook was produced using scanned images and OCR text generously
+  provided by the Brandeis University Library through the Internet Archive.
+  \bigskip
+
+  Minor typographical corrections and presentational changes have been
+  made without comment.
+  \bigskip
+}
+
+\newcommand{\TransNoteText}{%
+  \TransNoteCommon
+
+  This PDF file is optimized for screen viewing, but may be recompiled
+  for printing. Please consult the preamble of the \LaTeX\ source file
+  for instructions and other particulars.
+}
+%% Re-set if ForPrinting=true
+\ifthenelse{\boolean{ForPrinting}}{%
+  \renewcommand{\Margins}{hmarginratio=2:3} % Asymmetric margins
+  \renewcommand{\HLinkColor}{black}         % Hyperlink color
+  \renewcommand{\PDFPageLayout}{TwoPageRight}
+  \renewcommand{\TransNote}{Transcriber's Note}
+  \renewcommand{\TransNoteText}{%
+    \TransNoteCommon
+
+    This PDF file is optimized for printing, but may be recompiled for
+    screen viewing. Please consult the preamble of the \LaTeX\ source
+    file for instructions and other particulars.
+  }
+}{% If ForPrinting=false, don't skip to recto
+  \renewcommand{\cleardoublepage}{\clearpage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  End of PRINTING/SCREEN VIEWING code; back to packages  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\boolean{ForPrinting}}{%
+  \setlength{\paperwidth}{8.5in}%
+  \setlength{\paperheight}{11in}%
+% 1:1.6
+  \usepackage[body={5in,8in},\Margins]{geometry}[2002/07/08]
+}{%
+  \setlength{\paperwidth}{4.5in}%
+  \setlength{\paperheight}{6.5in}%
+  \raggedbottom
+% 3:4
+  \usepackage[body={4.25in,5.6in},\Margins,includeheadfoot]{geometry}[2002/07/08]
+}
+
+\providecommand{\ebook}{00000}    % Overridden during white-washing
+\usepackage[%pdftex,
+  hyperfootnotes=false,
+  pdfauthor={Niels Henrik David Bohr},
+  pdftitle={The Project Gutenberg eBook \#\ebook: The Theory of Spectra and Atomic Constitution.},
+  pdfkeywords={Brandeis University, The Internet Archive, Andrew D. Hwang},
+  pdfstartview=Fit,    % default value
+  pdfstartpage=1,      % default value
+  pdfpagemode=UseNone, % default value
+  bookmarks=true,      % default value
+  linktocpage=false,   % default value
+  pdfpagelayout=\PDFPageLayout,
+  pdfdisplaydoctitle,
+  pdfpagelabels=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=0,
+  colorlinks=true,
+  linkcolor=\HLinkColor]{hyperref}[2007/02/07]
+
+
+%% Fixed-width environment to format PG boilerplate %%
+\newenvironment{PGtext}{%
+\begin{alltt}
+\fontsize{7.9}{9}\ttfamily\selectfont}%
+{\end{alltt}}
+
+% Stylistic changes made for consistency
+\newcommand{\Chg}[2]{#2}
+%\newcommand{\Chg}[2]{#1} % Use this to revert inconsistencies in the original
+\newcommand{\Add}[1]{\Chg{}{#1}}
+
+%% Miscellaneous global parameters %%
+% No hrule in page header
+\renewcommand{\headrulewidth}{0pt}
+
+% Loosen spacing
+\setlength{\emergencystretch}{1em}
+
+\hyphenation{electro-dynamics electro-magnetic}
+
+% Scratch pad for length calculations
+\newlength{\TmpLen}
+
+%% Running heads %%
+\newcommand{\FlushRunningHeads}{%
+  \clearpage\fancyhf{}%
+  \ifthenelse{\boolean{ForPrinting}}{\cleardoublepage}{\clearpage}%
+}
+\newcommand{\InitRunningHeads}{%
+  \setlength{\headheight}{15pt}
+  \pagestyle{fancy}
+  \thispagestyle{empty}
+  \ifthenelse{\boolean{ForPrinting}}
+             {\fancyhead[RO,LE]{\thepage}}
+             {\fancyhead[R]{\thepage}}
+}
+
+% Uniform style for running heads
+\newcommand{\RHeads}[1]{\textsc{\MakeLowercase{#1}}}
+
+\newcommand{\SetRunningHeads}[2][C]{\fancyhead[#1]{\RHeads{#2}}}
+
+\makeatletter
+\newcommand{\BookMark}[2]{\phantomsection\pdfbookmark[#1]{#2}{\@currentHref}}
+\makeatother
+
+%% Major document divisions %%
+\newcommand{\PGBoilerPlate}{%
+  \pagenumbering{Alph}
+  \pagestyle{empty}
+  \BookMark{0}{PG Boilerplate.}
+}
+\newcommand{\FrontMatter}{%
+  \cleardoublepage
+  \FlushRunningHeads
+  \frontmatter
+  \BookMark{-1}{Front Matter.}
+}
+\newcommand{\MainMatter}{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \mainmatter
+  \BookMark{-1}{Main Matter.}
+}
+\newcommand{\PGLicense}{%
+  \FlushRunningHeads
+  \pagenumbering{Roman}
+  \InitRunningHeads
+  \BookMark{-1}{PG License.}
+  \SetRunningHeads{License}
+}
+
+%% ToC formatting %%
+\AtBeginDocument{\renewcommand{\contentsname}%
+  {\protect\thispagestyle{empty}%
+    \protect\SectTitle[\Large]{\textbf{CONTENTS}}\protect\vspace{-1.5\baselineskip}}
+}
+
+\newcommand{\TableofContents}{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \SetRunningHeads{Contents}
+  \BookMark{0}{Contents.}
+  \tableofcontents
+}
+
+% Set the section number in a fixed-width box
+\newcommand{\ToCBox}[1]{\settowidth{\TmpLen}{III.}%
+  \makebox[\TmpLen][r]{#1}\hspace*{1em}%
+}
+% For internal use, to determine if we need the Sect./Page line
+\newcommand{\ToCAnchor}{}
+
+% \ToCBox{Label}{Anchor}{Title}
+\newcommand{\ToCLine}[3]{%
+  \label{toc:#2}%
+  \ifthenelse{\not\equal{\pageref{toc:#2}}{\ToCAnchor}}{%
+    \renewcommand{\ToCAnchor}{\pageref{toc:#2}}%
+    \noindent\makebox[\textwidth][r]{\null\hfill\scriptsize PAGE}\\[8pt]%
+  }{}%
+  \settowidth{\TmpLen}{9999}%
+  \noindent\strut\parbox[b]{\textwidth-\TmpLen}{\small%
+     \ToCBox{#1}\hangindent4em#3\dotfill}%
+  \makebox[\TmpLen][r]{\pageref{#2}}%
+  \smallskip
+}
+
+%% Sectional units %%
+% Typographical abstraction
+\newcommand{\SectTitle}[2][\large]{%
+  \section*{\centering#1\normalfont #2}
+}
+\newcommand{\SubsectTitle}[2][\normalsize]{%
+  \subsection*{\centering#1\normalfont #2}
+}
+\newcommand{\SubsubsectTitle}[2][\small]{%
+  \subsubsection*{\centering#1\normalfont #2}
+}
+
+% For internal cross-referencing
+\newcommand{\EssayNo}{}
+\newcounter{SecNo}
+
+% \Essay{Number}{Title}{Footnote}
+\newcommand{\Essay}[3]{%
+  \FlushRunningHeads
+  \InitRunningHeads
+  \ifthenelse{\equal{#1}{III}}{% [** TN: Hack to handle long running head]
+    \ifthenelse{\boolean{ForPrinting}}{%
+      \fancyhead[CE]{\RHeads{The Structure of the Atom and the}}%
+      \fancyhead[CO]{\RHeads{Physical and Chemical Properties of the Elements}}%
+    }{% Not ForPrinting
+      \SetRunningHeads{The Structure of the Atom}%
+    }%
+  }{% Not Essay III
+    \SetRunningHeads{#2}%
+  }
+  \BookMark{0}{Essay #1.}
+  \renewcommand{\EssayNo}{#1}% For \Eq and \Tag
+  \addtocontents{toc}{\protect\SectTitle{ESSAY #1}}
+  \addtocontents{toc}{\protect\SubsectTitle[\protect\small]{\MakeUppercase{#2}}}
+  \SectTitle[\Large]{ESSAY #1\footnotemark}
+  \SubsectTitle{\MakeUppercase{#2}}
+  \footnotetext{#3}%
+}
+
+% \Chapter{Number}{Title}
+\newcommand{\Chapter}[2]{%
+  \BookMark{1}{#1 #2.}
+  \label{chapter:\EssayNo.#1}
+  \addtocontents{toc}{\protect\ToCLine{#1}{chapter:\EssayNo.#1}{\textsc{#2}}}
+  \SubsubsectTitle{#1 \MakeUppercase{#2}}
+}
+
+\newcommand{\Section}[1]{
+  \paragraph*{\indent #1}
+  \refstepcounter{SecNo}
+  \label{section:\theSecNo}
+  \addtocontents{toc}{\protect\ToCLine{}{section:\theSecNo}{#1}}
+}
+
+\newcommand{\Preface}{%
+  \InitRunningHeads
+  \SetRunningHeads{Preface}
+  \BookMark{0}{Preface.}
+  \SectTitle[\Large]{\textbf{PREFACE}}
+}
+
+\newcommand{\Signature}[4]{%
+  \par\null\hfill#1\hspace{\parindent}
+
+  \settowidth{\TmpLen}{\small\textsc{#2}}%
+  \parbox{\TmpLen}{\centering\small\textsc{#2} \\
+  \textit{#3} #4}
+  \normalsize
+}
+
+%% Diagrams %%
+\newcommand{\DefWidth}{0.95\textwidth}% Default figure width
+% \Graphic[options]{fig}
+\NewDocumentCommand{\Graphic}{O{}m}{%
+  \includegraphics[width=\DefWidth,#1]{./images/fig_p#2.jpg}%
+}
+% \Figure[caption]{label}{page}[alt text]
+\NewDocumentCommand{\Figure}{O{}mmO{}}{%
+  \begin{figure}[hbt!]
+    \centering
+    \phantomsection\Pagelabel{#3}%
+    \Graphic[alt=#4]{#3}%
+    \ifthenelse{\not\equal{#1}{}}{%
+      \\
+      #1%
+    }{% #1=[]
+      \ifthenelse{\not\equal{#2}{}}{%
+        \\
+        \label{fig:#2}%
+        Fig.~#2.%
+      }{}%
+    }%
+  \end{figure}\ignorespaces%
+}
+
+% \Fig[figure]{Number}
+\newcommand{\Fig}[2][fig.]{\hyperref[fig:#2]{#1~#2}}
+\newcommand{\FigNum}[1]{\hyperref[fig:#1]{#1}}
+
+\newcommand{\Pagelabel}[1]{\phantomsection\label{page:#1}}
+
+% Page separators
+\newcommand{\PageSep}[1]{\ignorespaces}
+\newcommand{\PageRef}[2][page]{\hyperref[page:#2]{#1~\pageref*{page:#2}}}
+\newcommand{\PageNum}[1]{\hyperref[page:#1]{\pageref*{page:#1}}}
+
+% Miscellaneous textual conveniences (N.B. \emph, not \textit)
+\newcommand{\ie}{i.e.}
+
+\newcommand{\First}[1]{\textsc{#1}}
+\newcommand{\Title}[1]{\textit{#1}}% Journal title
+\newcommand{\No}[1]{\textsc{#1}}% Journal number
+
+%% Miscellaneous mathematical formatting %%
+%hm
+%\DeclareInputMath{176}{{}^{\circ}}
+%\DeclareInputMath{183}{\cdot}
+
+% Centered column heading in left-aligned array column
+\newcommand{\ColHead}[1]{\multicolumn{1}{c}{#1}}
+% Conditional (ForPrinting-dependent) breaking for wide math
+\newcommand{\BreakMath}[2]{\ifthenelse{\boolean{ForPrinting}}{#1}{#2}}
+
+% Cross-ref-able equation tags
+\newcommand{\Tag}[1]{%
+  \phantomsection\label{eqn:\EssayNo#1}\tag*{\ensuremath{#1}}%
+}
+\newcommand{\Eq}[1]{%
+  \hyperref[eqn:\EssayNo#1]{\ensuremath{#1}}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%% START OF DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{47464-t-body}
+\end{document}

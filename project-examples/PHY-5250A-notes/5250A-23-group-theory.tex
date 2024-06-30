@@ -1,0 +1,137 @@
+\DocumentMetadata{
+   lang=en,
+   pdfversion=2.0,
+   pdfstandard=ua-2,
+   pdfstandard=a-4f, %  AF not in document catalog dictionary
+   testphase = {phase-III,math,title}}
+
+
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------------------------
+% General packages
+% ----------------------------------------------------------------------
+\usepackage[UKenglish]{babel}
+\usepackage{unicode-math}
+\usepackage[final]{microtype}
+
+\usepackage{csquotes}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{hyperref}
+% ----------------------------------------------------------------------
+
+% ----------------------------------------------------------------------
+% Set up
+% ----------------------------------------------------------------------
+\geometry{margin = 1in}
+\hypersetup{hidelinks,unicode}
+% ----------------------------------------------------------------------
+
+% ----------------------------------------------------------------------
+% New commands for this document
+% ----------------------------------------------------------------------
+\NewDocumentCommand\acro{m}{\textsc{#1}}
+\NewDocumentCommand\email{m}{\href{mailto:#1}{#1}}
+\NewDocumentCommand\foreign{m}{\emph{#1}}
+
+% ----------------------------------------------------------------------
+
+% ----------------------------------------------------------------------
+% Meta-data
+% ----------------------------------------------------------------------
+\title{Group Theory and Symmetry}
+\author{Dr Joseph Wright\\\email{joseph.wright@uea.ac.uk}}
+\date{PHY-5250A\\2023--24}
+% ----------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\section{Group axioms}
+
+\begin{enumerate}
+  \item Multiplication: there is a combination rule for elements of the set,
+    generally denoted as~$\circ$, as in $A \circ B$
+  \item Closure: multiplication always gives another member of the set
+  \item Identity: there is an element of the set~($I$) that leaves other elements
+    unchanged on multiplication, $A \circ I = A$
+  \item Inverse: For each element of the set, there is a element we can combine
+    it with that will give us the identity, $A \circ A^{-1} = I$
+  \item Associativity: for three elements of the set $A$, $B$ and $C$,
+    $A \circ (B \circ C) = (A \circ B) \circ  C$
+\end{enumerate}
+
+For an \emph{Abelian} group, we also have commutativity, $A \circ B = B \circ A$.
+
+Two groups are \emph{isomorphic} if we can \enquote{match up} the elements:
+they have the same pattern in their multiplication table for example.
+
+\section{Symmetry elements}
+
+\begin{description}
+  \item[$E$] Identity
+  \item[$C_{n}$] $n$-Fold rotation, \foreign{i.e.}~through
+    \ang[parse-numbers = false]{(360/n)}
+  \item[$\sigma$] Mirror plan
+  \item[$i$] Centre of inversion
+  \item[$S_{n}$] Improper rotation, \foreign{i.e.}~rotation through
+    \ang[parse-numbers = false]{(360/n)} then reflection
+    perpendicular to the axis
+\end{description}
+
+Formally, symmetry \emph{operations} need the \enquote{hat} symbol, for example
+$\hat{C}_{4}$ is the symmetry operation for a rotation of \ang{90}: these are
+rarely seen in the molecular symmetry literature, so we choose to omit them.
+
+\subsection{Reducible and irreducible representations}
+
+The symbol $\Gamma$ is the representation of a point group which can either be
+reducible or written as a linear combination of irreducible representations.
+
+The \emph{projection formula} allows you to do this process simply by testing
+each line of the character table to see if it contributes to the
+representation~$\chi$. It is
+\begin{equation}
+  a_{i} = \frac{1}{h}\sum_{\mathrm{C}}\chi(R)\chi_{i}(R)g(\mathrm{C})
+  \label{eq:projection}
+\end{equation}
+where
+\begin{description}
+  \item[$a_{i}$] is the number of times that the $i$th line of the character
+    table contributes;
+  \item[$h$] is the order of the point group (the total number of unique
+    operations);
+  \item[$\chi(R)$] is the $R$th member of the representation being
+    decomposed;
+  \item[$\chi_{i}(R)$] is the $R$th member of line $i$ in the character
+    table
+  \item[$g(\mathrm{C})$] is the number of elements in the class
+    of symmetry operation.
+\end{description}
+
+\section{Allowed transitions}
+
+In general, a transition is allowed when
+\[
+ \Gamma(\Psi_{\mathrm{i}}) \times
+ \Gamma(\mu) \times
+ \Gamma(\Psi_{\mathrm{f}}) \supset A
+\]
+
+\section{Vibrational spectroscopy}
+
+\begin{enumerate}
+  \item Form a reducible representation using $x$, $y$, and $z$ matrices
+    on each atom
+  \item Express this representation in terms of irreducible representations
+    using Equation~\ref{eq:projection}
+  \item Discard irreducible representations corresponding to rotations
+    and translations
+  \item IR active vibrations allowed based on dipole ($x$, $y$, $z$ components);
+    Raman active vibrations allowed based on quadropole (tensor terms)
+\end{enumerate}
+
+
+\end{document}

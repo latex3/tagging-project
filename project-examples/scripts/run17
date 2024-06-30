@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# shell script (sorry) to build the pdf. Could be a lua script later
+
+# leaves all the pdf in a pdf17 sudirectory
+# only rebuild if the pdf is missing or older than the tex
+
+mkdir -p pdf17
+
+for i in $(grep -l documentclass */*[^7].tex */*[^7].ltx)
+do
+    d=${i%/*}
+    f=${i##*/}
+    b=${f/.tex}
+    b=${b/.ltx}
+    bb=$b
+    b=${b}-17
+    cd $d
+    if [ ! -f ../pdf17/${b}.pdf ]  || [ "${b}".tex -nt  "../pdf17/${b}.pdf" ] ; then
+	lualatex-dev $b
+	# 5 runs here
+	if [ -f tb139mitt-deims24-bibtex.bib ] ; then
+	    tb139mitt-deims24-17-bibtex.bib
+	    bibtex $b
+	    lualatex-dev $b
+	fi
+	if [ -f ${b}.idx ] ; then
+	    makeindex $b
+	fi
+	# 5 runs here
+	if [ -f tagpdf.tex ] ; then
+	    biber $b
+	    lualatex-dev $b
+	fi
+	lualatex-dev $b
+	if grep -q Rerun ${b}.log ; then
+	    lualatex-dev $b
+	fi
+	if grep -q Rerun ${b}.log ; then
+	    lualatex-dev $b
+	fi
+	if grep -q Rerun ${b}.log ; then
+	    lualatex-dev $b
+	fi
+	if grep -q Rerun ${b}.log ; then
+	    echo "STILL RERUN message for $b" 
+	fi
+	mv ${b}.pdf ../pdf17/${b}.pdf
+    else
+	echo $b : pdf newer than tex
+    fi
+    cd ..
+done
+
+

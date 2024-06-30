@@ -1,0 +1,70 @@
+% needs 
+%\usepackage{listings}
+%\usepackage{tikz}
+%\usetikzlibrary{fit,tikzmark}
+%\usetikzlibrary{arrows.meta}
+\lstset{basicstyle=\ttfamily,
+        columns=flexible,
+        escapechar=*,
+        morecomment=[l]{\%},keepspaces=true,
+        commentstyle=\color{green!50!black}\bfseries}
+\tikzset{
+  balloon/.style={
+    draw,
+    fill=blue!20,
+    opacity=0.4,
+    inner xsep=4pt,inner ysep=2pt,
+    rounded corners=2pt,
+    %minimum height=15pt
+  },
+  ref/.style={
+  very thick, -Latex,red
+  },
+  iref/.style={
+  thick,dashed, -Latex,red
+  }
+}
+\NewDocumentCommand\balloon{m}{%
+\node[fit={(pic cs:#1-first) (pic cs:#1-end)
+([yshift=7pt]pic cs:#1-end)},balloon](#1){};}
+\begin{tikzpicture}[overlay,remember picture]
+\balloon{link}
+\balloon{structparent}
+\balloon{OBJR}
+\balloon{linkref}
+\balloon{structelem}
+\balloon{kid}
+\balloon{pnum}
+\balloon{pref}
+\draw[ref] (linkref)--(link);
+\draw[ref] (link)--(structparent.170);
+\draw[ref] (structparent.190)--(pnum);
+\draw[ref] (pnum)--(pref);
+\draw[ref] (pref)--(structelem);
+\draw[ref] (structelem)--(kid);
+\draw[ref] (kid)--(OBJR);
+\draw[ref] (OBJR)--(linkref);
+\end{tikzpicture}
+\begin{lstlisting}[name=OBJR]
+*\tikzmark{link-first}*18 0 obj*\tikzmark{link-end}*   %Link Object
+<< /Type /Annot /Subtype/Link
+   /Rect [ 196.109 494.573 399.167 506.831 ]
+*\tikzmark{structparent-first}*/StructParent 16 *\tikzmark{structparent-end}*
+ /A<</Type/Action /S/URI /URI(https://github.com/u-fischer/tagpdf)>>
+ >>
+endobj
+
+*\tikzmark{OBJR-first}*19 0 obj*\tikzmark{OBJR-end}*   %Object reference (OBJR)
+<</Type /OBJR /Obj *\tikzmark{linkref-first}*18 0 R*\tikzmark{linkref-end}* >>
+endobj
+
+*\tikzmark{structelem-first}*17 0 obj*\tikzmark{structelem-end}*   %Structure Element
+<< /Type /StructElem /S /Link /P 11 0 R
+/K [<</Type /MCR /Pg 8 0 R /MCID 6>> *\tikzmark{kid-first}*19 0 R*\tikzmark{kid-end}* ]>>
+endobj};
+
+5 0 obj   %Parenttree
+<< /Nums
+[... *\tikzmark{pnum-first}*16*\tikzmark{pnum-end}*     *\tikzmark{pref-first}*17 0 R*\tikzmark{pref-end}* ...] >>
+endobj
+\end{lstlisting}
