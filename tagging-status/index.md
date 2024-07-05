@@ -44,8 +44,8 @@ To add or edit the entries, please make a pull request to change the YAML file
 ## References
 
 
-<span id="ref1">1.</span> U. Fischer and F. Mittelbach. Automated tagging of LATEX documents — what is possible today, in 2023? TUGboat, 44(2):262–266, 2023.
+<span id="ref1">1.</span> [U. Fischer and F. Mittelbach. Automated tagging of LATEX documents — what is possible today, in 2023? TUGboat, 44(2):262–266, 2023](https://www.latex-project.org/publications/2023-UFi-FMi-TUG-tb137fischer-tagging23.pdf).
 
-<span id="ref2">2.</span> F. Mittelbach and U. Fischer. Enhancing LATEX to automatically produce tagged and accessible PDF. TUGboat, ?:?, 2024. 
+<span id="ref2">2.</span> [F. Mittelbach and U. Fischer. Enhancing LATEX to automatically produce tagged and accessible PDF. TUGboat, 45(1), 2024](https://www.latex-project.org/publications/2024-FMi-UFi-TUB-tb139mitt-deims24.pdf). 
 
 
