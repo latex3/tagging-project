@@ -1,0 +1,292 @@
+
+ - name: amsmath
+   type: package
+   status: unknown
+   comments: >
+     See comments in [[1]](#ref1), [[2]](#ref2), but what does ‘much of’ mean here? See also: <https://github.com/latex3/tagging-project/issues/77>
+     Mentioned here, but it seems the issue was fixed:"
+
+   issues: [28]
+
+ - name: amsthm
+   type: package
+   status: currently-incompatible
+   issues: [83]
+   updated: 2024-07-04
+
+ - name: biblatex
+   type: package
+   status: supported
+   comments: Supported according to [[2]](#ref2) An old issue appears to be fixed.
+   issues: [18]
+
+ - name: biblatex-chicago
+   type: package
+   status: supported
+   comments: An earlier issue appears to have been fixed.
+   issues: [62]
+
+ - name: bigfoot
+   type: package
+   status: unknown
+   comments: To be supported or not? Can’t remember where I saw this mentioned!
+   tasks: needs tests
+   updated: 2024-07-04
+
+ - name: booktabs
+   type: package
+   status: currently-incompatible
+   issues: [69]
+
+ - name: caption
+   type: package
+   status: currently-incompatible
+   comments: Issue when hyperref and both listoffigures are used.
+   issues: [84]
+
+ - name: cleveref
+   type: package
+   status: currently-incompatible
+   issues: [2]
+
+ - name: colortbl
+   type: package
+   status: supported
+   comments: errors in combination with longtable
+   issues: [90]
+
+ - name: csquotes
+   type: package
+   status: currently-incompatible
+   comments: Main issue seems to be with blockquote.
+   issues: [3]
+
+ - name: doc
+   type: package
+   status: currently-incompatible
+   issues: [44]
+
+ - name: enumerate
+   type: package
+   status: currently-incompatible
+   comments: See comments in [[1]](#ref1).
+
+ - name: enumitem
+   type: package
+   status: partial-support
+   comments: See comments in [[1]](#ref1). The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one cae use, for example, `\begin{itemize}[...]` out of the box.
+   tasks: Check which keys are not yet supported and what else is missing. 
+   issues: [61]
+   related-issues: [4]
+   updated: 2024-07-05
+
+ - name: fancyvrb
+   type: package
+   status: currently-incompatible
+   comments: See comments in [[1]](#ref1).
+
+ - name: float
+   type: package
+   status: currently-incompatible
+   comments: "[H] floats are not yet automatically tagged. See comments in [[2]](#ref2)."
+
+ - name: footmisc
+   type: package
+   status: supported
+   comments: An old issue has been fixed.
+   issues: [12]
+
+ - name: footnote
+   type: package
+   status: unknown
+   tasks: needs tests
+   comments: To be supported or not?
+
+ - name: geometry
+   type: package
+   status: supported
+   comments: tagging of rules (showframe, crop marks) untested
+
+ - name: glossaries
+   type: package
+   status: unknown
+   comments: An old issue appears to be fixed.
+   tasks: needs tests
+   issues: [48]
+
+ - name: graphicx
+   type: package
+   status: supported
+   comments: >
+     Rather than
+     `\includegraphics[whatever]{whatever}`
+     one should now write
+     `\includegraphics[whatever,alt={This is the alternative text.}]{whatever}`
+     The alternative text will be ignored if tagging is not used. See comments in [[1]](#ref1). It seems that draft mode doesn’t work at present.
+     An old issue with height appears to be fixed.
+
+   issues: [16]
+   related-issues: [64]
+
+ - name: hhline
+   type: package
+   status: unknown
+   tasks: needs tests
+   issues: [66]
+
+ - name: hyperref
+   type: package
+   status: supported
+   comments: See comments in [[2]](#ref2).
+
+ - name: includepdf
+   type: package
+   status: unknown
+   comments: Main issue seems to be fixed but comments indicate that this is a troublesome package.
+   tasks: needs tests
+   issues: [86]
+
+ - name: listings
+   type: package
+   status: currently-incompatible
+   comments: See [[1]](#ref1) and also
+   issues: [70]
+   related-issues: [41]
+
+ - name: longtable
+   type: package
+   status: partial-support
+   issues: [22]
+   comments: longtables with page breaks works only with luatex
+   related-issues: [38]
+
+ - name: luamplib
+   type: package
+   status: supported
+   comments: An old issue has been fixed.
+   issues: [8]
+
+ - name: manyfoot
+   type: package
+   status: unknown
+   tasks: needs tests
+   comments: To be supported or not?
+
+ - name: mathtools
+   type: package
+   status: unknown
+   tasks: needs tests
+
+ - name: mdframed
+   type: package
+   status: no-support
+   comments: "Recommended alternative: tcolorbox."
+   issues: [73]
+
+ - name: microtype
+   type: package
+   status: supported
+   comments: Footnote patching doesn’t work but otherwise supported.
+   issues: [67]
+
+ - name: natbib
+   type: package
+   status: supported
+   comments: Supported if hyperref is used.
+   tasks: verify statement
+
+ - name: subcaption
+   type: package
+   status: currently-incompatible
+   comments:  Issue when hyperref and both listoffigures are used.
+   issues: [85]
+
+ - name: tabularx
+   type: package
+   status: supported
+   comments: An old issue has been fixed.
+   issues: [42]
+
+ - name: tocloft
+   type: package
+   status: currently-incompatible
+   issues: [74]
+
+ - name: tcolorbox
+   type: package
+   status: currently-incompatible
+   comments: "Not yet fully supported, but some suggestions here:"
+   issues: [73]
+
+ - name: tikz
+   type: package
+   status: currently-incompatible
+   comments: See comments in [[2]](#ref2).
+
+ - name: tikz-cd
+   type: package
+   status: currently-incompatible
+   issues: [30]
+
+ - name: titlesec
+   type: package
+   status: currently-incompatible
+   issues: [24]
+
+ - name: titletoc
+   type: package
+   status: currently-incompatible
+   comments: Mentioned here.
+   issues: [24]
+
+ - name: url
+   type: package
+   status: supported
+   comments: An old issue has been fixed.
+   issues: [5]
+
+ - name: varwidth
+   type: package
+   status: currently-incompatible
+   issues: [71]
+
+ - name: verse
+   type: package
+   status: supported
+   comments: firstaid is required for the fix of issue 49
+   issues: [49]
+
+ - name: wrapfig
+   type: package
+   status: currently-incompatible
+   issues: [40]
+   
+
+ - name: article
+   type: class
+   status: supported
+   updated: 2024-07-05
+
+
+ - name: report
+   type: class
+   status: supported
+   updated: 2024-07-05
+
+ - name: book
+   type: class
+   status: supported
+   updated: 2024-07-05
+
+ - name: KOMA-classes
+   type: class
+   status: currently-incompatible
+   related-issues: [88]
+   updated: 2024-07-05
+
+ - name: memoir
+   type: class
+   status: currently-incompatible
+   comments: "Some code showing the needed adjustments can be found in the 
+              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
+   updated: 2024-07-05
