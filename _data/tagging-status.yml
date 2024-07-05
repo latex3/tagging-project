@@ -1,12 +1,12 @@
 
  - name: amsmath
    type: package
-   status: unknown
-   comments: >
-     See comments in [[1]](#ref1), [[2]](#ref2), but what does ‘much of’ mean here? See also: <https://github.com/latex3/tagging-project/issues/77>
-     Mentioned here, but it seems the issue was fixed:"
-
-   issues: [28]
+   status: partial-support
+   comments: "Requires the math module.
+     Use of math tagging requires support in external tools.
+     See comments in [[1]](#ref1), [[2]](#ref2)"
+   issues: [77]
+   updated: 2024-07-06
 
  - name: amsthm
    type: package
@@ -16,44 +16,52 @@
 
  - name: biblatex
    type: package
-   status: supported
-   comments: Supported according to [[2]](#ref2) An old issue appears to be fixed.
+   status: partial-support
+   comments: "Supported according to [[2]](#ref2). Requires hyperref." 
    issues: [18]
 
  - name: biblatex-chicago
    type: package
-   status: supported
-   comments: An earlier issue appears to have been fixed.
+   status: partial-support
+   comments: See biblatex. The package should at some time use sockets in its footnote adaption.
    issues: [62]
+   updated: 2024-07-06
 
  - name: bigfoot
    type: package
    status: unknown
-   comments: To be supported or not? Can’t remember where I saw this mentioned!
+   comments: To be supported or not? 
    tasks: needs tests
    updated: 2024-07-04
 
  - name: booktabs
    type: package
-   status: currently-incompatible
+   status: partial-support
+   comments: requires the firstaid module which contains a fix.
    issues: [69]
+   updated: 2024-07-06
 
  - name: caption
    type: package
    status: currently-incompatible
-   comments: Issue when hyperref and both listoffigures are used.
+   comments: "the configurations from the package are overwritten by the
+             tagging code. Issue when hyperref and both listoffigures are used."
    issues: [84]
+   updated: 2024-07-06
 
  - name: cleveref
    type: package
    status: currently-incompatible
+   comments: "partially supported in the firstaid module, but open issue with hyperref"
    issues: [2]
+   updated: 2024-07-06
 
  - name: colortbl
    type: package
-   status: supported
+   status: partial-support
    comments: errors in combination with longtable
    issues: [90]
+   updated: 2024-07-06
 
  - name: csquotes
    type: package
@@ -93,8 +101,10 @@
  - name: footmisc
    type: package
    status: supported
-   comments: An old issue has been fixed.
+   comments: Replacement code is in latex-lab
+   tasks: integrate code properly into the package.
    issues: [12]
+   updated: 2024-07-06
 
  - name: footnote
    type: package
@@ -141,17 +151,20 @@
 
  - name: includepdf
    type: package
-   status: unknown
-   comments: Main issue seems to be fixed but comments indicate that this is a troublesome package.
+   status: currently-incompatible
+   comments: "Creates duplicated structures as graphics are processed more than once in trial
+             typesetting. Correct tagging of multipage includes unclear."
    tasks: needs tests
    issues: [86]
+   updated: 2024-07-06
 
  - name: listings
    type: package
    status: currently-incompatible
-   comments: See [[1]](#ref1) and also
+   comments: See [[1]](#ref1). See definition in tagpdfdocu-patches.sty.
    issues: [70]
    related-issues: [41]
+   updated: 2024-07-06
 
  - name: longtable
    type: package
@@ -165,6 +178,13 @@
    status: supported
    comments: An old issue has been fixed.
    issues: [8]
+
+ - name: luatexja
+   type: pkg
+   status: currently-incompatible
+   comments: overwrites tabular/array commands
+   issue: [87]
+   updated: 2024-07-06
 
  - name: manyfoot
    type: package
@@ -192,9 +212,8 @@
  - name: natbib
    type: package
    status: supported
-   comments: Supported if hyperref is used.
-   tasks: verify statement
-
+   updated: 2024-07-06
+   
  - name: subcaption
    type: package
    status: currently-incompatible
@@ -216,7 +235,8 @@
    type: package
    status: currently-incompatible
    comments: "Not yet fully supported, but some suggestions here:"
-   issues: [73]
+   issues: [73,88]
+   updated: 2024-07-06
 
  - name: tikz
    type: package
