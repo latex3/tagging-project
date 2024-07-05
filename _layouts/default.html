@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}" style="background-color: #F5F1E8">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <header>
       <img alt="logo" src="https://www.latex-project.org/img/latex-project-logo.svg"/>
      </header>
-    <div class="container-lg px-3 my-5 markdown-body">
+    <div class="container-lg px-3 my-5 markdown-body" style="background-color:white">
       {% if site.title and site.title != page.title %}
       <h3><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h3>
       {% endif %}
