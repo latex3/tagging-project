@@ -25,6 +25,8 @@ The values in the *Status* column have the following meaning:
 To add or edit the entries, please make a pull request to change the YAML file
 [tagging-status.yml](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
 
+If you encounter a problem with a package or class for which there is no issue in the [issue tracker](https://github.com/latex3/tagging-project/issues) yet, please add an issue in the tracker first (including a small example what goes wrong) or start a discussion  in the [discussion view](https://github.com/latex3/tagging-project/discussions) if that seems more appropriate. Later on it can still be added to the tables.
+
 
 ## Packages
 
