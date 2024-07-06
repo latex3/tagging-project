@@ -1,4 +1,5 @@
 
+
 # -------------------------------
  
  # - name: 
@@ -12,8 +13,16 @@
 
 #-------------------------------- package files (class files below) -----------------------
 
+#------------------------ AAA ----------------------------
 
  - name: afterpage
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: alltt
    type: package
    status: unknown
    issues:
@@ -78,6 +87,13 @@
 
 
 #------------------------ BBB ----------------------------
+
+ - name: bezier
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
 
  - name: biblatex
    type: package
@@ -152,10 +168,9 @@
 
  - name: csquotes
    type: package
-   status: currently-incompatible
-   comments: Main issue seems to be with blockquote.
+   status: partially-supported
+   comments: >`blockquote`s can't be used.
    issues: [3]
-   tasks: needs further tests
    updated: 2024-07-06
 
 #------------------------ DDD ----------------------------
@@ -203,6 +218,18 @@
    tasks: needs tests
    updated: 2024-07-06
 
+ - name: euscript
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: exscale
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
 #------------------------ FFF ----------------------------
 
  - name: fancyvrb
@@ -212,11 +239,43 @@
    tasks: needs tests
    updated: 2024-07-06
 
+ - name: fix-cm
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: fixltx2e
+   type: package
+   status: obsolete
+   comments: should work but is not needed
+   issues:
+   updated: 2024-07-06
+
+ - name: flafter
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: float
    type: package
    status: currently-incompatible
    comments: "[H] floats are not yet automatically tagged. See comments in [[2]](#ref2)."
    tasks: needs tests
+   updated: 2024-07-06
+
+ - name: fltrace
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: fontenc
+   type: package
+   status: supported
+   issues:
    updated: 2024-07-06
 
  - name: footmisc
@@ -278,6 +337,13 @@
    related-issues: [64]
    updated: 2024-07-06
 
+ - name: graphpap
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
 #------------------------ HHH ----------------------------
 
  - name: hhline
@@ -295,6 +361,12 @@
 
 #------------------------ III ----------------------------
 
+ - name: ifthen
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
  - name: includepdf
    type: package
    status: currently-incompatible
@@ -305,6 +377,12 @@
    updated: 2024-07-06
 
  - name: indentfirst
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: inputenc
    type: package
    status: supported
    issues:
@@ -327,11 +405,31 @@
    tasks: needs tests
    updated: 2024-07-06
 
+ - name: latexrelease
+   type: package
+   status: partially-supported
+   comments: Rolling the LaTeX format too far back will result in the loss of necessary support code for tagging, rolling forward should work.
+   issues:
+   tasks: determine how far back is possible
+   updated: 2024-07-06
+
+ - name: latexsym
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
  - name: layout
    type: package
    status: unknown
    issues:
    tasks: needs tests
+   updated: 2024-07-06
+
+ - name: lipsum
+   type: package
+   status: supported
+   issues:
    updated: 2024-07-06
 
  - name: listings
@@ -401,9 +499,8 @@
 
  - name: multicol
    type: package
-   status: unknown
+   status: supported
    issues:
-   tasks: needs tests
    updated: 2024-07-06
 
 #------------------------ NNN ----------------------------
@@ -431,11 +528,31 @@
    tasks: needs tests
    updated: 2024-07-06
 
+ - name: shortvrb
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: showidx
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: showkeys
    type: package
    status: unknown
    issues:
    tasks: needs tests
+   updated: 2024-07-06
+
+ - name: structuredlog
+   type: package
+   status: supported
+   issues:
    updated: 2024-07-06
 
  - name: subcaption
@@ -459,6 +576,12 @@
    status: currently-incompatible
    comments: "Not yet fully supported, but some suggestions here:"
    issues: [73,88]
+   updated: 2024-07-06
+
+ - name: textcomp
+   type: package
+   status: supported
+   issues:
    updated: 2024-07-06
 
  - name: theorem
@@ -500,6 +623,12 @@
    updated: 2024-07-06
 
  - name: trace
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: tracefnt
    type: package
    status: supported
    issues:
@@ -598,6 +727,15 @@
    related-issues: [88]
    updated: 2024-07-05
 
+#------------------------ LLL ----------------------------
+
+ - name: letter
+   type: class
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
 #------------------------ MMM ----------------------------
 
  - name: memoir
@@ -606,6 +744,15 @@
    comments: "Some code showing the needed adjustments can be found in the 
               [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
    updated: 2024-07-05
+
+#------------------------ PPP ----------------------------
+
+ - name: proc
+   type: class
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
 
 #------------------------ RRR ----------------------------
 
