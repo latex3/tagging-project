@@ -16,7 +16,7 @@ different repositories in a single place.
 If an issue that is recorded here requires changes in the other repositories 
 sub-issues can then be opened (by us) in those repositories and linked back, 
 or, if such changes are confined to a single repository, the issue could be 
-transferred there -- whatever is more appropriate. 
+transferred there – whatever is more appropriate. 
 
 ## Examples documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project
 
