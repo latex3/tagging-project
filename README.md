@@ -13,7 +13,7 @@ project. The code for this project is split over several other repositories
 place to  keep any more general topics or issues that cut across the 
 different repositories in a single place. 
 
-If an issue that is recorded here requires changes in the other repositories 
+If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories 
 sub-issues can then be opened (by us) in those repositories and linked back, 
 or, if such changes are confined to a single repository, the issue could be 
 transferred there – whatever is more appropriate. 
