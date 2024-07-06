@@ -1,7 +1,7 @@
 
  - name: amsmath
    type: package
-   status: partial-support
+   status: partially-supported
    comments: "Requires the math module.
      Use of math tagging requires support in external tools."
    references: [1,2]
@@ -16,14 +16,14 @@
 
  - name: biblatex
    type: package
-   status: partial-support
+   status: partially-supported
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
 
  - name: biblatex-chicago
    type: package
-   status: partial-support
+   status: partially-supported
    comments: See biblatex. The package should at some time use sockets in its footnote adaption.
    issues: [62]
    updated: 2024-07-06
@@ -37,7 +37,7 @@
 
  - name: booktabs
    type: package
-   status: partial-support
+   status: partially-supported
    comments: requires the firstaid module which contains a fix.
    issues: [69]
    updated: 2024-07-06
@@ -59,7 +59,7 @@
 
  - name: colortbl
    type: package
-   status: partial-support
+   status: partially-supported
    comments: errors in combination with longtable
    issues: [90]
    updated: 2024-07-06
@@ -82,7 +82,7 @@
 
  - name: enumitem
    type: package
-   status: partial-support
+   status: partially-supported
    comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one cae use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
    references: [1]
@@ -173,7 +173,7 @@
 
  - name: longtable
    type: package
-   status: partial-support
+   status: partially-supported
    issues: [22]
    comments: longtables with page breaks works only with luatex
    related-issues: [38]

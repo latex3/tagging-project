@@ -3,7 +3,7 @@ title: LaTeX package/class tagging status
 ---
 <style>
 td.supported {background-color: #DDFFDD;font-weight:bold;}
-td.partial-support {background-color: #FFFFDD;font-weight:bold;}
+td.partially-supported {background-color: #FFFFDD;font-weight:bold;}
 td.no-support {background-color: #FFDDDD;font-weight:bold;}
 </style>
 <script src="sorttable.js"></script>
@@ -16,7 +16,7 @@ with respect to PDF tagging.
 The values in the *Status* column have the following meaning:
 
 - `supported` This package or class works without any issues when tagging is enabled. If there are problems, please open an issue in [the tagging-project repo](https://github.com/latex3/tagging-project/issues).
-- `partial-support` The package or class is partially supported, but some parts may not work. See comments for details.
+- `partially-supported` The package or class is partially supported, but some parts may not work. See comments for details.
 - `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 - `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 - `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated.
