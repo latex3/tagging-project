@@ -3,10 +3,10 @@
    type: package
    status: partial-support
    comments: "Requires the math module.
-     Use of math tagging requires support in external tools.
-     See comments in [[1]](#ref1), [[2]](#ref2)"
+     Use of math tagging requires support in external tools."
    issues: [77]
    updated: 2024-07-06
+   references: [1,2]
 
  - name: amsthm
    type: package
@@ -17,8 +17,9 @@
  - name: biblatex
    type: package
    status: partial-support
-   comments: "Supported according to [[2]](#ref2). Requires hyperref." 
+   comments: "Requires hyperref." 
    issues: [18]
+   references: [2]
 
  - name: biblatex-chicago
    type: package
@@ -77,26 +78,28 @@
  - name: enumerate
    type: package
    status: currently-incompatible
-   comments: See comments in [[1]](#ref1).
+   references: [1]
 
  - name: enumitem
    type: package
    status: partial-support
-   comments: See comments in [[1]](#ref1). The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one cae use, for example, `\begin{itemize}[...]` out of the box.
+   comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one cae use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
    issues: [61]
    related-issues: [4]
    updated: 2024-07-05
-
+   references: [1]
+   
  - name: fancyvrb
    type: package
    status: currently-incompatible
-   comments: See comments in [[1]](#ref1).
-
+   references: [1]
+   
  - name: float
    type: package
    status: currently-incompatible
-   comments: "[H] floats are not yet automatically tagged. See comments in [[2]](#ref2)."
+   comments: "[H] floats are not yet automatically tagged."
+   references: [2]
 
  - name: footmisc
    type: package
@@ -132,11 +135,12 @@
      `\includegraphics[whatever]{whatever}`
      one should now write
      `\includegraphics[whatever,alt={This is the alternative text.}]{whatever}`
-     The alternative text will be ignored if tagging is not used. See comments in [[1]](#ref1). It seems that draft mode doesn’t work at present.
+     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
      An old issue with height appears to be fixed.
 
    issues: [16]
    related-issues: [64]
+   references: [1]
 
  - name: hhline
    type: package
@@ -147,7 +151,7 @@
  - name: hyperref
    type: package
    status: supported
-   comments: See comments in [[2]](#ref2).
+   references: [2]
 
  - name: includepdf
    type: package
@@ -161,10 +165,11 @@
  - name: listings
    type: package
    status: currently-incompatible
-   comments: See [[1]](#ref1). See definition in tagpdfdocu-patches.sty.
+   comments: See definition in tagpdfdocu-patches.sty.
    issues: [70]
    related-issues: [41]
    updated: 2024-07-06
+   references: [1]
 
  - name: longtable
    type: package
@@ -241,7 +246,7 @@
  - name: tikz
    type: package
    status: currently-incompatible
-   comments: See comments in [[2]](#ref2).
+   references: [2]
 
  - name: tikz-cd
    type: package
