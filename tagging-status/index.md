@@ -45,9 +45,9 @@ If you encounter a problem with a package or class for which there is no issue i
 
 ## References
 
+{% for r in site.data.references %}
+<p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
+{% endfor %}
 
-<span id="ref1">1.</span> [U. Fischer and F. Mittelbach. Automated tagging of LaTeX documents — what is possible today, in 2023? TUGboat, 44(2):262–266, 2023](https://www.latex-project.org/publications/2023-UFi-FMi-TUG-tb137fischer-tagging23.pdf).
-
-<span id="ref2">2.</span> [F. Mittelbach and U. Fischer. Enhancing LaTeX to automatically produce tagged and accessible PDF. TUGboat, 45(1), 2024](https://www.latex-project.org/publications/2024-FMi-UFi-TUB-tb139mitt-deims24.pdf). 
 
 
