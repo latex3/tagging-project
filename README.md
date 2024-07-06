@@ -1,6 +1,6 @@
 # The LaTeX Tagged PDF repository
 
-See <https://www.latex-project.org/publications/indexbytopic/pdf/>
+See <https://www.latex-project.org/publications/indexbytopic/pdf/> for articles and other material about the "LaTeX Tagged PDF" project.
 
 This [tagging-project repository](https://github.com/latex3/tagging-project/)  does not contain any code.
 
@@ -30,7 +30,7 @@ We have written a few guidelines explaining how to [use the prototype for genera
 
 ## Status of LaTeX classes and packages with respect to Tagging
 
-A list of [contributed LaTeX packages, and their compatibility with the tagging code](tagging-status/)
+A list of [core and contributed LaTeX packages, and their compatibility with the tagging code](tagging-status/)
 
 ## License
 
