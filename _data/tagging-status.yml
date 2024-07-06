@@ -1,4 +1,39 @@
 
+# -------------------------------
+ 
+ # - name: 
+ #   type: package
+ #   status: unknown
+ #   issues:
+ #   tasks: needs tests
+ #   updated: 2024-07-06
+
+
+
+#-------------------------------- package files (class files below) -----------------------
+
+
+ - name: afterpage
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: amsbsy
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: amscd
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: amsmath
    type: package
    status: partial-support
@@ -8,11 +43,41 @@
    issues: [77]
    updated: 2024-07-06
 
+ - name: amsopn
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: amstext
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: amsthm
    type: package
    status: currently-incompatible
    issues: [83]
    updated: 2024-07-04
+
+ - name: amsxtra
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: array
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+
+#------------------------ BBB ----------------------------
 
  - name: biblatex
    type: package
@@ -34,11 +99,25 @@
    tasks: needs tests
    updated: 2024-07-04
 
+ - name: bm
+   type: package
+   status: unknown
+   issues:
+   updated: 2024-07-06
+
  - name: booktabs
    type: package
    status: partial-support
    comments: requires the firstaid module which contains a fix.
    issues: [69]
+   updated: 2024-07-06
+
+#------------------------ CCC ----------------------------
+
+- name: calc
+   type: package
+   status: supported
+   issues:
    updated: 2024-07-06
 
  - name: caption
@@ -56,6 +135,12 @@
    issues: [2]
    updated: 2024-07-06
 
+ - name: color
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
  - name: colortbl
    type: package
    status: partial-support
@@ -69,10 +154,27 @@
    comments: Main issue seems to be with blockquote.
    issues: [3]
 
+#------------------------ DDD ----------------------------
+
+ - name: dcolumn
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: delarray
+   type: package
+   status: unknown
+   issues:
+   updated: 2024-07-06
+
  - name: doc
    type: package
    status: currently-incompatible
    issues: [44]
+
+#------------------------ EEE ----------------------------
 
  - name: enumerate
    type: package
@@ -87,6 +189,15 @@
    issues: [61]
    related-issues: [4]
    updated: 2024-07-05
+
+ - name: epsfig
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+#------------------------ FFF ----------------------------
 
  - name: fancyvrb
    type: package
@@ -112,6 +223,15 @@
    tasks: needs tests
    comments: To be supported or not?
 
+ - name: ftnright
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+#------------------------ GGG ----------------------------
+
  - name: geometry
    type: package
    status: supported
@@ -124,7 +244,13 @@
    tasks: needs tests
    issues: [48]
 
- - name: graphicx
+ - name: graphics
+   type: package
+   status: supported
+   comments: See `graphicx` package
+   updated: 2024-07-06
+
+- name: graphicx
    type: package
    status: supported
    comments: >
@@ -138,6 +264,8 @@
    issues: [16]
    related-issues: [64]
 
+#------------------------ HHH ----------------------------
+
  - name: hhline
    type: package
    status: unknown
@@ -149,6 +277,8 @@
    status: supported
    comments: See comments in [[2]](#ref2).
 
+#------------------------ III ----------------------------
+
  - name: includepdf
    type: package
    status: currently-incompatible
@@ -156,6 +286,36 @@
              typesetting. Correct tagging of multipage includes unclear."
    tasks: needs tests
    issues: [86]
+   updated: 2024-07-06
+
+ - name: indentfirst
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+#------------------------ KKK ----------------------------
+
+ - name: keyval
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+#------------------------ LLL ----------------------------
+
+ - name: l3sys-query
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: layout
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
    updated: 2024-07-06
 
  - name: listings
@@ -173,6 +333,13 @@
    comments: longtables with page breaks works only with luatex
    related-issues: [38]
 
+ - name: lscape
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: luamplib
    type: package
    status: supported
@@ -185,6 +352,8 @@
    comments: overwrites tabular/array commands
    issues: [87]
    updated: 2024-07-06
+
+#------------------------ MMM ----------------------------
 
  - name: manyfoot
    type: package
@@ -209,33 +378,72 @@
    comments: Footnote patching doesn’t work but otherwise supported.
    issues: [67]
 
+ - name: multicol
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+#------------------------ NNN ----------------------------
+
  - name: natbib
    type: package
    status: supported
    updated: 2024-07-06
    
+#------------------------ RRR ----------------------------
+
+ - name: rotating
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+#------------------------ SSS ----------------------------
+
+ - name: shellesc
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: showkeys
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: subcaption
    type: package
    status: currently-incompatible
    comments:  Issue when hyperref and both listoffigures are used.
    issues: [85]
 
+#------------------------ TTT ----------------------------
+
  - name: tabularx
    type: package
    status: supported
    comments: An old issue has been fixed.
    issues: [42]
-
- - name: tocloft
-   type: package
-   status: currently-incompatible
-   issues: [74]
+   updated: 2024-07-06
 
  - name: tcolorbox
    type: package
    status: currently-incompatible
    comments: "Not yet fully supported, but some suggestions here:"
    issues: [73,88]
+   updated: 2024-07-06
+
+ - name: theorem
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
    updated: 2024-07-06
 
  - name: tikz
@@ -259,16 +467,51 @@
    comments: Mentioned here.
    issues: [24]
 
+ - name: tocloft
+   type: package
+   status: currently-incompatible
+   issues: [74]
+
+ - name: trace
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+ - name: trig
+   type: package
+   status: supported
+   issues:
+   updated: 2024-07-06
+
+#------------------------ UUU ----------------------------
+
  - name: url
    type: package
    status: supported
    comments: An old issue has been fixed.
    issues: [5]
 
+#------------------------ VVV ----------------------------
+
+ - name: varioref
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
  - name: varwidth
    type: package
    status: currently-incompatible
    issues: [71]
+
+ - name: verbatim
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
 
  - name: verse
    type: package
@@ -276,19 +519,33 @@
    comments: firstaid is required for the fix of issue 49
    issues: [49]
 
+#------------------------ WWW ----------------------------
+
  - name: wrapfig
    type: package
    status: currently-incompatible
    issues: [40]
-   
+
+#------------------------ XXX ----------------------------
+
+ - name: xr
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+ - name: xspace
+   type: package
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-06
+
+
+#-------------------------------- class files -----------------------
 
  - name: article
-   type: class
-   status: supported
-   updated: 2024-07-05
-
-
- - name: report
    type: class
    status: supported
    updated: 2024-07-05
@@ -298,7 +555,7 @@
    status: supported
    updated: 2024-07-05
 
- - name: KOMA-script
+ - name: KOMA-script classes
    type: class
    status: currently-incompatible
    related-issues: [88]
@@ -310,3 +567,9 @@
    comments: "Some code showing the needed adjustments can be found in the 
               [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
    updated: 2024-07-05
+
+ - name: report
+   type: class
+   status: supported
+   updated: 2024-07-05
+
