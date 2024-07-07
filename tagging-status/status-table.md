@@ -53,7 +53,7 @@ See also
 {% endfor %}
 {% endif %}
 </td>
-<td>{{p.tasks}}</td>
+<td>{{p.tasks | markdownify}}</td>
 <td class="date">{{p.updated}}</td>
 </tr>
 {%- endfor -%}
