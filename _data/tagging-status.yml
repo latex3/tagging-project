@@ -1,4 +1,32 @@
 
+# -------- Tagging Status YAML ----------
+
+# -------- Possible Fields -------------
+
+#  field          optional?  type            usage
+#  -----          ---------  ----            -----
+#  name           required   string          Package or Class name
+#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
+#  type           required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
+#  status         required   string          Status of package, see list below.
+#  comments       optional   markdown-string Free text markdown comments
+#  references     optional   integer-list    List of integers referencing the bibliography in references.yml
+#  issues         optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
+#  related-issues optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
+#  tasks          optional   string          Free text action items for team (not currently markdown)
+#  updated        optional   date            yyyy-mm-dd date when the entry was updated.
+
+# ------------------------
+
+# Status                 Meaning
+# -----                  -------
+# supported              This package or class works without any issues when tagging is enabled
+# partially-supported    The package or class is currently partially supported
+# currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
+# no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
+# unknown                The status of this package or class is not known
+
+
 
 # -------------------------------
  
