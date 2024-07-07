@@ -6,14 +6,15 @@
 #  field          optional?  type            usage
 #  -----          ---------  ----            -----
 #  name           required   string          Package or Class name
-#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
 #  type           required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
+#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
 #  status         required   string          Status of package, see list below.
 #  comments       optional   markdown-string Free text markdown comments
 #  references     optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues         optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
 #  tasks          optional   string          Free text action items for team (not currently markdown)
+#  supported-by   optional   string-list     list of "author" or "firstaid" or "???" detailing where tagging support is added (list of possible values to be determined)
 #  updated        optional   date            yyyy-mm-dd date when the entry was updated.
 
 # ------------------------
@@ -155,6 +156,7 @@
  - name: booktabs
    type: package
    status: partially-supported
+   supported-by: [firstaid]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
    updated: 2024-07-06
@@ -178,6 +180,7 @@
  - name: cleveref
    type: package
    status: currently-incompatible
+   supported-by: [firstaid]
    comments: "partially supported in the firstaid module, but open issue with hyperref"
    issues: [2]
    updated: 2024-07-06
@@ -707,6 +710,7 @@
  - name: verse
    type: package
    status: supported
+   supported-by: [firstaid]
    comments: firstaid is required for the fix of issue 49
    issues: [49]
    updated: 2024-07-06
