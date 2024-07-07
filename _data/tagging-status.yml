@@ -13,7 +13,7 @@
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues    optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
-#  tasks             optional   string          Free text action items for team (not currently markdown)
+#  tasks             optional   markdown-string Free text markdown action items for tean
 #  supported-through optional   string-list     list of "author" or "firstaid" or "???" detailing where tagging support is added (list of possible values to be determined)
 #  updated           optional   date            yyyy-mm-dd date when the entry was updated.
 
@@ -46,7 +46,7 @@
    type: package
    status: unknown
    issues:
-   tasks: needs **tests**
+   tasks: needs tests
    updated: 2024-07-06
 
  - name: alltt

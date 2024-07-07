@@ -6,6 +6,7 @@ td.compatible {background-color: #DDFFDD;font-weight:bold;}
 td.partially-compatible {background-color: #FFFFDD;font-weight:bold;}
 td.no-support {background-color: #FFDDDD;font-weight:bold;}
 td.date {white-space: nowrap;font-size:90%;}
+.markdown-body table tr { vertical-align: baseline;}
 </style>
 <script src="sorttable.js"></script>
 
