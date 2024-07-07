@@ -5,6 +5,7 @@ title: LaTeX package/class tagging status
 td.supported {background-color: #DDFFDD;font-weight:bold;}
 td.partially-supported {background-color: #FFFFDD;font-weight:bold;}
 td.no-support {background-color: #FFDDDD;font-weight:bold;}
+td.date {white-space: nowrap;font-size:90%;}
 </style>
 <script src="sorttable.js"></script>
 

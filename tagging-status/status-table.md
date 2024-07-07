@@ -46,7 +46,7 @@ See also
 {% endif %}
 </td>
 <td>{{p.tasks}}</td>
-<td>{{p.updated}}</td>
+<td class="date">{{p.updated}}</td>
 </tr>
 {%- endfor -%}
 
