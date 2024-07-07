@@ -32,6 +32,9 @@ See
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
 {%- endif -%}
+{%- if p.supported-through -%}
+<p>Tagging support: {% for t in p.supported-through %} {{t}} {% endfor %}.</p>
+{%- endif -%}
 </td>
 <td>
 {%- if p.issues -%}
