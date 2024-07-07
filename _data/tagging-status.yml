@@ -73,11 +73,12 @@
  - name: amsmath
    type: package
    status: partially-compatible
+   supported-through: [math]
    comments: "Requires the math module.
      Use of math tagging requires support in external tools."
    references: [1,2]
    issues: [77]
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: amsopn
    type: package
@@ -119,18 +120,19 @@
  - name: bezier
    ctan-pkg: latex-base
    type: package
-   status: unknown
+   status: compatible
+   comments: "empty compability package"
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: biblatex
    type: package
    status: partially-compatible
+   supported-through: [phase-III]
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: biblatex-chicago
    type: package
@@ -145,6 +147,12 @@
    comments: To be supported or not? 
    tasks: needs tests
    updated: 2024-07-04
+
+ - name: blindtext
+   type: package
+   status: compatible
+   supported-through: [firstaid]   
+   updated: 2024-07-07
 
  - name: bm
    type: package
@@ -242,14 +250,15 @@
    references: [1]
    issues: [61]
    related-issues: [4]
-   updated: 2024-07-0
+   updated: 2024-07-06
    
  - name: epsfig
    type: package
-   status: unknown
+   status: compatible
+   comments: "obsolete, small wrapper around graphicx"
    issues:
    tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: euscript
    ctan-pkg: amsfonts
@@ -289,10 +298,9 @@
  - name: flafter
    ctan-pkg: latex-base
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: float
    type: package
@@ -318,6 +326,7 @@
  - name: footmisc
    type: package
    status: compatible
+   supported-through: [phase-III]
    comments: Replacement code is in latex-lab
    tasks: integrate code properly into the package.
    issues: [12]
@@ -343,7 +352,7 @@
    type: package
    status: compatible
    comments: tagging of rules (showframe, crop marks) untested
-   tasks: further needs tests
+   tasks: needs further tests
    updated: 2024-07-06
 
  - name: glossaries
@@ -357,12 +366,14 @@
  - name: graphics
    type: package
    status: compatible
+   supported-through: [phase-III]
    comments: See `graphicx` package
    updated: 2024-07-06
 
  - name: graphicx
    type: package
    status: compatible
+   supported-through: [phase-III]
    comments: >
      Rather than
      `\includegraphics[whatever]{whatever}`
@@ -394,6 +405,7 @@
  - name: hyperref
    type: package
    status: compatible
+   supported-through: [package,phase-III]
    references: [2]
    updated: 2024-07-06
 
@@ -539,6 +551,7 @@
  - name: natbib
    type: package
    status: compatible
+   supported-through: [phase-III]
    updated: 2024-07-06
 
 #------------------------ PPP ----------------------------
@@ -566,10 +579,9 @@
 
  - name: shellesc
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: shortvrb
    type: package
@@ -625,8 +637,9 @@
  - name: textcomp
    type: package
    status: compatible
+   comments: "now unneeded package as definitions have been moved into the kernel"
    issues:
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: theorem
    type: package
@@ -736,10 +749,16 @@
 
  - name: xr
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-07
+
+ - name: xr-hyper
+   type: package
+   status: compatible
+   comments: now identical to xr
+   issues:
+   updated: 2024-07-07
 
  - name: xspace
    type: package
@@ -752,6 +771,28 @@
 #-------------------------------- class files -----------------------
 
 #------------------------ AAA ----------------------------
+ - name: amsart
+   type: class
+   status: partially-compatible
+   supported-through: [firstaid]
+   comments: "theorem environments not compatible, see amsthm. Used by project example arxiv3"
+   tasks: needs further tests
+   updated: 2024-07-07
+
+ - name: amsbook
+   type: class
+   status: partially-compatible
+   supported-through: [firstaid]
+   comments: "theorem environments not compatible, see amsthm."
+   tasks: needs further tests
+   updated: 2024-07-07
+
+ - name: amsldoc
+   type: class
+   status: currently-incompatible
+   comments: "See some needed adjustments in project example `amsldoc`"
+   tasks: needs further tests
+   updated: 2024-07-07
 
  - name: article
    type: class
@@ -759,6 +800,11 @@
    updated: 2024-07-05
 
 #------------------------ BBB ----------------------------
+
+ - name: beamer
+   type: class
+   status: currently-incompatible
+   updated: 2024-07-07
 
  - name: book
    type: class
