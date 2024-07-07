@@ -111,6 +111,7 @@
  - name: array
    type: package
    status: compatible
+   supported-through: [table]
    issues:
    updated: 2024-07-06
 
@@ -164,7 +165,7 @@
  - name: booktabs
    type: package
    status: partially-compatible
-   supported-through: [firstaid]
+   supported-through: [firstaid,table]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
    updated: 2024-07-06
@@ -202,6 +203,7 @@
  - name: colortbl
    type: package
    status: compatible
+   supported-through: [table]
    comments: "#90 issue with longtable fixed at the last release"
    issues: [90]
    updated: 2024-07-07
@@ -325,7 +327,6 @@
  - name: footmisc
    type: package
    status: compatible
-   supported-through: [phase-III]
    comments: Replacement code is in latex-lab
    tasks: integrate code properly into the package.
    issues: [12]
@@ -365,14 +366,12 @@
  - name: graphics
    type: package
    status: compatible
-   supported-through: [phase-III]
    comments: See `graphicx` package
    updated: 2024-07-06
 
  - name: graphicx
    type: package
    status: compatible
-   supported-through: [phase-III]
    comments: >
      Rather than
      `\includegraphics[whatever]{whatever}`
@@ -404,9 +403,17 @@
  - name: hyperref
    type: package
    status: compatible
-   supported-through: [package,phase-III]
+   supported-through: [package]
    references: [2]
    updated: 2024-07-06
+
+ - name: hyperxmp
+   type: package
+   status: no-support
+   comments: "Incompatible with PDF management, loading is suppressed. XMP-metadata are
+              handled by the kernel code."
+   issues:
+   updated: 2024-07-07
 
 #------------------------ III ----------------------------
 
@@ -485,6 +492,7 @@
  - name: longtable
    type: package
    status: partially-compatible
+   supported-through: [table]
    issues: [22]
    comments: longtables with page breaks works only with luatex
    related-issues: [38]
@@ -551,7 +559,6 @@
  - name: natbib
    type: package
    status: compatible
-   supported-through: [phase-III]
    updated: 2024-07-06
 
 #------------------------ PPP ----------------------------
@@ -564,6 +571,14 @@
    tasks: needs tests
    issues: [86]
    updated: 2024-07-06
+
+ - name: pdfx
+   type: package
+   status: no-support
+   comments: "Incompatible with PDF-management, loading is suppressed. 
+              Standards should be set with `\DocumentMetadata` keys" 
+   issues:
+   updated: 2024-07-07
 
    
 #------------------------ RRR ----------------------------
@@ -623,6 +638,7 @@
  - name: tabularx
    type: package
    status: compatible
+   supported-through: [table]
    comments: An old issue has been fixed.
    issues: [42]
    updated: 2024-07-06
@@ -748,6 +764,12 @@
 
 #------------------------ XXX ----------------------------
 
+ - name: xcolor
+   type: package
+   status: compatible
+   issues:
+   updated: 2024-07-07
+
  - name: xr
    type: package
    status: compatible
@@ -775,7 +797,7 @@
  - name: amsart
    type: class
    status: partially-compatible
-   supported-through: [firstaid]
+   supported-through: [firstaid,title]
    comments: "theorem environments not compatible, see amsthm. Used by project example arxiv3"
    tasks: needs further tests
    updated: 2024-07-07
@@ -783,7 +805,7 @@
  - name: amsbook
    type: class
    status: partially-compatible
-   supported-through: [firstaid]
+   supported-through: [firstaid,title]
    comments: "theorem environments not compatible, see amsthm."
    tasks: needs further tests
    updated: 2024-07-07
@@ -798,6 +820,7 @@
  - name: article
    type: class
    status: compatible
+   supported-through: [title]
    updated: 2024-07-05
 
 #------------------------ BBB ----------------------------
@@ -810,6 +833,7 @@
  - name: book
    type: class
    status: compatible
+   supported-through: [title]
    updated: 2024-07-05
 
 #------------------------ KKK ----------------------------
@@ -853,5 +877,6 @@
  - name: report
    type: class
    status: compatible
+   supported-through: [title]   
    updated: 2024-07-05
 

@@ -13,7 +13,7 @@ td.date {white-space: nowrap;font-size:90%;}
 # Tagging Status of LaTeX Packages and Classes
 
 This file shows the status of LaTeX [Packages](#packages) and [Classes](#classes)
-with respect to PDF tagging.
+with respect to PDF tagging. `phase-III` is generally needed and not explicitly showed.
 
 The values in the *Status* column have the following meaning:
 
@@ -50,6 +50,3 @@ If you encounter a problem with a package or class for which there is no issue i
 {% for r in site.data.references %}
 <p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
 {% endfor %}
-
-
-
