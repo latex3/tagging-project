@@ -100,6 +100,7 @@
    updated: 2024-07-04
 
  - name: amsxtra
+   ctan-pkg: latex-amsmath
    type: package
    status: unknown
    issues:
@@ -116,7 +117,8 @@
 #------------------------ BBB ----------------------------
 
  - name: bezier
-   type: package
+   ctan-pkg: latex-base
+      type: package
    status: unknown
    issues:
    tasks: needs tests
@@ -250,6 +252,7 @@
    updated: 2024-07-06
 
  - name: euscript
+   ctan-pkg: amsfonts
    type: package
    status: compatible
    issues:
@@ -284,6 +287,7 @@
    updated: 2024-07-06
 
  - name: flafter
+   ctan-pkg: latex-base
    type: package
    status: unknown
    issues:
@@ -299,6 +303,7 @@
    updated: 2024-07-06
 
  - name: fltrace
+   ctan-pkg: latex-base
    type: package
    status: compatible
    issues:
@@ -400,15 +405,6 @@
    issues:
    updated: 2024-07-06
 
- - name: includepdf
-   type: package
-   status: currently-incompatible
-   comments: "Creates duplicated structures as graphics are processed more than once in trial
-             typesetting. Correct tagging of multipage includes unclear."
-   tasks: needs tests
-   issues: [86]
-   updated: 2024-07-06
-
  - name: indentfirst
    type: package
    status: compatible
@@ -447,6 +443,7 @@
    updated: 2024-07-06
 
  - name: latexsym
+   ctan-pkg: latex-base
    type: package
    status: compatible
    issues:
@@ -543,6 +540,18 @@
    type: package
    status: compatible
    updated: 2024-07-06
+
+#------------------------ PPP ----------------------------
+
+- name: pdfpages
+   type: package
+   status: currently-incompatible
+   comments: "Creates duplicated structures as graphics are processed more than once in trial
+             typesetting. Correct tagging of multipage includes unclear."
+   tasks: needs tests
+   issues: [86]
+   updated: 2024-07-06
+
    
 #------------------------ RRR ----------------------------
 
@@ -570,6 +579,7 @@
    updated: 2024-07-06
 
  - name: showidx
+   ctan-pkg: latex-base
    type: package
    status: unknown
    issues:
@@ -663,6 +673,7 @@
    updated: 2024-07-06
 
  - name: tracefnt
+   ctan-pkg: latex-base
    type: package
    status: compatible
    issues:
