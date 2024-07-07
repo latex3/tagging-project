@@ -26,8 +26,6 @@
 # currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 # no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 # unknown                The status of this package or class is not known
-# obsolete               The package is no longer needed (but is exoected to work with tagging)
-
 
 # -------------------------------
  
@@ -193,10 +191,10 @@
 
  - name: colortbl
    type: package
-   status: partially-compatible
-   comments: errors in combination with longtable
+   status: compatible
+   comments: "#90 issue with longtable fixed at the last release"
    issues: [90]
-   updated: 2024-07-06
+   updated: 2024-07-07
 
  - name: csquotes
    type: package
@@ -280,8 +278,8 @@
 
  - name: fixltx2e
    type: package
-   status: obsolete
-   comments: should work but is not needed
+   status: compatible
+   comments: This is an obsolete package which should not be needed
    issues:
    updated: 2024-07-06
 
