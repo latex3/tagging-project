@@ -7,8 +7,8 @@
 #  -----          ---------  ----            -----
 #  name           required   string          Package or Class name
 #  type           required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
-#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
 #  status         required   string          Status of package, see list below.
+#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
 #  comments       optional   markdown-string Free text markdown comments
 #  references     optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues         optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
@@ -26,7 +26,7 @@
 # currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 # no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 # unknown                The status of this package or class is not known
-
+# obsolete               The package is no longer needed (but is exoected to work with tagging)
 
 
 # -------------------------------
