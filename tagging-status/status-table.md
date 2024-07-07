@@ -35,7 +35,7 @@ See
 {%- if p.supported-through -%}
 <p>Tagging support:
 {% for t in p.supported-through %}
-{{t}}{%- unless forloop.last -%}, {% endunless -%}
+<b>{{t}}</b>{%- unless forloop.last -%}, {% endunless -%}
 {%- endfor %}.</p>
 {%- endif -%}
 </td>
