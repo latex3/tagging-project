@@ -257,7 +257,6 @@
    status: compatible
    comments: "obsolete, small wrapper around graphicx"
    issues:
-   tasks: needs tests
    updated: 2024-07-07
 
  - name: euscript
@@ -503,6 +502,7 @@
    status: compatible
    comments: An old issue has been fixed.
    issues: [8]
+   updated: 2024-07-06
 
  - name: luatexja
    type: package
@@ -629,9 +629,10 @@
 
  - name: tcolorbox
    type: package
-   status: currently-incompatible
-   comments: "Not yet fully supported, but some suggestions here:"
+   status: partially-compatible
+   comments: "Not yet fully supported, but some suggestions in the listed issues"
    issues: [73,88]
+   tasks: needs further tests
    updated: 2024-07-06
 
  - name: textcomp
