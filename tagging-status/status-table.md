@@ -20,7 +20,9 @@ Click on the column headings to sort the table by the chosen column.
 {%- for p in packages -%}
 <tr>
 <!-- <td>{{p.type}}</td> -->
-<td class="{{p.status}}"><a href="https://ctan.org/pkg/{{p.name}}">{{p.name}}</a></td>
+<td class="{{p.status}}"><a href="https://ctan.org/pkg/
+{%- if p.ctan-pkg -%}{{p.ctan-pkg}}{%- else -%}{{p.name}}{%- endif -%}
+">{{p.name}}</a></td>
 <td class="{{p.status}}">{{p.status}}</td>
 <td>
 {{p.comments | markdownify}}
