@@ -3,26 +3,26 @@
 
 # -------- Possible Fields -------------
 
-#  field          optional?  type            usage
-#  -----          ---------  ----            -----
-#  name           required   string          Package or Class name
-#  type           required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
-#  status         required   string          Status of package, see list below.
-#  ctan-pkg       optional   string          Name for ctan.org/pkg/?? link if different to name
-#  comments       optional   markdown-string Free text markdown comments
-#  references     optional   integer-list    List of integers referencing the bibliography in references.yml
-#  issues         optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
-#  related-issues optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
-#  tasks          optional   string          Free text action items for team (not currently markdown)
-#  supported-by   optional   string-list     list of "author" or "firstaid" or "???" detailing where tagging support is added (list of possible values to be determined)
-#  updated        optional   date            yyyy-mm-dd date when the entry was updated.
+#  field             optional?  type            usage
+#  -----             ---------  ----            -----
+#  name              required   string          Package or Class name
+#  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
+#  status            required   string          Status of package, see list below.
+#  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
+#  comments          optional   markdown-string Free text markdown comments
+#  references        optional   integer-list    List of integers referencing the bibliography in references.yml
+#  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
+#  related-issues    optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
+#  tasks             optional   string          Free text action items for team (not currently markdown)
+#  supported-through optional   string-list     list of "author" or "firstaid" or "???" detailing where tagging support is added (list of possible values to be determined)
+#  updated           optional   date            yyyy-mm-dd date when the entry was updated.
 
 # ------------------------
 
 # Status                 Meaning
 # -----                  -------
-# supported              This package or class works without any issues when tagging is enabled
-# partially-supported    The package or class is currently partially supported
+# compatible             This package or class works without any issues when tagging is enabled
+# partially-compatible   The package or class is currently partially compatible
 # currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 # no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 # unknown                The status of this package or class is not known
@@ -74,7 +74,7 @@
 
  - name: amsmath
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: "Requires the math module.
      Use of math tagging requires support in external tools."
    references: [1,2]
@@ -110,7 +110,7 @@
 
  - name: array
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -126,7 +126,7 @@
 
  - name: biblatex
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
@@ -134,7 +134,7 @@
 
  - name: biblatex-chicago
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: See biblatex. The package should at some time use sockets in its footnote adaption.
    issues: [62]
    updated: 2024-07-06
@@ -155,8 +155,8 @@
 
  - name: booktabs
    type: package
-   status: partially-supported
-   supported-by: [firstaid]
+   status: partially-compatible
+   supported-through: [firstaid]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
    updated: 2024-07-06
@@ -165,7 +165,7 @@
 
  - name: calc
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -180,27 +180,27 @@
  - name: cleveref
    type: package
    status: currently-incompatible
-   supported-by: [firstaid]
+   supported-through: [firstaid]
    comments: "partially supported in the firstaid module, but open issue with hyperref"
    issues: [2]
    updated: 2024-07-06
 
  - name: color
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: colortbl
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: errors in combination with longtable
    issues: [90]
    updated: 2024-07-06
 
  - name: csquotes
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: "`blockquote`s can't be used."
    issues: [3]
    updated: 2024-07-06
@@ -236,7 +236,7 @@
 
  - name: enumitem
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one cae use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
    references: [1]
@@ -253,13 +253,13 @@
 
  - name: euscript
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: exscale
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -274,7 +274,7 @@
 
  - name: fix-cm
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -302,19 +302,19 @@
 
  - name: fltrace
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: fontenc
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: footmisc
    type: package
-   status: supported
+   status: compatible
    comments: Replacement code is in latex-lab
    tasks: integrate code properly into the package.
    issues: [12]
@@ -338,7 +338,7 @@
 
  - name: geometry
    type: package
-   status: supported
+   status: compatible
    comments: tagging of rules (showframe, crop marks) untested
    tasks: further needs tests
    updated: 2024-07-06
@@ -353,13 +353,13 @@
 
  - name: graphics
    type: package
-   status: supported
+   status: compatible
    comments: See `graphicx` package
    updated: 2024-07-06
 
  - name: graphicx
    type: package
-   status: supported
+   status: compatible
    comments: >
      Rather than
      `\includegraphics[whatever]{whatever}`
@@ -390,7 +390,7 @@
 
  - name: hyperref
    type: package
-   status: supported
+   status: compatible
    references: [2]
    updated: 2024-07-06
 
@@ -398,7 +398,7 @@
 
  - name: ifthen
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -413,13 +413,13 @@
 
  - name: indentfirst
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: inputenc
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -427,7 +427,7 @@
 
  - name: keyval
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -442,7 +442,7 @@
 
  - name: latexrelease
    type: package
-   status: partially-supported
+   status: partially-compatible
    comments: Rolling the LaTeX format too far back will result in the loss of necessary support code for tagging, rolling forward should work.
    issues:
    tasks: determine how far back is possible
@@ -450,7 +450,7 @@
 
  - name: latexsym
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -463,7 +463,7 @@
 
  - name: lipsum
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -478,7 +478,7 @@
 
  - name: longtable
    type: package
-   status: partially-supported
+   status: partially-compatible
    issues: [22]
    comments: longtables with page breaks works only with luatex
    related-issues: [38]
@@ -493,7 +493,7 @@
 
  - name: luamplib
    type: package
-   status: supported
+   status: compatible
    comments: An old issue has been fixed.
    issues: [8]
 
@@ -528,14 +528,14 @@
 
  - name: microtype
    type: package
-   status: supported
+   status: compatible
    comments: Footnote patching doesn’t work but otherwise supported.
    issues: [67]
    updated: 2024-07-06
 
  - name: multicol
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -543,7 +543,7 @@
 
  - name: natbib
    type: package
-   status: supported
+   status: compatible
    updated: 2024-07-06
    
 #------------------------ RRR ----------------------------
@@ -587,7 +587,7 @@
 
  - name: structuredlog
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -602,7 +602,7 @@
 
  - name: tabularx
    type: package
-   status: supported
+   status: compatible
    comments: An old issue has been fixed.
    issues: [42]
    updated: 2024-07-06
@@ -616,7 +616,7 @@
 
  - name: textcomp
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -660,19 +660,19 @@
 
  - name: trace
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: tracefnt
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
  - name: trig
    type: package
-   status: supported
+   status: compatible
    issues:
    updated: 2024-07-06
 
@@ -680,7 +680,7 @@
 
  - name: url
    type: package
-   status: supported
+   status: compatible
    comments: An old issue has been fixed.
    issues: [5]
    updated: 2024-07-06
@@ -709,8 +709,8 @@
 
  - name: verse
    type: package
-   status: supported
-   supported-by: [firstaid]
+   status: compatible
+   supported-through: [firstaid]
    comments: firstaid is required for the fix of issue 49
    issues: [49]
    updated: 2024-07-06
@@ -746,14 +746,14 @@
 
  - name: article
    type: class
-   status: supported
+   status: compatible
    updated: 2024-07-05
 
 #------------------------ BBB ----------------------------
 
  - name: book
    type: class
-   status: supported
+   status: compatible
    updated: 2024-07-05
 
 #------------------------ KKK ----------------------------
@@ -796,6 +796,6 @@
 
  - name: report
    type: class
-   status: supported
+   status: compatible
    updated: 2024-07-05
 
