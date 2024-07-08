@@ -16,9 +16,9 @@
 #  tasks             optional   markdown-string Free text markdown action items for tean
 #  supported-through optional   string-list     list of either "package"  or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
 #  updated           optional   date            yyyy-mm-dd date when the entry was updated.
-
-# ------------------------
-
+#
+# --------------------------------------
+#
 # Status                 Meaning
 # -----                  -------
 # compatible             This package or class works without any issues when tagging is enabled
@@ -26,8 +26,13 @@
 # currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 # no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 # unknown                The status of this package or class is not known
-
-# -------------------------------
+#
+# --------------------------------------
+#
+# To verify that your changes are correct YAML you can paste them, for example, into
+#
+#     https://www.yamllint.com/
+#
  
  # - name: 
  #   type: package
