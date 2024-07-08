@@ -23,10 +23,10 @@ The values in the *Status* column have the following meaning:
 - `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 - `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated.
 
-To use packages or classes together with the tagging code it is (nearly) always necessary to load at least `phase-III`of the tagging code, i.e., `testphase=phase-III`. To save space in the tables this is not explicitly mentioned below. However, if a package or class requires other settings there is an explicit remark in the comments column, e.g., `Tagging support: phase-III, table.` which means you have to specify `testphase={phase-III,table}`. If `package` is mentioned at this point it means that the package itself provides the necessary tagging support and not one of the modules in `latex-lab`.
+To use packages or classes together with the tagging code it is (nearly) always necessary to load at least `phase-III`of the tagging code, i.e., `testphase=phase-III` in `\DocumentMetadata. To save space in the tables`, this is not explicitly mentioned below. However, if a package or class requires other settings there is an explicit remark in the comments column, e.g., `Tagging support: phase-III, table` which means you have to specify `testphase={phase-III,table}`. If `package` is mentioned at this point it means that the package itself provides the necessary tagging support and not one of the modules in `latex-lab`.
 
 
-To add or edit the entries, please make a pull request to change the YAML file
+To add or edit the entries in the tables, please make a pull request to change the YAML file
 [tagging-status.yml](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
 
 If you encounter a problem with a package or class for which there is no issue in the [issue tracker](https://github.com/latex3/tagging-project/issues) yet, please add an issue in the tracker first (including a small example what goes wrong) or start a discussion  in the [discussion view](https://github.com/latex3/tagging-project/discussions) if that seems more appropriate. Later on it can still be added to the tables.
