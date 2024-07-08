@@ -14,7 +14,7 @@
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues    optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
 #  tasks             optional   markdown-string Free text markdown action items for tean
-#  supported-through optional   string-list     list of "package" or "firstaid" or a tagging project module such as "phase-III" or "math"
+#  supported-through optional   string-list     list of either "package"  or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
 #  updated           optional   date            yyyy-mm-dd date when the entry was updated.
 
 # ------------------------
@@ -22,7 +22,7 @@
 # Status                 Meaning
 # -----                  -------
 # compatible             This package or class works without any issues when tagging is enabled
-# partially-compatible   The package or class is currently partially compatible
+# partially-compatible   The package or class is currently partially compatible, see comments column
 # currently-incompatible The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 # no-support             This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
 # unknown                The status of this package or class is not known
@@ -73,7 +73,7 @@
  - name: amsmath
    type: package
    status: partially-compatible
-   supported-through: [math]
+   supported-through: [phase-III,math]
    comments: "Requires the math module.
      Use of math tagging requires support in external tools."
    references: [1,2]
@@ -111,7 +111,7 @@
  - name: array
    type: package
    status: compatible
-   supported-through: [table]
+   supported-through: [phase-III,table]
    issues:
    updated: 2024-07-06
 
@@ -122,14 +122,13 @@
    ctan-pkg: latex-base
    type: package
    status: compatible
-   comments: "empty compability package"
+   comments: "Empty compability package, can be removed from the preamble"
    issues:
    updated: 2024-07-07
 
  - name: biblatex
    type: package
    status: partially-compatible
-   supported-through: [phase-III]
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
@@ -152,7 +151,7 @@
  - name: blindtext
    type: package
    status: compatible
-   supported-through: [firstaid]   
+   supported-through: [phase-III,firstaid]   
    updated: 2024-07-07
 
  - name: bm
@@ -165,7 +164,7 @@
  - name: booktabs
    type: package
    status: partially-compatible
-   supported-through: [firstaid,table]
+   supported-through: [phase-III,firstaid,table]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
    updated: 2024-07-06
@@ -189,7 +188,7 @@
  - name: cleveref
    type: package
    status: currently-incompatible
-   supported-through: [firstaid]
+   supported-through: [phase-III,firstaid]
    comments: "partially supported in the firstaid module, but open issue with hyperref"
    issues: [2]
    updated: 2024-07-06
@@ -203,7 +202,7 @@
  - name: colortbl
    type: package
    status: compatible
-   supported-through: [table]
+   supported-through: [phase-III,table]
    comments: "#90 issue with longtable fixed at the last release"
    issues: [90]
    updated: 2024-07-07
@@ -257,7 +256,7 @@
  - name: epsfig
    type: package
    status: compatible
-   comments: "obsolete, small wrapper around graphicx"
+   comments: "Obsolete, small wrapper around graphicx"
    issues:
    updated: 2024-07-07
 
@@ -492,7 +491,7 @@
  - name: longtable
    type: package
    status: partially-compatible
-   supported-through: [table]
+   supported-through: [phase-III,table]
    issues: [22]
    comments: longtables with page breaks works only with luatex
    related-issues: [38]
@@ -638,7 +637,7 @@
  - name: tabularx
    type: package
    status: compatible
-   supported-through: [table]
+   supported-through: [phase-III,table]
    comments: An old issue has been fixed.
    issues: [42]
    updated: 2024-07-06
@@ -654,7 +653,7 @@
  - name: textcomp
    type: package
    status: compatible
-   comments: "now unneeded package as definitions have been moved into the kernel"
+   comments: "Package no longer needed as definitions have been moved into the kernel"
    issues:
    updated: 2024-07-07
 
@@ -686,7 +685,7 @@
  - name: titletoc
    type: package
    status: currently-incompatible
-   comments: Mentioned here.
+   comments: Mentioned in issue.
    issues: [24]
    updated: 2024-07-06
 
@@ -749,7 +748,7 @@
  - name: verse
    type: package
    status: compatible
-   supported-through: [firstaid]
+   supported-through: [phase-III,firstaid]
    comments: firstaid is required for the fix of issue 49
    issues: [49]
    updated: 2024-07-06
@@ -779,7 +778,7 @@
  - name: xr-hyper
    type: package
    status: compatible
-   comments: now identical to xr
+   comments: Package now identical to xr
    issues:
    updated: 2024-07-07
 
@@ -797,7 +796,7 @@
  - name: amsart
    type: class
    status: partially-compatible
-   supported-through: [firstaid,title]
+   supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm. Used by project example arxiv3"
    tasks: needs further tests
    updated: 2024-07-07
@@ -805,7 +804,7 @@
  - name: amsbook
    type: class
    status: partially-compatible
-   supported-through: [firstaid,title]
+   supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm."
    tasks: needs further tests
    updated: 2024-07-07
@@ -820,7 +819,7 @@
  - name: article
    type: class
    status: compatible
-   supported-through: [title]
+   supported-through: [phase-III,title]
    updated: 2024-07-05
 
 #------------------------ BBB ----------------------------
@@ -833,7 +832,7 @@
  - name: book
    type: class
    status: compatible
-   supported-through: [title]
+   supported-through: [phase-III,title]
    updated: 2024-07-05
 
 #------------------------ KKK ----------------------------
@@ -877,6 +876,6 @@
  - name: report
    type: class
    status: compatible
-   supported-through: [title]   
+   supported-through: [phase-III,title]   
    updated: 2024-07-05
 
