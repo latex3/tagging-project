@@ -1,7 +1,7 @@
 # Using the LaTeX prototype for accessible PDF (as of 2024/06)
 
 The new code can be used with pdfLaTeX or the Unicode engine
-luaLaTeX. The later is the preferred engine recommended for new
+luaLaTeX. The latter is the preferred engine recommended for new
 documents.
 
 The interface descriptions below are all temporary and will be replaced
