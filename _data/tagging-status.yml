@@ -13,8 +13,9 @@
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues    optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
-#  tasks             optional   markdown-string Free text markdown action items for tean
-#  supported-through optional   string-list     list of either "package" or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
+#  tests             optional   boolean         Are there tests in testfiles/<name> ?
+#  tasks             optional   markdown-string Free text markdown action items for team or volunteers
+#  supported-through optional   string-list     List of either "package" or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
 #  updated           optional   date            yyyy-mm-dd date when the entry was updated.
 #
 # --------------------------------------
@@ -38,6 +39,7 @@
  #   type: package
  #   status: unknown
  #   issues:
+ #   tests: false
  #   tasks: needs tests
  #   updated: 2024-07-06
 
@@ -104,7 +106,7 @@
    status: currently-incompatible
    issues: [83]
    tests: true
-   updated: 2024-07-04
+   updated: 2024-07-08
 
  - name: amsxtra
    ctan-pkg: latex-amsmath
@@ -224,8 +226,10 @@
 
  - name: dcolumn
    type: package
-   status: compatible
+   status: currently-incompatible
+   comments: Tagging passes validation but is semantically incorrect
    issues:
+   tests: true
    updated: 2024-07-08
 
  - name: delarray
@@ -390,8 +394,10 @@
 
  - name: graphpap
    type: package
-   status: compatible
+   status: partially-compatible
+   comments: tagging passes validation but is sub-optimal
    issues:
+   tests: true
    updated: 2024-07-08
 
 #------------------------ HHH ----------------------------
@@ -452,6 +458,7 @@
    type: package
    status: compatible
    issues:
+   tests: true
    updated: 2024-07-08
 
  - name: latexrelease
@@ -604,6 +611,7 @@
    type: package
    status: compatible
    issues:
+   tests: true
    updated: 2024-07-08
 
  - name: showidx
@@ -788,6 +796,7 @@
    type: package
    status: compatible
    issues:
+   tests: true
    updated: 2024-07-08
 
 
