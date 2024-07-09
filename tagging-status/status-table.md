@@ -42,14 +42,14 @@ See
 <td>
 {%- if p.issues -%}
 {% for i in p.issues %}
-<a href="{{ site.github.repository_url }}/issues/{{i}}">#{{i}}</a>
+<a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {%- endif -%}
 {% if p.related-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
 Related:
 {% for i in p.related-issues %}
-<a href="{{ site.github.repository_url }}/issues/{{i}}">#{{i}}</a>
+<a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
 {% if p.tests %}
