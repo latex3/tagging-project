@@ -47,10 +47,13 @@ See
 {%- endif -%}
 {% if p.related-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
-See also
+Related:
 {% for i in p.related-issues %}
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
+{% endif %}
+{% if p.tests %}
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
 {% endif %}
 </td>
 <td>{{p.tasks | markdownify}}</td>
