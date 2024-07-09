@@ -52,6 +52,9 @@ See also
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
+{% if p.tests %}
+<a href="https://github.com/FrankMittelbach/tagging-project/tagging-status/testfiles/{{p.name}}/">test(s)</a>
+{% endif %}
 </td>
 <td>{{p.tasks | markdownify}}</td>
 <td class="date">{{p.updated}}</td>
