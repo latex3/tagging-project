@@ -1,0 +1,33 @@
+\DocumentMetadata{testphase={phase-III,table}}
+
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\begin{document}
+\begin{tabular}{r}
+aaa\\
+\midrule %works
+bbb
+\end{tabular}    
+
+\begin{tabular}{r}
+aaa\\
+ \cmidrule{1-1} %fails
+bbb
+\end{tabular}    
+
+\begin{longtable}{r}
+aaaa\\
+ \midrule %fails
+bbbb
+\end{longtable}
+
+\begin{tabular}{r}
+aaa\\
+\multispan 1 xxx \cr %fails
+bbb
+\end{tabular}    
+
+\end{document}

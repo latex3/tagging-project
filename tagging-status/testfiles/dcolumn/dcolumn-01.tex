@@ -4,6 +4,7 @@
   pdfstandard=ua-2,
   testphase={phase-III,math,title,table,firstaid}
   }
+ 
 \documentclass{article}
 \usepackage{dcolumn}
 
@@ -18,10 +19,10 @@
 % can't contain vertical rules
 % but this is also true without dcolumn
 \begin{center}
-\begin{tabular}{d{-1}d{2}.,}
-1.2   & 1.2   &1.2    &1,2    \\
-1.23  & 1.23  &12.5   &300,2  \\
-1121.2& 1121.2&861.20 &674,29 \\
+\begin{tabular}{d{-1}d{2}.,l}
+1.2   & 1.2   &1.2    &1,2    & a\\
+1.23  & 1.23  &12.5   &300,2  & $a=b$\\
+1121.2& 1121.2&861.20 &674,29 & text and $x$\\
 184   & 184   &10     &69     \\
 .4    & .4    &       &,4     \\
    &       &.4     &
