@@ -53,7 +53,7 @@ See also
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-<a href="https://github.com/FrankMittelbach/tagging-project/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
 {% endif %}
 </td>
 <td>{{p.tasks | markdownify}}</td>
