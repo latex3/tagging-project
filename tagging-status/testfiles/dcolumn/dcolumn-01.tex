@@ -1,0 +1,31 @@
+\DocumentMetadata{
+  lang=en-US,
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{dcolumn}
+
+\newcolumntype{d}[1]{D{.}{\cdot}{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\newcolumntype{,}{D{,}{,}{2}}
+
+\title{dcolumn tagging test}
+
+\begin{document}
+
+% can't contain vertical rules
+% but this is also true without dcolumn
+\begin{center}
+\begin{tabular}{d{-1}d{2}.,}
+1.2   & 1.2   &1.2    &1,2    \\
+1.23  & 1.23  &12.5   &300,2  \\
+1121.2& 1121.2&861.20 &674,29 \\
+184   & 184   &10     &69     \\
+.4    & .4    &       &,4     \\
+   &       &.4     &
+\end{tabular}
+\end{center}
+
+\end{document}
