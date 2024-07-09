@@ -47,7 +47,7 @@ See
 {%- endif -%}
 {% if p.related-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
-Related
+Related:
 {% for i in p.related-issues %}
 <a href="{{ site.github.repository_url }}/issues/{{i}}">#{{i}}</a>
 {% endfor %}
