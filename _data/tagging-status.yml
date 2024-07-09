@@ -85,7 +85,8 @@
      Use of math tagging requires support in external tools."
    references: [1,2]
    issues: [77]
-   updated: 2024-07-07
+   tasks: also needs more tests
+   updated: 2024-07-08
 
  - name: amsopn
    type: package
@@ -175,7 +176,8 @@
    supported-through: [phase-III,firstaid,table]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-08
 
 #------------------------ CCC ----------------------------
 
@@ -191,15 +193,17 @@
    comments: "the configurations from the package are overwritten by the
              tagging code. Issue when hyperref and both listoffigures are used."
    issues: [84]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-08
 
  - name: cleveref
    type: package
-   status: currently-incompatible
+   status: partially-compatible
    supported-through: [phase-III,firstaid]
-   comments: "partially supported in the firstaid module, but open issue with hyperref"
+   comments: "Partially supported in the firstaid module, but open issue with hyperref (workaround suggested)"
    issues: [2]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-08
 
  - name: color
    type: package
@@ -226,8 +230,8 @@
 
  - name: dcolumn
    type: package
-   status: currently-incompatible
-   comments: Tagging passes validation but is semantically incorrect
+   status: partially-compatible
+   comments: "`d` columns are set as text not math, which is arguably correct, but needs some further evaluation."
    issues:
    tests: true
    updated: 2024-07-08
