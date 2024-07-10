@@ -227,7 +227,7 @@
  - name: csquotes
    type: package
    status: partially-compatible
-   comments: "`blockquote`s can't be used."
+   comments: "`blockquote` can't be used."
    issues: [3]
    updated: 2024-07-06
 
@@ -413,10 +413,13 @@
 
  - name: hhline
    type: package
-   status: unknown
-   tasks: needs tests
+   status: currently-incompatible
+   comments: breaks with errors
+   supported-through: [phase-III,table]
+   tasks: needs further tests
    issues: [66]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-10
 
  - name: hyperref
    type: package
@@ -754,8 +757,11 @@
  - name: varwidth
    type: package
    status: currently-incompatible
+   comments: Tagging structure looks ok, but the formatting is wrong when the tagging code is used.
    issues: [71]
-   updated: 2024-07-06
+   tasks: adjustments in block code needed?
+   tests: true
+   updated: 2024-07-10
 
  - name: verbatim
    type: package
@@ -777,8 +783,10 @@
  - name: wrapfig
    type: package
    status: currently-incompatible
+   comments: generated tagging structure is incorrect
    issues: [40]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-10
 
 #------------------------ XXX ----------------------------
 
@@ -797,9 +805,9 @@
  - name: xr-hyper
    type: package
    status: compatible
-   comments: Package now identical to xr
+   comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
    issues:
-   updated: 2024-07-07
+   updated: 2024-07-10
 
  - name: xspace
    type: package
