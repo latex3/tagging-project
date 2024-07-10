@@ -65,10 +65,12 @@
 
  - name: amsbsy
    type: package
-   status: unknown
+   status: partially-compatible
+   supported-through: [phase-III,math]
+   comments: "pmb produces extra tags from typesetting argument three times"
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-09
 
  - name: amscd
    type: package
@@ -90,10 +92,13 @@
 
  - name: amsopn
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Requires the math module.
+     Use of math tagging requires support in external tools."
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-09
 
  - name: amstext
    type: package
