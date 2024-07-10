@@ -52,6 +52,14 @@ Related:
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
+{% if p.external-issues %}
+{%- if p.issues or p.related-issues -%}<br/>{%- endif -%}
+Related:
+{% for u in p.external-issues %}
+{%- assign ltext = u | replace: "issues/", "" | split: "/" -%}
+<a href="{{u}}">{{ltext | slice: -2, 0}}</a>
+{% endfor %}
+{% endif %}
 {% if p.tests %}
 <a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
 {% endif %}
