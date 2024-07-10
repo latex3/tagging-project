@@ -54,10 +54,10 @@ Related:
 {% endif %}
 {% if p.external-issues %}
 {%- if p.issues or p.related-issues -%}<br/>{%- endif -%}
-Related:
+Other:
 {% for u in p.external-issues %}
 {%- assign ltext = u | replace: "issues/", "" | split: "/" -%}
-<a href="{{u}}">{{ltext | slice: -2, 0}}</a>
+<a href="{{u}}">xx{{ltext | slice: -2}yy</a>
 {% endfor %}
 {% endif %}
 {% if p.tests %}
