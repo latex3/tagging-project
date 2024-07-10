@@ -57,7 +57,7 @@ Related:
 Other:
 {% for u in p.external-issues %}
 {%- assign ltext = u | replace: "issues/", "" | split: "/" -%}
-<a href="{{u}}">xx{{ltext | slice: -2}yy</a>
+<a href="{{u}}">xx{{ltext | slice: -2}}yy</a>
 {% endfor %}
 {% endif %}
 {% if p.tests %}
