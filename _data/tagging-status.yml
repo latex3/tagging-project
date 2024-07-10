@@ -227,7 +227,7 @@
  - name: csquotes
    type: package
    status: partially-compatible
-   comments: "`blockquote`s can't be used."
+   comments: "`blockquote` can't be used."
    issues: [3]
    updated: 2024-07-06
 
@@ -413,10 +413,11 @@
 
  - name: hhline
    type: package
-   status: unknown
-   tasks: needs tests
+   status: currently-incompatible
+   tasks: needs further tests
    issues: [66]
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-09
 
  - name: hyperref
    type: package
@@ -797,9 +798,9 @@
  - name: xr-hyper
    type: package
    status: compatible
-   comments: Package now identical to xr
+   comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
    issues:
-   updated: 2024-07-07
+   updated: 2024-07-09
 
  - name: xspace
    type: package
