@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{pstricks}
+
+\title{pstricks tagging test}
+
+\begin{document}
+
+\psset{unit=1.2cm}
+\begin{pspicture}(-2.2,-2.2)(2.2,2.2)
+\pswedge[fillstyle=solid,fillcolor=gray]{2}{0}{70}
+\pswedge[fillstyle=solid,fillcolor=lightgray]{2}{70}{200}
+\pswedge[fillstyle=solid,fillcolor=darkgray]{2}{200}{360}
+\SpecialCoor
+\psset{framesep=1.5pt}
+\rput(1.2;35){\psframebox*{\small\$9.0M}}
+\uput{2.2}[45](0,0){Oreos}
+\rput(1.2;135){\psframebox*{\small\$16.7M}}
+\uput{2.2}[135](0,0){Heath}
+\rput(1.2;280){\psframebox*{\small\$23.1M}}
+\uput{2.2}[280](0,0){M\&M}
+\end{pspicture}
+
+\end{document}
