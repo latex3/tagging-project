@@ -638,7 +638,15 @@
    issues:
    updated: 2024-07-07
 
-   
+ - name: pstricks
+   type: package
+   status: currently-incompatible
+   comments: "Tagging passes validation but is suboptimal. Future compatibility
+              will only be with lualatex; dvips cannot properly support PDF/UA."
+   issues:
+   tests: true
+   updated: 2024-07-12
+
 #------------------------ RRR ----------------------------
 
  - name: rotating
