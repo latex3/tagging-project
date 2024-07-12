@@ -35,6 +35,11 @@ If you encounter a problem with a package or class for which there is no issue i
 ## Packages
 
 {%- assign packages = site.data.tagging-status | where: "type", "package" -%}
+
+There are {{packages | size }} packages in the table out of which
+{{packages | where: "status", "compatible" | size }}  are fully compatible and
+{{packages | where: "status", "partially-compatible" | size }} partially compatible.
+
 {% include_relative status-table.md %}
 
 
