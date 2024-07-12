@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{tabulary}
+
+\title{tabulary tagging test}
+
+\begin{document}
+
+\begin{center}
+
+With C columns
+\begin{tabulary}{\linewidth}{C|C@{ (an @ expr.) }C}
+1&the rain in spain falls mainly on the plain&
+the rain in spain falls mainly on the plain
+the rain in spain falls mainly on the plain\\
+a&b&c\\
+a a&b b&c c
+\end{tabulary}
+
+\bigskip
+
+With J columns
+\begin{tabulary}{\linewidth}{J|J@{ (an @ expr.) }J}
+1&the rain in spain falls mainly on the plain&
+the rain in spain falls mainly on the plain
+the rain in spain falls mainly on the plain\\
+a&b&c\\
+a a&b b&c c
+\end{tabulary}
+
+\bigskip
+
+With L, R and C columns, and a \verb|\multicolumn|
+\begin{tabulary}{\linewidth}{LR|LC}
+1&the rain in spain falls mainly on the plain&
+the rain in spain falls mainly on the plain
+the rain in spain falls mainly on the plain&
+and now for something completely different\\
+x&\multicolumn{3}{c}
+  {some multicolumn text across columns 2--4}\\
+a&b&c&d\\
+a a&b b&c c&d d
+\end{tabulary}
+\end{center}
+
+\end{document}
