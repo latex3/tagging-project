@@ -34,13 +34,29 @@ If you encounter a problem with a package or class for which there is no issue i
 
 ## Packages
 
-{%- assign packages = site.data.tagging-status | where: "type", "package" -%}
+{% assign packages = site.data.tagging-status | where: "type", "package" %}
+
+Statistics: The table currently holds **{{packages | size }}** packages out of which
+**{{packages | where: "status", "compatible" | size }}**  are fully `compatible`,
+**{{packages | where: "status", "partially-compatible" | size }}** `partially-compatible`,
+**{{packages | where: "status", "currently-incompatible" | size }}** `currently-incompatible`, and
+**{{packages | where: "status", "no-support" | size }}** have  `no-support`.
+The status for the remaining **{{packages | where: "status", "unknown" | size }}** packages is `unknown`.
+
 {% include_relative status-table.md %}
 
 
 ## Classes
 
-{%- assign packages = site.data.tagging-status | where: "type", "class" -%}
+{% assign packages = site.data.tagging-status | where: "type", "class" %}
+
+Statistics: The table currently holds **{{packages | size }}** classes out of which
+**{{packages | where: "status", "compatible" | size }}**  are fully `compatible`,
+**{{packages | where: "status", "partially-compatible" | size }}** `partially-compatible`,
+**{{packages | where: "status", "currently-incompatible" | size }}** `currently-incompatible`, and
+**{{packages | where: "status", "no-support" | size }}** have  `no-support`.
+The status for the remaining **{{packages | where: "status", "unknown" | size }}** classes is `unknown`.
+
 {% include_relative status-table.md %}
 
 
