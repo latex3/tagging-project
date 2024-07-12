@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{amscd,amsmath}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\cf}{cf}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\non}{non}
+
+\title{amscd tagging test}
+
+\begin{document}
+
+% examples from amscd documentation
+\begin{equation}
+\begin{CD} 
+S^{{\mathcal{W}}_\Lambda}\otimes T @>j>> T\\
+@VVV @VV{\End P}V\\
+(S\otimes T)/I @= (Z\otimes T)/J
+\end{CD}
+\end{equation}
+\begin{equation}
+\begin{CD}
+\cov(\mathcal{L}) @>>> \non(\mathcal{K}) @>>> \cf(\mathcal{K}) @>>> 
+\cf(\mathcal{L})\\
+@VVV @AAA @AAA @VVV\\
+\add(\mathcal{L}) @>>> \add(\mathcal{K}) @>>> \cov(\mathcal{K}) @>>> 
+\non(\mathcal{L})
+\end{CD}
+\end{equation}
+
+\end{document}
