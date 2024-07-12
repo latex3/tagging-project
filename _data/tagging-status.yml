@@ -13,6 +13,7 @@
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues    optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
+#  external-issues   optional   string-list     List of urls referencing related issues at other trackers
 #  tests             optional   boolean         Are there tests in testfiles/<name> ?
 #  tasks             optional   markdown-string Free text markdown action items for team or volunteers
 #  supported-through optional   string-list     List of either "package" or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
@@ -83,8 +84,7 @@
    type: package
    status: partially-compatible
    supported-through: [phase-III,math]
-   comments: "Requires the math module.
-     Use of math tagging requires support in external tools."
+   comments: "Use of math tagging currently requires support from external tools."
    references: [1,2]
    issues: [77]
    tasks: also needs more tests
@@ -94,8 +94,7 @@
    type: package
    status: compatible
    supported-through: [phase-III,math]
-   comments: "Requires the math module.
-     Use of math tagging requires support in external tools."
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
    tests: true
    updated: 2024-07-09
@@ -146,6 +145,7 @@
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
+   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
    updated: 2024-07-07
 
  - name: biblatex-chicago
@@ -243,9 +243,12 @@
 
  - name: delarray
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math,table]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-10
 
  - name: doc
    type: package
@@ -278,6 +281,12 @@
    issues:
    updated: 2024-07-07
 
+ - name: etoolbox
+   type: package
+   status: compatible
+   issues:
+   updated: 2024-07-12
+   
  - name: euscript
    ctan-pkg: amsfonts
    type: package
@@ -341,6 +350,12 @@
    issues:
    updated: 2024-07-06
 
+ - name: fontspec
+   type: package
+   status: compatible
+   issues:
+   updated: 2024-07-12
+
  - name: footmisc
    type: package
    status: compatible
@@ -358,10 +373,10 @@
 
  - name: ftnright
    type: package
-   status: unknown
-   issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   status: currently-incompatible
+   issues: [110]
+   tests: true
+   updated: 2024-07-11
 
 #------------------------ GGG ----------------------------
 
@@ -473,6 +488,12 @@
    tests: true
    updated: 2024-07-08
 
+ - name: lastpage
+   type: package
+   status: compatible
+   issues:
+   updated: 2024-07-12
+   
  - name: latexrelease
    type: package
    status: partially-compatible
@@ -490,10 +511,10 @@
 
  - name: layout
    type: package
-   status: unknown
-   issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   status: currently-incompatible
+   issues: [111]
+   tests: true
+   updated: 2024-07-11
 
  - name: lipsum
    type: package
@@ -541,6 +562,13 @@
    updated: 2024-07-06
 
 #------------------------ MMM ----------------------------
+
+ - name: makeidx
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-11
 
  - name: manyfoot
    type: package
@@ -606,10 +634,10 @@
 
  - name: rotating
    type: package
-   status: unknown
-   issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   status: currently-incompatible
+   issues: [112]
+   tests: true
+   updated: 2024-07-11
 
 #------------------------ SSS ----------------------------
 
@@ -629,10 +657,10 @@
  - name: showidx
    ctan-pkg: latex-base
    type: package
-   status: unknown
-   issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   status: currently-incompatible
+   issues: [115]
+   tests: true
+   updated: 2024-07-11
 
  - name: showkeys
    type: package
@@ -681,10 +709,10 @@
 
  - name: theorem
    type: package
-   status: unknown
+   status: currently-incompatible
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-10
 
  - name: tikz
    type: package
@@ -737,6 +765,11 @@
    updated: 2024-07-06
 
 #------------------------ UUU ----------------------------
+ - name: unicode-math
+   type: package
+   status: compatible
+   issues:   
+   updated: 2024-07-12
 
  - name: url
    type: package
@@ -749,10 +782,10 @@
 
  - name: varioref
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-11
 
  - name: varwidth
    type: package
@@ -886,10 +919,12 @@
 
  - name: proc
    type: class
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,title]
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   comments: "Based on article class"
+   tests: true
+   updated: 2024-07-11
 
 #------------------------ RRR ----------------------------
 
