@@ -32,13 +32,16 @@ To add or edit the entries in the tables, please make a pull request to change t
 If you encounter a problem with a package or class for which there is no issue in the [issue tracker](https://github.com/latex3/tagging-project/issues) yet, please add an issue in the tracker first (including a small example what goes wrong) or start a discussion  in the [discussion view](https://github.com/latex3/tagging-project/discussions) if that seems more appropriate. Later on it can still be added to the tables.
 
 
-## Packages
-
 {%- assign packages = site.data.tagging-status | where: "type", "package" -%}
+
+## Packages
 
 There are {{packages | size }} packages in the table out of which
 {{packages | where: "status", "compatible" | size }}  are fully compatible and
 {{packages | where: "status", "partially-compatible" | size }} partially compatible.
+
+Currently incompatible are {{packages | where: "status", "currently-compatible" | size }} and
+for {{packages | where: "status", "unknown" | size }} the status is unknown.
 
 {% include_relative status-table.md %}
 
