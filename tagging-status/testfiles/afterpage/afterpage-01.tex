@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{afterpage}
+
+\title{afterpage tagging test}
+
+\begin{document}
+  
+bla
+\afterpage{% use tabular as example to check tagging struc
+  \begin{tabular}{cc}
+  A & B \\
+  C & D
+  \end{tabular}
+}%
+foo foo
+
+\end{document}
