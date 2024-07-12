@@ -605,11 +605,12 @@
 
  - name: pstricks
    type: package
-   status: partially-compatible
-   comments: tagging passes validation but is sub-optimal
+   status: currently-incompatible
+   comments: "Tagging passes validation but is suboptimal. Future compatibility
+              will only be with lualatex; dvips cannot properly support PDF/UA."
    issues:
    tests: true
-   updated: 2024-07-11
+   updated: 2024-07-12
 
 #------------------------ RRR ----------------------------
 
