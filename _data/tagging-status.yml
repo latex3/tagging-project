@@ -673,10 +673,12 @@
 
  - name: showkeys
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: "Rules drawn around labels display as Path in tags and the label in the margin is either not tagged
+              at all (pdflatex) or as artifact (lualatex). Unproblematic for a draft, but not UA compatible."
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-11
 
  - name: structuredlog
    type: package
