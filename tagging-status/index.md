@@ -17,7 +17,7 @@ with respect to PDF tagging. `phase-III` is generally needed and not explicitly 
 
 The values in the *Status* column have the following meaning:
 
-- `compatible` This package or class works without any issues when tagging is enabled. If there are problems, please open an issue in [the tagging-project repo](https://github.com/latex3/tagging-project/issues).
+- `compatible` This package or class works without any issues when tagging is enabled. If there are problems, please open an issue in [the tagging-project repo](https://github.com/latex3/tagging-project/issues). ({{site.data.tagging-status | where: "status", "compatible" | size }} entries)
 - `partially-compatible` The package or class is currently partially compatible, e.g., some parts may not work yet, but with some restrictions it can already be used. See comments for details.
 - `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. 
 - `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported.
