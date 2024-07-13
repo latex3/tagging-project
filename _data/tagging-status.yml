@@ -76,10 +76,12 @@
 
  - name: amscd
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-12
 
  - name: amsmath
    type: package
