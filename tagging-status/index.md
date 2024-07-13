@@ -12,7 +12,7 @@ td.date {white-space: nowrap;font-size:90%;}
 
 # Tagging Status of LaTeX Packages and Classes
 
-This file shows the status of LaTeX [Packages](#packages) and [Classes](#classes)
+This file shows the status of **{{site.data.tagging-status | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
 
 The values in the *Status* column have the following meaning:
