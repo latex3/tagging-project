@@ -9,6 +9,14 @@ td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 </style>
 <script src="sorttable.js"></script>
+<script>
+window.addEventListener('load',
+   function() {
+    document.querySelectorAll("table.sortable th:nth-child(2)").forEach((h) => {
+     sorttable.innerSortFunction.apply(h, []);
+   });
+    }, false);
+</script>
 
 # Tagging Status of LaTeX Packages and Classes
 
