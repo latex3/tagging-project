@@ -9,14 +9,8 @@ td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 </style>
 <script src="sorttable.js"></script>
-<script>
-window.addEventListener('load',
-   function() {
-    document.querySelectorAll("table.sortable th:nth-child(2)").forEach((h) => {
-     sorttable.innerSortFunction.apply(h, []);
-   });
-    }, false);
-</script>
+
+
 
 # Tagging Status of LaTeX Packages and Classes
 
@@ -42,28 +36,43 @@ If you encounter a problem with a package or class for which there is no issue i
 
 ## Packages
 
-{% assign packages = site.data.tagging-status | where: "type", "package" %}
+{% assign xpackages = site.data.tagging-status | where: "type", "package" %}
+{% assign xpc = xpackages | where: "status", "compatible" %}
+{% assign xpp = xpackages | where: "status", "partially-compatible" %}
+{% assign xpi = xpackages | where: "status", "currently-incompatible" %}
+{% assign xpn = xpackages | where: "status", "no-support" %}
+{% assign xpu = xpackages | where: "status", "unknown" %}
 
-Statistics: The table currently holds **{{packages | size }}** packages out of which
-**{{packages | where: "status", "compatible" | size }}**  are fully `compatible`,
-**{{packages | where: "status", "partially-compatible" | size }}** `partially-compatible`,
-**{{packages | where: "status", "currently-incompatible" | size }}** `currently-incompatible`, and
-**{{packages | where: "status", "no-support" | size }}** have  `no-support`.
-The status for the remaining **{{packages | where: "status", "unknown" | size }}** packages is `unknown`.
+Statistics: The table currently holds **{{xpackages | size }}** packages out of which
+**{{xpc| size }}**  are fully `compatible`,
+**{{xpp | size }}** `partially-compatible`,
+**{{xpi | size }}** `currently-incompatible`, and
+**{{xpn | size }}** have  `no-support`.
+The status for the remaining **{{xpu | size }}** packages is `unknown`.
+
+{% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 
 {% include_relative status-table.md %}
 
 
 ## Classes
 
-{% assign packages = site.data.tagging-status | where: "type", "class" %}
 
-Statistics: The table currently holds **{{packages | size }}** classes out of which
-**{{packages | where: "status", "compatible" | size }}**  are fully `compatible`,
-**{{packages | where: "status", "partially-compatible" | size }}** `partially-compatible`,
-**{{packages | where: "status", "currently-incompatible" | size }}** `currently-incompatible`, and
-**{{packages | where: "status", "no-support" | size }}** have  `no-support`.
-The status for the remaining **{{packages | where: "status", "unknown" | size }}** classes is `unknown`.
+{% assign xpackages = site.data.tagging-status | where: "type", "class" %}
+{% assign xpc = xpackages | where: "status", "compatible" %}
+{% assign xpp = xpackages | where: "status", "partially-compatible" %}
+{% assign xpi = xpackages | where: "status", "currently-incompatible" %}
+{% assign xpn = xpackages | where: "status", "no-support" %}
+{% assign xpu = xpackages | where: "status", "unknown" %}
+
+Statistics: The table currently holds **{{xpackages | size }}** classes out of which
+**{{xpc| size }}**  are fully `compatible`,
+**{{xpp | size }}** `partially-compatible`,
+**{{xpi | size }}** `currently-incompatible`, and
+**{{xpn | size }}** have  `no-support`.
+The status for the remaining **{{xpu | size }}** classes is `unknown`.
+
+{% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 
 {% include_relative status-table.md %}
 
