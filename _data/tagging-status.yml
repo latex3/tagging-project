@@ -409,6 +409,13 @@
    tests: false
    updated: 2024-07-13
 
+ - name: axessibility
+   type: package
+   status: no-support
+   comments: Loads tagpdf but it is not compatible with the current version. Its patches 
+             clash with the math module. `phase-III,math` should be used instead which
+	     provides broader tagging support without the need to load an additional package.
+   updated: 2024-07-14
 
 #------------------------ BBB ----------------------------
 
