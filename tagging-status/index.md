@@ -5,6 +5,8 @@ title: LaTeX package/class tagging status
 td.compatible {background-color: #DDFFDD;font-weight:bold;}
 td.partially-compatible {background-color: #FFFFDD;font-weight:bold;}
 td.no-support {background-color: #FFDDDD;font-weight:bold;}
+td.currently-incompatible {font-weight:bold;}
+td.unknown {background-color: #FFEE99;font-weight:bold;}
 td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
