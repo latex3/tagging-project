@@ -409,6 +409,13 @@
    tests: false
    updated: 2024-07-13
 
+ - name: axessibility
+   type: package
+   status: no-support
+   comments: Loads tagpdf but it is not compatible with the current version. Its patches 
+             clash with the math module. `phase-III,math` should be used instead which
+             provides broader tagging support without the need to load an additional package.
+   updated: 2024-07-14
 
 #------------------------ BBB ----------------------------
 
@@ -676,10 +683,10 @@
 
  - name: breqn
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
+   status: currently-incompatible
+   issues: [145]
+   tests: yes
+   tasks: needs more tests
    updated: 2024-07-14
 
  - name: bxeepic
@@ -743,11 +750,26 @@
    tests: false
    updated: 2024-07-13
 
+ - name: cabin
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
  - name: calc
    type: package
    status: compatible
    issues:
    updated: 2024-07-06
+
+ - name: captcont
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
 
  - name: caption
    type: package
@@ -758,6 +780,109 @@
    tests: true
    updated: 2024-07-08
 
+ - name: cases
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: ccfonts
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: cellspace
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: chancery
+   type: package
+   ctan-pkg: psnfss
+   status: compatible
+   comments: Obsolete package; suggested replacement `tgchorus`.
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: changebar
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: changes
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: chappg
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: chapterbib
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: charter
+   ctan-pkg: psnfss
+   type: package
+   status: compatible
+   comments: Obsolete package; suggested replacement `XCharter`.
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: chicago
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: cinzel
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: cite
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: classico
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
  - name: cleveref
    type: package
    status: partially-compatible
@@ -767,11 +892,48 @@
    tests: true
    updated: 2024-07-08
 
+ - name: cmbright
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: cochineal
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: coelacanth
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: colonequals
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
  - name: color
    type: package
    status: compatible
    issues:
    updated: 2024-07-06
+
+ - name: colorspace
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
 
  - name: colortbl
    type: package
@@ -781,12 +943,66 @@
    issues: [90]
    updated: 2024-07-07
 
+ - name: comment
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: continue
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: courier
+   type: package
+   status: compatible
+   comments: Obsolete package; suggested replacement `tgcursor`.
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: crop
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
  - name: csquotes
    type: package
    status: partially-compatible
    comments: "`blockquote` can't be used."
    issues: [3]
    updated: 2024-07-06
+
+ - name: csvsimple
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
+
+ - name: cuprum
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
+
+ - name: cyklop
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-14
 
 #------------------------ DDD ----------------------------
 
