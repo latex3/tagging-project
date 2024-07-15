@@ -457,20 +457,11 @@
    tasks: needs tests
    updated: 2024-07-14
 
- - name: bengali
-   type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
-
  - name: beton
    type: package
-   status: unknown
+   status: compatible
    issues:
    tests: false
-   tasks: needs tests
    updated: 2024-07-14
 
  - name: bezier
@@ -501,41 +492,42 @@
  - name: biblatex-chicago
    type: package
    status: partially-compatible
-   comments: See biblatex. The package should at some time use sockets in its footnote adaption.
+   comments: See biblatex.
+   tasks:  Package should be changed to use sockets in its footnote adaption
    issues: [62]
-   updated: 2024-07-06
+   updated: 2024-07-15
 
  - name: biblatex-dw
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-ext
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-juradiss
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-trad
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex2bibitem
    type: package
@@ -1107,14 +1099,6 @@
    issues:
    tests: true
    updated: 2024-07-10
-
- - name: devnag
-   type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
 
  - name: diagbox
    type: package
