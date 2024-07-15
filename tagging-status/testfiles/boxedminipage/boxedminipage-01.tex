@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{boxedminipage}
+
+\title{boxedminipage tagging test}
+
+\begin{document}
+
+Suspendisse pulvinar vel elit at dapibus. Interdum et malesuada
+fames ac ante ipsum primis in faucibus. Cras nibh orci, posuere
+quis viverra a, gravida nec velit. Pr\ae{}sent porta semper
+tellus, eu pulvinar ante mollis faucibus.
+
+\noindent
+\begin{boxedminipage}[t]{\linewidth}
+This box was created with the boxedminipage environment.
+Notice how the frame is aligned properly with both margins of
+the surrounding text.
+\end{boxedminipage}
+
+Suspendisse pulvinar vel elit at dapibus. Interdum et malesuada
+fames ac ante ipsum primis in faucibus. Cras nibh orci, posuere
+quis viverra a, gravida nec velit. Pr\ae{}sent porta semper
+tellus, eu pulvinar ante mollis faucibus.
+
+\noindent
+\begin{minipage}[t]{\linewidth}
+This box was created with the boxedminipage environment.
+Notice how the frame is aligned properly with both margins of
+the surrounding text.
+\end{minipage}
+
+\end{document}
