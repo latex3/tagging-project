@@ -457,20 +457,11 @@
    tasks: needs tests
    updated: 2024-07-14
 
- - name: bengali
-   type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
-
  - name: beton
    type: package
-   status: unknown
+   status: compatible
    issues:
    tests: false
-   tasks: needs tests
    updated: 2024-07-14
 
  - name: bezier
@@ -501,41 +492,42 @@
  - name: biblatex-chicago
    type: package
    status: partially-compatible
-   comments: See biblatex. The package should at some time use sockets in its footnote adaption.
+   comments: See biblatex.
+   tasks:  Package should be changed to use sockets in its footnote adaption
    issues: [62]
-   updated: 2024-07-06
+   updated: 2024-07-15
 
  - name: biblatex-dw
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-ext
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-juradiss
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex-trad
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: See biblatex.
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-15
 
  - name: biblatex2bibitem
    type: package
@@ -1107,14 +1099,6 @@
    issues:
    tests: true
    updated: 2024-07-10
-
- - name: devnag
-   type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
 
  - name: diagbox
    type: package
@@ -2688,12 +2672,267 @@
 
 #------------------------ NNN ----------------------------
 
+ - name: named
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: nameref
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: nar
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
  - name: natbib
    type: package
    status: compatible
    updated: 2024-07-06
 
+ - name: nature
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
 
+ - name: nccfoots
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: needspace
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: newapa
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: newcent
+   type: package
+   status: compatible
+   comments: Obsolete package; suggested replacement `tgschola`.
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: newfloat
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: newpxmath
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: newpxtext
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: newtxmath
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: newtxtext
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: newverbs
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: nextpage
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: nolbreaks
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: nonumonpart
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: nopageno
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: noto
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: noto-mono
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: noto-sans
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: noto-serif
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: notoccite
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: notocondensed
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: notocondensed-mono
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: notomath
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: ntheorem
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: ocgx2
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: old-arrows
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: onepagem
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: optional
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: oscola
+   type: package
+   status: partially-compatible
+   comments: See biblatex.
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: oubrace
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
+
+ - name: overlock
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-15
+
+ - name: overpic
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-15
 
 #------------------------ OOO ----------------------------
 
