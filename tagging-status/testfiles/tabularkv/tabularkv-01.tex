@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{tabularkv,tabularx}
+
+\title{tabularkv tagging test}
+
+\begin{document}
+
+\begin{tabularkv}[
+width=4in,
+height=1in,
+valign=center
+]{@{}l@{\extracolsep{\fill}}r@{}}
+upper left corner & upper right corner\\
+\noalign{\vfill}%
+\multicolumn{2}{@{}c@{}}{bounding box}\\
+\noalign{\vfill}%
+lower left corner & lower right corner\\
+\end{tabularkv}
+
+\begin{tabularkv}[x=\linewidth]{XX}
+A & B \\
+C & D
+\end{tabularkv}
+
+\end{document}
