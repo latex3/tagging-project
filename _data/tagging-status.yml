@@ -3047,6 +3047,21 @@
    issues:
    updated: 2024-07-07
 
+ - name: pgfplots
+   type: package
+   status: currently-incompatible
+   comments: "Relies on tikz so compatibility will come with that of tikz."
+   tests: false
+   updated: 2024-07-16
+
+ - name: pgfplotstable
+   type: package
+   status: compatible
+   comments: "Table tagging is correct but any interaction with pgfplots
+              is not yet supported."
+   tests: true
+   updated: 2024-07-16
+
  - name: pstricks
    type: package
    status: currently-incompatible
