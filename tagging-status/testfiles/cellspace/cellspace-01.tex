@@ -1,0 +1,59 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{cellspace,tabularx}
+
+\setlength{\cellspacetoplimit}{2pt}
+\setlength{\cellspacebottomlimit}{2pt}
+\addparagraphcolumntypes{X}
+
+\title{cellspace tagging test}
+
+\begin{document}
+
+\begin{tabular}{cc}
+A & B \\
+C & D
+\end{tabular}
+
+\bigskip
+
+\begin{tabular}{Sc Sc}
+A & B \\
+C & D
+\end{tabular}
+
+\bigskip
+
+\begin{tabularx}{\linewidth}{l X}
+  \hline
+  A       & B B B B B B B B \\
+  A A     & B B B B B B B B
+            B B B B B B B B \\
+  A A A A & $\frac{1}{2}$B B B B B B B B
+            B B B B B B B B
+            B B B B B B B B
+            B B B B B B B B$\frac{1}{2}$ \\
+  \hline
+\end{tabularx}
+
+\bigskip
+
+\begin{tabularx}{\linewidth}{l SX}
+  \hline
+  A       & B B B B B B B B \\
+  A A     & B B B B B B B B
+            B B B B B B B B \\
+  A A A A & $\frac{1}{2}$B B B B B B B B
+            B B B B B B B B
+            B B B B B B B B
+            B B B B B B B B$\frac{1}{2}$ \\
+  \hline
+\end{tabularx}
+
+\end{document}
