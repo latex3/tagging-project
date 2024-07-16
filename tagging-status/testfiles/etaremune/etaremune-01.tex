@@ -1,0 +1,55 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{etaremune}
+
+\begin{document}
+
+\begin{enumerate}
+\item Not important.
+\item Quite relevant.
+\item Paramount.
+\end{enumerate}
+
+\begin{etaremune}
+\item Not important.
+\item Quite relevant.
+\item Paramount.
+\end{etaremune}
+
+\begin{etaremune}[start=5]
+\item First.
+\item Second.
+\item Third.
+\end{etaremune}
+
+\renewcommand{\labelenumi}{\theenumi)}
+\renewcommand{\theenumii}{\roman{enumii}}
+\begin{enumerate}
+\item First.
+\begin{etaremune}
+\item third.\label{notice}
+\item second.
+\item first.
+\end{etaremune}
+\item Second.
+\item Third.
+\end{enumerate}
+Notice item~\ref{notice}.
+
+\begin{etaremune}[itemsep=0pt,parsep=0pt]
+\item third.
+\item second.
+\begin{etaremune}
+\item second.
+\item first.
+\end{etaremune}
+\item first.
+\end{etaremune}
+
+\end{document}
