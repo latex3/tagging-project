@@ -1,0 +1,49 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{tabularht,tabularx,booktabs}
+
+\title{tabularht tagging test}
+
+\begin{document}
+
+\begin{tabularht*}{1in}{4in}{@{}l@{\extracolsep{\fill}}r@{}}%
+upper left corner & upper right corner\\%
+\noalign{\vfill}%
+\multicolumn{2}{@{}c@{}}{bounding box}\\%
+\noalign{\vfill}%
+lower left corner & lower right corner\\%
+\end{tabularht*}%
+
+\begin{tabularht}{spread=0pt}{|l|l|}
+  \hline
+  First&Line\\%
+  \hline
+\interrowstart
+  \addlinespace[10mm]%
+\interrowstop
+  \hline
+  Second&Line\\%
+\interrowstart
+  \hline
+  \hline
+\interrowstop
+  Third&Line\\%
+  \hline
+\interrowspace{10mm}
+  \hline
+  Fourth&Line\\%
+  \hline
+\end{tabularht}
+
+\begin{tabularhtx}{1in}{0.5\linewidth}{XX}
+A & B \\
+C & D 
+\end{tabularhtx}
+
+\end{document}
