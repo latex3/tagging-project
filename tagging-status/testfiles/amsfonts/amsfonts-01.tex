@@ -1,0 +1,58 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{amsfonts}
+
+\title{amsfonts tagging test}
+
+\begin{document}
+
+$\mathbb{A}\mathfrak{A}\widehat{A}\widetilde{A}$
+
+\yen
+\checkmark
+\circledR
+\maltese
+
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \angle
+    \Box
+    \dasharrow
+    \dashleftarrow
+    \dashrightarrow
+    \Diamond
+    \hbar
+    \Join
+    \leadsto
+    \lhd
+    \llcorner
+    \lozenge
+    \lrcorner
+    \mho
+    \rhd
+    \rightleftharpoons
+    \rightsquigarrow
+    \sqsubset
+    \sqsupset
+    \square
+    \trianglelefteq
+    \trianglerighteq
+    \ulcorner
+    \unlhd
+    \unrhd
+    \urcorner
+    \vartriangleleft
+    \vartriangleright
+  }
+  { $#1$ \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\end{document}
