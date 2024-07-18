@@ -1,0 +1,33 @@
+DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+    uncompress
+  }
+\documentclass{article}
+\usepackage{comment}
+
+\specialcomment{smalltt}
+     {\begingroup\ttfamily\footnotesize}{\endgroup}
+% Of course, in this case you could probably have used the standard
+% LaTeX \newenvironment.
+%
+% With \specialcomment you do *not* have to do an additional
+% \includecomment{smalltt}
+% To remove 'smalltt' blocks, give \excludecomment{smalltt}
+\excludecomment{smalltt}
+\pagestyle{empty}
+
+\begin{document}
+In the beginning there is a comment.
+\begin{comment}
+Comment should not appear in the PDF, it should be artifact.
+\end{comment}
+\begin{smalltt}
+That's it!
+\end{smalltt}
+
+\end{document}
+
