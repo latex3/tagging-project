@@ -1,0 +1,40 @@
+\DocumentMetadata{
+lang=en-US,
+pdfversion=20.0,
+pdfstandard=ua-2,
+testphase={phase-III, math, title, table, firstaid},
+uncompress
+}
+\tagpdfsetup{math/mathml/write-dummy}
+
+\documentclass{article}
+
+\usepackage{siunitx,comment}
+\sisetup{table-auto-round=true, separate-uncertainty=true}
+
+\begin{document}
+\qty{23}{\meter}
+
+
+\ang{24}
+
+\qtyrange{23}{32}{\kelvin}
+
+\complexnum{23+5i}
+
+\num{23}
+
+\numlist{23 34 5}
+\numproduct{3 4 5}
+
+\end{document}
+
+algorithmx
+algpseudocode
+babel
+bibunits
+cite
+lettrine
+multiaudience
+zref
+
