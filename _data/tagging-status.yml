@@ -1001,11 +1001,13 @@
 
  - name: csvsimple
    type: package
-   status: unknown
+   status: compatible
+   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
+             currently incompatible."
+   supported-through: [phase-III,table]
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-18
 
  - name: cuprum
    type: package
@@ -3115,6 +3117,7 @@
  - name: pgfplotstable
    type: package
    status: compatible
+   supported-through: [phase-III,table]
    comments: "Table tagging is correct but any interaction with pgfplots
               is not yet supported."
    tests: true
