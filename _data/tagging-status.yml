@@ -691,11 +691,12 @@
 
  - name: braket
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-17
 
  - name: breqn
    type: package
