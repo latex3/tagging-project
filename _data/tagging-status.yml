@@ -107,6 +107,14 @@
    tasks: needs tests
    updated: 2024-07-13
 
+ - name: accsupp
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-16
+
  - name: acro
    type: package
    status: unknown
@@ -212,11 +220,12 @@
 
  - name: amsfonts
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   tests: true
+   updated: 2024-07-17
 
  - name: amsmath
    type: package
@@ -248,11 +257,12 @@
  - name: amssymb
    ctan-pkg: amsfonts
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   tests: true
+   updated: 2024-07-17
 
  - name: amstext
    type: package
@@ -277,6 +287,14 @@
    issues:
    tasks: needs tests
    updated: 2024-07-06
+
+ - name: animate
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: antpolt
    ctan-pkg: poltawski
@@ -374,6 +392,14 @@
    tasks: needs tests
    updated: 2024-07-13
 
+ - name: attachfile2
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: atveryend
    type: package
    status: compatible
@@ -442,6 +468,14 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: backref
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: baskervillef
    type: package
    status: compatible
@@ -451,11 +485,10 @@
 
  - name: bboldx
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-16
 
  - name: beton
    type: package
@@ -666,11 +699,12 @@
 
  - name: braket
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-17
 
  - name: breqn
    type: package
@@ -779,6 +813,14 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: catchfile
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: ccfonts
    type: package
    status: compatible
@@ -843,6 +885,14 @@
    issues:
    tests: false
    updated: 2024-07-14
+
+ - name: chemfig
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: chicago
    type: package
@@ -1218,6 +1268,14 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: embedfile
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: embrac
    type: package
    status: unknown
@@ -1310,6 +1368,14 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: eso-pic
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: etaremune
    type: package
    status: compatible
@@ -1324,6 +1390,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: etoc
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: etoolbox
    type: package
@@ -1468,6 +1542,14 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: filecontentsdef
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: filemod
    type: package
    status: unknown
@@ -1569,6 +1651,14 @@
    issues:
    updated: 2024-07-12
 
+ - name: fonttable
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: footmisc
    type: package
    status: compatible
@@ -1584,6 +1674,14 @@
    comments: To be supported or not?
    updated: 2024-07-06
 
+ - name: footnotehyper
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: footnoterange
    type: package
    status: unknown
@@ -1591,6 +1689,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: forest
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: fourier
    ctan-pkg: fourier
@@ -1607,6 +1713,14 @@
    issues:
    tests: false
    updated: 2024-07-14
+
+ - name: framed
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: french
    ctan-pkg: e-french
@@ -1701,6 +1815,14 @@
    comments: tagging of rules (showframe, crop marks) untested
    tasks: needs further tests
    updated: 2024-07-06
+
+ - name: gettitlestring
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: gfsartemisia
    type: package
@@ -1894,6 +2016,14 @@
    tests: true
    updated: 2024-07-10
 
+ - name: hologo
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: hvfloat
    type: package
    status: unknown
@@ -1997,6 +2127,14 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: incgraph
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: inconsolata
    type: package
@@ -2436,6 +2574,14 @@
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: markdown
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: marvosym
    type: package
    status: compatible
@@ -2450,6 +2596,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: mathastext
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: mathdots
    type: package
@@ -2535,6 +2689,22 @@
    issues: [73]
    updated: 2024-07-06
 
+ - name: media9
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: memoize
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: merriweather
    type: package
    status: compatible
@@ -2555,6 +2725,14 @@
    comments: Footnote patching doesn’t work but otherwise supported.
    issues: [67]
    updated: 2024-07-06
+
+ - name: minted
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
 
  - name: mintspirit
    type: package
@@ -2663,6 +2841,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: musixtex
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: mweights
    type: package
@@ -2799,6 +2985,14 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: newunicodechar
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: newverbs
    type: package
@@ -3047,6 +3241,37 @@
    issues:
    updated: 2024-07-07
 
+ - name: pgfplots
+   type: package
+   status: currently-incompatible
+   comments: "Relies on tikz so compatibility will come with that of tikz."
+   tests: false
+   updated: 2024-07-16
+
+ - name: pgfplotstable
+   type: package
+   status: compatible
+   comments: "Table tagging is correct but any interaction with pgfplots
+              is not yet supported."
+   tests: true
+   updated: 2024-07-16
+
+ - name: piton
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: polyglossia
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: pstricks
    type: package
    status: currently-incompatible
@@ -3055,6 +3280,16 @@
    issues:
    tests: true
    updated: 2024-07-12
+
+#------------------------ QQQ ----------------------------
+
+ - name: qrcode
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ RRR ----------------------------
 
@@ -3095,6 +3330,22 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: refcount
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
+ - name: regexpatch
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: reledmac
    type: package
@@ -3175,6 +3426,38 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: scalerel
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: scontents
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: scrextend
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
+ - name: scrlayer
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
 
  - name: scrletter
    type: package
@@ -3337,6 +3620,14 @@
    tests: false
    updated: 2024-07-15
 
+ - name: spreadtab
+   type: package
+   status: compatible
+   supported-through: [phase-III,table]
+   issues:
+   tests: true
+   updated: 2024-07-16
+
  - name: spverbatim
    type: package
    status: unknown
@@ -3344,6 +3635,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: stackengine
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: stfloats
    type: package
@@ -3405,6 +3704,14 @@
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: subfiles
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: supertabular
    type: package
    status: unknown
@@ -3438,6 +3745,14 @@
    tests: true
    updated: 2024-07-16
 
+ - name: tableof
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: tabls
    type: package
    status: unknown
@@ -3461,6 +3776,14 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: tabularcalc
+   type: package
+   status: compatible
+   supported-through: [phase-III,table]
+   issues:
+   tests: true
+   updated: 2024-07-16
 
  - name: tabularht
    type: package
@@ -3548,6 +3871,14 @@
    comments: "Package no longer needed as definitions have been moved into the kernel"
    issues:
    updated: 2024-07-07
+
+ - name: textpos
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
 
  - name: tgadventor
    ctan-pkg: tex-gyre-adventor
@@ -3731,6 +4062,14 @@
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: tocbasic
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: tocbibind
    type: package
    status: unknown
@@ -3791,6 +4130,14 @@
    status: compatible
    issues:
    updated: 2024-07-06
+
+ - name: transparent
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
 
  - name: trig
    type: package
@@ -4035,6 +4382,14 @@
    issues:
    updated: 2024-07-07
 
+ - name: xcoffins
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
  - name: xcomment
    type: package
    status: unknown
@@ -4059,6 +4414,14 @@
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: xint
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: xltabular
    type: package
    status: unknown
@@ -4074,6 +4437,14 @@
    tests: false
    updated: 2024-07-15
 
+ - name: xpatch
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: xr
    type: package
    status: compatible
@@ -4086,6 +4457,14 @@
    comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
    issues:
    updated: 2024-07-10
+
+ - name: xsim
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: xspace
    type: package
@@ -4128,12 +4507,28 @@
    tests: false
    updated: 2024-07-15
 
+ - name: zref
+   type: package
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
 
 
 
 #-------------------------------- class files -----------------------
 
 #------------------------ AAA ----------------------------
+
+ - name: acmart
+   type: class
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: amsart
    type: class
@@ -4178,6 +4573,26 @@
    supported-through: [phase-III,title]
    updated: 2024-07-05
 
+#------------------------ EEE ----------------------------
+
+ - name: exam
+   type: class
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
+#------------------------ III ----------------------------
+
+ - name: IEEEtran
+   type: class
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
 #------------------------ KKK ----------------------------
 
 #------------------------ LLL ----------------------------
@@ -4186,8 +4601,26 @@
    type: class
    status: unknown
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-06
+
+ - name: ltugboat
+   ctan-pkg: tugboat
+   type: class
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: ltxdoc
+   type: class
+   status: unknown
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
 
 #------------------------ MMM ----------------------------
 
@@ -4217,6 +4650,14 @@
    supported-through: [phase-III,title]   
    updated: 2024-07-05
 
+ - name: revtex4-2
+   ctan-pkg: revtex
+   type: class
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-17
+
 #------------------------ SSS ----------------------------
 
  - name: scrartcl
@@ -4242,4 +4683,11 @@
    status: currently-incompatible
    related-issues: [88]
    updated: 2024-07-10
+
+ - name: standalone
+   type: class
+   status: unknown
+   issues:
+   tasks: needs tests
+   updated: 2024-07-17
 
