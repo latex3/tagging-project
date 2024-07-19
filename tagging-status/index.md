@@ -42,6 +42,7 @@ If you encounter a problem with a package or class for which there is no issue i
 {% assign xpackages = site.data.tagging-status | where: "type", "package" %}
 {% assign xpc = xpackages | where: "status", "compatible" %}
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
+{% assign xpm = xpackages | where: "status", "in-progress" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
 {% assign xpn = xpackages | where: "status", "no-support" %}
 {% assign xpu = xpackages | where: "status", "unknown" %}
@@ -49,11 +50,12 @@ If you encounter a problem with a package or class for which there is no issue i
 Statistics: The table currently holds **{{xpackages | size }}** packages out of which
 **{{xpc| size }}**  are fully `compatible`,
 **{{xpp | size }}** `partially-compatible`,
+**{{xpm | size}}**`in-progress`,
 **{{xpi | size }}** `currently-incompatible`, and
 **{{xpn | size }}** have  `no-support`.
 The status for the remaining **{{xpu | size }}** packages is `unknown`.
 
-{% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
+{% assign packages = xpc | concat: xpp | concat: xpm | concat: xpi | concat: xpn | concat: xpu %}
 
 {% include_relative status-table.md %}
 
@@ -64,6 +66,7 @@ The status for the remaining **{{xpu | size }}** packages is `unknown`.
 {% assign xpackages = site.data.tagging-status | where: "type", "class" %}
 {% assign xpc = xpackages | where: "status", "compatible" %}
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
+{% assign xpm = xpackages | where: "status", "in-progress" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
 {% assign xpn = xpackages | where: "status", "no-support" %}
 {% assign xpu = xpackages | where: "status", "unknown" %}
@@ -71,11 +74,12 @@ The status for the remaining **{{xpu | size }}** packages is `unknown`.
 Statistics: The table currently holds **{{xpackages | size }}** classes out of which
 **{{xpc| size }}**  are fully `compatible`,
 **{{xpp | size }}** `partially-compatible`,
+**{{xpm | size}}**`in-progress`,
 **{{xpi | size }}** `currently-incompatible`, and
 **{{xpn | size }}** have  `no-support`.
 The status for the remaining **{{xpu | size }}** classes is `unknown`.
 
-{% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
+{% assign packages = xpc | concat: xpp | concat: xpm | concat: xpi | concat: xpn | concat: xpu %}
 
 {% include_relative status-table.md %}
 
