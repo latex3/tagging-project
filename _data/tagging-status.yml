@@ -1457,11 +1457,13 @@
 
  - name: csvsimple
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
+             currently incompatible."
+   supported-through: [phase-III,table]
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-20
 
  - name: ctable
    type: package
@@ -1593,11 +1595,11 @@
 
  - name: datetime2
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
+   tests: true
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
 
  - name: dblfnote
    type: package
@@ -4285,11 +4287,9 @@
 
  - name: minted
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-17
+   status: currently-incompatible
+   comments: Structural warnings and automatic begin / end mismatch errors.
+   updated: 2024-07-18
 
  - name: mintspirit
    type: package
@@ -5193,6 +5193,7 @@
  - name: pgfplotstable
    type: package
    status: compatible
+   supported-through: [phase-III,table]
    comments: "Table tagging is correct but any interaction with pgfplots
               is not yet supported."
    tests: true
@@ -5882,11 +5883,11 @@
 
  - name: sillypage
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: "Images are missing alt text."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-18
 
  - name: simpleicons
    type: package
@@ -6210,6 +6211,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: tablefootnote
+   type: package
+   status: compatible
+   supported-through: [phase-III,table]
+   issues:
+   tests: true
+   updated: 2024-07-16
 
  - name: tableof
    type: package
@@ -7098,11 +7107,10 @@
 
  - name: xfrac
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-18
 
  - name: xgreek
    type: package
