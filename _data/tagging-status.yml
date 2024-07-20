@@ -1281,7 +1281,8 @@
 
  - name: endnotes
    type: package
-   status: currently-incompatible
+   status: partially-compatible
+   comments: "Does not error but tagging is not ideal."
    issues: [135]
    tests: true
    updated: 2024-07-17
@@ -1312,6 +1313,7 @@
    
  - name: epic
    status: currently-incompatible
+   comments: "Works with pdflatex but not lualatex."
    issues: [159]
    tests: true
    updated: 2024-07-17
@@ -3418,7 +3420,7 @@
 
  - name: soulutf8
    type: package
-   status: currently-incompatible
+   status: no-support
    comments: "This package is obsolete. Use the soul package directly."
    issues:
    tests: false
@@ -4218,6 +4220,7 @@
  - name: xltabular
    type: package
    status: currently-incompatible
+   supported-through: [phase-III,firstaid]
    issues: [170]
    tests: true
    updated: 2024-07-17
