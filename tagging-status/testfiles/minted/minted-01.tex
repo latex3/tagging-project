@@ -1,0 +1,38 @@
+\DocumentMetadata{
+  lang=en-US,
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  testphase={phase-III,math,title,table,firstaid},
+  uncompress
+  }
+\documentclass{article}
+
+\usepackage{shellesc}
+\usepackage[kpsewhich=true]{minted}
+\setminted{escapeinside=||,autogobble}
+\newmintedfile[mintedclfile]{cl}{}
+\newcommand*\clfile[2][]{\mintedclfile[#1]{#2.lisp}}
+
+
+\title{minted tagging test}
+
+
+\begin{document}
+
+\maketitle
+
+\noindent Inline listing:
+\begin{minted}{Lisp}
+  ;; Nothing to do! (+) => 0
+  (defun listsum (l) (reduce #'+ l))
+\end{minted}
+
+\noindent File inclusion:
+\clfile{nrloop}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
