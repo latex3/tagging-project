@@ -17,7 +17,7 @@ td.date {white-space: nowrap;font-size:90%;}
 
 # Tagging Status of LaTeX Packages and Classes
 
-{% assign t-s = site.data.tagging-status | where: "priority", "2" %}
+{% assign t-s = site.data.tagging-status | where_expr: "priority", "priority == 2" %}
 
 This file shows the status of!! **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
