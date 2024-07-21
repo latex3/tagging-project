@@ -147,7 +147,7 @@
    tasks: needs tests
    updated: 2024-07-13
 
- - name: adjmulticols
+ - name: adjmulticol
    type: package
    status: unknown
    issues:
@@ -434,11 +434,11 @@
 
  - name: arydshln
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   status: currently-incompatible
+   issues: [193]
+   tests: true
+   tasks:
+   updated: 2024-07-21
 
  - name: asciilist
    type: package
@@ -1407,7 +1407,7 @@
    tasks: needs tests
    updated: 2024-07-18
 
- - name: contriesofeurope
+ - name: countriesofeurope
    type: package
    status: unknown
    issues:
@@ -2362,7 +2362,15 @@
    references: [2]
    tasks: needs tests
    updated: 2024-07-06
-
+   
+ - name: floatpag
+   type: package
+   status: currently-incompatible
+   comments: "redefines \\@xfloat"
+   issues: [209]
+   tests: true
+   updated: 2024-07-19
+   
  - name: floatflt
    type: package
    status: unknown
@@ -2386,7 +2394,7 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
-
+   
  - name: fltrace
    ctan-pkg: latex-base
    type: package
@@ -3684,9 +3692,11 @@
  - name: lineno
    type: package
    status: currently-incompatible
-   issues: [162]
+   issues: [162,210]
    tests: true
-   updated: 2024-07-17
+   comments: "loses linenumbers and doesn't tag line numbers" 
+   tasks: needs tests
+   updated: 2024-07-19
 
  - name: linguex
    type: package
