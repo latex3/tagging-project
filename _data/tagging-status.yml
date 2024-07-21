@@ -2356,7 +2356,15 @@
    references: [2]
    tasks: needs tests
    updated: 2024-07-06
-
+   
+ - name: floatpag
+   type: package
+   status: currently-incompatible
+   comments: "redefines \\@xfloat"
+   issues: [209]
+   tests: true
+   updated: 2024-07-19
+   
  - name: floatflt
    type: package
    status: unknown
@@ -2380,7 +2388,7 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
-
+   
  - name: fltrace
    ctan-pkg: latex-base
    type: package
@@ -3677,11 +3685,12 @@
 
  - name: lineno
    type: package
-   status: unknown
-   issues:
-   tests: false
+   status: currently-incompatible
+   issues: [210]
+   tests: true
+   comments: "loses linenumbers and doesn't tag line numbers" 
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-19
 
  - name: linguex
    type: package
