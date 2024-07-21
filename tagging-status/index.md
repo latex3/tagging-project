@@ -17,9 +17,14 @@ td.date {white-space: nowrap;font-size:90%;}
 
 # Tagging Status of LaTeX Packages and Classes
 
-{% assign t-s = site.data.tagging-status | where_exp: "status", "status != 'unlisted'" %}
+{% assign t-s = "" | split: "" %}
+{% for p site.data.tagging-status %}
+{% if p.priority < 3 or p.status != 'unknown' %}
+{% assign t-s = t-s | push: p %}
+{% endif %}
+{% end-for %}
 
-This file shows the status of!! **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
+This file shows the status of!x! **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
 
 The values in the *Status* column have the following meaning:
