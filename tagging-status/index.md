@@ -18,7 +18,7 @@ td.date {white-space: nowrap;font-size:90%;}
 # Tagging Status of LaTeX Packages and Classes
 
 {% assign t-s = "" | split: "" %}
-{% for p site.data.tagging-status %}
+{% for p in site.data.tagging-status %}
 {% if p.priority < 3 or p.status != 'unknown' %}
 {% assign t-s = t-s | push: p %}
 {% endif %}
