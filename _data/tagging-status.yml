@@ -812,6 +812,13 @@
    supported-through: [phase-III,firstaid]   
    updated: 2024-07-07
 
+ - name: blkarray
+   type: package
+   status: currently-incompatible
+   issues: [181]
+   tests: true
+   updated: 2024-07-17
+
  - name: bm
    type: package
    status: compatible
@@ -1889,11 +1896,11 @@
 
  - name: endnotes
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   status: partially-compatible
+   comments: "Does not error but tagging is not ideal."
+   issues: [135]
+   tests: true
+   updated: 2024-07-17
 
  - name: endnotesj
    type: package
@@ -1952,11 +1959,11 @@
    updated: 2024-07-18
 
  - name: epic
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   status: currently-incompatible
+   comments: "Works with pdflatex but not lualatex."
+   issues: [159]
+   tests: true
+   updated: 2024-07-17
 
  - name: epigraph
    type: package
@@ -2204,11 +2211,10 @@
 
  - name: fcolumn
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   status: currently-incompatible
+   issues: [161]
+   tests: true
+   updated: 2024-07-16
 
  - name: fdsymbol
    type: package
@@ -3658,7 +3664,7 @@
  - name: lineno
    type: package
    status: currently-incompatible
-   issues: [210]
+   issues: [162,210]
    tests: true
    comments: "loses linenumbers and doesn't tag line numbers" 
    tasks: needs tests
@@ -3769,11 +3775,10 @@
 
  - name: ltablex
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [163]
+   tests: true
+   updated: 2024-07-17
 
  - name: ltcaption
    type: package
@@ -3793,11 +3798,10 @@
 
  - name: ltxtable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [164]
+   tests: true
+   updated: 2024-07-17
 
  - name: lua-check-hyphen
    type: package
@@ -3995,11 +3999,10 @@
 
  - name: marginnote
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [165]
+   tests: true
+   updated: 2024-07-17
 
  - name: markdown
    type: package
@@ -4618,6 +4621,13 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: nicematrix
+   type: package
+   status: currently-incompatible
+   issues: [179]
+   tests: true
+   updated: 2024-07-17
 
  - name: nidanfloat
    type: package
@@ -5903,11 +5913,10 @@
 
  - name: soul
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [167]
+   tests: true
+   updated: 2024-07-17
 
  - name: soulpos
    type: package
@@ -5919,11 +5928,11 @@
 
  - name: soulutf8
    type: package
-   status: unknown
+   status: no-support
+   comments: "This package is obsolete. Use the soul package directly."
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-17
 
  - name: sourcecodepro
    type: package
@@ -5981,11 +5990,10 @@
 
  - name: spverbatim
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [168]
+   tests: true
+   updated: 2024-07-17
 
  - name: stackengine
    type: package
@@ -6129,11 +6137,10 @@
 
  - name: supertabular
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [169]
+   tests: true
+   updated: 2024-07-17
 
  - name: svg
    type: package
@@ -6202,11 +6209,10 @@
 
  - name: tabls
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [171]
+   tests: true
+   updated: 2024-07-17
 
  - name: tabto
    type: package
@@ -6247,6 +6253,13 @@
    issues:
    tests: true
    updated: 2024-07-16
+
+ - name: tabularray
+   type: package
+   status: currently-incompatible
+   issues: [177]
+   tests: true
+   updated: 2024-07-17
 
  - name: tabularx
    type: package
@@ -6472,11 +6485,10 @@
 
  - name: thmbox
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [172]
+   tests: true
+   updated: 2024-07-17
 
  - name: thmtools
    type: package
@@ -6488,11 +6500,10 @@
 
  - name: threeparttable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [173]
+   tests: true
+   updated: 2024-07-17
 
  - name: threeparttablex
    type: package
@@ -6663,11 +6674,10 @@
 
  - name: topcapt
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-21
 
  - name: totalcount
    type: package
@@ -6754,11 +6764,10 @@
 
  - name: typed-checklist
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [174]
+   tests: true
+   updated: 2024-07-17
 
 #------------------------ UUU ----------------------------
 
@@ -6794,11 +6803,10 @@
 
  - name: unicodefonttable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [175]
+   tests: true
+   updated: 2024-07-17
 
  - name: uniquecounter
    type: package
@@ -6889,10 +6897,12 @@
 
  - name: verbatim
    type: package
-   status: unknown
-   issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   status: partially-compatible
+   comments: "verbatim environment from package overwritten by tagging code;
+             content input with `\\verbatiminput` is tagged as normal text, not Code."
+   issues: [156]
+   tests: true
+   updated: 2024-07-17
 
  - name: verbdef
    type: package
@@ -6944,6 +6954,13 @@
 
 #------------------------ WWW ----------------------------
 
+ - name: warpcol
+   type: package
+   status: currently-incompatible
+   issues: [186]
+   tests: true
+   updated: 2024-07-17
+
  - name: wasysym
    type: package
    status: compatible
@@ -6953,11 +6970,10 @@
 
  - name: widetable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   issues: [176]
+   tests: true
+   updated: 2024-07-17
 
  - name: widows-and-orphans
    type: package
@@ -7134,11 +7150,11 @@
 
  - name: xltabular
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   supported-through: [phase-III,firstaid]
+   issues: [170]
+   tests: true
+   updated: 2024-07-17
 
  - name: xparse
    type: package
@@ -7214,6 +7230,13 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: xtab
+   type: package
+   status: currently-incompatible
+   issues: [183]
+   tests: true
+   updated: 2024-07-17
 
  - name: xtemplate
    type: package

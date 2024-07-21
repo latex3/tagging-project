@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}[overwrite]{ltx1.tex}
+\begin{longtable}{|cXX|}
+the & head& line\endhead
+the & foot& line\endfoot
+a&b&b\\
+\multicolumn{2}{c}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}&c\\
+a&b&b b b b b b b b b b b b b b b b b b b b b b b b b b \\
+a a& b b& c c\\
+a a& b b& 
+  c c c c c c c c c c c c c c c c c c c c c c c c c c c c c cc cc\\
+a a  aaaa& b b& c ccccc\\
+\end{longtable}
+\end{filecontents}
+\documentclass{article}
+\usepackage{ltxtable}
+
+\begin{document}
+
+\LTXtable{300pt}{ltx1}
+
+\end{document}
