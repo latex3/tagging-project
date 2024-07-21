@@ -22,7 +22,7 @@ td.date {white-space: nowrap;font-size:90%;}
 {% if p.priority < 3 or p.status != 'unknown' %}
 {% assign t-s = t-s | push: p %}
 {% endif %}
-{% end-for %}
+{% endfor %}
 
 This file shows the status of!x! **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
