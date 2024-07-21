@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{topcapt,graphicx}
+
+\title{topcapt tagging test}
+
+\begin{document}
+
+body text
+\begin{figure}
+\topcaption{my caption text}
+\includegraphics[alt={alt text}]{example-image}
+\end{figure}
+
+% compare with
+body text
+\begin{figure}
+\includegraphics[alt={alt text}]{example-image}
+\caption{my caption text}
+\end{figure}
+
+\end{document}
