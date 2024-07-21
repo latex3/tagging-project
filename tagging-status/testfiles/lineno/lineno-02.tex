@@ -3,17 +3,18 @@
     lang=en-US,
     pdfversion=2.0,
     pdfstandard=ua-2,
-    testphase={phase-III,math,title,table,firstaid}
+    testphase={phase-III,math,title,table,firstaid},
+    uncompress
   }
 \documentclass{article}
 \usepackage{lineno}
-
-\begin{document}
+\usepackage{lipsum}
 
 \linenumbers
-bla bla
+\begin{document}
 
-bla bla
+\section{Some heading}
 
+bla\lipsum[1]
 
 \end{document}
