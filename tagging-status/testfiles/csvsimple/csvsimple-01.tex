@@ -1,0 +1,45 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents*}{grade.csv}
+name,givenname,matriculation,gender,grade
+Maier,Hans,12345,m,1.0
+Huber,Anna,23456,f,2.3
+Weißbäck,Werner,34567,m,5.0
+Bauer,Maria,19202,f,3.3
+\end{filecontents*}
+
+\documentclass{article}
+\usepackage[l3]{csvsimple}
+
+\begin{document}
+
+\csvautotabular{grade.csv}
+
+\begin{tabular}{|l|c|}\hline%
+\bfseries Person & \bfseries Matr.~No.
+\csvreader[
+head to column names
+]{grade.csv}{}{%
+\\\givenname\ \name & \matriculation
+}%
+\\\hline
+\end{tabular}
+
+\csvstyle{myTableStyle}{
+tabular = |r|l|c|,
+table head = \hline & Person & Matr.~No.\\\hline\hline,
+late after line = \\\hline,
+head to column names,
+head to column names prefix = MY,
+}
+\csvreader[myTableStyle]
+{grade.csv}{}{%
+\thecsvrow & \MYgivenname~\MYname & \MYmatriculation
+}
+
+\end{document}
