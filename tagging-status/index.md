@@ -22,6 +22,7 @@ td.date {white-space: nowrap;font-size:90%;}
 {% if p.priority < 5
 or p.status == 'compatible'
 or p.status == 'partially-compatible'
+or p.status == 'currently-incompatible'
 or p.status == 'no-support'
 %}
 {% assign t-s = t-s | push: p %}
