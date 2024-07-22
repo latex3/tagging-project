@@ -4129,9 +4129,12 @@
 
  - name: mathtools
    type: package
-   status: unknown
-   tasks: needs tests
-   updated: 2024-07-06
+   status: partially-compatible
+   supported-through: [phase-III,math]
+   comments: "`mathic` key produces errors. Use of math tagging currently requires support from external tools."
+   issues: [139]
+   tests: true
+   updated: 2024-07-22
 
  - name: mattens
    type: package
