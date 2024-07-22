@@ -9,7 +9,7 @@
 #  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status            required   string          Status of package, see list below.
 #  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
-#  priority          optional   integer         Priority of work for unknown entries (omitted from table if > 2)
+#  priority          optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments          optional   markdown-string Free text markdown comments
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
@@ -8251,20 +8251,6 @@
    type: class
    status: currently-incompatible
    priority: 2
-   related-issues: [88]
-   updated: 2024-07-10
-
- - name: scrreporta
-   type: class
-   status: currently-incompatible
-   priority: 4
-   related-issues: [88]
-   updated: 2024-07-10
-   
- - name: scrreportb
-   type: class
-   status: currently-incompatible
-   priority: 6
    related-issues: [88]
    updated: 2024-07-10
 
