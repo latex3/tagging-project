@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Spreading equations}
+
+\begin{document}
+
+\begin{spreadlines}{20pt}
+Large spaces between the lines.
+\begin{gather}
+a=b\\
+c=d
+\end{gather}
+\end{spreadlines}
+Back to normal spacing.
+\begin{gather}
+a=b\\
+c=d
+\end{gather}
+
+\end{document}
