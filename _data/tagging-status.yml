@@ -9,6 +9,7 @@
 #  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status            required   string          Status of package, see list below.
 #  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
+#  priority          optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments          optional   markdown-string Free text markdown comments
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
@@ -39,6 +40,7 @@
  # - name: 
  #   type: package
  #   status: unknown
+ #   priority: 9
  #   issues:
  #   tests: false
  #   tasks: needs tests
@@ -79,6 +81,7 @@
  - name: abraces
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -87,6 +90,7 @@
  - name: abstract
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -94,7 +98,8 @@
 
  - name: academicons
    type: package
-   status: unknown
+   status: unlisted
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -110,6 +115,7 @@
  - name: accents
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -117,7 +123,8 @@
 
  - name: accsupp
    type: package
-   status: unknown
+   status: unlisted
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -126,6 +133,7 @@
  - name: acro
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -134,6 +142,7 @@
  - name: addlines
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -142,6 +151,7 @@
  - name: adforn
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -157,6 +167,7 @@
  - name: adjustbox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -180,6 +191,7 @@
  - name: algorithm2e
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -188,6 +200,7 @@
  - name: algorithmicx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -196,6 +209,7 @@
  - name: algorithms
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -205,6 +219,7 @@
    ctan-pkg: algorithmicx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -213,6 +228,7 @@
  - name: aliascnt
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -221,6 +237,7 @@
  - name: aligned-overset
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -229,6 +246,7 @@
  - name: alltt
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [131]
    updated: 2024-07-14
 
@@ -242,6 +260,7 @@
  - name: alphalph
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -268,6 +287,7 @@
  - name: amscdx
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -304,6 +324,7 @@
  - name: amsrefs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -331,6 +352,7 @@
  - name: amsthm
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [83]
    tests: true
    updated: 2024-07-08
@@ -339,6 +361,7 @@
    ctan-pkg: latex-amsmath
    type: package
    status: unknown
+   priority: 2
    issues:
    tasks: needs tests
    updated: 2024-07-06
@@ -346,6 +369,7 @@
  - name: andika
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -354,6 +378,7 @@
  - name: animate
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -370,6 +395,7 @@
    ctan-pkg: poltawski
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -387,6 +413,7 @@
    ctan-pkg: bibtex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -395,6 +422,7 @@
  - name: arabi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -403,6 +431,7 @@
  - name: arabicfront
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -411,6 +440,7 @@
  - name: arabluatex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -433,6 +463,7 @@
  - name: arydshln
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [193]
    tests: true
    tasks:
@@ -441,6 +472,7 @@
  - name: asciilist
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -449,6 +481,7 @@
  - name: askinclude
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -457,6 +490,7 @@
  - name: astron
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -465,6 +499,7 @@
  - name: asymptote
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -473,6 +508,7 @@
  - name: atkinson
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -481,6 +517,7 @@
  - name: attachfile2
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -497,6 +534,7 @@
  - name: authblk
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -506,6 +544,7 @@
    ctan-pkg: authordate
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -514,6 +553,7 @@
  - name: auto-pst-pdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -522,6 +562,7 @@
  - name: auto-pst-pdf-lua
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -530,6 +571,7 @@
  - name: autoaligne
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -555,6 +597,7 @@
  - name: axodraw2
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -572,6 +615,7 @@
  - name: babel
    type: package
    status: unknown
+   priority: 2
    comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now.
    issues:
    tests: false
@@ -581,6 +625,7 @@
  - name: babelbib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -589,6 +634,7 @@
  - name: backref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -597,6 +643,7 @@
  - name: balance
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -612,6 +659,7 @@
  - name: bbding
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -627,6 +675,7 @@
  - name: bclogo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -650,6 +699,7 @@
  - name: bibentry
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -707,6 +757,7 @@
  - name: biblatex2bibitem
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -715,6 +766,7 @@
  - name: biblist
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -723,6 +775,7 @@
  - name: bibtopic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -731,6 +784,7 @@
  - name: bibunits
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -739,6 +793,7 @@
  - name: bicaption
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -747,6 +802,7 @@
  - name: bidi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -755,6 +811,7 @@
  - name: bigdelim
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -763,6 +820,7 @@
  - name: bigfoot
    type: package
    status: unknown
+   priority: 2
    comments: To be supported or not? 
    tasks: needs tests
    updated: 2024-07-04
@@ -770,6 +828,7 @@
  - name: bigintcalc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -778,6 +837,7 @@
  - name: bigstrut
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -794,6 +854,7 @@
  - name: bitset
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -815,6 +876,7 @@
  - name: blkarray
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [181]
    tests: true
    updated: 2024-07-17
@@ -831,6 +893,7 @@
  - name: bmpsize
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -839,6 +902,7 @@
  - name: boldline
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -847,6 +911,7 @@
  - name: booklet
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -864,6 +929,7 @@
  - name: bookmark
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -898,6 +964,7 @@
  - name: breakurl
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -906,6 +973,7 @@
  - name: breqn
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [145]
    tests: yes
    tasks: needs more tests
@@ -914,6 +982,7 @@
  - name: bussproofs
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -922,6 +991,7 @@
  - name: bxeepic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -930,6 +1000,7 @@
  - name: bytefield
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -940,6 +1011,7 @@
  - name: CJK
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -948,6 +1020,7 @@
  - name: CTeX
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1004,6 +1077,7 @@
  - name: cancel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1012,6 +1086,7 @@
  - name: capt-of
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1020,6 +1095,7 @@
  - name: captdef
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1028,6 +1104,7 @@
  - name: captcont
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1036,6 +1113,7 @@
  - name: caption
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "the configurations from the package are overwritten by the
              tagging code. Issue when hyperref and both listoffigures are used."
    issues: [84]
@@ -1045,6 +1123,7 @@
  - name: carlito
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1053,6 +1132,7 @@
  - name: cases
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1061,6 +1141,7 @@
  - name: catchfile
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1069,6 +1150,7 @@
  - name: ccaption
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1084,6 +1166,7 @@
  - name: ccicons
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1100,6 +1183,7 @@
  - name: centernot
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1108,6 +1192,7 @@
  - name: cfr-lm
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1125,6 +1210,7 @@
  - name: changebar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1133,6 +1219,7 @@
  - name: changepage
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1141,6 +1228,7 @@
  - name: changes
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1156,6 +1244,7 @@
  - name: chapterbib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1173,6 +1262,7 @@
  - name: chemarr
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1181,6 +1271,7 @@
  - name: chemfig
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1189,6 +1280,7 @@
  - name: chemformula
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1197,6 +1289,7 @@
  - name: chemgreek
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1205,6 +1298,7 @@
  - name: chemmacros
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1213,6 +1307,7 @@
  - name: chemnum
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1221,6 +1316,7 @@
  - name: chicago
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1236,6 +1332,7 @@
  - name: circledsteps
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1244,6 +1341,7 @@
  - name: circledtext
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1252,6 +1350,7 @@
  - name: cite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1260,6 +1359,7 @@
  - name: cjk-ko
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1275,6 +1375,7 @@
  - name: classlist
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1292,6 +1393,7 @@
  - name: clrstrip
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1314,6 +1416,7 @@
  - name: codehigh
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1329,6 +1432,7 @@
  - name: collcell
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1337,6 +1441,7 @@
  - name: collectbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1345,6 +1450,7 @@
  - name: colonequals
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1359,6 +1465,7 @@
  - name: colorspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1375,6 +1482,7 @@
  - name: comment
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1383,6 +1491,7 @@
  - name: concmath-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1391,6 +1500,7 @@
  - name: continue
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1399,6 +1509,7 @@
  - name: contour
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1407,6 +1518,7 @@
  - name: countriesofeurope
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1415,6 +1527,7 @@
  - name: cooperhewitt
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1431,6 +1544,7 @@
  - name: covington
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1439,6 +1553,7 @@
  - name: cprotect
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1447,6 +1562,7 @@
  - name: crop
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1472,6 +1588,7 @@
  - name: ctable
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1487,6 +1604,7 @@
  - name: currfile
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1495,6 +1613,7 @@
  - name: curve2e
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1503,6 +1622,7 @@
  - name: cuted
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1511,6 +1631,7 @@
  - name: cutwin
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1568,6 +1689,7 @@
  - name: DSSerif
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1576,6 +1698,7 @@
  - name: dashrule
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1584,6 +1707,7 @@
  - name: dashundergaps
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1592,6 +1716,7 @@
  - name: datatool
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1608,6 +1733,7 @@
  - name: dblfnote
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1624,6 +1750,7 @@
  - name: decorule
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1655,6 +1782,7 @@
  - name: derivative
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1663,6 +1791,7 @@
  - name: diagbox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1671,6 +1800,7 @@
  - name: diffcoeff
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1679,6 +1809,7 @@
  - name: dingbat
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1687,12 +1818,14 @@
  - name: doc
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [44]
    updated: 2024-07-06
 
  - name: doclicense
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1701,6 +1834,7 @@
  - name: docstrip
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1716,6 +1850,7 @@
  - name: dotlessi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1724,6 +1859,7 @@
  - name: draftwatermark
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1773,6 +1909,7 @@
  - name: ETbb
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1781,6 +1918,7 @@
  - name: easyfig
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1789,6 +1927,7 @@
  - name: easylist
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1804,6 +1943,7 @@
  - name: ebproof
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1812,6 +1952,7 @@
  - name: econlipsum
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1820,6 +1961,7 @@
  - name: eepic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1828,6 +1970,7 @@
  - name: eforms
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1836,6 +1979,7 @@
  - name: ekdosis
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1844,6 +1988,7 @@
  - name: ellipsis
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1852,6 +1997,7 @@
  - name: embedall
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1860,6 +2006,7 @@
  - name: embedfile
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1868,6 +2015,7 @@
  - name: embrac
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1876,6 +2024,7 @@
  - name: emo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1884,6 +2033,7 @@
  - name: emoji
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1892,6 +2042,7 @@
  - name: empheq
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [138]
    tests: true
    updated: 2024-07-14
@@ -1899,6 +2050,7 @@
  - name: endfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1915,6 +2067,7 @@
  - name: endnotesj
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1923,6 +2076,7 @@
  - name: engord
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1931,6 +2085,7 @@
  - name: enotez
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1939,6 +2094,7 @@
  - name: enparen
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1947,6 +2103,7 @@
  - name: enumerate
    type: package
    status: currently-incompatible
+   priority: 2
    references: [1]
    updated: 2024-07-06
 
@@ -1963,6 +2120,7 @@
  - name: eolgrab
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1970,6 +2128,7 @@
 
  - name: epic
    status: currently-incompatible
+   priority: 2
    comments: "Works with pdflatex but not lualatex."
    issues: [159]
    tests: true
@@ -1978,6 +2137,7 @@
  - name: epigraph
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1993,6 +2153,7 @@
  - name: epstopdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2001,6 +2162,7 @@
  - name: eqparbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2016,6 +2178,7 @@
  - name: esint
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2024,6 +2187,7 @@
  - name: eso-pic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2039,6 +2203,7 @@
  - name: ethiop
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2047,6 +2212,7 @@
  - name: etoc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2084,6 +2250,7 @@
  - name: euler-math
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2106,6 +2273,7 @@
  - name: expex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2127,6 +2295,7 @@
  - name: extarrows
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2135,6 +2304,7 @@
  - name: extdash
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2144,6 +2314,7 @@
    ctan-pkg: fancyhdr
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2170,6 +2341,7 @@
  - name: faktor
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2178,6 +2350,7 @@
  - name: fancybox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2193,6 +2366,7 @@
  - name: fancypar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2201,6 +2375,7 @@
  - name: fancyvrb
    type: package
    status: currently-incompatible
+   priority: 2
    references: [1]
    tasks: needs tests
    updated: 2024-07-06
@@ -2215,6 +2390,7 @@
  - name: fbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2223,6 +2399,7 @@
  - name: fcolumn
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [161]
    tests: true
    updated: 2024-07-16
@@ -2230,6 +2407,7 @@
  - name: fdsymbol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2238,6 +2416,7 @@
  - name: fewerfloatpages
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2246,6 +2425,7 @@
  - name: fibnum
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2254,6 +2434,7 @@
  - name: figcaps
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2262,6 +2443,7 @@
  - name: filecontentsdef
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2270,6 +2452,7 @@
  - name: filemod
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2278,6 +2461,7 @@
  - name: firamath-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2286,6 +2470,7 @@
  - name: fitbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2294,6 +2479,7 @@
  - name: fitch
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2322,6 +2508,7 @@
  - name: fixme
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2337,6 +2524,7 @@
  - name: flexisym
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2345,6 +2533,7 @@
  - name: flippdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2353,6 +2542,7 @@
  - name: float
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "[H] floats are not yet automatically tagged."
    references: [2]
    tasks: needs tests
@@ -2361,6 +2551,7 @@
  - name: floatpag
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "redefines \\@xfloat"
    issues: [209]
    tests: true
@@ -2369,6 +2560,7 @@
  - name: floatflt
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2377,6 +2569,7 @@
  - name: floatrow
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2385,6 +2578,7 @@
  - name: flowfram
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2400,6 +2594,7 @@
  - name: flushend
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2408,6 +2603,7 @@
  - name: fmtcount
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2416,6 +2612,7 @@
  - name: fnbreak
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2424,6 +2621,7 @@
  - name: fncychap
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2432,6 +2630,7 @@
  - name: fncylab
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2440,6 +2639,7 @@
  - name: fnlineno
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2448,6 +2648,7 @@
  - name: fnpct
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2456,6 +2657,7 @@
  - name: fnpos
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2464,6 +2666,7 @@
  - name: fnumprint
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2492,6 +2695,7 @@
  - name: fontsetup
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2506,6 +2710,7 @@
  - name: fonttable
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2522,6 +2727,7 @@
  - name: footnote
    type: package
    status: unknown
+   priority: 2
    tasks: needs tests
    comments: To be supported or not?
    updated: 2024-07-06
@@ -2529,6 +2735,7 @@
  - name: footnotebackref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2537,6 +2744,7 @@
  - name: footnotehyper
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2545,6 +2753,7 @@
  - name: footnoterange
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2553,6 +2762,7 @@
  - name: footnpag
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2561,6 +2771,7 @@
  - name: forest
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2569,6 +2780,7 @@
  - name: forum
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2594,6 +2806,7 @@
    ctan-pkg: erewhon-math
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2602,6 +2815,7 @@
  - name: fouriernc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2610,6 +2824,7 @@
  - name: framed
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2619,6 +2834,7 @@
    ctan-pkg: e-french
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2627,6 +2843,7 @@
  - name: frenchle
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2635,6 +2852,7 @@
  - name: froufrou
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2643,6 +2861,7 @@
  - name: ftnright
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [110]
    tests: true
    updated: 2024-07-11
@@ -2650,6 +2869,7 @@
  - name: fvextra
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2658,6 +2878,7 @@
  - name: fwlw
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2706,6 +2927,7 @@
  - name: gb4e
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2714,6 +2936,7 @@
  - name: gelasio
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2722,6 +2945,7 @@
  - name: gelasiomath
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2744,6 +2968,7 @@
  - name: gentombow
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2759,6 +2984,7 @@
  - name: gettitlestring
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2839,6 +3065,7 @@
  - name: ghsystem
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2862,6 +3089,7 @@
  - name: gincltex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2870,6 +3098,7 @@
  - name: gindex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2878,6 +3107,7 @@
  - name: gitinfo-lua
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2893,6 +3123,7 @@
  - name: glossaries
    type: package
    status: unknown
+   priority: 2
    comments: An old issue appears to be fixed.
    tasks: needs tests
    issues: [48]
@@ -2901,6 +3132,7 @@
  - name: grabbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2938,6 +3170,7 @@
  - name: grfext
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2946,6 +3179,7 @@
  - name: gridset
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2955,6 +3189,7 @@
    ctan-pkg: babel-greek
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2965,6 +3200,7 @@
  - name: hanging
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -2973,6 +3209,7 @@
  - name: har2nat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2981,6 +3218,7 @@
  - name: harvard
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2997,6 +3235,7 @@
  - name: heros-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3006,6 +3245,7 @@
    ctan-pkg: xymtex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3021,6 +3261,7 @@
  - name: hhline
    type: package
    status: currently-incompatible
+   priority: 2
    comments: breaks with errors
    supported-through: [phase-III,table]
    tasks: needs further tests
@@ -3031,6 +3272,7 @@
  - name: hologo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3039,6 +3281,7 @@
  - name: hvfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3047,6 +3290,7 @@
  - name: hvindex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3055,6 +3299,7 @@
  - name: hvlogos
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3063,6 +3308,7 @@
  - name: hypbmsec
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3071,6 +3317,7 @@
  - name: hypcap
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3079,6 +3326,7 @@
  - name: hypdestopt
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3087,6 +3335,7 @@
  - name: hypdoc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3095,6 +3344,7 @@
  - name: hypdvips
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3103,6 +3353,7 @@
  - name: hyperbar
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3126,6 +3377,7 @@
  - name: hypgotoe
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3134,6 +3386,7 @@
  - name: hyphenat
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3142,6 +3395,7 @@
  - name: hyphsubst
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3168,6 +3422,7 @@
  - name: ibarra
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3183,6 +3438,7 @@
  - name: ifdraft
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3191,6 +3447,7 @@
  - name: iflang
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3213,6 +3470,7 @@
  - name: ifplatform
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3262,6 +3520,7 @@
  - name: import
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3270,6 +3529,7 @@
  - name: incgraph
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3291,6 +3551,7 @@
  - name: index
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3299,6 +3560,7 @@
  - name: indxcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3313,6 +3575,7 @@
  - name: intcalc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3321,6 +3584,7 @@
  - name: interval
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3329,6 +3593,7 @@
  - name: intopdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3344,6 +3609,7 @@
  - name: iwonamath
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3354,6 +3620,7 @@
  - name: jmb
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3362,6 +3629,7 @@
  - name: josefin
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3370,6 +3638,7 @@
  - name: junicode
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3378,6 +3647,7 @@
  - name: junicodevf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3386,6 +3656,7 @@
  - name: jurabib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3397,6 +3668,7 @@
  - name: kanbun
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3412,6 +3684,7 @@
  - name: keyfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3420,6 +3693,7 @@
  - name: keystroke
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3434,6 +3708,7 @@
  - name: keyvaltable
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3443,6 +3718,7 @@
    ctan-pkg: cjk-ko
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3503,6 +3779,7 @@
    ctan-pkg: lobster2
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3518,6 +3795,7 @@
  - name: labelschanged
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3532,6 +3810,7 @@
  - name: latex2pydata
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3562,6 +3841,7 @@
  - name: layout
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [111]
    tests: true
    updated: 2024-07-11
@@ -3569,6 +3849,7 @@
  - name: layouts
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3586,6 +3867,7 @@
  - name: leftindex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3594,6 +3876,7 @@
  - name: lete-sans-math
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3603,6 +3886,7 @@
    ctan-pkg: microtype
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3611,6 +3895,7 @@
  - name: letterswitharrows
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3619,6 +3904,7 @@
  - name: lettrine
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3641,6 +3927,7 @@
  - name: libertinus-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3649,6 +3936,7 @@
  - name: libertinust1math
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3678,6 +3966,7 @@
  - name: linebreaker
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3686,6 +3975,7 @@
  - name: lineno
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [162,210]
    tests: true
    comments: "loses linenumbers and doesn't tag line numbers" 
@@ -3695,6 +3985,7 @@
  - name: linguex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3717,6 +4008,7 @@
  - name: listings
    type: package
    status: currently-incompatible
+   priority: 2
    comments: See definition in tagpdfdocu-patches.sty.
    references: [1]
    issues: [70]
@@ -3727,6 +4019,7 @@
  - name: listliketab
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3735,6 +4028,7 @@
  - name: listofitems
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3758,6 +4052,7 @@
  - name: logix
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3766,6 +4061,7 @@
  - name: longdivision
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3783,6 +4079,7 @@
  - name: lpic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3791,6 +4088,7 @@
  - name: lscape
    type: package
    status: unknown
+   priority: 2
    issues:
    tasks: needs tests
    updated: 2024-07-06
@@ -3798,6 +4096,7 @@
  - name: ltablex
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [163]
    tests: true
    updated: 2024-07-17
@@ -3805,6 +4104,7 @@
  - name: ltcaption
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3813,6 +4113,7 @@
  - name: ltxgrid
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3821,6 +4122,7 @@
  - name: ltxtable
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [164]
    tests: true
    updated: 2024-07-17
@@ -3828,6 +4130,7 @@
  - name: lua-check-hyphen
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3836,6 +4139,7 @@
  - name: lua-typo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3844,6 +4148,7 @@
  - name: lua-ul
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3852,6 +4157,7 @@
  - name: lua-widow-control
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3860,6 +4166,7 @@
  - name: luacode
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3868,6 +4175,7 @@
  - name: lualatex-math
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3876,6 +4184,7 @@
  - name: luamathalign
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3884,6 +4193,7 @@
  - name: luamesh
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3899,6 +4209,7 @@
  - name: luapstricks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3907,6 +4218,7 @@
  - name: luatexja
    type: package
    status: currently-incompatible
+   priority: 2
    comments: overwrites tabular/array commands
    issues: [87]
    updated: 2024-07-06
@@ -3914,6 +4226,7 @@
  - name: luatexko
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3922,6 +4235,7 @@
  - name: luatodonotes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3930,6 +4244,7 @@
  - name: luavlna
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3938,6 +4253,7 @@
  - name: lucida-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3960,6 +4276,7 @@
  - name: lwarp
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3968,6 +4285,7 @@
  - name: lyluatex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3978,6 +4296,7 @@
  - name: MnSymbol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3986,6 +4305,7 @@
  - name: magaz
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3994,6 +4314,7 @@
  - name: magicnum
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4009,6 +4330,7 @@
  - name: manyfoot
    type: package
    status: unknown
+   priority: 2
    tasks: needs tests
    comments: To be supported or not?
    updated: 2024-07-06
@@ -4023,6 +4345,7 @@
  - name: marginnote
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [165]
    tests: true
    updated: 2024-07-17
@@ -4030,6 +4353,7 @@
  - name: markdown
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4045,6 +4369,7 @@
  - name: mathabx
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4053,6 +4378,7 @@
  - name: mathalpha
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4061,6 +4387,7 @@
  - name: mathastext
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4069,6 +4396,7 @@
  - name: mathdesign
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4077,6 +4405,7 @@
  - name: mathdots
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4116,6 +4445,7 @@
  - name: mathrsfs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4124,12 +4454,14 @@
  - name: mathtools
    type: package
    status: unknown
+   priority: 2
    tasks: needs tests
    updated: 2024-07-06
 
  - name: mattens
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4138,6 +4470,7 @@
  - name: mcaption
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4146,6 +4479,7 @@
  - name: mcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4154,6 +4488,7 @@
  - name: mciteplus
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4169,6 +4504,7 @@
  - name: mdsymbol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4177,6 +4513,7 @@
  - name: media9
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4185,6 +4522,7 @@
  - name: memoize
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4193,6 +4531,7 @@
  - name: mercatormap
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4201,6 +4540,7 @@
  - name: menukeys
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4216,6 +4556,7 @@
  - name: metalogo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4224,6 +4565,7 @@
  - name: metalogox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4232,6 +4574,7 @@
  - name: mfirstuc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4240,6 +4583,7 @@
  - name: mhchem
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4262,6 +4606,7 @@
  - name: midpage
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4270,6 +4615,7 @@
  - name: minibox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4278,6 +4624,7 @@
  - name: minitoc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4286,6 +4633,7 @@
  - name: minted
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Structural warnings and automatic begin / end mismatch errors.
    updated: 2024-07-18
 
@@ -4307,6 +4655,7 @@
  - name: mleftright
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4315,6 +4664,7 @@
  - name: montex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4330,6 +4680,7 @@
  - name: moreverb
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4345,6 +4696,7 @@
  - name: mparhack
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4353,6 +4705,7 @@
  - name: multiaudience
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4361,6 +4714,7 @@
  - name: multibib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4376,6 +4730,7 @@
  - name: multicolrule
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4384,6 +4739,7 @@
  - name: multido
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4392,6 +4748,7 @@
  - name: multiexpand
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4401,6 +4758,7 @@
    ctan-pkg: beamer
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4409,6 +4767,7 @@
  - name: multirow
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4417,6 +4776,7 @@
  - name: multitoc
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4425,6 +4785,7 @@
  - name: musixtex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4433,6 +4794,7 @@
  - name: mwe
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4450,6 +4812,7 @@
  - name: nameauth
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4458,6 +4821,7 @@
  - name: named
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4473,6 +4837,7 @@
  - name: nar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4486,6 +4851,7 @@
  - name: nature
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4494,6 +4860,7 @@
  - name: navigator
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4502,6 +4869,7 @@
  - name: nccfoots
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4510,6 +4878,7 @@
  - name: needspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4518,6 +4887,7 @@
  - name: newapa
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4535,6 +4905,7 @@
  - name: newcomputermodern
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4543,6 +4914,7 @@
  - name: newfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4551,6 +4923,7 @@
  - name: newproof
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4560,6 +4933,7 @@
    ctan-pkg: newpx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4568,6 +4942,7 @@
  - name: newpx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4584,6 +4959,7 @@
  - name: newtx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4593,6 +4969,7 @@
    ctan-pkg: newtx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4609,6 +4986,7 @@
  - name: newtxsf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4617,6 +4995,7 @@
  - name: newtxtt
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4625,6 +5004,7 @@
  - name: newunicodechar
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4633,6 +5013,7 @@
  - name: newverbs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4648,6 +5029,7 @@
  - name: nicematrix
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [179]
    tests: true
    updated: 2024-07-17
@@ -4655,6 +5037,7 @@
  - name: nidanfloat
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4662,6 +5045,7 @@
 
  - name: nolbreaks
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4670,6 +5054,7 @@
  - name: nomencl
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4677,6 +5062,7 @@
 
  - name: nonumonpart
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4684,6 +5070,7 @@
 
  - name: nopageno
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4722,6 +5109,7 @@
 
  - name: notoccite
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4746,6 +5134,7 @@
 
  - name: notomath
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4754,6 +5143,7 @@
  - name: nth
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4761,6 +5151,7 @@
 
  - name: ntheorem
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4769,6 +5160,7 @@
  - name: numerica
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4777,6 +5169,7 @@
  - name: numerica-plus
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4785,6 +5178,7 @@
  - name: numerica-tables
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4793,6 +5187,7 @@
  - name: numspell
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4809,6 +5204,7 @@
 
  - name: ocgx2
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4817,6 +5213,7 @@
  - name: odsfile
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4824,6 +5221,7 @@
 
  - name: old-arrows
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4831,6 +5229,7 @@
 
  - name: onepagem
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4838,6 +5237,7 @@
 
  - name: optional
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4846,6 +5246,7 @@
  - name: orcidlink
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4861,6 +5262,7 @@
 
  - name: oubraces
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4875,6 +5277,7 @@
 
  - name: overpic
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4885,6 +5288,7 @@
  - name: PoiretOne
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4949,6 +5353,7 @@
  - name: pagecolor
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4957,6 +5362,7 @@
  - name: pagegrid
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4965,6 +5371,7 @@
  - name: pagenote
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4973,6 +5380,7 @@
  - name: pagesel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4981,6 +5389,7 @@
  - name: pagella-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4989,6 +5398,7 @@
  - name: pageslts
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4997,6 +5407,7 @@
  - name: paracol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5005,6 +5416,7 @@
  - name: paralist
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5013,6 +5425,7 @@
  - name: parallel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5021,6 +5434,7 @@
  - name: parcolumns
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5029,6 +5443,7 @@
  - name: parnotes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5037,6 +5452,7 @@
  - name: parskip
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5045,6 +5461,7 @@
  - name: pbalance
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5053,6 +5470,7 @@
  - name: pdfcol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5061,6 +5479,7 @@
  - name: pdfcolfoot
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5069,6 +5488,7 @@
  - name: pdfcolparallel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5077,6 +5497,7 @@
  - name: pdfcolparcolumns
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5085,6 +5506,7 @@
  - name: pdfcomment
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5093,6 +5515,7 @@
  - name: pdfescape
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5101,6 +5524,7 @@
  - name: pdfmarginpar
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5109,6 +5533,7 @@
  - name: pdfmsym
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5117,6 +5542,7 @@
  - name: pdfoverlay
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5125,6 +5551,7 @@
  - name: pdfrender
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5133,6 +5560,7 @@
  - name: pdfpages
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Creates duplicated structures as graphics are processed more than once in trial
              typesetting. Correct tagging of multipage includes unclear."
    tasks: needs tests
@@ -5150,6 +5578,7 @@
  - name: perltex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5158,6 +5587,7 @@
  - name: perpage
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5166,6 +5596,7 @@
  - name: pfnote
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5174,6 +5605,7 @@
  - name: pgfmorepages
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5183,6 +5615,7 @@
    ctan-pkg: pgf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5191,6 +5624,7 @@
  - name: pgfplots
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Relies on tikz so compatibility will come with that of tikz."
    tests: false
    updated: 2024-07-16
@@ -5207,6 +5641,7 @@
  - name: phonenumbers
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5215,6 +5650,7 @@
  - name: piano
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5223,6 +5659,7 @@
  - name: picins
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5231,6 +5668,7 @@
  - name: picture
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5239,6 +5677,7 @@
  - name: pifont
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5247,6 +5686,7 @@
  - name: piton
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5255,6 +5695,7 @@
  - name: placeins
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5264,6 +5705,7 @@
    ctan-pkg: plex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5273,6 +5715,7 @@
    ctan-pkg: plex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5282,6 +5725,7 @@
    ctan-pkg: plex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5290,6 +5734,7 @@
  - name: pmboxdraw
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5298,6 +5743,7 @@
  - name: polyglossia
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5306,6 +5752,7 @@
  - name: postnotes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5314,6 +5761,7 @@
  - name: prelim2e
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5322,6 +5770,7 @@
  - name: preview
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5330,6 +5779,7 @@
  - name: prftree
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5338,6 +5788,7 @@
  - name: prooftrees
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5346,6 +5797,7 @@
  - name: psfrag
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5354,6 +5806,7 @@
  - name: pst-pdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5362,6 +5815,7 @@
  - name: pst2pdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5370,6 +5824,7 @@
  - name: pstricks
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Tagging passes validation but is suboptimal. Future compatibility
               will only be with lualatex; dvips cannot properly support PDF/UA."
    issues:
@@ -5379,6 +5834,7 @@
  - name: pxpic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5387,6 +5843,7 @@
  - name: pyluatex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5395,6 +5852,7 @@
  - name: pythontex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5405,6 +5863,7 @@
  - name: qrcode
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5413,6 +5872,7 @@
  - name: quattrocento
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5421,6 +5881,7 @@
  - name: quotchap
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5438,6 +5899,7 @@
  - name: ragged2e
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5453,6 +5915,7 @@
  - name: realboxes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5461,6 +5924,7 @@
  - name: realscripts
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5469,6 +5933,7 @@
  - name: refcheck
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5477,6 +5942,7 @@
  - name: refcount
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5485,6 +5951,7 @@
  - name: refstyle
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5493,6 +5960,7 @@
  - name: regexpatch
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5501,6 +5969,7 @@
  - name: reledmac
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5509,6 +5978,7 @@
  - name: reledpar
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5517,6 +5987,7 @@
  - name: relsize
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5525,6 +5996,7 @@
  - name: repeatindex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5533,6 +6005,7 @@
  - name: repltext
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5541,6 +6014,7 @@
  - name: rerunfilecheck
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5549,6 +6023,7 @@
  - name: resizegather
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5557,6 +6032,7 @@
  - name: returntogrid
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5580,6 +6056,7 @@
  - name: rotating
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [112]
    tests: true
    updated: 2024-07-11
@@ -5587,6 +6064,7 @@
  - name: rotchiffre
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5595,6 +6073,7 @@
  - name: rotfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5603,6 +6082,7 @@
  - name: rotpages
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5613,6 +6093,7 @@
  - name: sansmath
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5621,6 +6102,7 @@
  - name: savetrees
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5629,6 +6111,7 @@
  - name: scalefnt
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5637,6 +6120,7 @@
  - name: scalerel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5645,6 +6129,7 @@
  - name: schola-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5653,6 +6138,7 @@
  - name: scholax
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5661,6 +6147,7 @@
  - name: scontents
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5669,6 +6156,7 @@
  - name: scrextend
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5677,6 +6165,7 @@
  - name: scrlayer
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5685,6 +6174,7 @@
  - name: scrlayer-fancyhdr
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5693,6 +6183,7 @@
  - name: scrlayer-notecolumn
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5701,12 +6192,14 @@
  - name: scrletter
    type: package
    status: unknown
+   priority: 9
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrlayer-scrpage
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5715,6 +6208,7 @@
  - name: secdot
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5723,6 +6217,7 @@
  - name: sectionbreak
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5731,6 +6226,7 @@
  - name: sectsty
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5739,6 +6235,7 @@
  - name: selectp
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5747,6 +6244,7 @@
  - name: selinput
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5755,6 +6253,7 @@
  - name: selnolig
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5763,6 +6262,7 @@
  - name: sepfootnotes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5771,6 +6271,7 @@
  - name: setouterhbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5779,6 +6280,7 @@
  - name: setspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5787,6 +6289,7 @@
  - name: settobox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5795,6 +6298,7 @@
  - name: shadethm
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Obsolete package; tcolorbox recommended.
    issues:
    tests: true
@@ -5803,6 +6307,7 @@
  - name: shadow
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5811,6 +6316,7 @@
  - name: shapepar
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5832,6 +6338,7 @@
  - name: showexpl
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5840,6 +6347,7 @@
  - name: showframe
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5848,6 +6356,7 @@
  - name: showhyphenation
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5857,6 +6366,7 @@
    ctan-pkg: latex-base
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [115]
    tests: true
    updated: 2024-07-11
@@ -5873,6 +6383,7 @@
  - name: showtags
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5881,6 +6392,7 @@
  - name: sidecap
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5897,6 +6409,7 @@
  - name: simpleicons
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5905,6 +6418,7 @@
  - name: siunitx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5913,6 +6427,7 @@
  - name: slashed
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5921,6 +6436,7 @@
  - name: snapshot
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5929,6 +6445,7 @@
  - name: snotez
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -5937,6 +6454,7 @@
  - name: soul
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [167]
    tests: true
    updated: 2024-07-17
@@ -5944,6 +6462,7 @@
  - name: soulpos
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5981,6 +6500,7 @@
  - name: spark-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5989,6 +6509,7 @@
  - name: spectral
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -5998,6 +6519,7 @@
    ctan-pkg: splitindex
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6014,6 +6536,7 @@
  - name: spverbatim
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [168]
    tests: true
    updated: 2024-07-17
@@ -6021,6 +6544,7 @@
  - name: stackengine
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6029,6 +6553,7 @@
  - name: stackrel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6037,6 +6562,7 @@
  - name: stampinclude
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6045,6 +6571,7 @@
  - name: standardsectioning
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6053,6 +6580,7 @@
  - name: steinmetz
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6061,6 +6589,7 @@
  - name: stfloats
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6092,6 +6621,7 @@
  - name: storebox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6100,6 +6630,7 @@
  - name: stringenc
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6114,6 +6645,7 @@
  - name: subcaption
    type: package
    status: currently-incompatible
+   priority: 2
    comments:  Issue when hyperref and both listoffigures are used.
    issues: [85]
    updated: 2024-07-06
@@ -6121,6 +6653,7 @@
  - name: subdepth
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6129,6 +6662,7 @@
  - name: subeqn
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6137,6 +6671,7 @@
  - name: subfig
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6145,6 +6680,7 @@
  - name: subfiles
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6153,6 +6689,7 @@
  - name: superiors
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6161,6 +6698,7 @@
  - name: supertabular
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [169]
    tests: true
    updated: 2024-07-17
@@ -6168,6 +6706,7 @@
  - name: svg
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6176,6 +6715,7 @@
  - name: svn-multi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6184,6 +6724,7 @@
  - name: systeme
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6201,6 +6742,7 @@
  - name: TheanoModern
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6209,6 +6751,7 @@
  - name: TheanoOldStyle
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6225,6 +6768,7 @@
  - name: tableof
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6233,6 +6777,7 @@
  - name: tabls
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [171]
    tests: true
    updated: 2024-07-17
@@ -6240,6 +6785,7 @@
  - name: tabto
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6280,6 +6826,7 @@
  - name: tabularray
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [177]
    tests: true
    updated: 2024-07-17
@@ -6303,6 +6850,7 @@
  - name: tagging
    type: package
    status: unknown
+   priority: 2
    comments: This package allows conditional typesetting, i.e., tagging here means that the LaTeX source has labeled regions that you can include or exclude.
    issues:
    tests: false
@@ -6312,6 +6860,7 @@
  - name: tasks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6328,6 +6877,7 @@
  - name: telprint
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6343,6 +6893,7 @@
  - name: tensind
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6351,6 +6902,7 @@
  - name: tensor
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6359,6 +6911,7 @@
  - name: termes-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6367,6 +6920,7 @@
  - name: tex-locale
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6375,6 +6929,7 @@
  - name: tex4ebook
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6383,6 +6938,7 @@
  - name: tex4ht
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6391,6 +6947,7 @@
  - name: texosquery
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6399,6 +6956,7 @@
  - name: textcase
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6414,6 +6972,7 @@
  - name: textgreek
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6422,6 +6981,7 @@
  - name: textpos
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6494,6 +7054,7 @@
  - name: theorem
    type: package
    status: currently-incompatible
+   priority: 2
    issues:
    tests: true
    updated: 2024-07-10
@@ -6501,6 +7062,7 @@
  - name: thepdfnumber
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6509,6 +7071,7 @@
  - name: thmbox
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [172]
    tests: true
    updated: 2024-07-17
@@ -6516,6 +7079,7 @@
  - name: thmtools
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6524,6 +7088,7 @@
  - name: threeparttable
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [173]
    tests: true
    updated: 2024-07-17
@@ -6531,6 +7096,7 @@
  - name: threeparttablex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6539,6 +7105,7 @@
  - name: thumbpdf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6547,6 +7114,7 @@
  - name: thumbs
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6555,18 +7123,21 @@
  - name: tikz
    type: package
    status: currently-incompatible
+   priority: 2
    references: [2]
    updated: 2024-07-06
 
  - name: tikz-cd
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [30]
    updated: 2024-07-06
 
  - name: tikzducks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6575,6 +7146,7 @@
  - name: tikzlings
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6598,6 +7170,7 @@
  - name: tipa
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6613,6 +7186,7 @@
  - name: titleref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6621,12 +7195,14 @@
  - name: titlesec
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [24]
    updated: 2024-07-06
 
  - name: titletoc
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Mentioned in issue.
    issues: [24]
    updated: 2024-07-06
@@ -6634,6 +7210,7 @@
  - name: titling
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6642,6 +7219,7 @@
  - name: tocbasic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6650,6 +7228,7 @@
  - name: tocbibind
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6658,6 +7237,7 @@
  - name: tocdata
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6666,6 +7246,7 @@
  - name: tocloft
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Packages attempts to redefine `\@starttoc`and fails.
    issues: [74]
    tests: true
@@ -6674,6 +7255,7 @@
  - name: tocstyle
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6682,6 +7264,7 @@
  - name: tocvsec2
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6690,6 +7273,7 @@
  - name: todonotes
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6705,6 +7289,7 @@
  - name: totalcount
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6726,6 +7311,7 @@
  - name: tracklang
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6734,6 +7320,7 @@
  - name: transparent
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6748,6 +7335,7 @@
  - name: truncate
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6756,6 +7344,7 @@
  - name: turnthepage
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6764,6 +7353,7 @@
  - name: twemojis
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6780,6 +7370,7 @@
  - name: typearea
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6788,6 +7379,7 @@
  - name: typed-checklist
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [174]
    tests: true
    updated: 2024-07-17
@@ -6797,6 +7389,7 @@
  - name: ulem
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6805,6 +7398,7 @@
  - name: underoverlap
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6813,6 +7407,7 @@
  - name: underscore
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6827,6 +7422,7 @@
  - name: unicodefonttable
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [175]
    tests: true
    updated: 2024-07-17
@@ -6834,6 +7430,7 @@
  - name: uniquecounter
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6849,6 +7446,7 @@
  - name: unravel
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6857,6 +7455,7 @@
  - name: upquote
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6865,6 +7464,7 @@
  - name: upref
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6873,6 +7473,7 @@
  - name: uri
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6888,6 +7489,7 @@
  - name: urlbst
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6912,6 +7514,7 @@
  - name: varwidth
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Tagging structure looks ok, but the formatting is wrong when the tagging code is used.
    issues: [71]
    tasks: adjustments in block code needed?
@@ -6930,6 +7533,7 @@
  - name: verbdef
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6946,6 +7550,7 @@
  - name: version
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6954,6 +7559,7 @@
  - name: versonotes
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6962,6 +7568,7 @@
  - name: vertbars
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -6970,6 +7577,7 @@
  - name: vwcol
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -6980,6 +7588,7 @@
  - name: warpcol
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [186]
    tests: true
    updated: 2024-07-17
@@ -6994,6 +7603,7 @@
  - name: widetable
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [176]
    tests: true
    updated: 2024-07-17
@@ -7008,6 +7618,7 @@
  - name: witharrows
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7016,6 +7627,7 @@
  - name: wordcloud
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7024,6 +7636,7 @@
  - name: wrapfig
    type: package
    status: currently-incompatible
+   priority: 2
    comments: generated tagging structure is incorrect
    issues: [40]
    tests: true
@@ -7032,6 +7645,7 @@
  - name: wrapfig2
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7040,6 +7654,7 @@
  - name: wrapstuff
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7057,6 +7672,7 @@
  - name: xcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7071,6 +7687,7 @@
  - name: xcoffins
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7079,6 +7696,7 @@
  - name: xcomment
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7087,6 +7705,7 @@
  - name: xecjk
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7095,6 +7714,7 @@
  - name: xetexko
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7103,6 +7723,7 @@
  - name: xevlna
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7111,6 +7732,7 @@
  - name: xfakebold
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7126,6 +7748,7 @@
  - name: xgreek
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7134,6 +7757,7 @@
  - name: xhfill
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7142,6 +7766,7 @@
  - name: xint
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7150,6 +7775,7 @@
  - name: xistercian
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7158,6 +7784,7 @@
  - name: xkeyval
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7166,6 +7793,7 @@
  - name: xlop
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7174,6 +7802,7 @@
  - name: xltabular
    type: package
    status: currently-incompatible
+   priority: 2
    supported-through: [phase-III,firstaid]
    issues: [170]
    tests: true
@@ -7189,6 +7818,7 @@
  - name: xpatch
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7197,6 +7827,7 @@
  - name: xpiano
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7205,6 +7836,7 @@
  - name: xpinyin
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7226,6 +7858,7 @@
  - name: xsavebox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7234,6 +7867,7 @@
  - name: xsim
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7249,6 +7883,7 @@
  - name: xstring
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7257,6 +7892,7 @@
  - name: xtab
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [183]
    tests: true
    updated: 2024-07-17
@@ -7271,6 +7907,7 @@
  - name: xurl
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7280,6 +7917,7 @@
    ctan-pkg: xypic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7297,6 +7935,7 @@
  - name: yfonts-otf
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7305,6 +7944,7 @@
  - name: yhmath
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7315,6 +7955,7 @@
  - name: zhnumber
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7330,6 +7971,7 @@
  - name: zref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7338,6 +7980,7 @@
  - name: zref-check
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7346,6 +7989,7 @@
  - name: zref-clever
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7354,6 +7998,7 @@
  - name: zref-vario
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7368,6 +8013,7 @@
  - name: acmart
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7393,6 +8039,7 @@
    ctan-pkg: amscls
    type: class
    status: currently-incompatible
+   priority: 2
    comments: "See some needed adjustments in project example `amsldoc`"
    tasks: needs further tests
    updated: 2024-07-07
@@ -7408,6 +8055,7 @@
  - name: beamer
    type: class
    status: currently-incompatible
+   priority: 2
    updated: 2024-07-07
 
  - name: book
@@ -7421,6 +8069,7 @@
  - name: combine
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7431,6 +8080,7 @@
  - name: exam
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7441,6 +8091,7 @@
  - name: IEEEtran
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7451,6 +8102,7 @@
  - name: jlreq
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7463,6 +8115,7 @@
  - name: leaflet
    type: class
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7471,6 +8124,7 @@
  - name: letter
    type: class
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7480,6 +8134,7 @@
    ctan-pkg: tugboat
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7488,6 +8143,7 @@
  - name: ltxdoc
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7498,6 +8154,7 @@
  - name: memoir
    type: class
    status: currently-incompatible
+   priority: 2
    comments: "Some code showing the needed adjustments can be found in the 
               [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
    updated: 2024-07-05
@@ -7507,6 +8164,7 @@
  - name: novel
    type: class
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -7518,6 +8176,7 @@
    ctan-pkg: kotex-oblivoir
    type: class
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -7546,6 +8205,7 @@
    ctan-pkg: revtex
    type: class
    status: unknown
+   priority: 9
    issues:
    tasks: needs tests
    updated: 2024-07-17
@@ -7555,30 +8215,35 @@
  - name: scrartcl
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrbook
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrlttr2
    type: class
    status: unknown
+   priority: 9
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrreport
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: standalone
    type: class
    status: unknown
+   priority: 9
    issues:
    tasks: needs tests
    updated: 2024-07-17
