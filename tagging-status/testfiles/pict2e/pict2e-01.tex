@@ -1,0 +1,55 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{pict2e,xcolor}
+
+\begin{document}
+
+\setlength\unitlength{.007\linewidth}
+\begin{picture}[alt={my alt text}](100,100)
+ \put(0,0){\framebox(100,100){}}
+ \linethickness{2.6\unitlength}
+ \put(0,0){\line(1,0){50}}
+ \put(0,0){\line(2,1){50}}
+ \put(0,0){\line(1,1){50}}
+ \put(0,0){\line(1,2){50}}
+ \put(0,0){\line(0,1){50}}
+ \color{blue}
+ \thicklines
+ \put(50,0){\line(4,2){50}}
+ \put(50,0){\line(2,4){50}}
+ \put(50,0){\line(5,5){50}}
+\end{picture}
+
+\bigskip
+
+\setlength{\unitlength}{1cm}
+\begin{picture}[alt={second picture}](8,4)
+  \thinlines % Start with thin lines
+  \put(0,0){\vector(1,0){8}}  % x axis
+  \put(0,0){\vector(0,1){4}}  % y axis
+  \put(2,0){\line(0,1){3}}    % left side
+  \put(4,0){\line(0,1){3.5}}  % right side
+  \thicklines % Use thicker lines for the \qbezier commands
+  \qbezier(2,3)(2.5,2.9)(3,3.25)
+  \qbezier(3,3.25)(3.5,3.6)(4,3.5)
+  \thinlines % Back to using thin lines
+  \put(2,3){\line(4,1){2}}
+  \put(4.5,2.5){\framebox{Trapezoidal Rule}}
+\end{picture}
+
+\bigskip
+
+\setlength\unitlength{1cm}
+\begin{picture}[alt={third picture}](5,4)
+{\color{orange}\polygon*(0,0)(4,3)(5,0)}
+{\linethickness{1pt}\polygon(0,0)(4,3)(5,0)}
+\end{picture}
+
+\end{document}
