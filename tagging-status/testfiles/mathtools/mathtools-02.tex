@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Controlling tags}
+
+\newtagform{brackets}{[}{]}
+\newtagform{brackets2}[\textbf]{[}{]}
+
+\begin{document}
+
+\begin{quote}\normalfont\itshape
+\begin{equation*}
+a=b \label{eq:example}\tag*{Q\&A}
+\end{equation*}
+See \ref{eq:example} or is it better with \refeq{eq:example}?
+\end{quote}
+
+\usetagform{brackets2}
+\begin{equation}
+E \neq m c^3
+\end{equation}
+
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usetagform{brackets}
+\begin{gather}
+a=a \label{eq:a} \\
+b=b \label{eq:b} \tag{**}
+\end{gather}
+This should refer to the equation containing $a=a$: \eqref{eq:a}.
+Then a switch of tag forms.
+\usetagform{default}
+\begin{align}
+c&=c \label{eq:c} \\
+d&=d \label{eq:d}
+\end{align}
+This should refer to the equation containing $d=d$: \eqref{eq:d}.
+\begin{equation}
+e=e
+\end{equation}
+Back to normal.\mathtoolsset{showonlyrefs=false}
+\begin{equation}
+f=f
+\end{equation}
+
+\end{document}

@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Gathered environments}
+
+\begin{document}
+
+\begin{equation}
+\begin{lgathered}
+x=1,\quad x+1=2 \\
+y=2
+\end{lgathered}
+\end{equation}
+
+\newcounter{steplinecnt}
+\newcommand\stepline{\stepcounter{steplinecnt}\thesteplinecnt}
+\newgathered{stargathered}
+{\llap{\stepline}$*$\quad\hfil}% \hfil for centering
+{\hfil}% \hfil for centering
+{\setcounter{steplinecnt}{0}}% reset counter
+\begin{gather}
+\begin{stargathered}
+x=1,\quad x+1=2 \\
+y=2
+\end{stargathered}
+\end{gather}
+
+\end{document}
