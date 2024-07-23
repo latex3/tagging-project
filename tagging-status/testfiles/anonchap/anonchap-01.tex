@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{book}
+
+\usepackage{anonchap}
+
+\begin{document}
+
+\simplechapter
+\chapter{First}
+text
+\renewcommand{\simplechapterdelim}{:}
+\chapter{Second}
+text
+\restorechapter % restore before issuing
+% a modified \simplechapter
+\simplechapter[Chap]
+\chapter{Third}
+text
+\restorechapter
+\chapter{Fourth}
+
+\end{document}
