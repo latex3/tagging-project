@@ -1,0 +1,54 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+    uncompress
+  }
+\documentclass{article}
+\usepackage{fixme}
+
+
+\title{fixme tagging test}
+
+\begin{document}
+
+\section{Just marginpar (this should work out of the box)}
+
+
+Right between the next letters x   \marginpar{in the margin} y is a marginpar note.
+
+
+\section{FixMe notes etc in draft}
+
+\fxsetup{draft}
+
+Right between the next letters x   \fxnote{note in the margin} y is an fxnote.
+
+Right between the next letters x   \fxwarning{warning in the margin} y is an fxwarning.
+
+Right between the next letters x   \fxerror{error in the margin} y is an fxerror.
+
+Right between the next letters x   \fxfatal{fatal in the margin} y is an fxfatal.
+
+\section{FixMe notes etc in final}
+
+\fxsetup{final}
+
+Right between the next letters x   \fxnote{note in the margin} y is an fxnote.
+
+Right between the next letters x   \fxwarning{warning in the margin} y is an fxwarning.
+
+Right between the next letters x   \fxerror{error in the margin} y is an fxerror.
+
+% \fxfatal won't work in 'final' mode !!!
+% Right between the next letters x   \fxfatal{fatal in the margin} y is an fxfatal.
+
+
+% \fxnote{This is a note}
+% \fxwarning{This is a warning}
+% \fxerror{This is an error}
+% \fxfatal{This is FATAL}
+
+\end{document}
