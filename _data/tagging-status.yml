@@ -2105,7 +2105,7 @@
  - name: endnotes
    type: package
    status: partially-compatible
-   comments: "Does not error but tagging is not ideal."
+   comments: "Does not error but `\\endnote`s are not tagged as \<Note\>s."
    issues: [135]
    tests: true
    updated: 2024-07-17
@@ -5844,12 +5844,12 @@
 
  - name: postnotes
    type: package
-   status: unknown
+   status: partially-compatible
    priority: 9
+   comments: "Does not error but `\\postnote`s are not tagged as \<Note\>s."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-23
 
  - name: prelim2e
    type: package
