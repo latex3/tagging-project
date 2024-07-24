@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Left sub/superscripts}
+
+\begin{document}
+
+\[
+{}^{4}_{12}\mathbf{C}^{5+}_{2} \quad
+\prescript{14}{2}{\mathbf{C}}^{5+}_{2} \quad
+\prescript{4}{12}{\mathbf{C}}^{5+}_{2} \quad
+\prescript{14}{}{\mathbf{C}}^{5+}_{2} \quad
+\prescript{}{2}{\mathbf{C}}^{5+}_{2}
+\]
+
+\end{document}

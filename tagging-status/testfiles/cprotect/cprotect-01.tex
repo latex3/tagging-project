@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{cprotect,amsmath}
+
+\begin{document}
+
+\tableofcontents % comment/uncomment
+
+\cprotect\section{Include \verb-\verb- anywhere!}
+
+\section{Normal text}
+
+text\cprotect\footnote{Like this one: \verb-!@#$%^&*()_+-.}
+
+\cprotect\section{Title \cprotect\emph{emphasized} word}
+
+\cprotect[om]\section[Short title \verb-&^-]{Long title \verb-&^%$-}
+
+\cprotEnv\begin{align}
+x&=\begin{cases}
+1 &\text{if }\verb"@#%^&*"\\
+2 &\text{otherwise}
+\end{cases}
+\end{align}
+
+\end{document}
