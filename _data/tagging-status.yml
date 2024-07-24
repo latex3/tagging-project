@@ -9,6 +9,7 @@
 #  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status            required   string          Status of package, see list below.
 #  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
+#  priority          optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments          optional   markdown-string Free text markdown comments
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues            optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
@@ -39,6 +40,7 @@
  # - name: 
  #   type: package
  #   status: unknown
+ #   priority: 9
  #   issues:
  #   tests: false
  #   tasks: needs tests
@@ -76,9 +78,24 @@
    tests: false
    updated: 2024-07-13
 
+ - name: Archivo
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: Arvo
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: abraces
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -87,10 +104,20 @@
  - name: abstract
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-13
+
+ - name: academicons
+   type: package
+   status: unlisted
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: accanthis
    type: package
@@ -102,6 +129,7 @@
  - name: accents
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -109,7 +137,8 @@
 
  - name: accsupp
    type: package
-   status: unknown
+   status: unlisted
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -118,6 +147,7 @@
  - name: acro
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -126,6 +156,7 @@
  - name: addlines
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -134,14 +165,23 @@
  - name: adforn
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-13
 
+ - name: adjmulticol
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-21
+
  - name: adjustbox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -155,6 +195,13 @@
    tasks: more tests needed
    updated: 2024-07-12
 
+ - name: alfaslabone
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: algolrevived
    type: package
    status: compatible
@@ -162,16 +209,19 @@
    tests: false
    updated: 2024-07-13
 
- - name: almendra
+ - name: algorithm2e
    type: package
-   status: compatible
+   status: unknown
+   priority: 9
    issues:
    tests: false
-   updated: 2024-07-13
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: algorithmicx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -180,6 +230,7 @@
  - name: algorithms
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -189,16 +240,52 @@
    ctan-pkg: algorithmicx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: aliascnt
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: aligned-overset
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: alltt
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [131]
    updated: 2024-07-14
+
+ - name: almendra
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-13
+
+ - name: alphalph
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: amsbsy
    type: package
@@ -217,6 +304,15 @@
    issues:
    tests: true
    updated: 2024-07-12
+
+ - name: amscdx
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: amsfonts
    type: package
@@ -249,6 +345,7 @@
  - name: amsrefs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -276,6 +373,7 @@
  - name: amsthm
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [83]
    tests: true
    updated: 2024-07-08
@@ -284,18 +382,41 @@
    ctan-pkg: latex-amsmath
    type: package
    status: unknown
+   priority: 2
    issues:
    tasks: needs tests
    updated: 2024-07-06
 
- - name: antpolt
-   ctan-pkg: poltawski
+ - name: andika
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: animate
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-13
+   updated: 2024-07-18
+
+ - name: anonchap
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-21
+
+ - name: antpolt
+   ctan-pkg: poltawski
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-22
 
  - name: anttor
    ctan-pkg: antt
@@ -309,6 +430,7 @@
    ctan-pkg: bibtex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -317,6 +439,7 @@
  - name: arabi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -325,6 +448,7 @@
  - name: arabicfront
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -333,10 +457,18 @@
  - name: arabluatex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-13
+
+ - name: arev
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: arimo
    type: package
@@ -352,17 +484,26 @@
    issues:
    updated: 2024-07-06
 
- - name: arydshln
+ - name: arsenal
    type: package
-   status: unknown
+   status: compatible
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   updated: 2024-07-21
+
+ - name: arydshln
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [193]
+   tests: true
+   tasks:
+   updated: 2024-07-21
 
  - name: asciilist
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -371,6 +512,7 @@
  - name: askinclude
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -379,14 +521,32 @@
  - name: astron
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-13
 
+ - name: asymptote
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: atkinson
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: attachfile2
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -403,6 +563,7 @@
  - name: authblk
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -412,10 +573,38 @@
    ctan-pkg: authordate
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-13
+
+ - name: auto-pst-pdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: auto-pst-pdf-lua
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: autoaligne
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: avant
    ctan-pkg: psnfss
@@ -434,6 +623,15 @@
              provides broader tagging support without the need to load an additional package.
    updated: 2024-07-14
 
+ - name: axodraw2
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ BBB ----------------------------
 
  - name: Baskervaldx
@@ -446,6 +644,7 @@
  - name: babel
    type: package
    status: unknown
+   priority: 2
    comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now.
    issues:
    tests: false
@@ -455,6 +654,7 @@
  - name: babelbib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -463,10 +663,20 @@
  - name: backref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-17
+
+ - name: balance
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: baskervillef
    type: package
@@ -475,12 +685,30 @@
    tests: false
    updated: 2024-07-14
 
+ - name: bbding
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: bboldx
    type: package
    status: compatible
    issues:
    tests: true
    updated: 2024-07-16
+
+ - name: bclogo
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: beton
    type: package
@@ -500,6 +728,7 @@
  - name: bibentry
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -557,6 +786,7 @@
  - name: biblatex2bibitem
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -564,15 +794,16 @@
 
  - name: biblist
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   status: currently-incompatible
+   priority: 2
+   issues: [194]
+   tests: true
+   updated: 2024-07-23
 
  - name: bibtopic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -581,14 +812,25 @@
  - name: bibunits
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: bicaption
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: bidi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -597,6 +839,7 @@
  - name: bigdelim
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -605,13 +848,24 @@
  - name: bigfoot
    type: package
    status: unknown
+   priority: 2
    comments: To be supported or not? 
    tasks: needs tests
    updated: 2024-07-04
 
+ - name: bigintcalc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: bigstrut
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -624,6 +878,15 @@
    issues:
    tests: false
    updated: 2024-07-14
+
+ - name: bitset
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: bitter
    type: package
@@ -638,6 +901,14 @@
    supported-through: [phase-III,firstaid]   
    updated: 2024-07-07
 
+ - name: blkarray
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [181]
+   tests: true
+   updated: 2024-07-17
+
  - name: bm
    type: package
    status: compatible
@@ -647,13 +918,32 @@
    tests: true
    updated: 2024-07-12
 
+ - name: bmpsize
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: boldline
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: booklet
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: bookman
    ctan-pkg: psnfss
@@ -667,6 +957,7 @@
  - name: bookmark
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -698,27 +989,57 @@
    tests: true
    updated: 2024-07-17
 
+ - name: breakurl
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: breqn
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [145]
    tests: yes
    tasks: needs more tests
    updated: 2024-07-14
 
+ - name: bussproofs
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: bxeepic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: bytefield
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ CCC ----------------------------
 
  - name: CJK
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -727,6 +1048,7 @@
  - name: CTeX
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -753,6 +1075,14 @@
    tests: false
    updated: 2024-07-13
 
+ - name: CooperHewitt
+   type: package
+   status: compatible
+   priority: 9
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: CormorantGaramond
    type: package
    status: compatible
@@ -774,15 +1104,57 @@
    tests: false
    updated: 2024-07-14
 
+ - name: caladea
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: calc
    type: package
    status: compatible
    issues:
    updated: 2024-07-06
 
+ - name: cancel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: cantarell
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: capt-of
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: captdef
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: captcont
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -791,19 +1163,53 @@
  - name: caption
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "the configurations from the package are overwritten by the
              tagging code. Issue when hyperref and both listoffigures are used."
    issues: [84]
    tests: true
    updated: 2024-07-08
 
+ - name: carlito
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: cascadia-code
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: cases
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: catchfile
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: ccaption
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: ccfonts
    type: package
@@ -812,6 +1218,15 @@
    tests: false
    updated: 2024-07-14
 
+ - name: ccicons
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: cellspace
    type: package
    status: compatible
@@ -819,6 +1234,24 @@
    issues:
    tests: true
    updated: 2024-07-15
+
+ - name: centernot
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: cfr-lm
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: chancery
    type: package
@@ -832,14 +1265,25 @@
  - name: changebar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: changepage
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: changes
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -847,15 +1291,15 @@
 
  - name: chappg
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-21
 
  - name: chapterbib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -870,9 +1314,64 @@
    tests: false
    updated: 2024-07-14
 
+ - name: chemarr
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: chemfig
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: chemformula
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: chemgreek
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: chemmacros
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: chemnum
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: chicago
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -885,13 +1384,41 @@
    tests: false
    updated: 2024-07-14
 
+ - name: circledsteps
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: circledtext
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: cite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: cjk-ko
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: classico
    type: package
@@ -899,6 +1426,15 @@
    issues:
    tests: false
    updated: 2024-07-14
+
+ - name: classlist
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: cleveref
    type: package
@@ -908,6 +1444,15 @@
    issues: [2]
    tests: true
    updated: 2024-07-08
+
+ - name: clrstrip
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: cmbright
    type: package
@@ -923,6 +1468,15 @@
    tests: false
    updated: 2024-07-14
 
+ - name: codehigh
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: coelacanth
    type: package
    status: compatible
@@ -930,13 +1484,32 @@
    tests: false
    updated: 2024-07-14
 
- - name: colonequals
+ - name: collcell
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
+
+ - name: collectbox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: colonequals
+   type: package
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   issues:
+   tests: true
+   updated: 2024-07-21
 
  - name: color
    type: package
@@ -947,6 +1520,7 @@
  - name: colorspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -960,21 +1534,55 @@
    issues: [90]
    updated: 2024-07-07
 
+ - name: comfortaa
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: comment
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: concmath-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: continue
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: contour
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: countriesofeurope
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: courier
    type: package
@@ -984,9 +1592,28 @@
    tests: false
    updated: 2024-07-14
 
+ - name: covington
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: cprotect
+   type: package
+   status: currently-incompatible
+   priority: 5
+   comments: "Breaks TOC and errors in math mode."
+   issues:
+   tests: true
+   updated: 2024-07-18
+
  - name: crop
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1001,11 +1628,22 @@
 
  - name: csvsimple
    type: package
+   status: partially-compatible
+   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
+             currently incompatible."
+   supported-through: [phase-III,table]
+   issues:
+   tests: true
+   updated: 2024-07-20
+
+ - name: ctable
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
 
  - name: cuprum
    type: package
@@ -1013,6 +1651,42 @@
    issues:
    tests: false
    updated: 2024-07-14
+
+ - name: currfile
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: curve2e
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: cuted
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: cutwin
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: cyklop
    type: package
@@ -1066,6 +1740,7 @@
  - name: dashrule
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1074,6 +1749,7 @@
  - name: dashundergaps
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1082,6 +1758,7 @@
  - name: datatool
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1089,11 +1766,19 @@
 
  - name: datetime2
    type: package
-   status: unknown
+   status: compatible
    issues:
-   tests: false
+   tests: true
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
+
+ - name: dblfnote
+   type: package
+   status: currently-incompatible
+   priority: 9
+   issues: [225]
+   tests: true
+   updated: 2024-07-23
 
  - name: dcolumn
    type: package
@@ -1102,6 +1787,15 @@
    issues:
    tests: true
    updated: 2024-07-08
+
+ - name: decorule
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: dejavu
    type: package
@@ -1126,9 +1820,19 @@
    tests: true
    updated: 2024-07-10
 
+ - name: derivative
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: diagbox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1137,36 +1841,66 @@
  - name: diffcoeff
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: dingbat
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: doc
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [44]
    updated: 2024-07-06
+
+ - name: doclicense
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: docstrip
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: doi
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-21
+
  - name: dotlessi
    type: package
-   status: unknown
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-21
 
  - name: draftwatermark
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1213,6 +1947,31 @@
 
 #------------------------ EEE ----------------------------
 
+ - name: ETbb
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: easyfig
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: easylist
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: ebgaramond
    type: package
    status: compatible
@@ -1220,9 +1979,26 @@
    tests: false
    updated: 2024-07-14
 
+ - name: ebgaramond-maths
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: ebproof
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: econlipsum
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1231,22 +2007,52 @@
  - name: eepic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: eforms
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: ekdosis
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: ellipsis
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: embedall
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: embedfile
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1255,14 +2061,34 @@
  - name: embrac
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: emo
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: emoji
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: empheq
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [138]
    tests: true
    updated: 2024-07-14
@@ -1270,6 +2096,7 @@
  - name: endfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1277,23 +2104,52 @@
 
  - name: endnotes
    type: package
+   status: partially-compatible
+   comments: "Does not error but `\\endnote`s are not tagged as \<Note\>s."
+   issues: [135]
+   tests: true
+   updated: 2024-07-17
+
+ - name: endnotesj
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
+
+ - name: engord
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: enotez
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: enparen
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: enumerate
    type: package
    status: currently-incompatible
+   priority: 2
    references: [1]
    updated: 2024-07-06
 
@@ -1306,17 +2162,28 @@
    issues: [61]
    related-issues: [4]
    updated: 2024-07-06
-   
- - name: epic
+
+ - name: eolgrab
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
+
+ - name: epic
+   status: currently-incompatible
+   priority: 2
+   comments: "Works with pdflatex but not lualatex."
+   issues: [159]
+   tests: true
+   updated: 2024-07-17
 
  - name: epigraph
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1329,6 +2196,24 @@
    issues:
    updated: 2024-07-07
 
+ - name: epstopdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: eqparbox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: erewhon
    type: package
    status: compatible
@@ -1339,6 +2224,7 @@
  - name: esint
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1347,6 +2233,7 @@
  - name: eso-pic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1362,10 +2249,20 @@
  - name: ethiop
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: etoc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: etoolbox
    type: package
@@ -1396,6 +2293,13 @@
    tests: false
    updated: 2024-07-14
 
+ - name: euler-math
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: eulervm
    type: package
    status: compatible
@@ -1409,6 +2313,15 @@
    status: compatible
    issues:
    updated: 2024-07-06
+
+ - name: expex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: exscale
    type: package
@@ -1426,6 +2339,7 @@
  - name: extarrows
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1434,10 +2348,21 @@
  - name: extdash
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: extramarks
+   ctan-pkg: fancyhdr
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ FFF ----------------------------
 
@@ -1457,9 +2382,19 @@
    tests: false
    updated: 2024-07-13
 
+ - name: faktor
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: fancybox
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1475,6 +2410,7 @@
  - name: fancypar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1483,6 +2419,7 @@
  - name: fancyvrb
    type: package
    status: currently-incompatible
+   priority: 2
    references: [1]
    tasks: needs tests
    updated: 2024-07-06
@@ -1494,35 +2431,114 @@
    tests: false
    updated: 2024-07-14
 
- - name: fcolumn
+ - name: fbox
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-14
+   updated: 2024-07-18
+
+ - name: fcolumn
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [161]
+   tests: true
+   updated: 2024-07-16
+
+ - name: fdsymbol
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: fewerfloatpages
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: fibnum
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: figcaps
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: filecontentsdef
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: filemod
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: firamath-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: fitbox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: fitch
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: fix-cm
    type: package
    status: compatible
    issues:
    updated: 2024-07-06
+
+ - name: fixfoot
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-22
 
  - name: fixltx2e
    type: package
@@ -1533,11 +2549,12 @@
 
  - name: fixme
    type: package
-   status: compatible
-   comments: only very basic test, but that test works
+   status: unknown
+   priority: 2
    issues:
-   tests: true
-   updated: 2024-07-20
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-14
 
  - name: flafter
    ctan-pkg: latex-base
@@ -1549,19 +2566,66 @@
  - name: flexisym
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: flippdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: float
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "[H] floats are not yet automatically tagged."
    references: [2]
    tasks: needs tests
    updated: 2024-07-06
+   
+ - name: floatpag
+   type: package
+   status: currently-incompatible
+   priority: 2
+   comments: "redefines \\@xfloat"
+   issues: [209]
+   tests: true
+   updated: 2024-07-19
+   
+ - name: floatflt
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
+ - name: floatrow
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: flowfram
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+   
  - name: fltrace
    ctan-pkg: latex-base
    type: package
@@ -1569,21 +2633,86 @@
    issues:
    updated: 2024-07-06
 
+ - name: flushend
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: fmtcount
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: fnbreak
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: fncychap
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: fncylab
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: fnlineno
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: fnpct
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: fnpos
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: fnumprint
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: fontawesome5
    type: package
@@ -1605,11 +2734,28 @@
    issues:
    updated: 2024-07-06
 
+ - name: fontsetup
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: fontspec
    type: package
    status: compatible
    issues:
    updated: 2024-07-12
+
+ - name: fonttable
+   type: package
+   status: currently-incompatible
+   priority: 9
+   issues: [224]
+   tests: true
+   updated: 2024-07-23
 
  - name: footmisc
    type: package
@@ -1622,17 +2768,62 @@
  - name: footnote
    type: package
    status: unknown
+   priority: 2
    tasks: needs tests
    comments: To be supported or not?
    updated: 2024-07-06
 
+ - name: footnotebackref
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: footnotehyper
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: footnoterange
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: footnpag
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: forest
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: forum
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: fourier
    ctan-pkg: fourier
@@ -1650,10 +2841,35 @@
    tests: false
    updated: 2024-07-14
 
+ - name: fourier-otf
+   ctan-pkg: erewhon-math
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: fouriernc
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: framed
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: french
    ctan-pkg: e-french
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1662,14 +2878,25 @@
  - name: frenchle
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: froufrou
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: ftnright
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [110]
    tests: true
    updated: 2024-07-11
@@ -1677,6 +2904,7 @@
  - name: fvextra
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1685,6 +2913,7 @@
  - name: fwlw
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1708,6 +2937,13 @@
    tests: false
    updated: 2024-07-13
 
+ - name: Gudea
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: gandhi
    type: package
    status: compatible
@@ -1730,6 +2966,38 @@
    tests: false
    updated: 2024-07-14
 
+ - name: gb4e
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: gelasio
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: gelasiomath
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: gensymb
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-23
+
  - name: gentium
    type: package
    status: compatible
@@ -1737,12 +3005,30 @@
    tests: false
    updated: 2024-07-14
 
+ - name: gentombow
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: geometry
    type: package
    status: compatible
    comments: tagging of rules (showframe, crop marks) untested
    tasks: needs further tests
    updated: 2024-07-06
+
+ - name: gettitlestring
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: gfsartemisia
    type: package
@@ -1816,6 +3102,15 @@
    tests: false
    updated: 2024-07-14
 
+ - name: ghsystem
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: gillius
    type: package
    status: compatible
@@ -1831,6 +3126,33 @@
    tests: false
    updated: 2024-07-14
 
+ - name: gincltex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: gindex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: gitinfo-lua
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: gitinfo2
    type: package
    status: compatible
@@ -1841,10 +3163,20 @@
  - name: glossaries
    type: package
    status: unknown
+   priority: 2
    comments: An old issue appears to be fixed.
    tasks: needs tests
    issues: [48]
    updated: 2024-07-06
+
+ - name: grabbox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: graphics
    type: package
@@ -1875,10 +3207,29 @@
    tests: true
    updated: 2024-07-08
 
+ - name: grfext
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: gridset
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: grmath
    ctan-pkg: babel-greek
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1886,9 +3237,26 @@
 
 #------------------------ HHH ----------------------------
 
+ - name: HindMadurai
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: hanging
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: har2nat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1897,6 +3265,7 @@
  - name: harvard
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1910,10 +3279,18 @@
    tests: false
    updated: 2024-07-14
 
+ - name: heros-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: hetarom
    ctan-pkg: xymtex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -1929,6 +3306,7 @@
  - name: hhline
    type: package
    status: currently-incompatible
+   priority: 2
    comments: breaks with errors
    supported-through: [phase-III,table]
    tasks: needs further tests
@@ -1939,6 +3317,7 @@
  - name: hologo
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -1947,10 +3326,83 @@
  - name: hvfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: hvindex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hvlogos
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hypbmsec
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hypcap
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hypdestopt
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hypdoc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hypdvips
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hyperbar
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: hyperref
    type: package
@@ -1966,6 +3418,33 @@
               handled by the kernel code."
    issues:
    updated: 2024-07-07
+
+ - name: hypgotoe
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hyphenat
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: hyphsubst
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ III ----------------------------
 
@@ -1985,6 +3464,13 @@
    tests: false
    updated: 2024-07-13
 
+ - name: ibarra
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: ifetex
    type: package
    status: compatible
@@ -1992,9 +3478,19 @@
    tests: false
    updated: 2024-07-15
 
+ - name: ifdraft
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: iflang
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2006,6 +3502,22 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: ifoddpage
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-22
+
+ - name: ifplatform
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: ifptex
    type: package
@@ -2048,12 +3560,37 @@
    tests: false
    updated: 2024-07-15
 
+ - name: import
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: incgraph
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: inconsolata
    type: package
    status: compatible
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: inconsolata-nerd-font
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: indentfirst
    type: package
@@ -2064,6 +3601,7 @@
  - name: index
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2072,6 +3610,7 @@
  - name: indxcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2083,13 +3622,39 @@
    issues:
    updated: 2024-07-06
 
+ - name: intcalc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: inter
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: interval
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: intopdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: iwona
    type: package
@@ -2098,19 +3663,51 @@
    tests: false
    updated: 2024-07-15
 
+ - name: iwonamath
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ JJJ ----------------------------
 
  - name: jmb
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: josefin
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-18
+
+ - name: junicode
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: junicodevf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: jurabib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2118,6 +3715,15 @@
 
 
 #------------------------ KKK ----------------------------
+
+ - name: kanbun
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: kantlipsum
    type: package
@@ -2129,10 +3735,20 @@
  - name: keyfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: keystroke
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: keyval
    type: package
@@ -2143,6 +3759,7 @@
  - name: keyvaltable
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2152,6 +3769,7 @@
    ctan-pkg: cjk-ko
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2208,6 +3826,14 @@
    tests: false
    updated: 2024-07-13
 
+ - name: LobsterTwo
+   ctan-pkg: lobster2
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: l3sys-query
    type: package
    status: compatible
@@ -2215,12 +3841,30 @@
    tests: true
    updated: 2024-07-08
 
+ - name: labelschanged
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: lastpage
    type: package
    status: compatible
    issues:
    updated: 2024-07-12
-   
+
+ - name: latex2pydata
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: latexrelease
    type: package
    status: partially-compatible
@@ -2246,6 +3890,7 @@
  - name: layout
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [111]
    tests: true
    updated: 2024-07-11
@@ -2253,18 +3898,71 @@
  - name: layouts
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: leftidx
+   type: package
+   status: compatible
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   issues:
+   tests: true
+   updated: 2024-07-23
+
+ - name: leftindex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: lete-sans-math
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: letterspace
+   ctan-pkg: microtype
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: letterswitharrows
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: lettrine
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: lexend
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: libertine
    type: package
@@ -2279,6 +3977,22 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: libertinus-otf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: libertinust1math
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: librebaskerville
    type: package
@@ -2301,13 +4015,31 @@
    tests: false
    updated: 2024-07-15
 
+ - name: linebreaker
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-23
+
  - name: lineno
    type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [162,210]
+   tests: true
+   comments: "loses linenumbers and doesn't tag line numbers" 
+   tasks: needs tests
+   updated: 2024-07-19
+
+ - name: linguex
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
 
  - name: linguisticspro
    type: package
@@ -2320,17 +4052,37 @@
    type: package
    status: compatible
    issues:
+   tests: false
    updated: 2024-07-06
 
  - name: listings
    type: package
    status: currently-incompatible
+   priority: 2
    comments: See definition in tagpdfdocu-patches.sty.
    references: [1]
    issues: [70]
    related-issues: [41]
    tests: true
    updated: 2024-07-12
+
+ - name: listliketab
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: listofitems
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: literat
    ctan-pkg: literaturnaya
@@ -2347,6 +4099,24 @@
    tests: false
    updated: 2024-07-15
 
+ - name: logix
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: longdivision
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: longtable
    type: package
    status: partially-compatible
@@ -2356,52 +4126,128 @@
    related-issues: [38]
    updated: 2024-07-06
 
+ - name: lpic
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: lscape
    type: package
    status: unknown
+   priority: 2
    issues:
    tasks: needs tests
    updated: 2024-07-06
 
  - name: ltablex
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   priority: 2
+   issues: [163]
+   tests: true
+   updated: 2024-07-17
 
  - name: ltcaption
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
- - name: ltxtable
+ - name: ltxgrid
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: ltxtable
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [164]
+   tests: true
+   updated: 2024-07-17
 
  - name: lua-check-hyphen
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: lua-typo
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: lua-ul
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: lua-widow-control
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: luacode
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: lualatex-math
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: luamathalign
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: luamesh
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: luamplib
    type: package
@@ -2413,6 +4259,7 @@
  - name: luapstricks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2421,9 +4268,44 @@
  - name: luatexja
    type: package
    status: currently-incompatible
+   priority: 2
    comments: overwrites tabular/array commands
    issues: [87]
    updated: 2024-07-06
+
+ - name: luatexko
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: luatodonotes
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: luavlna
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: lucida-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: lucidabr
    type: package
@@ -2442,20 +4324,63 @@
  - name: lwarp
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: lxfonts
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: lyluatex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ MMM ----------------------------
+
+ - name: Magra
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: MnSymbol
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: magaz
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: magicnum
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: makeidx
    type: package
@@ -2467,6 +4392,7 @@
  - name: manyfoot
    type: package
    status: unknown
+   priority: 2
    tasks: needs tests
    comments: To be supported or not?
    updated: 2024-07-06
@@ -2480,11 +4406,20 @@
 
  - name: marginnote
    type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [165]
+   tests: true
+   updated: 2024-07-17
+
+ - name: markdown
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
 
  - name: marvosym
    type: package
@@ -2493,17 +4428,46 @@
    tests: false
    updated: 2024-07-15
 
+ - name: mathabx
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: mathalpha
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: mathastext
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: mathdesign
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: mathdots
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2543,6 +4507,7 @@
  - name: mathrsfs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2550,21 +4515,35 @@
 
  - name: mathtools
    type: package
-   status: unknown
-   tasks: needs tests
-   updated: 2024-07-06
+   status: partially-compatible
+   supported-through: [phase-III,math]
+   comments: "`mathic` key produces errors. Use of math tagging currently requires support from external tools."
+   issues: [139]
+   tests: true
+   updated: 2024-07-22
 
  - name: mattens
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: mcaption
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: mcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2573,6 +4552,7 @@
  - name: mciteplus
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2585,12 +4565,93 @@
    issues: [73]
    updated: 2024-07-06
 
+ - name: mdsymbol
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: media9
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: memoize
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: mercatormap
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: menukeys
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: merriweather
    type: package
    status: compatible
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: metalogo
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: metalogox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: mfirstuc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: mhchem
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: miama
    type: package
@@ -2606,13 +4667,39 @@
    issues: [67]
    updated: 2024-07-06
 
- - name: minted
+ - name: midpage
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-17
+   updated: 2024-07-18
+
+ - name: minibox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: minitoc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: minted
+   type: package
+   status: currently-incompatible
+   priority: 2
+   comments: Structural warnings and automatic begin / end mismatch errors.
+   updated: 2024-07-18
 
  - name: mintspirit
    type: package
@@ -2632,14 +4719,23 @@
  - name: mleftright
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: mlmodern
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: montex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2655,6 +4751,7 @@
  - name: moreverb
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2670,6 +4767,7 @@
  - name: mparhack
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2678,6 +4776,7 @@
  - name: multiaudience
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2686,6 +4785,7 @@
  - name: multibib
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2701,14 +4801,44 @@
  - name: multicolrule
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: multido
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: multiexpand
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: multimedia
+   ctan-pkg: beamer
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: multirow
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2717,10 +4847,29 @@
  - name: multitoc
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: musixtex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: mwe
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: mweights
    type: package
@@ -2731,9 +4880,19 @@
 
 #------------------------ NNN ----------------------------
 
+ - name: nameauth
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: named
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2749,6 +4908,7 @@
  - name: nar
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2762,14 +4922,25 @@
  - name: nature
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: navigator
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: nccfoots
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2778,6 +4949,7 @@
  - name: needspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2786,6 +4958,7 @@
  - name: newapa
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2800,18 +4973,36 @@
    tests: false
    updated: 2024-07-15
 
+ - name: newcomputermodern
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: newfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: newproof
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: newpxmath
    ctan-pkg: newpx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2820,6 +5011,7 @@
  - name: newpx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2836,6 +5028,7 @@
  - name: newtx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2845,6 +5038,7 @@
    ctan-pkg: newtx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2858,9 +5052,35 @@
    tests: false
    updated: 2024-07-15
 
+ - name: newtxsf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: newtxtt
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: newunicodechar
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: newverbs
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2873,15 +5093,51 @@
    tests: false
    updated: 2024-07-15
 
+ - name: niceframe
+   type: package
+   status: currently-incompatible
+   priority: 9
+   issues: [220]
+   tests: true
+   updated: 2024-07-23
+
+ - name: nicematrix
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [179]
+   tests: true
+   updated: 2024-07-17
+
+ - name: nidanfloat
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: nolbreaks
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: nomencl
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: nonumonpart
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2889,6 +5145,7 @@
 
  - name: nopageno
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2927,6 +5184,7 @@
 
  - name: notoccite
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2951,27 +5209,108 @@
 
  - name: notomath
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: nth
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: ntheorem
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: numerica
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: numerica-plus
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: numerica-tables
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: numspell
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: nunito
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+#------------------------ OOO ----------------------------
+
+ - name: OldStandard
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-13
+
+ - name: Oswald
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: ocgx2
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: odsfile
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: old-arrows
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -2979,17 +5318,35 @@
 
  - name: onepagem
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: opensans
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: optional
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: orcidlink
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: oscola
    type: package
@@ -3001,6 +5358,7 @@
 
  - name: oubraces
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3015,22 +5373,20 @@
 
  - name: overpic
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
-#------------------------ OOO ----------------------------
+#------------------------ PPP ----------------------------
 
- - name: OldStandard
+ - name: PoiretOne
    type: package
    status: compatible
    issues:
    tests: false
-   updated: 2024-07-13
-
-
-#------------------------ PPP ----------------------------
+   updated: 2024-07-21
 
  - name: PTMono
    ctan-pkg: paratype
@@ -3080,6 +5436,14 @@
    tests: false
    updated: 2024-07-13
 
+ - name: Play
+   ctan-pkg: play-font
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: PlayfairDisplay
    ctan-pkg: playfair
    type: package
@@ -3088,9 +5452,214 @@
    tests: false
    updated: 2024-07-13
 
+ - name: pagecolor
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pagegrid
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pagenote
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pagesel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pagella-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: pageslts
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: paracol
+   type: package
+   status: currently-incompatible
+   priority: 9
+   issues: [227]
+   tests: true
+   updated: 2024-07-23
+
+ - name: paralist
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: parallel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: parcolumns
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: parnotes
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: parskip
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pbalance
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfcol
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfcolfoot
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfcolparallel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfcolparcolumns
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfcomment
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfescape
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfmarginpar
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfmsym
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfoverlay
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdfrender
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: pdfpages
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Creates duplicated structures as graphics are processed more than once in trial
              typesetting. Correct tagging of multipage includes unclear."
    tasks: needs tests
@@ -3105,9 +5674,56 @@
    issues:
    updated: 2024-07-07
 
+ - name: perltex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: perpage
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pfnote
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pgfmorepages
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pgfpages
+   ctan-pkg: pgf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: pgfplots
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Relies on tikz so compatibility will come with that of tikz."
    tests: false
    updated: 2024-07-16
@@ -3115,27 +5731,259 @@
  - name: pgfplotstable
    type: package
    status: compatible
+   supported-through: [phase-III,table]
    comments: "Table tagging is correct but any interaction with pgfplots
               is not yet supported."
    tests: true
    updated: 2024-07-16
 
+ - name: phonenumbers
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: piano
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: picins
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pict2e
+   type: package
+   status: compatible
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-07-23
+
+ - name: picture
+   type: package
+   status: compatible
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-07-23
+
+ - name: pifont
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: piton
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: placeins
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: plex-mono
+   ctan-pkg: plex
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: plex-sans
+   ctan-pkg: plex
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: plex-serif
+   ctan-pkg: plex
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: pmboxdraw
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: polyglossia
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-17
 
+ - name: postnotes
+   type: package
+   status: partially-compatible
+   priority: 9
+   comments: "Does not error but `\\postnote`s are not tagged as \<Note\>s."
+   issues:
+   tests: true
+   updated: 2024-07-23
+
+ - name: prelim2e
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: preview
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: prftree
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: prooftrees
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: psfrag
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pst-pdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pst2pdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: pstricks
    type: package
    status: currently-incompatible
+   priority: 2
    comments: "Tagging passes validation but is suboptimal. Future compatibility
               will only be with lualatex; dvips cannot properly support PDF/UA."
    issues:
    tests: true
    updated: 2024-07-12
+
+ - name: pxpic
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pyluatex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pythontex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+#------------------------ QQQ ----------------------------
+
+ - name: qrcode
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: quattrocento
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: quotchap
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ RRR ----------------------------
 
@@ -3149,6 +5997,7 @@
  - name: ragged2e
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3161,9 +6010,19 @@
    tests: false
    updated: 2024-07-15
 
+ - name: realboxes
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: realscripts
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3172,6 +6031,7 @@
  - name: refcheck
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3180,22 +6040,52 @@
  - name: refcount
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-17
 
+ - name: refstyle
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: regexpatch
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: reledmac
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: reledpar
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: relsize
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3204,18 +6094,47 @@
  - name: repeatindex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: repltext
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: rerunfilecheck
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: resizegather
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: returntogrid
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: roboto
    type: package
@@ -3235,23 +6154,53 @@
  - name: rotating
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [112]
    tests: true
    updated: 2024-07-11
 
+ - name: rotchiffre
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: rotfloat
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: rotpages
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ SSS ----------------------------
+
+ - name: sansmath
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: savetrees
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3260,14 +6209,48 @@
  - name: scalefnt
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: scalerel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: schola-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: scholax
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: scontents
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: scrextend
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3276,6 +6259,25 @@
  - name: scrlayer
    type: package
    status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
+ - name: scrlayer-fancyhdr
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-17
+
+ - name: scrlayer-notecolumn
+   type: package
+   status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3284,28 +6286,113 @@
  - name: scrletter
    type: package
    status: unknown
+   priority: 9
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrlayer-scrpage
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: secdot
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: sectionbreak
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: sectsty
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: selectp
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: selinput
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: selnolig
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: sepfootnotes
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: setouterhbox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: setspace
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: settobox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: shadethm
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Obsolete package; tcolorbox recommended.
    issues:
    tests: true
@@ -3314,10 +6401,20 @@
  - name: shadow
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: shapepar
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: shellesc
    type: package
@@ -3332,9 +6429,28 @@
    tests: true
    updated: 2024-07-08
 
+ - name: showexpl
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: showframe
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: showhyphenation
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3344,6 +6460,7 @@
    ctan-pkg: latex-base
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [115]
    tests: true
    updated: 2024-07-11
@@ -3360,6 +6477,7 @@
  - name: showtags
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3368,6 +6486,7 @@
  - name: sidecap
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3375,23 +6494,43 @@
 
  - name: sillypage
    type: package
+   status: partially-compatible
+   comments: "Images are missing alt text."
+   issues:
+   tests: true
+   updated: 2024-07-18
+
+ - name: simpleicons
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
 
  - name: siunitx
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: slashed
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: snapshot
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3400,6 +6539,7 @@
  - name: snotez
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3407,19 +6547,28 @@
 
  - name: soul
    type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [167]
+   tests: true
+   updated: 2024-07-17
+
+ - name: soulpos
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
 
  - name: soulutf8
    type: package
-   status: unknown
+   status: no-support
+   comments: "This package is obsolete. Use the soul package directly."
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-17
 
  - name: sourcecodepro
    type: package
@@ -3442,6 +6591,32 @@
    tests: false
    updated: 2024-07-15
 
+ - name: spark-otf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: spectral
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: splitidx
+   ctan-pkg: splitindex
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: spreadtab
    type: package
    status: compatible
@@ -3452,15 +6627,68 @@
 
  - name: spverbatim
    type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [168]
+   tests: true
+   updated: 2024-07-17
+
+ - name: stackengine
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: stackrel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: stampinclude
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: standardsectioning
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: steinmetz
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: step
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
 
  - name: stfloats
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3489,6 +6717,24 @@
    tests: false
    updated: 2024-07-15
 
+ - name: storebox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: stringenc
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: structuredlog
    type: package
    status: compatible
@@ -3498,6 +6744,7 @@
  - name: subcaption
    type: package
    status: currently-incompatible
+   priority: 2
    comments:  Issue when hyperref and both listoffigures are used.
    issues: [85]
    updated: 2024-07-06
@@ -3505,34 +6752,82 @@
  - name: subdepth
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: subeqn
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: subfig
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
- - name: supertabular
+ - name: subfiles
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: superiors
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: supertabular
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [169]
+   tests: true
+   updated: 2024-07-17
+
+ - name: svg
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: svn-multi
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: systeme
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ TTT ----------------------------
 
@@ -3543,17 +6838,49 @@
    tests: false
    updated: 2024-07-13
 
- - name: tabls
+ - name: TheanoModern
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: TheanoOldStyle
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: tablefootnote
+   type: package
+   status: compatible
+   supported-through: [phase-III,table]
+   issues:
+   tests: true
+   updated: 2024-07-16
+
+ - name: tableof
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: tabls
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [171]
+   tests: true
+   updated: 2024-07-17
 
  - name: tabto
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3591,6 +6918,14 @@
    tests: true
    updated: 2024-07-16
 
+ - name: tabularray
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [177]
+   tests: true
+   updated: 2024-07-17
+
  - name: tabularx
    type: package
    status: compatible
@@ -3610,6 +6945,7 @@
  - name: tagging
    type: package
    status: unknown
+   priority: 2
    comments: This package allows conditional typesetting, i.e., tagging here means that the LaTeX source has labeled regions that you can include or exclude.
    issues:
    tests: false
@@ -3619,6 +6955,7 @@
  - name: tasks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3632,6 +6969,15 @@
    tasks: needs further tests
    updated: 2024-07-06
 
+ - name: telprint
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: tempora
    type: package
    status: compatible
@@ -3639,17 +6985,71 @@
    tests: false
    updated: 2024-07-15
 
+ - name: tensind
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: tensor
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: termes-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: tex-locale
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: tex4ebook
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: tex4ht
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: texosquery
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: textcase
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3662,9 +7062,19 @@
    issues:
    updated: 2024-07-07
 
+ - name: textgreek
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: textpos
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3737,21 +7147,32 @@
  - name: theorem
    type: package
    status: currently-incompatible
+   priority: 2
    issues:
    tests: true
    updated: 2024-07-10
 
- - name: thmbox
+ - name: thepdfnumber
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: thmbox
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [172]
+   tests: true
+   updated: 2024-07-17
 
  - name: thmtools
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3759,35 +7180,57 @@
 
  - name: threeparttable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   priority: 2
+   issues: [173]
+   tests: true
+   updated: 2024-07-17
 
  - name: threeparttablex
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: thumbpdf
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: thumbs
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: tikz
    type: package
    status: currently-incompatible
+   priority: 2
    references: [2]
    updated: 2024-07-06
 
  - name: tikz-cd
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [30]
    updated: 2024-07-06
 
  - name: tikzducks
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3796,6 +7239,7 @@
  - name: tikzlings
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3819,6 +7263,7 @@
  - name: tipa
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3831,15 +7276,26 @@
    tests: true
    updated: 2024-07-12
 
+ - name: titleref
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: titlesec
    type: package
    status: currently-incompatible
+   priority: 2
    issues: [24]
    updated: 2024-07-06
 
  - name: titletoc
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Mentioned in issue.
    issues: [24]
    updated: 2024-07-06
@@ -3847,6 +7303,7 @@
  - name: titling
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3855,6 +7312,7 @@
  - name: tocbasic
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3863,6 +7321,7 @@
  - name: tocbibind
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3871,6 +7330,7 @@
  - name: tocdata
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3879,6 +7339,7 @@
  - name: tocloft
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Packages attempts to redefine `\@starttoc`and fails.
    issues: [74]
    tests: true
@@ -3887,6 +7348,7 @@
  - name: tocstyle
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3895,6 +7357,7 @@
  - name: tocvsec2
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3903,10 +7366,27 @@
  - name: todonotes
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: topcapt
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-21
+
+ - name: totalcount
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: trace
    type: package
@@ -3921,9 +7401,19 @@
    issues:
    updated: 2024-07-06
 
+ - name: tracklang
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: transparent
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -3938,6 +7428,7 @@
  - name: truncate
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3946,10 +7437,20 @@
  - name: turnthepage
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: twemojis
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: txfonts
    type: package
@@ -3962,6 +7463,7 @@
  - name: typearea
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3969,17 +7471,18 @@
 
  - name: typed-checklist
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   priority: 2
+   issues: [174]
+   tests: true
+   updated: 2024-07-17
 
 #------------------------ UUU ----------------------------
 
  - name: ulem
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3988,6 +7491,7 @@
  - name: underoverlap
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -3996,6 +7500,7 @@
  - name: underscore
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4009,11 +7514,20 @@
 
  - name: unicodefonttable
    type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [175]
+   tests: true
+   updated: 2024-07-17
+
+ - name: uniquecounter
+   type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
 
  - name: universalis
    type: package
@@ -4022,9 +7536,19 @@
    tests: false
    updated: 2024-07-15
 
+ - name: unravel
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: upquote
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4033,6 +7557,7 @@
  - name: upref
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4041,6 +7566,7 @@
  - name: uri
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4056,6 +7582,7 @@
  - name: urlbst
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4080,6 +7607,7 @@
  - name: varwidth
    type: package
    status: currently-incompatible
+   priority: 2
    comments: Tagging structure looks ok, but the formatting is wrong when the tagging code is used.
    issues: [71]
    tasks: adjustments in block code needed?
@@ -4088,10 +7616,21 @@
 
  - name: verbatim
    type: package
+   status: partially-compatible
+   comments: "verbatim environment from package overwritten by tagging code;
+             content input with `\\verbatiminput` is tagged as normal text, not Code."
+   issues: [156]
+   tests: true
+   updated: 2024-07-17
+
+ - name: verbdef
+   type: package
    status: unknown
+   priority: 9
    issues:
+   tests: false
    tasks: needs tests
-   updated: 2024-07-06
+   updated: 2024-07-18
 
  - name: verse
    type: package
@@ -4104,20 +7643,48 @@
  - name: version
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: versonotes
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: vertbars
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: vwcol
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ WWW ----------------------------
+
+ - name: warpcol
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [186]
+   tests: true
+   updated: 2024-07-17
 
  - name: wasysym
    type: package
@@ -4128,11 +7695,11 @@
 
  - name: widetable
    type: package
-   status: unknown
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   status: currently-incompatible
+   priority: 2
+   issues: [176]
+   tests: true
+   updated: 2024-07-17
 
  - name: widows-and-orphans
    type: package
@@ -4141,13 +7708,50 @@
    tests: false
    updated: 2024-07-15
 
+ - name: witharrows
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: wordcloud
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: wrapfig
    type: package
    status: currently-incompatible
+   priority: 2
    comments: generated tagging structure is incorrect
    issues: [40]
    tests: true
    updated: 2024-07-10
+
+ - name: wrapfig2
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: wrapstuff
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ XXX ----------------------------
 
@@ -4158,9 +7762,18 @@
    tests: false
    updated: 2024-07-13
 
+ - name: xcharter-otf
+   ctan-pkg: xcharter-math
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
  - name: xcite
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4175,6 +7788,7 @@
  - name: xcoffins
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
@@ -4183,34 +7797,117 @@
  - name: xcomment
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
- - name: xfrac
+ - name: xecjk
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: xetexko
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xevlna
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xfakebold
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xfrac
+   type: package
+   status: compatible
+   issues:
+   tests: true
+   updated: 2024-07-18
 
  - name: xgreek
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-15
 
- - name: xltabular
+ - name: xhfill
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
-   updated: 2024-07-15
+   updated: 2024-07-18
+
+ - name: xint
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xistercian
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xkeyval
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xlop
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xltabular
+   type: package
+   status: currently-incompatible
+   priority: 2
+   supported-through: [phase-III,firstaid]
+   issues: [170]
+   tests: true
+   updated: 2024-07-17
 
  - name: xparse
    type: package
@@ -4218,6 +7915,33 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: xpatch
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xpiano
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xpinyin
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: xr
    type: package
@@ -4232,12 +7956,47 @@
    issues:
    updated: 2024-07-10
 
+ - name: xsavebox
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xsim
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: xspace
    type: package
    status: compatible
    issues:
    tests: true
    updated: 2024-07-08
+
+ - name: xstring
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: xtab
+   type: package
+   status: currently-incompatible
+   priority: 2
+   issues: [183]
+   tests: true
+   updated: 2024-07-17
 
  - name: xtemplate
    type: package
@@ -4246,10 +8005,20 @@
    tests: false
    updated: 2024-07-15
 
+ - name: xurl
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
  - name: xy
    ctan-pkg: xypic
    type: package
    status: unknown
+   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4264,7 +8033,32 @@
    tests: false
    updated: 2024-07-15
 
+ - name: yfonts-otf
+   type: package
+   status: compatible
+   issues:
+   tests: false
+   updated: 2024-07-21
+
+ - name: yhmath
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ ZZZ ----------------------------
+
+ - name: zhnumber
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: zlmtt
    type: package
@@ -4276,17 +8070,53 @@
  - name: zref
    type: package
    status: unknown
+   priority: 9
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-17
 
+ - name: zref-check
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: zref-clever
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: zref-vario
+   type: package
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 
 
 #-------------------------------- class files -----------------------
 
 #------------------------ AAA ----------------------------
+
+ - name: acmart
+   type: class
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: amsart
    type: class
@@ -4308,6 +8138,7 @@
    ctan-pkg: amscls
    type: class
    status: currently-incompatible
+   priority: 2
    comments: "See some needed adjustments in project example `amsldoc`"
    tasks: needs further tests
    updated: 2024-07-07
@@ -4323,6 +8154,7 @@
  - name: beamer
    type: class
    status: currently-incompatible
+   priority: 2
    updated: 2024-07-07
 
  - name: book
@@ -4331,12 +8163,25 @@
    supported-through: [phase-III,title]
    updated: 2024-07-05
 
+#------------------------ CCC ----------------------------
+
+ - name: combine
+   type: class
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
 #------------------------ EEE ----------------------------
 
  - name: exam
    type: class
    status: unknown
+   priority: 9
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-17
 
@@ -4345,25 +8190,60 @@
  - name: IEEEtran
    type: class
    status: unknown
+   priority: 9
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-17
+
+#------------------------ JJJ ----------------------------
+
+ - name: jlreq
+   type: class
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ KKK ----------------------------
 
 #------------------------ LLL ----------------------------
 
+ - name: leaflet
+   type: class
+   status: currently-incompatible
+   priority: 2
+   issues: [239]
+   tests: true
+   updated: 2024-07-23
+
  - name: letter
    type: class
    status: unknown
+   priority: 2
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-06
+
+ - name: ltugboat
+   ctan-pkg: tugboat
+   type: class
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
  - name: ltxdoc
    type: class
    status: unknown
+   priority: 9
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-17
 
@@ -4372,9 +8252,33 @@
  - name: memoir
    type: class
    status: currently-incompatible
+   priority: 2
    comments: "Some code showing the needed adjustments can be found in the 
               [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
    updated: 2024-07-05
+
+#------------------------ NNN ----------------------------
+
+ - name: novel
+   type: class
+   status: unknown
+   priority: 2
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-06
+
+#------------------------ OOO ----------------------------
+
+ - name: oblivoir
+   ctan-pkg: kotex-oblivoir
+   type: class
+   status: unknown
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
 
 #------------------------ PPP ----------------------------
 
@@ -4399,6 +8303,7 @@
    ctan-pkg: revtex
    type: class
    status: unknown
+   priority: 9
    issues:
    tasks: needs tests
    updated: 2024-07-17
@@ -4408,30 +8313,35 @@
  - name: scrartcl
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrbook
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrlttr2
    type: class
    status: unknown
+   priority: 9
    related-issues: [88]
    updated: 2024-07-10
 
  - name: scrreport
    type: class
    status: currently-incompatible
+   priority: 2
    related-issues: [88]
    updated: 2024-07-10
 
  - name: standalone
    type: class
    status: unknown
+   priority: 9
    issues:
    tasks: needs tests
    updated: 2024-07-17

@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage{tablefootnote}
+
+\title{tablefootnote tagging test}
+
+\begin{document}
+
+Some text\footnote{A normal footnote}
+
+\begin{table}
+\centering
+\begin{tabular}{ccc}
+Another\tablefootnote{A table footnote.} & %
+text\tablefootnote{Another table footnote.} & %
+in a table\tablefootnote{A third table footnote.}
+\end{tabular}
+\caption[A footnotesymbol table]{%
+A table with footnote-symbol-footnotes.\label{tab.symbol}}
+\end{table}
+
+Some more text\footnote{Another normal footnote}
+\end{document}

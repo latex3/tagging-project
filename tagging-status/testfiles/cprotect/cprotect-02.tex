@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{cprotect}
+
+\begin{document}
+
+% this fails
+$\cprotect\sqrt{\verb!abc!}$
+
+% as does this
+\[
+\cprotect[om]\sqrt[\verb-%c-]{\cprotect[mm]\frac{\verb-%a-}{\verb-%b-}}
+\]
+
+\end{document}
