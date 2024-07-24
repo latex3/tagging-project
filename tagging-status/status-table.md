@@ -23,7 +23,11 @@ Click on the column headings to sort the table by the chosen column.
 <td class="{{p.status}}"><a href="https://ctan.org/pkg/
 {%- if p.ctan-pkg -%}{{p.ctan-pkg}}{%- else -%}{{p.name}}{%- endif -%}
 ">{{p.name}}</a></td>
-<td class="{{p.status}}"{% if p.status == "partially-compatible" %} sorttable_customkey="compatible-partial"{% endif %}>{{p.status}}</td>
+<td class="{{p.status}}"  sorttable_customkey="
+{%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
+">{{p.status}}
+{%- if p.priority%}<sub>{{p.priority}}</sub>{% endif -%}
+</td>
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
