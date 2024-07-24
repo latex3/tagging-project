@@ -3361,12 +3361,14 @@
 
  - name: hypcap
    type: package
-   status: unknown
+   status: currently-incompatible
    priority: 9
+   comments: "The tagging code already moves anchors to the top of floats
+              so this package is unnecessary. Errors if given option
+              `figure`, `table`, etc."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-21
 
  - name: hypdestopt
    type: package
