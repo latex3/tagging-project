@@ -17,16 +17,27 @@ td.date {white-space: nowrap;font-size:90%;}
 
 # Tagging Status of LaTeX Packages and Classes
 
-This file shows the status of **{{site.data.tagging-status | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
+{% assign t-s = "" | split: "" %}
+{% for p in site.data.tagging-status %}
+{% if p.priority < 5
+or p.status == 'compatible'
+or p.status == 'partially-compatible'
+or p.status == 'no-support'
+%}
+{% assign t-s = t-s | push: p %}
+{% endif %}
+{% endfor %}
+
+This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
 
 The values in the *Status* column have the following meaning:
 
-- `compatible` This package or class works without any issues when tagging is enabled. If there are problems, please open an issue in [the tagging-project repo](https://github.com/latex3/tagging-project/issues). (**{{site.data.tagging-status | where: "status", "compatible" | size }}** entries across all tables)
-- `partially-compatible` The package or class is currently partially compatible, e.g., some parts may not work yet, but with some restrictions it can already be used. See comments for details. (**{{site.data.tagging-status | where: "status", "partially-compatible" | size }}** entries across all tables)
-- `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. (**{{site.data.tagging-status | where: "status", "currently-incompatible" | size }}** entries across all tables)
-- `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported. (**{{site.data.tagging-status | where: "status", "no-support" | size }}** entries across all tables)
-- `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{site.data.tagging-status | where: "status", "unknown" | size }}** entries across all tables)
+- `compatible` This package or class works without any issues when tagging is enabled. If there are problems, please open an issue in [the tagging-project repo](https://github.com/latex3/tagging-project/issues). (**{{t-s | where: "status", "compatible" | size }}** entries across all tables)
+- `partially-compatible` The package or class is currently partially compatible, e.g., some parts may not work yet, but with some restrictions it can already be used. See comments for details. (**{{t-s | where: "status", "partially-compatible" | size }}** entries across all tables)
+- `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. (**{{t-s | where: "status", "currently-incompatible" | size }}** entries across all tables)
+- `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported. (**{{t-s | where: "status", "no-support" | size }}** entries across all tables)
+- `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unknown" | size }}** entries across all tables)
 
 To use packages or classes together with the tagging code it is (nearly) always necessary to load at least `phase-III`of the tagging code, i.e., `testphase=phase-III` in `\DocumentMetadata`. To save space in the tables, this is not explicitly mentioned below. However, if a package or class requires other settings there is an explicit remark in the comments column, e.g., `Tagging support: phase-III, table` which means you have to specify `testphase={phase-III,table}`. If `package` is mentioned at this point it means that the package itself provides the necessary tagging support and not one of the modules in `latex-lab`.
 
@@ -39,7 +50,7 @@ If you encounter a problem with a package or class for which there is no issue i
 
 ## Packages
 
-{% assign xpackages = site.data.tagging-status | where: "type", "package" %}
+{% assign xpackages = t-s | where: "type", "package" %}
 {% assign xpc = xpackages | where: "status", "compatible" %}
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
@@ -61,7 +72,7 @@ The status for the remaining **{{xpu | size }}** packages is `unknown`.
 ## Classes
 
 
-{% assign xpackages = site.data.tagging-status | where: "type", "class" %}
+{% assign xpackages = t-s | where: "type", "class" %}
 {% assign xpc = xpackages | where: "status", "compatible" %}
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
@@ -88,3 +99,4 @@ The status for the remaining **{{xpu | size }}** classes is `unknown`.
 {% for r in site.data.references %}
 <p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
 {% endfor %}
+

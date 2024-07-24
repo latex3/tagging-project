@@ -1,0 +1,56 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Fine-tuning mathematical layout}
+
+\begin{document}
+
+\[
+X = \sum_{\mathclap{1\le i\le j\le n}} X_{ij}
+\]
+
+\begin{equation}\label{eq:mathclap}
+\sum_{\mathclap{a^2<b^2<c}}\qquad
+\sum_{a^2<b^2<c}
+\end{equation}
+
+\begin{equation*}\label{eq:mathclap-b}
+\sum_{\crampedclap{a^2<b^2<c}}
+\tag{\ref{eq:mathclap}*}
+\end{equation*}
+
+\[
+\sum_{\crampedsubstack{a^2<b^2<c}}\qquad
+\sum_{a^2<b^2<c}
+\]
+
+\[
+V = \sum_{1\le i\le j\le n}^{\infty} V_{ij} \quad
+X = \smashoperator{\sum_{1\le i\le j\le n}^{3456}} X_{ij} \quad
+Y = \smashoperator[r]{\sum\limits_{1\le i\le j\le n}} Y_{ij} \quad
+Z = \smashoperator[l]{\mathop{T}_{1\le i\le j\le n}} Z_{ij}
+\]
+
+\[
+\text{a)} \adjustlimits\lim_{n\to\infty} \max_{p\ge n} \quad
+\text{b)} \adjustlimits\lim_{n\to\infty} \max_{p^2\ge n} \quad
+\text{c)} \adjustlimits\lim_{n\to\infty} \sup_{p^2\ge nK} \quad
+\text{d)} \adjustlimits\limsup_{n\to\infty} \max_{p\ge n}
+\]
+
+\noindent\rule\textwidth{1pt}
+\begin{align*} A &= B \end{align*}
+\noindent\rule\textwidth{1pt}
+\begin{align*}
+\SwapAboveDisplaySkip
+A &= B
+\end{align*}
+
+\end{document}
