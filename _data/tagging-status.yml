@@ -2803,12 +2803,13 @@
 
  - name: footnpag
    type: package
-   status: unknown
+   status: partially-compatible
+   priority: 9
+   comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-21
 
  - name: forest
    type: package
