@@ -4,17 +4,18 @@
     pdfversion=2.0,
     pdfstandard=ua-2,
     testphase={phase-III,math,title,table,firstaid},
-    uncompress
   }
 \documentclass{article}
-\usepackage{lineno}
-\usepackage{lipsum}
+\usepackage{niceframe}
 
-\linenumbers
+\title{niceframe tagging test}
+
 \begin{document}
 
-\section{Some heading}
+\niceframe{text}
 
-bla\lipsum[1]
+%\curlyframe{text}
+
+%\artdecoframe{text}
 
 \end{document}
