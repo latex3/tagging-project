@@ -70,8 +70,7 @@ Other:
 </td>
 <td>
 {{p.tasks | markdownify}}
-{%- if p.priority -%}
-{%- if p.tasks -%}<br/>{%- endif -%}
+{%- if p.priority %}
 Priority: {{p.priority}}
 {% endif -%}
 </td>
