@@ -68,7 +68,13 @@ Other:
 <a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
 {% endif %}
 </td>
-<td>{{p.tasks | markdownify}}</td>
+<td>
+{{p.tasks | markdownify}}
+{%- if p.priority -%}
+{%- if p.tasks -%}<br/>{%- endif -%}
+Priority: {{p.priority}}
+{% endif -%}
+</td>
 <td class="date">{{p.updated}}</td>
 </tr>
 {%- endfor -%}

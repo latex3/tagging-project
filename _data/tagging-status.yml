@@ -190,6 +190,7 @@
  - name: afterpage
    type: package
    status: partially-compatible
+   priority: 2
    issues:
    tests: true
    tasks: more tests needed
@@ -290,6 +291,7 @@
  - name: amsbsy
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,math]
    comments: "pmb produces extra tags from typesetting argument three times"
    issues:
@@ -326,6 +328,7 @@
  - name: amsmath
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    references: [1,2]
@@ -737,6 +740,7 @@
  - name: biblatex
    type: package
    status: partially-compatible
+   priority: 2
    comments: "Requires hyperref." 
    references: [2]
    issues: [18]
@@ -746,6 +750,7 @@
  - name: biblatex-chicago
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    tasks:  Package should be changed to use sockets in its footnote adaption
    issues: [62]
@@ -754,6 +759,7 @@
  - name: biblatex-dw
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    issues:
    tests: false
@@ -762,6 +768,7 @@
  - name: biblatex-ext
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    issues:
    tests: false
@@ -770,6 +777,7 @@
  - name: biblatex-juradiss
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    issues:
    tests: false
@@ -778,6 +786,7 @@
  - name: biblatex-trad
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    issues:
    tests: false
@@ -966,6 +975,7 @@
  - name: booktabs
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,firstaid,table]
    comments: requires the firstaid module which contains a fix.
    issues: [69]
@@ -975,6 +985,7 @@
  - name: boxedminipage
    type: package
    status: partially-compatible
+   priority: 2
    comments: "drawn box is tagged as Path instead of artifact"
    issues:
    tests: true
@@ -1440,6 +1451,7 @@
  - name: cleveref
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,firstaid]
    comments: "Partially supported in the firstaid module, but open issue with hyperref (workaround suggested)"
    issues: [2]
@@ -1625,6 +1637,7 @@
  - name: csquotes
    type: package
    status: partially-compatible
+   priority: 2
    comments: "`blockquote` can't be used."
    issues: [3]
    updated: 2024-07-06
@@ -1632,6 +1645,7 @@
  - name: csvsimple
    type: package
    status: partially-compatible
+   priority: 2
    comments: "`\\csvautotabularray` etc. are not supported since tabularray is
              currently incompatible."
    supported-through: [phase-III,table]
@@ -1786,6 +1800,7 @@
  - name: dcolumn
    type: package
    status: partially-compatible
+   priority: 2
    comments: "`d` columns are set as text not math, which is arguably correct, but needs some further evaluation."
    issues:
    tests: true
@@ -2110,6 +2125,7 @@
  - name: endnotes
    type: package
    status: partially-compatible
+   priority: 2
    comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
    issues: [135]
    tests: true
@@ -2161,6 +2177,7 @@
  - name: enumitem
    type: package
    status: partially-compatible
+   priority: 2
    comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one can use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
    references: [1]
@@ -3214,6 +3231,7 @@
  - name: graphpap
    type: package
    status: partially-compatible
+   priority: 2
    comments: tagging passes validation but is sub-optimal
    issues:
    tests: true
@@ -3882,6 +3900,7 @@
  - name: latexrelease
    type: package
    status: partially-compatible
+   priority: 2
    comments: Rolling the LaTeX format too far back will result in the loss of necessary support code for tagging, rolling forward should work.
    issues:
    tasks: determine how far back is possible
@@ -4137,6 +4156,7 @@
  - name: longtable
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,table]
    issues: [22]
    comments: longtables with page breaks works only with luatex
@@ -4533,6 +4553,7 @@
  - name: mathtools
    type: package
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,math]
    comments: "`mathic` key produces errors. Use of math tagging currently requires support from external tools."
    issues: [139]
@@ -5369,6 +5390,7 @@
  - name: oscola
    type: package
    status: partially-compatible
+   priority: 2
    comments: See biblatex.
    issues:
    tests: false
@@ -6486,6 +6508,7 @@
  - name: showkeys
    type: package
    status: partially-compatible
+   priority: 2
    comments: "Rules drawn around labels display as Path in tags and the label in the margin is either not tagged
               at all (pdflatex) or as artifact (lualatex). Unproblematic for a draft, but not UA compatible."
    issues:
@@ -6982,6 +7005,7 @@
  - name: tcolorbox
    type: package
    status: partially-compatible
+   priority: 2
    comments: "Not yet fully supported, but some suggestions in the listed issues"
    issues: [73,88]
    tasks: needs further tests
@@ -7637,6 +7661,7 @@
  - name: verbatim
    type: package
    status: partially-compatible
+   priority: 2
    comments: "verbatim environment from package overwritten by tagging code;
              content input with `\\verbatiminput` is tagged as normal text, not Code."
    issues: [156]
@@ -8143,6 +8168,7 @@
  - name: amsart
    type: class
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm. Used by project example arxiv3"
    tasks: needs further tests
@@ -8151,6 +8177,7 @@
  - name: amsbook
    type: class
    status: partially-compatible
+   priority: 2
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm."
    tasks: needs further tests

@@ -21,7 +21,6 @@ td.date {white-space: nowrap;font-size:90%;}
 {% for p in site.data.tagging-status %}
 {% if p.priority < 5
 or p.status == 'compatible'
-or p.status == 'partially-compatible'
 or p.status == 'no-support'
 %}
 {% assign t-s = t-s | push: p %}
