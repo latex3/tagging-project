@@ -5822,12 +5822,12 @@
 
  - name: pifont
    type: package
-   status: unknown
+   status: partially-compatible
+   comments: "Missing ToUnicode for text symbols. Labels disappear in `dingautolist`."
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-25
 
  - name: piton
    type: package
