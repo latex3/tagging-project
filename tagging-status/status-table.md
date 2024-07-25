@@ -23,7 +23,9 @@ Click on the column headings to sort the table by the chosen column.
 <td class="{{p.status}}"><a href="https://ctan.org/pkg/
 {%- if p.ctan-pkg -%}{{p.ctan-pkg}}{%- else -%}{{p.name}}{%- endif -%}
 ">{{p.name}}</a></td>
-<td class="{{p.status}}"{% if p.status == "partially-compatible" %} sorttable_customkey="compatible-partial"{% endif %}>{{p.status}}</td>
+<td class="{{p.status}}"  sorttable_customkey="
+{%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
+">{{p.status}}</td>
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
@@ -64,7 +66,12 @@ Other:
 <a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
 {% endif %}
 </td>
-<td>{{p.tasks | markdownify}}</td>
+<td>
+{{p.tasks | markdownify}}
+{%- if p.priority and p.status != "compatible"%}
+Priority: {{p.priority}}
+{% endif -%}
+</td>
 <td class="date">{{p.updated}}</td>
 </tr>
 {%- endfor -%}

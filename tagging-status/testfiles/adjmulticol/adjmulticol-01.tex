@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{book}
+
+\usepackage{adjmulticol}
+\usepackage{kantlipsum}
+
+\begin{document}
+
+\kant[1]
+\begin{adjmulticols}{2}{1cm}{-1cm}
+\kant[2-5]
+text\footnote{footnote in adjmulticols}
+\end{adjmulticols}
+\kant[6]
+
+\newpage
+
+% compare with
+\kant[1]
+\begin{multicols}{2}
+\kant[2-5]
+text\footnote{footnote in multicols}
+\end{multicols}
+\kant[6]
+
+\end{document}
