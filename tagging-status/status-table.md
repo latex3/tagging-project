@@ -25,9 +25,7 @@ Click on the column headings to sort the table by the chosen column.
 ">{{p.name}}</a></td>
 <td class="{{p.status}}"  sorttable_customkey="
 {%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
-">{{p.status}}
-{%- if p.priority and p.status != "compatible"%}<sub>{{p.priority}}</sub>{% endif -%}
-</td>
+">{{p.status}}</td>
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
