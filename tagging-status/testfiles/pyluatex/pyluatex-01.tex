@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage[executable=python.exe]{pyluatex}
+\begin{python}
+import math
+import random
+random.seed(0)
+greeting = 'Hello PyLuaTeX!'
+\end{python}
+\newcommand{\randint}[2]{\py{random.randint(#1, #2)}}
+\begin{document}
+\py{greeting}
+$\sqrt{371} = \py{math.sqrt(371)}$
+\randint{2}{5}
+\end{document}
