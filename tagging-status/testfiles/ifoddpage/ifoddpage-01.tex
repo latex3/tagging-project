@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{ifoddpage}
+
+\title{ifoddpage tagging test}
+
+\begin{document}
+
+\checkoddpage
+\ifoddpage
+odd
+\else
+even
+\fi
+
+\newpage
+
+\checkoddpage
+\ifoddpage
+odd
+\else
+even
+\fi
+
+\end{document}
