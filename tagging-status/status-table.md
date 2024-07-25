@@ -63,7 +63,7 @@ Related:
 {%- if p.issues or p.related-issues -%}<br/>{%- endif -%}
 Other:
 {% for u in p.external-issues %}
-{%- assign ltext = u | replace: "issues/", "" | split: "/" -%}
+{%- assign ltext = u | replace: "issues/", "" | replace: "-/","" | split: "/" -%}
 <a href="{{u}}">{{ltext | slice: -2}}/{{ltext | slice: -1}}</a>
 {% endfor %}
 {% endif %}
