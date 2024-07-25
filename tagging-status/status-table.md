@@ -37,7 +37,12 @@ See
 {%- if p.supported-through -%}
 <p>Tagging support:
 {% for t in p.supported-through %}
-<b>{{t}}</b>{%- unless forloop.last -%}, {% endunless -%}
+{%- if t == "package" and p.package-repository -%}
+<a href="{{p.package-repository}}"><b>{{t}}</b></a>
+{%- else -%}
+<b>{{t}}</b>
+{%- endif -%}
+{%- unless forloop.last -%}, {% endunless -%}
 {%- endfor %}.</p>
 {%- endif -%}
 </td>
