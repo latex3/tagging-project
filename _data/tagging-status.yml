@@ -623,12 +623,15 @@
 
  - name: autoaligne
    type: package
-   status: unknown
+   status: partially-compatible
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Errors with vertical alignment types `h` and `b`.
+              Use of math tagging currently requires support from external tools."
+   status: unknown
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-21
 
  - name: avant
    ctan-pkg: psnfss
