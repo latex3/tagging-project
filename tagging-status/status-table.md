@@ -26,7 +26,7 @@ Click on the column headings to sort the table by the chosen column.
 <td class="{{p.status}}"  sorttable_customkey="
 {%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
 ">{{p.status}}
-{%- if p.priority%}<sub>{{p.priority}}</sub>{% endif -%}
+{%- if p.priority and p.status != "compatible"%}<sub>{{p.priority}}</sub>{% endif -%}
 </td>
 <td>
 {{p.comments | markdownify}}
@@ -70,7 +70,7 @@ Other:
 </td>
 <td>
 {{p.tasks | markdownify}}
-{%- if p.priority %}
+{%- if p.priority and p.status != "compatible"%}
 Priority: {{p.priority}}
 {% endif -%}
 </td>
