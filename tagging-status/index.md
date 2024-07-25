@@ -10,6 +10,7 @@ td.unknown {background-color: #FFEE9955;font-weight:bold;}
 td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
+.markdown-body table p { margin-bottom: 0pt;}
 </style>
 <script src="sorttable.js"></script>
 
