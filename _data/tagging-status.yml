@@ -7585,12 +7585,13 @@
 
  - name: underoverlap
    type: package
-   status: unknown
+   status: compatible
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-26
 
  - name: underscore
    type: package
