@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{wrapstuff}
+\usepackage{graphicx}
+
+\title{wrapstuff tagging test - width key}
+
+\begin{document}
+
+\def\lorem{%
+Just then her head struck against the roof of the hall:
+in fact she was now more than nine feet high, and she
+at once took up the little golden key and hurried off
+to the garden door.\par
+Poor Alice! It was as much as she could do, lying down
+on one side, to look through into the garden with one eye;
+but to get through was more hopeless than ever:
+she sat down and began to cry again.}
+
+\begin{wrapstuff}[c,width=4cm]
+\includegraphics[width=3cm,alt={alt text}]{example-image.pdf}
+\end{wrapstuff}
+\lorem
+
+\begin{wrapstuff}[c,width=4cm,type=figure]
+\includegraphics[width=3cm,alt={alt text}]{example-image.pdf}
+\caption{A caption for a wrapped figure}
+\end{wrapstuff}
+\lorem
+
+\end{document}
