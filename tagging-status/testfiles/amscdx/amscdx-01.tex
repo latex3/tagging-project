@@ -1,0 +1,55 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{amscdx,amsmath}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\cf}{cf}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\non}{non}
+
+\title{amscdx tagging test}
+
+\begin{document}
+
+% examples from amscd documentation
+\begin{equation}
+\begin{CD} 
+S^{{\mathcal{W}}_\Lambda}\otimes T @>j>> T\\
+@VVV @VV{\End P}V\\
+(S\otimes T)/I @= (Z\otimes T)/J
+\end{CD}
+\end{equation}
+\begin{equation}
+\begin{CD}
+\cov(\mathcal{L}) @>>> \non(\mathcal{K}) @>>> \cf(\mathcal{K}) @>>> 
+\cf(\mathcal{L})\\
+@VVV @AAA @AAA @VVV\\
+\add(\mathcal{L}) @>>> \add(\mathcal{K}) @>>> \cov(\mathcal{K}) @>>> 
+\non(\mathcal{L})
+\end{CD}
+\end{equation}
+\begin{equation}
+\CDfattrue
+\CDlor{green}
+\begin{CD}
+\text{Left header} @. \text{Right header} \\
+TL \CDfatfalse\CDashtrue @Z\text{Atop}Z{\hspace{4cm}}Z TR \\
+\CDfatfalse @X\text{Left}X{N_x}X
+\CDfatfalse \CDashtrue
+\CDlor{brown} @A{\begin{array}{r}\text{Right}\\
+\text{column}\end{array}}A{N^x}A \\
+ML \CDfatfalse \CDashtrue \CDlor{lime} @<{xyzxyzxyz}<{pqr}< MR \\
+\CDlor{red} @A{M^2}A\begin{array}{l}\text{Left}\\
+\text{column}\end{array}A @V+V{N_y}V \\
+BL \CDlor{purple} @Z\text{above}Z\text{below}Z BR \\
+\end{CD}
+\end{equation}
+
+\end{document}

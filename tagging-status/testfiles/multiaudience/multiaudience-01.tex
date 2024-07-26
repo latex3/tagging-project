@@ -1,0 +1,45 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{multiaudience}
+
+\title{multiaudience tagging test}
+
+\SetNewAudience{execs}
+\SetNewAudience{devs}
+\SetNewAudience{admins}
+
+\DefCurrentAudience{execs}
+
+\begin{document}
+
+\begin{shownto}{execs, admins}
+Text for execs and admins
+\end{shownto}
+\begin{shownto}{-, execs}
+Text for everybody but execs
+\end{shownto}
+
+\showto{execs, devs}{TEXT}
+
+\begin{shownto}{devs,execs}
+TEXT 1
+\begin{shownto}{devs}
+TEXT 2
+\end{shownto}
+\end{shownto}
+
+\begin{Section}{execs}[Executive comments]{Executive comments for
+the document}
+Text
+\end{Section}
+
+text\Footnote{execs}{footnote text}
+
+\end{document}

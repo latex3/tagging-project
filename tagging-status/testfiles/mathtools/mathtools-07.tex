@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - Mathematics within italic text}
+
+\begin{document}
+
+% errors
+\begin{quote}\itshape
+Compare these lines: \par
+\mathtoolsset{mathic} % or \mathtoolsset{mathic=true}
+Subset of \(V\) and subset of \(A\). \par
+\mathtoolsset{mathic=false}
+Subset of \(V\) and subset of \(A\).
+\par
+\end{quote}
+
+\end{document}

@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{captdef,graphicx}
+\usepackage{hyperref}
+
+\title{captdef tagging test}
+
+\begin{document}
+
+\listoffigures
+
+\section{Body}
+body text
+\begin{center}
+\includegraphics[alt={alt text}]{example-image}
+\figcaption[short captdef text]{my caption text}
+\end{center}
+more body text
+\begin{center}
+\includegraphics[alt={alt text}]{example-image}
+\figcaption[another short captdef text]{more caption text}
+\end{center}
+
+% compare with
+body text
+\begin{figure}
+\centering
+\includegraphics[alt={alt text}]{example-image}
+\caption[short caption text]{my caption text}
+\end{figure}
+
+\end{document}
