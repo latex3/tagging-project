@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{fixfoot,xspace}
+
+\title{fixfoot tagging test}
+
+\DeclareFixedFootnote*{\sic}{\emph{sic}}
+\DeclareFixedFootnote{\prooflater}{This theorem will be
+proved later}
+
+\begin{document}
+
+text\sic more text
+
+text\prooflater. Compare\footnote{normal footnote}
+
+\end{document}

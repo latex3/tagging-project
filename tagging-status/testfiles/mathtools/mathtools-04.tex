@@ -1,0 +1,133 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{mathtools}
+
+\title{mathtools tagging test - New mathematical building blocks}
+
+\NewDocumentCommand\Framebox{ o O{c} m }{%
+  \IfNoValueTF{#1}{%
+    \framebox{\footnotesize\strut #3}%
+  }{%
+    \framebox[#1][#2]{\footnotesize\strut #3}%
+  }%
+}
+
+\begin{document}
+
+\[
+\begin{pmatrix*}[r]
+-1 & 3 \\
+2 & -4
+\end{pmatrix*}
+\]
+
+\[
+\begin{bsmallmatrix} a & -b \\ -c & d \end{bsmallmatrix}
+\begin{bsmallmatrix*}[r] a & -b \\ -c & d \end{bsmallmatrix*}
+\]
+
+\[
+A = \begin{multlined}[t]
+\Framebox[4cm]{first} \\
+\Framebox[4cm]{last}
+\end{multlined} B
+\]
+
+\[
+\begin{multlined}
+\Framebox[.65\columnwidth]{First line} \\
+\Framebox[.5\columnwidth]{Second line} \\
+\shoveleft{L+E+F+T} \\
+\shoveright{R+I+G+H+T} \\
+\shoveleft[1cm]{L+E+F+T} \\
+\shoveright[\widthof{$R+I+G+H+T$}]{R+I+G+H+T} \\
+\Framebox[.65\columnwidth]{Last line}
+\end{multlined}
+\]
+
+\[
+\begin{multlined}[b][7cm]
+\Framebox[4cm]{first} \\
+\Framebox[4cm]{last}
+\end{multlined} = B
+\]
+
+\[
+\begin{dcases}
+E = m c^2 & c \approx 3.00\times 10^{8}\,\mathrm{m}/\mathrm{s} \\
+\int x-3\, dx & \text{Integral is display style}
+\end{dcases}
+\]
+
+\[
+a= \begin{dcases*}
+E = m c^2 & Nothing to see here \\
+\int x-3\, dx & Integral is display style
+\end{dcases*}
+\]
+
+\[
+\begin{rcases*}
+x^2 & for $x>0$\\
+x^3 & else
+\end{rcases*} \quad \Rightarrow \cdots
+\]
+
+\begin{align*}
+\MoveEqLeft \Framebox[10cm][c]{Long first line}\\
+& = \Framebox[6cm][c]{2nd line}\\
+& \leq \dots
+\end{align*}
+
+\begin{align*}
+\MoveEqLeft[3] \Framebox[10cm][c]{Part 1}\\
+= {} & \Framebox[8cm][c]{2nd line}\\
+& + \Framebox[4cm][c]{last part}
+\end{align*}
+
+\begin{align*}
+\Aboxed{ f(x) & = \int h(x)\, dx} \\
+& = g(x)
+\end{align*}
+
+\begin{align*}
+\setlength\fboxsep{1em}
+\Aboxed{ f(x) &= 0 } & \Aboxed{ g(x) &= b} \\
+\Aboxed{ h(x) } & \Aboxed{ i(x) }
+\end{align*}
+
+\begin{alignat}{2}
+&& \framebox[1.5cm]{} &= \framebox[3cm]{}\\
+\ArrowBetweenLines % \Updownarrow is the default
+&& \framebox[1.5cm]{} &= \framebox[2cm]{}
+\end{alignat}
+
+\begin{alignat*}{2}
+\framebox[1.5cm]{} &= \framebox[3cm]{} &&\\
+\ArrowBetweenLines*[\Downarrow]
+\framebox[1.5cm]{} &= \framebox[2cm]{} &&
+\end{alignat*}
+
+\begin{align*}
+a &= b \\
+& \vdotswithin{=} \\
+& = c \\
+\shortvdotswithin{=}
+& = d
+\end{align*}
+
+\begin{alignat*}{3}
+A&+ B &&= C &&+ D \\
+\MTFlushSpaceAbove
+&\vdotswithin{+} &&&& \vdotswithin{+}
+\MTFlushSpaceBelow
+C &+ D &&= Y &&+K
+\end{alignat*}
+
+\end{document}
