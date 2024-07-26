@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{footnoterange}
+\usepackage{hyperref}
+
+\begin{document}
+
+text\footnote{normal footnote}
+
+text
+\begin{footnoterange}
+\footnote{first note}%
+\footnote{second note}%
+\footnote{third note}%
+\end{footnoterange}
+
+text
+\begin{footnoterange*}
+\footnote{first note}%
+\footnote{second note}%
+\footnote{third note}%
+\end{footnoterange*}
+
+\end{document}

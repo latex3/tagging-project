@@ -2866,12 +2866,14 @@
 
  - name: footnoterange
    type: package
-   status: unknown
+   status: currently-incompatible
    priority: 2
+   comments: "Footnote label i-j incorrectly tagged as normal text. hyperref support
+              is broken since it relies on the existence of an `Hfootnote` counter
+              which tagging-version does not provide."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-21
 
  - name: footnpag
    type: package
