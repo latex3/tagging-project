@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{uri}
+
+\title{uri tagging test}
+
+\begin{document}
+
+\url{https://latex-project.org} % to compare
+
+\begin{itemize}
+\item Amazon Catalogue:             \hfill \asin{0201362996}
+\item Cornell University Library:   \hfill \arxiv{math/9201303}
+\item Global library cooperative (OCLC):   \hfill \oclc{935889548}
+\item Handle System (CNRI):         \hfill \hdl{10338.dmlcz/702604}
+\item International DOI Foundation: \hfill \doi{10.1111/coin.12165}
+\item National Bibliography Number: \hfill \nbn{urn:nbn:de:bsz:mit1-opus-3145}
+\item PubMed Central (PMC):         \hfill \pubmed{24925405}
+\item WebCite:                      \hfill \wc{71lh2xily}
+\end{itemize}
+
+\urisetup{asinpre = ASIN( , asinpost =) ,
+          doipre  = \textsc{doi:}\hspace*{2pt} }
+\asin{0201362996}
+
+\doi{10.1111/coin.12165}
+
+Wikipedia article on 42:        \tinyuri {424242}.
+
+Research on optimal pagination: \tinypuri{optpag}.
+
+Website:          \citeurl{https://latex-project.org}.
+
+Report errors to: \mailto[Website error]
+                      {webmaster@latex-project.org}         
+\end{document}
