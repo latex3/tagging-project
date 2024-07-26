@@ -627,7 +627,6 @@
    supported-through: [phase-III,math]
    comments: "Errors with vertical alignment types `h` and `b`.
               Use of math tagging currently requires support from external tools."
-   status: unknown
    issues:
    tests: true
    updated: 2024-07-21
@@ -2880,7 +2879,6 @@
    status: partially-compatible
    priority: 9
    comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
-   priority: 9
    issues:
    tests: true
    updated: 2024-07-21
@@ -7871,7 +7869,7 @@
    status: partially-compatible
    priority: 9
    comments: "The `width` and `type` keys produce parent-child warnings, so
-              `\caption` cannot be used in the `wrapstuff` environment."
+              `\\caption` cannot be used in the `wrapstuff` environment."
    issues:
    tests: true
    updated: 2024-07-26
@@ -8460,7 +8458,7 @@
    status: currently-incompatible
    priority: 2
    related-issues: [88]
-   updated: 2024-07-10
+   updated: 2024-<07-10
 
  - name: standalone
    type: class
