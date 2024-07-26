@@ -7050,12 +7050,13 @@
 
  - name: tensor
    type: package
-   status: unknown
+   status: compatible
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-25
 
  - name: termes-otf
    type: package
