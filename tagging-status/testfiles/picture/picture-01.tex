@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[calc]{picture}
+
+\begin{document}
+
+\setlength{\unitlength}{1pt}
+
+\begin{picture}[alt=my alt text](\widthof{Hello World}, 10mm)
+\put(0, 0){\makebox(0,0)[lb]{Hello World}}%
+\put(0, \heightof{Hello World} + \fboxsep){%
+\line(1, 0){\widthof{Hello World}}%
+}%
+\put(\widthof{Hello World}, 10mm){%
+\line(0, -1){10mm}%
+}%
+\end{picture}
+
+\end{document}
