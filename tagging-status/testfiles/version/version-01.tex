@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{version}
+
+\title{version tagging test}
+
+\begin{document}
+
+\includeversion{abridged}
+\excludeversion{unabridged}
+\excludeversion[(redacted)]{redact}
+Text for the
+\begin{abridged}
+short
+\end{abridged}
+\begin{unabridged}
+long and really longwinded, opaque and boring
+\end{unabridged}
+version of the paper. Punctuation works correctly\begin{unabridged}
+because sphack is used\end{unabridged}.
+\begin{comment} This is deleted by default. \end{comment}
+\begin{redact}This information was withdrawn\end{redact}
+
+\end{document}
