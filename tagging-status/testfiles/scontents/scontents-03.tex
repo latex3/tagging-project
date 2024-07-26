@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{scontents}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\begin{document}
+\begin{scontents}[store-env=main]
+Something for main A.
+\end{scontents}
+
+\begin{scontents}[store-env=main]
+Something for \verb|main B|.
+\end{scontents}
+
+\begin{scontents}[store-env=other]
+Something for \verb|other|.
+\end{scontents}
+
+\textbf{Let's print them}
+
+This is first stored in main: \getstored[1]{main}\par
+This is second stored in main: \getstored{main}\par
+This is stored in other: \getstored{other}
+
+\textbf{Print all of stored in main}\par
+\foreachsc[sep={\\[10pt]}]{main}
+\end{document}
