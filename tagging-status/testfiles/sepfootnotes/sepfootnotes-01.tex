@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{sepfootnotes}
+
+\title{sepfootnotes tagging test - 1}
+
+\sepfootnotecontent{Plato}{Socrates’s pupil.}
+\begin{document}
+text\footnote{a normal footnote}
+
+This was first brought up by the great Plato.\sepfootnote{Plato}
+
+text\footnote{another normal footnote}
+\end{document}
