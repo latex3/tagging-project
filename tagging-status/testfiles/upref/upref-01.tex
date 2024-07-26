@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{upref}
+\usepackage{hyperref} % fine with or without
+
+\title{upref tagging test}
+
+\begin{document}
+
+\section{A heading}
+\label{blub}
+
+normal text and \ref{blub}
+
+\emph{emphasized text and \ref{blub}}
+
+{\itshape italicized text and \ref{blub}}
+
+\textsl{slanted text and \ref{blub}}
+
+\textbf{\textit{bold italicized text and \ref{blub}}}
+
+\end{document}
