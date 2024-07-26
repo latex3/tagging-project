@@ -8137,12 +8137,14 @@
  - name: xy
    ctan-pkg: xypic
    type: package
-   status: unknown
+   status: partially-compatible
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "In text mode, no tagging occurs for `\\xymatrix`.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-26
 
 #------------------------ YYY ----------------------------
 
