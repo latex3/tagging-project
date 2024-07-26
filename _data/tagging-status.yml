@@ -7850,12 +7850,13 @@
 
  - name: wrapstuff
    type: package
-   status: unknown
+   status: partially-compatible
    priority: 9
+   comments: "The `width` and `type` keys produce parent-child warnings, so
+              `\caption` cannot be used in the `wrapstuff` environment."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-26
 
 #------------------------ XXX ----------------------------
 
