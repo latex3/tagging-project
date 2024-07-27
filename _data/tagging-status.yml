@@ -9,7 +9,7 @@
 #  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status            required   string          Status of package, see list below.
 #  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
-#  included-in       optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 (included in TLC o r top  n% of arxiv package use)
+#  included-in       optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 arxiv01 (included in TLC or top  n% of arxiv package use)
 #  priority          optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments          optional   markdown-string Free text markdown comments
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
@@ -111,7 +111,7 @@
  - name: abstract
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -139,7 +139,7 @@
  - name: accents
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -159,7 +159,7 @@
  - name: acro
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -229,7 +229,7 @@
  - name: afterpage
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -296,7 +296,7 @@
  - name: aliascnt
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -316,7 +316,7 @@
  - name: alltt
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [131]
    updated: 2024-07-14
@@ -405,7 +405,7 @@
  - name: amsrefs
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -463,7 +463,7 @@
  - name: animate
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -640,7 +640,7 @@
  - name: atveryend
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: This is an obsolete package. The hooks it defines are available directly from the LaTeX kernel when using the `\AddToHook` interface.
    issues:
    tests: false
@@ -712,7 +712,7 @@
  - name: axessibility
    type: package
    status: no-support
-   included-in:
+   included-in: arxiv01
    comments: Loads tagpdf but it is not compatible with the current version. Its patches 
              clash with the math module. `phase-III,math` should be used instead which
              provides broader tagging support without the need to load an additional package.
@@ -762,7 +762,7 @@
  - name: backref
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -800,7 +800,7 @@
  - name: bbding
    type: package
    status: partially-compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    comments: "Missing ToUnicode for text symbols."
    issues:
@@ -855,7 +855,7 @@
  - name: bibentry
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -955,7 +955,7 @@
  - name: bibunits
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -986,7 +986,7 @@
  - name: bigdelim
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1014,7 +1014,7 @@
  - name: bigstrut
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1058,7 +1058,7 @@
  - name: blkarray
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues: [181]
    tests: true
@@ -1077,7 +1077,7 @@
  - name: bmpsize
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1087,7 +1087,7 @@
  - name: boldline
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1117,7 +1117,7 @@
  - name: bookmark
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1138,7 +1138,7 @@
  - name: boxedminipage
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: "drawn box is tagged as Path instead of artifact"
    issues:
@@ -1168,7 +1168,7 @@
  - name: breqn
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [145]
    tests: yes
@@ -1178,7 +1178,7 @@
  - name: bussproofs
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1210,7 +1210,7 @@
  - name: CJK
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1321,7 +1321,7 @@
  - name: capt-of
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    comments: "Incorrect reading order of captions."
    issues:
@@ -1378,7 +1378,7 @@
  - name: cases
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1388,7 +1388,7 @@
  - name: catchfile
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1426,7 +1426,7 @@
  - name: cellspace
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,table]
    issues:
    tests: true
@@ -1435,7 +1435,7 @@
  - name: centernot
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1464,7 +1464,7 @@
  - name: changebar
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -1474,7 +1474,7 @@
  - name: changepage
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1484,7 +1484,7 @@
  - name: changes
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1502,7 +1502,7 @@
  - name: chapterbib
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -1513,7 +1513,7 @@
    ctan-pkg: psnfss
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: Obsolete package; suggested replacement `XCharter`.
    issues:
    tests: false
@@ -1543,7 +1543,7 @@
  - name: chemformula
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1734,7 +1734,7 @@
  - name: colonequals
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -1808,7 +1808,7 @@
  - name: contour
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    comments: "Typesets the content many times which produces incorrect tags."
    issues:
@@ -1876,7 +1876,7 @@
  - name: csvsimple
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: "`\\csvautotabularray` etc. are not supported since tabularray is
              currently incompatible."
@@ -1888,7 +1888,7 @@
  - name: ctable
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -1926,7 +1926,7 @@
  - name: cuted
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -2085,7 +2085,7 @@
  - name: delarray
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    supported-through: [phase-III,math,table]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -2163,7 +2163,7 @@
  - name: doi
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    tests: true
    updated: 2024-07-21
@@ -2302,7 +2302,7 @@
  - name: eepic
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2402,7 +2402,7 @@
  - name: empheq
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [138]
    tests: true
@@ -2421,7 +2421,7 @@
  - name: endnotes
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
    issues: [135]
@@ -2509,7 +2509,7 @@
  - name: epigraph
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2537,7 +2537,7 @@
  - name: eqparbox
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -2555,7 +2555,7 @@
  - name: esint
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2620,7 +2620,7 @@
    ctan-pkg: amsfonts
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-14
@@ -2628,7 +2628,7 @@
  - name: euler
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    tests: false
    updated: 2024-07-14
@@ -2646,7 +2646,7 @@
  - name: eulervm
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    tests: false
    updated: 2024-07-14
@@ -2672,7 +2672,7 @@
  - name: exscale
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-06
 
@@ -2687,7 +2687,7 @@
  - name: extarrows
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2697,7 +2697,7 @@
  - name: extdash
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -2738,7 +2738,7 @@
  - name: faktor
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -2748,7 +2748,7 @@
  - name: fancybox
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2776,7 +2776,7 @@
  - name: fancyvrb
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    references: [1]
    tasks: needs tests
@@ -2901,7 +2901,7 @@
  - name: fix-cm
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-06
 
@@ -2916,7 +2916,7 @@
  - name: fixltx2e
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: This is an obsolete package which should not be needed
    issues:
    updated: 2024-07-06
@@ -2924,7 +2924,7 @@
  - name: fixme
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -2935,7 +2935,7 @@
    ctan-pkg: latex-base
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-07
 
@@ -2972,7 +2972,7 @@
  - name: floatpag
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    comments: "redefines \\@xfloat"
    issues: [209]
@@ -2982,7 +2982,7 @@
  - name: floatflt
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -2992,7 +2992,7 @@
  - name: floatrow
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -3020,7 +3020,7 @@
  - name: flushend
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -3143,7 +3143,7 @@
  - name: fontspec
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-12
 
@@ -3168,7 +3168,7 @@
  - name: footnote
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    tests: true
    comments: To be supported or not?
@@ -3220,7 +3220,7 @@
  - name: forest
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -3239,7 +3239,7 @@
    ctan-pkg: fourier
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-14
@@ -3618,7 +3618,7 @@
  - name: glossaries
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    comments: An old issue appears to be fixed.
    tasks: needs tests
@@ -3661,7 +3661,7 @@
  - name: graphpap
    type: package
    status: partially-compatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    comments: tagging passes validation but is sub-optimal
    issues:
@@ -3840,7 +3840,7 @@
  - name: hypcap
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,package]
    package-repository: "https://github.com/ho-tex/hypcap"
    priority: 9
@@ -3920,7 +3920,7 @@
  - name: hyphenat
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -3968,7 +3968,7 @@
  - name: ifetex
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -3976,7 +3976,7 @@
  - name: ifdraft
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -4010,7 +4010,7 @@
  - name: ifplatform
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -4066,7 +4066,7 @@
  - name: import
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -4086,7 +4086,7 @@
  - name: inconsolata
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -4109,7 +4109,7 @@
  - name: index
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -4250,7 +4250,7 @@
  - name: kantlipsum
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -4295,7 +4295,7 @@
    ctan-pkg: cjk-ko
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -4433,7 +4433,7 @@
  - name: layout
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [111]
    tests: true
@@ -4442,7 +4442,7 @@
  - name: layouts
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -4452,7 +4452,7 @@
  - name: leftidx
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -4502,7 +4502,7 @@
  - name: lettrine
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -4520,7 +4520,7 @@
  - name: libertine
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -4733,7 +4733,7 @@
  - name: ltablex
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues: [163]
    tests: true
@@ -4969,7 +4969,7 @@
  - name: MnSymbol
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5006,7 +5006,7 @@
  - name: manyfoot
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [289]
    tests: true
@@ -5024,7 +5024,7 @@
  - name: marginnote
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [165]
    tests: true
@@ -5043,7 +5043,7 @@
  - name: marvosym
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 4
    comments: "Missing ToUnicode for text symbols."
    issues: [272]
@@ -5053,7 +5053,7 @@
  - name: mathabx
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5083,7 +5083,7 @@
  - name: mathdesign
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5093,7 +5093,7 @@
  - name: mathdots
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5103,7 +5103,7 @@
  - name: mathpazo
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -5120,7 +5120,7 @@
  - name: mathptm
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: Obsolete package; suggested replacement `newtxmath`.
    issues:
    tests: false
@@ -5189,7 +5189,7 @@
  - name: mciteplus
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5199,7 +5199,7 @@
  - name: mdframed
    type: package
    status: no-support
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: "Recommended alternative: tcolorbox."
    issues: [73]
    updated: 2024-07-06
@@ -5285,7 +5285,7 @@
  - name: mfirstuc
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5295,7 +5295,7 @@
  - name: mhchem
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5341,7 +5341,7 @@
  - name: minitoc
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5351,7 +5351,7 @@
  - name: minted
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    comments: Structural warnings and automatic begin / end mismatch errors.
    updated: 2024-07-18
@@ -5376,7 +5376,7 @@
  - name: mleftright
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    priority: 2
@@ -5413,7 +5413,7 @@
  - name: moreverb
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5450,7 +5450,7 @@
  - name: multibib
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5478,7 +5478,7 @@
  - name: multido
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5538,7 +5538,7 @@
  - name: mwe
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5602,7 +5602,7 @@
  - name: nature
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -5632,7 +5632,7 @@
  - name: needspace
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5670,7 +5670,7 @@
  - name: newfloat
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -5760,7 +5760,7 @@
  - name: newtxtt
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    tests: false
    updated: 2024-07-21
@@ -5814,7 +5814,7 @@
  - name: nicematrix
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues: [179]
    tests: true
@@ -5842,7 +5842,7 @@
  - name: nomencl
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5941,7 +5941,7 @@
  - name: nth
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -5949,7 +5949,7 @@
 
  - name: ntheorem
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -6079,7 +6079,7 @@
  - name: orcidlink
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -6115,7 +6115,7 @@
 
  - name: overpic
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -6312,7 +6312,7 @@
  - name: parskip
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: true
    updated: 2024-07-25
@@ -6330,7 +6330,7 @@
  - name: pdfcol
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -6369,7 +6369,7 @@
  - name: pdfcomment
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -6458,7 +6458,7 @@
  - name: perpage
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -6508,7 +6508,7 @@
  - name: pgfplotstable
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,table]
    comments: "Table tagging is correct but any interaction with pgfplots
               is not yet supported."
@@ -6548,7 +6548,7 @@
  - name: pict2e
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 9
    issues:
    tests: true
@@ -6557,7 +6557,7 @@
  - name: picture
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: true
@@ -6662,7 +6662,7 @@
  - name: preview
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -6802,7 +6802,7 @@
  - name: ragged2e
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    supported-through: [phase-III,package]
    package-repository: "https://gitlab.com/TeXhackse/ragged2e"
@@ -7039,7 +7039,7 @@
  - name: savetrees
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -7049,7 +7049,7 @@
  - name: scalefnt
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -7058,7 +7058,7 @@
  - name: scalerel
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7093,7 +7093,7 @@
  - name: scrextend
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7170,7 +7170,7 @@
  - name: sectsty
    type: package
    status: partially-compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    comments: "`\\sectionrule` produces errors."
@@ -7280,7 +7280,7 @@
  - name: shellesc
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-07
 
@@ -7336,7 +7336,7 @@
  - name: showkeys
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: "Rules drawn around labels display as Path in tags and the label in the margin is either not tagged
               at all (pdflatex) or as artifact (lualatex). Unproblematic for a draft, but not UA compatible."
@@ -7357,7 +7357,7 @@
  - name: sidecap
    type: package
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues: [290]
    tests: true
@@ -7526,7 +7526,7 @@
  - name: stackengine
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7536,7 +7536,7 @@
  - name: stackrel
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7685,7 +7685,7 @@
  - name: subfiles
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7705,7 +7705,7 @@
  - name: supertabular
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [169]
    tests: true
@@ -7714,7 +7714,7 @@
  - name: svg
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -7770,7 +7770,7 @@
  - name: tablefootnote
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    supported-through: [phase-III,table]
    issues:
    tests: true
@@ -7798,7 +7798,7 @@
  - name: tabto
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -7808,7 +7808,7 @@
  - name: tabu
    type: package
    status: no-support
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: In theory a nice package but it is **broken** and **not maintained**. It is not compatible with current LaTeX, let alone with the tagging extensions. Do not use it for anything, unless it gets a new maintainer that brings it up to speed.
    issues:
    tests: false
@@ -7844,7 +7844,7 @@
  - name: tabularray
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues: [177]
    tests: true
@@ -7862,7 +7862,7 @@
  - name: tabulary
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    supported-through: [phase-III,table]
    issues:
    tests: true
@@ -7933,7 +7933,7 @@
  - name: tensor
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
@@ -8009,7 +8009,7 @@
  - name: textgreek
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -8019,7 +8019,7 @@
  - name: textpos
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -8101,7 +8101,7 @@
  - name: theorem
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -8128,7 +8128,7 @@
  - name: thmtools
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -8147,7 +8147,7 @@
  - name: threeparttablex
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -8230,7 +8230,7 @@
  - name: tipa
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -8266,7 +8266,7 @@
  - name: titletoc
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: Mentioned in issue.
    issues: [24]
@@ -8275,7 +8275,7 @@
  - name: titling
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -8285,7 +8285,7 @@
  - name: tocbasic
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -8295,7 +8295,7 @@
  - name: tocbibind
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: false
@@ -8315,7 +8315,7 @@
  - name: tocloft
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    comments: Packages attempts to redefine `\@starttoc`and fails.
    issues: [74]
@@ -8381,14 +8381,14 @@
    ctan-pkg: latex-base
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    issues:
    updated: 2024-07-06
 
  - name: tracklang
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -8407,7 +8407,7 @@
  - name: translator
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: true
@@ -8416,7 +8416,7 @@
  - name: transparent
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -8472,7 +8472,7 @@
  - name: typearea
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: false
@@ -8514,7 +8514,7 @@
  - name: underscore
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    issues:
    tests: true
@@ -8567,7 +8567,7 @@
  - name: upquote
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -8576,7 +8576,7 @@
  - name: upref
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -8623,7 +8623,7 @@
  - name: varioref
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: true
    updated: 2024-07-11
@@ -8681,7 +8681,7 @@
  - name: version
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    priority: 2
    issues:
    tests: true
@@ -8906,7 +8906,7 @@
  - name: xfrac
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: true
    updated: 2024-07-18
@@ -8991,7 +8991,7 @@
  - name: xpatch
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -9020,14 +9020,14 @@
  - name: xr
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    updated: 2024-07-07
 
  - name: xr-hyper
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
    issues:
    updated: 2024-07-10
@@ -9063,7 +9063,7 @@
  - name: xstring
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -9089,7 +9089,7 @@
  - name: xurl
    type: package
    status: compatible
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: true
@@ -9113,7 +9113,7 @@
  - name: yfonts
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    issues:
    tests: false
    updated: 2024-07-15
@@ -9129,7 +9129,7 @@
  - name: yhmath
    type: package
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tests: false
@@ -9261,7 +9261,7 @@
  - name: book
    type: class
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    supported-through: [phase-III,title]
    updated: 2024-07-05
 
@@ -9410,7 +9410,7 @@
  - name: report
    type: class
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv01
    supported-through: [phase-III,title]   
    updated: 2024-07-05
 
@@ -9429,7 +9429,7 @@
  - name: scrartcl
    type: class
    status: currently-incompatible
-   included-in:
+   included-in: arxiv01
    priority: 2
    related-issues: [88]
    updated: 2024-07-10
@@ -9461,7 +9461,7 @@
  - name: standalone
    type: class
    status: unknown
-   included-in:
+   included-in: arxiv01
    priority: 9
    issues:
    tasks: needs tests
