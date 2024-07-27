@@ -9,6 +9,7 @@
 #  type              required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status            required   string          Status of package, see list below.
 #  ctan-pkg          optional   string          Name for ctan.org/pkg/?? link if different to name
+#  included-in       optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 (included in TLC o r top  n% of arxiv package use)
 #  priority          optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments          optional   markdown-string Free text markdown comments
 #  references        optional   integer-list    List of integers referencing the bibliography in references.yml
@@ -351,7 +352,7 @@
  - name: amscd
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -372,7 +373,7 @@
  - name: amsfonts
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -382,7 +383,7 @@
  - name: amsmath
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
@@ -394,7 +395,7 @@
  - name: amsopn
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -415,7 +416,7 @@
    ctan-pkg: amsfonts
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -425,7 +426,7 @@
  - name: amstext
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -435,7 +436,7 @@
  - name: amsthm
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues: [83]
    tests: true
@@ -555,7 +556,7 @@
  - name: array
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,table]
    issues:
    updated: 2024-07-06
@@ -740,7 +741,7 @@
  - name: babel
    type: package
    status: unknown
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now.
    issues:
@@ -864,7 +865,7 @@
  - name: biblatex
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: "Requires hyperref." 
    references: [2]
@@ -1066,7 +1067,7 @@
  - name: bm
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -1126,7 +1127,7 @@
  - name: booktabs
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,firstaid,table]
    comments: requires the firstaid module which contains a fix.
@@ -1294,7 +1295,7 @@
  - name: calc
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -1350,7 +1351,7 @@
  - name: caption
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: "the configurations from the package are overwritten by the
              tagging code. Issue when hyperref and both listoffigures are used."
@@ -1620,7 +1621,7 @@
  - name: cite
    type: package
    status: unknown
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues:
    tests: false
@@ -1743,7 +1744,7 @@
  - name: color
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -2048,7 +2049,7 @@
  - name: dcolumn
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: "`d` columns are set as text not math, which is arguably correct, but needs some further evaluation."
    issues:
@@ -2478,7 +2479,7 @@
  - name: enumitem
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one can use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
@@ -2602,7 +2603,7 @@
  - name: etoolbox
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-12
    
@@ -2678,7 +2679,7 @@
  - name: expl3
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tests: false
    updated: 2024-07-14
@@ -2757,7 +2758,7 @@
  - name: fancyhdr
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tests: true
    updated: 2024-07-12
@@ -2961,7 +2962,7 @@
  - name: float
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: "[H] floats are not yet automatically tagged."
    references: [2]
@@ -3125,7 +3126,7 @@
  - name: fontenc
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -3452,7 +3453,7 @@
  - name: geometry
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: tagging of rules (showframe, crop marks) untested
    tasks: needs further tests
    updated: 2024-07-06
@@ -3637,14 +3638,14 @@
  - name: graphics
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: See `graphicx` package
    updated: 2024-07-06
 
  - name: graphicx
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: >
      Rather than
      `\includegraphics[whatever]{whatever}`
@@ -3891,7 +3892,7 @@
  - name: hyperref
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [package]
    references: [2]
    updated: 2024-07-06
@@ -4033,7 +4034,7 @@
  - name: ifthen
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -4127,7 +4128,7 @@
  - name: inputenc
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -4275,7 +4276,7 @@
  - name: keyval
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -4416,7 +4417,7 @@
    ctan-pkg: latex-base
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-06
 
@@ -4595,7 +4596,7 @@
  - name: lineno
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues: [162,210]
    tests: true
@@ -4701,7 +4702,7 @@
  - name: longtable
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,table]
    issues: [22]
@@ -4996,7 +4997,7 @@
  - name: makeidx
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tests: true
    updated: 2024-07-11
@@ -5136,7 +5137,7 @@
  - name: mathrsfs
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
@@ -5147,7 +5148,7 @@
  - name: mathtools
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,math]
    comments: "`mathic` key produces errors. Use of math tagging currently requires support from external tools."
@@ -5311,7 +5312,7 @@
  - name: microtype
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: Footnote patching doesn’t work but otherwise supported.
    issues: [67]
    updated: 2024-07-06
@@ -5458,7 +5459,7 @@
  - name: multicol
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tasks: test column rules
    updated: 2024-07-06
@@ -5506,7 +5507,7 @@
  - name: multirow
    type: package
    status: unknown
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues:
    tests: false
@@ -5576,7 +5577,7 @@
  - name: nameref
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tests: false
    updated: 2024-07-15
@@ -5594,7 +5595,7 @@
  - name: natbib
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    updated: 2024-07-06
 
  - name: nature
@@ -6564,7 +6565,7 @@
  - name: pifont
    type: package
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 9
    comments: "Missing ToUnicode for text symbols. Labels disappear in `dingautolist`."
    issues:
@@ -6987,7 +6988,7 @@
  - name: rotating
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues: [112]
    tests: true
@@ -7228,7 +7229,7 @@
  - name: setspace
    type: package
    status: unknown
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues:
    tests: false
@@ -7424,7 +7425,7 @@
  - name: soul
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    issues: [167]
    tests: true
@@ -7643,7 +7644,7 @@
  - name: subcaption
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments:  Issue when hyperref and both listoffigures are used.
    issues: [85]
@@ -7996,7 +7997,7 @@
  - name: textcomp
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: "Package no longer needed as definitions have been moved into the kernel"
    issues:
    updated: 2024-07-07
@@ -8172,7 +8173,7 @@
  - name: tikz
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    references: [2]
    updated: 2024-07-06
@@ -8208,7 +8209,7 @@
  - name: times
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: Obsolete package; suggested replacement `tgtermes`.
    issues:
    tests: false
@@ -8488,7 +8489,7 @@
  - name: ulem
    type: package
    status: currently-incompatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    comments: "Missing TextDecoration attributes."
    issues:
@@ -8590,7 +8591,7 @@
  - name: url
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    comments: An old issue has been fixed.
    issues: [5]
    updated: 2024-07-06
@@ -8835,7 +8836,7 @@
  - name: xcolor
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    updated: 2024-07-07
 
@@ -9050,7 +9051,7 @@
  - name: xspace
    type: package
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    issues:
    tests: true
    updated: 2024-07-08
@@ -9208,7 +9209,7 @@
  - name: amsart
    type: class
    status: partially-compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    priority: 2
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm. Used by project example arxiv3"
@@ -9238,7 +9239,7 @@
  - name: article
    type: class
    status: compatible
-   included-in: tlc3 tlc3
+   included-in: tlc3
    supported-through: [phase-III,title]
    updated: 2024-07-05
 
