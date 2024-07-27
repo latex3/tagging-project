@@ -3839,15 +3839,16 @@
 
  - name: hypcap
    type: package
-   status: currently-incompatible
+   status: compatible
    included-in:
+   supported-through: [phase-III,package]
+   package-repository: "https://github.com/ho-tex/hypcap"
    priority: 9
    comments: "The tagging code already moves anchors to the top of floats
-              so this package is unnecessary. Errors if given option
-              `figure`, `table`, etc."
+              so this package is unnecessary. package updated"
    issues:
    tests: true
-   updated: 2024-07-21
+   updated: 2024-07-27
 
  - name: hypdestopt
    type: package
