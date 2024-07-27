@@ -1,0 +1,41 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage[all]{xy}
+
+\title{xy tagging test}
+
+\begin{document}
+
+text
+
+\xymatrix{
+U \ar@/_/[ddr]_y \ar@/^/[drr]^x
+\ar@{.>}[dr]|-{(x,y)} \\
+& X \times_Z Y \ar[d]^q \ar[r]_p
+& X \ar[d]_f \\
+& Y \ar[r]^g & Z }
+
+$\xymatrix@1{
+A\times B\times C\times D \ar[r]^-{+} &B
+}$
+
+\entrymodifiers={++[o][F-]}
+\SelectTips{cm}{}
+\xymatrix @-1pc {
+*\txt{start} \ar[r]
+& 0 \ar@(r,u)[]^b \ar[r]_a
+& 1 \ar[r]^b \ar@(r,d)[]_a
+& 2 \ar[r]^b
+\ar `dr_l[l] `_ur[l] _(.2)a [l]
+&*++[o][F=]{3}
+\ar `ur^l[lll]`^dr[lll]^b [lll]
+\ar `dr_l[ll] `_ur[ll] [ll] }
+
+\end{document}
