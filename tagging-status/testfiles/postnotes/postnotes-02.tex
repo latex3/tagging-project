@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{book}
+\usepackage{postnotes}
+\postnotesetup{heading={\section*{\pntitle}}}
+\usepackage{hyperref}
+\begin{document}
+\chapter{First chapter}
+Foo.\postnote{Foo note.}
+Bar.\postnote{Bar note.}
+\printpostnotes
+\chapter{Second chapter}
+\setcounter{postnote}{0}
+Baz.\postnote{Baz note.}
+Boo.\postnote{Boo note.}
+\printpostnotes
+\end{document}

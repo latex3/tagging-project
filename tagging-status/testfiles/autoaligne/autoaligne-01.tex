@@ -1,0 +1,60 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{autoaligne}
+
+\begin{document}
+
+\autoaligne{
+  x-3y+z=2-i\\
+  5x+y-6z=1+5i\\
+  -x+y-z=-3+i}
+
+\bigskip
+
+\autoaligne{
+x =a++c\\
++y =+b-c\\
++ +z=+-4c}
+
+\bigskip
+
+\autoaligne[*g]{
+a+\sqrt2b=0\\
+a+b=10\sqrt2}
+
+\bigskip
+
+Normal \autoaligne{a+2b=1\\a-b=2} \qquad
+\aavcoeff{1.75}étendu \autoaligne{a+2b=1\\a-b=2} 
+
+\aavcoeff{1}
+\bigskip
+
+\bigskip
+
+\def\determinant#1{\begingroup
+\definirseparateurs{\\}{ }{}%
+\definirespacements{.75em}{}%
+\hbox{$\left|\autoaligne[*c]{#1}\right|$}%
+\endgroup
+}
+Un déterminant \determinant{a -b 0\\b 0 a\\0 -a -b}
+
+\bigskip
+
+\def\determinant#1{\begingroup
+\definirseparateurs{\\}{ }{}%
+\definirespacements[3pt,3pt]{.75em}{}%
+\hbox{$\left|\autoaligne[*c]{#1}\right|$}%
+\endgroup
+}
+Un déterminant \determinant{a -b 0\\b 0 a\\0 -a -b}
+
+\end{document}

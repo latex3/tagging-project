@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{footnote}
+
+\title{footnote tagging test - tabular}
+
+\begin{document}
+
+\begin{savenotes}
+\begin{tabular}{cc}
+text\footnote{first} & more\footnote{second} text\footnote{third} \\
+even more text\footnote{fourth} & blub
+\end{tabular}
+\end{savenotes}
+
+\end{document}

@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents*}{tst.tex}
+Some verbatim text
+}% ^_
+\end{filecontents*}
+\documentclass{article}
+\usepackage{verbatim}
+
+\title{verbatim tagging test}
+
+\begin{document}
+
+\verbatiminput{tst.tex}
+
+\begin{verbatim}
+Some verbatim text
+}% ^_
+\end{verbatim}
+
+\end{document}

@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{xhfill,xcolor}
+
+\title{xhfill tagging test}
+
+\begin{document}
+
+blah\xrfill{1pt}blub
+
+blah\xrfill{3pt}blub
+
+blah\xrfill[-12pt]{12pt}blub
+
+blah\xrfill{1pt}[blue]blub blah\xrfill{2pt}[cyan]blub
+
+blah \xhrulefill{cyan}{1cm} blub
+
+blah \xhrectanglefill{0.5cm}{1pt} blub
+
+blah\xdotfill{1pt}[blue]blah\xdotfill{2pt}[red]blub
+
+\end{document}

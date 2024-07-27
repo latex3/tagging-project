@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{book}
+\usepackage{postnotes}
+\usepackage{hyperref}
+\begin{document}
+\chapter{First chapter}
+\postnote{1}
+\postnote{2}
+\begin{table}[p]
+\caption{Table}
+Table.\postnote[mark=5]{3}
+\end{table}
+\postnote{4}
+\postnote{5}
+\stepcounter{postnote}
+\clearpage
+\postnote{6}
+\printpostnotes
+\end{document}
