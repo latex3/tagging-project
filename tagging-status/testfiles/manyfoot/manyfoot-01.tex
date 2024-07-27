@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+
+\usepackage[para]{manyfoot}
+\usepackage{kantlipsum}
+
+\title{manyfoot tagging test}
+
+\DeclareNewFootnote{A}[alph]
+\DeclareNewFootnote[para]{B}[roman]
+
+
+\begin{document}
+
+text\footnote{normal footnote}
+
+text\footnoteA{A-type footnote}
+
+%text\footnoteB{B-type footnote}
+
+\end{document}

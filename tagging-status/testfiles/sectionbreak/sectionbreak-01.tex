@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage[asterism]{sectionbreak}
+
+\title{sectionbreak tagging test}
+
+\begin{document}
+
+Section separated by three exclamation marks.
+\sectionbreak[!!!]
+Section separated by asterism section mark requested in \texttt{\textbackslash usepackage}.
+\sectionbreak
+Section separated by a rule.
+\sectionbreakmark{\rule{10em}{3pt}}
+\sectionbreak
+
+\end{document} 

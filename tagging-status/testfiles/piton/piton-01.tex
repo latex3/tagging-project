@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{piton}
+
+\begin{document}
+
+text
+\begin{Piton}
+ from math import pi
+
+ def arctan(x,n=10):
+    """Compute the mathematical value of arctan(x)
+
+    n is the number of terms in the sum
+    """
+     if x < 0:
+         return -arctan(-x) # recursive call
+     elif x > 1: 
+         return pi/2 - arctan(1/x) 
+     else: 
+         s = 0
+         for k in range(n):
+             s += (-1)**k/(2*k+1)*x**(2*k+1)
+         return s 
+\end{Piton}
+text
+
+\end{document}

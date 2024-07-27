@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{xfakebold}
+
+\title{xfakebold tagging test}
+
+\ExplSyntaxOn
+\cs_new_eq:NN \PI \c_pi_fp
+\ExplSyntaxOff
+
+\begin{document}
+
+\setBold[0.01]\noindent
+An example:
+$\pi^{\pi}=\fpeval{\PI^\PI}$ and
+$\displaystyle\int\limits_1^{\infty}\frac1{x^2} dx=1$
+
+\setBold[0.2]\noindent
+An example:
+$\pi^{\pi}=\fpeval{\PI^\PI}$ and
+$\displaystyle\int\limits_1^{\infty}\frac1{x^2} dx=1$
+
+\setBold[0.6]\noindent
+An example:
+$\pi^{\pi}=\fpeval{\PI^\PI}$ and
+$\displaystyle\int\limits_1^{\infty}\frac1{x^2} dx=1$
+\unsetBold
+
+\setBold\noindent% Using the default value
+An example:
+$\pi^{\pi}=\fpeval{\PI^\PI}$ and
+$\displaystyle\int\limits_1^{\infty}\frac1{x^2} dx=1$
+\unsetBold
+
+\end{document}

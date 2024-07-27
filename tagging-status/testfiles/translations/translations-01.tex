@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{translations}
+
+\title{translations tagging test}
+
+\DeclareTranslation{English}{Kueche}{kitchen}
+\DeclareTranslation{German}{Kueche}{K\"uche}
+\DeclareTranslation{Spanish}{Kueche}{cocina}
+\DeclareTranslation{French}{Kueche}{cuisine}
+
+\begin{document}
+
+\GetTranslation{Kueche}
+\SaveTranslation\kitchen{Kueche}
+\SaveTranslationFor\cuisine{french}{Kueche}
+
+\selectlanguage{ngerman}
+\GetTranslation{Kueche} \kitchen\ \GetTranslationFor{spanish}{Kueche}
+\cuisine
+
+\IfTranslation{German}{Kueche}{true}{false} \par
+\IfTranslation{Danish}{Kueche}{true}{false}
+
+\end{document}

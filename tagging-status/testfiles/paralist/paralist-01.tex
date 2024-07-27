@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{paralist}
+
+\title{paralist tagging test}
+
+\begin{document}
+
+% optional argument does nothing
+\begin{enumerate}[(i)]
+\item first
+\item second
+\end{enumerate}
+
+% errors
+\begin{asparaenum}
+\item Every ...
+\item The next ...
+\end{asparaenum}
+
+% errors
+\begin{compactenum}
+\item Every ...
+\item The next ...
+\end{compactenum}
+
+% errors
+... of an enumerated environment that
+\begin{inparaenum}[(a)]
+\item can be used within paragraphs,
+\item takes care of enumeration and
+\item has items that can be referenced.
+\end{inparaenum}
+Another posting mentioned ...
+
+\end{document}
