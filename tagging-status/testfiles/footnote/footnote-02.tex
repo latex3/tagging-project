@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{footnote}
+
+\title{footnote tagging test - minipage}
+
+\begin{document}
+
+\begin{savenotes}
+\begin{minipage}{3cm}
+text text\footnote{first} text text\footnote{second} text text\footnote{third} text text
+\end{minipage}
+\end{savenotes}
+
+\begin{minipage*}{3cm}
+text text\footnote{first} text text\footnote{second} text text\footnote{third} text text
+\end{minipage*}
+
+\end{document}
