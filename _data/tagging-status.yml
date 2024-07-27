@@ -352,7 +352,7 @@
  - name: amscd
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -2479,7 +2479,7 @@
  - name: enumitem
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one can use, for example, `\begin{itemize}[...]` out of the box.
    tasks: Check which keys are not yet supported and what else is missing. 
@@ -2758,7 +2758,7 @@
  - name: fancyhdr
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    issues:
    tests: true
    updated: 2024-07-12
@@ -4596,7 +4596,7 @@
  - name: lineno
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    issues: [162,210]
    tests: true
@@ -5312,7 +5312,7 @@
  - name: microtype
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    comments: Footnote patching doesn’t work but otherwise supported.
    issues: [67]
    updated: 2024-07-06
@@ -5459,7 +5459,7 @@
  - name: multicol
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    issues:
    tasks: test column rules
    updated: 2024-07-06
@@ -6565,7 +6565,7 @@
  - name: pifont
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 9
    comments: "Missing ToUnicode for text symbols. Labels disappear in `dingautolist`."
    issues:
@@ -6988,7 +6988,7 @@
  - name: rotating
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    issues: [112]
    tests: true
@@ -7229,7 +7229,7 @@
  - name: setspace
    type: package
    status: unknown
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    issues:
    tests: false
@@ -7426,7 +7426,7 @@
  - name: soul
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    issues: [167]
    tests: true
@@ -7645,7 +7645,7 @@
  - name: subcaption
    type: package
    status: currently-incompatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    comments:  Issue when hyperref and both listoffigures are used.
    issues: [85]
@@ -7852,7 +7852,7 @@
  - name: tabularx
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    supported-through: [phase-III,table]
    comments: An old issue has been fixed.
    issues: [42]
@@ -8462,7 +8462,7 @@
  - name: txfonts
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    comments: Obsolete package; suggested replacement `newtxmath`.
    issues:
    tests: false
@@ -8651,7 +8651,7 @@
  - name: verbatim
    type: package
    status: partially-compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    priority: 2
    comments: "verbatim environment from package overwritten by tagging code;
              content input with `\\verbatiminput` is tagged as normal text, not Code."
@@ -8982,7 +8982,7 @@
  - name: xparse
    type: package
    status: compatible
-   included-in: tlc3
+   included-in: tlc3 arxiv5
    issues:
    tests: false
    updated: 2024-07-15
