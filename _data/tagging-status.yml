@@ -406,6 +406,16 @@
    tests: true
    updated: 2024-07-17
 
+ - name: amsgen
+   ctan-pkg: amsmath
+   type: package
+   status: unknown
+   included-in: [arxiv10]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: amsmath
    type: package
    status: partially-compatible
@@ -2561,6 +2571,15 @@
    related-issues: [4]
    updated: 2024-07-06
 
+ - name: everyshi
+   status: unknown
+   included-in: [arxiv10]
+   priority: 4
+   comments: "legacy package"
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: eolgrab
    type: package
    status: compatible
@@ -2590,10 +2609,20 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: epsf
+   status: unknown
+   included-in: [arxiv10]
+   priority: 4
+   comments: "Obsolete"
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: epsfig
    type: package
    status: compatible
    included-in: [arxiv10]
+   priority: 4
    comments: "Obsolete, small wrapper around graphicx"
    issues:
    updated: 2024-07-07
@@ -2655,6 +2684,15 @@
    issues:
    tests: true
    updated: 2024-07-15
+
+ - name: etex
+   status: unknown
+   included-in: [arxiv10]
+   priority: 4
+   comments: "Obsolete"
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: ethiop
    type: package
@@ -4070,6 +4108,8 @@
    type: package
    status: compatible
    included-in: [tlc3, arxiv01]
+   priority: 2
+   comments: "Obsolete wrapper for iftex
    issues:
    tests: false
    updated: 2024-07-15
@@ -4107,6 +4147,16 @@
    issues:
    tests: true
    updated: 2024-07-22
+
+ - name: ifpdf
+   type: package
+   status: compatible
+   included-in: [arxiv10]
+   priority: 4
+   comments: "Obsolete wrapper for iftex
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: ifplatform
    type: package
@@ -4228,6 +4278,14 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: infwarerr
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: inputenc
    type: package
@@ -4861,6 +4919,14 @@
    issues: [256]
    tests: true
    updated: 2024-07-26
+
+ - name: ltxcmds
+   status: unknown
+   included-in: [arxiv10]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: ltxgrid
    type: package
@@ -6593,16 +6659,6 @@
    tasks: needs tests
    updated: 2024-07-18
 
- - name: pdfrender
-   type: package
-   status: unknown
-   included-in:
-   priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
-
  - name: pdfpages
    type: package
    status: currently-incompatible
@@ -6613,6 +6669,24 @@
    tasks: needs tests
    issues: [86]
    updated: 2024-07-06
+
+ - name: pdfrender
+   type: package
+   status: unknown
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-07-18
+
+ - name: pdftexcmds
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: pdfx
    type: package
@@ -6653,6 +6727,40 @@
    tasks: needs tests
    updated: 2024-07-18
 
+ - name: pgf
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
+
+ - name: pgffor
+   ctan-pkg: pgf
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
+
+ - name: pgfkeys
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
+
+ - name: pgfmath
+   ctan-pkg: pgf
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: pgfmorepages
    type: package
    status: unknown
@@ -6692,6 +6800,15 @@
               is not yet supported."
    tests: true
    updated: 2024-07-16
+
+ - name: pgfrcs
+   ctan-pkg: pgf
+   status: unknown
+   included-in: [arxiv10]
+   priority: 3
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: phonenumbers
    type: package
