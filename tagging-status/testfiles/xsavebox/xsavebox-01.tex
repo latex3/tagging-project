@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{xsavebox}
+
+\title{xsavebox tagging test}
+
+\begin{document}
+
+% \savebox,\usebox not supported yet
+\newsavebox{\blah}
+\savebox{\blah}{content with spaces}
+normal text \usebox\blah
+
+% this loses spaces at pdf level
+\xsavebox{xblah}{content with spaces}
+normal text \xusebox{xblah}
+
+% produces parent-child warnings
+\begin{xlrbox}{SavedPar}
+\begin{minipage}[b]{1in}
+silly boxed paragraph that no one will ever use
+\end{minipage}
+\end{xlrbox}
+
+% below is not necessary to get warnings
+%normal text and \xusebox{SavedPar}
+
+\end{document}
