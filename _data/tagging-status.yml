@@ -267,6 +267,26 @@
    tasks: needs tests
    updated: 2024-07-18
 
+ - name: algorithm
+   ctan-pkg: algorithms
+   type: package
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
+
+ - name: algorithmic
+   ctan-pkg: algorithms
+   type: package
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: algorithmicx
    type: package
    status: unknown
@@ -819,6 +839,15 @@
    tests: true
    updated: 2024-07-25
 
+ - name: bbm
+   type: package
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: bboldx
    type: package
    status: compatible
@@ -1068,7 +1097,7 @@
    type: package
    status: compatible
    included-in: [tlc3, arxiv1]
-   supported-through: [phase-III,firstaid]  
+   supported-through: [phase-III,firstaid]
    updated: 2024-07-07
 
  - name: blkarray
@@ -2656,7 +2685,7 @@
    included-in: [tlc3, arxiv10]
    issues:
    updated: 2024-07-12
-  
+
  - name: eucal
    ctan-pkg: amsfonts
    type: package
@@ -3021,7 +3050,7 @@
    references: [2]
    tasks: needs tests
    updated: 2024-07-06
-  
+
  - name: floatpag
    type: package
    status: currently-incompatible
@@ -3031,7 +3060,7 @@
    issues: [209]
    tests: true
    updated: 2024-07-19
-  
+
  - name: floatflt
    type: package
    status: unknown
@@ -3061,7 +3090,7 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
-  
+
  - name: fltrace
    ctan-pkg: latex-base
    type: package
@@ -5905,6 +5934,15 @@
    tests: false
    updated: 2024-07-26
 
+ - name: nicefrac
+   type: package
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
+
  - name: niceframe
    type: package
    status: currently-incompatible
@@ -7520,7 +7558,7 @@
    tests: true
    tasks: needs even more tests
    updated: 2024-07-18
-  
+
  - name: slashed
    type: package
    status: compatible
@@ -7815,6 +7853,15 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: subfigure
+   type: package
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   issues:
+   tests: false
+   updated: 2024-07-28
 
  - name: subfiles
    type: package
@@ -8672,7 +8719,7 @@
    included-in:
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
-   issues:  
+   issues:
    updated: 2024-07-12
 
  - name: unicodefonttable
@@ -9560,8 +9607,17 @@
    type: class
    status: compatible
    included-in: [tlc3, arxiv01]
-   supported-through: [phase-III,title]  
+   supported-through: [phase-III,title]
    updated: 2024-07-05
+
+ - name: revtex4-1
+   type: class
+   status: unknown
+   included-in: [arxiv5]
+   priority: 4
+   comments: "obsolete class: new documents should use 4-2"
+   tests: false
+   updated: 2024-07-28
 
  - name: revtex4-2
    ctan-pkg: revtex
