@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{addlines,lipsum}
+
+\title{addlines tagging test}
+
+\setlength\textwidth{138.60141pt}
+
+\setlength\textheight{86pt}
+\addtolength\footskip{-2pt}
+
+\tolerance=4000
+
+\pagestyle{empty}
+\flushbottom
+  
+\begin{document}
+\twocolumn \raggedright
+A) \lipsum[1][1]  \par
+  \addline
+B) \lipsum[1][2-3]\par
+C) \lipsum[1][4-5]\par
+D) \lipsum[2][1]  \par
+E) \lipsum[3]
+\end{document}
