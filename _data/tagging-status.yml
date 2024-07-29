@@ -5108,11 +5108,13 @@
 
  - name: luamplib
    type: package
-   status: compatible
+   status: partially-compatible
    included-in:
-   comments: An old issue has been fixed.
-   issues: [8]
-   updated: 2024-07-06
+   comments: "An old issue has been fixed. `mplibcode` environments are not tagged
+              as figure and have no option to specify Alt text."
+   issues: [8,252]
+   tests: true
+   updated: 2024-07-29
 
  - name: luapstricks
    type: package
