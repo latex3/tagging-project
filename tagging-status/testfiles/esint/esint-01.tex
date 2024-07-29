@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{amsmath} % must be loaded before esint
+\usepackage{esint}
+
+\title{esint tagging test}
+
+\begin{document}
+
+\[\int_0^1f(x)dx\]
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \int
+    \iint
+    \iiint
+    \iiiint
+    \idotsint
+    \oint
+    \oiint
+    \varoiint
+    \sqint
+    \sqiint
+    \ointctrclockwise
+    \ointclockwise
+    \varointclockwise
+    \varointctrclockwise
+    \fint
+    \landupint
+    \landdownint
+  }
+  { $#1$ \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\end{document}

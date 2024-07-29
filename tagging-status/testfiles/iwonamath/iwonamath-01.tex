@@ -1,0 +1,75 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage[default]{lato}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[scale=1.15]{iwonamath}
+\DefineIwonaMathVersion{name=iwonacondensed, condensed}
+\DefineIwonaMathVersion{name=iwonalight, light}
+\DefineIwonaMathVersion{name=iwonalightcondensed, light, condensed}
+\newcommand\ibinom[2]{\genfrac\lbrace\rbrace{0pt}{}{#1}{#2}} 
+\long\def\sample{%
+  First some large operators both in text:
+\smash{$ \iiint\limits_{\mathcal{Q}} f(x,y,z)\,dx\,dy\,dz $}
+and
+$\prod_{\gamma\in\Gamma_{\widetilde{C}}} \partial(\widetilde{X}_\gamma)$;
+and also on display:
+
+\begin{equation}
+\begin{split}
+\iiiint\limits_{\mathbf{Q}} f(w,x,y,z)\,dw\,dx\,dy\,dz  &\leq
+\oint_{\bm{\partial Q}} f' \left( \max \left\lbrace
+\frac{\lVert w \rVert}{\lvert w^2 + x^2 \rvert} ;
+\frac{\lVert z \rVert}{\lvert y^2 + z^2 \rvert} ;
+\frac{\lVert w \oplus z \rVert}{\lVert x \oplus y \rVert}
+\right\rbrace\right)
+\\
+&\precapprox \biguplus_{\mathbb{Q} \Subset \bar{\mathbf{Q}}}
+  \left[ f^{\ast} \left(
+    \frac{\left\lmoustache\mathbb{Q}(t)\right\rmoustache}
+         {\sqrt {1 - t^2}}
+  \right)\right]_{t=\alpha}^{t=\vartheta}
+  - ( \Delta + \nu - v )^3
+\end{split}
+\end{equation}
+
+For $x$ in the open interval $ \left] -1, 1 \right[ $
+the infinite sum in Equation~(2) is convergent;
+however, this does not hold
+throughout the closed interval $ \left[ -1, 1 \right] $.
+\begin{align}
+  (1 - x)^{-k} &=
+   1 + \sum_{j=1}^{\infty} (-1)^j \ibinom{k}{j} x^j
+    \text{\quad for $k \in \mathbb{N}$; $k \neq 0$.}
+\end{align}}
+
+\title{iwonamath tagging test}
+
+\begin{document}
+In all examples we use Iwona scaled 1.15
+
+\section*{Iwona regular}
+
+\sample
+
+\section*{Iwona condensed}
+
+\mathversion{iwonacondensed}
+\sample
+
+\section*{Iwona light}
+
+\mathversion{iwonalight}
+\sample
+
+\section*{Iwona light condensed}
+
+\mathversion{iwonalightcondensed}
+\sample
+
+\end{document}

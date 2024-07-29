@@ -1,0 +1,41 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{interval}
+
+\title{interval tagging test}
+
+\begin{document}
+
+\begin{align*}
+& A\in\interval{a}{b}              \\
+& A\in\interval[open]{a}{b}        \\
+& A\in\interval[open left]{a}{b}   \\      
+& A\in\interval[open right,
+  scaled]{a}{\frac{1}{2}b}=B       \\     
+& A\in\interval[scaled=\big]{a}{b} \\
+& A\in\ointerval[scaled]{%
+  \tfrac{1}{3}}{\tfrac{1}{2}}
+\end{align*}
+
+\intervalconfig{
+  soft open fences,
+  separator symbol=;,
+}
+\begin{align*}
+& A\in\interval{a}{b}              \\
+& A\in\interval[open]{a}{b}        \\
+& A\in\interval[open left]{a}{b}   \\      
+& A\in\interval[open right,
+  scaled]{a}{\frac{1}{2}b}=B       \\     
+& A\in\interval[scaled=\big]{a}{b} \\
+& A\in\rinterval{a}{b}
+\end{align*}
+
+\end{document}

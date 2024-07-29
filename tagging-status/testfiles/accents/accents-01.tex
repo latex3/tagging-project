@@ -1,0 +1,37 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{amsmath} % have to load amsmath before
+\usepackage{accents}
+
+\title{accents tagging test}
+
+\DeclareMathAccent{\wtilde}{\mathord}{largesymbols}{"65}
+
+\begin{document}
+
+$\accentset{\star}{d}$
+
+$\accentset{\diamond}{h}$
+
+$\tilde{\accentset{\circ}{\phi}}$
+
+$\underaccent{\hat}{x}$
+
+$\underaccent{\bar}{\gamma}$
+
+$\underaccent{\triangleright}{q}$
+
+$\underaccent{\tilde}{\mathcal{A}}$
+
+$\underaccent{\wtilde}{V}$
+
+$\undertilde{CV}$
+
+\end{document}
