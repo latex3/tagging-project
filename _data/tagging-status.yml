@@ -6380,13 +6380,14 @@
 
  - name: old-arrows
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: onepagem
    type: package
@@ -6438,13 +6439,14 @@
 
  - name: oubraces
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: overlock
    type: package
@@ -6612,7 +6614,7 @@
    tasks: needs tests
    updated: 2024-07-18
 
- - name: palantino
+ - name: palatino
    type: package
    status: compatible
    included-in: [tlc3]
