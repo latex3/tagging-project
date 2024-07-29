@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{listofitems}
+
+\title{listofitems tagging test}
+  
+\begin{document}
+
+\setsepchar{+||-}
+\readlist\term{17-8+4-11}
+1) \term[1] (parsing separator = \termsep[1])\par
+2) \term[2] (parsing separator = \termsep[2])\par
+3) \term[3] (parsing separator = \termsep[3])\par
+4) \term[4] (parsing separator = \termsep[4])
+
+\setsepchar{,}
+\readlist\foo{12,abc,x y ,{\bfseries z},,\TeX,,!}
+
+\showitems\foo\par
+\showitems*\foo
+
+\setsepchar{,}
+\readlist*\foo{12,abc, x y ,{\bfseries z}, ,\TeX,,!}
+\showitems\foo
+
+\setsepchar{ }% parsing-separator = space
+\readlist\phrase{One phrase to test.}
+\foreachitem\word\in\phrase{List item number \wordcnt{}: \word\par}
+
+\setsepchar{ }% parsing-separator = space
+\readlist\phrase{One phrase to test.}
+\itemtomacro\phrase[2]\aword
+\meaning\aword\par
+\itemtomacro\phrase[-1]\wordattheend
+\meaning\wordattheend
+
+\end{document}
