@@ -1,0 +1,37 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{derivative}
+
+\title{derivative tagging test}
+
+\begin{document}
+
+$\pdv{f}{x,y}$
+
+$\pdv*{f}{x,y}$
+
+$\pdv{f}!{x,y}$
+
+$\pdv{f}/!{x,y}$
+
+$\pdv{f}{x,y}_{(x_1,y_1)}^{(x_2,y_2)}$
+
+\[\odv{f}{x} \quad \mdv{f}{x} \quad \fdv{f}{x} \quad \adv{f}{x} \quad \jdv{f}{x}\]
+
+$\odif{x,y,z}$
+
+$\odif*[sep-var-var=0]{x,y,z}$
+
+$\odif{s_1,s_2...,s_n}$
+
+$\pdv[sort-method=symbol, order={kn-c,2a-3b}]{f}{x,y}$
+
+\[\slashfrac{y_f}{x} \quad \slashfrac[Bigg]{y_f}{x}\]
+\end{document}

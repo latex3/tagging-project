@@ -1,0 +1,68 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage{abraces,amsmath}
+
+\title{abraces tagging test}
+
+\newcommand{\FnD}{%
+  \textrm{The quick brown fox jumped over the lazy dog}}
+\newlength{\bracecusplen}
+\settowidth{\bracecusplen}{$\braceru\bracelu$}
+ 
+\begin{document}
+
+$\aoverbrace{\FnD}$
+
+$\aunderbrace{\FnD}$
+
+$\aoverbrace[L3U1R]{\FnD}$
+
+$\aunderbrace[l2D1r000@{\bracecolor{blue!70!black}}l1D2r]{\FnD}$
+
+$\aunderbrace[l1D2U2D1r]{\FnD}$
+
+$\aoverbrace[L1R]{\FnD}$
+
+$\aunderbrace[L1U3R]{\FnD}$
+
+$\aunderbrace['6,0l3D3r0,6']{\FnD}$
+
+$\aoverbrace[L5*{3}{01}05U50*{3}{10}5R]{\FnD}$
+
+$\aunderbrace[l1@{\hspace{5em}}2D2@{~\ldots~}1r]{\FnD}$
+
+$\aunderbrace[l1R@{\color{red!80!white}}L1r]{\FnD}$
+
+$\aoverbrace[,1D!{5em},]{\FnD}$
+
+$\aoverbrace[L1U2R]{\FnD}^{\text{one-third of the way}}$
+
+$\aoverbrace[L1U1D1U1R]{\FnD}^{\text{left} & \text{right}}$
+
+$\aoverbrace[L1U1D1U1R]{\FnD}[L*{3}{1U}1R]^{\text{left} & \text{middle} & \text{right}}$
+
+\newbracespec{u}{@{\hspace{-.5\bracecusplen}}U@{\hspace{-.5\bracecusplen}}}%
+\newbracespec{d}{@{\hspace{-.5\bracecusplen}}D@{\hspace{-.5\bracecusplen}}}%
+$\aunderbrace
+  [00l2@{\hspace{-\bracecusplen}}1r]{% \aunderbrace brace script
+    \aoverbrace
+      [L1@{\hspace{-\bracecusplen}}1R000]% \aoverbrace brace script
+      {\FnD}% stuff
+      [1u13]% \aoverbrace script spec
+      ^{2/5}% \aoverbrace upper script
+  }
+  [43d3]% \aunderbrace script spec
+  _{3/5}$% \aunderbrace lower script
+
+\newbracespec{a}{@{\hspace{-.5\bracecusplen}}D}%
+\newbracespec{z}{D@{\hspace{-.5\bracecusplen}}}%
+$\aunderbrace[l1r]{\FnD}[a1z]_{\text{\rlap{far left}} & \text{\llap{far right}}}$      
+\end{document}

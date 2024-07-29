@@ -113,13 +113,14 @@
 
  - name: abraces
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   tests: true
+   updated: 2024-07-29
 
  - name: abstract
    type: package
@@ -152,13 +153,15 @@
 
  - name: accents
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "amsmath must be loaded before accents.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   tests: true
+   updated: 2024-07-29
 
  - name: accsupp
    type: package
@@ -340,13 +343,14 @@
 
  - name: aligned-overset
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: alltt
    type: package
@@ -419,12 +423,12 @@
  - name: amsgen
    ctan-pkg: amsmath
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv10]
    priority: 4
    issues:
    tests: false
-   updated: 2024-07-28
+   updated: 2024-07-29
 
  - name: amsmath
    type: package
@@ -491,12 +495,14 @@
  - name: amsxtra
    ctan-pkg: latex-amsmath
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv1]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-07-29
 
  - name: andika
    type: package
@@ -870,12 +876,14 @@
 
  - name: bbm
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv5]
    priority: 4
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   updated: 2024-07-28
+   tests: true
+   updated: 2024-07-29
 
  - name: bboldx
    type: package
@@ -1526,13 +1534,14 @@
 
  - name: centernot
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: cfr-lm
    type: package
@@ -2239,13 +2248,14 @@
 
  - name: derivative
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: diagbox
    type: package
@@ -2259,13 +2269,14 @@
 
  - name: diffcoeff
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-29
 
  - name: dingbat
    type: package
@@ -2727,13 +2738,15 @@
 
  - name: esint
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "amsmath must be loaded before esint.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-29
 
  - name: eso-pic
    type: package
@@ -2869,13 +2882,14 @@
 
  - name: extarrows
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-29
 
  - name: extdash
    type: package
@@ -2922,13 +2936,14 @@
 
  - name: faktor
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: fancybox
    type: package
@@ -3896,13 +3911,15 @@
  - name: grmath
    ctan-pkg: babel-greek
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "amsmath must be loaded before grmath.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   updated: 2024-07-29
 
 #------------------------ HHH ----------------------------
 
@@ -4392,13 +4409,14 @@
 
  - name: interval
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: intopdf
    type: package
@@ -4421,13 +4439,14 @@
 
  - name: iwonamath
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
 #------------------------ JJJ ----------------------------
 
