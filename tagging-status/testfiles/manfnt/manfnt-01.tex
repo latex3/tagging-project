@@ -1,0 +1,49 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{manfnt}
+
+\title{manfnt tagging test}
+
+\begin{document}
+
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \dbend
+    \manboldkidney
+    \manconcentriccircles
+    \manconcentricdiamond
+    \mancone
+    \mancube
+    \manerrarrow
+    \manfilledquartercircle
+    \manhpennib
+    \manimpossiblecube
+    \mankidney
+    \manlhpenkidney
+    \manpenkidney
+    \manquadrifolium
+    \manquartercircle
+    \manrotatedquadrifolium
+    \manrotatedquartercircle
+    \manstar
+    \mantiltpennib
+    \mantriangledown
+    \mantriangleright
+    \mantriangleup
+    \manvpennib
+    \textdbend
+    \textlhdbend
+    \textreversedvideodbend
+  }
+  { #1 \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\end{document}

@@ -101,6 +101,16 @@
    tests: false
    updated: 2024-07-21
 
+ - name: aboensis
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues:
+   comments: "Text not correctly mapped to unicode."
+   tests: true
+   updated: 2024-07-29
+
  - name: abraces
    type: package
    status: unknown
@@ -1893,6 +1903,15 @@
    issues:
    tests: false
    updated: 2024-07-21
+
+ - name: comicneue
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   updated: 2024-07-29
 
  - name: comment
    type: package
@@ -5245,6 +5264,16 @@
    tests: true
    updated: 2024-07-11
 
+ - name: manfnt
+   type: package
+   status: partially-compatible
+   included-in:
+   priority: 9
+   issues:
+   comments: "Text symbols missing ToUnicode/Alt/ActualText."
+   tests: true
+   updated: 2024-07-29
+
  - name: manyfoot
    type: package
    status: currently-incompatible
@@ -7434,13 +7463,37 @@
 
  - name: sansmath
    type: package
-   status: unknown
+   status: compatible
    included-in:
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
+
+ - name: sansmathaccent
+   type: package
+   status: compatible
+   included-in:
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-07-29
+
+ - name: sansmathfonts
+   type: package
+   status: partially-compatible
+   included-in:
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   priority: 9
+   issues:
+   comments: "Symbols in math mode are not mapped correctly to unicode."
+   tests: true
+   updated: 2024-07-29
 
  - name: savetrees
    type: package
@@ -7652,6 +7705,17 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: sfmath
+   type: package
+   status: compatible
+   included-in:
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-07-29
 
  - name: shadethm
    type: package
@@ -9611,6 +9675,15 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: ysabeau
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   updated: 2024-07-29
 
 #------------------------ ZZZ ----------------------------
 
