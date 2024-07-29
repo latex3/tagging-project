@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{scalerel}
+
+\title{scalerel tagging test}
+
+\def\preblob{\displaystyle\sum_{i=0}^3}
+\def\blob{\displaystyle\frac{\displaystyle\frac{x^3}{z+r^3}}%
+{\displaystyle\frac{y}{x^2}}%
+}
+
+\begin{document}
+
+$\preblob\blob$
+
+$\scalerel{\preblob}{\blob}$
+
+$\scalerel[3ex]{\preblob}{\blob}$
+
+$\scalerel[3ex]{\triangleleft}{\blob}
+\scalerel*[3ex]{\triangleright}{\blob}$
+
+$\left\{\blob\right.$ and $\stretchrel[550]{\{}{\blob}$
+
+$\stretchrel[350]{\int}{\blob} dx$
+
+$\scaleto{\blob}{80pt}$
+
+$\stretchto[175]{\Phi}{60pt}$
+
+$\scaleleftright[3ex]{\prod}{\blob}{\coprod}$
+
+$\stretchleftright[450]{.}{\blob}{\in}$
+
+$\otimes\hstretch{3}{\otimes}\hstretch{0.5}{\otimes}$
+
+$\otimes\vstretch{3}{\otimes}\vstretch{0.5}{\otimes}$
+
+\end{document}

@@ -4755,13 +4755,14 @@
 
  - name: letterswitharrows
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: lettrine
    type: package
@@ -5107,13 +5108,14 @@
 
  - name: luamathalign
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: luamesh
    type: package
@@ -5355,12 +5357,13 @@
 
  - name: mathalpha
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
+   tests: true
    updated: 2024-07-15
 
  - name: mathastext
@@ -5385,13 +5388,14 @@
 
  - name: mathdots
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: mathpazo
    type: package
@@ -5453,13 +5457,14 @@
 
  - name: mattens
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: mcaption
    type: package
@@ -6397,13 +6402,14 @@
 
  - name: old-arrows
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: onepagem
    type: package
@@ -6455,13 +6461,14 @@
 
  - name: oubraces
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: overlock
    type: package
@@ -6629,7 +6636,7 @@
    tasks: needs tests
    updated: 2024-07-18
 
- - name: palantino
+ - name: palatino
    type: package
    status: compatible
    included-in: [tlc3]
@@ -7538,13 +7545,14 @@
 
  - name: scalerel
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: schola-otf
    type: package
@@ -8041,13 +8049,14 @@
 
  - name: stackrel
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: stampinclude
    type: package
@@ -8071,13 +8080,15 @@
 
  - name: steinmetz
    type: package
-   status: unknown
+   status: partially-compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   comments: "Picture used to draw symbol should be Artifact.
+              Use of math tagging currently requires support from external tools."
+   tests: true
+   updated: 2024-07-29
 
  - name: step
    type: package
@@ -8163,23 +8174,25 @@
 
  - name: subdepth
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-07-29
 
  - name: subeqn
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
    issues:
+   comments: "Incompatible with amsmath which is loaded by `testphase=math`."
    tests: false
    tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-07-29
 
  - name: subfig
    type: package
@@ -9107,13 +9120,14 @@
 
  - name: upgreek
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-28
+   tests: true
+   updated: 2024-07-29
 
  - name: upquote
    type: package
@@ -9690,13 +9704,14 @@
 
  - name: yhmath
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-29
 
  - name: ysabeau
    type: package
