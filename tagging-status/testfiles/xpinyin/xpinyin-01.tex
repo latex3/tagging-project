@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{xpinyin}
+\iftutex
+\setmainfont{Libertinus Serif}
+\setCJKmainfont{SimSun}
+\else
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\fi
+\begin{document}
+\xpinyin*{汉语拼音示例}
+
+\begin{pinyinscope}
+列位看官：你道此书从何而来？说起根由，虽近荒唐，细按则深有趣味。
+待在下将此来历注明\footnote{虽近荒唐}，方使阅者\xpinyin{了}{liao3}然不惑。
+\end{pinyinscope}
+
+\xpinyin{长}{chang2}
+
+\xpinyin*{\xpinyin{重}{zhong4}要}
+
+\pinyin{lv2zi}
+
+\pinyin{nv3hai2zi}
+
+\end{document}
