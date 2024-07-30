@@ -1,0 +1,49 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+
+\documentclass{article}
+\usepackage{newproof}
+
+\title{newproof tagging test}
+
+\newproof{solution}{Solution.}{blub}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\begin{proof}
+A proof.
+\end{proof}
+
+\begin{proof}[B. L. User]
+A named proof.
+\end{proof}
+
+\begin{proof}
+Yet another.
+\end{proof}
+
+\begin{solution}
+A solution.
+\end{solution}
+
+\begin{solution}[B. L. User]
+A named solution.
+\end{solution}
+
+\begin{solution}
+Yet another.\qed
+\end{solution}
+
+% compare with
+\begin{theorem}
+A proof.
+\end{theorem}
+
+\end{document}
