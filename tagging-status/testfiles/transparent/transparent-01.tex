@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{transparent,kantlipsum}
+
+\title{transparent tagging test}
+
+\begin{document}
+
+\kant[1-3]
+
+\transparent{0.5} \kant[4]
+
+\kant[5-6]
+
+\texttransparent{0}{\kant[7-8]}
+
+\end{document}
