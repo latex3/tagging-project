@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage[nomentbl]{nomencl}
+\makenomenclature
+\begin{document}
+\section*{Main equations}
+Here an equation
+\begin{equation}\label{eq:heatflux}
+    \dot{Q} = k \cdot A \cdot \Delta T
+\end{equation}%
+\nomenclature[aQ]{$\dot{Q}$}{heat flux}{W}{}%
+\nomenclature[ak]{$k$}{overall heat transfer
+  coefficient}{\watt\per(\square\meter\kelvin)}{see
+  eq.}%
+\printnomenclature
+\end{document}
