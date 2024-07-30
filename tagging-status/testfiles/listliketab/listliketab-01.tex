@@ -1,0 +1,47 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{listliketab,tabularx}
+
+\title{listliketab tagging test}
+  
+\begin{document}
+
+\storestyleof{itemize}
+\begin{listliketab}
+\begin{tabular}{Ll}
+\textbullet & One \\
+\textbullet & Two \\
+\textbullet & Three \\
+\end{tabular}
+\end{listliketab}
+
+\storestyleof{enumerate}
+\begin{listliketab}
+\newcounter{tabenum}\setcounter{tabenum}{0}
+\newcommand{\nextnum}{\addtocounter{tabenum}{1}\thetabenum.}
+\begin{tabular}{L>{\bf}l@{~or~}>{\bf}l@{~or~}>{\bf}l}
+\nextnum & Red & green & blue \\
+\nextnum & Short & stout & tall \\
+\nextnum & Happy & sad & confused \\
+\end{tabular}
+\end{listliketab}
+
+\storestyleof{itemize}
+\begin{listliketab}
+\begin{tabularx}{0.5\linewidth}{%
+LX@{\raisebox{-2pt}{\framebox(12,12){}}}R}
+\textbullet & Milk \\
+\textbullet & Flour \\
+\textbullet & Sugar \\
+\textbullet & Butter \\
+\textbullet & Eggs \\
+\end{tabularx}
+\end{listliketab}
+
+\end{document}
