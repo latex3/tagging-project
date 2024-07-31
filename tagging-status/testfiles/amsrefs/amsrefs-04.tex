@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{amsrefs}
+
+\begin{document}
+
+\section{Introduction}
+
+A single cite \cite{MR1451594}
+and a multiple \cites{Weyl,Gould,Rob,MR95f:17013,Ser77}.
+And then with an option in the middle:
+\citelist{\cite{Rob} \cite{Gould} \cite{MR95f:17013}*{Chapter 18}}.
+
+\begin{bibsection}
+\begin{biblist}
+\bibselect{gktest}
+\end{biblist}
+\end{bibsection}
+
+\end{document}
