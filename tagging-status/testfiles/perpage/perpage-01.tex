@@ -1,0 +1,80 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass[twocolumn]{article}
+\usepackage{perpage}
+\usepackage{graphicx}
+
+\MakePerPage[2]{footnote}
+\MakeSorted{figure}
+\renewcommand{\thefigure}{\theperpage.\arabic{figure}}
+\MakeSortedPerPage[5]{table}
+\renewcommand{\thetable}{\theperpage.\arabic{table}}
+
+\begin{document}
+Absolute page = \theabspage
+\begin{figure*}
+\includegraphics[alt={alt text},scale=0.5]{example-image}
+\caption{First image}
+\end{figure*}
+\begin{figure}
+\includegraphics[alt={alt text},scale=0.5]{example-image}
+\caption{Second image}
+\end{figure}
+\begin{figure*}
+\includegraphics[alt={alt text},scale=0.5]{example-image}
+\caption{Third image}
+\end{figure*}
+text\footnote{first}
+
+more text\footnote{second}
+
+\begin{table}
+Insert table
+\caption{First table}
+\end{table}
+
+\newpage
+Absolute page = \theabspage
+
+text\footnote{first}
+
+\begin{table*}
+Insert table
+\caption{Second table}
+\end{table*}
+\begin{table}
+Insert table
+\caption{Third table}
+\end{table}
+
+more text\footnote{second}
+
+\newpage
+Absolute page = \theabspage
+
+text\footnote{first}
+
+more text\footnote{second}
+
+\begin{table*}
+Insert table
+\caption{Fourth table}
+\end{table*}
+\begin{table}
+Insert table
+\caption{Fifth table}
+\end{table}
+
+\newpage
+Absolute page = \theabspage
+
+text\footnote{first}
+
+more text\footnote{second}
+
+\end{document}
