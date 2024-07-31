@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{pdfrender,xcolor}
+
+\title{pdfrender tagging test}
+
+\begin{document}
+
+text
+
+{\color{green}
+\textpdfrender{TextRenderingMode=2,StrokeColor=black,LineWidth=0.2pt}{text}}
+
+\end{document}
