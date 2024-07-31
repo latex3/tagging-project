@@ -1,0 +1,59 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{answers}
+%\usepackage[nosolutionfiles]{answers}
+\newtheorem{Exc}{Exercise}
+\newenvironment{Ex}{\begin{Exc}\normalfont}{\end{Exc}}
+\Newassociation{solution}{Soln}{test}
+\Newassociation{hint}{Hint}{test}
+\Newassociation{Solution}{sSol}{testtwo}
+\newcommand{\prehint}{~[Hint]}
+\newcommand{\presolution}{~[Solution]}
+\newcommand{\preSolution}{~[Homework]}
+\newcommand{\Opentesthook}[2]%
+   {\Writetofile{#1}{\protect\section{#1: #2}}}
+\renewcommand{\Solnlabel}[1]{\emph{Solution #1}}
+\renewcommand{\Hintlabel}[1]{\emph{Hint #1}}
+\renewcommand{\sSollabel}[1]{\emph{Solution to #1}}
+
+\begin{document}
+   \Opensolutionfile{test}[ans2]{Solutions}
+   \Writetofile{test}{\protect\subsection{Some Solutions}}
+   \Opensolutionfile{testtwo}[ans2x]
+   \Writetofile{testtwo}{%
+      \protect\subsection{Extra Solutions}}
+   \section{Exercises}
+   \begin{Ex}
+      An exercise with a solution.
+      \begin{solution}
+         This is a solution.
+         \relax{}
+      \end{solution}
+   \end{Ex}
+   \begin{Ex}
+      An exercise with a hint and a secret solution.
+      \begin{hint}
+         This is a hint.
+      \end{hint}
+      \begin{Solution}
+         This is a secret solution.
+      \end{Solution}
+   \end{Ex}
+   \begin{Ex}
+      An exercise with a hint.
+      \begin{hint}
+         This is a hint.
+      \end{hint}
+   \end{Ex}
+   \Closesolutionfile{test}
+   \Readsolutionfile{test}
+   \clearpage
+   \Closesolutionfile{testtwo}
+   \Readsolutionfile{testtwo}
+\end{document}
