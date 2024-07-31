@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III},
+  }
+\documentclass{article}
+\usepackage{truncate} % bad
+%\usepackage[hyphenate]{truncate} % good
+%\usepackage[breakwords]{truncate} % bad
+%\usepackage[breakall]{truncate} % bad
+
+\title{truncate tagging test}
+
+\begin{document}
+
+\truncate{122pt}{This text has been truncated}
+
+\truncate{122pt}{This text has been~truncated}
+
+\end{document}

@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{book}
+\usepackage{index}
+
+\makeindex
+
+\newindex{aut}{adx}{and}{Name Index}
+
+\begin{document}
+
+%\chapter{Chapter header\index{chapter}} % this is okay
+\chapter{Chapter header\index[aut]{chapter}} % this is wrong
+\section{Section header\index[aut]{section}} % this is okay
+
+\printindex[aut]
+
+\end{document}

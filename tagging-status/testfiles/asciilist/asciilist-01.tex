@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\begin{filecontents*}[overwrite]{AsciiContents.example}
+ * item
+   - sub-item
+ * another item
+\end{filecontents*}
+
+\documentclass{article}
+\usepackage{asciilist}
+
+\title{asciilist tagging test}
+
+\begin{document}
+
+\begin{enumerate}
+\item bla
+\item blub
+\end{enumerate}
+
+\AsciiListFromFile{auto}{AsciiList.example}
+
+\end{document}

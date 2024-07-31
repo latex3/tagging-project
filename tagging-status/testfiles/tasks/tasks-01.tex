@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{tasks}
+
+\title{tasks tagging test}
+
+\def\sample{This is some sample text we will use to create a somewhat
+longer text spanning a few lines.}
+\def\Sample{\sample\ \sample\par\sample}
+
+\begin{document}
+
+\begin{tasks}(2)
+\task \Sample
+\task \Sample
+\end{tasks}
+
+\end{document}
