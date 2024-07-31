@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathabx}
+\providecommand\mathbfont{\usefont{U}{mathb}{m}{n}} % bug in mathabx
+
+\title{mathabx tagging test}
+
+\begin{document}
+
+$\upupharpoons$
+
+$\doublebarwedge$
+
+$\int_i^j f(x)$
+
+\mayadelimiters([,])
+$\maya{1251}+\maya{2135}=\maya{3386}\neq\mayadigit{0}$
+
+\end{document}

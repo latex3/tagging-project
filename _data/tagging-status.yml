@@ -3010,13 +3010,15 @@
 
  - name: fdsymbol
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-31
 
  - name: fetamont
    type: package
@@ -5262,13 +5264,16 @@
 
  - name: MnSymbol
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
-   priority: 6
+   included-in:
+   priority: 9
+   supported-through: [phase-III,math]
+   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-31
 
  - name: magaz
    type: package
@@ -5357,13 +5362,15 @@
 
  - name: mathabx
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Must be loaded after amsmath. Math symbols are not sensibly mapped to unicode.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-31
 
  - name: mathalpha
    type: package
@@ -5515,13 +5522,15 @@
 
  - name: mdsymbol
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
+   supported-through: [phase-III,math]
+   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
+              Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-07-31
 
  - name: media9
    type: package
