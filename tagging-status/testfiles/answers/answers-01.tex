@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass[12pt,a4paper]{article}
+\usepackage{answers}
+\Newassociation{sol}{Solution}{ans}
+\newtheorem{ex}{Exercise}
+\begin{document}
+\Opensolutionfile{ans}[ans1]
+\section{Problems}
+\begin{ex}
+   First exercise
+   \begin{sol}
+      First solution.
+   \end{sol}
+\end{ex}
+\begin{ex}
+   Second exercise
+   \begin{sol}
+      Second solution.
+   \end{sol}
+\end{ex}
+\Closesolutionfile{ans}
+\section{Solutions}
+\input{ans1}
+\end{document}
