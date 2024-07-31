@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{fnpct}
+
+\title{fnpct tagging test}
+
+\begin{document}
+
+The three little pigs built their houses out of straw\footnote*{not to be
+confused with hay}, sticks  \footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay bricks}.
+
+The three little pigs built their houses out of straw\footnote{not to be
+confused with hay}, sticks\footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay bricks}\footnote{or something else}.
+
+\setfnpct{ranges}
+The three little pigs built their houses out of
+straw\footnote{not to be confused with hay},
+sticks\footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay bricks}%
+\footnote{or something else}\footnote{what do I know}.
+
+\setfnpct{ add-trailing-token = !{bang} }
+The three little pigs built their houses out of straw\footnote{not to be
+confused with hay}? Sticks\footnote{or lumber according to some sources}
+and bricks\footnote{probably fired clay bricks}!
+
+\end{document}
