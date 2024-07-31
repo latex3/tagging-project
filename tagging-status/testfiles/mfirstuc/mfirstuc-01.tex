@@ -1,0 +1,145 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{mfirstuc}
+\usepackage{xcolor,nameref}
+
+\title{mfirstuc tagging test}
+
+% taken from sample-mfirstuc.tex
+\MFUnocap{a}
+\MFUnocap{an}
+\MFUnocap{and}
+\MFUnocap{but}
+\MFUnocap{for}
+\MFUnocap{in}
+\MFUnocap{of}
+\MFUnocap{or}
+\MFUnocap{no}
+\MFUnocap{nor}
+\MFUnocap{so}
+\MFUnocap{some}
+\MFUnocap{the}
+\MFUnocap{with}
+\MFUnocap{yet}
+
+\begin{document}
+
+\section{Sentence Case (First Letter Upper Case)}
+\label{sec:sentencecase}
+
+\MFUsentencecase{abc}.
+
+\MFUsentencecase{{\em abc}}.
+
+\MFUsentencecase{\emph{abc}}.
+
+\MFUsentencecase{\ae bc}.
+
+\MFUsentencecase{{\ae}bc}.
+
+\newcommand{\abc}{abc}%
+\MFUsentencecase{\abc}.
+
+\MFUsentencecase{\ref{sec:sentencecase}bc}.
+
+\makefirstuc{abc}.
+
+\makefirstuc{{\em abc}}.
+
+\makefirstuc{\emph{abc}}.
+
+\makefirstuc{\ref{sec:sentencecase}bc}.
+
+\newcommand{\strong}[1]{\textcolor{red}{#1}}
+\makefirstuc{\strong{abc}d}
+
+\makefirstuc{\protect\strong{abc}d}
+
+\MFUsentencecase{\NoCaseChange{abc} xyz}
+
+\makefirstuc{\NoCaseChange{abc} xyz}
+
+\begingroup
+\MFUblocker{\NoCaseChange}\makefirstuc{\NoCaseChange{abc} xyz}
+\endgroup
+
+\bgroup
+\capitalisewords{the wind in the willows}
+
+\capitalisewords{a small book of rhyme.}
+
+\capitalisewords{a small\space book of rhyme.}
+
+\newcommand{\mytitle}{a small book of rhyme.}
+
+\capitalisewords{\mytitle}
+
+\xcapitalisewords{\mytitle}
+\egroup
+
+\capitalisewords{\textbf{a small book of rhyme.}}
+
+\textbf{\capitalisewords{a small book of rhyme.}}
+
+\capitalisefmtwords*{\emph{a small book of rhyme}}
+
+\capitalisefmtwords*{\emph{a small} book \textbf{of rhyme}}
+
+\capitalisefmtwords{\textbf{a small book of rhyme}}.
+
+\capitalisefmtwords{\textbf{a small book} of rhyme}.
+
+\capitalisefmtwords{a \textbf{small book} of rhyme}.
+
+\capitalisefmtwords{\textbf{a} small book of rhyme}.
+
+\capitalisefmtwords{a small book \textbf{of rhyme}}.
+
+\capitalisefmtwords{\textbf{a small }book of rhyme}.
+
+\capitalisefmtwords{\textbf{a small book }of rhyme}.
+
+\capitalisefmtwords{\textbf{a small book of }rhyme}.
+
+\newcommand*{\qt}[1]{``#1''}
+\capitalisefmtwords{\qt{a small book of rhyme.}}
+
+\newcommand*{\esq}[1]{?`#1?}
+\capitalisefmtwords{\esq{D\'onde est\'a libro}}
+
+\newcommand*{\swap}[2]{{#2}{#1}}
+\capitalisefmtwords*{\textbf{an \swap{un}{usually} small book of} rhyme}.
+
+\capitalisefmtwords{\textbf{a \emph{small book} of} rhyme}.
+
+\capitalisefmtwords{\textbf{a \emph{small book}} of rhyme}.
+
+\capitalisefmtwords{\textbf{\emph{a small} book of} rhyme}.
+
+\capitalisefmtwords{\textbf{a small {}book of} rhyme}.
+
+\capitalisefmtwords{{}\textcolor{red}{a} small book of
+{}\textcolor{red}{rhyme}}.
+
+\newcommand*{\alert}[1]{\textcolor{red}{#1}}
+\capitalisefmtwords{\alert{a} small book of \alert{rhyme}}.
+
+\capitalisefmtwords{a small book of rhyme}.
+
+\capitalisefmtwords{{\bfseries a \emph{small book} of} rhyme.}
+
+\capitalisefmtwords{\relax a book of rhyme.}
+
+\capitalisewords{a fast-paced book of rhyme}.
+\capitalisefmtwords{a \textbf{fast-paced} book of rhyme}.
+
+\MFUhyphentrue
+\capitalisewords{a fast-paced book of rhyme}.
+\capitalisefmtwords{a \textbf{fast-paced} book of rhyme}.
+\end{document}
