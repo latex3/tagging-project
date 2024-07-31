@@ -3298,13 +3298,14 @@
 
  - name: fnpos
    type: package
-   status: unknown
+   status: partially-compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   comments: Redefines `\\@makecol`.
+   tests: true
+   tasks: Revisit once OR is altered.
+   updated: 2024-07-31
 
  - name: fnumprint
    type: package

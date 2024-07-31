@@ -1,0 +1,48 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[twocolumn]{article} % seems fine with or without twocolumn
+
+\usepackage{fnpos}
+\usepackage{graphicx}
+\usepackage[nopar]{kantlipsum}
+
+% these are defaults with fnpos
+%\makeFNbottom
+%\makeFNbelow
+
+\begin{document}
+
+\kant[1]\footnote{\kant[2]}
+\begin{figure}[b]
+\includegraphics[alt=alt text,scale=0.5]{example-image}
+\caption{First image}
+\end{figure}
+\kant[3]
+
+\kant[4]\footnote{\kant[5]}
+\begin{figure}[b]
+\includegraphics[alt=alt text,scale=0.5]{example-image}
+\caption{Second image}
+\end{figure}
+\kant[6]
+
+\kant[7]\footnote{\kant[8]}
+\begin{figure}[b]
+\includegraphics[alt=alt text,scale=0.5]{example-image}
+\caption{Third image}
+\end{figure}
+\kant[9]
+
+\kant[10]\footnote{\kant[11]}
+\begin{figure}[b]
+\includegraphics[alt=alt text,scale=0.5]{example-image}
+\caption{Fourth image}
+\end{figure}
+\kant[12]
+
+\end{document}
