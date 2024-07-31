@@ -1896,12 +1896,12 @@
 
  - name: colortbl
    type: package
-   status: compatible
+   status: partially-compatible
    included-in: [tlc3, arxiv1]
    supported-through: [phase-III,table]
-   comments: "#90 issue with longtable fixed at the last release"
-   issues: [90]
-   updated: 2024-07-07
+   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release."
+   issues: [90,379]
+   updated: 2024-07-31
 
  - name: comfortaa
    type: package
