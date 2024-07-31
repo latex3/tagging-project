@@ -48,7 +48,7 @@ The values in the *Status* column have the following meaning:
 </tr>
 </thead>
 <tbody>
-{%- for p in packages -%}
+{%- for p in t-s -%}
 <tr>
 <td>{{p.type}}</td>
 <td class="{{p.status}}"><a href="https://ctan.org/pkg/
@@ -57,11 +57,11 @@ The values in the *Status* column have the following meaning:
 <td class="{{p.status}}"  sorttable_customkey="
 {%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
 ">{{p.status}}</td>
-<td>{% if p.included-in contains "tlc3" %}yes{% endif %}</td>
+<td>{% if p.included-in contains "tlc3" %}TLC3{% endif %}</td>
 <td>
 {%- if p.included-in contains "arxiv10" %}10{% endif -%}
 {%- if p.included-in contains "arxiv5" %} 5{% endif -%}
-{%- if p.included-in contains "arxiv1" %}1{% endif -%}
+{%- if p.included-in contains "arxiv1" %} 1{% endif -%}
 {%- if p.included-in contains "arxiv01" %}0.1{% endif -%}
 </td>
 <td>{{p.priority}}</td>
