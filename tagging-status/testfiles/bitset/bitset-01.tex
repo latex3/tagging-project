@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{report}
+\usepackage{bitset}
+
+\title{bitset tagging test}
+
+\begin{document}
+
+\bitsetReset{abc}
+\bitsetSet{abc}{2}
+\bitsetGetBin{abc}{8}
+
+\bitsetSet{abc}{5}
+\bitsetSet{abc}{7}
+\bitsetGetHex{abc}{16}
+
+\end{document}
