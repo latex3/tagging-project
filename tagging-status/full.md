@@ -67,6 +67,7 @@ The values in the *Status* column have the following meaning:
 {%- if p.included-in contains "arxiv5" %} 5{% endif -%}
 {%- if p.included-in contains "arxiv1" %} 1{% endif -%}
 {%- if p.included-in contains "arxiv01" %}0.1{% endif -%}
+{%- if p.included-in contains "arxiv001" %}0.01{% endif -%}
 </td>
 <td>{{p.priority}}</td>
 <td>
