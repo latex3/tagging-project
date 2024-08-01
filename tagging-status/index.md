@@ -45,7 +45,7 @@ To use packages or classes together with the tagging code it is (nearly) always 
 To add or edit the entries in the tables, please make a pull request to change the YAML file
 [tagging-status.yml](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
 
-The table shown here omits some entries for packages that are incompatible or have unknown status, and for which support is not expected within teh current project. A view of the [full data in the yaml](full) file  is also available.
+The table shown here omits some entries for packages that are incompatible or have unknown status, and for which support is not expected within the current project. A view of the [full data in the yaml](full) file  is also available.
 
 If you encounter a problem with a package or class for which there is no issue in the [issue tracker](https://github.com/latex3/tagging-project/issues) yet, please add an issue in the tracker first (including a small example what goes wrong) or start a discussion  in the [discussion view](https://github.com/latex3/tagging-project/discussions) if that seems more appropriate. Later on it can still be added to the tables.
 
