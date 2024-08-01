@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{soulpos}
+
+\title{soulpos tagging test}
+
+\newcommand\ulpossample[1]{%
+A single #1{word}.  Now #1{a few words}.  Longer:
+#1{this text spans several lines, so that you can see the behaviour of
+\textsf{soulpos} where there are line breaks}.}
+
+\ulposdef{\ulbgdD}{%
+\mbox{%
+\color{black!30}%
+\rule[-.8ex]{\ulwidth}{13pt}}}
+
+\begin{document}
+
+\ulpossample\ulbgdD
+
+\end{document}
