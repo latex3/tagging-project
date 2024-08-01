@@ -25,7 +25,7 @@ This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) an
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
 
 This is the full list of data in the [YAML file](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
-Revert to the  [filtered table of compatible or higher priority packages](./).
+Revert to the [filtered tables of compatible or higher priority classes and packages](./).
 
 The values in the *Status* column have the following meaning:
 
