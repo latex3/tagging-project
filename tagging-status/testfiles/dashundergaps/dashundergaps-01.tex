@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{dashundergaps}
+
+\title{dashundergaps tagging test}
+
+\begin{document}
+
+The initial `E.' in Donald E. Knuth's name stands
+for \gap[.]{Erwin}. The well-known answer to the
+Ultimate Question \gap{of Life, the Universe, and
+Everything} is 42 according to \gap[w]{Douglas Adams}.
+The first edition of \gap*[d]{The \LaTeX{} Companion}
+celebrates silver anniversary in 2019. Historically
+speaking, \texttt{expl3} is an acronym for
+\gap*[-]{\textbf{EX}perimental \textbf{P}rogramming
+\textbf{L}an\-guage \textbf{3}} even though it
+is now a \gap{production language}.
+
+\dashundergapssetup{widen, dash, gap-font = \itshape,
+    teacher-gap-format = underline, gap-number-format
+      = \textsuperscript{\normalfont/\thegapnumber/}}
+\newcommand\puzzletext{The initial `E.' in Donald
+  E. Knuth's name stands for \gap{Erwin}. The
+  well-known answer to the Ultimate Question
+  \gap{of Life, the Universe, and Everything} is
+  42 according to \gap{Douglas Adams}.\par}
+
+\puzzletext
+\bigskip \setcounter{gapnumber}{0} \TeacherModeOn
+\puzzletext
+\end{document}
