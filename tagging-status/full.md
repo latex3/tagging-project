@@ -18,10 +18,14 @@ td.date {white-space: nowrap;font-size:90%;}
 
 # Tagging Status of LaTeX Packages and Classes
 
+
 {% assign t-s = site.data.tagging-status %}
 
 This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
+
+This is the full list of data in the [YAML file](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
+[Revert to the filtered list of compatible or higher priority packages](./).
 
 The values in the *Status* column have the following meaning:
 
