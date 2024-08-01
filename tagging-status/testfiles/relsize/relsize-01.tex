@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{relsize}
+
+\title{relsize tagging test}
+
+\begin{document}
+
+Some normal text
+
+{\larger Some normal text}
+
+\textlarger[2]{Some normal text}
+
+{\smaller Some normal text}
+
+\textsmaller[2]{Some normal text}
+
+$\int\frac{1}{2}dN - \mathsmaller{\int\frac{1}{2}dN}$
+
+$\int\frac{1}{2}dN - \mathlarger{\int\frac{1}{2}dN}$
+
+\end{document}

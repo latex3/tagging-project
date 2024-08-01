@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+%\usepackage{refcount} % loaded by hyperref
+\usepackage{hyperref}
+
+\title{refcount tagging test}
+
+\begin{document}
+
+\newcounter{ctrA}
+\newcounter{ctrB}
+\refstepcounter{ctrA}\label{ref:A}
+\setcounterref{ctrB}{ref:A}
+\addtocounterpageref{ctrB}{ref:A}
+
+\thectrA
+
+\thectrB
+
+\section{Some section}
+\label{blub}
+
+\getrefbykeydefault{blub}{}{}
+
+\getrefbykeydefault{blub}{page}{}
+
+\getrefbykeydefault{blub}{name}{}
+
+\getrefbykeydefault{blub}{anchor}{}
+
+\end{document}
