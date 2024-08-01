@@ -9,7 +9,7 @@
 #  type               required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
 #  status             required   string          Status of package, see list below.
 #  ctan-pkg           optional   string          Name for ctan.org/pkg/?? link if different to name
-#  included-in        optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 arxiv01 (included in TLC or top n% of arxiv package use)
+#  included-in        optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 arxiv01 arxiv001 (included in TLC or n% of arxiv package use)
 #  priority           optional   integer         Priority of work for unknown and incompatible entries (omitted from table if > 4)
 #  comments           optional   markdown-string Free text markdown comments
 #  references         optional   integer-list    List of integers referencing the bibliography in references.yml
@@ -136,8 +136,8 @@
  - name: academicons
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: "Symbols need Alt/ActualText."
    tests: true
@@ -224,6 +224,17 @@
    issues:
    tests: true
    updated: 2024-07-25
+
+ - name: adjcalc
+   ctan-pkg: adjustbox
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: adjmulticol
    type: package
@@ -344,8 +355,8 @@
  - name: aligned-overset
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -372,11 +383,21 @@
  - name: alphalph
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    updated: 2024-07-25
+
+ - name: amsaddr
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: amsbsy
    type: package
@@ -441,6 +462,16 @@
    issues: [77]
    tasks: also needs more tests
    updated: 2024-07-08
+
+ - name: amsmidx
+   type: package
+   status: unknown
+   included-in: 
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: amsopn
    type: package
@@ -533,8 +564,8 @@
  - name: answers
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-31
@@ -558,6 +589,16 @@
    issues:
    tests: false
    updated: 2024-07-13
+
+ - name: apacite
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: apalike
    ctan-pkg: bibtex
@@ -641,6 +682,17 @@
    tests: true
    updated: 2024-07-21
 
+ - name: ascii
+   ctan-pkg: ascii-font
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: asciilist
    type: package
    status: partially-compatible
@@ -673,8 +725,8 @@
  - name: asymptote
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -731,8 +783,8 @@
  - name: auto-pst-pdf
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -759,6 +811,16 @@
    issues:
    tests: true
    updated: 2024-07-21
+
+ - name: auxhook
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: avant
    ctan-pkg: psnfss
@@ -846,8 +908,8 @@
    ctan-pkg: baskervaldadf
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    updated: 2024-07-26
@@ -882,6 +944,16 @@
    tests: true
    updated: 2024-07-29
 
+ - name: bbold
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: bboldx
    type: package
    status: compatible
@@ -894,8 +966,8 @@
  - name: bclogo
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1087,6 +1159,16 @@
    issues:
    tests: false
    updated: 2024-07-25
+
+ - name: bigints
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: bigstrut
    type: package
@@ -1287,8 +1369,8 @@
  - name: bytefield
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1394,6 +1476,27 @@
    issues:
    updated: 2024-07-06
 
+ - name: calligra
+   ctan-pkg: fundus-calligra
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
+ - name: calrsfs
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: cancel
    type: package
    status: currently-incompatible
@@ -1492,8 +1595,8 @@
  - name: ccaption
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1511,8 +1614,8 @@
  - name: ccicons
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: "Symbols need Alt/ActualText."
    tests: true
@@ -1541,8 +1644,8 @@
  - name: cfr-lm
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    updated: 2024-07-26
@@ -1620,10 +1723,10 @@
  - name: chemarr
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
-   priority: 9
    issues:
    tests: true
    updated: 2024-07-23
@@ -1631,8 +1734,8 @@
  - name: chemfig
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1651,8 +1754,8 @@
  - name: chemgreek
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-31
@@ -1660,8 +1763,8 @@
  - name: chemmacros
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1718,8 +1821,8 @@
  - name: circledsteps
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1845,8 +1948,8 @@
  - name: collcell
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -1976,8 +2079,8 @@
  - name: covington
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2045,8 +2148,8 @@
  - name: currfile
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2075,8 +2178,8 @@
  - name: cutwin
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2166,7 +2269,7 @@
  - name: datatool
    type: package
    status: unknown
-   included-in: [tlc3]
+   included-in: [tlc3,arxiv01]
    priority: 2
    issues:
    tests: false
@@ -2181,6 +2284,16 @@
    issues:
    tests: true
    updated: 2024-07-18
+
+ - name: dblfloatfix
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: dblfnote
    type: package
@@ -2241,8 +2354,8 @@
  - name: derivative
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -2273,8 +2386,8 @@
  - name: dingbat
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    comments: "Missing ToUnicode for text symbols."
    issues:
    tests: true
@@ -2376,6 +2489,17 @@
    tests: false
    updated: 2024-07-14
 
+ - name: dsfont
+   ctan-pkg: doublestroke
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: dsserif
    type: package
    status: compatible
@@ -2409,8 +2533,8 @@
  - name: easylist
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2438,8 +2562,8 @@
  - name: ebproof
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2595,8 +2719,8 @@
  - name: engord
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-30
@@ -2640,6 +2764,16 @@
    issues: [61]
    related-issues: [4]
    updated: 2024-07-06
+
+ - name: environ
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: everyshi
    type: package
@@ -2750,6 +2884,16 @@
    tasks: needs tests
    updated: 2024-07-17
 
+ - name: esvect
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: etaremune
    type: package
    status: compatible
@@ -2783,8 +2927,8 @@
  - name: etoc
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2899,8 +3043,8 @@
    ctan-pkg: fancyhdr
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -2966,6 +3110,16 @@
    tasks: needs tests
    updated: 2024-07-14
 
+ - name: fancyref
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: fancyvrb
    type: package
    status: currently-incompatible
@@ -3006,8 +3160,8 @@
  - name: fdsymbol
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "`\\circledR` and `\\circledS` need ToUnicode values.
               Use of math tagging currently requires support from external tools."
@@ -3033,6 +3187,27 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-14
+
+ - name: feynmf
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
+ - name: feynmp
+   ctan-pkg: feynmf
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: fibnum
    type: package
@@ -3113,7 +3288,8 @@
  - name: fixfoot
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-22
@@ -3255,8 +3431,8 @@
  - name: fncychap
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -3295,8 +3471,8 @@
  - name: fnpos
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: Redefines `\\@makecol`.
    tests: true
@@ -3387,8 +3563,8 @@
  - name: footnotebackref
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -3397,8 +3573,8 @@
  - name: footnotehyper
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -3419,8 +3595,8 @@
  - name: footnpag
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
    issues:
    tests: true
@@ -3457,7 +3633,8 @@
    ctan-pkg: fourier
    type: package
    status: partially-compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: Symbols missing ToUnicode/ActualText.
    tests: true
@@ -3477,7 +3654,8 @@
  - name: fouriernc
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    updated: 2024-07-21
@@ -3531,6 +3709,16 @@
    issues: [110]
    tests: true
    updated: 2024-07-11
+
+ - name: fullpage
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: fvextra
    type: package
@@ -3614,8 +3802,8 @@
  - name: gb4e
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -3852,6 +4040,16 @@
    issues: [48]
    updated: 2024-07-06
 
+ - name: glossaries-extra
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: grabbox
    type: package
    status: unknown
@@ -3861,6 +4059,16 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: graphbox
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: graphics
    type: package
@@ -4020,8 +4228,8 @@
  - name: hologo
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: Some logos need ActualText.
    tests: true
@@ -4060,8 +4268,8 @@
  - name: hypbmsec
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -4160,8 +4368,8 @@
  - name: hyphsubst
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -4278,6 +4486,16 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: ifsym
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: iftex
    type: package
@@ -4732,7 +4950,8 @@
  - name: leftindex
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -4818,7 +5037,8 @@
  - name: libertinust1math
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -4882,8 +5102,8 @@
 
  - name: linguex
    type: package
-   status: unknown
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    priority: 9
    issues:
    tests: false
@@ -4932,8 +5152,8 @@
  - name: listofitems
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-29
@@ -4990,8 +5210,8 @@
  - name: lpic
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5288,6 +5508,16 @@
    tests: false
    updated: 2024-07-25
 
+ - name: makecell
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: makeidx
    type: package
    status: compatible
@@ -5337,8 +5567,8 @@
  - name: markdown
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5380,12 +5610,22 @@
  - name: mathastext
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: mathbbol
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: mathdesign
    type: package
@@ -5529,8 +5769,8 @@
  - name: media9
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5559,8 +5799,8 @@
  - name: menukeys
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5653,8 +5893,8 @@
  - name: minibox
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5734,6 +5974,16 @@
    issues:
    tests: false
    updated: 2024-07-15
+
+ - name: morefloats
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: moreverb
    type: package
@@ -5823,8 +6073,8 @@
    ctan-pkg: beamer
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -5953,6 +6203,16 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: nccmath
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: needspace
    type: package
@@ -6105,8 +6365,8 @@
  - name: newunicodechar
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -6171,8 +6431,8 @@
  - name: nidanfloat
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues: [362]
    tests: true
    updated: 2024-07-31
@@ -6226,8 +6486,8 @@
  - name: notes2bib
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -6595,8 +6855,8 @@
  - name: pagecolor
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -6724,6 +6984,16 @@
    tasks: needs tests
    updated: 2024-07-18
 
+ - name: pbox
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: pdfcol
    type: package
    status: unknown
@@ -6835,8 +7105,8 @@
  - name: pdfrender
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: Only works with luatex and pdftex.
    tests: true
@@ -6897,6 +7167,16 @@
    tests: false
    updated: 2024-07-28
 
+ - name: pgfcalendar
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: pgffor
    ctan-pkg: pgf
    type: package
@@ -6939,8 +7219,8 @@
  - name: pgfopts
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -6950,8 +7230,8 @@
    ctan-pkg: pgf
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7009,8 +7289,8 @@
  - name: picins
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7043,6 +7323,16 @@
    issues:
    tests: true
    updated: 2024-07-25
+
+ - name: pinlabel
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: piton
    type: package
@@ -7093,8 +7383,8 @@
  - name: pmboxdraw
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    comments: "Symbols are not correctly mapped to Unicode."
    issues:
    tests: true
@@ -7129,6 +7419,16 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: prettyref
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: preview
    type: package
@@ -7295,8 +7595,8 @@
  - name: realboxes
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7333,8 +7633,8 @@
  - name: refstyle
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7343,8 +7643,8 @@
  - name: regexpatch
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    updated: 2024-07-25
@@ -7455,6 +7755,16 @@
    tests: false
    updated: 2024-07-26
 
+ - name: romannum
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: rotating
    type: package
    status: currently-incompatible
@@ -7508,10 +7818,10 @@
  - name: sansmath
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
-   priority: 9
    issues:
    tests: true
    updated: 2024-07-29
@@ -7654,8 +7964,8 @@
  - name: secdot
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-26
@@ -7683,8 +7993,8 @@
  - name: selectp
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7693,8 +8003,8 @@
  - name: selinput
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7753,10 +8063,10 @@
  - name: sfmath
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
-   priority: 9
    issues:
    tests: true
    updated: 2024-07-29
@@ -7783,8 +8093,8 @@
  - name: shapepar
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -7913,8 +8223,8 @@
  - name: skak
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -8096,8 +8406,8 @@
  - name: steinmetz
    type: package
    status: partially-compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    issues:
    comments: "Picture used to draw symbol should be Artifact.
@@ -8209,6 +8519,16 @@
    tasks: needs tests
    updated: 2024-07-29
 
+ - name: subeqnarray
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: subfig
    type: package
    status: unknown
@@ -8237,6 +8557,16 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: subfloat
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: superiors
    type: package
@@ -8280,8 +8610,8 @@
  - name: systeme
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues: [358]
    tests: true
    updated: 2024-07-31
@@ -8468,8 +8798,8 @@
  - name: tensind
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
    issues:
@@ -8710,8 +9040,8 @@
  - name: thumbpdf
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
@@ -8909,7 +9239,8 @@
  - name: topcapt
    type: package
    status: compatible
-   included-in:
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-07-21
@@ -8984,6 +9315,27 @@
    included-in:
    issues:
    updated: 2024-07-06
+
+ - name: trimclip
+   ctan-pkg: adjustbox
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
+ - name: trimspaces
+   type: package
+   status: unknown
+   included-in: [arxiv1]
+   priority: 5
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
 
  - name: trivfloat
    type: package
@@ -9276,8 +9628,8 @@
  - name: vwcol
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues: [315]
    tests: true
    updated: 2024-07-28
@@ -9489,8 +9841,8 @@
  - name: xhfill
    type: package
    status: currently-incompatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    comments: "Drawn rules should be tagged as Artifacts."
    tests: true
@@ -9670,6 +10022,17 @@
    tests: true
    updated: 2024-07-26
 
+ - name: xxcolor
+   ctan-pkg: pgf
+   type: package
+   status: unknown
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: xy
    ctan-pkg: xypic
    type: package
@@ -9712,6 +10075,26 @@
    tests: true
    updated: 2024-07-29
 
+ - name: youngtab
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
+ - name: ytableau
+   type: package
+   status: unknown
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-01
+
  - name: ysabeau
    type: package
    status: compatible
@@ -9745,8 +10128,8 @@
  - name: zref
    type: package
    status: unknown
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: false
    tasks: needs tests
