@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{magaz}
+\renewcommand\FirstLineFont{\bfseries}
+\setlength\textwidth{159.0pt}
+
+\title{magaz tagging test}
+
+\begin{document}
+
+\FirstLine{The first line of this paragraph is
+           typeset in boldface. And more text to display the behavior.}
+The remainder is set in the normal body font.
+
+\FirstLine{\noindent Less material} in the argument
+will be fully typeset in the special font. Note the
+placement and result of the \verb=\noindent= command.
+
+% produces parent-child warnings, but is a mistake as mentioned in the text
+%\noindent\FirstLine{If placed in front it will get
+%lost} as you can see here.
+
+\FirstLine{There is no just \emph{ground}, therefore, $a+b=c$ for the charge $x\in\{0,1,2\}$ brought against me by certain ignoramuses.}
+
+\end{document}
