@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{tabto}
+\usepackage{kantlipsum}
+
+\begin{document}
+
+\kant[1][1] \tabto{3cm}T1 \tabto{4cm}T2
+\tabto{3cm}T3 \kant[1][2] \tabto{4cm}T4
+\tabto*{2cm}T5
+
+\NumTabs{4}
+Start\tab T1\tab T2\tab T3\tab T0b \tab\tab T3b
+
+\TabPositions{.25\linewidth,.5\linewidth}
+Start\tab T1\tab T2 (last one in line)\tab T0b
+(get past T1b)\tab T2b \tabto*{.42\linewidth}T?
+\end{document}
