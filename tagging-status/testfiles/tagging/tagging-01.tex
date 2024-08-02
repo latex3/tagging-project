@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage[doc]{tagging}
+
+\begin{document}
+
+\tagged{doc}   {Typeset this if tag doc is used.}
+\untagged{code}{Typeset this if tag code is not used.}
+\iftagged{be}  {To be or}{Not to be!}  Which is it?   \par
+\tagged{doc,code}{Typeset this for either doc or code.}
+Typeset this \untagged{}{always}\tagged{}{never}!     \par
+\usetag{code} \droptag{doc}
+Now neither of the variants are typeset!
+\tagged{doc}   {Typeset this if tag doc is used.}
+\untagged{code}{Typeset this if tag code is not used.}
+
+Environments can contain verbatim material
+\begin{taggedblock}{doc}
+e.g.,
+\verb=#&=\end{taggedblock}
+.
+
+Note the placement of the period and the spacing!
+Careful:
+\begin{untaggedblock}{doc}
+Not
+\end{untaggedblock}
+shown!
+
+\end{document}
