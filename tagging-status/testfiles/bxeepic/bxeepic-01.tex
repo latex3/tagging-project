@@ -1,0 +1,59 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{bxeepic}
+\usepackage{xcolor}
+
+\title{bxeepic tagging test}
+
+\begin{document}
+
+\setlength{\unitlength}{1mm}
+\begin{picture}[alt={alt text}](100,100)
+  \Thicklines
+  \put(50,50){\ellipse{80}{60}}
+  \thicklines
+  \dashline{4}(0,50)(100,50)
+  \dashline{4}(50,0)(50,100)
+\end{picture}
+
+\begin{picture}[alt={more alt text}](155,35)
+\thicklines
+\matrixput(0,0)(10,0){6}(0,10){3}{\circle{4}}
+\matrixput(2,0)(10,0){5}(0,10){3}{\line(1,0){6}}
+\matrixput(0,2)(10,0){6}(0,10){2}{\line(0,1){6}}
+\end{picture}
+
+\begin{picture}[alt={alt text}](100,80)
+ \thicklines
+  \spline(30,0)(0,0)(20,40)(40,10)(60,55)(90,70)(95,0)(100,30)
+ \color{blue} \thinlines
+  \path  (30,0)(0,0)(20,40)(40,10)(60,55)(90,70)(95,0)(100,30)
+\end{picture}
+
+\setlength{\unitlength}{1pt}
+\begin{picture}[alt={alt text}](150,100)(0,0)
+  \dottedline{1}(0,00)(50,20)(100,100)(150,0)
+\thicklines
+  \dottedline{2}(0,0)(30,50)(70,50)(90,30)(150,20)
+\linethickness{2pt}
+  \dottedline{3}(0,40)(40,0)(60,25)(110,25)(150,60)
+\end{picture}
+
+\setlength{\unitlength}{2mm}
+\begin{picture}[alt={alt text}](27,16)(-1,-1)
+  \path(-1,-1)(-1,15)(26,15)(26,-1)(-1,-1)
+  \linethickness{2pt}
+  \drawline[-10](0,0)(10,7)(5,11)
+       (0,7)(10,0)(10,7)(0,7)(0,0)(10,0)
+  \linethickness{3pt} \roundcap \beveljoin
+  \polyline(15.1,0.1)(25,7)(20,11)
+       (15,7)(25,0)(25,7)(15,7)(15,0)(25,0)
+\end{picture}
+
+\end{document}
