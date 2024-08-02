@@ -36,6 +36,9 @@ The values in the *Status* column have the following meaning:
 - `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unknown" | size }}** entries)
 
 
+Click on the column headings to sort the table by the chosen column.
+
+
 <table class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
 <tr>
