@@ -1,0 +1,105 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[
+  open,
+  openlevel=2,
+  atend
+]{bookmark}
+
+\bookmarksetup{color=blue}
+
+\BookmarkAtEnd{%
+  \bookmarksetup{startatroot}%
+  \bookmark[named=LastPage, level=0]{End/Last page}%
+  \bookmark[named=FirstPage, level=1]{First page}%
+}
+
+\title{bookmark tagging test}
+% example taken from bookmark doc
+
+\begin{document}
+\section{First section}
+\subsection{Subsection A}
+\begin{figure}
+  \hypertarget{fig}{}%
+  A figure with a caption.
+  \caption{Some caption}
+\end{figure}
+\bookmark[
+  rellevel=1,
+  keeplevel,
+  dest=fig
+]{A figure}
+\subsection{Subsection B}
+\subsubsection{Subsubsection C}
+\subsection{Umlauts: \"A\"O\"U\"a\"o\"u\ss}
+\newpage
+\bookmarksetup{
+  bold,
+  color=[rgb]{1,0,0}
+}
+\section{Very important section}
+\bookmarksetup{
+  italic,
+  bold=false,
+  color=blue
+}
+\subsection{Italic section}
+\bookmarksetup{
+  italic=false
+}
+\part{Misc}
+\section{Diverse}
+\subsubsection{Subsubsection, omitting subsection}
+\bookmarksetup{
+  startatroot
+}
+\section{Last section outside part}
+\subsection{Subsection}
+%\bookmarksetup{ % errors with \DocumentMetadata
+%  color={}
+%}
+\begingroup
+  \bookmarksetup{level=0, color=green!80!black}
+  \bookmark[named=FirstPage]{First page}
+  \bookmark[named=LastPage]{Last page}
+  \bookmark[named=PrevPage]{Previous page}
+  \bookmark[named=NextPage]{Next page}
+\endgroup
+\bookmark[
+  page=2,
+  view=FitH 800
+]{Page 2, FitH 800}
+\bookmark[
+  page=2,
+  view=FitBH \calc{\paperheight-\topmargin-1in-\headheight-\headsep}
+]{Page 2, FitBH top of text body}
+\bookmark[
+  uri={http://www.dante.de/},
+  color=magenta
+]{Dante homepage}
+\bookmark[
+  gotor={t.pdf},
+  page=1,
+  view={XYZ 0 1000 null},
+  color=cyan!75!black
+]{File t.pdf}
+\bookmark[named=FirstPage]{First page}
+\bookmark[rellevel=1, named=LastPage]{Last page (rellevel=1)}
+\bookmark[named=PrevPage]{Previous page}
+\bookmark[level=0, named=FirstPage]{First page (level=0)}
+\bookmark[
+  rellevel=1,
+  keeplevel,
+  named=LastPage
+]{Last page (rellevel=1, keeplevel)}
+\bookmark[named=PrevPage]{Previous page}
+\end{document}
