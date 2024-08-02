@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage[commentmarkup=footnote]
+           {changes}
+\definechangesauthor[color=red,
+            name=Frank M.]{FMi}
+\setsummarytowidth{Commented\qquad}
+
+\title{changes tagging test - 4}
+
+\begin{document}
+
+Sample text, something \added{added},
+a \replaced[id=FMi,comment=really?]
+           {word}{blob}
+replaced and \deleted[id=FMi]{some}
+\highlight{stuff}
+removed.\comment[id=FMi]{Mumble!}
+
+\listofchanges[title=Summary of
+             changes,style=summary]
+
+\end{document}
