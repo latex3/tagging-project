@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{snotez}
+
+\title{snotez tagging test - 2}
+
+\begin{document}
+
+% parent-child warnings
+Some text with a side note.\sidenote{A first.}
+A lot of additional text here with a
+note.\sidenote{A second.} Even more text
+and then two side
+notes.\sidenote{A third.}% next one moved down
+      \sidenote[\textdagger]{A fourth.}
+A lot of additional lines of text here to
+fill up the space on the left.
+
+\end{document}
