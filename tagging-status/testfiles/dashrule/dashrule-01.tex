@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{dashrule}
+
+\title{dashrule tagging test}
+
+\begin{document}
+
+\rule{2cm}{1pt} % to compare tagging
+
+\hdashrule{2cm}{1pt}{}
+
+\hdashrule{2cm}{1pt}{1pt}
+
+\hdashrule{4cm}{1pt}{1pt}
+
+\hdashrule[0.5ex]{4cm}{1pt}{1pt}
+
+\hdashrule[0.5ex]{4cm}{1pt}{3mm}
+
+\hdashrule[0.5ex]{4cm}{1mm}{3mm}
+
+\hdashrule[0.5ex]{4cm}{1mm}{3mm 3pt}
+
+\hdashrule[0.5ex]{4cm}{1mm}{3mm 3pt 1mm 2pt}
+
+\hdashrule[0.5ex]{4cm}{1mm}{8mm 2pt}
+
+\hdashrule[0.5ex]{3cm}{1mm}{8mm 2pt}
+
+\hdashrule[0.5ex][c]{4cm}{1mm}{8mm 2pt}
+
+\hdashrule[0.5ex][c]{3cm}{1mm}{8mm 2pt}
+
+\hdashrule[0.5ex][x]{4cm}{1mm}{8mm 2pt}
+
+\hdashrule[0.5ex][x]{3cm}{1mm}{8mm 2pt}
+
+\end{document}
