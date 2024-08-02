@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{overpic}
+\usepackage{xcolor}
+\usepackage{pict2e}
+
+\title{overpic tagging test - 1}
+
+\begin{document}
+
+\begin{overpic}[abs,unit=1mm,scale=.5,grid,alt=alt text]{example-image}
+\put(3,27){\color{blue}\huge\LaTeX}
+\end{overpic}
+
+\vspace{1cm}
+
+\begin{overpic}[scale=.5,percent ,grid,alt=alt text]{example-image}
+\put(5,45){\color{blue}\huge\LaTeX}
+\put(55,10){\color{red}%
+\frame{\includegraphics[scale=.2,alt=alt text]{example-image}}}
+\end{overpic}
+
+\vspace{1cm}
+
+\begin{Overpic}[grid,rel=50,tics=10]
+               {$ \displaystyle \sum_{i=1}^n x_i = A + B $}
+  \color{blue} \Vector(40,5)(32,9)
+  \put(42,3){\footnotesize\itshape some explanation}
+\end{Overpic}
+
+\end{document}
