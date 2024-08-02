@@ -72,7 +72,7 @@ Click on the column headings to sort the table by the chosen column.
 {%- if p.included-in contains "arxiv01" %}0.1{% endif -%}
 {%- if p.included-in contains "arxiv001" %}0.01{% endif -%}
 </td>
-<td {% if p.priority=="" %}sorttable_customkey="100"{% endif %}>{{p.priority}}</td>
+<td {% unless p.priority %}sorttable_customkey="100"{% endif %}>{{p.priority}}</td>
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
