@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage[opta]{optional}
+
+\title{optional tagging test}
+
+\begin{document}
+
+\opt{opta}{Do this if option opta was declared.
+
+And insert par break.}
+
+\opt{optb}{Do this if option optb was declared}
+
+\opt{optx,opty}{Do this if either option optx or opty}
+
+\opt{}{Never print this text!}
+
+\optv{opta}{Type: \verb|[root /]$ rm -r *|.}
+
+\end{document}
