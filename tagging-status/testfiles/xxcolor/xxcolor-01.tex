@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{pgf} % xxcolor needs pgf utils
+\usepackage{xxcolor}
+\usepackage{calc}
+
+\begin{document}
+
+\begin{minipage}{3.5cm}\raggedright
+\color{red}Red text,
+\begin{colormixin}{25!white}
+washed-out red text,
+\color{blue} washed-out blue text,
+\begin{colormixin}{25!black}
+dark washed-out blue text,
+\color{green} dark washed-out green text,%
+\end{colormixin}
+back to washed-out blue text,%
+\end{colormixin}
+and back to red.
+\end{minipage}%
+
+\bigskip
+
+\begin{minipage}{\linewidth-6pt}\raggedright
+\begin{colormixin}{75!white}
+\colorcurrentmixin\ should be ``!75!white''\par
+\begin{colormixin}{75!black}
+\colorcurrentmixin\ should be ``!75!black!75!white''\par
+\begin{colormixin}{50!white}
+\colorcurrentmixin\ should be ``!50!white!75!black!75!white''\par
+\end{colormixin}
+\end{colormixin}
+\end{colormixin}
+\end{minipage}
+
+\end{document}

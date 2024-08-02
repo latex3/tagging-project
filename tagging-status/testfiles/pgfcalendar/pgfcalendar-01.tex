@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{pgfcalendar}
+
+\title{pgfcalendar tagging test}
+
+\begin{document}
+
+\pgfcalendar{cal}{2007-01-20}{2007-02-10}{\pgfcalendarcurrentday\ }
+
+\bigskip
+
+\pgfcalendar{cal}{2007-01-20}{2007-02-10}
+{
+\pgfcalendarcurrentday\
+\ifdate{Sunday}{\par}{}
+}
+
+\bigskip
+
+\pgfcalendar{cal}{2007-01-20}{2007-02-10}
+{%
+\leavevmode%
+\hbox to0pt{\hskip\pgfcalendarcurrentweekday cm\pgfcalendarcurrentday\hss}%
+\ifdate{Sunday}{\par}{}%
+}
+\end{document}
