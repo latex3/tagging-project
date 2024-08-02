@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{overpic}
+\usepackage{xcolor}
+\usepackage{pict2e}
+
+\title{overpic tagging test - 2}
+
+\begin{document}
+
+\begin{Overpic}[abs,unit=1mm,grid=true,tics=5]{%
+\bfseries\sffamily
+\begin{tabular}{*{8}{p{8mm}}}
+H & - & - & - & - & - & - & He\\
+Li & Be & B & C & N & O & F & Ne\\
+Na & Mg & Al & Si & P & S & Cl & Ar\\
+K & Ca & Ga & Ge & As & Se & Br & Kr\\
+Rb & Sr & In & Sn & Sb & Te & I & Xe\\
+Cs & Ba & Tl & Pb & Bi & Po & At & Rn\\
+Fr & Ra & 112& - & 114& - & - & - \\
+\end{tabular}}%
+\put(0,0){\color{blue}\linethickness{0.5mm}
+\polygon(0,30)(10,30)(10,21.5)(45,21.5)(45,13)(22,13)%
+(22,4.5)(0,4.5)}
+\end{Overpic}
+
+\end{document}
