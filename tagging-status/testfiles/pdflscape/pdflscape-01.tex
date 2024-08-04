@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{pdflscape}
+
+\title{pdflscape tagging test}
+
+\begin{document}
+
+\section{A normal page}
+text
+
+\begin{landscape}
+\section{A landscape page}
+more text\footnote{a footnote on a landscape page}
+\begin{figure}
+\centering
+Some figure
+\caption{Some caption}
+\end{figure}
+
+\newpage
+
+even more landscape text
+\end{landscape}
+
+normal text again
+
+\end{document}

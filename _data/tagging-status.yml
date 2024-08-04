@@ -5283,12 +5283,12 @@
 
  - name: lscape
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv1]
    priority: 2
    issues:
-   tasks: needs tests
-   updated: 2024-07-06
+   tests: true
+   updated: 2024-08-04
 
  - name: ltablex
    type: package
@@ -7109,12 +7109,14 @@
 
  - name: pdflscape
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
+   supported-through: [phase-III,package]
+   package-repository: "https://github.com/ho-tex/pdflscape"
    issues:
-   tasks: needs tests
-   updated: 2024-07-28
+   tests: true
+   updated: 2024-08-04
 
  - name: pdfmarginpar
    type: package
