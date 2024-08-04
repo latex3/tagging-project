@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage[tikz]{multicolrule}
+\usepackage{pgfornament}
+\usepackage{kantlipsum}
+
+\SetMCRule{color=blue,width=1pt,
+  custom-line={\path (TOP) to
+    [ornament=83] (BOT);},
+  extend-top=-12pt,
+  extend-bot=-6pt}
+\setlength{\columnsep}{30pt}
+
+\begin{document}
+\begin{multicols}{3}
+\kant[1-6]
+\end{multicols}
+\end{document}
