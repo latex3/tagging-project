@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{enotez}
+\usepackage{hyperref}
+
+\title{enotez tagging test - 1}
+
+\setenotez{reset,split=section,backref}
+
+\begin{document}
+
+\section{A first section}
+This is simple text.\endnote{An endnote.}
+Here is a bit more text.\endnote{The
+  second  endnote with two lines.}
+\section{Second section}
+Some\endnote{A third note.} text
+for this section also with a note.
+\newpage \printendnotes[itemize]
+
+\end{document}

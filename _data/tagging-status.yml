@@ -2748,13 +2748,14 @@
 
  - name: enotez
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [tlc3]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   comments: "`\\pagenote`s are not tagged as `<Note>`s. `\\ref` in `\\endnotemark`
+              produces parent-child warnings."
+   updated: 2024-08-01
 
  - name: enparen
    type: package
