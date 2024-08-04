@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article} 
+
+\usepackage{threeparttablex}
+\usepackage{longtable,booktabs}
+
+\title{threeparttablex tagging test}
+
+\begin{document}
+
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item[a] A note
+\item[b] Another note
+\end{TableNotes}
+\begin{longtable}{l l}
+\toprule
+Column 1 & Column 2 \\
+\midrule
+\endhead
+\cmidrule{2-2}
+\multicolumn{2}{r}{\textit{continued}}
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
+% the contents of the table
+A & B\tnote{a} \\
+C\tnote{b} & D \\
+\end{longtable}
+\end{ThreePartTable}
+
+\end{document}

@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article} 
+
+\usepackage{rotfloat}
+
+\floatname{program}{Program}
+\newfloat{program}{tbp}{lop}[section]
+
+\begin{document}
+
+text
+\begin{program}
+\centering
+\includegraphics[alt=alt text]{example-image}
+\caption{Some caption}
+\end{program}
+
+\begin{sidewaysprogram}
+\centering
+\includegraphics[alt=alt text]{example-image}
+\caption{Another caption}
+\end{sidewaysprogram}
+
+\end{document}
