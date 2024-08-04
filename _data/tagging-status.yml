@@ -1153,12 +1153,13 @@
 
  - name: bigfoot
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3, arxiv001]
    priority: 2
+   issues: [410]
    comments: To be supported or not?
-   tasks: needs tests
-   updated: 2024-07-04
+   tests: true
+   updated: 2024-08-03
 
  - name: bigintcalc
    type: package
@@ -1851,6 +1852,15 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: citation-style-language
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues: [421]
+   tests: true
+   updated: 2024-08-03
 
  - name: cite
    type: package
@@ -6270,13 +6280,12 @@
 
  - name: needspace
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   updated: 2024-08-03
 
  - name: newapa
    type: package
@@ -7317,12 +7326,12 @@
  - name: pgfrcs
    ctan-pkg: pgf
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv10]
    priority: 3
    issues:
    tests: false
-   updated: 2024-07-28
+   updated: 2024-08-03
 
  - name: phonenumbers
    type: package
