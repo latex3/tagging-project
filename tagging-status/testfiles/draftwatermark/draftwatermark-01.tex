@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article} 
+
+\usepackage{kantlipsum}
+\usepackage{draftwatermark}
+
+\NewMarkClass{WM}
+\InsertMark{WM}{Public Info}
+
+\DraftwatermarkOptions{
+  pos={10pt,20pt} , hanchor=l ,
+  text=\bfseries -- \thepage\
+       --\qquad\FirstMark{WM} ,
+  fontsize=7pt , angle=0 }
+
+\title{draftwatermark tagging test - 1}
+
+\begin{document}
+\kant[1]
+
+\newpage
+
+\InsertMark{WM}{Confidential}
+\kant[2]
+\end{document}
