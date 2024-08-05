@@ -1,0 +1,59 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+%    testphase={phase-III,math,title,table,firstaid},
+  }
+\begin{filecontents}[overwrite]{sample.bib}
+@article{einstein,
+  author =       "Albert Einstein",
+  title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+                 [{On} the electrodynamics of moving bodies]",
+  journal =      "Annalen der Physik",
+  volume =       "322",
+  number =       "10",
+  pages =        "891--921",
+  year =         "1905",
+  DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+}
+
+@book{latexcompanion,
+    author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+    title     = "The \LaTeX\ Companion",
+    year      = "1993",
+    publisher = "Addison-Wesley",
+    address   = "Reading, Massachusetts"
+}
+ 
+@misc{knuthwebsite,
+    author    = "Donald Knuth",
+    title     = "Knuth: Computers and Typesetting",
+    url       = "http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html"
+}
+\end{filecontents}
+
+\documentclass{article}
+\usepackage{natbib}
+\usepackage{har2nat}
+\usepackage{hyperref}
+
+\begin{document}
+
+text \cite{einstein}
+
+As \citeasnoun{einstein} and \citeasnoun[Annex~B]{latexcompanion} describe \ldots
+
+manuals \citeaffixed{knuthwebsite,latexcompanion}{e.g.} describe \ldots
+
+\citeyear{latexcompanion}
+
+\citename{einstein}
+
+\medskip
+
+\bibliographystyle{plainnat}
+\bibliography{sample}
+
+\end{document}
+
