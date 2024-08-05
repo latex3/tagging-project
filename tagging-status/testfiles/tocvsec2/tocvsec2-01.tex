@@ -1,0 +1,63 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{tocvsec2}
+\usepackage{hyperref}
+
+\maxtocdepth{subsubsection}
+\maxsecnumdepth{subsubsection}
+
+\def\x{%
+  \subsection{sone} xyz
+  \subsubsection{ssone} abc
+  \subsubsection{sstwo} def
+  \subsection{stwo} 123
+  \paragraph{foo} here
+}
+
+\title{tocvsec2 tagging test}
+
+\begin{document}
+
+\tableofcontents 
+\section{Normal section}
+\x
+
+\setsecnumdepth{subsection}
+\settocdepth{subsection}
+\section{Reduce numbering}
+\x
+
+\setsecnumdepth{section}
+\settocdepth{section}
+\section{Reduce numbering again}
+\x
+
+\resetsecnumdepth
+\resettocdepth
+\section{Reset numbering once}
+\x
+
+\setsecnumdepth{section}
+\settocdepth{section}
+\section{Reduce numbering again}
+\x
+
+\resetsecnumdepth*
+\resettocdepth*
+\section{Another normal section after resetting completely}
+\x
+
+\appendix
+
+\settocdepth{all}
+\setsecnumdepth{all}
+\section{Appendix with all numbering}
+\x
+
+\end{document}
