@@ -1,0 +1,69 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\begin{filecontents}{articles.bib}
+@incollection{RouxSmart:95,
+    author    = "M. Roux and J. Smart",
+    title     = "A Model of Medical Knowledge Representation, Application
+                 to the Reports Analysis of Descriptive Pathology",
+    booktitle = "Methods of Information in Medecine",
+    note      = {\`A para\^{\i}tre},
+    publisher = "Schattauer",
+    address   = "Holland",
+    year      = 1995
+}
+
+@article{Schwind:96,
+    author    = {Camilla B. Schwind},
+    title     = {Knowledge Based Language Tutoring},
+    journal   = {Computer Assisted Language Learning},
+    publisher = {Svets},
+    year      = 1996,
+    note      = {\`A para\^{\i}tre}
+}
+\end{filecontents}
+\begin{filecontents}{books.bib}
+@book{ColBenh:93,
+   editor = "Fr\'ed\'eric Benhamou and Alain Colmerauer" ,
+   title = "Constraint Logic programming, Selected Research",
+   publisher = "MIT Press",
+   year = 1993
+}
+
+@book{Munt:93,
+   author =    {Tra{\"\i}an Muntean},
+   title =     {Puces tr\`es performantes},
+   publisher = {Hatier},
+   address =   {Paris},
+   series = {Terres du futur, Les Editions UNESCO},
+   year =      1993,
+}
+\end{filecontents}
+
+\documentclass[10pt]{article}
+\usepackage{bibtopic}
+\usepackage{hyperref}
+\begin{document}
+\bibliographystyle{alpha}
+
+\section{Testing}
+Let's cite all the books: \cite{ColBenh:93} and
+\cite{Munt:93}; and an article: \cite{RouxSmart:95}.
+
+\begin{btSect}{books}
+\section{References from books}
+\btPrintCited
+\end{btSect}
+
+\begin{btSect}[plain]{articles}
+\section{References from articles}
+\btPrintCited
+
+\section{Articles not cited}
+\btPrintNotCited
+\end{btSect}
+\end{document}

@@ -1151,12 +1151,13 @@
 
  - name: bibtopic
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [tlc3]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
+   tests: true
+   tasks: "Errors with hyperref option `backref`. No links are created by hyperref
+           if `btUnit` is used."
    updated: 2024-07-14
 
  - name: bibunits
