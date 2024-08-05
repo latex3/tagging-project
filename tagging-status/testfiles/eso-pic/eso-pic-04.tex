@@ -1,0 +1,71 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass[a4paper,twoside]{article}
+\usepackage{graphicx,pict2e}
+\usepackage{eso-pic}
+
+\AddToShipoutPictureBG{%
+  \AtTextLowerLeft{\framebox(\textwidth,\textheight){}}}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+  \section*{First page}
+  
+  \AddToShipoutPictureBG*{% on the background, only this page
+    \AtTextUpperLeft{%
+      \put(30mm,-25mm){\color{lightgray}\circle*{50}}
+    }
+  }
+  \AddToShipoutPictureFG*{% on the foreground, only this page
+    \AtTextUpperLeft{%
+      \put(60mm,-25mm){\color{lightgray}\circle*{50}}
+    }
+  }
+
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+  This page and all the following have a frame around the
+  text area. \par
+
+  \vfill
+  X \hfill X\newpage
+
+  \section*{Second page}
+
+  \AddToShipoutPictureBG*{%
+    \AtTextCenter{%
+      \makebox(0,0)[c]{\resizebox{\textwidth}{!}{%
+        \rotatebox{45}{\textsf{\textbf{\color{lightgray}DRAFT}}}}}
+    }
+  }
+
+  Only this page has rotated text in the center of the text area.
+
+  \vfill
+  X \hfill X\newpage
+
+  \section*{Last page}
+
+  \vfill
+  X \hfill X
+
+\end{document}

@@ -1,0 +1,48 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass[a4paper,twoside]{article}
+% a4paper =       210mm x 297mm   = 596bp x 842bp = 8.27in x 11.69in
+% letterpaper = 215.9mm x 279.4mm = 612bp x 792bp =  8.5in x 11in
+
+%\usepackage[a3,center]{crop}
+
+\usepackage[dvips]{geometry}
+% `dvips', `pdfTeX' and `VTeX' should know the papersize.
+
+\usepackage[colorgrid,gridBG=true,gridunit=mm,texcoord]{eso-pic}
+%\usepackage[colorgrid,gridunit=in,subgridcolor=blue,texcoord]{eso-pic}
+%\usepackage[grid,gridunit=bp,subgridstyle=dotted]{eso-pic}
+
+\newcommand*\cmd[1]{\texttt{\symbol{`\\}#1}}
+
+\AddToShipoutPictureBG{%
+  \thicklines\normalfont\ttfamily\Large%
+  \color{blue}\setlength\unitlength{1mm}%
+  \AtTextCenter{\circle*{6}%
+    \put(-2,0){\makebox(0,0)[lb]{\cmd{AtTextCenter}}}}%
+  \AtTextUpperLeft{\circle*{6}%
+    \put(-2,5){\makebox(0,0)[lt]{\cmd{AtTextUpperLeft}}}}%
+  \AtTextLowerLeft{\circle*{6}%
+    \put(-2,-5){\makebox(0,0)[lb]{\cmd{AtTextLowerLeft}}}}%
+  \color{red}%
+  \AtPageCenter{\circle*{6}%
+    \put(-2,0){\makebox(0,0)[lt]{\cmd{AtPageCenter}}}}%
+  \AtPageUpperLeft{\circle*{6}%
+    \put(-2,-5){\makebox(0,0)[lb]{\cmd{AtPageUpperLeft}}}}%
+  \AtPageLowerLeft{\circle*{6}%
+    \put(-2,5){\makebox(0,0)[lt]{\cmd{AtPageLowerLeft}}}}%
+}
+
+\setlength\parindent{0pt}
+
+\begin{document}  \Huge \bfseries
+
+\hrulefill First Page\hrulefill \vfill X \hfill X \newpage
+\hrulefill  Second Page\hrulefill \vfill X \hfill X
+
+\end{document}
