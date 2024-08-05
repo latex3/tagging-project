@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage[extreme]{savetrees}
+\usepackage{kantlipsum}
+
+\title{savetrees tagging test}
+\author{Some author}
+
+\begin{document}
+\maketitle
+
+\section{A section heading}
+\kant[1-3]
+\begin{enumerate}
+\item blub
+\item blub blub
+\end{enumerate}
+\begin{figure}
+Some figure
+\caption{Some caption}
+\end{figure}
+
+\begin{thebibliography}{9}
+\bibitem{dihe:newdir}
+W.~Diffie and E.~Hellman, \emph{New directions in cryptography}, IEEE
+Transactions on Information Theory \textbf{22} (1976), no.~5, 644--654.
+\end{thebibliography}
+
+\end{document}

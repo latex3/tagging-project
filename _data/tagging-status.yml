@@ -8007,13 +8007,13 @@
 
  - name: savetrees
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3, arxiv01]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   tests: true
+   tasks: "Redefines `\\maketitle` and uses titlesec to redefine section commands."
+   updated: 2024-08-05
 
  - name: scalefnt
    type: package
