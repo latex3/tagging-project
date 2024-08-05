@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{harvard}
+\usepackage{hyperref}
+
+\begin{document}
+
+text \cite[postfix]{inbook-full}
+
+As \citeasnoun{article-full} and \citeasnoun[Annex~B]{whole-journal} describe \ldots
+
+\possessivecite{book-full} description of this feature is \ldots
+
+manuals \citeaffixed{manual-full,masterthesis-minimal}{e.g.} describe \ldots
+
+\citeyear{inbook-full}
+
+\citename{inbook-full}
+
+\bibliographystyle{agsm}
+\bibliography{xampl}
+
+\end{document}
