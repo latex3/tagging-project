@@ -1,0 +1,172 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{layouts}
+\usepackage{kantlipsum}
+
+\title{layouts tagging test}
+
+\begin{document}
+\newlength{\pwlayi}
+\setlength{\pwlayi}{0.4375\textwidth}
+\newlength{\pwlayii}
+\setlength{\pwlayii}{0.5\pwlayi}
+\begin{figure}
+\centering
+\begin{minipage}[b]{\pwlayi}
+\drawaspread{\pwlayii}{1.294}{1.618}{0.176}{1.037}{1.685}{0}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{\pwlayi}
+\drawaspread{\pwlayii}{1.5}{1.5}{0.111}{1.5}{2.0}{0}
+\end{minipage}
+\caption{(Left) The \LaTeX{} book spread;
+(Right) Spread for many of Gutenberg’s books}
+\label{fig:spread}
+\end{figure}
+
+\begin{figure}
+\oddpagelayoutfalse
+\twocolumnlayouttrue
+\pagediagram
+\caption{Left-hand two-column page layout parameters} \label{fig:pplt}
+\end{figure}
+
+\begin{figure}
+\currentpage
+\oddpagelayouttrue
+\pagedesign
+\caption{Odd page layout for this document} \label{fig:ptrs}
+\end{figure}
+
+\begin{figure}
+\currentpage
+\trypaperwidth{11in}
+\trypaperheight{8.5in}
+\trytextwidth{500pt}
+\trycolumnsep{40pt}
+\trycolumnseprule{3pt}
+\tryhoffset{-0.5in}
+\tryvoffset{0.5in}
+\printheadingsfalse
+\drawdimensionstrue
+\twocolumnlayouttrue
+\pagedesign
+\caption{An experimental page layout}\label{fig:pudf}
+\end{figure}
+
+\pagevalues
+
+\begin{figure}
+\paragraphdiagram
+\caption{Paragraph parameters}\label{fig:fpara}
+\end{figure}
+
+\kant[3]
+\currentparagraph
+\begin{figure}
+\paragraphdesign
+\caption{Paragraphs in this document}\label{fig:dpara}
+\end{figure}
+
+\begin{figure}
+\floatpagediagram
+\caption{Float and text page parameters}\label{fig:fpp}
+\end{figure}
+
+\begin{figure}
+\currentfloatpage
+\trytotalnumber{3}
+\trytopnumber{2}
+\trytopfraction{0.7}
+\trytextfraction{0.2}
+\trybottomfraction{0.3}
+\trybottomnumber{1}
+\setlayoutscale{0.25}
+\floatpagedesign
+\caption{The standard \LaTeX{} float and text page settings}
+\label{fig:fpstd}
+\end{figure}
+
+\begin{figure}
+\setlayoutscale{0.9}
+\floatdiagram
+\caption{Float parameters}\label{fig:flp}
+\end{figure}
+
+\begin{figure}
+\currentfloat
+\tryintextsep{\intextsep}
+\trytopfigrule{0.5pt}
+\trybotfigrule{1pt}
+\setlayoutscale{0.9}
+\floatdesign
+\caption{Float layout with rules}\label{fig:fludf}
+\end{figure}
+
+\begin{figure}
+\listdiagram
+\caption{List parameters} \label{fig:lstp}
+\end{figure}
+
+\begin{enumerate}
+\item Figure~\ref{fig:lstenum} illustrates the layout of an
+\texttt{enumerate} list.
+\currentlist
+\begin{figure}
+\listdesign
+\caption{Layout of an \texttt{enumerate} list} \label{fig:lstenum}
+\end{figure}
+\end{enumerate}
+
+\begin{figure}
+\setlayoutscale{1}
+\headingdiagram{ }
+\caption{Display heading parameters}\label{fig:hdp}
+\end{figure}
+\begin{figure}
+\setlayoutscale{1}
+\runinheadtrue
+\headingdiagram{ }
+\caption{Run-in heading parameters}\label{fig:hrp}
+\end{figure}
+
+text\footnote{a footnote}
+
+\begin{figure}
+\setlayoutscale{0.4}
+\setlabelfont{\huge\itshape}
+\footnotediagram
+\caption{The footnote parameter layout} \label{fig:fp}
+\end{figure}
+
+\begin{figure}
+\currentfootnote
+\setlayoutscale{0.4}
+\footnotedesign
+\caption{The current footnote layout}\label{fig:ftry}
+\end{figure}
+
+\begin{figure}
+\setlayoutscale{0.8}
+\tocdiagram
+\caption{Table of Contents entry parameters}\label{fig:tocp}
+\end{figure}
+
+\begin{figure}
+\setlayoutscale{0.8}
+\currenttoc
+\tocdesign
+\caption{Typical Table of Contents entry for this document} \label{fig:thistoc}
+\end{figure}
+
+\drawfontframe{\Huge\textbf{g}}
+
+\drawfontframelabel{\Huge Q}
+
+\end{document}
