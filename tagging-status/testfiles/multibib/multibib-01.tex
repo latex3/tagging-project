@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{multibib}
+\usepackage{hyperref}
+\newcites{ltex}{\TeX\ and \LaTeX\ References}
+\begin{document}
+text \citeltex{article-full}
+
+more text\nociteltex{inbook-full}.
+
+and more \cite{manual-full}
+
+\bibliographystyleltex{alpha}
+\bibliographyltex{xampl}
+\renewcommand{\refname}{Postscript References}
+\bibliographystyle{plain}
+\bibliography{xampl}
+\end{document}
