@@ -1,0 +1,53 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{undolabl}
+\usepackage{hyperref}
+
+\title{undolabl tagging test}
+
+\begin{document}
+
+\section*{Example for undolabl}
+This example demonstrates the use of package\newline
+\textsf{undolabl}, v1.0m as of 2023-02-14 (HMM).\newline
+For details please see the documentation!
+
+\bigskip
+
+\section{Test}
+text \label{testlabel}\\
+page-reference: \pageref{testlabel}\\%%  -> page 4
+sectional-reference: \ref{testlabel}\\%% -> section 4
+name-reference: \nameref{testlabel}%%    -> Still another test
+
+\newpage
+
+\section{Another test}
+text \overridelabel{testlabel}\\
+page-reference: \pageref{testlabel}\\%%  -> page 4
+sectional-reference: \ref{testlabel}\\%% -> section 4
+name-reference: \nameref{testlabel}%%    -> Still another test
+
+\newpage
+
+\section{Yet another test}
+text \overridelabel{testlabel}\\
+page-reference: \pageref{testlabel}\\%%  -> page 4
+sectional-reference: \ref{testlabel}\\%% -> section 4
+name-reference: \nameref{testlabel}%%    -> Still another test
+
+\newpage
+
+\section{Still another test}
+text \overridelabel{testlabel}\\
+page-reference: \pageref{testlabel}\\%%  -> page 4
+sectional-reference: \ref{testlabel}\\%% -> section 4
+name-reference: \nameref{testlabel}%%    -> Still another test
+
+\end{document}
