@@ -1,0 +1,58 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{subfloat}
+\usepackage{hyperref}
+
+\title{subfloat tagging test}
+
+\begin{document}
+
+\begin{subfigures}
+\label{fig:fig1a2}
+%
+\begin{figure}\centering
+\fbox{fig. 1}
+\caption{This is the first figure}\label{fig:fig1}
+\end{figure}
+%
+\begin{figure}\centering
+\fbox{fig. 2}
+\caption{This is the second figure}\label{fig:fig2}
+\end{figure}
+%
+\end{subfigures}
+
+\begin{figure}
+Some figure
+\caption{A figure without subfigures}
+\end{figure}
+
+\begin{subfigures}
+\label{fig2:fig1a2}
+%
+\begin{figure}\centering
+\fbox{fig. 1}
+\caption{This is the first figure}\label{fig2:fig1}
+\end{figure}
+%
+\begin{figure}\centering
+\fbox{fig. 2}
+\caption{This is the second figure}\label{fig2:fig2}
+\end{figure}
+%
+\end{subfigures}
+
+\ref{fig:fig1a2}
+
+\ref{fig:fig1}
+
+\ref{fig:fig2}
+
+\end{document}
