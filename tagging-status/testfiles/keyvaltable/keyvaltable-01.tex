@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{keyvaltable}
+
+\NewKeyValTable{Recipe}{
+amount: align=r;
+ingredient: align=l;
+step: align=X;
+}
+
+\begin{document}
+
+\begin{KeyValTable}{Recipe}
+\Row{amount=150g, ingredient=ice cream,
+step=put into bowl}
+\Row{amount= 50g, ingredient=cherries,
+step=heat up and add to bowl}
+\end{KeyValTable}
+
+\end{document}

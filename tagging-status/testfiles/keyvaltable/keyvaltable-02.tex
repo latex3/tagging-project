@@ -1,0 +1,97 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\begin{filecontents}[overwrite]{cities.kvt}
+ \Row{city=Mainz, country=Germany, people=0.2 mil, visited=\emph{home town}}
+ \Row{city=London,   country=UK,   people=8.9 mil, visited=yes}
+ \Row[style=H]{city=New York, country=USA,  people=8.4 mil, visited=planned}
+ \Row[style=H]{city=Paris, country=France, people=2.1 mil}
+\end{filecontents}
+\documentclass{article}
+\usepackage{keyvaltable}
+
+\NewKeyValTable[backend=tabular,norules,norowbg,
+                headformat=\bfseries]
+   {cities}{name; country; visited; note: hidden}
+   
+\kvtNewRowStyle{H}{}
+\NewKeyValTable{overview}{city: ; country: ; people: ; visited: hidden}
+\NewKeyValTable{visits}{country: ; city: ; people: hidden; visited: align=c}
+
+\NewKeyValTable[norowbg]{ToDo}{ prio: default=high;
+                                text: head=comment }
+\NewCollectedTable{notes}{ToDo}
+\newcommand\note[2][]{\CollectRow[#1]{notes}{text=#2}}
+
+\NewKeyValTable{autonum}{ text: head=\textbf{Text};
+                          line: head=\ , default=\S\thekvtRow }
+\kvtSet{ColGroup/format=\itshape,ColGroup/align=r}
+\NewKeyValTable{spantest}{ colA: align=l|; colB: align=l||;
+                          colC: align=l|; colD:}
+     [ colgroups={ all: span=colA+colB+colC+colD, format=\textbf;
+                 AuBuC: span=colA+colB+colC, align=c|;
+                   AuB: span=colA+colB, align=l||;  CuD: span=colC+colD } ]
+\NewKeyValTable[headformat=\sffamily]{MultiCol}
+   { penny: align=c|, format=\bfseries; euro: align=l|; cent: }
+\NewKeyValTable[headformat=\bfseries, norowbg]{complexheader}
+  { precolumn: align=c, format=\textbf ; colA: ; colB: ; colC: ;colD: }
+  [ headers={ colA+colB+colC+colD : head=\textsf{From A to D} \\
+              colA+colB : head= A \& B;
+                       colC+colD : align=r, head=$\to$ C \& D \\ :: }
+   ,colgroups={BtoE: span=colA+colB+colC+colD, format=\textit}        ]                         
+\begin{document}
+
+\begin{KeyValTable}{cities}
+  \Row[above=5pt]{country=Germany, name=Mainz, note=...}
+  \MidRule[2pt]
+  \Row{country=USA, name=New York, visited=yes}
+\end{KeyValTable}
+
+\ShowKeyValTableFile[shape=onepage,valign=t]{overview}{cities.kvt} \quad
+\kvtRenewRowStyle{H}{hidden}     % hide the H rows in next table
+\ShowKeyValTableFile[shape=onepage,nobg,valign=t]{visits}{cities.kvt}
+
+\note{{A note, with comma}}
+\note{one more with prio change, prio=low}
+My notes: \ShowCollectedTable{notes} And more text.
+\note[bg=blue!10]{and some afterthought}
+    
+\begin{KeyValTable}{autonum}
+  \Row{text=First row} \Row{text=Second row, line=\thekvtRow*}
+  \Row[uncounted]{text=Interlude, line=--} \Row{text=Last row}
+\end{KeyValTable}
+
+\begin{KeyValTable}{spantest}
+ \Row{all=The Start}  \Row{colA=1, colB=2, colC=3, colD=4}
+ \Row{all=--- right aligned text ---}
+ \Row{AuB=1 \& 2,       colC=3,  colD=4}
+ \Row{colA=1, colB=2,   colC=3,  colD=4}
+ \Row{colA=1, colB=2,    CuD=3 \& 4}
+ \Row{AuBuC=--- 3 out of 4 ---,    colD=4}
+ \Row{AuB=1 \& 2, CuD=3 \& 4} \Row{all=The End}
+\end{KeyValTable}
+
+\begin{KeyValTable}{MultiCol}
+  \Row{euro=\multicolumn{1}{r|}{2}, cent=3, penny=1}
+  \Row[format!=\sffamily]{penny=1, cent=3, euro=2}
+  \Row{penny=1, euro=\multicolumn{2}{c}{\color{blue}2+3}}
+  \Row{cent=3, penny=\multicolumn{2}{c|}{1+2}}
+  \Row[format=\itshape]{penny=\multicolumn{3}{c}{1+2+3}}
+  \Row{cent=3, euro=2, penny=1}
+\end{KeyValTable}
+
+\begin{KeyValTable}{complexheader}
+  \Row{ precolumn=1, colA=1.a, colB=1.b,
+                           colC=---, colD=1.d }
+  \Row{ precolumn=2, colA=2.a, colB=2.b,
+                           colC=2.c, colD=2.d }
+\Row[around=3pt]{BtoE=Centered subtitle}
+  \Row{ precolumn=3, colA=3.a, colB=---,
+                           colC=3.c, colD=3.d }
+\end{KeyValTable}
+
+\end{document}
