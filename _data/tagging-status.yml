@@ -3761,7 +3761,6 @@
    included-in: [tlc3, arxiv001]
    priority: 2
    comments: "See fancyvrb."
-   priority: 2
    issues:
    tests: false
    tasks: needs tests
@@ -4323,7 +4322,6 @@
    priority: 6
    supported-through: [phase-III,package]
    package-repository: "https://github.com/ho-tex/hypcap"
-   priority: 9
    comments: "The tagging code already moves anchors to the top of floats
               so this package is unnecessary. package updated"
    issues:
@@ -5533,8 +5531,6 @@
    status: compatible
    included-in: [arxiv01]
    priority: 6
-   included-in:
-   priority: 9
    supported-through: [phase-III,math]
    comments: "`\\circledR` and `\\circledS` need ToUnicode values.
               Use of math tagging currently requires support from external tools."
@@ -6003,7 +5999,6 @@
    priority: 2
    supported-through: [phase-III,math]
    comments: "Use of math tagging currently requires support from external tools."
-   priority: 2
    issues:
    tests: true
    updated: 2024-07-24
@@ -7014,7 +7009,6 @@
    included-in: [tlc3]
    priority: 2
    comments: "Does not error but `\\parnote`s are not tagged as `<Note>`s."
-   priority: 9
    issues:
    tests: true
    updated: 2024-07-25
@@ -9842,7 +9836,7 @@
    priority: 2
    issues:
    tests: true
-   comments: `\\nofloat` produces parent-child warnings.
+   comments: "`\\nofloat` produces parent-child warnings."
    updated: 2024-08-04
 
  - name: xecjk
