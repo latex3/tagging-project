@@ -1,0 +1,57 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+\usepackage{captcont}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{captcont tagging test}
+
+\begin{document}
+
+\listoffigures
+
+text
+
+\begin{figure}[p]
+\includegraphics[alt=alt text,scale=0.5]{example-image-a}
+\captcont{Figure one.}
+\label{fig:ex1-1}
+\end{figure}
+\begin{figure}[p]
+\includegraphics[alt=alt text,scale=0.5]{example-image-b}
+\captcont{Figure one. (cont)}
+\label{fig:ex1-2}
+\end{figure}
+\begin{figure}[p]
+\includegraphics[alt=alt text,scale=0.5]{example-image-c}
+\captcont*{Figure one. (cont)}
+\label{fig:ex1-3}
+\end{figure}
+\begin{figure}[p]
+\includegraphics[alt=alt text,scale=0.5]{example-image}
+\caption{Figure one. (cont)}
+\label{fig:ex1-4}
+\end{figure}
+\begin{figure}[p]
+\includegraphics[alt=alt text,scale=0.5]{example-image-golden}
+\caption*{Figure two. (not added to lof)}
+\label{fig:ex1-5}
+\end{figure}
+
+\ref{fig:ex1-1}
+
+\ref{fig:ex1-2}
+
+\ref{fig:ex1-3}
+
+\ref{fig:ex1-4}
+
+\ref{fig:ex1-5}
+
+\end{document}
