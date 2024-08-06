@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage[pagecolor=blue!10]{pagecolor}
+\usepackage{kantlipsum}
+
+\title{pagecolor tagging test}
+
+\begin{document}
+
+\thepagecolor
+
+\kant[1-5]
+
+\pagecolor{rgb:-green!40!yellow,3;green!40!yellow,2;red,1}
+\thepagecolor
+
+\newpage
+\newpagecolor{red!10}
+\kant[6]
+
+\newpage
+\restorepagecolor
+\kant[7]
+
+\end{document}
