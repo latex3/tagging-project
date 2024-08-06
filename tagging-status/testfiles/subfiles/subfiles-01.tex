@@ -1,0 +1,45 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\begin{filecontents}[overwrite]{test-subfile1.tex}
+\documentclass[subfiles-01]{subfiles}
+\begin{document}
+\chapter{First chapter}
+Some text and a table:
+\begin{table}
+\begin{tabular}{cc}
+A & B \\
+C & D
+\end{tabular}
+\caption{Some caption}
+\label{tab}
+\end{table}
+\end{document}
+\end{filecontents}
+\begin{filecontents}[overwrite]{test-subfile2.tex}
+\documentclass[subfiles-01]{subfiles}
+\begin{document}
+\chapter{Second chapter}
+Some more text and a reference: \ref{tab}
+\end{document}
+\end{filecontents}
+\documentclass{report}
+
+\usepackage{subfiles}
+
+\begin{document}
+
+\tableofcontents
+
+\listoftables
+
+Refer to the table: \ref{tab}
+
+\subfile{test-subfile1}
+\subfile{test-subfile2}
+
+\end{document}
