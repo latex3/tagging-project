@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{changebar}
+\usepackage{kantlipsum}
+
+\title{changebar tagging test}
+
+\begin{document}
+
+\cbstart
+text
+\cbend
+
+\cbdelete
+Here is some text that. Here is some text that. Here is some text that.
+
+\begin{changebar}[5pt]
+Here is some text that. Here is some text that. Here is some text that.
+Here is some text that. Here is some text that. Here is some text that.
+Here is some text that. Here is some text that. Here is some text that.
+
+Here is some text that.\cbdelete[10pt] Here is some text that. Here is some text that.
+Here is some text that. Here is some text that. Here is some text that.
+\end{changebar}
+
+Here is some text that. Here is some text that. Here is some text that.
+
+\end{document}

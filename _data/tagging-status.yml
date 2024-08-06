@@ -1722,13 +1722,13 @@
 
  - name: changebar
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [tlc3, arxiv01]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   tasks: "Broken with lualatex."
+   updated: 2024-08-06
 
  - name: changepage
    type: package
