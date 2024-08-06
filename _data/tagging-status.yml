@@ -10275,13 +10275,16 @@
 
  - name: youngtab
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [arxiv01]
    priority: 6
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   tests: true
+   comments: "Diagrams in text mode need Alt text and for rules to be tagged as
+              Artifacts."
+   updated: 2024-08-06
 
  - name: ytableau
    type: package
