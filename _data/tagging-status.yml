@@ -294,37 +294,28 @@
  - name: algorithm
    ctan-pkg: algorithms
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv5]
    priority: 4
    issues:
-   tests: false
-   updated: 2024-07-28
+   tests: true
+   comments: "`algorithm` environments not tagged as floats. See float package."
+   updated: 2024-08-06
 
  - name: algorithmic
    ctan-pkg: algorithms
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv5]
    priority: 4
    issues:
-   tests: false
-   updated: 2024-07-28
+   tests: true
+   updated: 2024-08-06
 
  - name: algorithmicx
    type: package
    status: unknown
    included-in: [tlc3, arxiv5]
-   priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
-
- - name: algorithms
-   type: package
-   status: unknown
-   included-in: [tlc3]
    priority: 2
    issues:
    tests: false
