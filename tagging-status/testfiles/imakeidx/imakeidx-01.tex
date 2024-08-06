@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{imakeidx}
+
+\makeindex[title=Concept index]
+\makeindex[name=persons,title=Index of names,columns=3]
+
+\begin{document}
+
+relativity\index{relativity}
+
+Einstein\index[persons]{Einstein, Albert}
+
+And this is the end of the story.
+\printindex
+\indexprologue{\small In this index you’ll find only famous people's names}
+\printindex[persons]
+\end{document}
