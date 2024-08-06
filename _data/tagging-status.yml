@@ -1646,13 +1646,12 @@
 
  - name: catchfile
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-06
 
  - name: ccaption
    type: package
@@ -2221,13 +2220,22 @@
 
  - name: currfile
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv001]
    priority: 7
    issues:
+   tests: true
+   updated: 2024-08-06
+
+ - name: currfile-abspath
+   ctan-pkg: currfile
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-06
 
  - name: curve2e
    type: package
@@ -3218,13 +3226,12 @@
 
  - name: fancyref
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv001]
    priority: 7
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   tests: true
+   updated: 2024-08-06
 
  - name: fancyvrb
    type: package
@@ -3469,13 +3476,12 @@
 
  - name: floatflt
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [496]
+   tests: true
+   updated: 2024-08-06
 
  - name: floatrow
    type: package
@@ -4481,13 +4487,12 @@
 
  - name: hyphsubst
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv001]
    priority: 7
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-06
 
 #------------------------ III ----------------------------
 
@@ -6112,13 +6117,12 @@
 
  - name: morefloats
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   tests: true
+   updated: 2024-08-06
 
  - name: moreverb
    type: package
@@ -6186,13 +6190,12 @@
 
  - name: multido
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-06
 
  - name: multiexpand
    type: package
@@ -6283,6 +6286,15 @@
    tests: false
    comments: Not distributed with texlive.
    updated: 2024-07-31
+
+ - name: namedef
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   updated: 2024-08-06
 
  - name: nameref
    type: package
@@ -6833,13 +6845,13 @@
 
  - name: orcidlink
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [arxiv01]
    priority: 6
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: "ORCiD logo needs Alt/ActualText."
+   updated: 2024-08-06
 
  - name: oscola
    type: package
@@ -7542,13 +7554,12 @@
 
  - name: prettyref
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   tests: true
+   updated: 2024-08-06
 
  - name: preview
    type: package
@@ -8662,19 +8673,17 @@
    priority: 9
    issues:
    comments: "Incompatible with amsmath which is loaded by `testphase=math`."
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-29
+   tests: true
+   updated: 2024-08-06
 
  - name: subeqnarray
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   issues: [503]
+   tests: true
+   updated: 2024-08-06
 
  - name: subfig
    type: package
@@ -9042,13 +9051,12 @@
 
  - name: textpos
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-17
+   issues: [501]
+   tests: true
+   updated: 2024-08-06
 
  - name: tgadventor
    ctan-pkg: tex-gyre-adventor
@@ -9271,10 +9279,20 @@
    tasks: needs tests
    updated: 2024-07-15
 
+ - name: titlecaps
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: true
+   updated: 2024-08-06
+
  - name: titleps
    type: package
    status: compatible
    included-in:
+   priority: 2
    issues:
    tests: true
    updated: 2024-07-12
@@ -9422,13 +9440,12 @@
 
  - name: tracklang
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-06
 
  - name: translations
    type: package
@@ -9580,6 +9597,16 @@
    issues: [174]
    tests: true
    updated: 2024-07-17
+
+ - name: typicons
+   type: package
+   status: partially-compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   comments: "Symbols need Alt/ActualText."
+   updated: 2024-08-06
 
 #------------------------ UUU ----------------------------
 
@@ -10287,13 +10314,12 @@
 
  - name: ytableau
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   issues: [499]
+   tests: true
+   updated: 2024-08-06
 
  - name: ysabeau
    type: package

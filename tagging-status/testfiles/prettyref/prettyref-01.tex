@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{prettyref}
+\usepackage{hyperref}
+
+\title{prettyref tagging test}
+
+\begin{document}
+
+\section{Some section}
+\label{sec:some}
+
+\begin{figure}
+Figure content
+\caption{Some figure}
+\label{fig:some}
+\end{figure}
+
+\prettyref{sec:some}
+
+\prettyref{fig:some}
+
+\end{document}

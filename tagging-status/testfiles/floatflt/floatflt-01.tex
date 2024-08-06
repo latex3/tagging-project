@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{floatflt}
+\usepackage{kantlipsum}
+\usepackage{graphicx}
+
+\begin{document}
+
+\kant[1-2]
+\begin{floatingfigure}{0.4\textwidth}
+\includegraphics[width=0.35\textwidth,alt=alt text]{example-image}
+\caption{Some caption}
+\end{floatingfigure}
+\kant[3-4]
+
+\end{document}
