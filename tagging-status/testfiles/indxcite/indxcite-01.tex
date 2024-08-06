@@ -1,0 +1,58 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{indxcite}
+\newindex{aut}{adx}{and}{Author Index} % makeindex -o example.and example.adx
+\begin{document}
+\bibliographystyle{dcu_ic}
+\citationstyle{dcu}
+\citationindex{aut}
+\citationformat{textit}
+This is a small example demonstrating the use of the \texttt{indxcite}
+package.
+It is possible, with a single command, to both make a citation and
+generate index entries for the authors of the cited word,
+for example, \iciteasnoun{latexcomp}.
+\pagebreak
+Unusual effects are possible. If you want you can have the authors’ names to
+appear in small caps in the index with a typewriter font used for the
+page numbers thusly.
+\citationformat[textsc]{texttt}
+And make the citation \icite[Chapter 5]{latexcomp}.
+You can then reset the format back to a more conventional setting.
+\citationformat{textit}
+Using a format other than roman can be a good idea so that automatically
+generated index entries are distinguishible from manually generated
+ones\index[aut]{Goossens, M.}.
+Note that if the authors’ names are indexed with more than one format
+as in this document (i.e., usually in roman but once in small caps) then
+multiple index entries will be generated.
+\pagebreak
+\indexcite[(]{latexcomp}
+If a citation is refered to over several paragraphs you may want to
+index the whole range of text.
+In this case you need to use three commands: one to generate the
+citation\cite{latexcomp}; one to mark the begining of the text to
+be indexed and one to mark the end of the text to be indexed.
+\pagebreak
+Then, if the indexed text runs over multiple pages, this will be
+reflected in the index entry\indexcite[)]{latexcomp}.
+It is a good idea to reset the citation format before the bibliography
+is processed so that index entries for the bibliography can be easily
+distinguished for those for the rest of the document.
+\citationformat{textbf}
+\begin{thebibliography}{xx}
+\harvarditem[Goossens et~al.]{Goossens, Mittelbach \harvardand\
+Samarin}{1993}{latexcomp}{\\{Goossens, M.}\\{Mittelbach, F.}\\{Samarin, A.}}
+Goossens, M., Mittelbach, F. \harvardand\ Samarin, A. \harvardyearleft
+1993\harvardyearright .
+\newblock {\em The {\LaTeX{}} Companion}, Addison-Wesley, Reading,
+Massachusetts.\indexcite{latexcomp}
+\end{thebibliography}
+\printindex[aut]
+\end{document}
