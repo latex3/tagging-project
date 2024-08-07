@@ -1730,13 +1730,14 @@
 
  - name: changebar
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [tlc3, arxiv01]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   tasks: "Determine how to tag changed parts."
+   comments: "Needs luatex85 loaded with lualatex."
+   updated: 2024-08-07
 
  - name: changepage
    type: package
