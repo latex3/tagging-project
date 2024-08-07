@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{report}
+\usepackage{hyperref}
+\usepackage{hypbmsec}
+
+\title{hypbmsec tagging test}
+
+\begin{document}
+
+\tableofcontents
+
+\chapter[toc-c1]{Some chapter}
+\section[toc1][out1]{Some section}
+\label{sec}
+\subsection(out-s1)[toc-s1]{Some subsection}
+\section(out2){Another section}
+text \ref{sec}
+
+\end{document}
