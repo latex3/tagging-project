@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{attachfile2}
+\usepackage{xcolor}
+
+\title{attachfile2 tagging test}
+
+\attachfilesetup{color=blue}
+
+\begin{document}
+
+\attachfile{example-image.pdf} % compare with below
+% text\attachfile{example-image.pdf}
+\noattachfile
+
+\textattachfile{example-image-a.pdf}{This text links to a file}
+
+\notextattachfile{This text does not link to a file}
+
+\end{document}

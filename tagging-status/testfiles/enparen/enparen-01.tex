@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{enparen}
+
+\title{enparen tagging test}
+
+\begin{document}
+
+\enparen{a \enparen{b} \enparen{c \enparen{d}} \enparen{e}}
+
+\enparenLeft text before table ...
+\begin{table}
+\caption{Table caption \enparen{foobar}}
+\enparenBeginContext{table}
+Other text \enparen{foobar}.
+\enparenEndContext{table}
+\end{table}
+text after table ...\footnote{text \enparen{foobar}}
+\enparenRight
+
+\end{document}

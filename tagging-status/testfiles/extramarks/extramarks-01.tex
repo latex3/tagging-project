@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{kantlipsum}
+
+\pagestyle{fancy}
+\fancyhead[L]{\firstxmark}
+\fancyfoot[R]{\lastxmark}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrule}{}}
+
+\title{extramarks tagging test}
+
+\begin{document}
+
+\extramarks{}{}% 1
+\kant[1]
+
+\newpage
+
+\extramarks{Continued\ldots}{Continued on next page\ldots}% 2
+\kant[2-6]
+
+\newpage
+
+\extramarks{Continued\ldots}{}% 3
+\kant[7]
+
+\newpage
+\extramarks{}{}% 4
+\kant[8]
+
+\end{document}
