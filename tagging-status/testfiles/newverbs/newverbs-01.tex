@@ -1,0 +1,45 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{newverbs}
+\usepackage{xcolor}
+
+\title{newverbs tagging test}
+
+\newverbcommand\cverb{\color{blue}}{}
+\MakeSpecialShortVerb{\qverb} {\"}
+\MakeSpecialShortVerb{\fverb*}{\|}
+\Verbdef*\foo+%& $^_+   \verbdef*\baz+%& $^_+ 
+
+\newenvironment{myenv}{\collectverbenv{\textit}}{}
+
+\begin{document}
+
+\tableofcontents
+
+By default the package provides \qverb=\qverb= and
+\fverb=\fverb= ready for use. We have added \cverb=\cverb=.
+
+Now code like |pdflatex myfile| can be "enter"ed in a
+simplified way. "\DeleteShortVerb" removes previously
+defined shorthands\DeleteShortVerb\| again: |see|?
+
+\section{Difficult chars (\foo\ or \baz)}
+This hides \verb*+%& $^_+ within \verb+\foo+
+and \verb+\baz+ so that it can be used in
+the heading. Warning: \verb*+%& $^_+ is
+equal to \baz{} but not to \foo{}!
+
+\begin{myenv}
+bla bla
+
+#$^&*_
+\end{myenv}
+
+\end{document}
