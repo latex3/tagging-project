@@ -1,0 +1,41 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{chemnum}
+\usepackage{hyperref}
+
+\setchemnum{hyperlinks}
+
+\title{chemnum tagging test}
+
+\begin{document}
+
+Compounds \cmpd{a} and \cmpd{b} are declared and can be used any time:
+\cmpd{a}. No pre-declaring is necessary. Compounds like \cmpd{c} are
+numbered in the order they appear in the text.\par
+Once again: \cmpd{b}, \cmpd{a}, \cmpd{c}.
+
+The hidden version\cmpd*{d} declares the label but doesn't print anything.
+The next \cmpd{e} continues to count with the next number. With \cmpd{d}
+the label can be used, of course.
+
+\cmpd{f.one} and \cmpd{f.two} are related, as are \cmpd{g.one} and
+\cmpd{g.two}. Of course these labels can be used again: \cmpd{g.two} and
+\cmpd{f.one}.
+
+\cmpd{a} and its variants \cmpd{a.one} and \cmpd{a.two}
+
+list of labels: \cmpd{q.one, q.two, q.three, q.four, q.five}\par
+label with list of sublabels: \cmpd{q.{one,two,three,four,five}}
+
+\setchemnum{compress=false}%
+list of labels: \cmpd{q.one, q.two, q.three, q.four, q.five}\par
+label with list of sublabels: \cmpd{q.{one,two,three,four,five}}
+
+\end{document}
