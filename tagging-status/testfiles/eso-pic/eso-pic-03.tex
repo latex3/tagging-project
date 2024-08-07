@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{eso-pic}
+\usepackage{graphicx}
+
+% `rose.eps' from CTAN: macros/generic/boxedeps/
+\newcommand\BackgroundPicture{%
+  \put(0,0){%
+   \parbox[b][\paperheight]{\paperwidth}{%
+     \vfill
+     \centering
+     \includegraphics[width=\paperwidth,height=\paperheight,%
+                      keepaspectratio]{rose}%
+     \vfill
+    }
+  }
+}
+% The picture is centered on the page background
+
+\AddToShipoutPictureBG{\BackgroundPicture}
+
+\begin{document}
+
+\section{\TeX}
+
+\newpage
+
+\ClearShipoutPicture
+\section{Empty}
+
+\newpage
+
+\AddToShipoutPictureBG{\BackgroundPicture}
+\section{\LaTeX}
+
+\end{document}
