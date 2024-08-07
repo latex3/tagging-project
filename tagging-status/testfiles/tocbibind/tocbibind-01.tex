@@ -1,0 +1,51 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{report}
+
+\usepackage[numbib]{tocbibind}
+\usepackage{hyperref}
+
+\title{tocbibind tagging test}
+
+\settocname{Table of Contents}
+\settocbibname{List of References}
+
+\renewcommand{\listoffigures}{\begingroup
+\tocchapter
+\tocfile{\listfigurename}{lof}
+\endgroup}
+
+\renewcommand{\simplechapterdelim}{:}
+\simplechapter[Chap]
+
+\begin{document}
+
+\tableofcontents
+
+\listoffigures
+
+\chapter{First chapter}
+
+\section{First section}
+
+text \cite{inbook-full}
+
+\restorechapter
+
+\chapter{Second chapter}
+
+more text
+\begin{figure}
+Figure content
+\caption{Some figure}
+\end{figure}
+
+\bibliographystyle{amsalpha}
+\bibliography{xampl}
+
+\end{document}
