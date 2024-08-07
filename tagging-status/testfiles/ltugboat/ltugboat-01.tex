@@ -1,0 +1,257 @@
+% this is tugboat's article template
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,table}
+  }
+\documentclass{ltugboat}
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\title{Example \TUB\ article}
+
+% repeat info for each author; comment out items that don't apply.
+\author{First Last}
+\address{Street Address \\ Town, Postal \\ Country}
+\netaddress{user (at) example dot org}
+\personalURL{https://example.org/~user/}
+%\ORCID{0}
+
+% Please state if you'd like to receive a physical copy of the TUGboat
+% issue or if electronic access suffices.  If you want a physical issue,
+% please include the mailing address we should use, as a comment if
+% you prefer it not be printed.
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Please write an abstract. Please use only standard \LaTeX\ and \TUB\
+macros in the abstract, not article-specific abbreviations or other
+macros; that helps us make the web pages.
+\end{abstract}
+
+\section{Introduction}
+
+This is an example article for \TUB, linked from
+\url{https://tug.org/TUGboat/location.html}.
+
+\section{Basic packages and hyperlinks}
+
+The standard \texttt{graphicx} and \texttt{xcolor} packages work fine
+for image and color handling, respectively, as does the
+\texttt{hyperref} package for active urls. \TUB\ is produced using
+\acro{PDF} files exclusively, but conversion from \DVI\ is fine and supported.
+
+Please use the standard \cs{url} command for urls:
+\begin{verbatim}
+\url{https://some/url} % yes
+\end{verbatim}
+For \TUB, we prefer not to print the `\texttt{https://}', but to include
+the protocol in other cases, so we usually do \verb|\def\url{\tburl}|,
+which takes care of that, while keeping the source using the standard
+\cs{url} command.
+
+In any case, please do \emph{not} hide hyperlinks via \cs{href}, as in:
+\begin{verbatim}
+\href{https://some/url}{some text} % no!
+\end{verbatim}
+When printed on paper, the url will not be visible and readers will
+not know it exists.
+
+\section{Abbreviation macros and typing}
+
+The \texttt{ltugboat} class provides many abbreviation commands; here
+are a few of the most common:
+
+% verbatim blocks are often better in \small
+\begin{verbatim}[\small]
+\AllTeX \AMS \BibTeX \Cplusplus \CTAN \DVI
+\HTML \LaTeXe \macOS \MathML \MF \PDF \PS
+\TUB \TUG \tug \WEB \XeLaTeX \XeTeX \XML
+\end{verbatim}
+
+A few other typing conventions:
+
+\begin{itemize}
+\item For an em-dash with our spacing (preferred to \verb|---|):
+\cs{Dash}, with output\Dash like this.
+
+\item For initialisms in all caps:
+\verb|\acro{FRED}|,\\ with output: \acro{FRED}.
+
+\item A literal control sequence:
+\verb|\cs{fred}|,\\ with output: \cs{fred}.
+
+\item A syntactic metavariable:
+\verb|\meta{fred}|,\\ with output: \meta{fred}.
+
+\item A title:
+\verb|\titleref{Book of Fred}|,\\ with output: \titleref{Book of Fred}.
+\end{itemize}
+
+We recommend using \cs{begin}\tubbraced{verbatim}\texttt{[\small] ...}
+\cs{end}\tubbraced{verbatim} for code blocks, since we prefer not to
+colorize code when printed. But if you want to have some font changes,
+our recommended settings for the \texttt{listings} package are in the
+\texttt{ltubguid} manual mentioned below.
+
+Please put punctuation outside quotes, ``like this'', unless the
+punctuation is actually part of the quoted material.
+
+Also, please put punctuation after footnotes.
+
+\section{Figures}
+
+For \TUB, the standard \texttt{figure} environment produces a
+column-width figure; this is desirable when at all possible. The
+\texttt{figure*} environment produces a full-width (across both columns)
+figure when needed. Analogously for \texttt{table} and \texttt{table*}.
+
+Please put captions below figures, but above tables.
+
+Don't worry overmuch about figure placements, as they will likely change
+with editing.
+
+\begin{figure}
+This is a column-width figure, made with \\
+\cs{begin}\tubbraced{figure}. Use \tubbraced{figure*} for a full-width
+(double-column) figure.
+%
+\caption{Caption for column-width figure.}
+\label{fig.example}
+\end{figure}
+
+%\begin{figure*}
+%A full-width figure, made with \cs{begin}\tubbraced{figure*}.
+%\caption{Caption for full-width figure.}
+%\label{fig.fullwidth}
+%\end{figure*}
+
+\section{References}
+
+For references to other issues of \TUB, please use the format
+\textsl{volno}:\textsl{issno}, e.g., ``\TUB\ 32:1''.
+
+The primary \TUB\ style documentation is the \texttt{ltubguid} manual,
+available online at \tbsurl{ctan.org/pkg/tugboat} or locally with
+\texttt{texdoc tugboat}. For general \CTAN\ package references, we
+recommend that form, using \texttt{/pkg/}. If you need to refer to a
+specific file on \CTAN, use:\\
+\texttt{https://mirror.ctan.org/\textsl{path}}
+
+We recommend using \BibTeX\ (but don't require it), with the
+\texttt{tugboat} \BibTeX\ style. The \texttt{biblio} directory on \CTAN,
+\tbsurl{ctan.org/pkg/biblio}, provides files \texttt{tugboat.bib} with a
+complete bibliography of \TUB, \texttt{texbook3.bib} with many common
+\TeX-related books and articles, and plenty more.
+
+Email \verb|tugboat@tug.org| with any questions.
+
+\bibliographystyle{tugboat} % tugboat's bibtex style
+\nocite{book-minimal}       % make the example bibliography non-empty
+\bibliography{xampl}        % xampl.bib comes with bibtex
+
+\makesignature
+
+\newpage
+
+\AllTeX\par
+\AMS\par
+\AmSTeX\par
+\aw\par
+\API\par
+\AW\par
+\BibTeX\par
+\CandT\par
+\ConTeXt\par
+\Cplusplus\par
+\DTD\par
+\DVD\par
+\DVI\par
+\DVIPDFMx\par
+\DVItoVDU\par
+\ECMA\par
+\EPS\par
+\eTeX\par
+\ExTeX\par
+\Ghostscript\par
+\Hawaii\par
+\HTML\par
+\ISBN\par
+\ISO\par
+\ISSN\par
+\JTeX\par
+\JoT\par
+\LaTeX\par
+\LyX\par
+\macOS\par
+\MacOSX\par
+\MathML\par
+\Mc\par
+\MF\par
+\mf\par
+\MFB\par
+\MP\par
+\mp\par
+\OMEGA\par
+\OCP\par
+\OOXML\par
+\OTP\par
+\mtex\par
+\NTS\par
+\pcMF\par
+\PCTeX\par
+\pcTeX\par
+\Pas\par
+\PiCTeX\par
+\plain\par
+\POBox\par
+\PS\par
+\SC\par
+\SGML\par
+\SliTeX\par
+\slMF\par
+\stTeX\par
+\SVG\par
+\TANGLE\par
+\TB \par
+\TeX\par
+\TeXhax\par
+\TeXMaG\par
+\TeXtures\par
+\TeXXeT\par
+\Thanh\par
+\TFM\par
+\TUB\par
+\TUG\par
+\UNIX\par
+\VAX\par
+\VnTeX\par
+\VorTeX\par
+\XeT\par
+\XeTeX\par
+\XeLaTeX\par
+\XML\par
+\WEB\par
+\WEAVE\par
+\WYSIWYG\par
+
+\bull\par
+3\cents\par
+3\Dag\par
+\careof\par
+\sfrac{1}{3}\par
+\cs{cmd}\par
+\meta{arg}\par
+\dash\par
+\Dash\par
+\hyph\par
+\slash\par
+\nth{3}\par
+
+\end{document}
