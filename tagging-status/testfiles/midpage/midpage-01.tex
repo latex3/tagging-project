@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{midpage}
+\usepackage{kantlipsum}
+
+\title{midpage tagging test}
+
+\begin{document}
+
+\kant[1-2]
+\clearpage
+\begin{midpage}
+\kant[3-4]
+\end{midpage}
+\clearpage
+\kant[5-6]
+
+\end{document}

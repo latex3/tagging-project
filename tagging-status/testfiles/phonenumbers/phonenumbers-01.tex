@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{phonenumbers}
+
+\title{phonenumbers tagging test}
+
+\begin{document}
+
+\phonenumber{0441343396}[83]
+
+\phonenumber[area-code-sep=brackets]{020432632194}
+
+\phonenumber[country=AT,area-code-sep=brackets]{0225854321}
+
+\phonenumber[country=AT,area-code=place,area-code-sep=space]{0662654321}
+
+\setphonenumbers{foreign,foreign-area-code-sep=brackets}
+\phonenumber[country=DE]{0441343396}
+
+\phonenumber[country=UK]{01514960123}
+
+\phonenumber[country=US]{2125550123}
+
+\end{document}

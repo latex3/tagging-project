@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{selectp}
+\usepackage[math,toc]{blindtext}
+\usepackage{kantlipsum}
+\usepackage{longtable}
+
+\outputonly{2,20}
+\title{selectp tagging test}
+
+\begin{document}
+\kant[1-3]
+\Blinddocument
+\begin{longtable}{c}
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+a=b \\
+\end{longtable}
+
+\end{document}

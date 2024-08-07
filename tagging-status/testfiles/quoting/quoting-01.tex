@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{quoting}
+\usepackage{kantlipsum}
+
+\title{quoting tagging test}
+
+\begin{document}
+
+outer text
+\begin{quoting}
+\kant[1-2]
+\end{quoting}
+
+% ^ error goes away if this line removed
+outer text
+
+\end{document}
