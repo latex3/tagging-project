@@ -1,0 +1,79 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\begin{filecontents*}[overwrite]{\jobname-parrot.csv}
+.,.,.,.,.,.,k,k,k,k,.,.,.,.,.,.
+.,.,.,.,k,k,r,r,r,r,k,k,.,.,.,.
+.,.,.,k,r,r,r,r,r,r,r,r,k,.,.,.
+.,.,k,r,r,r,r,r,r,r,r,r,r,k,.,.
+.,.,k,r,r,r,r,r,r,r,r,r,r,k,.,.
+.,k,r,.,.,r,r,r,r,r,r,.,.,r,k,.
+.,k,.,.,.,.,k,k,k,k,.,.,.,.,k,.
+.,k,.,k,.,.,k,k,k,k,.,k,.,.,k,.
+.,k,r,.,.,.,k,k,k,k,.,.,.,r,k,.
+.,.,k,r,r,.,k,k,k,k,.,r,r,k,.,.
+.,.,k,r,r,r,k,k,k,k,r,r,r,k,.,.
+.,.,.,k,r,r,r,k,k,r,r,r,k,.,.,.
+.,.,k,3,r,r,r,r,r,r,r,r,3,k,.,.
+.,k,b,3,r,r,r,r,r,r,r,r,3,b,k,.
+.,k,b,b,r,r,r,r,r,r,r,r,b,b,k,.
+.,k,b,b,r,r,r,r,r,r,r,r,b,b,k,.
+.,k,b,k,r,r,r,k,k,r,r,r,k,b,k,.
+2,2,k,2,k,k,k,2,2,k,k,k,2,k,2,2
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+.,.,.,.,.,k,r,r,r,r,k,.,.,.,.,.
+.,.,.,.,.,.,k,r,r,k,.,.,.,.,.,.
+.,.,.,.,.,.,.,k,k,.,.,.,.,.,.,.
+\end{filecontents*}
+
+\documentclass{article}
+\usepackage{pxpic}
+
+\title{pxpic tagging test}
+
+\pxpicsetup
+  {
+    mode = px
+    ,colours = {k=black, r=[HTML]{9F393D}, g=green!75!black, b=[rgb]{0,0,1}}
+    ,skip = .
+    ,size = 10pt
+  }
+
+\begin{document}
+
+text
+\pxpic
+  {
+    {.k}
+    {kkk}
+    {.k}
+  }
+
+\pxpic[lines=space]
+  {
+    ..rr.rr
+    .rrrrrrr
+    rrrrrrrrr
+    rrrrrrrrr
+    rrrrrrrrr
+    .rrrrrrr
+    ..rrrrr
+    ...rrr
+    ....r
+  }
+
+\pxpic
+  [
+    lines=csv,
+    colours={2=brown,3=yellow},
+    file,
+    size=3pt
+  ]
+  {\jobname-parrot.csv}
+
+\end{document}

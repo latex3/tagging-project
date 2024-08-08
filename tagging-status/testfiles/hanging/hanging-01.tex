@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{hanging}
+\usepackage{kantlipsum}
+
+\title{hanging tagging test}
+
+\begin{document}
+
+\hangpara{2cm}{1}\kant[1-2]
+\hangpara{2cm}{4}\kant[3-4]
+\begin{hangparas}{2cm}{3}
+\kant[5-6]
+\end{hangparas}
+
+\noindent\begin{minipage}{10em}
+\begin{hangpunct}
+`abc def ghi abc def ghi abc def ghi abc def ghi' abc
+\end{hangpunct}
+\end{minipage}
+
+\end{document}

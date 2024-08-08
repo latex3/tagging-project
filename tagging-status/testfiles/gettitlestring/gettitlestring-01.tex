@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\PassOptionsToPackage{expand}{gettitlestring}
+\usepackage{hyperref}
+
+\title{gettitlestring tagging test}
+
+\begin{document}
+
+\def\foo{Foo}
+\section{\foo}
+\label{lab}
+
+\paragraph{1}
+\nameref{lab}
+
+\def\foo{Bar}
+\paragraph{2}
+\nameref{lab}
+
+\paragraph{3}
+\nameref{lab}
+
+\end{document}

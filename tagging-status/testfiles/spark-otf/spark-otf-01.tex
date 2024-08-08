@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{spark-otf}
+
+\title{spark-otf tagging test}
+
+\begin{document}
+
+Text \sparkBar{14,95,68,9,19,41,91,1,81,97,79,45,96,76,17,65,8,92} Text
+
+Text \sparkBar[Medium]{14,95,68,9,19,41,91,1,81,97,79,45,96,76,17,65,8,92} Text
+
+Text \sparkBar[Medium][14]{14,95,68,9,19,41,91,1,81,97,79,45,96,76,17,65,8,92}[92] Text
+
+Text \sparkBar{!14,95,68,9,19,41,91,1,81,97,79,45,96,76,17,65,8,!92} Text
+
+\sparkBar[Narrow]{!19,32,93,4,95,46,13,23,50,86,94,68,58,41,89,57,74,!8}
+
+\sparkBar[Extranarrow]{!19,32,93,4,95,46,13,23,50,86,94,68,58,41,89,57,74,!8}
+
+\sparkDot{!54,39,26,65,29,58,36,99,16,56,76,69,71,77,7,40,79,!1}
+
+\sparkDotline{!1,79,88,46,54,77,91,24,70,22,27,29,40,33,31,95,26,!76}
+
+\sparkBar*{9,4,2,1,6,7,3,8,3,7,1,4,9,2,8,5,1,8}
+
+\sparkDotline*{9,4,2,1,6,7,3,8,3,7,1,4,9,2,8,5,1,8}
+
+\end{document}

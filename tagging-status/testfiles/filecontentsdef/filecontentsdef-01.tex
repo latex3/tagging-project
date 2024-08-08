@@ -1,0 +1,60 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{filecontentsdef}
+
+\title{filecontentsdef tagging test}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{filecontentsdefmacro}{\testverb}
+^&*^%^^ ____+
+
+#@%$$&%*(
+\end{filecontentsdefmacro}
+
+\newcounter{pablo}
+\newenvironment{defexercise}
+{\stepcounter{pablo}%
+\begingroup
+\filecontentsgdefstarred
+{\jobname-ex\the\value{pablo}}{exercise-\the\value{pablo}}}%
+{\endfilecontentsgdefstarred\endgroup}
+\newcommand{\printexercise}[1]{\filecontentsexec{exercise-\the\numexpr#1\relax}}
+
+\begin{document}
+
+\filecontentsprint\testverb
+
+\begin{filecontentshere}{mytest.txt}
+\begin{theorem}
+Some theorem text
+\end{theorem}
+\end{filecontentshere}
+\filecontentsexec\filecontentsheremacro
+
+\begin{defexercise}
+Prove that \[x^n+y^n=z^n\] is not solvable in positive integers if $n$ is at
+most $-3$.\par
+\end{defexercise}
+\begin{defexercise}
+Refute the existence of black holes in less than 140 characters.\par
+\end{defexercise}
+\begin{defexercise}
+\def\NSA{NSA}%
+Prove that factorization is easily done via probabilistic algorithms and
+advance evidence from knowledge of the names of its employees in the
+seventies that the \NSA\ has known that for 40 years.\par
+\end{defexercise}
+\begin{itemize}
+\item \printexercise{3}
+\item \printexercise{2}
+\item \printexercise{1}
+\end{itemize}
+
+\end{document}
