@@ -616,13 +616,12 @@
 
  - name: arabicfront
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   tests: true
+   updated: 2024-08-07
 
  - name: arabluatex
    type: package
@@ -1792,13 +1791,13 @@
 
  - name: chemfig
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: "Figures are tagged as a sequence of many formulas."
+   updated: 2024-08-07
 
  - name: chemformula
    type: package
@@ -1964,13 +1963,12 @@
 
  - name: clrstrip
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [528]
+   tests: true
+   updated: 2024-08-07
 
  - name: cmbright
    type: package
@@ -2392,13 +2390,13 @@
 
  - name: decorule
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   tasks: "`\\decorule` should be tagged as an Artifact."
+   updated: 2024-08-07
 
  - name: dejavu
    type: package
@@ -2607,13 +2605,12 @@
 
  - name: easylist
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [536]
+   tests: true
+   updated: 2024-08-07
 
  - name: ebgaramond
    type: package
@@ -3335,13 +3332,12 @@
 
  - name: filecontentsdef
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: filemod
    type: package
@@ -3585,13 +3581,13 @@
 
  - name: fnumprint
    type: package
-   status: unknown
+   status: partially-compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: See numprint.
+   updated: 2024-08-07
 
  - name: fontawesome5
    type: package
@@ -3679,13 +3675,13 @@
 
  - name: footnotehyper
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   tasks: "Similar issues as footnote package." 
+   updated: 2024-08-07
 
  - name: footnoterange
    type: package
@@ -3971,13 +3967,12 @@
 
  - name: gettitlestring
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv10]
    priority: 3
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: gfsartemisia
    type: package
@@ -4257,13 +4252,12 @@
 
  - name: hanging
    type: package
-   status: unknown
-   included-in:
-   priority: 9
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: har2nat
    type: package
@@ -5528,13 +5522,12 @@
 
  - name: luavlna
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: lucida-otf
    type: package
@@ -5963,9 +5956,17 @@
    tests: true
    updated: 2024-07-30
 
- - name: mflogo
+ - name: mfb-oldstyle
    type: package
    status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   updated: 2024-08-07
+
+ - name: mflogo
+   type: package
    included-in:
    priority: 9
    issues:
@@ -6736,15 +6737,24 @@
    tasks: needs tests
    updated: 2024-07-18
 
+ - name: numprint
+   type: package
+   status: partially-compatible
+   included-in: [arxiv01]
+   priority: 6
+   issues:
+   tests: true
+   comments: "In text mode, printed numbers are a mix of text and math."
+   updated: 2024-08-07
+
  - name: numspell
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: nunito
    type: package
@@ -7630,13 +7640,13 @@
 
  - name: pxpic
    type: package
-   status: unknown
+   status: partially-compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: "pixpic's should be tagged as figures with Alt text."
+   updated: 2024-08-07
 
  - name: pxtx-cal
    ctan-pkg: pxtxalfa
@@ -7669,13 +7679,13 @@
 
  - name: pythontex
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: Verbatim environments error. See fvextra.
+   updated: 2024-08-07
 
 #------------------------ QQQ ----------------------------
 
@@ -7948,13 +7958,12 @@
 
  - name: rotpages
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
 #------------------------ SSS ----------------------------
 
@@ -8164,13 +8173,12 @@
 
  - name: selnolig
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: sepfootnotes
    type: package
@@ -8466,13 +8474,13 @@
 
  - name: spark-otf
    type: package
-   status: unknown
+   status: partially-compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   comments: "Spark charts need to be tagged as figure with Alt text."
+   updated: 2024-08-07
 
  - name: spectral
    type: package
@@ -9492,13 +9500,13 @@
 
  - name: trivfloat
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-28
+   tests: true
+   comments: "Environments defined with `\\trivfloat` not tagged as floats. See float package."
+   updated: 2024-08-07
 
  - name: truncate
    type: package
@@ -10011,13 +10019,12 @@
 
  - name: xevlna
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: xfakebold
    type: package
@@ -10322,13 +10329,12 @@
 
  - name: zhnumber
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-07
 
  - name: zlmtt
    type: package

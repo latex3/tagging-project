@@ -1,0 +1,65 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{zhnumber}
+
+\title{zhnumber tagging test}
+
+\begin{document}
+
+\zhnumber{2012020120}\par
+\zhnumber{2 012 020 120}\par
+\zhnumber{2,012,020,120}\par
+\zhnumber{2012.020120}\par
+\zhnumber{2012.}\par
+\zhnumber{.2012}\par
+\zhnumber{20120/20120}\par
+\zhnumber{/2012}\par
+\zhnumber{2012/}\par
+\zhnumber{201;2020/120}
+
+\zhdigits{2012020120}\par
+\zhdigits*{2012020120}
+
+\zhnum{section}
+
+\zhdig{section}
+
+\zhweekday{2012/5/20}
+
+\zhdate{2012/5/21}\par
+\zhdate*{2012/5/21}
+
+\zhtoday
+
+\zhtime{23:56}
+
+\zhcurrtime
+
+\zhtiangan{1} \zhtiangan{2} \zhtiangan{3}
+\zhtiangan{4} \zhtiangan{5} \zhtiangan{10}
+
+\zhdizhi{1} \zhdizhi{2} \zhdizhi{3}
+\zhdizhi{4} \zhdizhi{5} \zhdizhi{12}
+
+\zhganzhi{1} \zhganzhi{2} \zhganzhi{3} \par
+\zhganzhi{4} \zhganzhi{5} \zhganzhi{60}
+
+\zhganzhinian{1898} \zhganzhinian{-246} \par
+\zhganzhinian{-2697} \zhganzhinian{\year}
+
+\zhnumsetup{time=Chinese}
+\zhtoday\zhcurrtime
+
+\zhnumsetup{style={Traditional,Financial}}
+\zhnumber{62012.3}\par
+\zhnumsetup{style=Ancient}
+\zhnumber{21}
+
+\end{document}

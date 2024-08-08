@@ -1,0 +1,320 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[12pt,twoside]{article}
+\usepackage[a4paper,headheight=4ex]{geometry}
+\usepackage{rotpages}
+\usepackage{fancyhdr}
+
+\title{\texttt{rotpages.sty} --- Multiple page rotation in \LaTeX\\
+  Example file}
+\author{Sergio Callegari}
+\date{January 1st, 2003}
+
+\fancyhead[LE]{\emph{rotpages.sty}}
+\fancyhead[RO]{Multiple page rotation in \LaTeX}
+\fancyfoot{}
+\fancyfoot[L]{{\footnotesize Example file for a single column document.}}
+\fancyfoot[R]{\thepage}
+
+
+\begin{document}
+\sloppy
+\pagestyle{fancy}
+\maketitle
+\thispagestyle{fancy}
+
+This is the first page of the document. In this document we take
+advantage only of the simplest features of the \texttt{rotpages.sty}
+package, i.e.\@ we only use the basic \verb|\rotboxpages| and
+\verb|\endrotboxpages| commands.
+
+
+The first pages are typeset normally.  To fill them a little, we include
+the first part of \emph{Pinocchio} by Carlo Collodi.
+
+\bigskip
+{\slshape%
+  \textbf{CHAPTER 1}
+  
+  \emph{How it happened that Mastro Cherry, carpenter,
+  found a piece of wood that wept and laughed like a child}
+  \medskip
+ 
+  Centuries ago there lived ---
+  
+  "A king!" my little readers will say immediately.
+  
+  No, children, you are mistaken.  Once upon a time
+  there was a piece of wood.  It was not an expensive piece
+  of wood.  Far from it.  Just a common block of firewood,
+  one of those thick, solid logs that are put on the fire in
+  winter to make cold rooms cozy and warm.
+  
+  I do not know how this really happened, yet the fact
+  remains that one fine day this piece of wood found itself
+  in the shop of an old carpenter.  His real name was
+  Mastro Antonio, but everyone called him Mastro Cherry,
+  for the tip of his nose was so round and red and shiny
+  that it looked like a ripe cherry.
+  
+  As soon as he saw that piece of wood, Mastro Cherry
+  was filled with joy.  Rubbing his hands together happily,
+  he mumbled half to himself:
+  
+  "This has come in the nick of time.  I shall use it to
+  make the leg of a table."
+  
+  He grasped the hatchet quickly to peel off the bark and
+  shape the wood.  But as he was about to give it the first
+  blow, he stood still with arm uplifted, for he had heard a
+  wee, little voice say in a beseeching tone:  "Please be careful!
+  Do not hit me so hard!"
+  
+  What a look of surprise shone on Mastro Cherry's
+  face!  His funny face became still funnier.
+  
+  He turned frightened eyes about the room to find out
+  where that wee, little voice had come from and he saw
+  no one! He looked under the bench--no one! He peeped
+  inside the closet--no one! He searched among the shavings--
+  no one! He opened the door to look up and down
+  the street--and still no one!
+
+  "Oh, I see!" he then said, laughing and scratching his Wig.
+  "It can easily be seen that I only thought I heard the tiny
+  voice say the words! Well, well--to work once more."
+  
+  He struck a most solemn blow upon the piece of wood.
+  
+  "Oh, oh!  You hurt!" cried the same far-away little voice.
+  
+  Mastro Cherry grew dumb, his eyes popped out of his
+  head, his mouth opened wide, and his tongue hung down
+  on his chin.
+  
+  As soon as he regained the use of his senses, he said,
+  trembling and stuttering from fright:
+  
+  "Where did that voice come from, when there is no
+  one around?  Might it be that this piece of wood has
+  learned to weep and cry like a child?  I can hardly
+  believe it.  Here it is--a piece of common firewood, good
+  only to burn in the stove, the same as any other.  Yet--
+  might someone be hidden in it?  If so, the worse for him.
+  I'll fix him!"
+  
+  With these words, he grabbed the log with both hands
+  and started to knock it about unmercifully.  He threw it
+  to the floor, against the walls of the room, and even up
+  to the ceiling.
+  
+  He listened for the tiny voice to moan and cry.
+  He waited two minutes--nothing; five minutes--nothing;
+  ten minutes--nothing.
+  
+  "Oh, I see," he said, trying bravely to laugh and
+  ruffling up his wig with his hand.  "It can easily be seen
+  I only imagined I heard the tiny voice!  Well, well--to
+  work once more!"
+
+  The poor fellow was scared half to death, so he tried
+  to sing a gay song in order to gain courage.
+  
+  He set aside the hatchet and picked up the plane to
+  make the wood smooth and even, but as he drew it to
+  and fro, he heard the same tiny voice.  This time it giggled
+  as it spoke:
+  
+  "Stop it!  Oh, stop it!  Ha, ha, ha! You tickle my stomach."
+  
+  This time poor Mastro Cherry fell as if shot.  When
+  he opened his eyes, he found himself sitting on the floor.
+  
+  His face had changed; fright had turned even the tip of
+  his nose from red to deepest purple.
+
+}
+\bigskip
+Note that the next pages are upside down.
+
+\rotboxpages%
+Here come the rotated pages. Note that while formatting the
+document, this page is \emph{deferred}, until all the block of rotated
+pages is processed. In this way, this page is printed as the last one
+of the block. However, if the printed work is read upside down, this
+page correctly appears as the first of the block.
+
+Obviously, also this page contains the continuation of the novel:
+
+\bigskip
+{\slshape%
+
+  \textbf{CHAPTER 2}
+
+  \emph{Mastro Cherry gives the piece of wood to his friend Geppetto,
+    who takes it to make himself a Marionette that will dance,
+    fence, and turn somersaults}
+  \medskip
+  
+  In that very instant, a loud knock sounded on the door.
+  "Come in," said the carpenter, not having an atom of
+  strength left with which to stand up.
+  
+  At the words, the door opened and a dapper little old man came in.
+  His name was Geppetto, but to the boys of the neighborhood he was
+  Polendina\footnote{Corneal mush}, on account of the wig he always
+  wore which was just the color of yellow corn.
+  
+}
+
+\bigbreak
+
+Here we make a small break in the story. Please, take a second to
+observe how the page content is rotated, while the page headers and
+footers, comprising the page number, are printed with the standard
+orientation. Take also a quick look at the footnote and observe that
+it is in the right place.
+
+Note also that in order to introduce a frame, the rotated pages are
+slightly smaller (i.e.\@ they contain a little less text than the
+normal ones.)  
+
+After this informative bit, it is time for some more Pinocchio:
+
+\bigskip
+{\slshape%
+  Geppetto had a very bad temper.  Woe to the one who
+  called him Polendina!  He became as wild as a beast and
+  no one could soothe him.
+  
+  "Good day, Mastro Antonio," said Geppetto.  "What
+  are you doing on the floor?"
+  
+  "I am teaching the ants their A B C's."
+  
+  "Good luck to you!"
+  
+  "What brought you here, friend Geppetto?"
+  
+  "My legs.  And it may flatter you to know, Mastro
+  Antonio, that I have come to you to beg for a favor."
+  
+  "Here I am, at your service," answered the carpenter,
+  raising himself on to his knees.
+  
+  "This morning a fine idea came to me."
+  
+  "Let's hear it."
+  
+  "I thought of making myself a beautiful wooden
+  Marionette.  It must be wonderful, one that will be able to
+  dance, fence, and turn somersaults.  With it I intend to go
+  around the world, to earn my crust of bread and cup of
+  wine.  What do you think of it?"
+  
+  "Bravo, Polendina!" cried the same tiny voice which
+  came from no one knew where.
+  
+  On hearing himself called Polendina, Mastro Geppetto
+  turned the color of a red pepper and, facing the carpenter,
+  said to him angrily:
+  
+  "Why do you insult me?"
+  
+  "Who is insulting you?"
+  
+  "You called me Polendina."
+  
+  "I did not."
+  
+  "I suppose you think \_I\_ did!  Yet I KNOW it was you."
+  
+  "No!"
+  
+  "Yes!"
+  
+  "No!"
+  
+  "Yes!"
+  
+  And growing angrier each moment, they went from
+  words to blows, and finally began to scratch and bite and
+  slap each other.
+  
+  When the fight was over, Mastro Antonio had Geppetto's
+  yellow wig in his hands and Geppetto found the carpenter's
+  curly wig in his mouth.
+  
+  "Give me back my wig!" shouted Mastro Antonio in a surly voice.
+  
+  "You return mine and we'll be friends."
+  
+  The two little old men, each with his own wig back on
+  his own head, shook hands and swore to be good friends
+  for the rest of their lives.
+  
+  "Well then, Mastro Geppetto," said the carpenter, to
+  show he bore him no ill will, "what is it you want?"
+  
+  "I want a piece of wood to make a Marionette.  Will you give it to
+  me?"
+    
+  Mastro Antonio, very glad indeed, went immediately
+  to his bench to get the piece of wood which had frightened
+  him so much.  But as he was about to give it to his friend,
+  with a violent jerk it slipped out of his hands and hit
+  against poor Geppetto's thin legs.
+  
+  "Ah!  Is this the gentle way, Mastro Antonio, in which
+  you make your gifts?  You have made me almost lame!"
+  
+  "I swear to you I did not do it!"
+  
+  "It was \_I\_, of course!"
+  
+  "It's the fault of this piece of wood."
+  
+  "You're right; but remember you were the one to throw it at my legs."
+  
+  "I did not throw it!"
+  
+  "Liar!"
+  
+  "Geppetto, do not insult me or I shall call you Polendina."
+  
+  "Idiot."
+  
+  "Polendina!"
+  
+  "Donkey!"
+  
+  "Polendina!"
+  
+  "Ugly monkey!"
+  
+  "Polendina!"
+  
+  On hearing himself called Polendina for the third time,
+  Geppetto lost his head with rage and threw himself upon
+  the carpenter.  Then and there they gave each other a
+  sound thrashing.
+  
+  After this fight, Mastro Antonio had two more scratches
+  on his nose, and Geppetto had two buttons missing from
+  his coat.  Thus having settled their accounts, they shook
+  hands and swore to be good friends for the rest of their lives.
+  
+  Then Geppetto took the fine piece of wood,
+  thanked Mastro Antonio, and limped away toward home.
+}
+\endrotboxpages 
+
+And the normal behaviur of \LaTeX is back!
+Exiting isn't it? So don't forget to tell your friends about this new
+package!
+\end{document}

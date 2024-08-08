@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{trivfloat}
+
+\title{trivfloat tagging test}
+
+\trivfloat{graph}
+
+\begin{document}
+
+\listofgraphs
+
+\listoffigures
+
+\begin{graph}
+\centering
+Something for a graph
+\caption{My graph}
+\end{graph}
+
+% compare with
+\begin{figure}
+\centering
+Something for a figure
+\caption{My figure}
+\end{figure}
+
+\end{document}

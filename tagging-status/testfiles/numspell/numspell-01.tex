@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[magyar,main=english]{babel}
+\usepackage{numspell}
+
+\title{numspell tagging test}
+
+\begin{document}
+
+\numspell{12000}
+
+\numspell[6]{12}
+
+\numspell{1};
+\numspellsave{MyNum}
+\numspell{2};
+\thenumspell;
+\thenumspellMyNum
+
+\begin{otherlanguage}{magyar}
+\numspell{6512312354762547162546254756}
+
+\numspelldashspace{10pt}
+\numspell{6512312354762547162546254756}
+\end{otherlanguage}
+
+\end{document}
