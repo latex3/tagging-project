@@ -1,0 +1,76 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{thmtools}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\declaretheorem[
+  preheadhook=PREHEAD,
+  postheadhook=POSTHEAD,
+  prefoothook=PREFOOT,
+  postfoothook=POSTFOOT,
+  parent=section
+  ]{theorem}
+\declaretheorem[sibling=theorem]{lemma}
+\declaretheorem[name=Theorem,
+  refname={theorem,theorems},
+  Refname={Theorem,Theorems}]{callmeal}
+
+% numbering for sibling is wrong.
+% features that don't work without amsthm: numbered=no, numbered=unless unique, style, \Cref. Prbably more
+% shaded and thmbox keys error
+
+\begin{document}
+
+\listoftheorems
+
+outer text
+
+\begin{theorem}\label{thm}
+theorem text
+\end{theorem}
+
+outer text
+
+\autoref{thm}
+
+\begin{restatable}{theorem}{mystoredthm}
+Some text with an equation:
+\begin{equation}
+a=b
+\end{equation}
+and align:
+\begin{align}
+a &= b \\
+c &= d
+\end{align}
+\end{restatable}
+
+some intervening text
+
+\begin{lemma}[heading] % should be 0.3
+Here's a lemma with a heading.
+\end{lemma}
+
+\mystoredthm*
+
+\begin{callmeal}[Simon]\label{simon}
+One
+\end{callmeal}
+\begin{callmeal}\label{garfunkel}
+and another, and together,
+\autoref{simon}, ``\nameref{simon}'',
+and \cref{garfunkel} are referred
+to as \cref{simon,garfunkel}.
+\Cref{simon,garfunkel}, if you are at
+the beginning of a sentence.
+\end{callmeal}
+
+\end{document}
