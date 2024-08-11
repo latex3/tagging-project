@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{nccmath}
+
+\title{nccmath tagging test}
+
+\begin{document}
+
+% breaks
+\begin{eqnarray}
+A & B  \\
+C & D
+\end{eqnarray}
+
+% breaks
+\begin{align}
+a=b \\
+\intertext[1cm]{Some interceding text}
+c=d
+\end{align}
+
+% breaks
+\eqs{&& -\Delta u = f, \\ && u|_\Gamma = 0,}
+\end{document}
