@@ -358,6 +358,7 @@
    included-in: [tlc3, arxiv01]
    priority: 2
    issues: [131]
+   tests: true
    updated: 2024-07-14
 
  - name: almendra
@@ -3625,13 +3626,12 @@
 
  - name: fontsetup
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-13
 
  - name: fontspec
    type: package
@@ -4400,13 +4400,13 @@
 
  - name: hypdestopt
    type: package
-   status: unknown
+   status: compatible
    included-in:
    priority: 9
-   issues:
+   issues: [525]
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   comments: "Ignored if `\\DocumentMetadata` is detected."
+   updated: 2024-08-13
 
  - name: hypdoc
    type: package
@@ -5679,6 +5679,25 @@
    tests: false
    updated: 2024-07-15
 
+ - name: marginfit
+   type: package
+   status: partially-compatible
+   included-in:
+   priority: 9
+   issues: [549]
+   tests: true
+   comments: "Needs luatex85 with lualatex."
+   updated: 2024-08-13
+
+ - name: marginfix
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues: [547]
+   tests: true
+   updated: 2024-08-13
+
  - name: marginnote
    type: package
    status: currently-incompatible
@@ -6254,13 +6273,12 @@
 
  - name: mwe
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-13
 
  - name: mweights
    type: package
@@ -8001,6 +8019,15 @@
    tasks: needs tests
    updated: 2024-07-28
 
+ - name: sanitize-umlaut
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-08-13
+
  - name: sansmath
    type: package
    status: compatible
@@ -8368,6 +8395,15 @@
    tests: true
    updated: 2024-07-26
 
+ - name: sidenotes
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues: [555]
+   tests: true
+   updated: 2024-08-13
+
  - name: sillypage
    type: package
    status: compatible
@@ -8542,6 +8578,15 @@
    issues: [168]
    tests: true
    updated: 2024-07-17
+
+ - name: stabular
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues: [548]
+   tests: true
+   updated: 2024-08-13
 
  - name: stackengine
    type: package
@@ -9541,6 +9586,17 @@
    tests: true
    updated: 2024-07-31
 
+ - name: turnstile
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   issues:
+   tests: true
+   updated: 2024-08-13
+
  - name: turnthepage
    type: package
    status: compatible
@@ -10484,6 +10540,7 @@
    status: currently-incompatible
    included-in:
    priority: 2
+   tests: false
    updated: 2024-07-07
 
  - name: book
@@ -10614,6 +10671,7 @@
    priority: 2
    comments: "Some code showing the needed adjustments can be found in the
               [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
+   tests: false
    updated: 2024-07-05
 
 #------------------------ NNN ----------------------------
@@ -10680,6 +10738,7 @@
    included-in:
    priority: 9
    issues:
+   tests: false
    tasks: needs tests
    updated: 2024-07-17
 
@@ -10691,6 +10750,7 @@
    included-in: [tlc3,arxiv01]
    priority: 2
    related-issues: [88]
+   tests: false
    updated: 2024-07-10
 
  - name: scrbook
@@ -10699,6 +10759,7 @@
    included-in: [tlc3, arxiv001]
    priority: 2
    related-issues: [88]
+   tests: false
    updated: 2024-07-10
 
  - name: scrlttr2
@@ -10707,6 +10768,7 @@
    included-in:
    priority: 9
    related-issues: [88]
+   tests: false
    updated: 2024-07-10
 
  - name: scrreport
@@ -10715,6 +10777,7 @@
    included-in: [tlc3, arxiv001]
    priority: 2
    related-issues: [88]
+   tests: false
    updated: 2024-07-10
 
  - name: standalone
@@ -10727,3 +10790,26 @@
    comments: "Content is lost at pdf level due to being boxed."
    updated: 2024-08-07
 
+#------------------------ TTT ----------------------------
+
+ - name: tufte-book
+   ctan-pkg: tufte-latex
+   type: class
+   status: no-support
+   included-in:
+   priority: 9
+   issues: [551]
+   tests: false
+   comments:
+   updated: 2024-08-13
+
+ - name: tufte-handout
+   ctan-pkg: tufte-latex
+   type: class
+   status: no-support
+   included-in:
+   priority: 9
+   issues: [551]
+   tests: false
+   comments:
+   updated: 2024-08-13

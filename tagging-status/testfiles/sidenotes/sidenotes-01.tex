@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{sidenotes}
+\usepackage{graphicx}
+
+\title{sidenotes tagging test}
+
+\begin{document}
+
+text\sidenote{Some side text} % okay, uses \marginpar
+
+%text\sidenote[][2cm]{Some side text} % errors, uses \marginnote
+
+%\begin{figure}
+%\centering
+%\includegraphics[alt=example,scale=0.3]{example-image}
+%\sidecaption{An example image} % errors
+%\end{figure}
+
+text
+\begin{marginfigure} % parent-child warnings
+\centering
+\includegraphics[alt=example,scale=0.3]{example-image}
+\caption{An example margin image}
+\end{marginfigure}
+more text
+
+\end{document}
