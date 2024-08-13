@@ -1,0 +1,32 @@
+% arara: pdflatex
+% arara: makeindex: { style: german.ist, german: true }
+% arara: pdflatex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}{german.ist}
+actual '=' % as replacement for @
+quote '!' % as replacement for "
+level '>' % as replacement for ! 
+\end{filecontents}
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{sanitize-umlaut}
+\usepackage[hyperindex,colorlinks]{hyperref}
+\makeindex
+\begin{document}
+\section{Basic Example}
+Test äöüÄÖÜß.
+\index{Aber} \index{Arg} \index{Ärger}
+\index{Ofen} \index{Ö - wie schön} \index{oberhalb}
+\index{Ufer} \index{Übermaß}
+\index{Latex=\LaTeX} \index{Ärger>Index}
+Test äöüÄÖÜß.
+\printindex
+\end{document}
