@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[off]{flippdf}
+\usepackage{kantlipsum}
+
+\title{flippdf tagging test}
+\author{Some author}
+
+\begin{document}
+
+\thispagestyle{empty}
+{\Large Some non-mirrored initial info}
+
+\bigskip
+
+\kant[1]
+
+\maketitle
+\setcounter{page}{1}
+\FlipPDF
+\kant[2-6]
+
+\clearpage
+\UnFlipPDF
+\thispagestyle{empty}
+{\Large Some non-mirrored final info}
+
+\bigskip
+
+\kant[7]
+
+\end{document}
