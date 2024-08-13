@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[twocolumn]{article}
+
+\usepackage{graphicx}
+\usepackage{kantlipsum}
+\usepackage{dblfloatfix}
+
+\title{dblfloatfix tagging test}
+
+\begin{document}
+
+\kant[1-2]
+\begin{figure*}
+\centering
+\includegraphics[alt=example duck]{example-image-duck}
+\caption{A duck!}
+\end{figure*}
+\kant[3-4]
+\begin{figure*}[b]
+\centering
+\includegraphics[alt=example duck]{example-image-duck}
+\caption{Another duck!}
+\end{figure*}
+\kant[5-6]
+
+\end{document}
