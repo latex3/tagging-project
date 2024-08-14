@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[twocolumn]{article}
+\usepackage{cuted}
+\usepackage{kantlipsum}
+
+\title{cuted tagging test}
+
+\preCutedStrip{PRE-BLUB}
+\postCutedStrip{POST-BLUB}
+
+\begin{document}
+
+\kant[1-2]
+\begin{strip}
+\kant[3]\footnotemark
+\end{strip}
+\footnotetext{Some footnote}
+\kant[4-5]
+
+\end{document}

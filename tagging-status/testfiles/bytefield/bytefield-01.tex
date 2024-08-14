@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{bytefield}
+
+\begin{document}
+
+text
+
+\bigskip
+
+\begin{bytefield}[bitwidth=1.1em]{32}
+\bitheader{0-31} \\
+\begin{rightwordgroup}{RTP \\ Header}
+\bitbox{2}{V=2} & \bitbox{1}{P} & \bitbox{1}{X}
+& \bitbox{4}{CC} & \bitbox{1}{M} & \bitbox{7}{PT}
+& \bitbox{16}{sequence number} \\
+\bitbox{32}{timestamp}
+\end{rightwordgroup} \\
+\bitbox{32}{synchronization source (SSRC) identifier} \\
+\wordbox[tlr]{1}{contributing source (CSRC) identifiers} \\
+\wordbox[blr]{1}{$\cdots$} \\
+\begin{rightwordgroup}{RTP \\ Payload}
+\wordbox[tlr]{3}{MPEG-4 Visual stream (byte aligned)} \\
+\bitbox[blr]{16}{}
+& \bitbox{16}{\dots\emph{optional} RTP padding}
+\end{rightwordgroup}
+\end{bytefield}
+
+\end{document}
