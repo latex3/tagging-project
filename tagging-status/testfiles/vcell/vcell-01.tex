@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{vcell}
+
+\begin{document}
+
+\begin{tabular}{@{}c@{}lcr@{}}
+\toprule
+& Top cell
+& Middle cell
+& Bottom cell
+\\ \midrule
+\savecellbox{\rule{0pt}{40pt}}
+& \savecellbox{Top}
+& \savecellbox{Middle}
+& \savecellbox{Bottom}
+\\[-\rowheight]
+\printcellmiddle
+& \printcelltop
+& \printcellmiddle
+& \printcellbottom
+\\ \bottomrule
+\end{tabular}
+
+\end{document}

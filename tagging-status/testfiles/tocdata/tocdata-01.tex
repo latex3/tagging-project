@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{tocdata}
+\usepackage{hyperref}
+
+\title{tocdata tagging test}
+
+\begin{document}
+
+\tableofcontents
+
+\listoffigures
+
+\tocdata{toc}{Some author}
+\section{Some section}
+\subsection{Some subsection}
+
+\tocdata{toc}{Another author}
+\section{Another section}
+
+\begin{figure}
+Content.
+\tocdata{lof}{Some author}
+\caption{Some figure}
+\end{figure}
+
+\begin{figure}
+Content.
+\captionauthor{Some figure}{Some}{Author}
+\end{figure}
+
+\end{document}

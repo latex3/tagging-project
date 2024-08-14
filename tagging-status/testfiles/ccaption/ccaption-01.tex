@@ -1,0 +1,128 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{longtable}
+\usepackage{ccaption}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{ccaption tagging test}
+
+%\precaption{\rule{\linewidth}{0.4pt}\par} % has no effect
+%\postcaption{\rule{\linewidth}{0.4pt}} % has no effect
+
+\newfixedcaption{\tabcaption}{table}
+
+\newfloatlist{diagram}{dgm}{List of Diagrams}{Diagram}
+
+\begin{document}
+
+\listoftables
+\listofdiagram % parent-child warnings
+
+\begin{table}
+\centering
+\caption{A multi-part table} \label{tab:m}
+First table
+\end{table}
+
+\begin{table}
+\centering
+\contcaption{Continued}
+Second table
+\end{table}
+
+\begin{table}
+\centering
+\contcaption{Concluded}
+Third table
+\end{table}
+
+\begin{table}
+\centering
+\caption{Another table} \label{tab:legend}
+Fourth table
+\legend{The legend} % wrong formatting
+\end{table}
+
+% formatting commands have no effect
+\begin{table}
+\centering
+\captionnamefont{\sffamily}
+\captiondelim{}
+\captionstyle{\\}
+\captiontitlefont{\scshape}
+\setlength{\belowcaptionskip}{10pt}
+\caption{Redesigned table caption style} \label{tab:style}
+Fifth table
+\end{table}
+
+\begin{table}
+\centering
+\captionnamefont{\sffamily}
+\captiontitlefont{\itshape}
+\namedlegend{Named legendary table}
+Sixth table
+\end{table}
+
+\begin{center}
+Some nonfloating table
+\tabcaption{Caption for nonfloating table}
+\end{center}
+
+\begin{table}
+\centering
+EXAMPLE TABLE WITH BITWONUMCAPTION
+\bitwonumcaption[fig:bi1]{}{Long}{Bild}{  }{Lang} 
+\end{table}
+
+\begin{table}
+\centering
+EXAMPLE TABLE WITH BIONENUMCAPTION
+\bionenumcaption[fig:bi3]{}{Long English}{Bild}{  }{Lang Deutsch} 
+\end{table}
+
+\begin{table}
+\centering
+EXAMPLE TABLE WITH BICAPTION
+\bicaption[fig:bi2]{Short English}{Longingly}{Bild}{Langlauf}
+\end{table}
+
+\begin{table}
+\centering
+EXAMPLE TABLE WITH BICONTCAPTION
+\bicontcaption{Longingly}{Bild}{Langlauf}
+\end{table}
+
+\begin{diagram}
+\centering
+Diagram content
+\caption{Some diagram}
+\end{diagram}
+
+\section{Warnings with longtable} % ccaption redefines some things
+
+\begin{longtable}{cc}
+\caption[Short caption]{Long caption}\\ % doesn't go into list of tables
+A & B \\
+C & D
+\end{longtable}
+
+\begin{longtable}{cc}
+\longbitwonumcaption{}{Long}{Bild}{  }{Lang} \\ % same here
+A & B \\
+C & D
+\end{longtable}
+
+\begin{longtable}{cc}
+\longbicaption{Short English}{Longingly}{Bild}{Langlauf} \\ % same here
+A & B \\
+C & D
+\end{longtable}
+
+\end{document}
