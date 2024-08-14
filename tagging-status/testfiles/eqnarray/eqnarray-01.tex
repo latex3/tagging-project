@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{eqnarray}
+
+%\RegisterMathEnvironment{equationarray}
+
+\begin{document}
+
+\newcolumntype{e}{@{\quad}}
+\arraycolsep 0.2em
+\begin{equationarray}{p{2.5em}erclecercl}
+now: & - i\partial_t \psi & = & H\,\psi & \Rightarrow
+& \psi (t) & = & \psi (0) \exp (iEt) \\[3ex]
+then: & - i\partial_t \psi & = & (H+E_0) \,\psi & \Rightarrow
+& \psi (t) & = & \psi (0) \exp [i(E+E_0)t]
+\end{equationarray}
+
+\end{document}
