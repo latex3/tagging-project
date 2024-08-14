@@ -1,0 +1,121 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{iftex}
+\ifTUTeX
+  \usepackage{fontspec}
+  \setmainfont{Libertinus Serif}
+  \setsansfont{Libertinus Sans}
+\else
+  \usepackage{lmodern}
+  \usepackage[LGR,T1]{fontenc}
+\fi
+\usepackage[
+  normalize-symbols,
+  keep-semicolon
+  ]{textalpha}
+
+\ProvideTextCommandDefault{\textvarstigma}{} % only in LGR
+
+\begin{document}
+
+a\textsemicolon{} b
+
+\ensuregreek{a\textsemicolon{} b}
+
+\textAlpha\par
+\textBeta\par
+\textGamma\par
+\textDelta\par
+\textEpsilon\par
+\textZeta\par
+\textEta\par
+\textTheta\par
+\textIota\par
+\textKappa\par
+\textLambda\par
+\textMu\par
+\textNu\par
+\textXi\par
+\textOmicron\par
+\textPi\par
+\textRho\par
+\textSigma\par
+\textTau\par
+\textUpsilon\par
+\textPhi\par
+\textChi\par
+\textPsi\par
+\textOmega\par
+\textalpha\par
+\textbeta\par
+\textgamma\par
+\textdelta\par
+\textepsilon\par
+\textzeta\par
+\texteta\par
+\texttheta\par
+\textiota\par
+\textkappa\par
+\textlambda\par
+\textmu\par
+\textnu\par
+\textxi\par
+\textomicron\par
+\textpi\par
+\textrho\par
+\textsigma\par
+\textfinalsigma\par
+\textautosigma\par
+\texttau\par
+\textupsilon\par
+\textphi\par
+\textchi\par
+\textpsi\par
+\textomega\par
+\textpentedeka\par
+\textpentehekaton\par
+\textpenteqilioi\par
+%\textpentemurioi\par % errors
+\textstigma\par
+\textvarstigma\par
+\textKoppa\par
+\textkoppa\par
+\textqoppa\par
+\textQoppa\par
+\textStigma\par
+\textSampi\par
+\textsampi\par
+\textanoteleia\par
+\texterotimatiko\par
+\textdigamma\par
+\textDigamma\par
+\textdexiakeraia\par
+\textaristerikeraia\par
+\textmicro
+
+\ifTUTeX
+\textvarbeta\par
+\textvarkappa\par
+\textvarTheta\par
+\textvartheta\par
+\textvarpi\par
+\textvarrho\par
+\textvarepsilon\par
+\textvarphi
+\fi
+
+\<'\textalpha % same as below with unicode engine
+
+\ensuregreek{\<'\textalpha}
+
+\accpsili\textalpha % same as below with unicode engine
+
+\ensuregreek{\accpsili\textalpha}
+
+\end{document}
