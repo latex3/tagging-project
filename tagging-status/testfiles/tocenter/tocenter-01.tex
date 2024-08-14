@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{tocenter}
+\usepackage{kantlipsum}
+
+\ToCenter{0.5\textwidth}{0.5\textheight}
+
+%\FromMargins[hf]{20mm}{10mm}{25mm}{15mm} % works too
+
+\title{tocenter tagging test}
+
+\begin{document}
+
+text\footnote{a footnote}
+
+more text\marginpar{a margin note}
+
+\kant[1-6]
+
+\end{document}
