@@ -1,0 +1,44 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{outlines}
+
+\begin{document}
+
+\begin{outline}
+\1 This is a first item.
+\1[!!!] This is a second, with a custom label.
+\2 A level-2 item.
+\3 A level 3.
+\4 Deepest is level 4.
+\2 Back to level 2.
+\0 A normal paragraph in the middle.
+\1 A couple more
+\2 items.
+\end{outline}
+
+\renewcommand{\outlineii}{enumerate}
+\begin{outline}
+\1 This is a first item.
+\2 A level-2 item in enumerate style.
+\2 And another.
+\0 A normal paragraph in the middle.
+\renewcommand{\outlineii}{description}
+\1 More level-1.
+\2[Descr] Level-2 in description style.
+\end{outline}
+
+\begin{outline}[enumerate]
+\0 All in enumerate style.
+\1 A level-1 enum.
+\2 A level-2 enum.
+\3 A level-3 enum.
+\4 A level-4 enum.
+\end{outline}
+
+\end{document}
