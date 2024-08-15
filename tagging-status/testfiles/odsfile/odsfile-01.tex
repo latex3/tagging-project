@@ -1,0 +1,68 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{odsfile}
+\usepackage{booktabs}
+
+\title{odsfile tagging test}
+
+\begin{document}
+
+\begin{tabular}{ll}
+\includespread[file=pokus.ods,sheet=List2]
+\end{tabular} 
+
+\begin{tabular}{lll}
+\includespread[sheet=List1,range=a2:c4]
+\end{tabular} 
+
+\begin{tabular}{lll}
+\includespread[range=newrangetest]
+\end{tabular}  
+
+\begin{tabular}{lll}
+\includespread[columns=top]
+\end{tabular} 
+
+\begin{tabular}{ll}
+\includespread[columns={title,amount},sheet=List2]
+\end{tabular} 
+
+\begin{tabular}{lll}
+\includespread[columns=top,sheet=List1,rowseparator=hline,range=a2:b5]
+\end{tabular} 
+
+\includespread[columns=top,template=booktabs,range=a3]
+
+\includespread[range=a2:b,rowseparator={,\ },rowtemplate={\textit{-{1}}:-{2}}]
+
+\begin{tabular}{lll}
+\includespread[range=a1:c1,celltemplate={\textit{-{value}}}]
+\includespread[range=a2:c]
+\end{tabular}
+
+\begin{tabular}{lll}
+\includespread[sheet=Sheet3, multicoltemplate={\multicolumn{-{count}}{r}{-{value}}}]
+\end{tabular}
+
+\begin{tabular}{lll}
+\includespread[sheet=List1,columns=head,escape=false]
+\end{tabular}
+
+\includespread[columns=head,template=booktabs]
+\begin{AddRow}
+  \AddString{last row}{}
+\end{AddRow} 
+\begin{AddRow}[3]
+  \AddString{third row}{}
+  \AddNumber{22}{2}
+\end{AddRow} 
+\includespread[columns=head,template=booktabs]
+
+\end{document}
