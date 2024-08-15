@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{apptools}
+
+\title{apptools tagging test}
+
+\AtAppendix{This is the appendix!}
+
+\begin{document}
+
+\section{Some section}
+\IfAppendix{in the appendix}{not in the appendix}
+
+\appendix
+\section{Some appendix section}
+\IfAppendix{in the appendix}{not in the appendix}
+
+\end{document}
