@@ -1938,7 +1938,8 @@
    tasks: needs tests
    updated: 2024-07-28
 
- - name: cjk-ko
+ - name: cjkutf8-ko
+   ctan-pkg: cjk-ko
    type: package
    status: unknown
    included-in:
@@ -4963,6 +4964,17 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-15
+
+ - name: kotexutf
+   ctan-pkg: kotex-utf
+   type: package
+   status: unknown
+   included-in:
+   priority: 9
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-15
 
  - name: kpfonts
    type: package
