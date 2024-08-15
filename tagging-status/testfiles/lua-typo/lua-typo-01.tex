@@ -1,0 +1,88 @@
+% adapted from lua-typo-demo.tex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[french,twoside]{article}
+\usepackage{geometry}
+\geometry{a6paper}
+\usepackage{fourier-otf}
+\usepackage{microtype}
+
+\usepackage{babel}
+\frenchsetup{og=«, fg=»}
+
+\usepackage[All]{lua-typo}   % APRÈS babel / polyglossia
+
+% Mots courts (deux lettres max) à éviter en fin de ligne
+\luatypoOneChar{french}{'À à Ô'}
+\luatypoTwoChars{french}{"Je Tu Il On"}
+
+% Pour changer les couleurs :
+%\usepackage[svgnames]{xcolor}
+%\LuaTypoSetColor1{Fuchsia}
+%\LuaTypoSetColor2{ForestGreen}
+%\LuaTypoSetColor5{magenta}
+%\LuaTypoSetColor6{yellow}
+
+% Réglage ligne finale trop courte
+\setlength{\luatypoLLminWD}{3em}
+
+%\luatypoPageMin=5
+%\luatypoHyphMax=2
+
+\parindent=1em
+
+\begin{document}
+
+Le plus effroyablement démuni des pauvres peut toujours espérer
+\footnote{Overfull hbox  à la ligne précédente.}
+décrocher un jour le gros lot de la tombola organisée par
+l’association des Pauvres Effroyablement Démunis.
+%
+Le laideron lui, n’a d’autre échappatoire que de
+ronger son frein d’un bec-de-lièvre machinal, de baisser ses yeux quelconques
+aux abords des mirroirs qui l’insultent ou de se foutre à l’eau au risque
+d’effaroucher les murènes.
+
+Quelquefois je trouve que Dieu pousse un peu.
+
+« Les hommes naissent libres et égaux en droit. »
+
+Qu’on me pardonne mais c’est un phrase que j’ai beaucoup de mal à dire sans
+rire. % : « Les hommes naissent libres et égaux en droit. »
+
+Prenons une star, une belle star. Elle est belle.
+
+La beauté. Existe-t-il au monde un privilège plus exorbitant que la beauté ?
+
+Par sa beauté, cette femme n’est-elle pas un peu plus libre
+et un peu plus égale , dans le grand combat pour survivre,
+que l’\textit{Homo sapiens} moyen qui passe sa vie à se courir
+après la queue en attendant la mort ?
+
+Quel profond imbécile aurait l’outrecuidance de soutenir, au nom des grands
+principes révolutionnaires, que l’immonde boudin trapu qui m’a
+%collé une contredanse
+lâchement verbalisé
+tout-à-l’heure
+possède les mêmes armes
+%pour assoir son bonheur terrestre
+que la grande fille féline aux charmes troubles où l’œil se
+pose et chancelle avec une lubricité contenue !
+%(Difficilement contenue.)  % Variantes pour mettre 1 ou 2 car. en bout de ligne
+%(Difficilement contenue hein). Je dois le dire.
+%(Difficilement contenue hein). On peut le dire.
+%(Difficilement contenue hein). Il faut l’admettre.
+(Difficilement contenue hein). À voir.
+
+Quand on a vos yeux, madame, quand on a votre bouche, votre grain de peau, la
+légèreté diaphane de votre démarche et la longueur émouvante de vos cuisses,
+c’est une banalité de dire qu’on peut facilement traverser la vie %l’existence
+à l’abri des cabats trop lourds gorgés de poireaux, à l’écart de l’uniforme de
+contractuelle.
+
+\end{document}
