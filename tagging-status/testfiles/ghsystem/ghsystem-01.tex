@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\ExplSyntaxOn % see https://github.com/cgnieder/ghsystem/issues/13
+\cs_new:Npn \chemmacros_load_module:n #1 {}
+\ExplSyntaxOff
+\usepackage{ghsystem}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\begin{document}
+
+\ghs{h}{200} \par
+\ghs{H}{224} \par
+\ghs{euh}{001} \par
+\ghs{Euh}{202} \par
+\ghs{p}{201}
+
+\ghs[fill-in]{h}{340}
+
+\ghs[exposure=This is how you get exposed.]{h}{340} \par
+\ghs[effect=These are the effects.]{h}{360} \par
+\ghs[organs=to this organ]{h}{370} \par
+\ghs[substance=substance]{euh}{208}
+
+\ghs[text=contact physician!]{p}{301} \par
+\ghs[dots=here]{p}{401} \par
+\ghs[C-temperature=50, F-temperature=122]{p}{411} \par
+\ghs[kg-mass=5.0, lbs-mass=11, C-temperature=50, F-temperature=122]{p}{413}
+
+%\ghspic{skull} % should have alt text by default
+\ghspic[includegraphics={alt=skull}]{skull}
+
+\ghslistall[fill-in,table-rules=booktabs]
+
+\end{document}
