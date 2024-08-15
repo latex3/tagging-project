@@ -1,0 +1,66 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{numerica}
+
+\title{numerica tagging test}
+
+\begin{document}
+\eval{$ e-(1+1/n)^n $}[n=10][x]
+
+\eval{\[
+\cos\tfrac{m}{n}\pi-(1-4\sin^{2}\tfrac{m}{3n}\pi)
+\frac{\sin\tfrac{1}{n}\pi\sin\tfrac{m-1}{n}\pi}
+{2\sin^{2}\tfrac{m}{3n}\pi}
+\]}[m=2,n=5]
+\eval{\[ \left(
+\frac{1-4\sin^{2}\tfrac{m}{3n}\pi}
+{2\sin^{2}\tfrac{m}{3n}\pi}
+\right)
+\sin\tfrac{2m-3}{3n}\pi\sin\tfrac{m-3}{3n}\pi
+\]}[m=2,n=5]
+
+\eval[p=.,pp,env=align*,ff]
+{ \cos\tfrac{m}{n}\pi-(1-4\sin^{2}\tfrac{m}{3n}\pi)
+\frac{\sin\tfrac{1}{n}\pi\sin\tfrac{m-1}{n}\pi}
+{2\sin^{2}\tfrac{m}{3n}\pi}
+, \left(
+\frac{1-4\sin^{2}\tfrac{m}{3n}\pi}
+{2\sin^{2}\tfrac{m}{3n}\pi}
+\right)
+\sin\tfrac{2m-3}{3n}\pi\sin\tfrac{m-3}{3n}\pi
+}[m=5,n=13]
+
+\eval[1s2]{ 12 345.678 901 }
+
+\eval[env=align*,pp,p,ff]{ \pi, e, \gamma, \phi, \deg }
+
+\eval*[ff]{ \surd x, x, x^2 }[x=\pi]
+
+$ x+y=\eval{ x+y }[x=1,y=1] $
+
+\eval{$ x+y $}[x=1,y=1]
+
+\eval*{ 1/0.0123456789 \text{approx.\ 81} }[5]
+
+$ \eval[^=@]{ 0.123 + 1.23@-1 } $
+
+\[
+\eval[env=array,ff]{
+\sin x, \cos x, \tan x }[x=\pi/6][*]
+\]
+
+\eval[eq=\approx]{$ \pi $}[4]
+
+\eval{$ -1-1 $}. \reuse[save]{negtwo}
+Now use the control sequence: $\negtwo$
+
+\eval{$ \sin(\eval{\sin x}[x=\pi/6]\pi) + 1 $}
+
+\end{document}
