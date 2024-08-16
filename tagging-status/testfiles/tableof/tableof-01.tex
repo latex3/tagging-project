@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{book}
+
+\usepackage{tableof}
+
+\title{tableof tagging test}
+
+\begin{document}
+
+\tableofcontents
+\chapter*{Table of A Content}
+\tableof{a}
+\chapter*{Table of B Content}
+\tableof{b}
+
+\newpage
+\section{Introduction}
+
+\chapter{First}
+\toftagthis{a}
+\section{Topic A}
+something
+\toftagthis{a}
+\section{Topic A}
+something
+\toftagthis{b}
+\section{Topic B}
+something
+
+\end{document}

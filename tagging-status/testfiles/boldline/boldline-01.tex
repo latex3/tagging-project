@@ -1,0 +1,44 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{boldline,longtable}
+
+\title{boldline tagging test}
+
+\begin{document}
+
+\begin{tabular}{ccc}\hlineB{2.7}
+1st &First &I \\ \hlineB{2.7}
+2nd &Second &II \\ \clineB{1-2}{0.5}
+3rd &Third &III\\ \hlineB{2.7}
+\end{tabular}
+
+\bigskip
+
+% compare with
+\begin{tabular}{ccc}\hline
+1st &First &I \\ \hline
+2nd &Second &II \\ \cline{1-2}
+3rd &Third &III\\ \hline
+\end{tabular}
+
+\begin{center}
+\begin{tabular}{V{2.7}c|c|cV{2.7}}\hlineB{2.7}
+1st &First  &I  \\\hline
+2nd &Second &II \\ %\clineB{1-2}{.5}
+3rd &Third  &III\\\hlineB{2.7}
+\end{tabular}
+\end{center}
+
+\begin{longtable}{V{2.7}c|c|cV{2.7}}\hlineB{2.7}
+1st &First  &I  \\\hline
+2nd &Second &II \\ %\clineB{1-2}{.5}
+3rd &Third  &III\\\hlineB{2.7}
+\end{longtable}
+
+\end{document}
