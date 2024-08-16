@@ -18,7 +18,7 @@ sub-issues can then be opened (by us) in those repositories and linked back,
 or, if such changes are confined to a single repository, the issue could be 
 transferred there – whatever is more appropriate. 
 
-## Examples documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project
+## Example documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project
 
 Under "[Discussions](https://github.com/latex3/tagging-project/discussions)" there is a page with [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72) that have been produced March 2024 using the then current prototype code. Check them out.
 
