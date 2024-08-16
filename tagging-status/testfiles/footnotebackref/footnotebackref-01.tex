@@ -1,0 +1,18 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[
+  symbol=\textuparrow,
+%  numberlinked=false % toggle comment
+  ]{footnotebackref}
+
+\begin{document}
+Some text with a footnote\footnote{The first footnote.}
+
+Text with the second footnote\footnote[4]{The second footnote.}
+\end{document}
