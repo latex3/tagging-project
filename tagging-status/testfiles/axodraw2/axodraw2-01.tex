@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{axodraw2}
+
+\title{axodraw2 tagging test}
+
+\begin{document}
+Example of Feynman graph using axodraw2 macros:
+\begin{center}
+\begin{axopicture}[alt=Feynman graph](200,110)
+\SetColor{Red}
+\Arc[arrow](100,50)(40,0,180)
+\Text(100,100){$\alpha P_1 + \beta P_2 + k_\perp$}
+\SetColor{Black}
+\Arc[arrow](100,50)(40,180,360)
+\Gluon(0,50)(60,50){5}{4}
+\Vertex(60,50){2}
+\Gluon(140,50)(200,50){5}{4}
+\Vertex(140,50){2}
+\end{axopicture}
+\end{center}
+\begin{center}
+\begin{axopicture}[alt=text example](100,100)
+\SetPFont{Helvetica}{20}
+\Text(10,10)[l]{left}
+\Text(45,45){centered}
+\Text(80,80)[rt]{right-top}
+\Text(20,60)(45){$e^{i\pi/4}$}
+\SetColor{Red}
+\Vertex(10,10){1.5}
+\Vertex(45,45){1.5}
+\Vertex(80,80){1.5}
+\end{axopicture}
+\end{center}
+
+\end{document}
