@@ -1,3 +1,4 @@
+% this is gridsetexample.tex
 \DocumentMetadata
   {
     lang=en-US,
@@ -5,12 +6,71 @@
     pdfstandard=ua-2,
     testphase={phase-III,math,title,table,firstaid}
   }
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{gridset}
+\usepackage{blindtext}
+\raggedbottom
+
+\pagestyle{myheadings}
 
 \begin{document}
-
-text
-\SavePos{abc}
+\markright{gridbase=\gridbase, gridinterval=\gridinterval\ without move down}%
+\newcounter{Zeile}%
+\makeatletter
+\@whilenum \value{Zeile}<40\do {%
+  \stepcounter{Zeile}%
+  \theZeile. Zeile:
+  \SavePos{\thepage.\theZeile}\thegridinfo{\thepage.\theZeile}\par
+}%
+\makeatother
+\clearpage
+\setcounter{Zeile}{0}
+\makeatletter
+\@whilenum \value{Zeile}<20\do {%
+  \stepcounter{Zeile}%
+  \theZeile. Zeile:
+  \SavePos{\thepage.\theZeile}\theposinfo{\thepage.\theZeile}\par
+}%
+\makeatother
+\clearpage
+\parskip=.5\baselineskip
+\setcounter{Zeile}{0}
+\makeatletter
+\@whilenum \value{Zeile}<20\do {%
+  \stepcounter{Zeile}%
+  \theZeile. Zeile:
+  \SavePos{\thepage.\theZeile}\theposinfo{\thepage.\theZeile}\par
+}%
+\makeatother
+\clearpage
+\markright{gridbase=\gridbase, gridinterval=\gridinterval\ with real move down
+at vmode}%
+\parskip=.5\baselineskip
+\setcounter{Zeile}{0}
+\makeatletter
+\@whilenum \value{Zeile}<25\do {%
+  \stepcounter{Zeile}%
+  \vskipnextgrid\theZeile. Zeile: \theposinfo{vp!\thegridcnt}\par
+}%
+\makeatother
+\clearpage
+\markright{gridbase=\gridbase, gridinterval=\gridinterval\ with real move down
+at hmode}%
+\parskip=.5\baselineskip
+\setcounter{Zeile}{0}
+\makeatletter
+\@whilenum \value{Zeile}<25\do {%
+  \stepcounter{Zeile}%
+  \theZeile. Zeile: \vskipnextgrid\theposinfo{vp!\thegridcnt}\par
+}%
+\makeatother
+\clearpage
+\parskip=0pt
+\blindtext
+\begin{itemize}
+\item Test
+\item Test
+\end{itemize}
+\vskipnextgrid\theposinfo{vp!\thegridcnt}\blindtext
 
 \end{document}
