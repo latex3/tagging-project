@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-clever}
+\usepackage{hyperref}
+
+\AddToHook{env/mytheorem/begin}{%
+\zcsetup{countertype={mytheorem=theorem}}}
+\AddToHook{env/myproposition/begin}{%
+\zcsetup{countertype={mytheorem=proposition}}}
+\newtheorem{mytheorem}{Theorem}[section]
+\newtheorem{myproposition}[mytheorem]{Proposition}
+
+\title{zref-clever tagging test - 3}
+
+\begin{document}
+\section{Section 1}
+\begin{mytheorem}\zlabel{theorem-1}
+A theorem.
+\end{mytheorem}
+\begin{myproposition}\zlabel{proposition-1}
+A proposition.
+\end{myproposition}
+\zcref{theorem-1, proposition-1}
+\end{document}
