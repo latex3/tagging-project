@@ -1,0 +1,53 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[shellescape]{gmp}
+
+\title{gmp tagging test}
+
+\begin{document}
+
+\begin{mpost}[name=swelled]
+breadth=.667\mpdim{\linewidth};
+height=2pt;
+x1=0;
+x2=x6=.333x4;x5=x3=.667x4;
+x4=breadth;
+y1=y4=height/2;
+y2=y3=height;
+y5=y6=0;
+fill z1--z2--z3--z4--
+z5--z6--cycle;
+\end{mpost}
+
+text
+
+\usempost[artifact]{swelled}
+
+\medskip
+
+\begin{mpost}[mpxprogram=latex,mpsettings={input boxes;}]
+u:=1pc; path p[]; p0=(-6u,0) -- (6u,0);
+p1=(0,-4u)--(0,4u);
+p2=(0,-4.5u)--(0,4.5u); p2:=p2 rotated -45;
+circleit mech(\btex
+{\fontsize{8}{10}\selectfont
+$\begin{array}{c}
+\sigma_{ij,j}=0\\
+\sigma_{ij}=c_{ijk\ell}\epsilon_{k\ell}\\
+\epsilon_{ij}=\frac{1}{2}(u_{i,j}+u_{j,i})
+\end{array}$}
+etex);
+mech.dx=mech.dy; mech.c=origin;
+pickup pencircle scaled 1pt;
+draw p0; draw p1; draw p2; draw p2 rotated 90;
+pickup pencircle scaled u; unfilldraw bpath.mech;
+pickup pencircle scaled 1pt; drawboxed(mech);
+\end{mpost}
+
+\end{document}
