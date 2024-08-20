@@ -4310,6 +4310,17 @@
    tasks: needs tests
    updated: 2024-08-01
 
+ - name: gmp
+   type: package
+   status: partially-compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   comments: "No way to add Alt text or Artifact status to `mpost` figures used
+              directly. This can be done with `\\usempost`, however."
+   updated: 2024-08-20
+
  - name: grabbox
    type: package
    status: unknown
