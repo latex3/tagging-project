@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}{natmove-sample.bib}
+@article{einstein,
+    author =       "Albert Einstein",
+    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+        [{On} the electrodynamics of moving bodies]",
+    journal =      "Annalen der Physik",
+    volume =       "322",
+    number =       "10",
+    pages =        "891--921",
+    year =         "1905",
+    DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+}
+\end{filecontents}
+
+\documentclass{article}
+
+\usepackage[numbers,super]{natbib}
+\usepackage{natmove}
+\usepackage{hyperref}
+
+\title{natmove tagging test}
+
+\begin{document}
+
+Some text \cite{einstein} some more text.
+
+Some text ending a sentence \cite{einstein}.
+
+\bibliographystyle{plainnat}
+\bibliography{natmove-sample}
+
+\end{document}
