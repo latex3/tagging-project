@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[byname]{smartref}
+\usepackage{hyperref}
+
+\title{smartref tagging test}
+
+\addtoreflist{section}
+\def\shortsectionname{sec.}
+
+\begin{document}
+
+\section{First section}
+\subsection{First subsection}
+\subsection[second subsec.]{Second subsection}
+\label{sec}
+
+\sectionref{sec}
+
+\ssectionref{sec}
+
+\srefsectionref{sec}
+
+\byshortname{sec}
+
+\byname{sec}
+
+\section{Second section}
+
+\sectionref{sec}
+
+\ssectionref{sec}
+
+\srefsectionref{sec}
+\end{document}
