@@ -1,0 +1,20 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{pbox}
+
+\title{pbox tagging test}
+
+\begin{document}
+\pbox[b]{0.5\textwidth}{Hello\\World!}%
+\pbox[t]{0.5\textwidth}{Bonjour\\monde!}
+
+% compare with
+\parbox[b]{1.5cm}{Hello\\World!}%
+\parbox[t]{1.5cm}{Bonjour\\monde!}
+\end{document}

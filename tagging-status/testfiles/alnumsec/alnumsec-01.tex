@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{alnumsec}
+\usepackage{hyperref}
+
+\title{alnumsec tagging test}
+
+\alnumsecstyle{RLg}
+\surroundLetter{[}{]}
+
+\begin{document}
+
+\tableofcontents
+
+\section{Some section}
+\subsection{Some subsection}
+\subsubsection{Some subsubsection}\label{sssec}
+Normal text
+\section{Another section}
+
+Subsubsection \ref{sssec}
+\end{document}

@@ -369,6 +369,15 @@
    tests: false
    updated: 2024-07-13
 
+ - name: alnumsec
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-08-20
+
  - name: alphabeta
    ctan-pkg: greek-fontenc
    type: package
@@ -842,6 +851,15 @@
    issues:
    tests: true
    updated: 2024-07-21
+
+ - name: autonum
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [619]
+   tests: true
+   updated: 2024-08-20
 
  - name: auxhook
    type: package
@@ -2066,6 +2084,15 @@
    tasks: needs tests
    updated: 2024-07-18
 
+ - name: collref
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [628]
+   tests: true
+   updated: 2024-08-20
+
  - name: colonequals
    type: package
    status: compatible
@@ -2472,6 +2499,17 @@
    tests: true
    updated: 2024-07-10
 
+ - name: delimset
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   issues:
+   tests: true
+   updated: 2024-08-20
+
  - name: derivative
    type: package
    status: compatible
@@ -2512,6 +2550,15 @@
    issues:
    tests: true
    updated: 2024-07-25
+
+ - name: dirtree
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [613]
+   tests: true
+   updated: 2024-08-20
 
  - name: doc
    type: package
@@ -2623,8 +2670,8 @@
  - name: duckuments
    type: package
    status: compatible
-   included-in:
-   priority: 9
+   included-in: [arxiv001]
+   priority: 7
    issues:
    tests: true
    updated: 2024-08-12
@@ -3374,6 +3421,17 @@
    tasks: needs tests
    updated: 2024-08-01
 
+ - name: fge
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
+   issues:
+   tests: true
+   updated: 2024-08-20
+
  - name: fibnum
    type: package
    status: compatible
@@ -3535,13 +3593,12 @@
 
  - name: floatrow
    type: package
-   status: unknown
+   status: no-support
    included-in: [arxiv01]
    priority: 6
-   issues:
+   issues: [497]
    tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   updated: 2024-08-20
 
  - name: flowfram
    type: package
@@ -3837,13 +3894,12 @@
 
  - name: fp
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv01]
    priority: 6
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-08-14
+   updated: 2024-08-20
 
  - name: framed
    type: package
@@ -3904,6 +3960,15 @@
    issues: [110]
    tests: true
    updated: 2024-07-11
+
+ - name: ftnxtra
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [625]
+   tests: true
+   updated: 2024-08-20
 
  - name: fullpage
    type: package
@@ -5174,6 +5239,15 @@
    comments: "Drawn frames should be Artifacts. Pictures need Alt text."
    updated: 2024-08-05
 
+ - name: lcg
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   updated: 2024-08-20
+
  - name: leftidx
    type: package
    status: compatible
@@ -6251,6 +6325,15 @@
    tests: false
    updated: 2024-07-15
 
+ - name: moreenum
+   type: package
+   status: compatible
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   updated: 2024-08-20
+
  - name: morefloats
    type: package
    status: compatible
@@ -6332,6 +6415,15 @@
    issues:
    tests: false
    updated: 2024-08-06
+
+ - name: multienum
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: true
+   updated: 2024-08-20
 
  - name: multiexpand
    type: package
@@ -6903,13 +6995,12 @@
 
  - name: numerica-tables
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [627]
+   tests: true
+   updated: 2024-08-20
 
  - name: numprint
    type: package
@@ -7305,13 +7396,12 @@
 
  - name: pbox
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   issues: [628]
+   tests: true
+   updated: 2024-08-20
 
  - name: pdfcol
    type: package
@@ -7737,6 +7827,15 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-17
+
+ - name: polynom
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [612]
+   tests: true
+   updated: 2024-08-20
 
  - name: postnotes
    type: package
@@ -8488,13 +8587,12 @@
 
  - name: shapepar
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [630]
+   tests: true
+   updated: 2024-08-20
 
  - name: shellesc
    type: package
@@ -8503,6 +8601,15 @@
    priority: 2
    issues:
    updated: 2024-07-07
+
+ - name: shorttoc
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [610]
+   tests: true
+   updated: 2024-08-20
 
  - name: shortvrb
    type: package
@@ -8635,13 +8742,12 @@
 
  - name: skak
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-28
+   issues: [607]
+   tests: true
+   updated: 2024-08-20
 
  - name: slantsc
    type: package
@@ -9047,13 +9153,12 @@
 
  - name: svn-prov
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv001]
    priority: 7
    issues:
    tests: false
-   tasks: needs tests
-   updated: 2024-08-14
+   updated: 2024-08-20
 
  - name: systeme
    type: package
@@ -9601,6 +9706,15 @@
    tests: true
    updated: 2024-08-06
 
+ - name: titlefoot
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues: [611]
+   tests: true
+   updated: 2024-08-20
+
  - name: titleps
    type: package
    status: compatible
@@ -10083,6 +10197,15 @@
    issues: [5]
    updated: 2024-07-06
 
+ - name: usebib
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-08-20
+
  - name: utopia
    type: package
    status: compatible
@@ -10424,6 +10547,15 @@
    comments: "Drawn rules should be tagged as Artifacts."
    tests: true
    updated: 2024-07-26
+
+ - name: xindex
+   type: package
+   status: compatible
+   included-in:
+   priority: 9
+   issues:
+   tests: true
+   updated: 2024-08-20
 
  - name: xint
    type: package

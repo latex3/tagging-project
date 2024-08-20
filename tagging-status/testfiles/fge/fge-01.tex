@@ -1,0 +1,57 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{fge}
+
+\title{fge tagging test}
+
+\begin{document}
+
+$\spirituslenis{\alpha}$\par
+$\spiritusasper{\alpha}$
+
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \fgerighttwo
+    \fgerightB
+    \fgelefttwo
+    \fgeleftthree
+    \fgeleftB
+    \fgeleftC
+    \fgec
+    \fgee
+    \fgeeszett
+    \fgeA
+    \fged
+    \fgef
+    \fgeF
+    \fgestruckzero
+    \fgestruckone
+    \fgerightarrow
+    \fgeuparrow
+    \fgeupbracket
+    \fgecap
+    \fgecup
+    \fgecupbar
+    \fgecapbar
+    \fgebarcap
+    \fgecupacute
+    \fgebaracute
+    \fgemark
+    \fgelb
+    \fgeinfty
+    \fgelangle
+    \fges
+    \fgebackslash
+  }
+  { $#1$ \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\end{document}

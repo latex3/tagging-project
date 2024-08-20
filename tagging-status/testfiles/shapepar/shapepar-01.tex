@@ -1,0 +1,49 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{shapepar}
+
+\title{shapepar tagging test}
+
+\begin{document}
+
+\shapepar{\nutshape} blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+\bigskip
+
+\squarepar{blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah}
+
+\Shapepar{\circleshape} blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah
+
+\bigskip
+
+\font\cmsybig=cmsy10 at 1.2in
+\newcommand\BigO{{\cmsybig \char10}}
+\cutout{r}(-1cm,2\baselineskip)
+\setlength\cutoutsep{6pt}
+\shapepar[1.7cm]{\circleshape}%
+\setlength\unitlength{1cm}%
+\begin{picture}[alt=big O](0,0)%
+\put(1.0,-1.3){\makebox[0pt]{\BigO}}
+\end{picture}
+
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+
+\end{document}

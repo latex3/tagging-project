@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{polynom}
+
+\title{polynom tagging test}
+
+\begin{document}
+
+\polylongdiv{X^3+X^2-1}{X-1}
+
+\polyhornerscheme[x=1]{x^3+x^2-1}
+
+\polylonggcd{(X-1)(X-1)(X^2+1)}{(X-1)(X+1)(X+1)}
+
+\polyfactorize{(X-1)(X-1)(X^2+1)}
+
+$(X^2+1)(X-1)^2$
+
+\end{document}
