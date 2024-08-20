@@ -1,0 +1,47 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{cmll}
+
+\title{cmll tagging test}
+
+\begin{document}
+
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \biginvamp
+    \bigparr
+    \bigwith
+    \Bot
+    \coh
+    \incoh
+    \invamp
+    \multimapboth
+    \multimapinv
+    \nmultimap
+    \nmultimapboth
+    \nmultimapinv
+    \oc
+    \parr
+    \Perp
+    \scoh
+    \shift
+    \shneg
+    \shpos
+    \simbot
+    \simperp
+    \sincoh
+    \with
+    \wn
+  }
+  { $#1$ \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\end{document}
