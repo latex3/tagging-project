@@ -2753,13 +2753,13 @@
 
  - name: eepic
    type: package
-   status: unknown
+   status: compatible
    included-in: [tlc3, arxiv01]
    priority: 2
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   tests: true
+   comments: "Does not work with pdflatex or lualatex."
+   updated: 2024-08-21
 
  - name: eforms
    type: package
