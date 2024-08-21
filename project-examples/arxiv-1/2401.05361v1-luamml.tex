@@ -1,0 +1,74 @@
+%%
+%% ArXiv paper 2401.05361 with markup enhanced for PDF/UA-2 compliant tagging
+%%
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+%\tagpdfsetup{math/mathml/write-dummy}
+
+\documentclass[11pt,a4paper]{article}
+%dpc\usepackage[latin1]{inputenc}
+\usepackage{unicode-math}\usepackage{amsmath}
+%dpc\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsfonts,
+  %dpc amsthm,
+  latexsym,
+%  amsmath,amssymb,
+  amscd,
+  % dpc epsfig,psfrag,enumerate
+}
+\usepackage{graphics,graphicx, bezier, float, color, hyperref}
+\usepackage{url}
+\usepackage{multienum}
+\usepackage[table]{xcolor}
+\usepackage{multicol,multirow}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{parskip}
+\usepackage[toc,page]{appendix}
+\sloppy
+\setlength{\parindent}{0pt}
+\setlength\parskip{0.1in}
+\usepackage[top=2.7cm, bottom=2.7cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{xcolor}
+
+% \usepackage{blkarray}
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+
+
+\newtheorem{lemma}{Lemma}[section]
+
+% dpc 
+\newenvironment{proof}{\par\noindent\textbf{Proof}\par}{\par}
+% dpc would need \ensuremath{\square} if luatex not used, but arxiv html does not use math
+\newcommand\qed{\square}
+
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{remark}{Remark}[section]
+\usepackage[none]{hyphenat}[section]
+\newtheorem{definition}{Definition}[section]
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+\title{Lucas numbers that are palindromic concatenations of
+	two distinct repdigits}
+\author{Herbert Batte$^{1,*} $}
+\date{}
+
+\begin{document}
+\input{2401.05361v1-body}
+\end{document}
