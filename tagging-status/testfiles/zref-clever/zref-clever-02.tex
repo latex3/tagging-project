@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-clever}
+\usepackage{hyperref}
+
+\zcsetup{countertype={lem=lemma}}
+\newtheorem{lem}{Lemma}[section]
+
+\newtheorem{myconjecture}{Conjecture}[section]
+\zcRefTypeSetup{myconjecture}{
+Name-sg = Conjecture ,
+name-sg = conjecture ,
+Name-pl = Conjectures ,
+name-pl = conjectures ,
+}
+
+\title{zref-clever tagging test - 2}
+
+\begin{document}
+\section{Section 1}
+\begin{lem}\zlabel{lemma-1}
+A lemma.
+\end{lem}
+\zcref{lemma-1}
+\begin{myconjecture}\zlabel{conjecture-1}
+A conjecture.
+\end{myconjecture}
+\zcref{conjecture-1}
+\end{document}

@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-clever}
+\usepackage{hyperref}
+
+\title{zref-clever tagging test - 5}
+
+\zcRefTypeSetup{pluralequation}{
+Name-sg = Equations ,
+name-sg = equations ,
+Name-pl = Equations ,
+name-pl = equations ,
+}
+\begin{document}
+\section{Section 1}
+\begin{equation}
+\zcsetup{reftype=pluralequation}
+\zlabel{eq:1}
+\begin{aligned}
+A+B&=B+A\\
+C&=D+E\\
+E&=F
+\end{aligned}
+\end{equation}
+\zcref{eq:1}
+\end{document}

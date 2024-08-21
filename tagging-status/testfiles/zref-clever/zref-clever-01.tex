@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-clever}
+\usepackage{hyperref}
+
+\title{zref-clever tagging test - 1}
+
+\begin{document}
+\section{Section 1}
+\zlabel{sec:section-1}
+\begin{figure}
+A figure.
+\caption{Figure 1}
+\zlabel{fig:figure-1}
+\end{figure}
+A reference to \zcref{sec:section-1}. \zcref[S]{fig:figure-1} shows some
+interesting information.
+A page reference can be done with either \zcpageref{sec:section-1} or with
+\zcref[page]{sec:section-1}.
+A reference can also be made to multiple labels, as in \zcref{sec:section-1,
+fig:figure-1}.
+\end{document}

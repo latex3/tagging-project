@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-clever}
+\usepackage{hyperref}
+
+\title{zref-clever tagging test - 4}
+
+\begin{document}
+\section{Section 1}
+\begin{equation}\label{eq:1}
+A^{(1)}_l =\begin{cases} n!,&\text{if }l =1\\
+0,&\text{otherwise}.\end{cases}
+\end{equation}
+\begin{equation*} \tag{foo}\label{eq:2}
+A^{(1)}_l =\begin{cases} n!,&\text{if }l =1\\
+0,&\text{otherwise}.\end{cases}
+\end{equation*}
+\begin{subequations}\label{eq:3}
+\begin{align}
+A+B&=B+A\\
+C&=D+E\label{eq:3b}\\
+E&=F
+\end{align}
+\end{subequations}
+\zcref{eq:1, eq:2, eq:3, eq:3b}
+\end{document}
