@@ -1,0 +1,37 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{zref-vario}
+\usepackage{hyperref}
+
+\title{zref-vario tagging test - 1}
+
+\begin{document}
+\section{Section 1}
+\zlabel{sec:section-1}
+\begin{figure}
+A figure.
+\caption{Figure 1}
+\zlabel{fig:figure-1}
+\end{figure}
+\begin{figure}
+Another figure.
+\caption{Figure 2}
+\zlabel{fig:figure-2}
+\end{figure}
+
+\zvref[S]{sec:section-1}
+
+\zvpageref{fig:figure-1}
+
+\zvrefrange{fig:figure-1}{fig:figure-2}
+
+\zvpagerefrange{fig:figure-1}{fig:figure-2}
+
+\zfullref{fig:figure-1}
+\end{document}
