@@ -1,0 +1,17 @@
+\DocumentMetadata{
+ lang=en,
+   pdfversion=2.0,
+   pdfstandard=ua-2,
+   uncompress,
+   pdfstandard=a-4f,
+   testphase = {phase-III,math,title}}
+
+
+
+\renewcommand\DocumentMetadata[1]{}
+\ExplSyntaxOn
+\AddToHook{begindocument/end}{\__math_luamml_activate_write:}
+\ExplSyntaxOff
+
+
+\input{PHY-exam}
