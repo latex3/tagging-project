@@ -1,0 +1,90 @@
+%%
+%% ArXiv paper 2401.09436 with markup enhanced for PDF/UA-2 compliant tagging
+%%
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+ }
+%\tagpdfsetup{math/mathml/write-dummy}
+
+\documentclass[a4paper,11pt]{article}
+
+%\usepackage[margin=1in]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage{
+  %amsthm,
+ unicode-math%  amsmath,amssymb
+}
+\usepackage{tikz}
+\usepackage{graphicx,subcaption,caption}
+\usepackage{algorithm,algorithmic}
+\usepackage{pgfplots}
+\usepackage{multirow}
+%\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If your tex system is less than 2 years old (in 2012) the following
+%% font options are available. If not comment them out.
+\usepackage{tgtermes}
+%       otherwise use alternative journal fonts
+%\renewcommand{\rmdefault}{ptm} % system default Times font
+%\usepackage{mathptmx}  
+%%%     additional fonts
+\usepackage[scaled=.92]{helvet}
+%\setoptfont{enc={T1},fam={pop}} % if You have Optima font, uncomment this line
+%%% MATH
+%\usepackage{amsthm,amsmath,amssymb}
+\usepackage{mathrsfs}
+%%% BIBLIOGRAPHY
+%\usepackage{natbib}  %% numbers is required.
+%%% LINKS
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}  %%check
+
+\usepackage{enumerate}
+
+%\artstatus{am} %%% leave this alone!!  That means you, too!!
+%%%%%%%%theorems%%%%%
+
+%%%% feel free to changes these%%%%%%%
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{corollary}[theorem]{Corollary} 
+%dpc\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{statement}[theorem]{Statement}
+\newtheorem{notation}[theorem]{Notation} 
+% dpc\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+% dpc 
+\newenvironment{proof}{\par\noindent\textbf{Proof}\par}{\par}
+% dpc would need \ensuremath{\square} if luatex not used, but arxiv html does not use math
+\newcommand\qed{\square}
+
+
+%\tikzexternalize 
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{proposition}{Proposition} 
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{assumption}{Assumption}
+%\newtheorem{remark}{Remark}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{definition}{Definition}
+%\usepackage{hyperref}
+%\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+
+%\firstpageno{1}
+
+\begin{document}
+\input{2401.09436v1-body}	
+\end{document}

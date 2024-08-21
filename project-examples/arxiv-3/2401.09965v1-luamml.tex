@@ -1,0 +1,66 @@
+%%
+%% ArXiv paper 2401.09965 with markup enhanced for PDF/UA-2 compliant tagging
+%%
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+%\tagpdfsetup{math/mathml/write-dummy}
+
+\NewCommandCopy\newt\newtheorem
+\documentclass[12pt,reqno]{amsart}
+\RenewCommandCopy\newtheorem\newt
+
+
+\usepackage{amsmath,
+  %dpc amsthm,
+  amscd,
+  % amsfonts,amssymb,
+  unicode-math,
+  graphicx,color}
+\def\theoremstyle#1{}
+\ExplSyntaxOn
+\tl_set:Nn\l_color_fixed_model_tl{rgb}
+\ExplSyntaxOff
+\usepackage[bookmarksnumbered,colorlinks,plainpages]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=red,anchorcolor=green,citecolor=cyan,urlcolor=red,filecolor=magenta,pdftoolbar=true}
+
+\usepackage{mathrsfs}
+
+% ----------------------------------------
+
+\textheight 22.5truecm 
+\textwidth 14.5truecm
+\setlength{\oddsidemargin}{0.35in}
+\setlength{\evensidemargin}{0.35in}
+\setlength{\topmargin}{-.5cm}
+
+% ----------------------------------------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\numberwithin{equation}{section}
+
+\renewenvironment{remark}{\par\textbf{Remark}\par}{\par}
+
+% -------------------------------------------
+
+\begin{document}
+\def\wp{℘}
+\def\lambda{λ}
+\input{2401.09965v1-body}
+\end{document}
