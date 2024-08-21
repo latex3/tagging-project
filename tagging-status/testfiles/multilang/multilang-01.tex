@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[german,english]{babel}
+\usepackage[languages={english,german}]{multilang}
+\usepackage{kantlipsum}
+
+\title{multilang tagging test}
+
+\NewMultilangCmd{\Sec}{command=\section,margs=title,oargs=short,defaults={title={???},short={???}}}
+\NewMultilangEnv{blub}{environment=minipage,margs=width}
+
+\begin{document}
+
+\Sec{
+  title/english={Foobar},
+  title/german ={Dingsda},
+  short/english={F},
+  short/german ={D},
+  }
+\Sec{}
+
+\begin{blub}{
+  width/english=8cm,
+  width/german=10cm
+  }
+\kant[1-2]
+\end{blub}
+
+\end{document}
