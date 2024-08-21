@@ -1,0 +1,85 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{poetry}
+
+\title{poetry tagging test}
+
+\begin{document}
+
+\begin{poem}
+Let me not to the marriage of true minds \\
+\hin Admit impediments. Love is not love \\
+Which alters when it alteration finds, \\
+\hin Or bends with the remover to remove: \\!
+O, no! it is an ever-fixed mark, \\
+\hin That looks on tempests and is never shaken; \\
+It is the star to every wandering bark, \\
+\hin Whose worth's unknown, although his height be taken. \\-
+\end{poem}
+
+\bgroup
+\centerpoemon{The ship has weather'd every rack, the prize we sought is won}
+\begin{poem}
+O captain! my captain! The fearful trip is done; \\
+The ship has weather'd every rack, the prize we sought is won;\\-
+\end{poem}
+\egroup
+
+\bgroup
+\centerpoemon{Alas, poor Yorick! I knew him. Horatio!}
+\settowidth{\poemhinwd}{Alas, poor Yorick! I knew him. }
+\begin{poem}
+Alas, poor Yorick! I knew him.\\
+\hin Horatio! \\
+\setlength{\poemhinwd}{2em}
+A fellow of infinite jest, of most excellent fancy. \\
+\hin He hath borne me on his back a thousand times, \\
+and now, how abhorred in my imagination it is! \\
+My gorge rises at it. Here hung those lips...\\-
+\end{poem}
+\egroup
+
+\bgroup
+\setcounter{poemindentevery}{3}
+\setcounter{poemlinenumsevery}{2}
+\begin{poem}
+Once upon a midnight dreary, while I pondered, weak and weary,\\
+Over many a quaint and curious volume of forgotten lore---\\
+While I nodded, nearly napping, suddenly there came a tapping,\\
+As of someone gently rapping, rapping at my chamber door.\\
+``'Tis some visitor,'' I muttered, ``tapping at my chamber door---\\
+Only this and nothing more.''\\-
+\end{poem}
+\egroup
+
+\bgroup
+\poemlinenumsfalse
+\begin{poem}
+O captain! my captain! The fearful trip is done; \\
+\poemlinenumstrue
+The ship has weather’d every rack, the prize we sought is won;\\
+The port is near, the bells I hear, the people all exulting, \\
+While follow eyes the steady keel, the vessel grim and daring; \\-
+\end{poem}
+\egroup
+
+\bgroup
+\poemlinenumrighttrue
+\setcounter{poemlinenumsevery}{1}
+\titleauthorpoem{\poemblanktitle}{\poemblankauthor}
+\begin{poem}
+O captain! my captain! The fearful trip is done; \\
+\poemlinenumrightfalse
+The ship has weather’d every rack, the prize we sought is won;\\
+The port is near, the bells I hear, the people all exulting, \\
+While follow eyes the steady keel, the vessel grim and daring; \\-
+\end{poem}
+\egroup
+
+\end{document}
