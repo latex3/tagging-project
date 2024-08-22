@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{longtable}
+\usepackage{figcaps}
+
+\title{figcaps tagging test}
+
+\printfigures
+\figmarkon
+
+\begin{document}
+
+text
+\begin{figure}\centering
+First figure
+\caption{This is the first figure}
+\end{figure}
+\begin{longtable}{cc}
+\caption{A not-so-long table}\\
+A & B \\
+C & D
+\end{longtable}
+\begin{figure}\centering
+Second figure
+\caption{This is the second figure}
+\end{figure}
+\begin{table}\centering
+Some table
+\caption{This is a table}
+\end{table}
+\begin{figure}\centering
+Third figure
+\caption{This is the third figure}
+\end{figure}
+\begin{table}\centering
+Some other table
+\caption{This is another table}
+\end{table}
+
+\end{document}

@@ -1432,13 +1432,13 @@
 
  - name: breakurl
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv1]
    priority: 5
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [645]
+   tests: true
+   comments: "Requires latex->dvips->ps2pdf."
+   updated: 2024-08-22
 
  - name: breqn
    type: package
@@ -1892,13 +1892,12 @@
 
  - name: chessfss
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-28
+   issues: [634]
+   tests: true
+   updated: 2024-08-22
 
  - name: chicago
    type: package
@@ -2384,13 +2383,12 @@
 
  - name: dashbox
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv001]
    priority: 7
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-14
+   issues: [650
+   tests: true
+   updated: 2024-08-22
 
  - name: dashrule
    type: package
@@ -3024,13 +3022,12 @@
 
  - name: eqparbox
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [633]
+   tests: true
+   updated: 2024-08-22
 
  - name: erewhon
    type: package
@@ -3442,13 +3439,12 @@
 
  - name: figcaps
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [643]
+   tests: true
+   updated: 2024-08-22
 
  - name: filecontentsdef
    type: package
@@ -3902,13 +3898,14 @@
 
  - name: framed
    type: package
-   status: partially-compatible
+   status: currently-incompatible
    included-in: [arxiv1]
    priority: 5
-   comments: "Title in `titled-frame` environment is lost."
-   issues:
+   comments: "Title in `titled-frame` environment is lost. Content after page
+              break is lost with pdftex and xetex."
+   issues: [651]
    tests: true
-   updated: 2024-07-21
+   updated: 2024-08-22
 
  - name: frcursive
    type: package
@@ -6261,13 +6258,12 @@
 
  - name: minitoc
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [649]
+   tests: true
+   updated: 2024-08-22
 
  - name: minted
    type: package
@@ -6397,6 +6393,15 @@
    issues:
    tests: true
    updated: 2024-08-05
+
+ - name: multibibliography
+   type: package
+   status: currently-incompatible
+   included-in:
+   priority: 9
+   issues: [637]
+   tests: true
+   updated: 2024-08-22
 
  - name: multicol
    type: package
@@ -6843,13 +6848,12 @@
 
  - name: nmbib
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-28
+   issues: [638]
+   tests: true
+   updated: 2024-08-22
 
  - name: nolbreaks
    type: package

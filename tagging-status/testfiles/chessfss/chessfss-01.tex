@@ -1,0 +1,86 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{chessfss}
+\usepackage[LSB,LSBC3,T1]{fontenc}
+\usepackage{xcolor}
+
+\title{chessfss tagging test}
+
+\begin{document}
+
+\ExplSyntaxOn
+\tl_map_inline:nn
+  {
+    \king
+    \queen
+    \rook
+    \bishop
+    \knight
+    \pawn
+    \checksymbol
+    \castlinghyphen
+    \withattack
+    \withinit
+    \zugzwang
+    \withidea
+    \onlymove
+    \diagonal
+    \file
+    \centre
+    \weakpt
+    \ending
+    \qside
+    \kside
+    \etc
+    \morepawns
+    \timelimit
+    \moreroom
+    \counterplay
+    \capturesymbol
+    \bishoppair
+    \betteris
+    \wupperhand
+    \doublepawns
+    \bupperhand
+    \wbetter
+    \bbetter
+    \wdecisive
+    \bdecisive
+    \unclear
+    \chesssee
+    \mate
+    \compensation
+    \opposbishops
+    \seppawns
+    \passedpawn
+    \samebishops
+    \devadvantage
+    \unitedpawns
+    \with
+    \without
+    \comment
+    \castlingchar
+    \longcastling
+    \shortcastling
+    \novelty
+    \various
+  }
+  { #1 \quad \cs_to_str:N #1 \par }
+\ExplSyntaxOff
+
+\setboardfontcolors{
+  blackfieldmask=blue!30,
+  whitefieldmask=yellow!50,
+  blackfield=blue,
+  whiteonwhitepiecemask=red!50,
+  whitepiece=green,
+  blackpiece=gray}
+\setboardfontsize{30pt}%
+\showchessboardencoding{LSBC3}
+\end{document}
