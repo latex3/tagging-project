@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{eepic,epic}
+
+\begin{document}
+
+text
+
+\begin{picture}[alt=an ellipse](100,100)
+  \Thicklines
+  \put(50,50){\ellipse{80}{60}}
+  \thicklines
+  \dashline{4}(0,50)(100,50)
+  \dashline{4}(50,0)(50,100)
+\end{picture}
+
+\setlength{\unitlength}{1mm}
+\begin{picture}[alt=](100,100)(0,0)
+\put(0,0){\tiny \grid(100,100)(5,5)[0,0]}
+\drawline(10,5)(60,10)(85,20)(90,60)(100,95)
+\drawline[-50](10,0)(65,5)(90,15)(95,55)
+\thicklines
+\dottedline{1.4}(10,10)(60,20)(75,35)(95,95)
+\dashline{2}(80,90)(50,80)(30,50)(10,40)
+\dashline{2}[0.5](80,80)(50,70)(30,40)(10,30)
+\dashline[-30]{2}[0.5](80,70)(50,60)(30,30)(10,20)
+\end{picture}
+
+\end{document}
