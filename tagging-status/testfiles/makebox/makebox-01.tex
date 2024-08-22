@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{makebox}
+
+\title{makebox tagging test}
+
+\begin{document}
+
+longer reference text
+
+\makebox*{longer reference text}{short text}
+
+\makebox*{longer reference text}[r]{short text}
+
+\makebox*{longer reference text}[r]{even longer text than the reference}
+
+\makebox{a normal makebox}
+\end{document}
