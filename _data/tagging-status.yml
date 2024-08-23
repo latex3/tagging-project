@@ -6524,12 +6524,13 @@
 
  - name: multind
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [arxiv001]
    priority: 7
    issues:
-   tests: false
-   tasks: needs tests
+   tests: true
+   comments: "Does not use section command for index headings. Not distributed
+              with texlive."
    updated: 2024-08-23
 
  - name: multirow
