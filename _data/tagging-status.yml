@@ -125,13 +125,13 @@
 
  - name: abstract
    type: package
-   status: unknown
+   status: partially-compatible
    included-in: [tlc3, arxiv01]
    priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   issues: [653]
+   tests: true
+   comments: Tagging is not ideal.
+   updated: 2024-08-23
 
  - name: academicons
    type: package
@@ -802,13 +802,12 @@
 
  - name: authblk
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3, arxiv1]
    priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-13
+   issues: [654]
+   tests: true
+   updated: 2024-08-23
 
  - name: authordate1-4
    ctan-pkg: authordate
@@ -1175,13 +1174,12 @@
 
  - name: biblatex2bibitem
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3]
    priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   issues: [655]
+   tests: true
+   updated: 2024-08-23
 
  - name: biblist
    type: package
@@ -2527,6 +2525,16 @@
    tests: true
    updated: 2024-08-05
 
+ - name: dialogue
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
+
  - name: diffcoeff
    type: package
    status: compatible
@@ -3011,6 +3019,16 @@
    tests: true
    updated: 2024-08-02
 
+ - name: eqlist
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: true
+   comments: "Depends on incompatible eqparbox."
+   updated: 2024-08-23
+
  - name: eqnarray
    type: package
    status: currently-incompatible
@@ -3120,13 +3138,12 @@
 
  - name: ethiop
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3]
    priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-14
+   issues: [656]
+   tests: true
+   updated: 2024-08-23
 
  - name: etoc
    type: package
@@ -3398,24 +3415,32 @@
 
  - name: feynmf
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   issues: [659]
+   tests: true
+   updated: 2024-08-23
 
  - name: feynmp
    ctan-pkg: feynmf
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
+   issues: [659]
+   tests: true
+   updated: 2024-08-23
+
+ - name: feynmp-auto
+   type: package
+   status: currently-incompatible
+   included-in: [arxiv001]
+   priority: 7
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-08-01
+   tests: true
+   comments: "See feynmp."
+   updated: 2024-08-23
 
  - name: fge
    type: package
@@ -4054,6 +4079,16 @@
    tests: false
    updated: 2024-07-14
 
+ - name: gastex
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
+
  - name: gb4e
    type: package
    status: unknown
@@ -4316,6 +4351,16 @@
    comments: "No way to add Alt text or Artifact status to `mpost` figures used
               directly. This can be done with `\\usempost`, however."
    updated: 2024-08-20
+
+ - name: gnuplottex
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
 
  - name: grabbox
    type: package
@@ -6200,6 +6245,16 @@
    tests: true
    updated: 2024-07-31
 
+ - name: mfpic
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
+
  - name: mhchem
    type: package
    status: unknown
@@ -6467,6 +6522,16 @@
    tests: false
    tasks: needs tests
    updated: 2024-07-18
+
+ - name: multind
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
 
  - name: multirow
    type: package
@@ -6872,6 +6937,16 @@
    issues: [363]
    tests: true
    updated: 2024-07-30
+
+ - name: nonfloat
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
 
  - name: nonumonpart
    type: package
@@ -7868,6 +7943,16 @@
    issues: [612]
    tests: true
    updated: 2024-08-20
+
+ - name: polytable
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
 
  - name: postnotes
    type: package
@@ -10364,6 +10449,16 @@
 
 #------------------------ WWW ----------------------------
 
+ - name: wallpaper
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
+
  - name: warpcol
    type: package
    status: currently-incompatible
@@ -10382,6 +10477,16 @@
    issues: [272]
    tests: false
    updated: 2024-07-25
+
+ - name: watermark
+   type: package
+   status: unknown
+   included-in: [arxiv001]
+   priority: 7
+   issues:
+   tests: false
+   tasks: needs tests
+   updated: 2024-08-23
 
  - name: widetable
    type: package

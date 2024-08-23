@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\NewEnvironmentCopy{origabstract}{abstract}
+\usepackage[
+  %runin,
+  %addtotoc, % gives warning
+  %number
+  ]{abstract}
+
+\title{abstract tagging test}
+\author{Some author}
+
+\begin{document}
+
+\maketitle
+
+\begin{origabstract}
+Some abstract text
+\end{origabstract}
+
+\begin{abstract}
+Some abstract text
+\end{abstract}
+
+\tableofcontents
+
+\end{document}
