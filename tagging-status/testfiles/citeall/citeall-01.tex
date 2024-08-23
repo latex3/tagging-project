@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{biblatex}
+\usepackage{citeall}
+\usepackage{hyperref}
+
+\addbibresource{biblatex-examples.bib}
+
+\title{citeall tagging test}
+
+\begin{document}
+
+\cite{angenendt}
+
+\citeall[\textcite][5]
+
+\printbibliography
+
+\end{document}
