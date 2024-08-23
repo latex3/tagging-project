@@ -1,0 +1,64 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}{test.txt}
+a test file
+\end{filecontents}
+\documentclass{article}
+\usepackage{embedfile}
+\embedfilesetup{
+  view=tile,
+  initialfile=example-image.pdf
+}
+\embedfilefield{file}{
+  type=file,
+  title={File name}
+}
+\embedfilefield{description}{
+  type=desc,
+  title={Description}
+}
+\embedfilefield{date}{
+  type=moddate,
+  title={Date}
+}
+\embedfilefield{size}{
+  type=size,
+  title={Size}
+}
+\embedfilefield{type}{
+  type=text,
+  title={Type},
+  visible=false
+}
+\embedfilesort{
+  type,
+  date=descending
+}
+\begin{document}
+An example for embedded files as collection.
+You need Acrobat Reader 8 or higher.
+
+\embedfile[
+  desc={A test .txt file},
+  description.prefix={Test: },
+  type.value={TXT}
+]{test.txt}
+
+\embedfile[
+  desc={A test .pdf file},
+  description.prefix={Test: },
+  type.value={PDF}
+]{example-image.pdf}
+
+\embedfile[
+  desc={The source for this example},
+  description.prefix={Example: },
+  type.value={TEX}
+]{\jobname.tex}
+
+\end{document}

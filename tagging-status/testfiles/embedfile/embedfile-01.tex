@@ -1,0 +1,19 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}{test.txt}
+a test file
+\end{filecontents}
+\documentclass{article}
+\usepackage{embedfile}
+
+\title{embedfile tagging test}
+
+\embedfile{test.txt}
+\begin{document}
+text
+\end{document}
