@@ -1,0 +1,19 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{ncccropmark}
+\usepackage{watermark}
+\usepackage{kantlipsum}
+
+\title{ncccropmark tagging test}
+
+\begin{document}
+\watermark{\cropmark[f]{10mm}{10mm}{10mm}{10mm}{5mm}
+\cropmark[f]{10mm}{10mm}{10mm}{10mm}{-5mm}}
+\kant[1-6]
+\end{document}
