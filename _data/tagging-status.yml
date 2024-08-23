@@ -5943,13 +5943,14 @@
 
  - name: mathastext
    type: package
-   status: unknown
+   status: compatible
    included-in: [arxiv001]
    priority: 7
+   supported-through: [phase-III,math]
+   comments: "Use of math tagging currently requires support from external tools."
    issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   tests: true
+   updated: 2024-08-23
 
  - name: mathbbol
    type: package
