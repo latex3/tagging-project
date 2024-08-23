@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{ncccropbox}
+
+\title{ncccropbox tagging test}
+
+\begin{document}
+\cropbox[30mm][10mm]{Box 1}
+\begin{center}
+\cropbox[30mm][10mm]{Box 1}\cropbox[30mm][10mm]{Box 2}%
+\cropbox[30mm][10mm]{Box 3}\cropbox[30mm][10mm]{Box 4}\\
+\cropbox[30mm][10mm]{Box 5}\cropbox[30mm][10mm]{Box 6}%
+\cropbox[30mm][10mm]{Box 7}\cropbox[30mm][10mm]{Box 8}
+\end{center}
+\end{document}
