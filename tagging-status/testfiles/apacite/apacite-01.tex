@@ -1,0 +1,63 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\begin{filecontents}[noheader]{apacite-ex.bib}
+@article{apa6:ch7-ex1,
+  author  = {Herbst-Damm, Kathryn L. and Kulik, James A.},
+  year    = {2005},
+  title   = {Volunteer Support, Marital Status, and the Survival Times of
+             Terminally Ill Patients},
+  journal = {Health Psychology},
+  volume  = {24},
+  pages   = {225--229},
+  doi     = {10.1037/0278-6133.24.2.225},
+}
+@article{apa6:ch7-ex9,
+  key     = {{\APACciteatitle{Six Sites Meet}}},
+  title   = {Six Sites Meet for Comprehensive Anti-Gang
+             Initiative Conference},
+  year    = {2006},
+  month   = nov # "/" # dec,
+  journal = {OJJDP News @ a Glance},
+  url     =
+    {http://www.ncjrs.gov/html/ojjdp/news_at_glance/216684/topstory.html},
+}
+\end{filecontents}
+
+\documentclass{article}
+
+\usepackage[mask]{apacite}
+\usepackage{hyperref}
+
+\title{apacite tagging test - 1}
+
+\begin{document}
+\tableofcontents
+\section{A section}
+
+\cite<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\citeA<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\citeauthor<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\citeyear<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\citeyearNP<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\citeNP<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\fullcite<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\shortcite<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\maskcite<e.g.,>[p.~11]{apa6:ch7-ex1,apa6:ch7-ex9}
+
+\bibliographystyle{apacite}
+\bibliography{apacite-ex}
+
+\end{document}
