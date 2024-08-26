@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[
+  htt,
+%  none, % seems okay
+  ]{hyphenat}
+\usepackage{kantlipsum}
+
+\title{hyphenat tagging test}
+
+\begin{document}
+
+\kant[1-2]
+{\ttfamily\kant[1-2]}
+{\nhttfamily\kant[1-2]}
+\nohyphens{\kant[1-2]}
+letters\_\-with\_\-underscores
+
+first\bshyp{}second\fshyp{}third\dothyp{}fourth\colonhyp{}fifth\_sixth
+
+electromagnetic\hyp{}endioscopy
+
+\end{document}

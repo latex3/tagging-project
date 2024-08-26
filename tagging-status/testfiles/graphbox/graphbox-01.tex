@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{graphbox}
+
+\title{graphbox tagging test}
+
+\begin{document}
+
+text\includegraphics[alt=example image,scale=0.5]{example-image}
+
+text\includegraphics[alt=example image,scale=0.5,hide]{example-image}
+
+text\includegraphics[alt=example image,scale=0.5,align=c]{example-image}
+
+text\includegraphics[alt=example image,scale=0.5,smash=ml]{example-image}
+
+text\includegraphics[alt=example image,scale=0.5,margin=3cm]{example-image}
+
+\end{document}

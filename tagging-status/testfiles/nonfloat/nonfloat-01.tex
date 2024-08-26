@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{nonfloat}
+
+\title{nonfloat tagging test}
+
+\begin{document}
+
+text
+\begin{center}
+\tabcaption{A non-floating table caption}
+\begin{tabular}{cc}
+ A & B \\
+ C & D
+\end{tabular}
+\end{center}
+
+\begin{table}
+\caption{A floating table caption}
+\begin{tabular}{cc}
+ A & B \\
+ C & D
+\end{tabular}
+\end{table}
+
+\end{document}
