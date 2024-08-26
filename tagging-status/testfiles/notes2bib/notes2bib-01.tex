@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{notes2bib}
+\usepackage{hyperref}
+
+\title{notes2bib tagging test}
+
+\bibnotesetup{convert-footnotes=true}
+
+\begin{document}
+
+\cite{inbook-full}
+
+A very simple example of a bibliography note
+\bibnote{Note for the first example}.
+
+\cite{manual-full}
+
+An example of a named note \bibnote[labelled]{Note for the second
+example}. The text can then continue and reference the note again
+later \bibnotemark[labelled].
+
+text\footnote{Some footnote}
+
+\bibliographystyle{amsalpha}
+\bibliography{xampl}
+
+\end{document}
