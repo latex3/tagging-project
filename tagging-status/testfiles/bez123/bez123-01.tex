@@ -1,0 +1,101 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{bez123}
+
+\title{bez123 tagging test}
+
+\begin{document}
+
+\setlength{\unitlength}{1mm}
+\begin{picture}[alt=first picture](70,80)
+\put(0,5){\begin{picture}(30,30)
+\thinlines
+\put(0,0){\circle{2}}
+\put(-2,0){\makebox(0,0)[br]{0}}
+\put(10,30){\circle{2}}
+\put(8,30){\makebox(0,0)[br]{1}}
+\put(20,0){\circle{2}}
+\put(22,0){\makebox(0,0)[bl]{2}}
+\put(30,30){\circle{2}}
+\put(32,30){\makebox(0,0)[bl]{3}}
+\put(0,0){\vector(1,3){10}}
+\put(10,30){\vector(1,-3){10}}
+\put(20,0){\vector(1,3){10}}
+\thicklines
+\cbezier[30](0,0)(10,30)(20,0)(30,30)
+\thinlines
+\end{picture}}
+\put(0,45){\begin{picture}(30,30)
+\thinlines
+\put(0,0){\circle{2}}
+\put(-2,0){\makebox(0,0)[br]{0, 3}}
+\put(30,0){\circle{2}}
+\put(32,0){\makebox(0,0)[bl]{1}}
+\put(0,30){\circle{2}}
+\put(2,30){\makebox(0,0)[bl]{2}}
+\put(0,0){\vector(1,0){30}}
+\put(30,0){\vector(-1,1){30}}
+\put(0,30){\vector(0,-1){30}}
+\thicklines
+\cbezier[30](0,0)(30,0)(0,30)(0,0)
+\thinlines
+\end{picture}}
+\put(45,0){\begin{picture}(30,30)
+\thinlines
+\put(0,0){\circle{2}}
+\put(-2,0){\makebox(0,0)[br]{0}}
+\put(10,30){\circle{2}}
+\put(8,30){\makebox(0,0)[br]{2}}
+\put(20,0){\circle{2}}
+\put(22,0){\makebox(0,0)[bl]{3}}
+\put(30,30){\circle{2}}
+\put(32,30){\makebox(0,0)[bl]{1}}
+\put(0,0){\vector(1,1){30}}
+\put(30,30){\vector(-1,0){20}}
+\put(10,30){\vector(1,-3){10}}
+\thicklines
+\cbezier(0,0)(30,30)(10,30)(20,0)
+\thinlines
+\end{picture}}
+\put(45,45){\begin{picture}(30,30)
+\thinlines
+\put(0,0){\circle{2}}
+\put(-2,0){\makebox(0,0)[br]{0}}
+\put(30,0){\circle{2}}
+\put(32,0){\makebox(0,0)[bl]{1}}
+\put(0,30){\circle{2}}
+\put(2,30){\makebox(0,0)[bl]{2}}
+\put(10,10){\circle{2}}
+\put(8,10){\makebox(0,0)[br]{3}}
+\put(0,0){\vector(1,0){30}}
+\put(30,0){\vector(-1,1){30}}
+\put(0,30){\vector(1,-2){10}}
+\thicklines
+\cbezier(0,0)(30,0)(0,30)(10,10)
+\thinlines
+\end{picture}}
+\end{picture}
+
+\bigskip
+
+\begin{picture}[alt=second picture](60,60)
+\put(30,20){\begin{picture}(30,20)
+\thinlines
+\put(0,10){\circle{2}}
+\put(30,0){\circle{2}}
+\put(30,20){\circle{2}}
+\lbezier[25](30,20)(0,10)
+\lbezier[25](0,10)(30,0)
+\thicklines
+\rqbezier[100](30,20)(0,10)(30,0)(2)
+\rqbezier[100](30,20)(0,10)(30,0)(-2)
+\end{picture}}
+\end{picture}
+\end{document}

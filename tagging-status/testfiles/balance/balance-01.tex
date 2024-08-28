@@ -1,0 +1,53 @@
+% adapted from https://tex.stackexchange.com/a/559121/208544
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[11pt,a4paper,twocolumn]{article}
+\usepackage[top=105pt, bottom=75pt, left=75pt, right=75pt]{geometry}
+\usepackage{graphicx}
+\usepackage{balance}
+\usepackage{lipsum}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+
+\title{balance tagging test}
+\author{Some author}
+
+\begin{document}
+\maketitle
+
+\lipsum[1]
+
+\section{Using \texttt{balance}}
+
+\lipsum[2]
+\begin{thm}
+  \lipsum[3]
+\end{thm}
+
+\lipsum[4]
+
+Consider the following drawing\footnote{\lipsum[21]}.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[alt=example image,width=0.8\columnwidth]{example-image}
+  \caption{Example image}
+\end{figure}
+
+\lipsum[5]
+
+\balance
+
+As a consequence, we have\footnote{Well, well!  It appears in an
+  unexpected place.}
+
+\begin{lem}
+  \lipsum[6]
+\end{lem}
+
+\end{document}

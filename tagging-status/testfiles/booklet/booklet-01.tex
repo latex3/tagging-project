@@ -1,0 +1,40 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[letterpaper,11pt]{book}
+%\usepackage{luatex85} % needed with luatex
+% typeblock size of 5.5 by 4 inches
+\setlength{\textheight}{419pt} \setlength{\textwidth}{289pt}
+\setlength{\oddsidemargin}{72pt} \setlength{\evensidemargin}{108pt}
+\setlength{\topmargin}{55.9pt} \setlength{\footskip}{27.5pt}
+\setlength{\headheight}{14.6pt} \setlength{\headsep}{19.9pt}
+\usepackage[print,1to1]{booklet} \nofiles
+\pagespersignature{16} % 16 pages per signature
+\setpdftargetpages
+\begin{document}
+\pagestyle{empty}
+% Want a blank sheet before the title page
+\hbox{}\cleardoublepage
+% half-title page here
+\cleardoublepage
+% title page here
+\clearpage
+% copyright page here
+\cleardoublepage
+\pagestyle{plain}
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{headings}
+\chapter{First}
+% and so on
+% want some blank endpapers to get enough pages into
+% the last signature for easy binding
+\clearpage
+\hbox{}\clearpage\hbox{}\cleardoublepage
+\end{document}

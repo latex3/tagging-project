@@ -1,0 +1,22 @@
+\DocumentMetadata{%
+	pdfstandard=A-3b,
+	pdfversion=1.7,
+	lang=en-US,
+	testphase={phase-III},
+}
+\documentclass{article}
+
+\usepackage{xcoffins}
+\NewCoffin{\AuthorBlock}
+
+\begin{document}
+
+\SetHorizontalCoffin\AuthorBlock{%
+	\parbox{\textwidth}{John Steinbeck}% <=== parbox breaks tagging.
+%	\mbox{John Steinbeck}%               <=== mbox does not.
+}
+
+To the red country and part of the gray country of Oklahoma, the last rains came gently and they did not cut the scarred earth.
+
+The last rains lifted the corn quickly and scattered weed colonies and grass along the sides of the roads so that the gray country and the dark red country began to disappear under a green cover.  
+\end{document}

@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{printlen}
+
+\title{printlen tagging test}
+
+\begin{document}
+
+The \verb|\textwidth| is \printlength{\textwidth}
+
+\uselengthunit{in}\printlength{\textwidth}
+
+\uselengthunit{mm}\printlength{\textwidth}
+
+\rndprintlength{\textwidth}
+
+\end{document}

@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{fitbox}
+\usepackage{graphicx}
+\usepackage{kantlipsum}
+
+\title{fitbox tagging test}
+
+\fitboxset{minheight=0pt,minwidth=0pt}
+
+\begin{document}
+\kant[1-2]
+\fitbox{\includegraphics[alt=example image]{example-image}}
+\clearpage
+\kant[1-3]
+\fitbox{\includegraphics[alt=example image]{example-image}}
+\clearpage
+\kant[1]
+\begin{figure}
+\fitbox*{\includegraphics[alt=example image]{example-image}}
+\caption{An example image}
+\end{figure}
+
+\end{document}

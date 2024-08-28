@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{inversepath}
+
+\title{inversepath tagging test}
+
+\makeatletter
+\begin{document}
+
+\inversepath*{one/two/three/four.tex}\par
+\ip@inversepath\par
+\ip@lastelement\par
+\ip@directpath
+
+[\inversepath*{one.tex}]\par
+\ip@inversepath\par
+\ip@lastelement\par
+[\ip@directpath]
+
+\absolutepath{/xyz/here/there/everywhere/}
+\inversepath*{../../one/two/three.tex}\par
+\ip@inversepath\par
+\ip@lastelement\par
+\ip@directpath
+
+\end{document}
