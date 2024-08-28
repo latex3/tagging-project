@@ -1,0 +1,50 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_pages_paragraph_separator_between.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\AtEveryPend{\vskip \baselineskip{\hfill ***\hfill\strut}\vskip \baselineskip}
+\begin{document}
+
+\begin{pages}
+\begin{Rightside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend[\relax]
+\endnumbering
+\end{Rightside}
+\begin{Leftside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu tellus eu diam dignissim eleifend blandit eget justo. Aliquam nisi justo, interdum ac erat in, tincidunt imperdiet urna. In hac habitasse platea dictumst. Donec consectetur pharetra nibh, a ultrices mauris tincidunt quis. Aenean id cursus magna, non sollicitudin lorem. Nunc feugiat faucibus rutrum. Phasellus ut diam sed enim efficitur porttitor sit amet vel velit. Donec enim nibh, molestie nec convallis in, pretium at odio. Sed eget ipsum quis velit mollis aliquam. Integer aliquam scelerisque finibus.
+\pend[\relax]
+\endnumbering
+\end{Leftside}
+
+\end{pages}
+\Pages
+\end{document}

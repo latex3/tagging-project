@@ -1,0 +1,71 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 3-reledpar_pages_different_languages_lualatex.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[a5paper,11pt]{article}
+\usepackage{fontspec}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={},nocritical,noend,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\newfontfamily\syriacfont{Estrangelo Edessa}[Script=Syriac,Scale=1.2]
+
+\usepackage{ifluatex}
+\ifluatex
+  \newcommand{\textsyriac}[1] % Syriac inside LTR
+             {\bgroup\textdir TRT\syriacfont #1\egroup}
+  \newenvironment{syriac}     % Syriac paragraph
+             {\textdir TRT\pardir TRT\syriacfont}{}
+\else
+  \usepackage{graphicx}
+  \usepackage{polyglossia}
+  \setmainlanguage{english}
+  \setotherlanguage{syriac}
+  \renewcommand{\textsyriac}[1]{\bgroup\syriacfont #1\egroup}
+\fi
+\usepackage{metalogo}
+
+\newcommand{\n}[1] % for digits inside Arabic text
+           {\bgroup\LTR  #1\egroup}
+\newcommand{\syriacfootnote}[1] % Syriac Footnotes
+           {\footnote{\textsyriac{#1}}}
+
+\begin{document}
+
+\begin{pages}
+\begin{Leftside}
+\begin{syriac}
+\beginnumbering
+   \pstart
+       \eledsection*{\textsyriac{ܡܿܟܪܟܝ}}
+   \pend
+
+   \pstart
+        1ܘܟܕ 2ܡܿܟܪܟܝ3ܢܢ ܐܪܟ4ܐܢܐ ܗ̄ 5ܡܘܪܐ6 ܗܿܝ ܩ7ܕܡܝܬܐ
+   \pend
+\endnumbering
+\end{syriac}
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+   \pstart
+       \eledsection{English headline} 
+   \pend
+
+   \pstart
+        Some english text. 
+   \pend
+\endnumbering
+\end{Rightside}
+
+\end{pages} 
+\Pages
+\end{document}

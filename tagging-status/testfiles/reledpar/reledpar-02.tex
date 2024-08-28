@@ -1,0 +1,68 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 3-reledpar_mwe.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\begin{document}
+
+\begin{pairs}
+    \begin{Leftside}
+        \beginnumbering
+            \pstart
+                Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph.
+            \pend
+            \pstart
+                Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.
+            \pend
+        \endnumbering
+    \end{Leftside}
+    \begin{Rightside}
+        \beginnumbering
+            \pstart
+                Right side paragraph. Right side paragraph. Right side paragraph. Right side paragraph.
+            \pend
+            \pstart
+                Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph.
+            \pend
+        \endnumbering
+    \end{Rightside}
+
+\end{pairs}
+\Columns
+
+\begin{pages}
+    \begin{Leftside}
+        \beginnumbering
+            \pstart
+                Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph.
+            \pend
+            \pstart
+                Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.
+            \pend
+        \endnumbering
+    \end{Leftside}
+    \begin{Rightside}
+        \beginnumbering
+            \pstart
+                Right side paragraph. Right side paragraph. Right side paragraph. Right side paragraph.
+            \pend
+            \pstart
+                Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph.
+            \pend
+        \endnumbering
+    \end{Rightside}
+
+\end{pages}
+\Pages
+
+\end{document}

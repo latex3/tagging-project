@@ -1,0 +1,106 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_column_mix_with_not_column.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A,B},noend,noeledsec,noledgroup]{reledmac}
+\usepackage[widthliketwocolumns]{reledpar}
+
+\Xnoteswidthliketwocolumns
+\noteswidthliketwocolumnsX
+\setlength{\beforecolumnseparator}{0.05\textwidth}
+\setlength{\aftercolumnseparator}{0.05\textwidth}
+\Xarrangement{paragraph}
+\begin{document}
+
+\begin{pairs}\sloppy
+\begin{Leftside}
+    \beginnumbering
+               \pstart
+\edtext{Lorem}{\Afootnote{lorim}} ipsum\footnoteA{Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem.}\footnoteB{Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem.} \edtext{Lorem}{\Afootnote{lorim}} dolor sit amet, consectetur adipiscing elit. Sed \edtext{Lorem}{\Afootnote{lorim}}  egestas, dolor sed malesuada ultrices, nulla orci \edtext{Lorem}{\Afootnote{lorim}} suscipit massa, a feugiat neque dolor eu augue. \edtext{Lorem}{\Afootnote{lorim}} Lorem ipsum dolor sit amet, consectetur adipiscing \edtext{Lorem}{\Afootnote{lorim}} elit. Pellentesque bibendum \edtext{Lorem}{\Bfootnote{?}} tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in \edtext{Lorem}{\Bfootnote{?}} convallis \edtext{Lorem}{\Bfootnote{?}} luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna \edtext{Lorem}{\Bfootnote{?}} eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut \edtext{Lorem}{\Bfootnote{?}} feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla \edtext{Lorem}{\Afootnote{lorim}} luctus eget\footnoteB{Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem.}. Proin sodales aliquet felis. \edtext{Lorem}{\Afootnote{lorim}} Vestibulum ante ipsum primis in faucibus orci luctus et \edtext{Lorem}{\Bfootnote{?}} ultrices posuere cubilia Curae;
+
+        \pend
+
+
+
+        \pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+\pend
+  \end{Leftside}
+
+\begin{Rightside}
+    \beginnumbering
+
+   \pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        \pend
+
+
+        \pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        \pend
+
+\pausenumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+    \resumenumbering
+
+
+
+
+
+            \pstart
+Lorem \edtext{ipsum}{\Afootnote{Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus  sem}}\edtext{ipsum}{\Bfootnote{Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem}} \edtext{dolor}{\Afootnote{dolar}} \edtext{sit}{\Afootnote{sat}} \edtext{amet}{\Afootnote{amat}}, \edtext{consectetur}{\Afootnote{consectatur}} adipiscing \edtext{elit}{\Afootnote{alit}}. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        \pend
+    \pausenumbering
+
+\begin{pairs}\sloppy
+\begin{Leftside}
+    \resumenumbering
+
+    \pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        \pend
+
+        \endnumbering
+
+\end{Leftside}
+
+\begin{Rightside}
+    \resumenumbering
+
+
+        \pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend\footnoteB{xb} sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus\footnoteB{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue.} orci\footnoteA{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue.} luctus et ultrices posuere cubilia Curae;
+
+        \pend
+
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+\beginnumbering
+
+
+
+
+            \pstart
+Lorem ipsum dolor sit\footnoteA{x} amet, consectetur adipiscing elit. Sed egestas, dolor sed malesuada ultrices, nulla orci suscipit massa, a feugiat neque dolor eu augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum tellus ornare orci luctus, fermentum auctor lacus vehicula. Nunc ex leo, iaculis in convallis luctus, accumsan nec ligula. Praesent molestie, mauris vitae mattis commodo, tellus magna eleifend nunc, eu tempor purus neque quis neque. Morbi volutpat, tellus ac hendrerit fermentum, purus sem placerat mauris, a tristique nisi dolor et mi. Ut aliquam porttitor diam, ut feugiat arcu congue ullamcorper. Nam malesuada, ante sed fermentum blandit, nisi magna sollicitudin eros, vel accumsan magna lorem ut leo. Cras fermentum eleifend sapien sed aliquet. Duis ac sapien dolor. Donec sagittis nibh in volutpat tincidunt. Fusce tellus nisi, varius vitae massa a, cursus ultricies sem. Etiam ipsum mi, aliquam suscipit \edtext{Lorem}{\Afootnote{lorim}}mattis id, pretium iaculis enim. Quisque vestibulum tincidunt sem, a egestas nulla luctus eget. Proin sodales aliquet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+        \pend
+    \endnumbering
+\end{document}
