@@ -1,0 +1,39 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{amsmath} % has to be loaded before bidi
+\usepackage{hyperref} % has to be loaded before bidi
+\usepackage[
+  RTLdocument,
+%  extrafootnotefeatures,
+  ]{bidi}
+
+%\threecolumnfootnotes
+%\paragraphfootnotes
+
+\begin{document}
+
+text\footnote{a footnote}
+
+text\footnote{another footnote}
+
+\begin{equation}
+a=b
+\end{equation}
+
+\begin{enumerate} % output is wrong
+\item first item
+\item second item
+\begin{LTRitems}
+\item first LTR item
+\item second LTR item
+\end{LTRitems}
+\end{enumerate}
+
+\end{document}

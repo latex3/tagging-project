@@ -1,0 +1,50 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[
+  amsmath,
+  thref,
+  hyperref, % parent-child warnings
+  thmmarks % parent-child warnings; redefines a lot of envs
+  ]{ntheorem}
+\usepackage{hyperref} % see above
+
+\title{ntheorem tagging test}
+
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{plain}
+\theoremsymbol{\ensuremath{\clubsuit}}
+\theoremseparator{.}
+\theoremprework{\bigskip\hrule}
+\theorempostwork{\hrule\bigskip}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+\listtheorems{theorem} % output is wrong
+
+\begin{theorem}\label{thm}
+Some text
+\end{theorem}
+
+\begin{theorem}[A heading]
+Some more text
+\end{theorem}
+
+\ref{thm}
+
+\thref{thm}
+
+\begin{definition}
+Some text
+\end{definition}
+
+\end{document}

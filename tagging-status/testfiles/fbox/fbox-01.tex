@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage{fbox}
+
+\newcommand\demoText{DuckDuckGo! Time to spread the word!
+Equipped with the talking points above, you’re
+ready to help anyone search and browse pro-
+tected.}
+
+\begin{document}
+
+\fbox*[bT]{foo gar baz}
+
+\fbox[Br,boxrule=5pt,bcolor=red]{foo gar baz}
+
+\fparbox{\demoText}
+
+\fparbox*[Br]{\demoText}
+
+\end{document}
