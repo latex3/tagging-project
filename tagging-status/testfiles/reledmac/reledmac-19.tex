@@ -1,0 +1,58 @@
+% adapted from 2-reledmac-right-to-left.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[noend,nofamiliar,noeledsec,series={A}]{reledmac}
+
+\usepackage[bidi=default,english]{babel}
+\babelprovide[import=he]{hebrew}
+\babelfont{rm}{Libertinus Serif}
+\babelfont[hebrew]{rm}{AdobeHebrew-Regular.otf}
+\newcommand{\texthebrew}[2][]{\foreignlanguage{hebrew}{#2}}
+\newcommand{\textenglish}[2][]{\foreignlanguage{english}{#2}}
+\usepackage{metalogo}
+\Xparafootsep{$||$\ }
+\Xarrangement{paragraph}
+\Xafterlemmaseparator{0.5em}
+\Xbeforelemmaseparator{0.25em}
+
+\linenumincrement{1}
+\firstlinenum{1}
+
+% Here the reledmac settings for RTL
+\Xwrapcontent{\textenglish}
+\Xbhookgroup{\textdir TRT}
+\Xlemmaseparator{[}%Will be reversed by Ezra SIL font
+
+\begin{document}
+\selectlanguage{hebrew}
+
+\beginnumbering
+
+
+\pstart
+\edtext{בְּרֵאשִׁ֖ית בָּרָ֣א}{\Afootnote{Some comment (1)}}
+אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃
+\edtext{וְהָאָ֗רֶץ הָיְתָ֥ה}{\Afootnote{Some comment (2)}}
+\edtext{%
+ תֹ֨הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְהֹ֑ום וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃
+וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י אֹ֑ור וַֽיְהִי־אֹֽור׃%
+}{\Afootnote{Some comment on a long lemma (3)}}
+וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָאֹ֖ור כִּי־טֹ֑וב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָאֹ֖ור וּבֵ֥ין הַחֹֽשֶׁךְ׃
+\edtext{וַיִּקְרָ֨א אֱלֹהִ֤ים׀}{\Afootnote{Some comment (4)}}
+ לָאֹור֙ יֹ֔ום וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר יֹ֥ום אֶחָֽד׃ פ
+ \edtext{וַיַּ֤רְא אֱלֹהִים֙}{\Afootnote{Some comment (5)}}
+ אֶת־כָּל־אֲשֶׁ֣ר עָשָׂ֔ה וְהִנֵּה־טֹ֖וב מְאֹ֑ד וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר יֹ֥ום הַשִּׁשִּֽׁי׃ פ
+
+\pend
+\endnumbering
+
+\end{document}

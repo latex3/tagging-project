@@ -1,0 +1,49 @@
+% adapted from 2-titles_not_in_line_numbering.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[twoside]{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\begin{document}
+
+\beginnumbering
+\pstart[\section{Section title}]
+Lorem ipsum dolor sit amet, consectetur adipisicing elit
+sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi
+Une note à la ligne 5 consequat ut aliquip consequat\pend[\vskip 2ex]
+\pstart[\subsection{Subsection title}]
+Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore eu ur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt
+Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. Excepteur sint occaecat.
+\pend[]
+\pstart[\subsection{Subsection title}]
+Lorem ipsum dolor sit amet, consectetur adipisicing elit
+sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi
+ consequat ut aliquip consequat
+\pend[\vskip\baselineskip\noindent\hfill*\hfill\hbox{}]
+\pstart[\section{Section title}]
+Irure dolor in reprehenderit
+in voluptate velit esse cillum dolore eu ur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt
+Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. Excepteur sint occaecat.
+\pend
+\endnumbering
+
+\end{document}

@@ -1,0 +1,25 @@
+% adapted from 2-lemma_disambiguation.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A,B},nofamiliar,noend,noeledsec,noledgroup]{reledmac}
+\begin{document}
+
+\beginnumbering
+\pstart
+Leo \sameword{aut} ursus \sameword{aut} oryx \sameword{aut} ricinus \sameword{aut} equus \sameword{aut}
+lupus \edtext{\sameword{aut}}{\Afootnote{et}\Bfootnote{monotone\ldots}} canis \sameword{aut} felix \sameword{aut} asinus \edtext{\sameword{aut}}{\Afootnote{et}} burricus.
+
+\pend
+\endnumbering
+
+\end{document}

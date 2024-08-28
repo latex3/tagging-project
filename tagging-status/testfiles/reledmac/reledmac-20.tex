@@ -1,0 +1,234 @@
+% adapted from 2-subdivision-number-in-header.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[twoside]{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[series={},noend,nocritical,noeledsec,nofamiliar]{reledmac}
+
+% CONFIG FANCYHDR TO SHOW LEFT/RIGHT MARKS IN HEADERS
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%% What to show in the header
+\newcommand{\mymarks}{%
+  \ifdefstrequal{\leftmark}{\rightmark}%
+  {\rightmark}%
+  {\rightmark\ – \leftmark}%
+}
+%% Configure the header itself
+\fancyhead[LE,RO]{}
+\fancyhead[CE,CO]{\mymarks}
+\fancyhead[LO,RE]{}
+
+
+\def\sectionmark#1{}%Disable section marking
+
+\begin{document}
+
+\newcommand{\versenumber}[1]{%
+  \doinsidethislinehook{\markboth{#1}{#1}}%
+  \textbf{#1}.%
+}
+
+\beginnumbering
+\pstart
+\versenumber{1} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\versenumber{2} Morbi nec augue elit.
+\versenumber{3} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\versenumber{4} Morbi ultrices at magna et cursus.
+\versenumber{5} Sed vel purus luctus, euismod erat in, fermentum orci.
+\versenumber{6} Vivamus ac rutrum sapien, id ultricies augue.
+\versenumber{7} Fusce sed rutrum lorem, ut auctor urna.
+\versenumber{8} Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\versenumber{9} Nunc id tristique ipsum.
+\versenumber{10} Quisque semper faucibus orci at eleifend.
+\versenumber{11} Proin velit velit, sagittis nec consequat in, auctor eget tortor.
+\versenumber{12} Pellentesque lorem elit, scelerisque id vulputate vel, faucibus a eros.
+\versenumber{13} Nunc nec orci ullamcorper, sollicitudin magna id, maximus quam.
+\versenumber{14} Pellentesque nec mauris purus.
+\versenumber{15} Duis suscipit nunc vitae faucibus posuere.
+\versenumber{16} Integer mattis varius cursus.
+\versenumber{17} Proin risus diam, imperdiet sit amet sem sed, dapibus sodales quam.
+\versenumber{18} Pellentesque bibendum sapien eu nisl efficitur placerat.
+\versenumber{19} Aenean dignissim ante ac erat pharetra, non pellentesque ante sodales.
+\versenumber{20} Nunc lorem nunc, elementum in accumsan id, blandit ac elit.
+\versenumber{21} In rhoncus augue ex, quis tristique ex laoreet non.
+\versenumber{22} Phasellus tincidunt, mauris nec auctor maximus, sapien elit elementum dolor.
+\versenumber{23} Id pretium urna tortor sed purus.
+\versenumber{24} Donec velit leo, varius ac dui eget, tincidunt euismod nibh.
+\versenumber{25} Nulla facilisis sit amet leo et vehicula.
+\versenumber{26} Morbi ultrices elementum nisi, ac semper neque faucibus non.
+\versenumber{27} Curabitur et justo gravida eros consequat elementum.
+\versenumber{28} Quisque eu consequat eros, vitae ullamcorper risus.
+\versenumber{29} Nullam pellentesque id lectus a aliquet.
+\versenumber{30} Cras rhoncus, arcu ut consequat ultricies, massa ante sollicitudin massa, vehicula ullamcorper quam libero vitae eros.
+\versenumber{31} In dapibus arcu sed sem vehicula, ut imperdiet odio hendrerit.
+\versenumber{32} Praesent nec diam turpis.
+\versenumber{33} Vestibulum erat ante, maximus id pulvinar vitae, sagittis sed odio.
+\versenumber{34} Pellentesque sit amet tellus aliquam, mattis purus a, consectetur turpis.
+\versenumber{35} Praesent nunc magna, posuere ac faucibus eu, ullamcorper vel sem.
+\versenumber{36} Aenean vel dolor eget felis malesuada molestie ac non justo.
+\versenumber{37} Phasellus semper gravida mollis.
+\versenumber{38} Mauris fermentum eget ex et eleifend.
+\versenumber{39} Morbi sit amet cursus velit.
+\versenumber{40} Ut efficitur, risus vel mattis ultrices, arcu metus scelerisque dui, eget semper dolor justo ac nisl.
+\versenumber{41} Fusce euismod ultrices faucibus.
+\versenumber{42} Vestibulum sit amet lacus dui.
+\versenumber{43} Maecenas et nisi vel ex scelerisque dictum at vel nibh.
+\versenumber{44} Morbi mattis quam ut congue elementum.
+\versenumber{45} Etiam luctus ac metus id faucibus.
+\versenumber{46} Nulla vulputate massa non tincidunt fringilla.
+\versenumber{47} Praesent accumsan eget enim eu dapibus.
+\versenumber{48} Nunc auctor, odio nec venenatis auctor, nibh sem efficitur sapien, ut mollis nunc nunc at massa.
+\versenumber{49} Morbi vitae turpis iaculis, imperdiet quam vel, blandit purus.
+\versenumber{50} Suspendisse lobortis dui et enim egestas, sed convallis dolor viverra.
+\versenumber{51} Etiam mollis dolor nec laoreet facilisis.
+\versenumber{52} Pellentesque fringilla mauris rhoncus pretium facilisis.
+\versenumber{53} Quisque vitae posuere justo.
+\versenumber{54} Quisque a rutrum elit.
+\versenumber{55} In at pretium magna.
+\versenumber{56} Morbi sed ullamcorper lectus.
+\versenumber{57} Praesent ut rhoncus odio.
+\versenumber{58} Cras a metus nisl.
+\versenumber{59} Aliquam et congue nisi, viverra ultricies metus.
+\versenumber{60} Duis fringilla laoreet nisi, at suscipit ex porttitor sed.
+\versenumber{61} Mauris sit amet purus efficitur, euismod sem vitae, mattis neque.
+\versenumber{62} Mauris pretium, turpis a suscipit pulvinar, est nunc lacinia lacus, at pulvinar nunc lacus in erat.
+\versenumber{63} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\versenumber{64} Morbi nec augue elit.
+\versenumber{65} Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\versenumber{66} Morbi ultrices at magna et cursus.
+\versenumber{67} Sed vel purus luctus, euismod erat in, fermentum orci.
+\versenumber{68} Vivamus ac rutrum sapien, id ultricies augue.
+\versenumber{69} Fusce sed rutrum lorem, ut auctor urna.
+\versenumber{70} Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\versenumber{71} posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\versenumber{72} Morbi ultrices at magna et cursus.
+\versenumber{73} Sed vel purus luctus, euismod erat in, fermentum orci.
+\versenumber{74} Vivamus ac rutrum sapien, id ultricies augue.
+\versenumber{75} Fusce sed rutrum lorem, ut auctor urna.
+\versenumber{76} Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\versenumber{77} Id pretium urna tortor sed purus.
+\versenumber{78} Donec velit leo, varius ac dui eget, tincidunt euismod nibh.
+\versenumber{79} Nulla facilisis sit amet leo et vehicula.
+\versenumber{80} Morbi ultrices elementum nisi, ac semper neque faucibus non.
+\versenumber{81} Curabitur et justo gravida eros consequat elementum.
+\versenumber{82} Quisque eu consequat eros, vitae ullamcorper risus.
+\versenumber{83} Nullam pellentesque id lectus a aliquet.
+\versenumber{84} Cras rhoncus, arcu ut consequat ultricies, massa ante sollicitudin massa, vehicula ullamcorper quam libero vitae eros.
+\versenumber{85} In dapibus arcu sed sem vehicula, ut imperdiet odio hendrerit.
+\versenumber{86} Praesent nec diam turpis.
+\versenumber{87} Vestibulum erat ante, maximus id pulvinar vitae, sagittis sed odio.
+\pend
+\endnumbering
+\newpage
+
+\newcounter{verse}
+\newcommand{\autoversenumber}{%
+  \refstepcounter{verse}%Add 1 to the counter
+  \edef\tmp{\noexpand\markboth{\the\value{verse}}{\the\value{verse}}}%\tmp will be expanded to \markboth{<verse-value>}{<verse-value}>
+  \expandafter\doinsidethislinehook\expandafter{\tmp}%First, we expand \tmp to  the value, and then, pass the result as argument to \doinsidelinehook
+  \textbf{\theverse}.\space%Typeset the verse counter value in bold, followed by a dot and then a space.
+}
+
+\beginnumbering
+\pstart
+\autoversenumber Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\autoversenumber Morbi nec augue elit.
+\autoversenumber Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\autoversenumber Morbi ultrices at magna et cursus.
+\autoversenumber Sed vel purus luctus, euismod erat in, fermentum orci.
+\autoversenumber Vivamus ac rutrum sapien, id ultricies augue.
+\autoversenumber Fusce sed rutrum lorem, ut auctor urna.
+\autoversenumber Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\autoversenumber Nunc id tristique ipsum.
+\autoversenumber Quisque semper faucibus orci at eleifend.
+\autoversenumber Proin velit velit, sagittis nec consequat in, auctor eget tortor.
+\autoversenumber Pellentesque lorem elit, scelerisque id vulputate vel, faucibus a eros.
+\autoversenumber Nunc nec orci ullamcorper, sollicitudin magna id, maximus quam.
+\autoversenumber Pellentesque nec mauris purus.
+\autoversenumber Duis suscipit nunc vitae faucibus posuere.
+\autoversenumber Integer mattis varius cursus.
+\autoversenumber Proin risus diam, imperdiet sit amet sem sed, dapibus sodales quam.
+\autoversenumber Pellentesque bibendum sapien eu nisl efficitur placerat.
+\autoversenumber Aenean dignissim ante ac erat pharetra, non pellentesque ante sodales.
+\autoversenumber Nunc lorem nunc, elementum in accumsan id, blandit ac elit.
+\autoversenumber In rhoncus augue ex, quis tristique ex laoreet non.
+\autoversenumber Phasellus tincidunt, mauris nec auctor maximus, sapien elit elementum dolor.
+\autoversenumber Id pretium urna tortor sed purus.
+\autoversenumber Donec velit leo, varius ac dui eget, tincidunt euismod nibh.
+\autoversenumber Nulla facilisis sit amet leo et vehicula.
+\autoversenumber Morbi ultrices elementum nisi, ac semper neque faucibus non.
+\autoversenumber Curabitur et justo gravida eros consequat elementum.
+\autoversenumber Quisque eu consequat eros, vitae ullamcorper risus.
+\autoversenumber Nullam pellentesque id lectus a aliquet.
+\autoversenumber Cras rhoncus, arcu ut consequat ultricies, massa ante sollicitudin massa, vehicula ullamcorper quam libero vitae eros.
+\autoversenumber In dapibus arcu sed sem vehicula, ut imperdiet odio hendrerit.
+\autoversenumber Praesent nec diam turpis.
+\autoversenumber Vestibulum erat ante, maximus id pulvinar vitae, sagittis sed odio.
+\autoversenumber Pellentesque sit amet tellus aliquam, mattis purus a, consectetur turpis.
+\autoversenumber Praesent nunc magna, posuere ac faucibus eu, ullamcorper vel sem.
+\autoversenumber Aenean vel dolor eget felis malesuada molestie ac non justo.
+\autoversenumber Phasellus semper gravida mollis.
+\autoversenumber Mauris fermentum eget ex et eleifend.
+\autoversenumber Morbi sit amet cursus velit.
+\autoversenumber Ut efficitur, risus vel mattis ultrices, arcu metus scelerisque dui, eget semper dolor justo ac nisl.
+\autoversenumber Fusce euismod ultrices faucibus.
+\autoversenumber Vestibulum sit amet lacus dui.
+\autoversenumber Maecenas et nisi vel ex scelerisque dictum at vel nibh.
+\autoversenumber Morbi mattis quam ut congue elementum.
+\autoversenumber Etiam luctus ac metus id faucibus.
+\autoversenumber Nulla vulputate massa non tincidunt fringilla.
+\autoversenumber Praesent accumsan eget enim eu dapibus.
+\autoversenumber Nunc auctor, odio nec venenatis auctor, nibh sem efficitur sapien, ut mollis nunc nunc at massa.
+\autoversenumber Morbi vitae turpis iaculis, imperdiet quam vel, blandit purus.
+\autoversenumber Suspendisse lobortis dui et enim egestas, sed convallis dolor viverra.
+\autoversenumber Etiam mollis dolor nec laoreet facilisis.
+\autoversenumber Pellentesque fringilla mauris rhoncus pretium facilisis.
+\autoversenumber Quisque vitae posuere justo.
+\autoversenumber Quisque a rutrum elit.
+\autoversenumber In at pretium magna.
+\autoversenumber Morbi sed ullamcorper lectus.
+\autoversenumber Praesent ut rhoncus odio.
+\autoversenumber Cras a metus nisl.
+\autoversenumber Aliquam et congue nisi, viverra ultricies metus.
+\autoversenumber Duis fringilla laoreet nisi, at suscipit ex porttitor sed.
+\autoversenumber Mauris sit amet purus efficitur, euismod sem vitae, mattis neque.
+\autoversenumber Mauris pretium, turpis a suscipit pulvinar, est nunc lacinia lacus, at pulvinar nunc lacus in erat.
+\autoversenumber Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\autoversenumber Morbi nec augue elit.
+\autoversenumber Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\autoversenumber Morbi ultrices at magna et cursus.
+\autoversenumber Sed vel purus luctus, euismod erat in, fermentum orci.
+\autoversenumber Vivamus ac rutrum sapien, id ultricies augue.
+\autoversenumber Fusce sed rutrum lorem, ut auctor urna.
+\autoversenumber Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\autoversenumber posuere cubilia Curae; Quisque cursus eros a erat placerat, et tempus neque volutpat.
+\autoversenumber Morbi ultrices at magna et cursus.
+\autoversenumber Sed vel purus luctus, euismod erat in, fermentum orci.
+\autoversenumber Vivamus ac rutrum sapien, id ultricies augue.
+\autoversenumber Fusce sed rutrum lorem, ut auctor urna.
+\autoversenumber Proin rutrum dignissim turpis, placerat pellentesque nulla elementum in.
+\autoversenumber Id pretium urna tortor sed purus.
+\autoversenumber Donec velit leo, varius ac dui eget, tincidunt euismod nibh.
+\autoversenumber Nulla facilisis sit amet leo et vehicula.
+\autoversenumber Morbi ultrices elementum nisi, ac semper neque faucibus non.
+\autoversenumber Curabitur et justo gravida eros consequat elementum.
+\autoversenumber Quisque eu consequat eros, vitae ullamcorper risus.
+\autoversenumber Nullam pellentesque id lectus a aliquet.
+\autoversenumber Cras rhoncus, arcu ut consequat ultricies, massa ante sollicitudin massa, vehicula ullamcorper quam libero vitae eros.
+\autoversenumber In dapibus arcu sed sem vehicula, ut imperdiet odio hendrerit.
+\autoversenumber Praesent nec diam turpis.
+\autoversenumber Vestibulum erat ante, maximus id pulvinar vitae, sagittis sed odio.
+
+\pend
+\endnumbering
+
+\end{document}

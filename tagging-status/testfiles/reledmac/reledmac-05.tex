@@ -1,0 +1,37 @@
+% adapted from 1-verses.tex
+% does not error but need to consider tagging
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A,B},nofamiliar,noend,noeledsec,noledgroup]{reledmac}
+\sethangingsymbol{[\,}
+
+\setcounter{stanzaindentsrepetition}{2}
+\setstanzaindents{8,0,1}
+
+\begin{document}
+
+\beginnumbering
+\stanza
+\edlabel{begin:1}\edtext{Lorem}{\lemma{Lorem\ldots nisis}\xxref{begin:1}{end:1}\Afootnote{A note on two verses}} ipsum dolor sit amet, consectetur adipisicing elit,&
+sed do eiusmod tempor incididunt ut labore et dolore&
+magna aliqua. Ut enim ad minim veniam, quis nostrud&
+exercitation ullamco laboris nisi\edlabel{end:1}&
+\edtext{ut aliquip}{\Afootnote{ut aliliquip}} consequat ut aliquip consequat irure dolor in reprehenderit irure dolor in reprehenderit&
+\edtext{Duis aute}{\Bfootnote{Some comments}} irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu ur. Excepteur sint occaecat&
+cupidatat non proident, sunt in culpa qui officia deserunt&
+\edlabel{begin:2}\edtext{Duis}{\xxref{begin:2}{end:2}\lemma{Duis\ldots occaecat}\Afootnote{Another note on two verses}} aute irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu fugiat nulla&
+pariatur. Excepteur sint occaecat\edlabel{end:2}\&
+\endnumbering
+
+\end{document}

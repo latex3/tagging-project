@@ -1,0 +1,46 @@
+% adapted from 1-criticalnotes.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A,B,C,D},noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\Xarrangement[B]{twocol} % okay
+\Xarrangement[C]{threecol} % okay
+\Xarrangement[D]{paragraph} % this errors
+
+\title{reledmac tagging test - 2}
+
+\begin{document}
+
+\beginnumbering
+\pstart
+\edtext{Lorem}{
+  \Afootnote{A critical note}
+  \Bfootnote{Critical note in series B}
+  \Cfootnote{Critical note in series C}
+  \Dfootnote{loram}}
+\edtext{ipsum}{
+  \Afootnote{An other critical note}
+  \Bfootnote{Other critical note in series B}
+  \Cfootnote{Other critical note in series C}
+  \Dfootnote{ipsam}}
+ dolor sit amet, consectetur adipiscing elit.
+ \edtext{Fusce sed dolor libero. Aenean rutrum vestibulum lacus ut pretium. Fusce et auctor lectus. Ut et commodo quam, quis gravida orci. Nullam at risus elementum, suscipit enim a, pellentesque mi}
+ {\lemma{Fusce\ldots mi}
+ \Afootnote{A long critical note}
+ \Bfootnote{Again B}
+ \Cfootnote{Again C}
+ \Dfootnote{omit}}.
+Morbi commodo, ligula vel consectetur accumsan, massa metus egestas velit, eu fringilla leo ante in turpis. Vivamus ut tellus sollicitudin, facilisis ipsum sit amet, tincidunt odio. Maecenas tincidunt dolor sed ante blandit tincidunt. Etiam vulputate ultricies facilisis.
+\pend
+\endnumbering
+
+\end{document}

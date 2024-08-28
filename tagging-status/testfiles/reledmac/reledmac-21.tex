@@ -1,0 +1,102 @@
+% adapted from 2-titles_in_line_numbering_with_notes.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{book}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A},noend,nofamiliar,noledgroup]{reledmac}
+\linenumincrement{1}
+\firstlinenum{1}
+\begin{document}
+
+\beginnumbering
+
+\beforeeledchapter
+\pstart
+\eledchapter{\edtext{chapter}{\Afootnote{chapitre}}\ledsidenote{chapter}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten..
+\pend
+
+\pstart
+\eledsection{section\ledsidenote{section}}
+\pend
+
+\pstart
+\eledsubsection{\edtext{subsection}{\Afootnote{sous-section}}\ledsidenote{subsection}}
+\pend
+
+\pstart
+\eledsubsubsection{\edtext{subsubsection}{\Afootnote{sous-sous-section}}\ledsidenote{subsubsection}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{section\ledsidenote{section}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\beforeeledchapter
+\pstart
+\eledchapter{\edtext{chapter}{\Afootnote{chapitre}}\ledsidenote{chapter}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten..
+\pend
+
+\pstart
+\eledsection{section\ledsidenote{section}}
+\pend
+
+\pstart
+\eledsubsection{\edtext{subsection}{\Afootnote{sous-section}}\ledsidenote{subsection}}
+\pend
+
+\pstart
+\eledsubsubsection{\edtext{subsubsection}{\Afootnote{sous-sous-section}}\ledsidenote{subsubsection}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{section\ledsidenote{section}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\endnumbering
+
+\end{document}

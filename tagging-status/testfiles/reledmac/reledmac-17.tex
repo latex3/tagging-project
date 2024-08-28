@@ -1,0 +1,124 @@
+% adapted from 2-one_series_per_pstart.tex
+% parent-child warnings
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{lipsum}
+
+\usepackage[series={A,B,C,D,E},noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+
+\newcounter{mynotelevel}%A counter to dump the note level
+\renewcommand{\themynotelevel}{\Alph{mynotelevel}}% The counter is seen as a letter
+\AtEveryPstart{%
+  \addtocounter{mynotelevel}{1}%Step counter
+  \ifnumequal{\value{mynotelevel}}{6}{%No more than 5
+    \setcounter{mynotelevel}{1}%
+  }{}%
+  \global\letcs{\mynote}{\themynotelevel footnote}%Change the mynote
+  \seriesatend{\themynotelevel}%And place current series at the end
+}
+\begin{document}
+
+    \beginnumbering
+
+    \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel first}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[1]
+    \pend
+
+    \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+    \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+        \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+        \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]\edtext{on otherpage}{\mynote{on otherpage}}
+    \pend
+
+        \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+        \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+
+
+            \pstart
+    \edtext{\themynotelevel Here}{\mynote{First footnote in \themynotelevel}} is the
+    \edtext{\themynotelevel second}{\mynote{Second footnote in \themynotelevel.}} paragraph:
+    \lipsum[2]
+    \pend
+    \endnumbering
+
+\end{document}

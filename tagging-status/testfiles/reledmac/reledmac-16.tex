@@ -1,0 +1,51 @@
+% adapted from 2-notes-width.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{lipsum}
+
+\usepackage[noend,noeledsec,noledgroup,series={A,B,C,D}]{reledmac}
+\Xarrangement[A]{paragraph}
+\Xarrangement[B]{twocol}
+\Xarrangement[C]{threecol}
+\arrangementX[A]{paragraph}
+\arrangementX[B]{twocol}
+\arrangementX[C]{threecol}
+\Xwidth{\columnwidth+\marginparsep+\ledrsnotewidth}
+\widthX{\columnwidth+\marginparsep+\ledrsnotewidth}
+\rightnoteupfalse
+
+\AtBeginDocument{%
+ \maxhnotesX{0.8\textheight}
+ \Xmaxhnotes{0.8\textheight}
+}
+\Xcolalign{\justifying}
+\colalignX{\justifying}
+\begin{document}
+
+\beginnumbering
+\pstart
+\edtext{Lorem}{
+    \Afootnote{A\lipsum*[1]}
+    \Bfootnote{B\lipsum*[2]}
+    \Cfootnote{C\lipsum*[3]}
+    \Dfootnote{D\lipsum*[4]}
+    }
+Dolor
+\ledsidenote{A long side note.}
+\lipsum*[1]
+\pend
+\newpage
+\pstart
+\lipsum*[2]\ledsidenote{A long side note.}\footnoteA{A\lipsum*[5]}\footnoteB{B\lipsum*[6]}\footnoteC{C\lipsum*[7]}\footnoteD{D\lipsum*[8]}
+\pend
+\endnumbering
+\end{document}
