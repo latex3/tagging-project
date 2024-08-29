@@ -1,0 +1,35 @@
+% adapted from 2-cross_referencing.tex
+% does not error but need to consider tagging
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A},noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+
+\setapprefprefixsingle{l.~}
+\setSErefprefixsingle{l.~}
+
+\begin{document}
+
+See p.~\edpageref{ultrices} l.~\edlineref{ultrices}.
+
+Read the passage in \SEref{passage}.
+
+Read the variant in \appref{variant}.
+
+\beginnumbering
+
+\pstart
+\edlabelS{passage}Pellentesque non orci dui. Donec a libero eu nisl sollicitudin lobortis eget nec lacus. Nulla pellentesque, neque ut tincidunt vestibulum, ante mi varius purus, nec cursus neque orci ut orci. \edtext{Donec bibendum ligula bibendum nisl aliquet auctor.\edlabelE{passage}
+Nam luctus lorem mauris, ac venenatis felis posuere non. Quisque ultricies ante magna, facilisis pellentesque nibh placerat at}{\applabel{variant}\Afootnote{omit}}. Aliquam sit amet ante varius, vestibulum augue condimentum, scelerisque turpis. Proin at nibh vulputate, tincidunt tellus vel, vehicula libero. Praesent venenatis, turpis nec feugiat sodales, risus sapien tempus odio, at vehicula ipsum nisl a nisl. Nunc pretium elit tellus, \edlabel{ultrices}ultrices facilisis odio interdum non. Donec et condimentum quam, id ullamcorper nisl.
+\pend
+
+\endnumbering
+\end{document}

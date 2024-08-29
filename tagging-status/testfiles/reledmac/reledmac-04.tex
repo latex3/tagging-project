@@ -1,0 +1,58 @@
+% adapted from 1-tabular.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A,B},noend,noeledsec,noledgroup]{reledmac}
+\firstlinenum{1}
+\linenumincrement{1}%
+
+\begin{document}
+
+\beginnumbering
+\pstart[\section{Left align}]
+\begin{edtabularl}
+linea prima & linea prima\ledouternote{sidenote l} \\
+linea secunda & linea secunda\footnoteA{familiar footnote A.} \\
+linea tertia & linea \edtext{tertia}{\Afootnote{critical note A}} \\
+linea quarta & linea \edtext{quarta}{\Bfootnote{critical note B}} \\
+linea quinta & linea quinta\footnoteB{familiar footnote B.} \\
+linea sexta & linea sexta
+\end{edtabularl}
+\pend
+
+\pstart[\section{Center align}]
+\begin{edtabularc}
+linea prima & linea prima\ledouternote{sidenote c} \\
+linea secunda & linea secunda\footnoteA{familiar footnote A.} \\
+linea tertia & linea \edtext{tertia}{\Afootnote{critical note A}} \\
+linea quarta & linea \edtext{quarta}{\Bfootnote{critical note B}} \\
+linea quinta & linea quinta\footnoteB{familiar footnote B.} \\
+linea sexta & linea sexta
+\end{edtabularc}
+\pend
+
+
+
+\pstart[\section{Right align}]
+\begin{edtabularr}
+linea prima & linea prima\ledouternote{sidenote r} \\
+linea secunda & linea secunda\footnoteA{familiar footnote A.} \\
+linea tertia & linea \edtext{tertia}{\Afootnote{critical note A}} \\
+linea quarta & linea \edtext{quarta}{\Bfootnote{critical note B}} \\
+linea quinta & linea quinta\footnoteB{familiar footnote B.} \\
+linea sexta & linea sexta
+\end{edtabularr}
+\pend
+
+\endnumbering
+
+\end{document}

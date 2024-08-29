@@ -1,0 +1,37 @@
+% adapted from 2-linespacing.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage{setspace}
+\AtBeginDocument{\doublespacing}
+\usepackage{lipsum}
+\SetLipsumParListEnd{\par}
+\usepackage[series={A,B},noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\Xarrangement[A]{paragraph}
+\Xarrangement[B]{twocol}
+\makeatletter
+   \Xbhooknote{\setstretch {\setspace@singlespace}}
+   \Xbhookgroup{\setstretch {\setspace@singlespace}}
+\makeatother
+
+
+\begin{document}
+
+\beginnumbering
+\pstart
+\lipsum*[1]\edtext{Lipsum}{
+    \Afootnote{\lipsum*[3]}
+    \Bfootnote{\lipsum*[4]}}
+\lipsum*[6-7]
+\pend
+\endnumbering
+\end{document}

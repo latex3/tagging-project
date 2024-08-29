@@ -1,0 +1,49 @@
+% adapted from 2-antilabe.tex
+% does not error but need to consider tagging
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[characterstyle=imprimerie-prose]{thalie}
+
+\usepackage[noeledsec,noend,noledgroup,nofamiliar,nocritical,antilabe]{reledmac}
+\setstanzaindents{1,0,1}
+\setcounter{stanzaindentsrepetition}{1}
+\setcounter{startstanzaindentsrepetition}{2}
+
+\linenumincrement{1}
+\firstlinenum{1}
+%%retained from the thalie package, modifies the way a character's name is given in the first line of speech
+\renewcommand*{\speakswithoutdirection}[1]{%
+  \noindent\textsc{#1}\xspace.%
+}
+
+% Space after \antilabe macro
+\renewcommand{\afterantilabe}{\hspace{1em}}
+\begin{document}
+
+%%part of thalie's management of characters
+\begin{dramatis}
+  \character[cmd={Buckingham}]{Buckingham}
+  \character[cmd={Norfolk}]{Norfolk}
+\end{dramatis}
+
+% Normal typesetting
+\beginnumbering
+\stanza\Buckingham Good morrow and well met. How have ye done&
+\skipnumbering Since last we saw in France?\&
+\stanza\antilabe\Norfolk I thank your grace,&
+Healthful, and ever since a fresh admirer&
+\skipnumbering Of what I saw there.\&
+\stanza\antilabe\Buckingham An untimely ague&
+Stayed me a prisoner in my chamber when\&
+\endnumbering
+
+\end{document}

@@ -1,0 +1,45 @@
+% adapted from 1-criticalendnotes.tex
+% does not error but tagging probably not great
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[series={A,B},nocritical,noeledsec,nofamiliar,noledgroup]{reledmac}
+\Xendparagraph[B]
+
+\title{reledmac tagging test - 1}
+
+\begin{document}
+
+\beginnumbering
+\pstart
+\edtext{Lorem}{
+  \Aendnote{A critical note}
+  \Aendnote{Critical note in series A}
+  \Aendnote{Critical note in series A}
+  \Bendnote{loram}}
+\edtext{ipsum}{
+  \Aendnote{Another critical note}
+  \Bendnote{Other critical note in series B}}
+ dolor sit amet, consectetur adipiscing elit.
+ \edtext{Fusce sed dolor libero. Aenean rutrum vestibulum lacus ut pretium. Fusce et auctor lectus. Ut et commodo quam, quis gravida orci. Nullam at risus elementum, suscipit enim a, pellentesque mi}
+ {\lemma{Fusce\ldots mi}
+ \Aendnote{Critical note pertaining to a long lemma}
+ \Bendnote{omit}}.
+Morbi \edtext{commodo}{\Bendnote{quommodo}}, ligula vel consectetur accumsan, massa metus egestas velit, eu fringilla leo ante in turpis. \edtext{Vivamus}{\Bendnote{Vivit}} ut tellus sollicitudin, facilisis ipsum sit amet, tincidunt odio. Maecenas tincidunt dolor sed ante blandit tincidunt. Etiam vulputate ultricies facilisis.
+\pend
+\endnumbering
+
+\section{A series}
+\doendnotes{A}
+
+\section{B series}
+\doendnotes{B}
+
+\end{document}
