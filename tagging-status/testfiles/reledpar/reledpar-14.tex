@@ -1,0 +1,123 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_columns_alignment.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+\usepackage[showframe]{geometry}
+
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\linenummargin{left}
+\setlength{\Lcolwidth}{.44\textwidth}
+\setlength{\Rcolwidth}{.44\textwidth}
+\setlength{\columnrulewidth}{0.4pt}
+
+\begin{document}
+
+\section{Right (default)}
+
+\columnsposition{R}
+\begin{pairs}
+
+\begin{Leftside}
+\beginnumbering
+\pstart
+Left side left side left side left side left side left side left side left side left side left side
+\pend
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Right side right side right side right side right side right side right side right side right side right side
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\section{Left}
+\columnsposition{L}
+
+\begin{pairs}
+
+\begin{Leftside}
+\beginnumbering
+\pstart
+Left side left side left side left side left side left side left side left side left side left side
+\pend
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Right side right side right side right side right side right side right side right side right side right side
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\section{Center}
+
+\columnsposition{C}
+\begin{pairs}
+
+\begin{Leftside}
+\beginnumbering
+\pstart
+Left side left side left side left side left side left side left side left side left side left side
+\pend
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Right side right side right side right side right side right side right side right side right side right side
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\section{Center, setting space between columns}
+
+Now, we set the spaces between columns, to have all the line occupied.
+
+\setlength{\beforecolumnseparator}{0.06\textwidth}
+\setlength{\aftercolumnseparator}{0.06\textwidth}
+
+\vspace{\baselineskip}
+
+\begin{pairs}
+
+\begin{Leftside}
+\beginnumbering
+\pstart
+Left side left side left side left side left side left side left side left side left side left side
+\pend
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Right side right side right side right side right side right side right side right side right side right side
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\end{document}

@@ -1,0 +1,67 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 3-reledpar_columns_different_languages.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{book}
+\usepackage[osf,p,nomath]{libertinus}
+\usepackage[colorlinks]{hyperref}
+\usepackage[series={},nocritical,noend,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+
+\usepackage{graphicx}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{russian}
+\setotherlanguage{hebrew}
+\usepackage{metalogo}
+
+\linenumincrement*{1}
+\firstlinenum*{1}
+\setlength{\Lcolwidth}{0.48\textwidth}
+\setlength{\Rcolwidth}{0.48\textwidth} 
+
+\begin{document}
+
+
+\begin{pairs}
+
+\begin{Rightside} 
+\begin{RTL}
+\begin{hebrew}
+\beginnumbering
+\pstart
+\eledchapter{﻿המאמר השני}\ledleftnote{s}
+\pend
+\pstart
+בפנות התוריות, ר״ל שהם יסודות ועמודים אשר בית אלהים נכון עליהם, ובמציאותם יציר מציאות התורה מסדרת ממנו יתברך, ואלו יציר העדר אחת מהם תפל התורה בכללה חלילה.
+\pend    
+\endnumbering
+\end{hebrew}
+\end{RTL}
+\end{Rightside}
+
+
+
+
+\begin{Leftside} 
+\begin{russian}
+\beginnumbering
+\pstart
+\eledchapter{Трактат Второй}   
+\pend 
+\pstart
+О краеугольных [принципах] Торы, имеется ввиду, которые [есть] основы и столпы на которых дом Б-жий опирается/нахон, и с существованием их может быть представлено существование Торы упорядоченной от Него, благословенного, и если бы было представлено отсутствие одного из них — упадет Тора в общем, [Б-же] упаси.
+\pend
+\endnumbering
+\end{russian}
+\end{Leftside}
+
+\end{pairs}
+\Columns
+\end{document}

@@ -1,0 +1,67 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_verse_text_between.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={},noeledsec,nocritical,nofamiliar,noend,noledgroup]{reledmac}
+\usepackage{reledpar}
+\setcounter{stanzaindentsrepetition}{2}
+\setstanzaindents{14,0,1}
+
+\begin{document}
+
+\begin{pages}
+\begin{Leftside}
+\beginnumbering
+
+\stanza
+Ut enim ad minim veniam,&
+sed do eiusmod tempor incididunt ut labore et dolore&
+magna aliqua. Ut enim ad minim veniam, quis nostrud&
+exercitation ullamco laboris nisi&
+Uut aliquip consequat ut aliquip consequat
+\newverse[\vskip\baselineskip%
+  *\hfill*\hfill*%
+  \vskip\baselineskip]%
+%
+Duis aute irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu ur. Excepteur sint occaecat&
+cupidatat non proident, sunt in culpa qui officia deserunt&
+Duis aute irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu fugiat nulla&
+pariatur. Excepteur sint occaecat\&
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+
+\stanza
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,&
+sed do eiusmod tempor incididunt ut labore et dolore&
+magna aliqua. Ut enim ad minim veniam Ut enim ad minim veniam, quis nostrud&
+exercitation ullamco laboris nisi&
+Ut aliquip consequat ut consequat ut consequat ut consequat ut  aliquip consequat\newverse[\vskip\baselineskip%
+  *\hfill*\hfill*%
+  \vskip\baselineskip]%
+%
+Duis aute irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu ur. Excepteur sint occaecat&
+cupidatat non proident, &
+Duis aute irure dolor in reprehenderit&
+in voluptate velit esse cillum dolore eu fugiat nulla&
+pariatur. Excepteur sint occaecat\&
+\endnumbering
+\end{Rightside}
+
+\end{pages}
+\Pages
+\end{document}

@@ -1,0 +1,353 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_pages_titles_in_line_numbering_with_notes.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{book}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A},noend,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+\linenumincrement*{1}
+\firstlinenum*{1}
+\begin{document}
+
+\tableofcontents
+
+\beforeeledchapter
+
+\chapter{Preamble}
+A chapter outside any parallel typesetting environment.
+
+\begin{pages}
+\begin{Leftside}
+\beginnumbering
+\pstart
+\eledchapter{Left \edtext{chapter}{\Afootnote{chapitre}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+\eledsubsection{Left \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Left \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+\eledsubsection{Left \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Left \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+
+\beginnumbering
+\pstart
+\eledchapter{Right \edtext{chapter}{\Afootnote{chapitre}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+\eledsubsection{Right \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Right \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+\eledsubsection{Right \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Right \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\endnumbering
+
+\end{Rightside}
+
+\end{pages}
+\Pages
+
+\begin{pages}
+\begin{Leftside}
+\beginnumbering
+\pstart
+\eledchapter{Left \edtext{chapter}{\Afootnote{chapitre}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+\eledsubsection{Left \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Left \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+\eledsubsection{Left \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Left \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Left section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+
+\beginnumbering
+\pstart
+\eledchapter{Right \edtext{chapter}{\Afootnote{chapitre}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+\eledsubsection{Right \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Right \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+\eledsubsection{Right \edtext{subsection}{\Afootnote{sous-section}}}
+\pend
+
+\pstart
+\eledsubsubsection{Right \edtext{subsubsection}{\Afootnote{sous-sous-section}}}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+\pstart
+\eledsection{Right section}
+\pend
+
+\pstart
+I use git to manage some packages.
+I would like to add a pre-commit hook, to check if I have forgotten
+For now, I have a minimal pre-commit, which tests only the blank spaces at ends of lines, but not the forgotten.
+\pend
+
+
+\endnumbering
+
+\end{Rightside}
+
+\end{pages}
+\Pages
+
+
+\end{document}

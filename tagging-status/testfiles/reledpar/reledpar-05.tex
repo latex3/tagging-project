@@ -1,0 +1,63 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 3-reledpar_sync_setting_advancedshifted.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[a5paper,11pt]{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[polutonikogreek,main=english]{babel}
+\usepackage[pangram]{blindtext}
+
+\usepackage[series={A},noend,nocritical,noeledsec]{reledmac}
+\usepackage[advancedshiftedpstarts]{reledpar}
+\maxhnotesX{0.2\textheight}
+\beforenotesX{5pt}
+\setgoalfraction{0.95}
+\begin{document}
+
+\begin{pages}
+    \begin{Leftside}
+        \selectlanguage{greek}
+        \beginnumbering
+            \pstart
+                1. \blindtext[21]
+            \pend\pstart
+                2. \blindtext[10]
+                \footnoteAnomk{\selectlanguage{english}\blindtext[13]}
+            \pend\pstart
+                3. \blindtext[6]
+            \pend\pstart
+                4. \blindtext[6]
+            \pend
+            \pstart
+                5. \blindtext[6]
+            \pend
+        \endnumbering
+    \end{Leftside}
+    \begin{Rightside}
+        \beginnumbering
+            \pstart
+                1. \blindtext[22]\footnoteAmk
+            \pend\pstart
+                2. \blindtext[12]
+            \pend\pstart
+                3. \blindtext[12]
+            \pend
+            \pstart
+                4. \blindtext[12]
+            \pend
+            \pstart
+                5. \blindtext[12]
+            \pend
+        \endnumbering
+    \end{Rightside}
+\end{pages}
+\Pages
+
+\end{document}

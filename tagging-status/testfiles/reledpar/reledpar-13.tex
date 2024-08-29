@@ -1,0 +1,191 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_column_mix_with_not_column-continuous-numbering.tex
+% errors
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[noend,nofamiliar,series={A},noeledsec]{reledmac}
+\usepackage[widthliketwocolumns,continuousnumberingwithcolumns]{reledpar}
+\setlength{\Lcolwidth}{0.47\textwidth}
+\setlength{\Rcolwidth}{0.47\textwidth}
+\columnsposition{c}
+\setlength{\beforecolumnseparator}{0.03\textwidth}
+\setlength{\aftercolumnseparator}{0.03\textwidth}
+
+\AtBeginPairs{\sloppy}
+\firstlinenum*{1}
+\linenumincrement*{1}
+\begin{document}
+
+\begin{pairs}
+\begin{Leftside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio.
+\pend
+\pausenumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+\end{Rightside}
+
+\end{pairs}
+\Columns
+
+\resumenumbering
+\pstart
+Lorem \edtext{ipsum}{\Afootnote{ipsam}} dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+
+\begin{pairs}
+
+
+\begin{Leftside}
+\resumenumbering
+\pstart
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+\end{Leftside}
+
+\begin{Rightside}
+\resumenumbering
+\pstart
+\edtext{Lorem}{\Afootnote{Lorim}} ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat.
+\pend
+\pausenumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+
+\begin{pairs}
+
+
+\begin{Leftside}
+\resumenumbering
+\pstart
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+\end{Leftside}
+
+\begin{Rightside}
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+
+\Columns
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\endnumbering
+
+\section{Section A}
+
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+
+\begin{pairs}
+\begin{Leftside}
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\pausenumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+\edtext{Lorem}{\Afootnote{Lorim}} ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat.
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\endnumbering
+
+\section{Section B}
+
+\begin{pairs}
+\begin{Leftside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat.
+\pend
+\pausenumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\resumenumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+
+\endnumbering
+
+\section{Section C}
+
+\begin{pairs}
+\begin{Leftside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat.
+\pend
+\endnumbering
+\end{Leftside}
+
+\begin{Rightside}
+\beginnumbering
+\pstart
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat dolor vitae urna laoreet dapibus. Ut pulvinar nisl ultrices ex viverra, ac imperdiet sem gravida. Pellentesque malesuada augue a interdum placerat. Aenean tincidunt euismod viverra. Maecenas consectetur ligula nisi, in dignissim nulla tempus et. Aenean non scelerisque odio. Phasellus cursus bibendum turpis quis finibus. Aliquam porttitor arcu sit amet consectetur varius. Suspendisse dapibus, enim quis laoreet feugiat, diam ex fringilla metus, non ullamcorper eros ante sed justo. Sed eget congue enim. Morbi dictum magna sed dictum condimentum. In mattis, velit ac facilisis eleifend, nisl orci ornare nisi, at dignissim ante purus eu lacus. Pellentesque et diam odio.
+\pend
+\endnumbering
+\end{Rightside}
+\end{pairs}
+\Columns
+
+\end{document}

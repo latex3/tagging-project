@@ -1,0 +1,57 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+% adapted from 4-reledpar_pages_notes_leftpage.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass[twoside]{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[series={A},nocritical,noend,noeledsec,noledgroup]{reledmac}
+\usepackage[shiftedpstarts]{reledpar}
+
+\begin{document}
+
+\begin{pages}
+
+  \begin{Leftside}
+    \beginnumbering
+    \autopar
+
+   Lorem\footnoteAnomk{A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side. A note called in right side, but printed in left side.} ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id erat imperdiet, sollicitudin tortor a, rhoncus ipsum. Aliquam at maximus nibh. Ut sed risus porttitor, eleifend tortor non, commodo nisl. Praesent eu ullamcorper est. Phasellus at eros eget ex feugiat scelerisque.
+
+	Vivamus et luctus justo. In aliquet, metus malesuada vestibulum ullamcorper, est sapien facilisis arcu, ac efficitur mi metus ac velit. Sed sagittis laoreet justo at iaculis.
+
+	Aliquam\footnoteAnomk{An other note called in right side, but printed in left side.  An other note called in right side, but printed in left side. An other note called in right side, but printed in left side. An other note called in right side, but printed in left side. An other note called in right side, but printed in left side. An other note called in right side, but printed in left side. An other note called in right side, but printed in left side.} eu erat id tellus bibendum semper eu eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc arcu, iaculis sit amet laoreet ut, finibus at nibh.
+
+	Curabitur non lacus eget tellus consectetur dignissim. Nullam a tempus enim. Donec ut pulvinar magna, in accumsan velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia scelerisque urna, sagittis fermentum est ultricies semper.
+
+	Aenean condimentum, leo vitae convallis porta, neque felis rhoncus metus, in iaculis nulla ligula vitae quam. Fusce at vehicula purus, id sollicitudin dolor. Maecenas scelerisque non est non luctus. Aliquam erat volutpat. Praesent eu placerat urna. Donec fermentum mauris sit amet nulla semper lacinia. Donec eu ipsum ultricies, placerat odio id, ultrices urna. Cras id sapien ut nisi auctor elementum vel id tellus.
+
+    \endnumbering
+  \end{Leftside}
+
+  \begin{Rightside}
+    \beginnumbering
+    \autopar
+    Lorem\footnoteAmk ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id erat imperdiet, sollicitudin tortor a, rhoncus ipsum. Aliquam at maximus nibh. Ut sed risus porttitor, eleifend tortor non, commodo nisl. Praesent eu ullamcorper est. Phasellus at eros eget ex feugiat scelerisque. Proin pellentesque lorem eu risus convallis consectetur ac molestie turpis. Maecenas blandit iaculis orci, et mattis dolor luctus vel. Praesent placerat varius tellus, nec convallis purus volutpat at. Vivamus sit amet est interdum, condimentum sem ultricies, posuere sapien. Maecenas vitae sapien diam. Donec et risus non nunc laoreet tincidunt. Pellentesque vehicula pellentesque sagittis. Morbi elementum tempus nunc, eu sodales erat convallis et. Maecenas condimentum pretium faucibus. Nam in ante nunc. Etiam lobortis, arcu a imperdiet interdum, felis erat mattis nunc, id posuere purus nisl a nibh.
+
+	Vivamus et luctus justo. In aliquet, metus malesuada vestibulum ullamcorper, est sapien facilisis arcu, ac efficitur mi metus ac velit. Sed sagittis laoreet justo at iaculis. Morbi scelerisque nec quam eu efficitur. Integer nec massa ut lectus viverra ornare sed id libero. Praesent fermentum suscipit ante ut aliquam. Sed facilisis rutrum sapien vel blandit. Ut eget ex ut massa consequat sodales. Vestibulum venenatis in quam a molestie.
+
+	Aliquam\footnoteAmk eu erat id tellus bibendum semper eu eget nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc arcu, iaculis sit amet laoreet ut, finibus at nibh. Aliquam vel nisl a sem pulvinar efficitur. Quisque dignissim, metus at consectetur ultrices, metus nunc ultrices quam, at ultrices dolor massa vitae urna. Nullam semper nisi dui, vel commodo mi lobortis sit amet. In non mattis orci. Integer aliquam dapibus convallis. Suspendisse sodales tincidunt ante quis laoreet. Etiam sodales mauris nulla, vitae mattis est consequat sit amet. Nam blandit rhoncus nisi. Sed accumsan, nibh non venenatis aliquam, dolor quam sodales turpis, nec aliquam nunc arcu quis urna.
+
+	Curabitur non lacus eget tellus consectetur dignissim. Nullam a tempus enim. Donec ut pulvinar magna, in accumsan velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia scelerisque urna, sagittis fermentum est ultricies semper. Phasellus non augue ligula. Donec aliquet bibendum elit, quis tempor risus pulvinar id. Curabitur a cursus enim. Integer sit amet accumsan urna. Nam viverra at tortor ac gravida. In hac habitasse platea dictumst. Morbi imperdiet eleifend risus id consequat. Proin blandit mi a elit vehicula, a semper quam lacinia. Pellentesque at iaculis diam, quis condimentum justo. Nulla laoreet ut mauris sed tempor.
+
+	Aenean condimentum, leo vitae convallis porta, neque felis rhoncus metus, in iaculis nulla ligula vitae quam. Fusce at vehicula purus, id sollicitudin dolor. Maecenas scelerisque non est non luctus. Aliquam erat volutpat. Praesent eu placerat urna. Donec fermentum mauris sit amet nulla semper lacinia.
+
+    \endnumbering
+  \end{Rightside}
+
+\end{pages}
+  \Pages
+
+\end{document}
