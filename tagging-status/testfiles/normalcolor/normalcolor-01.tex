@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+% this is normalcolor-example.tex
+\documentclass{article}
+
+\usepackage{normalcolor}
+\setnormalcolor{green}
+\usepackage{xcolor}
+
+\usepackage{blindtext}
+\begin{document}
+\color{blue}
+\tableofcontents
+\blinddocument
+\setnormalcolor{red}
+\blinddocument
+
+\resetnormalcolor
+\blinddocument
+\end{document}
