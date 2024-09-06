@@ -1,0 +1,117 @@
+% adapted form acro.example.basic.tex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[colorlinks]{hyperref}
+\usepackage{acro}
+
+\acsetup{
+  make-links ,
+  pages / display = first ,
+  pages / fill    = {, }
+}
+
+\DeclareAcronym{CDMA}{
+  short            = CDMA ,
+  long             = Code Division Multiple Access ,
+  long-plural      = es
+}
+\DeclareAcronym{GSM}{
+  short            = GSM ,
+  long             = Global System for Mobile communication
+}
+\DeclareAcronym{NA}{
+  short            = {\ensuremath{N_{\mathrm{A}}}} ,
+  long             = Number of Avogadro ,
+  extra            = see \S\ref{Chem} ,
+  pdfstring        = NA
+}
+\DeclareAcronym{NAD+}{
+  short            = {NAD\textsuperscript{+}} ,
+  short-plural     = ,
+  long             = Nicotinamide Adenine Dinucleotide ,
+  pdfstring        = NAD+
+}
+\DeclareAcronym{NUA}{
+  short            = NUA ,
+  long             = Not Used Acronym
+}
+\DeclareAcronym{TDMA}{
+  short            = TDMA ,
+  long             = Time Division Multiple Access ,
+  long-plural      = es
+}
+\DeclareAcronym{UA}{
+  short            = UA ,
+  long             = Used Acronym
+}
+\DeclareAcronym{lox}{
+  short            = {\emph{LOX}} ,
+  long             = Liquid Oxygen ,
+  pdfstring        = LOX
+}
+\DeclareAcronym{lh2}{
+  short            = {\emph{LH\textsubscript{2}}} ,
+  long             = Liquid Hydrogen ,
+  pdfstring        = LH2
+}
+\DeclareAcronym{IC}{
+  short            = IC ,
+  long             = Integrated Circuit
+}
+\DeclareAcronym{BUT}{
+  short            = BUT ,
+  long             = Block Under Test ,
+  long-plural-form = Blocks Under Test
+}
+\begin{document}
+
+\section{Intro}
+In the early nineties, \acs{GSM} was deployed in many European
+countries. \ac{GSM} offered for the first time international
+roaming for mobile subscribers. The \acs{GSM}'s use of \ac{TDMA} as
+its communication standard was debated at length. And every now
+and then there are big discussion whether \ac{CDMA} should have
+been chosen over \ac{TDMA}.
+
+\section{Furthermore}
+\acresetall
+The reader could have forgotten all the nice acronyms, so we repeat the
+meaning again.
+
+If you want to know more about \acf{GSM}, \acf{TDMA}, \acf{CDMA}
+and other acronyms, just read a book about mobile communication. Just
+to mention it: There is another \ac{UA}, just for testing purposes!
+
+\begin{figure}[h]
+Figure
+\caption{A float also admits references like \ac{GSM} or \acf{CDMA}.}
+\end{figure}
+
+\subsection{Some chemistry and physics}
+\label{Chem}
+\ac{NAD+} is a major electron acceptor in the oxidation
+of fuel molecules. The reactive part of \ac{NAD+} is its nictinamide
+ring, a pyridine derivate.
+
+One mol consists of \acs{NA} atoms or molecules. There is a relation
+between the constant of Boltzmann and the \acl{NA}:
+\begin{equation}
+  k = R/%\acs{NA}
+\end{equation}
+\acl{lox}/\acl{lh2} (\acs{lox}/\acs{lh2})
+\subsection{Some testing fundamentals}
+When testing \acp{IC}, one typically wants to identify functional
+blocks to be tested separately. The latter are commonly indicated as
+\acp{BUT}. To test a \ac{BUT} requires defining a testing strategy\dots
+
+\printacronyms
+
+\end{document}
