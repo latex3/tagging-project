@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,title,math,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{subfig}
+\usepackage{hyperref}
+
+\begin{document}
+
+\listoffigures
+
+\begin{figure}
+Some figure
+\caption{Some caption}
+\label{fig}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[First.]{First subfloat}\qquad
+\subfloat[Second figure.]{Second subfloat}\\
+\subfloat[Third.]{\label{3figs-c}Third subfloat}
+\caption{Three sub-floats.}
+\label{3figs}
+\end{figure}
+
+\ref{fig}
+
+\subref{3figs-c}
+
+\end{document}

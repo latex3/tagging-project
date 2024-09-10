@@ -4751,6 +4751,7 @@
    issues:
    tests: false
    tasks: needs tests
+   comments: Obsolete
    updated: 2024-07-14
 
  - name: froufrou
@@ -10006,13 +10007,12 @@
 
  - name: subfig
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [tlc3, arxiv5]
    priority: 2
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-15
+   issues: [702]
+   tests: true
+   updated: 2024-09-10
 
  - name: subfigure
    type: package
@@ -10696,13 +10696,12 @@
 
  - name: tocbasic
    type: package
-   status: unknown
+   status: currently-incompatible
    included-in: [arxiv01]
    priority: 6
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-17
+   issues: [701]
+   tests: true
+   updated: 2024-09-10
 
  - name: tocbibind
    type: package
@@ -10743,14 +10742,13 @@
 
  - name: tocstyle
    type: package
-   status: unknown
+   status: no-support
    included-in: [tlc3]
    priority: 2
-   issues:
+   issues: [700]
    tests: false
-   tasks: needs tests
    comments: Obsolete
-   updated: 2024-07-15
+   updated: 2024-09-10
 
  - name: tocvsec2
    type: package
