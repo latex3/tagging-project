@@ -7273,12 +7273,12 @@
 
  - name: multicol
    type: package
-   status: compatible
+   status: partially-compatible
    included-in: [tlc3, arxiv5]
    priority: 2
-   issues:
+   issues: [705]
    tasks: test column rules
-   updated: 2024-07-06
+   updated: 2024-09-12
 
  - name: multicolrule
    type: package
@@ -7305,6 +7305,7 @@
    priority: 7
    issues:
    tests: true
+   comments: "Full-sized floats currently do not work with tagging"
    updated: 2024-08-20
 
  - name: multiexpand
