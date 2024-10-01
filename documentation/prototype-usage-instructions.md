@@ -5,7 +5,7 @@ luaLaTeX. The latter is the preferred engine recommended for new
 documents.
 
 The interface descriptions below are all temporary and will be replaced
-with proper interfaces over time. E.g., the `\DocumentMetada` will remain, but
+with proper interfaces over time. E.g., the `\DocumentMetadata` will remain, but
 the key `testphase` and its value will eventually vanish.
 
 ## Basic setup
