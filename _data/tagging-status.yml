@@ -11885,22 +11885,24 @@
    status: partially-compatible
    included-in: [tlc3, arxiv10]
    priority: 2
+   issues: [443,737]
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm. Currently `\\maketitle` will need adjustment. Used by project example arxiv3"
    tests: false
    tasks: needs further tests
-   updated: 2024-07-07
+   updated: 2024-10-18
 
  - name: amsbook
    type: class
    status: partially-compatible
    included-in: [tlc3, arxiv001]
    priority: 2
+   issues: [443,737]
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm.  Currently `\\maketitle` will need adjustment."
    tests: false
    tasks: needs further tests
-   updated: 2024-07-07
+   updated: 2024-10-18
 
  - name: amsldoc
    ctan-pkg: amscls
@@ -11908,21 +11910,23 @@
    status: currently-incompatible
    included-in:
    priority: 2
+   issues: [737]
    comments: "See some needed adjustments in project example `amsldoc`"
    tests: false
    tasks: needs further tests
-   updated: 2024-07-07
+   updated: 2024-10-18
 
  - name: amsproc
    type: class
    status: partially-compatible
    included-in: [arxiv01]
    priority: 6
+   issues: [443,737]
    supported-through: [phase-III,firstaid,title]
    comments: "theorem environments not compatible, see amsthm.  Currently `\\maketitle` will need adjustment."
    tests: false
    tasks: needs further tests
-   updated: 2024-08-06
+   updated: 2024-10-18
 
  - name: article
    type: class
@@ -11939,8 +11943,10 @@
    status: currently-incompatible
    included-in:
    priority: 2
+   issues: [710]
    tests: false
-   updated: 2024-07-07
+   tasks: needs tests
+   updated: 2024-10-18
 
  - name: book
    type: class
@@ -11990,13 +11996,12 @@
 
  - name: jlreq
    type: class
-   status: unknown
+   status: currently-incompatible
    included-in:
    priority: 9
-   issues:
-   tests: false
-   tasks: needs tests
-   updated: 2024-07-18
+   issues: [719]
+   tests: true
+   updated: 2024-10-18
 
 #------------------------ KKK ----------------------------
 
