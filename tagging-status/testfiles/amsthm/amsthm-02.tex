@@ -1,0 +1,37 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage{amsthm}
+
+\newtheoremstyle{citing}% name
+  {20pt}%      Space above, empty = `usual value'
+  {3pt}%      Space below
+  {\itshape}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {\thmnumber{#2 }\thmname{#1}\thmnote{: #3}}% Thm head spec
+
+\theoremstyle{citing}
+\newtheorem{theorem}{Theorem}
+
+\title{amsthm tagging test - 2}
+
+\begin{document}
+
+\begin{theorem}
+text
+\end{theorem}
+text
+\begin{theorem}[some note]
+text
+\end{theorem}
+
+\end{document}
