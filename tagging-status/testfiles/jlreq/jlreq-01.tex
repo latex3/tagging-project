@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass[report]{jlreq}
+
+\title{jlreq tagging test}
+
+\begin{document}
+
+\tableofcontents % errors
+
+\chapter{Chapter} % errors
+\section{Section} % parent-child warnings
+\subsection{Subsection} % parent-child warnings
+text
+
+\end{document}
