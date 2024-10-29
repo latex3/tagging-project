@@ -8780,11 +8780,13 @@
    type: package
    status: compatible
    included-in:
+   priority: 9
+   supported-through: [phase-III,package]
+   package-repository: "https://github.com/gusbrs/postnotes"
    comments: "Also works for phase-II with listenv=none"
    issues:
    tests: true
-   supported-through: [phase-III]
-   updated: 2024-10-16
+   updated: 2024-10-28
 
  - name: prelim2e
    type: package
@@ -11890,10 +11892,10 @@
    priority: 2
    issues: [443,737]
    supported-through: [phase-III,firstaid,title]
-   comments: "theorem environments not compatible, see amsthm. Currently `\\maketitle` will need adjustment. Used by project example arxiv3"
+   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3"
    tests: false
    tasks: needs further tests
-   updated: 2024-10-18
+   updated: 2024-10-28
 
  - name: amsbook
    type: class
@@ -11902,10 +11904,10 @@
    priority: 2
    issues: [443,737]
    supported-through: [phase-III,firstaid,title]
-   comments: "theorem environments not compatible, see amsthm.  Currently `\\maketitle` will need adjustment."
+   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
    tests: false
    tasks: needs further tests
-   updated: 2024-10-18
+   updated: 2024-10-28
 
  - name: amsldoc
    ctan-pkg: amscls
@@ -11926,10 +11928,10 @@
    priority: 6
    issues: [443,737]
    supported-through: [phase-III,firstaid,title]
-   comments: "theorem environments not compatible, see amsthm.  Currently `\\maketitle` will need adjustment."
+   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
    tests: false
    tasks: needs further tests
-   updated: 2024-10-18
+   updated: 2024-10-28
 
  - name: article
    type: class
