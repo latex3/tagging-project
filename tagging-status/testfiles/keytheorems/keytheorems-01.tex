@@ -1,0 +1,267 @@
+%% Lines from the original file have been commented out.
+%% Equivalent 'keytheorems' declarations are given adjacent.
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid}
+  }
+\documentclass{article}
+\usepackage{unicode-math} % for tagging
+\title{\texttt{\char`\\ newkeytheorem} and \texttt{\char`\\ newkeytheoremstyle} test with tagging}
+\author{%
+  Original document by Michael Downes; updated by Barbara Beeton\\
+  Adjusted for \textsf{keytheorems} by Matthew Bertucci
+  }
+
+\usepackage{keytheorems}
+
+\newkeytheorem{thm}[name=Theorem, parent=section]
+\newkeytheorem{cor}[name=Corollary, sibling=thm]
+\newkeytheorem{prop}[name=Proposition]
+\newkeytheorem{lem}[name=Lemma, sibling=thm]
+
+%\newtheorem{thm}{Theorem}[section]
+%\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{prop}{Proposition}
+%\newtheorem{lem}[thm]{Lemma}
+
+\newkeytheorem{rmk}[name=Remark, numbered=false, style=remark]
+
+%\theoremstyle{remark}
+%\newtheorem*{rmk}{Remark}
+
+\newkeytheorem{Ahlfors}[name=Ahlfors' Lemma, numbered=false]
+
+%\theoremstyle{plain}
+%\newtheorem*{Ahlfors}{Ahlfors' Lemma}
+
+\newkeytheoremstyle{note}{
+  spaceabove=3pt,
+  spacebelow=3pt,
+  bodyfont=\normalfont,
+  headfont=\itshape,
+  headpunct={:},
+  postheadspace=.5em,
+  }
+
+%\newtheoremstyle{note}% name
+%  {3pt}%      Space above
+%  {3pt}%      Space below
+%  {}%         Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\itshape}% Thm head font
+%  {:}%        Punctuation after thm head
+%  {.5em}%     Space after thm head: " " = normal interword space;
+%        %       \newline = linebreak
+%  {}%         Thm head spec (can be left empty, meaning `normal')
+
+\newkeytheorem{note}[style=note] % no 'name' key means capitalize first letter
+
+%\theoremstyle{note}
+%\newtheorem{note}{Note}
+
+\newkeytheoremstyle{citing}{
+  spaceabove=3pt,
+  spacebelow=3pt,
+  postheadspace=.5em,
+  notebraces={}{},
+  headstyle=\thmnote{#3},
+  }
+  
+%\newtheoremstyle{citing}% name
+%  {3pt}%      Space above, empty = `usual value'
+%  {3pt}%      Space below
+%  {\itshape}% Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\bfseries}% Thm head font
+%  {.}%        Punctuation after thm head
+%  {.5em}%     Space after thm head: " " = normal interword space;
+%        %       \newline = linebreak
+%  {\thmnote{#3}}% Thm head spec
+
+\newkeytheorem{varthm}[name={}, numbered=false, style=citing]
+
+%\theoremstyle{citing}
+%\newtheorem*{varthm}{}% all text supplied in the note
+
+\newkeytheoremstyle{break}{
+  spaceabove=9pt,
+  spacebelow=9pt,
+  break 
+  }
+
+%\newtheoremstyle{break}% name
+%  {9pt}%      Space above, empty = `usual value'
+%  {9pt}%      Space below
+%  {\itshape}% Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\bfseries}% Thm head font
+%  {.}%        Punctuation after thm head
+%  {\newline}% Space after thm head: \newline = linebreak
+%  {}%         Thm head spec
+
+\newkeytheorem{bthm}[name=B-Theorem, style=break]
+
+%\theoremstyle{break}
+%\newtheorem{bthm}{B-Theorem}
+
+\newkeytheoremstyle{exercise}{
+  bodyfont=\normalfont,
+  headpunct={:}
+  }
+\newkeytheorem{exer}[name=Exercise, style=exercise]
+
+%\theoremstyle{exercise}
+%\newtheorem{exer}{Exercise}
+
+\newkeytheoremstyle{swap}{headstyle=swapnumber}
+\newkeytheorem{thmsw}[name=Theorem, parent=section, style=swap]
+\newkeytheorem{corsw}[name=Corollary, sibling=thmsw, style=swap]
+\newkeytheorem{propsw}[name=Proposition, style=swap]
+\newkeytheorem{lemsw}[name=Lemma, sibling=thmsw, style=swap]
+
+%\swapnumbers
+%\theoremstyle{plain}
+%\newtheorem{thmsw}{Theorem}[section]
+%\newtheorem{corsw}[thmsw]{Corollary}
+%\newtheorem{propsw}{Proposition}
+%\newtheorem{lemsw}[thmsw]{Lemma}
+
+%    Because the amsmath pkg is not used, we need to define a couple of
+%    commands in more primitive terms.
+\let\lvert=|\let\rvert=|
+\newcommand{\Ric}{\mathop{\mathrm{Ric}}\nolimits}
+
+%    Dispel annoying problem of slightly overlong lines:
+\addtolength{\textwidth}{8pt}
+
+\begin{document}
+\maketitle
+
+\section{Test of standard theorem styles}
+
+Ahlfors' Lemma gives the principal criterion for obtaining lower bounds
+on the Kobayashi metric.
+
+\begin{Ahlfors}
+Let $ds^2 = h(z)\lvert dz\rvert^2$ be a Hermitian pseudo-metric on
+$\mathbf{D}_r$, $h\in C^2(\mathbf{D}_r)$, with $\omega$ the associated
+$(1,1)$-form. If $\Ric\omega\geq\omega$ on $\mathbf{D}_r$,
+then $\omega\leq\omega_r$ on all of $\mathbf{D}_r$ (or equivalently,
+$ds^2\leq ds_r^2$).
+\end{Ahlfors}
+
+\begin{lem}[negatively curved families]
+Let $\{ds_1^2,\dots,ds_k^2\}$ be a negatively curved family of metrics
+on $\mathbf{D}_r$, with associated forms $\omega^1$, \dots, $\omega^k$.
+Then $\omega^i \leq\omega_r$ for all $i$.
+\end{lem}
+
+Then our main theorem:
+\begin{thm}\label{pigspan}
+Let $d_{\max}$ and $d_{\min}$ be the maximum, resp.\ minimum distance
+between any two adjacent vertices of a quadrilateral $Q$. Let $\sigma$
+be the diagonal pigspan of a pig $P$ with four legs.
+Then $P$ is capable of standing on the corners of $Q$ iff
+\begin{equation}\label{sdq}
+\sigma\geq \sqrt{d_{\max}^2+d_{\min}^2}.
+\end{equation}
+\end{thm}
+
+\begin{cor}
+Admitting reflection and rotation, a three-legged pig $P$ is capable of
+standing on the corners of a triangle $T$ iff (\ref{sdq}) holds.
+\end{cor}
+
+\begin{rmk}
+As two-legged pigs generally fall over, the case of a polygon of order
+$2$ is uninteresting.
+\end{rmk}
+
+\section{Custom theorem styles}
+
+\begin{exer}
+Generalize Theorem~\ref{pigspan} to three and four dimensions.
+\end{exer}
+
+\begin{note}
+This is a test of the custom theorem style `note'. It is supposed to have
+variant fonts and other differences.
+\end{note}
+
+\begin{bthm}
+Test of the `linebreak' style of theorem heading.
+\end{bthm}
+
+This is a test of a citing theorem to cite a theorem from some other source.
+
+\begin{varthm}[Theorem 3.6 in \cite{thatone}]
+No hyperlinking available here yet \dots\ but that's not a
+bad idea for the future.
+\end{varthm}
+
+\section{The proof environment}
+
+\begin{proof}
+Here is a test of the proof environment.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{pigspan}]
+And another test.
+\end{proof}
+
+\begin{proof}[Proof \textup(necessity\textup)]
+And another.
+\end{proof}
+
+\begin{proof}[Proof \textup(sufficiency\textup)]
+And another, ending with a display:
+\[
+1+1=2\,. \qedhere
+\]
+\end{proof}
+
+\section{Test of number-swapping}
+
+This is a repeat of the first section but with numbers in theorem heads
+swapped to the left.
+
+Ahlfors' Lemma gives the principal criterion for obtaining lower bounds
+on the Kobayashi metric.
+\begin{Ahlfors}
+Let $ds^2 = h(z)\lvert dz\rvert^2$ be a Hermitian pseudo-metric on
+$\mathbf{D}_r$, $h\in C^2(\mathbf{D}_r)$, with $\omega$ the associated
+$(1,1)$-form. If $\Ric\omega\geq\omega$ on $\mathbf{D}_r$,
+then $\omega\leq\omega_r$ on all of $\mathbf{D}_r$ (or equivalently,
+$ds^2\leq ds_r^2$).
+\end{Ahlfors}
+
+\begin{lemsw}[negatively curved families]
+Let $\{ds_1^2,\dots,ds_k^2\}$ be a negatively curved family of metrics
+on $\mathbf{D}_r$, with associated forms $\omega^1$, \dots, $\omega^k$.
+Then $\omega^i \leq\omega_r$ for all $i$.
+\end{lemsw}
+
+Then our main theorem:
+\begin{thmsw}
+Let $d_{\max}$ and $d_{\min}$ be the maximum, resp.\ minimum distance
+between any two adjacent vertices of a quadrilateral $Q$. Let $\sigma$
+be the diagonal pigspan of a pig $P$ with four legs.
+Then $P$ is capable of standing on the corners of $Q$ iff
+\begin{equation}\label{sdqsw}
+\sigma\geq \sqrt{d_{\max}^2+d_{\min}^2}.
+\end{equation}
+\end{thmsw}
+
+\begin{corsw}
+Admitting reflection and rotation, a three-legged pig $P$ is capable of
+standing on the corners of a triangle $T$ iff (\ref{sdqsw}) holds.
+\end{corsw}
+
+\begin{thebibliography}{99}
+\bibitem{thatone} Dummy entry.
+\end{thebibliography}
+
+\end{document}
