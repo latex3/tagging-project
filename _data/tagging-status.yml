@@ -5904,6 +5904,17 @@
    tests: true
    updated: 2024-07-26
 
+ - name: keytheorems
+   type: package
+   status: partially-compatible
+   included-in:
+   priority: 9
+   supported-through: [phase-III,firstaid]
+   issues:
+   tests: true
+   comments: tcolorbox theorems disabled when tagging is loaded.
+   updated: 2024-11-02
+
  - name: keyval
    type: package
    status: compatible
@@ -7584,8 +7595,8 @@
    priority: 2
    issues:
    tests: compatible
-   comments: "`amsthm` option not compatible until amsthm is."
-   updated: 2024-08-05
+   comments:
+   updated: 2024-11-02
 
  - name: newpx
    type: package
@@ -7623,8 +7634,8 @@
    priority: 2
    issues:
    tests: true
-   comments: "`amsthm` option not compatible until amsthm is."
-   updated: 2024-07-15
+   comments:
+   updated: 2024-11-02
 
  - name: newtxtext
    ctan-pkg: newtx
@@ -10557,7 +10568,7 @@
    priority: 2
    issues:
    tests: true
-   comments: "Numbering with sibling key is wrong. Requires amsthm for many of its features."
+   comments: "Numbering with sibling key is wrong."
    updated: 2024-08-08
 
  - name: threeparttable
