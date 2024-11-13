@@ -6544,13 +6544,16 @@
 
  - name: luamplib
    type: package
-   status: partially-compatible
+   status: compatible
    included-in:
-   comments: "An old issue has been fixed. `mplibcode` environments are not tagged
-              as figure and have no option to specify Alt text."
+   priority: 9
+   supported-through: [phase-III,package]
+   package-repository: "https://github.com/lualatex/luamplib"
+   comments: "An old issue has been fixed. Offers several keys for figures
+              including `alt` and `artifact`."
    issues: [8,252]
    tests: true
-   updated: 2024-07-29
+   updated: 2024-11-12
 
  - name: luatexja
    type: package

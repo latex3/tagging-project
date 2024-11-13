@@ -1,0 +1,403 @@
+% adapted from test-luamplib-latex.tex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid}
+  }
+\documentclass{article}
+\usepackage{unicode-math}
+\setmainfont{Latin Modern Roman}
+\usepackage{luamplib}
+\usepackage{graphicx,xcolor}
+\everymplib{ beginfig(0); }
+\everyendmplib{ endfig; }
+\mpliblegacybehavior{true}%
+\begin{document}
+A%
+\begin{mplibcode}[alt=example 1]
+%% test all printable ascii chars in comments
+%%    (  2  <  F  P  Z  d   n   x
+%%    )  3  =  G  Q  [  e   o   y
+%%    *  4  >  H  R  \  f   p   z
+%% !  +  5  ?  I  S  ]  g   q   {
+%% "  ,  6  @  J  T  ^  h   r   |
+%% #  -  7  A  K  U  _  i   s   }
+%% $  .  8  B  L  V  `  j   t   ~
+%% %  /  9  C  M  W  a  k   u  DEL
+%% &  0  :  D  N  X  b  l   v
+%% ´  1  ;  E  O  Y  c  m   w
+	fill fullcircle scaled 20; %% actual <tab> to make sure it works
+\end{mplibcode}%
+B\par
+\everymplib{}\everyendmplib{}% reset toks
+A%
+\begin{mplibcode}[alt=example 2]
+verbatimtex \lower.2em etex
+beginfig(0);
+draw origin--(1cm,0) withcolor \mpcolor{teal};
+draw btex g etex withcolor \mpcolor{orange};
+draw btex\tracingcommands0
+  multi%
+  \begin{huge}line\end{huge}
+  texcode
+  with \%
+  etex shifted (10,0);
+draw bbox currentpicture;
+endfig;
+
+beginfig(18);
+numeric u;
+u = 1cm;
+draw (0,2u)--(0,0)--(4u,0);
+pickup pencircle scaled 1pt;
+draw (0,0){up}
+  for i=1 upto 8: ..(i/2,sqrt(i/2))*u  endfor;
+label.lrt(btex $\sqrt x$ etex, (3,sqrt 3)*u);
+label.bot(btex $x$ etex, (2u,0));
+label.lft(btex $y$ etex, (0,u));
+endfig;
+\end{mplibcode}%
+B\par
+A%
+\begin{mplibcode}[alt=example 3]
+beginfig(2);
+numeric u; u=1cm;
+z1=-z2=(-u,0);
+for i = 1 upto 3:
+  draw z1..(0, i*u)..z2;
+  label.top(TEX("$e_{" & decimal(i) & "}$"), (0, i*u))
+  withcolor \mpcolor{red!70!blue};
+endfor;
+endfig;
+\end{mplibcode}%
+B\par\mplibforcehmode
+\mplibcodeinherit{enable}%
+\mplibglobaltextext{enable}%
+\everymplib{ beginfig(0);}\everyendmplib{ endfig;}%
+\begin{mplibcode}[alt=example 4]
+ label(btex $\sqrt{2}$ etex, origin);
+ draw fullcircle scaled 20;
+ picture pic; pic := currentpicture;
+\end{mplibcode}%
+\begin{mplibcode}[alt=another example]
+ currentpicture := pic scaled 2;
+\end{mplibcode}%
+\mplibnoforcehmode
+\everymplib{}\everyendmplib{}%
+\mplibcodeinherit{disable}%
+\mplibglobaltextext{disable}\par
+\mplibsetformat{metafun}%
+\begin{mplibcode}[alt=example 5]
+message "Hello World!";
+verbatimtex \moveright 0.4\hsize etex
+beginfig(0);
+path p; p:= fullcircle scaled 2cm yshifted .5cm;
+fill p withcolor transparent("normal", 0.5, red);
+fill p rotated 120 withcolor transparent("normal", 0.5, green);
+fill p rotated 240 withcolor transparent("normal", 0.5, blue);
+endfig;
+verbatimtex \leavevmode etex
+picture p; p := btex MetaPost etex scaled 2;
+beginfig(1);
+linear_shade(bbox p,0,blue,.7white);
+draw p withcolor white;
+endfig;
+verbatimtex \kern10pt etex
+beginfig(2);
+circular_shade(bbox p,0,blue,.7white);
+draw p withcolor white;
+endfig;
+\end{mplibcode}%
+
+\newbox\mympbox
+\def\prependtomplibbox{\global\setbox\mympbox}%
+\begin{mplibcode}[alt=example 6]
+%verbatimtex \global\setbox\mympbox etex
+beginfig(0);
+breadth=.667\mpdim\linewidth;
+height=2pt;
+x1=0; x2=x6=.333x4; x5=x3=.667x4;
+x4=breadth;
+y1=y4=height/2; y2=y3=height; y5=y6=0;
+fill z1--z2--z3--z4--z5--z6--cycle;
+endfig;
+\end{mplibcode}%
+
+\mplibnoforcehmode
+\mplibnumbersystem{double}%
+\begin{mplibcode}[alt=example 7]
+beginfig(0);
+u := 10**5*(10**-4);
+draw unitsquare scaled u;
+endfig;
+\end{mplibcode}%
+\mplibsetformat{plain}%
+\begin{mplibcode}[alt=example 8]
+  input graph;
+  beginfig(0);
+  draw begingraph(100,100);
+    gdraw (10,10)--(30,35)--(50,25)--(70,80)--(90,90);
+    autogrid(otick.bot,);
+    for y=20,40,60,80:
+      grid.lft(format("%e",1000y), y) withcolor .85white;
+    endfor
+    endgraph;
+  endfig;
+\end{mplibcode}%
+\mplibtextextlabel{enable}%
+\begin{mplibcode}[alt=example 9]
+beginfig(0);
+dotlabel.rt("$\sqrt2$",origin);
+endfig;
+\end{mplibcode}%
+\leavevmode
+\begin{mplibcode}[alt=example 10]
+   D := sqrt(2)**7;
+   beginfig(0);
+   draw fullcircle scaled D;
+   VerbatimTeX("\gdef\Dia{" & decimal D & "}");
+   endfig;
+\end{mplibcode}%
+diameter:\Dia bp.%
+\begin{mplibcode}[alt=example 11]
+  vardef rotatedlabel@#(expr str, loc, angl) =
+    draw thelabel@#(str, loc) rotatedaround(loc, angl)
+  enddef;
+
+  beginfig(1);
+    rotatedlabel.top(textext("Rotated!"), origin, 45);
+  endfig;
+\end{mplibcode}%
+\par
+\begin{mplibcode}[alt=example 12]
+beginfig(1)
+  draw mplibgraphictext "\bfseries Funny$\sqrt{2}$"
+  fakebold 2 % fontspec option
+  drawcolor blue fillcolor "red!50" % l3color expression
+  scaled 3 rotated 30 ;
+picture p;
+p:=mplibgraphictext "\bfseries\itshape xyz";
+draw p scaled 3 shifted (40,0);
+endfig;
+\end{mplibcode}%
+\par
+\mplibsetformat{metafun}%
+\begin{mplibcode}[alt=example 13]
+beginfig(1)
+fill unitsquare xyscaled (\mpdim\textwidth,1cm)
+    withshademethod "linear"
+    withshadevector (0,1)
+    withshadestep (
+       withshadefraction .5
+       withshadecolors (red,"blue!50")
+    )
+    withshadestep (
+       withshadefraction 1
+       withshadecolors ("blue!50",green)
+    )
+    ;
+endfig;
+\end{mplibcode}%
+\leavevmode
+\mpfig[alt=fig example 1]
+picture Q, u, e;
+Q := mplibglyph "Q" of "texgyrepagella-bolditalic.otf" scaled .1;
+u := mplibglyph "u" of "texgyrepagella-bolditalic.otf" scaled .1 shifted lrcorner Q;
+e := mplibglyph "e" of "texgyrepagella-bolditalic.otf" scaled .1 shifted lrcorner u;
+i:=0;
+totallen := length Q + length u + length e;
+for pic=Q, u, e:
+  for item within pic:
+    i:=i+1;
+    fill pathpart item
+    if i < totallen: withpostscript "collect"; fi
+  endfor
+endfor
+  withshademethod "linear"
+  withshadedirection (0.5,2.5)
+  withshadecolors (.7red,.7yellow)
+  ;
+\endmpfig
+\everymplib[@mpfig]{ drawoptions(withcolor mplibrgbtexcolor "olive"); }%
+\mpfig*[alt=fig example 2] input boxes \endmpfig
+\mpfig[alt=fig example 3] circleit.a(btex\tracingcommands0 Box 1 etex); drawboxed(a); \endmpfig
+\def\mpfiginstancename{mympfig}%
+\mpfig[alt=fig example 4]
+draw mpliboutlinetext.b ("$\displaystyle\frac{1}{1-x^2}$")
+    (withcolor .6[red,white])
+    (withpen pencircle scaled .2 withcolor red)
+    scaled 4 ;
+\endmpfig
+\par
+\mpfig[alt=fig example 5]
+  draw mpliboutlinetext.r
+    ("Question")
+    ( withpen pencircle scaled .3 )
+    (
+      withshademethod "linear"
+      withshadedirection (2.5, 0.5)
+      withshadecolors(red, blue)
+    )
+    scaled 4;
+\endmpfig
+\par\leavevmode
+\mppattern{mypatt}
+[
+  xstep = 5, ystep = 6,
+  matrix = "rotated 90 scaled .75",
+]
+\mpfig[alt=fig example 6]
+draw (origin--right+up) scaled 5 withcolor 1/3[blue,white] ;
+draw (up--right) scaled 5 withcolor 1/3[red,white] ;
+\endmpfig
+\endmppattern
+\mpfig[alt=fig example 7]
+draw unitsquare shifted -center unitsquare scaled 45 withpostscript "collect" ;
+draw fullcircle scaled 100 withpattern "mypatt" withpen pencircle scaled 1
+  withcolor \mpcolor{red!50!blue!50} withpostscript "evenodd" ;
+\endmpfig
+\begin{mppattern}{pattuncolored}
+  [
+    colored = false,
+    matrix = "slanted .3 rotated 30",
+  ]
+  \tiny\TeX
+\end{mppattern}\relax
+\mpfig[alt=fig example 8]
+  picture tex;
+  tex = mpliboutlinetext.p ("\bfseries \TeX");
+  for i=1 upto mpliboutlinenum:
+    draw image(
+    j:=0;
+    for item within mpliboutlinepic[i]:
+      j:=j+1;
+      draw pathpart item scaled 10
+      if j < length mpliboutlinepic[i]:
+          withpostscript "collect"
+      else:
+          withpattern "pattuncolored"
+          withpen pencircle scaled 1/2
+          withcolor (i/4)[red,blue]
+      fi;
+    endfor
+    )
+    withfademethod "linear"
+    ;
+  endfor
+\endmpfig
+\par\leavevmode
+\mpfig[alt=fig example 9]
+  picture mill; mill = btex \includegraphics[width=100bp]{mill} etex;
+  draw mill;
+  mill := mill shifted 125right;
+  draw mill
+    withfademethod "circular"
+    withfadecenter (center mill, center mill)
+    withfaderadius (30, abs(lrcorner mill - llcorner mill)/2)
+    withfadeopacity (1, 0)
+    ;
+\endmpfig
+\par
+\def\test#1{%
+  \mpfig[alt=fig example 10]
+  fill unitsquare shifted -center unitsquare scaled 200
+    withshademethod "linear"
+    withshadecolors (.3[red,white], .3[blue,white])
+    ;
+  label( btex MetaPost etex scaled 3, origin) ;
+  draw image(
+    fill fullcircle scaled 100 shifted 25left
+      withcolor .8white
+      withtransparency (2,1)
+      ;
+    fill fullcircle scaled 100 shifted 25right
+      withcolor .8white
+      withtransparency (2,1)
+      ;
+  )
+  asgroup "#1"
+  withgroupname "test:#1"
+  withtransparency (1,.5)
+  ;
+  currentpicture := currentpicture scaled 2/3;
+  \endmpfig
+}%
+\hbox{\test{isolated,knockout}\,\test{isolated}\vbox to\MPheight{\vss\hbox{~isolated}\vss}}%
+\hbox{\test{knockout}\,\test{}}%
+\hbox to\MPwidth{\hss knockout\hss}%
+\leavevmode
+\mpfig[alt=fig example 11] usemplibgroup "test:isolated,knockout" scaled 2/3 rotated 15 ; \endmpfig
+\usemplibgroup[artifact]{test:isolated,knockout}%
+\begin{mplibgroup}{mytex}[matrix="rotated 15"] \TeX \end{mplibgroup}%
+\hbox to0pt{\hss\vrule width.5pt height5pt depth5pt\hss}%
+\hbox to0pt{\hss\vrule width10pt height.25pt depth.25pt\hss}%
+\usemplibgroup[artifact]{mytex}%
+\mpfig[alt=fig example 12] usemplibgroup "mytex"; draw (left--right) scaled 5; draw (up--down) scaled 5; \endmpfig
+\par
+\mpfig[alt=fig example 13]
+  picture test; test = mplibgraphictext "\textbf{MPLIB}"
+    fakebold 1 fillcolor "red!70" drawcolor .7red scaled 7;
+  draw test withpattern "mypatt" ;
+\endmpfig
+\tracingcommands0
+
+\vskip 2\baselineskip
+\mplibcodeinherit{disable}%
+
+\everymplib[instanceOne]{beginfig(1);}
+\everyendmplib[instanceOne]{endfig;}
+
+\begin{mplibcode}[instanceOne,alt=example 14]
+  picture TeX;
+  TeX := btex \TeX etex;
+a := 1cm;
+draw fullcircle scaled a;
+draw btex a circle with $d=a$ etex shifted (a,0);
+draw TeX;
+\end{mplibcode}%
+Current instance name is: \currentmpinstancename \vskip 2\baselineskip
+
+\begin{mplibcode}[instanceTwo,alt=example 15]
+beginfig(1);
+if not known a:
+  draw btex code is not inherited from an instance with a different name etex;
+else:
+  errmessage("Variable was inherited from a different instance");
+fi;
+endfig;
+\end{mplibcode}%
+Current instance name is: \currentmpinstancename \vskip 2\baselineskip
+
+\begin{mplibcode}[alt=example 16]
+beginfig(1);
+if not known a:
+  draw btex code is not inherited if instance name is not listed etex;
+else:
+  errmessage("Variable was inherited from a different instance");
+fi;
+a := 1cm;
+endfig;
+\end{mplibcode}%
+Current instance name is: \currentmpinstancename (should be empty) \vskip 2\baselineskip
+
+\begin{mplibcode}[alt=example 17]
+beginfig(1);
+if not known a:
+  draw btex code is not inherited if mplibcodeinherit is disabled and instance name is not explicitly set etex;
+else:
+  errmessage("Variable was inherited when code inheritance is turned off and instance name is not set");
+fi;
+endfig;
+\end{mplibcode}%
+Current instance name is: \currentmpinstancename (should be empty) \vskip 2\baselineskip
+
+\begin{mplibcode}[instanceOne,alt=example 18]
+draw unitsquare scaled a;
+draw btex a square with side $=a$, inherited from the same instance etex shifted (3/2a, 1/2a);
+  draw TeX;
+\end{mplibcode}%
+Current instance name is: \currentmpinstancename \vskip 2\baselineskip
+
+\end{document}
