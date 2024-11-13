@@ -1,0 +1,150 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+    %uncompress,
+  }
+\documentclass{article}
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\usepackage{unicode-math,graphicx,hyperref,enumext}
+\hypersetup
+  {
+    colorlinks = true,
+    pdftitle   = {Test tagged PDF for enumext package},
+  }
+\newlength{\descitemwd}
+\NewDocumentCommand \labelbx { s +m }
+  {%
+    \SuspendTagging{\parbox}%
+    \IfBooleanTF{#1}%
+      {\strut\smash{\parbox[t]{\labelwidth}{\raggedright{#2}}}}%
+      {\strut\smash{\parbox[t]{\labelwidth}{\raggedleft{#2}}}}%
+    \ResumeTagging{\parbox}
+  }
+\begin{document}
+
+\section{Fake \texttt{itemize} environment}
+
+\noindent\begin{minipage}[t]{0.45\linewidth}
+\begin{enumext}[nosep, label=\textbullet]
+  \item First level item
+    \begin{enumext}[nosep,label=\normalfont\bfseries\textendash]
+      \item Second level item
+        \begin{enumext}[nosep,label=\textasteriskcentered]
+          \item Third level item
+            \begin{enumext}[nosep,label=\textperiodcentered]
+               \item Fourth level item
+            \end{enumext}
+        \end{enumext}
+    \end{enumext}
+  \item First level item
+\end{enumext}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}
+\begin{enumext}[nosep, label=$\ast$]
+  \item First level item
+    \begin{enumext}[nosep,label=$\diamond$]
+      \item Second level item
+        \begin{enumext}[nosep,label=$\circ$]
+          \item Third level item
+            \begin{enumext}[nosep,label=$\star$]
+               \item Fourth level item
+            \end{enumext}
+        \end{enumext}
+    \end{enumext}
+  \item First level item
+\end{enumext}
+\end{minipage}
+
+\section{Fake \texttt{description} environment}
+
+\settowidth{\descitemwd}{\textbf{Something long}}
+\begin{enumext}[label={},labelwidth=\descitemwd,font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item[] This is an entry \emph{without} a label.
+  \item[Something] A short \emph{one-line} description text.
+  \item[Something long] A much \emph{longer} description text may take
+    more than one line or more than one paragraph.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+\end{enumext}
+
+\begin{enumext*}[label={},labelwidth=\descitemwd,font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item[] This is an entry \emph{without} a label.
+  \item[Something] A short \emph{one-line} description text.
+  \item[Something long] A much \emph{longer} description text may take
+    more than one line or more than one paragraph.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+\end{enumext*}
+
+\begin{enumext}[label={},labelwidth=\descitemwd,list-indent=0pt,font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item[] This is an entry \emph{without} a label.
+  \item[Something] A short \emph{one-line} description text.
+  \item[Something long] A much \emph{longer} description text may take
+    more than one line or more than one paragraph.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+\end{enumext}
+
+\begin{enumext*}[label={},labelwidth=\descitemwd,list-indent=0pt,font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item[] This is an entry \emph{without} a label.
+  \item[Something] A short \emph{one-line} description text.
+  \item[Something long] A much \emph{longer} description text may take
+    more than one line or more than one paragraph.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+\end{enumext*}
+
+\section{Fake \texttt{description} environment in margin}
+
+\begin{enumext}[align=right, label={},labelsep=4pt,labelwidth=\descitemwd,list-offset={-\descitemwd-4pt}, font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item This is an entry \textit{without} a label.
+  \item[Something] A short one-line description.
+  \item[Something long] A much longer description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+\end{enumext}
+
+\begin{enumext*}[align=right, label={},labelsep=4pt,labelwidth=\descitemwd,list-offset={-\descitemwd-4pt}, font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item This is an entry \textit{without} a label.
+  \item[Something] A short one-line description.
+  \item[Something long] A much longer description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+\end{enumext*}
+
+\section{Fake \texttt{description} with multi-line labels}
+
+\begin{enumext}[label={},labelsep=4pt,labelwidth=\descitemwd,list-offset=-\dimeval{\descitemwd+4pt}, wrap-label*={\labelbx{#1}}, font=\bfseries,noitemsep,topsep=3pt]
+  \item[SomeThing] A short one-line description.
+  \item This is an entry \textit{without} a label.
+  \item[Something] A short one-line description.
+  \item[Something \\ long] A much longer description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+
+  \item[SoMeThInG \\ LoNg] A much longer description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
+    Curabitur dictum gravida mauris.
+\end{enumext}
+\end{document}

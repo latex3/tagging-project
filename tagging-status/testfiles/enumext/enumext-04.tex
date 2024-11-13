@@ -1,0 +1,59 @@
+% !TeX TXS-program:compile = txs:///lualatex
+\listfiles
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,title,table,firstaid},
+    %uncompress,
+  }
+\documentclass{article}
+\usepackage[top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{unicode-math,graphicx,hyperref,enumext}
+\hypersetup
+  {
+    colorlinks = true,
+    pdftitle   = {Test tagged PDF for enumext package},
+  }
+\begin{document}
+\section{enumext + anskey + anskey*}
+
+Some text here
+
+\begin{enumext}[save-ans=test,save-sep={ },save-ref = true]
+  \item Question A. \anskey{Answer A}
+  \item Question B. \anskey{Answer B}
+  \item Question C.
+    \begin{anskey*}
+    Answer with \verb+code+ and more
+      \begin{verbatim}
+        Some code here
+      \end{verbatim}
+    And text
+    \end{anskey*}
+\end{enumext}
+
+The answer to question \ref{test:2} is \getkeyans{test:2}
+
+\printkeyans*{test}
+
+\section{enumext* + anskey + anskey*}
+
+Some text here
+
+\begin{enumext*}[save-ans=test-2,save-sep={ },save-ref = true]
+  \item Question A. \anskey{Answer A}
+  \item Question B. \anskey{Answer B}
+  \item Question C.
+    \begin{anskey*}
+    Answer with \verb+code+ and more
+      \begin{verbatim}
+        Some code here
+      \end{verbatim}
+    And text
+    \end{anskey*}
+\end{enumext*}
+
+\printkeyans{test-2}
+\end{document}
