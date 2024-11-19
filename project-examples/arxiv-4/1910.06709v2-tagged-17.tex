@@ -1,0 +1,31 @@
+
+\DocumentMetadata{
+ lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=1.7,
+ pdfstandard=ua-1,
+ uncompress
+}
+\documentclass[11pt]{article}
+\usepackage{fullpage, amsmath}
+
+
+\tagpdfsetup{
+%  math/mathml/structelem,
+%  math/mathml/luamml=true,
+%  math/mathml/sources=,
+%  math/mathml/write-dummy
+%  math/alt/use=false,
+%  math/tex/AF=false
+}
+
+\usepackage{unicode-math}
+\AtBeginDocument{\let\Box\mdlgwhtsquare}
+
+\begin{document}
+\input{1910.06709v2-body}
+\end{document}
+
+
+
+
