@@ -9,9 +9,12 @@
 
 
 \renewcommand\DocumentMetadata[1]{}
-\ExplSyntaxOn
-\AddToHook{begindocument/end}{\__math_luamml_activate_write:}
-\ExplSyntaxOff
-
+\tagpdfsetup{
+% math/mathml/structelem,
+ math/mathml/luamml=true,
+ math/mathml/sources=,
+ math/alt/use=false,
+ math/tex/AF=false
+ }
 
 \input{PHY-exam}
