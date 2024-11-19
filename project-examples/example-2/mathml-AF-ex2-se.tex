@@ -1,0 +1,69 @@
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+\tagpdfsetup{
+ math/mathml/structelem,
+ math/mathml/luamml=false,
+ math/mathml/sources=,
+ math/alt/use=false,
+ math/tex/AF=false
+ }
+
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\title{Math Examples 1}
+\author{\LaTeX\ Project}
+\date{2024-01-05}
+
+\usepackage{unicode-math}
+
+\begin{document}
+
+%\maketitle % removed to get faster to the math ...
+
+\section{Quadratic Formula}
+The solutions to $ax^2+bx+c=0$ are
+\[
+x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\]
+
+\section{Arithmetic}
+Absolute values.
+\[ \lvert -1\rvert = 1 \]
+
+
+\section{Matrix Multiplication}
+\[
+  \begin{pmatrix}
+    1&2\\3&4
+  \end{pmatrix}
+  \begin{pmatrix}
+    1&1\\0&1
+  \end{pmatrix}
+   =
+  \begin{pmatrix}
+    1&3\\3&7
+  \end{pmatrix}
+\]
+
+\section{Trigonometric Identities}
+\[\sin^2\theta+\cos^2\theta=1\]
+
+\section{Simultaneous Equations}
+The equations
+\begin{align*}
+  2x+y&=3\\
+  x-y&=0
+\end{align*}
+have solution $x=y=1$.
+\end{document}

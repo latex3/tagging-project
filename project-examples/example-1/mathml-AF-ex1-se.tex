@@ -1,0 +1,40 @@
+
+\DocumentMetadata{
+ lang=en,
+testphase={phase-III,math,table,title},
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+
+
+%\tagpdfsetup{math/mathml/write-dummy}
+\documentclass{article}
+
+\tagpdfsetup{
+ math/mathml/structelem,
+ math/mathml/luamml=false,
+ math/mathml/sources=,
+ math/alt/use=false,
+ math/tex/AF=false
+ }
+\usepackage{unicode-math}
+\setmainfont{STIX Two Text}
+\setmathfont{STIX Two Math}
+
+
+\begin{document}
+\title{Math Test One}
+\author{David}
+\maketitle
+
+\section{Math Tests}
+
+Some inline math, let $x$ and $y$ satisfy $x>y$.
+
+Some text, and an equation.
+\[
+\sqrt{x^2}=\lvert x\rvert
+\]
+\end{document}
