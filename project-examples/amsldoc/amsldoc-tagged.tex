@@ -33,6 +33,10 @@
 
 % ======== new ==============%
 \AtBeginDocument{\prehyphenchar"AD }
+% dots fix
+\makeatletter
+\protected\def\textonly@unskip{\relax\ifhmode\unskip\fi}
+\makeatother
 % load unicode-math
 \usepackage{unicode-math}
 \setmainfont{STIX Two Text}
