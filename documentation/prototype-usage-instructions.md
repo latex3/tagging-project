@@ -1,3 +1,7 @@
+---
+layout: "ngpdf"
+lang: "en"
+---
 # Using the LaTeX prototype for accessible PDF (as of 2024/06)
 
 The new code can be used with pdfLaTeX or the Unicode engine
@@ -27,7 +31,11 @@ list:
     math,
     firstaid}  
 }
-\documentclass{....}
+\documentclass{article}
+\begin{document}
+\section{Start}
+abc
+\end{document}
 ```
 The first four keys in the example set important document metadata,
 like the language, the requested PDF version and the standards the
@@ -74,6 +82,12 @@ header rows of the tables so that they can be tagged as `<TH>`
 cells. By default all cells are considered data cells. This can be done
 ```latex
 \tagpdfsetup{table/header-rows={1,2}}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Example}\\
+Name&Value\\
+This& 11 \\
+That & 2
+\end{tabular}
 ```
 generally (in the preamble) or on a table by table basis before the table.
 
@@ -82,6 +96,10 @@ merely used to ensure that the content is properly aligned, it should
 be turned into a presentation table with
 ```latex
 \tagpdfsetup{table/tagging=presentation}
+\begin{tabular}{ccc}
+\textbullet & \textbullet & \textbullet \\
+--- & --- & ---
+\end{tabular}
 ```
 
 ## Extended math support
@@ -95,6 +113,7 @@ For this the document should be compiled once with the command
 ```latex
 \tagpdfsetup{math/mathml/write-dummy}
 ```
+{: .norun :}
 
 This will write a file `<file>-mathml-dummy.html` which has a
 prepared section for every equation found in the document. The section
@@ -108,6 +127,8 @@ shows the LaTeX-source and a hash value and an empty
 <math></math>
 </div>
 ```
+{: .noedit :}
+
 The math should be filled with a suitable MathML representation and
 the dummy file should then be renamed to `<file>-mathml.html`.
 
