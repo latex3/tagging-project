@@ -7,14 +7,13 @@
 
 mkdir -p pdf17
 
-for i in $(grep -l documentclass */*[^7].tex */*[^7].ltx)
+for i in */*17.tex
 do
+    echo === $i
     d=${i%/*}
     f=${i##*/}
     b=${f/.tex}
     b=${b/.ltx}
-    bb=$b
-    b=${b}-17
     cd $d
     if [ ! -f ../pdf17/${b}.pdf ]  || [ "${b}".tex -nt  "../pdf17/${b}.pdf" ] ; then
 	lualatex-dev $b
