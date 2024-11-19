@@ -8902,14 +8902,15 @@
 
  - name: pstricks
    type: package
-   status: currently-incompatible
+   status: partially-compatible
    included-in: [tlc3, arxiv1]
    priority: 2
-   comments: "Tagging passes validation but is suboptimal. Future compatibility
-              will only be with lualatex; dvips cannot properly support PDF/UA."
+   comments: "Compatibility is only with lualatex; dvips cannot properly support PDF/UA.
+             Offers `alt`, `actualtext`, `artifact`, and `correct-BBox` keys.
+             Not tagged as figures."
    issues:
    tests: true
-   updated: 2024-07-12
+   updated: 2024-11-19
 
  - name: px-ds
    ctan-pkg: pxtxalfa

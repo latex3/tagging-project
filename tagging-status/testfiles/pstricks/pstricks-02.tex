@@ -1,0 +1,61 @@
+% !TeX program = txs:///lualatex | txs:///view-pdf
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase={phase-III,math,table,title,firstaid},
+  }
+\documentclass{article}
+
+\usepackage{pstricks,multido}
+
+\begin{document}
+
+Some text
+\psset{unit=1.2cm}
+\begin{pspicture}[alt=A pie chart](-2.2,-2.2)(2.2,2.2)
+\pswedge[fillstyle=solid,fillcolor=gray]{2}{0}{70}
+\pswedge[fillstyle=solid,fillcolor=lightgray]{2}{70}{200}
+\pswedge[fillstyle=solid,fillcolor=darkgray]{2}{200}{360}
+\SpecialCoor
+\psset{framesep=1.5pt}
+\rput(1.2;35){\psframebox*{\small\$9.0M}}
+\uput{2.2}[45](0,0){Oreos}
+\rput(1.2;135){\psframebox*{\small\$16.7M}}
+\uput{2.2}[135](0,0){Heath}
+\rput(1.2;280){\psframebox*{\small\$23.1M}}
+\uput{2.2}[280](0,0){M\&M}
+\end{pspicture}
+
+Some more text
+
+\begin{pspicture}[tag=artifact](-3.4,-3.4)(3.4,3.4)
+\newgray{mygray}{0} % Initialize ‘mygray’ for benefit
+\psset{fillstyle=solid,fillcolor=mygray} % of this line.
+\SpecialCoor
+\degrees[1.1]
+\multido{\n=0.0+.1}{11}{%
+\newgray{mygray}{\n}
+\psset{fillcolor=mygray}%
+\rput{\n}{\pswedge{3}{-.05}{.05}}
+\uput{3.2}[\n](0,0){\small\n}}
+\end{pspicture}
+
+And more text
+
+\begin{pspicture}[actualtext=A pie chart](-2.2,-2.2)(2.2,2.2)
+\pswedge[fillstyle=solid,fillcolor=gray]{2}{0}{70}
+\pswedge[fillstyle=solid,fillcolor=lightgray]{2}{70}{200}
+\pswedge[fillstyle=solid,fillcolor=darkgray]{2}{200}{360}
+\SpecialCoor
+\psset{framesep=1.5pt}
+\rput(1.2;35){\psframebox*{\small\$9.0M}}
+\uput{2.2}[45](0,0){Oreos}
+\rput(1.2;135){\psframebox*{\small\$16.7M}}
+\uput{2.2}[135](0,0){Heath}
+\rput(1.2;280){\psframebox*{\small\$23.1M}}
+\uput{2.2}[280](0,0){M\&M}
+\end{pspicture}
+
+\end{document}
