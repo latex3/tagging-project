@@ -110,7 +110,7 @@ are currently not created automatically but must be provided by the
 author.
 
 For this the document should be compiled once with the command
-```
+```none
 \tagpdfsetup{math/mathml/write-dummy}
 ```
 {: .norun :}
