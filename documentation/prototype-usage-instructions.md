@@ -6,8 +6,8 @@ lang: "en"
 
 <script>
 runlatex.preincludes = {
- "pre9": {
-    "pre10": "document-mathml.html",
+ "pre7": {
+    "pre8": "document-mathml.html",
    }
 }
 runlatex.packageregex = [
@@ -185,43 +185,11 @@ these forms. If using other engines then only the Associated File
 mechanism may be used.
 
 
-### Supplying MathML to be used for Associated File tagging,
-
-
-This will write a file `<file>-mathml-dummy.html` which has a
-prepared section for every equation found in the document. The section
-shows the LaTeX-source and a hash value and an empty
-`<math></math>` tag.
-```HTML
-<div>
-<h2>\mml 1</h2>
-<p>$x=1$</p>
-<p>8FD5BB0EEAA8887F6A312C99359A3B93</p>
-<math></math>
-</div>
-```
-{: .noedit :}
-
-
-LaTeX will write out a an initial dummy version of this file
-If you initially compile the document  with the following key setting
-
-```none
-\tagpdfsetup{math/mathml/write-dummy}
-```
-{: .norun :}
-
-This initial version will have a `<div>` for each formula but with an
-empth `<math>` element in each case.
-The math should be filled with a suitable MathML representation and
-the dummy file should then be renamed to `<file>-mathml.html`.
-
-Even if using pdfLaTeX for the final document, you may prefer to use
-LuaLaTeX for an intital run as LuaLaTeX will write out a version of
-the file with MathML already generated. If needed this MathML may
-still be edited and the file renamed to `<file>-mathml.html` .
 
 ### Associated MathML Files
+By default, when using LuaLaTeX and `unicode-math` the mathematics will be
+tagged with and Associated File of the generated MathML.
+
 ```
 \DocumentMetadata{uncompress,lang=en,
  testphase={phase-III,math,table,title},
@@ -252,6 +220,9 @@ A matrix equation.
 ```
 
 ### MathML Structure Element Tagging
+
+To use MathML Structure Element tagging you may use the
+`math/mathml/structelem` key as shown below.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
@@ -286,6 +257,27 @@ A matrix equation.
 
 \end{document}
 ```
+
+### Supplying MathML to be used for Associated File tagging,
+
+For engines other than LuaTeX, or if you want to modify the automatcally
+generated MathML,then LaTeX needs to be supplied a MathML in a separate file.
+
+The format of the file may be seen atin th eexample below.
+which has a
+prepared section for every equation found in the document. The section
+shows the LaTeX-source and a hash value and a
+`<math></math>` tag.  LaTeX can write out a "dummy" version of this file with an empty math element for each formula which must be filled in before latex is re-run to incorporate the MathML This is controlled by use of the key
+`math/mathml/write-dummy`.
+
+The math should be filled with a suitable MathML representation and
+the dummy file should then be renamed to `<file>-mathml.html`.
+
+Even if using pdfLaTeX for the final document, you may prefer to use
+LuaLaTeX for an intital run as LuaLaTeX will write out a version of
+the file with MathML already generated. If needed this MathML may
+still be edited and the file renamed to `<file>-mathml.html` .
+
 
 ### Associated MathML Files (pdflatex)
 
