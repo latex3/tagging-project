@@ -162,15 +162,15 @@ LuaLaTeX for an intital run as LuaLaTeX will write out a version of
 the file with MathML already generated. If needed this MathML may
 still be edited and the file renamed to `<file>-mathml.html` .
 
+### Associated MathML Files
 ```
-\DocumentMetadata{lang=en,uncompress
+\DocumentMetadata{uncompress,lang=en,
  testphase={phase-III,math,table,title},
  pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
 
 \documentclass{article}
 \usepackage{amsmath}
 
-\begin{document}
 \title{Math tagged with Associated Files}
 \author{LaTeX Team}
 \begin{document}
@@ -181,6 +181,43 @@ still be edited and the file renamed to `<file>-mathml.html` .
 
 If $x$ is real, then $x^{2} \geq 0$.
 
+A matrix equation.
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
+```
+
+### MathML Structure Element Tagging
+
+```
+\DocumentMetadata{uncompress,lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+\tagpdfsetup{
+ math/mathml/structelem,
+ math/tex/AF=false
+ }
+
+\documentclass{article}
+\usepackage{unicode-math}
+
+\title{Math tagged with MathML Structure Elements}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+A matrix equation.
 \[
 \begin{pmatrix}0&1\\1&0\end{pmatrix}
 \begin{pmatrix}a&b\\c&d\end{pmatrix}
