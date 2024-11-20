@@ -105,15 +105,29 @@ be turned into a presentation table with
 ## Extended math support
 
 To improve the accessibility of math equations the code tries to embed
-MathML representations of all equations. These MathML representations
-are currently not created automatically but must be provided by the
-author.
+MathML representations of all equations. As described below, these
+MathML representations may be created automatically if you are using
+LuaLaTeX, but may also be provided by the author.
 
-For this the document should be compiled once with the command
-```none
-\tagpdfsetup{math/mathml/write-dummy}
-```
-{: .norun :}
+Technically there are two methods of associating MathML with each
+formula:
+
+ * As an _associated file_ This is an embedded stream of XML within
+   the PDF that exactly matches the MathML that you would use in other
+   contexts such as a web page.
+ * Using MathML Namespace _Structure Element_ tagging. This is a
+   feature of PDF 2.0 that extends the PDF tags, as used for sections
+   and lists and other document structure, by a set of tags
+   corresponding to the elements defined by MathML.
+
+LuaLaTeX (via the `luamml` package which is loaded automatically when
+needed) includes a basic TeX to MathML convertor so can generate both
+these forms. If using other engines then only the Associated File
+mechanism may be used.
+
+
+### Supplying MathML to be used for Associated File tagging,
+
 
 This will write a file `<file>-mathml-dummy.html` which has a
 prepared section for every equation found in the document. The section
@@ -129,6 +143,52 @@ shows the LaTeX-source and a hash value and an empty
 ```
 {: .noedit :}
 
+
+LaTeX will write out a an initial dummy version of this file
+If you initially compile the document  with the following key setting
+
+```none
+\tagpdfsetup{math/mathml/write-dummy}
+```
+{: .norun :}
+
+This initial version will have a `<div>` for each formula but with an
+empth `<math>` element in each case.
 The math should be filled with a suitable MathML representation and
 the dummy file should then be renamed to `<file>-mathml.html`.
+
+Even if using pdfLaTeX for the final document, you may prefer to use
+LuaLaTeX for an intital run as LuaLaTeX will write out a version of
+the file with MathML already generated. If needed this MathML may
+still be edited and the file renamed to `<file>-mathml.html` .
+
+```
+\DocumentMetadata{lang=en,uncompress
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+\title{Math tagged with Associated Files}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
+```
+
 
