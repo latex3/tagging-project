@@ -2,6 +2,18 @@
 layout: "ngpdf"
 lang: "en"
 ---
+
+
+<script>
+runlatex.preincludes = {
+ "pre8": {
+    "pre9": "document-mathml.html",
+   }
+}
+</script>
+
+
+
 # Using the LaTeX prototype for accessible PDF (as of 2024/06)
 
 The new code can be used with pdfLaTeX or the Unicode engine
@@ -228,4 +240,109 @@ A matrix equation.
 \end{document}
 ```
 
+### Associated MathML Files (pdflatex)
 
+```
+\DocumentMetadata{uncompress,lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Math tagged with Associated Files}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+A matrix equation.
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
+```
+
+Here we supply an additional file with MathML versions of each formula
+
+```none
+<!DOCTYPE html>
+<html>
+
+ <div>
+  <h2>\mml 1</h2>
+  <p>$x$</p>
+  <p>332CC365A4987AACCE0EAD01B8BDCC0B</p>
+  <math>
+   <mi>x</mi>
+  </math>
+ </div>
+
+ <div>
+  <h2>\mml 2</h2>
+  <p>$x^{2} \geq 0$</p>
+  <p>1D298051244A67121717C47AA4459658</p>
+  <math>
+   <msup><mi>x</mi><mn>2</mn></msup>
+   <mo>≥</mo>
+   <mn>0</mn>
+  </math>
+ </div>
+
+ <div>
+  <h2>\mml 3</h2>
+  <p>\begin {equation*}\begin {pmatrix}0&amp;1\\1&amp;0\end {pmatrix} \begin {pmatrix}a&amp;b\\c&amp;d\end {pmatrix} = \begin {pmatrix}c&amp;d\\a&amp;b\end {pmatrix}\end {equation*}</p>
+  <p>D42165DF2B9CFE792932E789E4E0F7BD</p>
+  <math display="block">
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr>
+      <mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd>
+     </mtr>
+     <mtr>
+      <mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd>
+     </mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+   <mo>&#x2062;</mo>
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr>
+      <mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd>
+     </mtr>
+     <mtr>
+      <mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd>
+     </mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+   <mo>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr>
+      <mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd>
+     </mtr>
+     <mtr>
+      <mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd>
+     </mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+  </math>
+ </div>
+
+</html>
+```
+{: .norun :}
