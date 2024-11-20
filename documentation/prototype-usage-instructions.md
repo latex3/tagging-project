@@ -266,7 +266,7 @@ A matrix equation.
 \documentclass{article}
 \usepackage{amsmath}
 
-\title{Math tagged with Associated Files}
+\title{Math tagged with Associated Files (PdfTeX)}
 \author{LaTeX Team}
 \begin{document}
 
