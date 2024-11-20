@@ -6,8 +6,8 @@ lang: "en"
 
 <script>
 runlatex.preincludes = {
- "pre8": {
-    "pre9": "document-mathml.html",
+ "pre9": {
+    "pre10": "document-mathml.html",
    }
 }
 runlatex.packageregex = [
@@ -128,6 +128,34 @@ be turned into a presentation table with
 --- & --- & ---
 \end{tabular}
 ```
+
+## Handling lists and other block structures
+
+Something about lists having extended options similar to `enumitem`
+but implemented by default in the new code.
+
+```
+\begin{enumerate}[start=5] 
+\item Level A1
+  \begin{enumerate}
+  \item Level B1
+  \item Level B2
+  \end{enumerate}
+\item Level A2
+\end{enumerate}
+
+Some text outside the list, then resume the list:
+
+\begin{enumerate}[resume=true]
+\item Level A1
+  \begin{enumerate}
+  \item Level B1
+  \item Level B2
+  \end{enumerate}
+\item Level A2
+\end{enumerate}
+```
+
 
 ## Extended math support
 
