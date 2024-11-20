@@ -222,7 +222,8 @@ A matrix equation.
 ### MathML Structure Element Tagging
 
 To use MathML Structure Element tagging you may use the
-`math/mathml/structelem` key as shown below.
+`math/mathml/structelem` key as shown below. Here we also suppress
+adding the Associated Files.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
@@ -231,7 +232,8 @@ To use MathML Structure Element tagging you may use the
 
 \tagpdfsetup{
  math/mathml/structelem,
- math/tex/AF=false
+ math/tex/AF=false,
+ math/mathml/AF=false
  }
 
 \documentclass{article}
