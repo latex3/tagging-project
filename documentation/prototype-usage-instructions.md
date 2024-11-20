@@ -313,7 +313,7 @@ A matrix equation.
 ```
 
 Here we supply an additional file with MathML versions of each formula.  
-[pdfexample-mathml.html](pdfexample-mathml.html)  
+[pdflatexexample-mathml.html](pdflatexexample-mathml.html)  
 _View Source_ to see the MathML markup used.
 
 
