@@ -349,4 +349,5 @@ Here we supply an additional file with MathML versions of each formula
 
 </html>
 ```
-{: .norun :}{: .hide :}
+{: .norun :}
+{: .hide :}
