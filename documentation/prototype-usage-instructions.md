@@ -135,6 +135,8 @@ Something about lists having extended options similar to `enumitem`
 but implemented by default in the new code.
 
 ```
+\section{lists}
+
 A list starting at 5
 
 \begin{enumerate}[start=5] 
