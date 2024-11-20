@@ -306,12 +306,8 @@ Here we supply an additional file with MathML versions of each formula
    <mrow>
     <mo>(</mo>
     <mtable>
-     <mtr>
-      <mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd>
-     </mtr>
-     <mtr>
-      <mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd>
-     </mtr>
+     <mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+     <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
     </mtable>
     <mo>)</mo>
    </mrow>
@@ -319,12 +315,8 @@ Here we supply an additional file with MathML versions of each formula
    <mrow>
     <mo>(</mo>
     <mtable>
-     <mtr>
-      <mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd>
-     </mtr>
-     <mtr>
-      <mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd>
-     </mtr>
+     <mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>
+     <mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>
     </mtable>
     <mo>)</mo>
    </mrow>
@@ -332,12 +324,8 @@ Here we supply an additional file with MathML versions of each formula
    <mrow>
     <mo>(</mo>
     <mtable>
-     <mtr>
-      <mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd>
-     </mtr>
-     <mtr>
-      <mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd>
-     </mtr>
+     <mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>
+     <mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>
     </mtable>
     <mo>)</mo>
    </mrow>
