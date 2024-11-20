@@ -287,7 +287,8 @@ A matrix equation.
 \end{document}
 ```
 
-Here we supply an additional file with MathML versions of each formula
+Here we supply an [additional file with MathML versions of each formula.
+[pdfexample-mathml.html](pdfexample-mathml.html)
 
 ```none
 <!DOCTYPE html>
