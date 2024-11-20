@@ -10,6 +10,21 @@ runlatex.preincludes = {
     "pre9": "document-mathml.html",
    }
 }
+runlatex.packageregex = [
+    [ /\\includegraphics/,                    "\\usepackage{graphicx}\n"],
+    [ /\\begin{equation|align|gather|flalign|\\DeclareMathOperator/,"\\usepackage{unicode-math}\n"       ],
+    [ /tikz|pgf/,                             "\\usepackage{tikz}\n"          ],
+    [ /fancy/,                                "\\usepackage{fancyhdr}\n"      ],
+    [ /addplot|axis/,                         "\\usepackage{pgfplots}\n"      ],
+    [ /hyper|href|bookmark|\\url/,            "\\usepackage{hyperref}\n"      ],
+    [ /\\newcolumntype/,                      "\\usepackage{array}\n"         ],
+    [ /listing/,                              "\\usepackage{listings}\n"      ],
+    [ /\\blind/,                              "\\usepackage{blindtext}\n"     ],
+    [ /\\lipsum/,                             "\\usepackage{lipsum}\n"        ],
+    [ /color/,                                "\\usepackage{xcolor}\n"        ],
+    [ /pspicture/,                            "\\usepackage{pstricks}\n"      ]
+];
+
 </script>
 
 
@@ -83,8 +98,8 @@ context of the document. This can be done with additional keys that
 have been added to the `\includegraphics` command:
 
 ```latex
-\includegraphics[alt={this shows a yellow duck}]{duckimage}
-\includegraphics[artifact]{dekoration}
+\includegraphics[alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
+\includegraphics[artifact]{crinklepaper}
 ```
 
 ## Handling tables (`tabular`) in the document
