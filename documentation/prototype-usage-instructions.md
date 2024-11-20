@@ -98,8 +98,8 @@ context of the document. This can be done with additional keys that
 have been added to the `\includegraphics` command:
 
 ```latex
-\includegraphics[alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
-\includegraphics[width=2cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
+\includegraphics[height=4cm,alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
+\includegraphics[height=4cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
 ```
 
 ## Handling tables (`tabular`) in the document
