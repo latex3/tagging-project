@@ -261,13 +261,14 @@ A matrix equation.
 ### Supplying MathML to be used for Associated File tagging,
 
 For engines other than LuaTeX, or if you want to modify the automatcally
-generated MathML,then LaTeX needs to be supplied a MathML in a separate file.
+generated MathML,then LaTeX needs to be supplied MathML in a separate file.
 
-The format of the file may be seen atin th eexample below.
-which has a
+The format of the file may be seen in the example below.  which has a
 prepared section for every equation found in the document. The section
-shows the LaTeX-source and a hash value and a
-`<math></math>` tag.  LaTeX can write out a "dummy" version of this file with an empty math element for each formula which must be filled in before latex is re-run to incorporate the MathML This is controlled by use of the key
+shows the LaTeX-source and a hash value and a `<math></math>` tag.
+LaTeX can write out a "dummy" version of this file with an empty math
+element for each formula which must be filled in before LaTeX is
+re-run to incorporate the MathML. This is controlled by use of the key
 `math/mathml/write-dummy`.
 
 The math should be filled with a suitable MathML representation and
