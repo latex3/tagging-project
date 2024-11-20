@@ -188,7 +188,7 @@ mechanism may be used.
 
 ### Associated MathML Files
 By default, when using LuaLaTeX and `unicode-math` the mathematics will be
-tagged with and Associated File of the generated MathML.
+tagged with an Associated File of the generated MathML.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
