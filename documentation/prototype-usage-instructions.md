@@ -29,7 +29,7 @@ runlatex.packageregex = [
 
 
 
-# Using the LaTeX prototype for accessible PDF (as of 2024/06)
+# Using the LaTeX prototype for accessible PDF (as of 2024/11)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
