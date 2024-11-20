@@ -99,7 +99,7 @@ have been added to the `\includegraphics` command:
 
 ```latex
 \includegraphics[alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
-\includegraphics[artifact]{crinklepaper}
+\includegraphics[width=2cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
 ```
 
 ## Handling tables (`tabular`) in the document
