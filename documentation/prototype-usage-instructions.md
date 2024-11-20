@@ -289,7 +289,7 @@ A matrix equation.
 
 Here we supply an additional file with MathML versions of each formula.  
 [pdfexample-mathml.html](pdfexample-mathml.html)  
-(View Source) to see the MathML markup used.
+_View Source_ to see the MathML markup used.
 
 
 ```none
