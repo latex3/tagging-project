@@ -399,9 +399,9 @@ _View Source_ to see the MathML markup used.
 page.</p>
 
 <p>The <button>Generate tagged PDF</button> will run (Lua)LaTeX
-at `texlive.net` Links will be generated to directly view the PDF or
+at texlive.net. Links will be generated to directly view the PDF or
 to open the PDF at ngpdf.com which will allow the tagged structure to be
-navigated and the derived HTML view to be seen.</p>
+navigated and the derived HTML to be viewed.</p>
 
 <p><a href="https://davidcarlisle.github.io/latexcgi/">texlive.net help</a></p>
 
