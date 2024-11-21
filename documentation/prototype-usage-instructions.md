@@ -391,7 +391,7 @@ _View Source_ to see the MathML markup used.
 ----
 
 <details>
-<summary><h3>Notes on the Examples</h3><Summary>
+<summary><h3>Notes on the Examples</h3></summary>
 
 Each of the examples is shown in an online editor embedded in the
 page, the <button>Generate tagged PDF</button> will run (Lua)LaTeX
