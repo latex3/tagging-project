@@ -386,3 +386,24 @@ _View Source_ to see the MathML markup used.
 ```
 {: .norun :}
 {: .hide :}
+
+
+----
+
+<details>
+<summary><h3>Notes on the Examples</h3><Summary>
+
+Each of the examples is shown in an online editor embedded in the
+page, the <button>Generate tagged PDF</button> will run (Lua)LaTeX
+at `texlive.net` Links will be generated to directly view the PDF or
+to open the PDF at ngpdf.com which will allow the tagged structure to be
+navigated and the derived HTML view to be seen.
+
+[texlive.net help](https://davidcarlisle.github.io/latexcgi/)
+
+[ngpdf help](https://ngpdf.com/help)
+
+Something about not abusing free texlive.net and ngpdf.com services
+provided by DANTE and Duallab respectively.
+
+</details>
