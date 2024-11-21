@@ -107,6 +107,8 @@ have been added to the `\includegraphics` command:
 If the document contains data tables, the author has to identify the
 header rows of the tables so that they can be tagged as `<TH>`
 cells. By default all cells are considered data cells. This can be done
+generally (in the preamble) or on a table by table basis before the table.
+as shown in the following example.
 ```latex
 \tagpdfsetup{table/header-rows={1,2}}
 \begin{tabular}{lr}
@@ -116,11 +118,12 @@ This& 11 \\
 That & 2
 \end{tabular}
 ```
-generally (in the preamble) or on a table by table basis before the table.
+
 
 If a table should not be tagged as table, for example, because it is
 merely used to ensure that the content is properly aligned, it should
-be turned into a presentation table with
+be turned into a presentation table with the `table/tagging=presentation`
+key as shown below.
 ```latex
 \tagpdfsetup{table/tagging=presentation}
 \begin{tabular}{ccc}
@@ -131,8 +134,10 @@ be turned into a presentation table with
 
 ## Handling lists and other block structures
 
-Something about lists having extended options similar to `enumitem`
-but implemented by default in the new code.
+Most lists using standard LaTeX enviornmenst such as `enumerate` will
+be tagged automatically. The new list implementation also implement an
+optional _key-value_ interface with similar features to the well known
+`enumitem` package, although with a diffeent implementation.
 
 ```
 \section{lists}
