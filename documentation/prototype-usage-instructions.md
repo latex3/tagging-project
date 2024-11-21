@@ -393,7 +393,7 @@ _View Source_ to see the MathML markup used.
 
 <details>
 <summary><h3 style="display:inline">Notes on the Examples</h3></summary>
-
+<p></p>
 
 <p>Each of the examples is shown in an online editor embedded in the
 page.</p>
@@ -405,7 +405,7 @@ navigated and the derived HTML view to be seen.</p>
 
 <p><a href="https://davidcarlisle.github.io/latexcgi/">texlive.net help</a></p>
 
-<p><a href="https://ngpdf.com/help)">ngPDF help</a></p>
+<p><a href="https://ngpdf.com/help">ngPDF help</a></p>
 
 <p>Something about not abusing free texlive.net and ngpdf.com services
 provided by DANTE and Duallab respectively.</p>
