@@ -323,6 +323,10 @@ Here we supply an additional file with MathML versions of each formula.
 [pdflatexexample-mathml.html](pdflatexexample-mathml.html)  
 _View Source_ to see the MathML markup used.
 
+**Note:** If the math in the above example is edited, the checksum will not match
+and so the MathML for that formula will not be inserted. The MathML would need to be regenerated
+however we do not provide an interface for that in this online example.
+
 
 ```none
 <!DOCTYPE html>
@@ -407,7 +411,9 @@ navigated and the derived HTML to be viewed.</p>
 
 <p><a href="https://ngpdf.com/help">ngPDF help</a></p>
 
-<p>Something about not abusing free texlive.net and ngpdf.com services
-provided by DANTE and Duallab respectively.</p>
+<p>These examples run using the texlive.net and ngpdf.com services
+provided by DANTE and Duallab respectively.
+Please do not over use the services, they aren't set up to process heavy loads
+but are intended just to run small examples in order to show how to use it on your local machine.</p>
 
 </details>
