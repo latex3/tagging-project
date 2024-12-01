@@ -295,6 +295,8 @@ still be edited and the file renamed to `<file>-mathml.html` .
  testphase={phase-III,math,table,title},
  pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
 
+%\tagpdfsetup{math/mathml/write-dummy}
+
 \documentclass{article}
 \usepackage{amsmath}
 
