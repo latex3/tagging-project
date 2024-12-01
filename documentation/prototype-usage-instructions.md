@@ -132,6 +132,11 @@ key as shown below.
 \end{tabular}
 ```
 
+At the moment this isn't transfered well by the derivation algorithm
+from PDF to HTML, but this area will see improvements. (The PDF structure
+is already correct, as one cane see in ngPDF, but the HTML/CSS
+styling currently loses the grid layout.)
+
 ## Handling lists and other block structures
 
 Most lists using standard LaTeX enviornmenst such as `enumerate` will
@@ -165,6 +170,9 @@ Some text outside the list, then resume the list:
 \end{enumerate}
 ```
 
+Currently the derivation algorithm would need additional CSS to be supplied to force the alignment
+of the nested lists, but already viewing the above example in ngPDF, you can see that the correct logical
+list structure is correctly preserved in the derived HTML.
 
 ## Extended math support
 
