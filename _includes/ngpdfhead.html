@@ -1,0 +1,55 @@
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>{{ page.title }}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+    <style type="text/css" media="screen">
+      .ace_editor {
+	  border: 1px solid lightgray;
+	  margin-bottom: 1px !important;
+	  width: 100%;
+      }
+      div.spacer {
+	  margin-top:16px;
+      }
+      a { text-decoration:none; color:#5555FF}
+      a:hover	   {text-decoration:underline}
+    </style>
+    <script src="https://texlive.net/runlatex2.js"></script>
+    <script>
+
+      runlatex.editorlines=40;
+      runlatex.adddefaultpreamble=true;
+      runlatex.adddefaultengine=true;
+
+      runlatex.overleafURI=null;
+      
+      runlatex.texts ={
+	  "Open in Overleaf": "",
+	  "TeXLive.net":      "Generate Tagged PDF", 
+	  "Delete Output":    "Delete Output",
+	  "Compiling PDF":    "Compiling Tagged PDF",
+          "Added Code":       "",
+	  "End Added Code":   "",
+	  "Top Caption":      "",
+	  "metadata":         "\\DocumentMetadata{\n lang=en,\n testphase={phase-III,math,table,title},\n pdfversion=2.0,\n pdfstandard=ua-2,\n pdfstandard=a-4f,\n uncompress\n}"
+      }
+  function fillForm() {
+  if(document.location.search == "?context") {
+      editors["pre0"].setValue("% !TeX context\n\n\\starttext\n\n\\stoptext\n");
+      editors["pre0"].clearSelection();
+  } else if(document.location.search != "") {
+      editors["pre0"].setValue(decodeURIComponent(document.location.search.substring(1)),0);
+      editors["pre0"].clearSelection();
+      latexcgi("pre0");
+  }
+  }
+
+  window.addEventListener('load', fillForm, false);
+
+
+    </script>
+    <style>
+      body {margin:auto; max-width: 70em;}
+      div.h {background-color: #F5F5FF;margin: .5em 0;}
+      pre {background-color: #EEE;margin:0;padding: .5em;}
+    </style>

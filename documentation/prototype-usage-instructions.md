@@ -1,4 +1,35 @@
-# Using the LaTeX prototype for accessible PDF (as of 2024/06)
+---
+layout: "ngpdf"
+lang: "en"
+---
+
+
+<script>
+runlatex.preincludes = {
+ "pre7": {
+    "pre8": "document-mathml.html",
+   }
+}
+runlatex.packageregex = [
+    [ /\\includegraphics/,                    "\\usepackage{graphicx}\n"],
+    [ /\\begin{equation|align|gather|flalign|\\DeclareMathOperator/,"\\usepackage{unicode-math}\n"       ],
+    [ /tikz|pgf/,                             "\\usepackage{tikz}\n"          ],
+    [ /fancy/,                                "\\usepackage{fancyhdr}\n"      ],
+    [ /addplot|axis/,                         "\\usepackage{pgfplots}\n"      ],
+    [ /hyper|href|bookmark|\\url/,            "\\usepackage{hyperref}\n"      ],
+    [ /\\newcolumntype/,                      "\\usepackage{array}\n"         ],
+    [ /listing/,                              "\\usepackage{listings}\n"      ],
+    [ /\\blind/,                              "\\usepackage{blindtext}\n"     ],
+    [ /\\lipsum/,                             "\\usepackage{lipsum}\n"        ],
+    [ /color/,                                "\\usepackage{xcolor}\n"        ],
+    [ /pspicture/,                            "\\usepackage{pstricks}\n"      ]
+];
+
+</script>
+
+
+
+# Using the LaTeX prototype for accessible PDF (as of 2024/11)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
@@ -27,7 +58,11 @@ list:
     math,
     firstaid}  
 }
-\documentclass{....}
+\documentclass{article}
+\begin{document}
+\section{Start}
+abc
+\end{document}
 ```
 The first four keys in the example set important document metadata,
 like the language, the requested PDF version and the standards the
@@ -63,8 +98,8 @@ context of the document. This can be done with additional keys that
 have been added to the `\includegraphics` command:
 
 ```latex
-\includegraphics[alt={this shows a yellow duck}]{duckimage}
-\includegraphics[artifact]{dekoration}
+\includegraphics[height=4cm,alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
+\includegraphics[height=4cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
 ```
 
 ## Handling tables (`tabular`) in the document
@@ -72,42 +107,323 @@ have been added to the `\includegraphics` command:
 If the document contains data tables, the author has to identify the
 header rows of the tables so that they can be tagged as `<TH>`
 cells. By default all cells are considered data cells. This can be done
+generally (in the preamble) or on a table by table basis before the table.
+as shown in the following example.
 ```latex
 \tagpdfsetup{table/header-rows={1,2}}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Example}\\
+Name&Value\\
+This& 11 \\
+That & 2
+\end{tabular}
 ```
-generally (in the preamble) or on a table by table basis before the table.
+
 
 If a table should not be tagged as table, for example, because it is
 merely used to ensure that the content is properly aligned, it should
-be turned into a presentation table with
+be turned into a presentation table with the `table/tagging=presentation`
+key as shown below.
 ```latex
 \tagpdfsetup{table/tagging=presentation}
+\begin{tabular}{ccc}
+\textbullet & \textbullet & \textbullet \\
+--- & --- & ---
+\end{tabular}
 ```
+
+At the moment this isn't transfered well by the derivation algorithm
+from PDF to HTML, but this area will see improvements. (The PDF structure
+is already correct, as one cane see in ngPDF, but the HTML/CSS
+styling currently loses the grid layout.)
+
+## Handling lists and other block structures
+
+Most lists using standard LaTeX enviornmenst such as `enumerate` will
+be tagged automatically. The new list implementation also implement an
+optional _key-value_ interface with similar features to the well known
+`enumitem` package, although with a diffeent implementation.
+
+```
+\section{lists}
+
+A list starting at 5
+
+\begin{enumerate}[start=5] 
+\item Level A1
+  \begin{enumerate}
+  \item Level B1
+  \item Level B2
+  \end{enumerate}
+\item Level A2
+\end{enumerate}
+
+Some text outside the list, then resume the list:
+
+\begin{enumerate}[resume=true]
+\item Level A1
+  \begin{enumerate}
+  \item Level B1
+  \item Level B2
+  \end{enumerate}
+\item Level A2
+\end{enumerate}
+```
+
+Currently the derivation algorithm would need additional CSS to be supplied to force the alignment
+of the nested lists, but already viewing the above example in ngPDF, you can see that the correct logical
+list structure is correctly preserved in the derived HTML.
 
 ## Extended math support
 
 To improve the accessibility of math equations the code tries to embed
-MathML representations of all equations. These MathML representations
-are currently not created automatically but must be provided by the
-author.
+MathML representations of all equations. As described below, these
+MathML representations may be created automatically if you are using
+LuaLaTeX, but may also be provided by the author.
 
-For this the document should be compiled once with the command
-```latex
-\tagpdfsetup{math/mathml/write-dummy}
+Technically there are two methods of associating MathML with each
+formula:
+
+ * As an _associated file_ This is an embedded stream of XML within
+   the PDF that exactly matches the MathML that you would use in other
+   contexts such as a web page.
+ * Using MathML Namespace _Structure Element_ tagging. This is a
+   feature of PDF 2.0 that extends the PDF tags, as used for sections
+   and lists and other document structure, by a set of tags
+   corresponding to the elements defined by MathML.
+
+LuaLaTeX (via the `luamml` package which is loaded automatically when
+needed) includes a basic TeX to MathML convertor so can generate both
+these forms. If using other engines then only the Associated File
+mechanism may be used.
+
+
+
+### Associated MathML Files
+By default, when using LuaLaTeX and `unicode-math` the mathematics will be
+tagged with an Associated File of the generated MathML.
+
+```
+\DocumentMetadata{uncompress,lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+\documentclass{article}
+\usepackage{unicode-math}
+
+\title{Math tagged with Associated Files (luamml)}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+A matrix equation.
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
 ```
 
-This will write a file `<file>-mathml-dummy.html` which has a
+### MathML Structure Element Tagging
+
+To use MathML Structure Element tagging you may use the
+`math/mathml/structelem` key as shown below. Here we also suppress
+adding the Associated Files.
+
+```
+\DocumentMetadata{uncompress,lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+\tagpdfsetup{
+ math/mathml/structelem,
+ math/tex/AF=false,
+ math/mathml/AF=false
+ }
+
+\documentclass{article}
+\usepackage{unicode-math}
+
+\title{Math tagged with MathML Structure Elements}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+A matrix equation.
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
+```
+
+### Supplying MathML to be used for Associated File tagging,
+
+For engines other than LuaTeX, or if you want to modify the automatcally
+generated MathML,then LaTeX needs to be supplied MathML in a separate file.
+
+The format of the file may be seen in the example below.  which has a
 prepared section for every equation found in the document. The section
-shows the LaTeX-source and a hash value and an empty
-`<math></math>` tag.
-```HTML
-<div>
-<h2>\mml 1</h2>
-<p>$x=1$</p>
-<p>8FD5BB0EEAA8887F6A312C99359A3B93</p>
-<math></math>
-</div>
-```
+shows the LaTeX-source and a hash value and a `<math></math>` tag.
+LaTeX can write out a "dummy" version of this file with an empty math
+element for each formula which must be filled in before LaTeX is
+re-run to incorporate the MathML. This is controlled by use of the key
+`math/mathml/write-dummy`.
+
 The math should be filled with a suitable MathML representation and
 the dummy file should then be renamed to `<file>-mathml.html`.
 
+Even if using pdfLaTeX for the final document, you may prefer to use
+LuaLaTeX for an intital run as LuaLaTeX will write out a version of
+the file with MathML already generated. If needed this MathML may
+still be edited and the file renamed to `<file>-mathml.html` .
+
+
+### Associated MathML Files (pdflatex)
+
+```
+% !TeX pdflatex
+\DocumentMetadata{uncompress,lang=en,
+ testphase={phase-III,math,table,title},
+ pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+
+%\tagpdfsetup{math/mathml/write-dummy}
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Math tagged with Associated Files (PdfTeX)}
+\author{LaTeX Team}
+\begin{document}
+
+\maketitle
+
+\section{Basic mathematical expressions}
+
+If $x$ is real, then $x^{2} \geq 0$.
+
+A matrix equation.
+\[
+\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=
+\begin{pmatrix}c&d\\a&b\end{pmatrix}
+\]
+
+\end{document}
+```
+
+Here we supply an additional file with MathML versions of each formula.  
+[pdflatexexample-mathml.html](pdflatexexample-mathml.html)  
+_View Source_ to see the MathML markup used.
+
+**Note:** If the math in the above example is edited, the checksum will not match
+and so the MathML for that formula will not be inserted. The MathML would need to be regenerated
+however we do not provide an interface for that in this online example.
+
+
+```none
+<!DOCTYPE html>
+<html>
+
+ <div>
+  <h2>\mml 1</h2>
+  <p>$x$</p>
+  <p>332CC365A4987AACCE0EAD01B8BDCC0B</p>
+  <math>
+   <mi>x</mi>
+  </math>
+ </div>
+
+ <div>
+  <h2>\mml 2</h2>
+  <p>$x^{2} \geq 0$</p>
+  <p>1D298051244A67121717C47AA4459658</p>
+  <math>
+   <msup><mi>x</mi><mn>2</mn></msup>
+   <mo>≥</mo>
+   <mn>0</mn>
+  </math>
+ </div>
+
+ <div>
+  <h2>\mml 3</h2>
+  <p>\begin {equation*}\begin {pmatrix}0&amp;1\\1&amp;0\end {pmatrix} \begin {pmatrix}a&amp;b\\c&amp;d\end {pmatrix} = \begin {pmatrix}c&amp;d\\a&amp;b\end {pmatrix}\end {equation*}</p>
+  <p>D42165DF2B9CFE792932E789E4E0F7BD</p>
+  <math display="block">
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr>
+     <mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+   <mo>&#x2062;</mo>
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>
+     <mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+   <mo>=</mo>
+   <mrow>
+    <mo>(</mo>
+    <mtable>
+     <mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr>
+     <mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr>
+    </mtable>
+    <mo>)</mo>
+   </mrow>
+  </math>
+ </div>
+
+</html>
+```
+{: .norun :}
+{: .hide :}
+
+
+----
+
+
+<details>
+<summary><h3 style="display:inline">Notes on the Examples</h3></summary>
+<p></p>
+
+<p>Each of the examples is shown in an online editor embedded in the
+page.</p>
+
+<p>The <button>Generate tagged PDF</button> will run (Lua)LaTeX
+at texlive.net. Links will be generated to directly view the PDF or
+to open the PDF at ngpdf.com which will allow the tagged structure to be
+navigated and the derived HTML to be viewed.</p>
+
+<p><a href="https://davidcarlisle.github.io/latexcgi/">texlive.net help</a></p>
+
+<p><a href="https://ngpdf.com/help">ngPDF help</a></p>
+
+<p>These examples run using the texlive.net and ngpdf.com services
+provided by DANTE and Duallab respectively.
+Please do not over use the services, they aren't set up to process heavy loads
+but are intended just to run small examples in order to show how to use it on your local machine.</p>
+
+</details>
