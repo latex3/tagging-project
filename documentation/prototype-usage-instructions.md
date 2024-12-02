@@ -132,7 +132,7 @@ key as shown below.
 \end{tabular}
 ```
 
-At the moment this isn't transfered well by the derivation algorithm
+At the moment this isn't transferred well by the derivation algorithm
 from PDF to HTML, but this area will see improvements. (The PDF structure
 is already correct, as one cane see in ngPDF, but the HTML/CSS
 styling currently loses the grid layout.)
@@ -142,7 +142,7 @@ styling currently loses the grid layout.)
 Most lists using standard LaTeX enviornmenst such as `enumerate` will
 be tagged automatically. The new list implementation also implement an
 optional _key-value_ interface with similar features to the well known
-`enumitem` package, although with a diffeent implementation.
+`enumitem` package, although with a different implementation.
 
 ```
 \section{lists}
@@ -193,7 +193,7 @@ formula:
    corresponding to the elements defined by MathML.
 
 LuaLaTeX (via the `luamml` package which is loaded automatically when
-needed) includes a basic TeX to MathML convertor so can generate both
+needed) includes a basic TeX to MathML converter so can generate both
 these forms. If using other engines then only the Associated File
 mechanism may be used.
 
@@ -275,7 +275,7 @@ A matrix equation.
 
 ### Supplying MathML to be used for Associated File tagging,
 
-For engines other than LuaTeX, or if you want to modify the automatcally
+For engines other than LuaTeX, or if you want to modify the automatically
 generated MathML,then LaTeX needs to be supplied MathML in a separate file.
 
 The format of the file may be seen in the example below.  which has a
@@ -290,7 +290,7 @@ The math should be filled with a suitable MathML representation and
 the dummy file should then be renamed to `<file>-mathml.html`.
 
 Even if using pdfLaTeX for the final document, you may prefer to use
-LuaLaTeX for an intital run as LuaLaTeX will write out a version of
+LuaLaTeX for an intitial run as LuaLaTeX will write out a version of
 the file with MathML already generated. If needed this MathML may
 still be edited and the file renamed to `<file>-mathml.html` .
 
