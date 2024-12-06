@@ -5,6 +5,17 @@
    pdfstandard=a-4f, %  AF not in document catalog dictionary
    testphase = {phase-III,math,title}}
 
+\providecommand\thispdftagsetup{
+\tagpdfsetup{
+% math/mathml/structelem,
+ math/mathml/luamml=false,
+% math/mathml/sources=,
+%  math/mathml/write-dummy
+ math/alt/use=false,
+ math/tex/AF=true
+}
+}
+\thispdftagsetup
 
 \documentclass[12pt]{article}
 
