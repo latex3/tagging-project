@@ -75,9 +75,9 @@
 \def\@starttoc#1{\begingroup
   \let\autoindex\@gobble
   \makeatletter
-  \@starttoc@cfgpoint@before{#1}% <.------- new UF
+  \UseTaggingSocket{toc/starttoc/before}{#1}% <.------- new UF
   \@input{\jobname.#1}\if@filesw
-  \@starttoc@cfgpoint@after{#1}% <--------- new UF
+  \UseTaggingSocket{toc/starttoc/after}{#1}% <--------- new UF
   \expandafter\newwrite\csname tf@#1\endcsname
              \immediate\openout
                  \csname tf@#1\endcsname \jobname.#1\relax
