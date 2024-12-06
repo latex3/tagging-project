@@ -26,7 +26,7 @@ PDF 1.7 versions of the documents (also generated automatically by altering the 
 
 ## Using the LaTeX prototype for accessible PDF
 
-We have written a few guidelines explaining how to [use the prototype for generating accessible PDFs](https://latex3.github.io/tagging-project/documentation/prototype-usage-instructions.md). The documentation will be updated whenever we alter the still temporary interfaces.
+We have written a few guidelines explaining how to [use the prototype for generating accessible PDFs](https://latex3.github.io/tagging-project/documentation/prototype-usage-instructions). The documentation will be updated whenever we alter the still temporary interfaces.
 
 ## Status of LaTeX classes and packages with respect to Tagging
 
