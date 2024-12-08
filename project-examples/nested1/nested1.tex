@@ -1,0 +1,49 @@
+
+\DocumentMetadata{
+ lang=en,
+ testphase={
+     phase-III
+    ,math,table,title
+     },
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4f,
+ uncompress
+}
+\documentclass{article}
+\usepackage{unicode-math}
+
+\providecommand\thistagpdf{%
+%\tagpdfsetup{math/mathml/write-dummy}
+}
+\thistagpdf
+
+\usepackage{hyperref}
+\begin{document}
+
+\section{\label{x}Something about $x ∈ ℝ$}
+
+A link 
+\[
+  s(x) = x^2 \quad \text{ See \hyperref[x]{Something about $x ∈ ℝ$}}
+\]
+
+Cases (nested)
+\[
+f(x)=
+\begin{cases}
+  1 & \text{if $x<0$} \\
+  0 & \text{if $x=0$} \\
+  1 & \text{if $x>0$}          
+\end{cases}
+\]
+Cases (nested)
+\[
+g(x)=
+\begin{cases}
+  1 & \text{if } x<0 \\
+  0 & \text{if } x=0 \\
+  1 & \text{if } x>0          
+\end{cases}
+\]
+\end{document}
