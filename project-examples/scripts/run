@@ -7,7 +7,7 @@
 
 mkdir -p pdf20
 
-for i in $(grep -l documentclass */*[^7].tex */*[^7].ltx)
+for i in $(grep -E -l 'documentclass|DocumentMetadata' */*[^7].tex */*[^7].ltx)
 do
     d=${i%/*}
     f=${i##*/}
