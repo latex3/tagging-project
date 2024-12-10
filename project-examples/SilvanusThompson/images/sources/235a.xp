@@ -1,0 +1,33 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double mx(1.5), N(13), dx(mx/N);
+
+double f(double x)
+{
+  return 0.5*x;
+}
+
+int main()
+{
+  picture(P(0,0), P(2,1), "2.5 x 1.25in");
+
+  begin();
+  cme_bold();
+  plot(f, 0, 1.05*mx, 1);
+
+  for (int i=1; i <= N; ++i)
+    line(P(i*dx,0), P(i*dx, f(i*dx)));
+
+  label(P(mx, 0.5*f(mx)), P(4,0), "$y$", r);
+
+  brace(P(0,0), P(mx,0), "$l$", P(0,-2));
+
+  axis_labels();
+  axes();
+  caption("Fig.~63.", P(0,-6));
+  tikz_format();
+  end();
+}

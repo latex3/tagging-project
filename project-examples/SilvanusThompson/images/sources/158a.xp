@@ -1,0 +1,49 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(2.5,9), "2 x 2in");
+
+  begin();
+  cme_bold();
+
+  cme_dashed();
+  for (int i=2; i<=8; ++i)
+    {
+      P tmp(log(i), i);
+
+      // if (i%2 == 0 && i != 8) approximates the original figure
+      if ( i == 2 || i == 3 || i == 4 || i == 6 || i == 8) // matches the text
+	line(tmp, tmp&E_1);
+
+      line(tmp, tmp&E_2);
+    }
+
+  /*
+  // These lines appear to be in the original, but conflict with the text.
+  line(P(1,0), P(1, exp(1)));
+  line(P(2,0), P(2, exp(2)));
+  */
+
+  cme_solid();
+
+  h_axis_labels(P(1,0), P(2,0), 1, P(0,-4), b);
+  v_axis(P(0,1), P(0,8), 7);
+  v_axis_labels(P(0,1), P(0,8), 7, P(-4,0), l);
+
+  // kludges to get angle, positioning right
+  label_angle(Atan(exp(1.5)));
+  masklabel(P(1.25, 3), P(0,-4), "$x = \\log_{\\epsilon} y$", t);
+  label_angle(0);
+
+  plot(exp, 0, 2.125, 40);
+
+  axis_labels("$O$", "$x$", "$y$");
+  axes();
+  caption("Fig.~39.");
+  tikz_format();
+  end();
+}

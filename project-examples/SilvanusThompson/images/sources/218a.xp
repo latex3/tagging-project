@@ -1,0 +1,48 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double X1(1), X2(2), N(11), dx((X2 - X1)/N), X3(2.1);
+
+double f(double x)
+{
+  return 0.75 + 0.125*exp(x);
+}
+
+int main()
+{
+  picture(P(0,0), P(2.25,2), "2 x 2in");
+
+  begin();
+
+  P pA(0, f(0)), pP(X1, f(X1)), pQ(X2, f(X2)), pM(X1,0), pN(X2,0), dY(0,-0.25);
+
+  cme_bold();
+  plot(f, 0, X3, 40);
+
+  for (int i=0; i<=N; ++i)
+    line(P(X1 + i*dx, 0), P(X1 + i*dx, f(X1 + i*dx)));
+
+  label(pA, P(2,4), "$A$", tr);
+  label(pP, P(0,4), "$P$", t);
+  label(pQ, P(-2,0), "$Q$", tl);
+
+  label(P(X3, f(X3)), P(2,2), "$B$", tr);
+
+  label(pM, P(-2,2), "$M$", tl);
+  label(pN, P( 2,2), "$N$", tr);
+
+  label(midpt(pM, pP), P(-4,0), "$y_1$", l);
+  label(midpt(pN, pQ), P( 4,0), "$y_2$", r);
+
+  brace(P(0,0), pM, "$x_1$", P(0,-2));
+
+  brace(dY, dY + pN, "$x_2$", P(0,-2));
+
+  axis_labels("$O$", "", "$Y$");
+  axes();
+  caption("Fig.~52.", P(0,-24));
+  tikz_format();
+  end();
+}

@@ -1,0 +1,28 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double m0(0.4);
+
+void fin(double m)
+{
+  if (m != 0)
+    triangle(P(0,0), P(1,0), P(1,m));
+
+  else
+    line(P(0,0), P(1,0));
+}
+
+int main()
+{
+  picture(P(0,0), P(1,1), "0.5 x 0.5in");
+
+  begin();
+  cme_init();
+
+  fin(m0);
+
+  tikz_format();
+  end();
+}

@@ -1,0 +1,45 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double X0(0), dx(0.35), mb(0.66);
+
+double f(double x)
+{
+  return mb + 0.075*x*(1 + x*1.75*(1 + 0.5*x));
+} 
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2.25 x 2in");
+
+  begin();
+  cme_bold();
+
+  plot(f, 0, xmax(), 40);
+
+  for (int i=0; i<5; ++i)
+    {
+      P Q0(X0, f(X0));
+      X0 += dx;
+      P Q1(X0, f(X0)), Q(Q1.x1(), Q0.x2());
+      line(Q0, Q);
+      line(Q1, Q);
+
+      cme_dashed();
+      line(Q, Q&E_1);
+      cme_solid();
+    }
+
+  cme_dashed();
+  line(P(0,mb), P(xmax(), mb));
+  cme_solid();
+
+  axis_labels();
+  axes();
+
+  caption("Fig.~32.");
+  tikz_format();
+  end();
+}

@@ -1,0 +1,42 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double c0(1.5), m0(0.6);
+
+P dP(0.5, 0.5*m0);
+
+void steps(const P& loc)
+{
+  line(loc, loc + 10.5*dP);
+
+  for (int i=0; i<10; ++i)
+    {
+      line(loc + i*dP, loc + i*dP + (dP&E_1));
+      line(loc + i*dP + (dP&E_1), loc + (i+1)*dP);
+    }
+}
+
+int main()
+{
+  picture(P(0,0), P(5.5,5), "3.5 x 3.5in");
+
+  begin();
+  cme_bold();
+
+  cme_dashed();
+  steps(P(0,c0));
+  line(10*(dP&E_1), 10*dP);
+  cme_solid();
+
+  steps(P(0,0));
+
+  brace(P(0,c0), P(0,0), "$c$", P(-2,0));
+
+  axis_labels();
+  axes();
+  caption("Fig.~48.");
+  tikz_format();
+  end();
+}

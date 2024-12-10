@@ -1,0 +1,50 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return 0.5 + 0.375*x*x;
+} 
+
+double X0(0.75), dx(0.2), X1(1.5);
+
+int main()
+{
+  picture(P(-1.25,0), P(2,2), "3.5 x 2in");
+
+  begin();
+  cme_bold();
+
+  plot(f, xmin(), xmax(), 40);
+
+  P Q0(X0, f(X0)), Q0a(X0 + dx, f(X0 + dx)), Q0b(Q0a.x1(), Q0.x2());
+  P Q1(X1, f(X1)), Q1a(X1 + dx, f(X1 + dx)), Q1b(Q1a.x1(), Q1.x2());
+
+  line(Q0, Q0b);
+  line(Q0a, Q0b);
+
+  line(Q1, Q1b);
+  line(Q1a, Q1b);
+
+  cme_dashed();
+  line(Q0, Q0&E_1);
+  line(Q0a, Q0a&E_1);
+
+  line(Q1, Q1&E_1);
+  line(Q1a, Q1a&E_1);
+
+  label(P(0, f(0)), P(2,2), "$P$", tr);
+  label(Q0, P(-2,2), "$Q$", t);
+  label(Q1, P(-4,2), "$R$", t);
+
+  smallbrace(P(0,f(0)), P(0,0), "$b$");
+  cme_solid();
+  axis_labels();
+  axes();
+
+  caption("Fig.~22.");
+  tikz_format();
+  end();
+}

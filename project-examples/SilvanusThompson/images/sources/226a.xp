@@ -1,0 +1,35 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double rad1(1), rad2(1.5), th(40);
+
+int main()
+{
+  picture(P(-rad2,-rad2), P(rad2,rad2), "1.5 x 1.5in");
+
+  begin();
+  degrees();
+  arrow_inset(0.75);
+  arrow_ratio(1.5);
+  arrow_width(5);
+
+  P O(0,0);
+  cme_bold();
+  circle(O, rad1);
+  circle(O, rad2);
+
+  arrow(O, polar(rad1,0));
+  arrow(O, polar(rad2,th));
+
+  label(polar(0.5*rad1,0), P(0,-4), "$r_1$", b);
+  label_angle(th);
+  label(polar(0.5*rad2,th), P(-2,0), "$r_2$", t);
+
+  label_angle(0);
+
+  caption("Fig.~56.", P(0,12));
+  tikz_format();
+  end();
+}

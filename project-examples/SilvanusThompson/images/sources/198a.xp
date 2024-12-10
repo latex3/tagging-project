@@ -1,0 +1,22 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+void fin(const P& loc)
+{
+  triangle(loc, loc + P(0.5,0), loc + P(0.5, 0.3));
+}
+
+int main()
+{
+  picture(P(0,0), P(6,0.3), "4 x 0.2in");
+
+  begin();
+  cme_bold();
+  for (int i=0; i<10; ++i)
+    fin(P(0.6*i,0));
+
+  tikz_format();
+  end();
+}

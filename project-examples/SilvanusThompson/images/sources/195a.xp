@@ -1,0 +1,35 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,-0.25), P(2,0.25), "3.75 x 1in");
+
+  begin();
+  cme_bold();
+
+  line(P(0,0), P(2,0));
+
+  h_axis_tick(P(1,0));
+  h_axis_tick(P(1.5,0));
+  h_axis_tick(P(1.75,0));
+  h_axis_tick(P(1.875,0));
+  h_axis_tick(P(1.9375,0));
+
+  tick_size(6);
+  h_axis_tick(P(0,0));
+  h_axis_tick(P(2,0));
+
+  brace(P(0,0), P(1,0), "$1$", P(0,-4));
+  font_size("footnotesize");
+  brace(P(1,0), P(1.5,0), "$1/2$", P(0,-4));
+  smallbrace(P(1.5,0), P(1.75,0), "$1/4$", P(0, -10));
+
+  label(P(1.8125,0), P(0,-16), "$1/8$", b);
+
+  caption("Fig.~46.", P(0,12));
+  tikz_format();
+  end();
+}

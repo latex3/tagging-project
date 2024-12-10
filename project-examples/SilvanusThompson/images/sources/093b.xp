@@ -1,0 +1,59 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double XMin(0.75);
+double f(double x)
+{
+  double u((x-XMin)*(x-XMin));
+  //  return 0.5 + 0.25*(2+x)*(x-XMin)*(x-XMin);
+  return 0.5 + 0.6*u*(1 + 0.5*u);
+} 
+
+double X0(0.2), dx(0.2), X1(1+X0), X2(1 + 3.5*X0);
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2.5 x 2in");
+
+  begin();
+  cme_bold();
+
+  plot(f, 0.025, 1.95, 60);
+
+  P Q0(X0, f(X0)), Q0a(X0 + dx, f(X0 + dx)), Q0b(Q0a.x1(), Q0.x2());
+  P Q1(X1, f(X1)), Q1a(X1 + dx, f(X1 + dx)), Q1b(Q1a.x1(), Q1.x2());
+  P Q2(X2, f(X2)), Q2a(X2 + dx, f(X2 + dx)), Q2b(Q2a.x1(), Q2.x2());
+
+  line(Q0, Q0b);
+  line(Q0a, Q0b);
+
+  line(Q1, Q1b);
+  line(Q1a, Q1b);
+
+  line(Q2, Q2b);
+  line(Q2a, Q2b);
+
+  cme_dashed();
+  line(Q0, Q0&E_1);
+  line(Q0a, Q0a&E_1);
+
+  line(Q1, Q1&E_1);
+  line(Q1a, Q1a&E_1);
+
+  line(Q2, Q2&E_1);
+  line(Q2a, Q2a&E_1);
+
+  cme_solid();
+  axis_labels();
+  axes();
+
+  line(P(XMin, 0), P(XMin, f(XMin)));
+  smallbrace(P(XMin, 0), P(XMin, f(XMin)),
+	     "$y$~\\textit{min}.", P(14,0));
+
+  caption("Fig.~15.");
+  tikz_format();
+  end();
+}

@@ -1,0 +1,42 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double rad1(1), dr(0.05), rad2(1.4), th(-30);
+
+int main()
+{
+  picture(P(-rad2,-rad2), P(rad2,rad2), "2 x 2in");
+
+  begin();
+  degrees();
+  /*
+  arrow_inset(0.75);
+  arrow_ratio(1.5);
+  arrow_width(5);
+  */
+
+  P O(0,0), lbl(polar(1.3*rad2, 15));
+
+  spline(lbl, polar(0.9*rad2, 15), P(rad1 + 0.5*dr,0));
+  masklabel(lbl, "$dr$");
+
+  cme_dashed();
+  ellipse(O, rad1*E_1, rad1*E_2, 0, 360, 60);
+  ellipse(O, (rad1 + dr)*E_1, (rad1 + dr)*E_2, 0, 360, 55);
+  cme_solid();
+
+  cme_bold();
+  circle(O, rad2);
+
+  line(O, polar(rad1,0));
+  line(O, polar(rad2,th));
+
+  label(polar(0.5*rad1,0), P(0,4), "$r$", t);
+  label(polar(0.5*rad2,th), P(-2,-2), "$R$", bl);
+
+  caption("Fig.~59.", P(0,12));
+  tikz_format();
+  end();
+}

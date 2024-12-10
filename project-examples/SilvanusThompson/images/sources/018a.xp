@@ -1,0 +1,21 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(1,1), "1.5 x 1.5in");
+
+  begin();
+  cme_init();
+
+  rect(P(0,0), P(1,1));
+  label(P(1,0.5), P(4,0), "$x$", r);
+  label(P(0.5, 1), P(0,4), "$x$", t);
+
+  caption("Fig.~1.");
+
+  tikz_format();
+  end();
+}

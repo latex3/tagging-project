@@ -1,0 +1,41 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f1(double x)
+{
+  //  return 2*x + 2.5*pow(x, 1.5);
+  return x*x*(1 + sqrt(x));
+}
+
+double f2(double x)
+{
+  // return 2*x - 2.5*pow(x, 1.5);
+  return x*x*(1 - sqrt(x));
+}
+
+int main()
+{
+  picture(P(0,0), P(1.2,0.33), "2.5 x 2.5in");
+
+  begin();
+  cme_bold();
+  plot(f1, 0, 0.4, 40);
+  plot(f2, 0, 1.05, 60);
+
+  axis Ax(P(0,0), P(1,0), 5, P(0,-4), b);
+  Ax.unmark(1).draw();
+
+  label(P(1,0), P(2,-2), "$1.0$", bl);
+
+  axis Ay(P(0,0), P(0,0.3), 3, P(-4,0), l);
+  Ay.unmark(0).draw();
+
+  axis_labels("", "$x$", "$y$");
+  axes(0);
+
+  caption("Fig.~30.");
+  tikz_format();
+  end();
+}

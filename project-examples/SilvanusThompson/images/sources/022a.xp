@@ -1,0 +1,39 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+const double dx(0.333);
+double rad(0.45*(2 - dx));
+const double m(sqrt(1.0/3));
+
+int main()
+{
+  picture(P(0,0), P(2,1.25), "2.5 x 1.5625in");
+
+  begin();
+  cme_init();
+  P O(0,0);
+
+  triangle(O, P(2,0), P(2, 2*m));
+  line(P(2 - dx, 0), P(2 - dx, m*(2 - dx)));
+  line(P(2 - dx, m*(2 - dx)), P(2, m*(2 - dx)));
+
+  label(P(1 - 0.5*dx, 0), P(0,-4), "$x$", b);
+  label(P(2 - 0.5*dx, 0), P(0,-4), "$dx$", b);
+
+  label(P(2 - dx, 0.5*m*(2 - dx)), P(-4, 0), "$y$", l);
+  label(P(2, 0.5*m*(2 - dx)), P(4,0), "$y$", r);
+
+  label(P(2, m*(2 - 0.5*dx)), P(4,0), "$dy$", r);
+
+  label(polar(rad, 15), P(2,0), "$30°$", tr);
+  bold();
+  cme_dashed();
+  arc_arrow(O, rad, 15, 30);
+  arc_arrow(O, rad, 15, 0);
+
+  caption("Fig.~4.");
+  tikz_format();
+  end();
+}

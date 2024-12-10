@@ -1,0 +1,69 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double th)
+{
+  return Sin(th);
+}
+
+int main()
+{
+  picture(P(0,-1.1), P(1,1.1), "4 x 2in");
+
+  begin();
+  revolutions();
+  cme_bold();
+
+  v_axis(P(0,-1), P(0,1), 20);
+  v_axis_labels(P(0,-1), P(0,-0.5), 1, P(-4,0), l);
+  v_axis_labels(P(0,0.5), P(0,1), 1, P(-4,0), l);
+
+  line(P(0,0), P(1,0), 10);
+  line(P(0,ymin()), P(0,ymax()));
+
+  plot(f, 0, 1.01, 120);
+  cme_dashed();
+  font_size("footnotesize");
+  for (int i=1; i<=12; ++i)
+    {
+      double t(i*1.0/12);
+      line(P(t,0), P(t, f(t)));
+
+      if (i==1)
+	masklabel(P(t,0), P(0,-2), "$30°$", b);
+
+      else if (i==2)
+	masklabel(P(t,0), P(0,-2), "$60°$", b);
+
+      else if (i==3)
+	masklabel(P(t,0), P(0,-2), "$90°$", b);
+
+      else if (i==4)
+	masklabel(P(t,0), P(0,-2), "$120°$", b);
+
+      else if (i==5)
+	masklabel(P(t,0), P(0,-2), "$150°$", b);
+
+      else if (i==6)
+	masklabel(P(t,0), P(0,-2), "$180°$", b);
+
+      else if (i==9)
+	masklabel(P(t,0), P(0,-2), "$270°$", b);
+
+      else if (i==12)
+	masklabel(P(t,0), P(0,-2), "$360°$", b);
+    }
+
+  font_size();
+  line(P(0,1), P(0.25,1));
+  cme_solid();
+
+  label(P(1,0), P(2,4), "$\\theta$", tr);
+  label(P(0,ymax()), P(0,4), "$y$", t);
+
+  caption("Fig.~44.", P(0,12)); // Swapping labels
+  tikz_format();
+  end();
+}

@@ -1,0 +1,51 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double mb(0.75), dx(0.5);
+
+double f(double x)
+{
+  double u(x - 1);
+  return mb + 0.5*u*u;
+}
+
+void tgt(double x)
+{
+  arrow(P(x, f(x)), P(x + dx, f(x) + dx*1000*(f(x + 0.001) - f(x))));
+}
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2.25 x 2in");
+
+  begin();
+  degrees();
+  arrow_inset(0.75);
+  arrow_ratio(1.5);
+  arrow_width(5);
+
+  cme_bold();
+
+  P M(1, f(1));
+
+  plot(f, 0.125, 1.875, 40);
+
+  tgt(0.125);
+  tgt(1.5);
+
+  label(M, P(0,4), "$M$", t);
+  brace(P(0,0), M&E_1, "$x$");
+
+  brace(M&E_1, M, "$y$ \\textit{min}.", P(16,0));
+
+  cme_dashed();
+  line(M, M&E_1);
+  cme_solid();
+  axis_labels();
+  axes();
+  caption("Fig.~34.");
+  tikz_format();
+  end();
+}

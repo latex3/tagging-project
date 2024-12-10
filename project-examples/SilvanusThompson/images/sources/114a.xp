@@ -1,0 +1,48 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double ma(1.5), mb(0.875), rad(0.625), th(22.5);
+
+P ctr(ma, mb);
+
+int main()
+{
+  picture(P(0,0), P(2.5,2), "2.5 x 2in");
+
+  begin();
+  degrees();
+
+  cme_bold();
+  P Q(ctr + polar(rad, th));
+
+  cme_dashed();
+  line(P(ma,0), P(ma, mb + rad));
+  line(ctr, ctr&E_2);
+
+  line(Q, Q&E_1);
+  line(Q, Q&E_2);
+  cme_solid();
+
+  brace(P(0,mb), P(0,0), "$b$");
+  brace(P(0,0), P(ma,0), "$a$");
+
+  brace(Q&E_1, P(0,0), "$x$");
+  brace(Q&E_1, Q, "$y$");
+
+  label(ctr, P(-2,-2), "$C$", bl);
+
+  label_angle(th);
+  masklabel(ctr + polar(0.5*rad, th), P(0,0), "$r$", t);
+
+  circle(ctr, rad);
+  triangle(ctr, P(Q.x1(), mb), Q);
+
+  label_angle(0);
+  axis_labels();
+  axes();
+  caption("Fig.~29.");
+  tikz_format();
+  end();
+}

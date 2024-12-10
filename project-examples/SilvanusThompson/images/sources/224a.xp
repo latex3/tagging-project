@@ -1,0 +1,46 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return x/3;
+}
+
+int main()
+{
+  picture(P(-2.5,-1), P(13.5,7), "3.2 x 1.6in");
+
+  begin();
+  cme_bold();
+  fill(Black(0.05));
+  rect(P(3,0), P(6,1));
+  rect(P(6,0), P(9,2));
+  rect(P(9,0), P(12,3));
+  fill(false);
+
+  h_axis_labels(P(3,0), P(12,0), 3, P(0,-4), b);
+  v_axis_labels(P(0,1), P(0,5), 4, P(-4,0), l);
+
+  clip_box(P(0,0,-1), P(12.5,5.5,1));
+  plain();
+  grid(P(0,0), P(13,6), 13, 6);
+  clip_box();
+
+  pen(2);
+  white();
+  line(P(0,5.5), P(12.5,5.5));
+  line(P(12.5,0), P(12.5,5.5));
+  cme_bold();
+  black();
+
+  axis_labels("", "$x$", "$y$");
+  label(P(0,0), P(-2,-6), "$O$", bl);
+  axes();
+  plot(f, -2.5, 12, 1);
+
+  caption("Fig.~54.");
+  tikz_format();
+  end();
+}

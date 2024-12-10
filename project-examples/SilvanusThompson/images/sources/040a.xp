@@ -1,0 +1,47 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return 7*x*x;
+}
+
+int main()
+{
+  picture(P(-3.5,0), P(5.5,210), "2.5 x 2.25in");
+
+  begin();
+
+  cme_bold();
+  set_crop();
+  tick_size(6);
+  //  axis Ax(P(-4,0), P(6,0), 10, P(0,-6), b);
+  //  Ax.draw();
+  line(P(xmin(),0), P(xmax(),0));
+  h_axis_labels(P(-3,0), P(5,0), 8, P(0,-4), b);
+
+  axis Ay(P(0,0), P(0,200), 4, P(-8,0), l);
+  Ay.unmark(0).subdivide(5).draw();
+  line(P(0,200), P(0,210));
+
+
+  label(P(xmax(),0), P(4,0), "$x$", r);
+  label(P(0,ymax()), P(0,4), "$y$", t);
+
+  plot(f, -3.05, 5.125, 40);
+
+  cme_dashed();
+  for (int i=-3; i <= 5; ++i)
+    if (i != 0)
+      {
+	P tmp(i, f(i));
+	line(tmp, tmp&E_1);
+	line(tmp, tmp&E_2);
+      }
+
+  caption("Fig.~6.---\\upshape Graph of $y = 7x^2$.", P(0,-12));
+  tikz_format();
+  end();
+}

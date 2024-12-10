@@ -1,0 +1,40 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double ma(1), mb(2), X(2*ma), N(8), dx(X/N);
+
+double f(double x)
+{
+  return mb / (ma + x);
+}
+
+int main()
+{
+  picture(P(-ma,0), P(1 + mb/ma, 3*ma), "2.75 x 2in");
+
+  begin();
+  cme_bold();
+  plot(f, -0.3*ma, xmax(), 40);
+
+  for (int i=0; i <= N; ++i)
+    line(P(i*dx,0), P(i*dx, f(i*dx)));
+
+  cme_dashed();
+  line(P(-ma,0), P(-ma, ymax()));
+  cme_solid();
+
+  brace(P(-ma,0), P(0,0), "$a$", P(0,-2));
+  brace(P(0,0), P(X,0), "$x$", P(0,-2));
+  brace(P(0,f(0)), P(0,0), "$\\dfrac{b}{a}$", P(-2,0));
+
+  label(P(xmax(),0), P(0,-4), "$X$", b);
+  label(P(0,ymax()), P(4, 0), "$Y$", r);
+  label(P(0,0), P(0,-12), "$O$", b);
+
+  axes();
+  caption("Fig.~55.", P(0,-8));
+  tikz_format();
+  end();
+}

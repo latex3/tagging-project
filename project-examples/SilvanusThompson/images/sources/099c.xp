@@ -1,0 +1,32 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  double u(fabs(x - 1));
+  return 1.25 - 1.5*u*(1 - u/(2 + 0.125*u*u));
+}
+
+int main()
+{
+  picture(P(0,0), P(2,1.5), "2 x 1.5in");
+
+  begin();
+  cme_bold();
+
+  plot(f, 0.125, 1, 20);
+  plot(f, 1, 1.875, 20);
+
+  cme_dashed();
+  line(P(1,0), P(1,f(1)));
+  cme_solid();
+
+  axis_labels();
+  axes();
+
+  caption("Fig.~25.");
+  tikz_format();
+  end();
+}

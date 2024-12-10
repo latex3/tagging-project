@@ -1,0 +1,48 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double v1(0.4), v2(1.25), mb(1), N(8), dx((v2-v1)/N), dy(-0.15);
+
+double f(double x)
+{
+  return 0.25*pow(x, -1.5);
+}
+
+int main()
+{
+  picture(P(0,0), P(2,1.25), "2.25 x 1.5in");
+
+  begin();
+  cme_bold();
+
+  set_crop();
+  plot(f, 0.125, 1.875, 40);
+  set_crop(false);
+
+  for (int i=0; i <= N; ++i)
+    {
+      double t(v1 + i*dx);
+      line(P(t,0), P(t, f(t)));
+    }
+
+  cme_dashed();
+  line(P(0,dy), P(0,0));
+  line(P(v2,dy), P(v2,0));
+  cme_solid();
+
+  smallbrace(P(0,0), P(v1,0), "$v_1$", P(0,-2));
+  brace(P(0,dy), P(v2,dy), "$v_2$", P(0,-2));
+
+  brace(P(v1,f(v1)), P(v1,0), "$p_1$", P(-2,0));
+  label(P(v2,0.5*f(v2)), P(4,-2), "$p_2$", r);
+
+  axis_labels("$O$", "$v$", "$p$");
+  H_axis();
+  V_axis(0);
+
+  caption("Fig.~58.", P(0,-16));
+  tikz_format();
+  end();
+}

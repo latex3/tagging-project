@@ -1,0 +1,54 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return 0.5*x;
+}
+
+int main()
+{
+  picture(P(-3.5,-2), P(5.5,10), "2.75 x 2.25in");
+
+  begin();
+
+  cme_bold();
+  set_crop();
+
+  line(P(xmin(),0), P(xmax(),0));
+  h_axis_labels(P(-3,0), P(-1,0), 2, P(-1,6), t);
+  h_axis_labels(P( 1,0), P(5,0), 4, P(0,-3), b);
+
+  line(P(0,-2), P(0,0));
+  v_axis(P(0,-1), P(0, 9), 10);
+  v_axis_labels(P(0,1), P(0,5), 4, P(-4,0), l);
+
+  label(P(xmax(),0), P(4,0), "$x$", r);
+  label(P(0,ymax()), P(-4,0), "$\\dfrac{dy}{dx}$", bl);
+
+  cme_dashed();
+  for (int i=-2; i <= 5; ++i)
+    if (i != 0)
+      {
+	P tmp(i, f(i));
+	line(tmp, tmp&E_1);
+	line(tmp, tmp&E_2);
+      }
+
+  masklabel(P(0,0), P(0,-1), "$0$", b);
+
+  cme_solid();
+  double X0(3.);
+  label_angle(Atan(0.5));
+
+  masklabel(P(X0, f(2)), P(0,2), "$\\dfrac{dy}{dx} = \\frac{1}{2}x$", t);
+
+  plot(f, -3.05, xmax(), 1);
+
+  label_angle(0);
+  caption("Fig.~24.");
+  tikz_format();
+  end();
+}

@@ -1,0 +1,63 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return 2 + 0.15*x - 1.666*pow(2.005 - x, 0.2);
+} 
+
+double X0(0.425), dx(0.225), X0a(X0 + dx),
+  X1(X0a+X0), X1a(X1 + dx),
+  X2(X1a+X0), X2a(X2 + dx);
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2.5 x 2in");
+
+  begin();
+  cme_bold();
+
+  P Q0(X0, f(X0)), Q0a(X0a, f(X0a)), Q0b(Q0a.x1(), Q0.x2());
+  P Q1(X1, f(X1)), Q1a(X1a, f(X1a)), Q1b(Q1a.x1(), Q1.x2());
+  P Q2(X2, f(X2)), Q2a(X2a, f(X2a)), Q2b(Q2a.x1(), Q2.x2());
+
+  line(Q0, Q0b);
+  line(Q0a, Q0b);
+
+  line(Q1, Q1b);
+  line(Q1a, Q1b);
+
+  line(Q2, Q2b);
+  line(Q2a, Q2b);
+
+  cme_dashed();
+  line(Q0, Q0&E_1);
+  line(Q0b, Q0a&E_1);
+
+  line(Q1, Q1&E_1);
+  line(Q1b, Q1a&E_1);
+
+  line(Q2, Q2&E_1);
+  line(Q2b, Q2a&E_1);
+
+  label(midpt(Q0, Q0b), P(0, -4), "$dx$", b);
+  label(midpt(Q0a, Q0b), P(4, 0), "$dy$", r);
+
+  label(midpt(Q1, Q1b), P(0, -4), "$dx$", b);
+  label(midpt(Q1a, Q1b), P(4, 0), "$dy$", r);
+
+  label(midpt(Q2, Q2b), P(0, -4), "$dx$", b);
+  label(midpt(Q2a, Q2b), P(4, 0), "$dy$", r);
+
+  cme_solid();
+  plot(f, 0.125, xmax(), 120);
+
+  axis_labels();
+  axes();
+
+  caption("Fig.~13.");
+  tikz_format();
+  end();
+}

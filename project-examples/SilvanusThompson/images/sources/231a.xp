@@ -1,0 +1,45 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double th0(35), th1(70), th2(85);
+
+double f(double th)
+{
+  return 0.25*(3 + Cos(th));
+}
+
+int main()
+{
+  picture(P(0,0), P(1.5,1), "2.4 x 1.6in");
+
+  begin();
+  degrees();
+
+  P O(0,0), pA(polar(f(th1), th1)), pB(polar(f(th2), th2));
+  cme_bold();
+  line(O, polar(f(th0), th0));
+  line(O, pA);
+  line(O, pB);
+
+  polarplot(f, 60, 95, 20);
+
+  label(pA, P(2,4), "$A$", t);
+  label(pB, P(0,4), "$B$", t);
+
+  label_angle(th0);
+  label(polar(0.6*f(th0), th0), P(0,0), "$r$", tl);
+
+  label_angle(th1);
+  arc_measure(O, cis(th1), cis(th2), P(2,2), "$d\\theta$", t, 36);
+
+  label_angle(0);
+  arc_measure(O, E_1, cis(th0), P(2,2), "$\\theta$", r, 18);
+
+  axis_labels("$O$", "$X$", "");
+  line(O, P(xmax(),0));
+  caption("Fig.~61.");
+  tikz_format();
+  end();
+}

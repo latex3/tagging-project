@@ -1,0 +1,71 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+const double XMin(0.75);
+const double a(sqrt(3)*XMin);
+double dy(0.125);
+
+double g(double x)
+{
+  x -= dy;
+  double u((x-XMin)*(x-XMin));
+  return 1.5 - 1.75*u/(1 + x);
+}
+
+P f(double x)
+{
+  return P(g(x), x);
+}
+
+double X0(0.75), dx(0.2);
+
+double h1(double x) { return X0; }
+double h2(double x) { return X0 + dx; }
+
+double Y0(newton(g, h1, 0.33)), Y0a(newton(g, h2, 0.33));
+double Y1(newton(g, h1, 2)), Y1a(newton(g, h2, 2));
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2.5 x 2in");
+
+  begin();
+  cme_bold();
+
+  plot(f, 0.025 + dy, xmax() + dy, 60);
+
+  P Q(f(XMin + dy)),
+    Q0(X0, Y0), Q0a(X0 + dx, Y0), Q0b(f(Y0a)),
+    Q1(X0, Y1), Q1a(X0 + dx, Y1), Q1b(f(Y1a));
+
+  line(Q0, Q0a);
+  line(Q0b, Q0a);
+
+  line(Q1, Q1a);
+  line(Q1b, Q1a);
+
+  label(midpt(Q0, Q0a), P(0,-4), "$dx$", b);
+  label(midpt(Q1, Q1a), P(0, 4), "$dx$", t);
+
+  label(midpt(Q0a, Q0b), P(4, 0), "$dy$", r);
+  label(midpt(Q1a, Q1b), P(4, 0), "$dy$", r);
+
+  v_axis_tick(Q);
+  label(Q, P(4,0), "$Q$", r);
+
+  cme_dashed();
+  line(P(X0,0), P(X0, Y1));
+  line(P(X0 + dx,0), P(X0 + dx, Y1a));
+
+  line(Q, Q&E_1);
+  cme_solid();
+
+  axis_labels();
+  axes();
+
+  caption("Fig.~18.");
+  tikz_format();
+  end();
+}

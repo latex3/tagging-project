@@ -1,0 +1,31 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double Y0(0.666), m(0.333);
+
+int main()
+{
+  picture(P(0,0), P(2,2), "2 x 2in");
+
+  begin();
+  cme_bold();
+
+  P Q(0,Y0);
+
+  line(Q, P(xmax(), Y0 + m*xmax()));
+  crop();
+
+  cme_dashed();
+  line(P(0,Y0), P(xmax(), Y0));
+  cme_solid();
+
+  brace(Q, P(0,0), "$b$");
+
+  axis_labels();
+  axes();
+  caption("Fig.~20.");
+  tikz_format();
+  end();
+}

@@ -1,0 +1,21 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(3,1), "2.1 x 0.7in");
+
+  begin();
+  cme_bold();
+
+  triangle(P(0,0), P(3,0), P(3,1));
+
+  cme_dashed();
+  grid(3,1);
+
+  caption("Fig.~21.", P(0,12));
+  tikz_format();
+  end();
+}

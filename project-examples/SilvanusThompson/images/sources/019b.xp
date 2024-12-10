@@ -1,0 +1,29 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+const double mx(0.85), dx(0.015), sz(mx + dx);
+
+int main()
+{
+  picture(P(0,0), P(1,1), "1.75 x 1.75in");
+
+  begin();
+  cme_init();
+
+  rect(P(0,0), P(sz, sz));
+  line(P(mx,0), P(mx, sz));
+  line(P(0, mx), P(sz, mx));
+
+  label(P(sz,0.5*sz), P(4,0), "$x\\cdot dx$", r);
+  label(P(0.5*sz, sz), P(0,4), "$x\\cdot dx$", t);
+  label(P(sz,sz), P(4,4), "$(dx)^2$", tr);
+
+  label(P(0.5*sz, 0.5*sz), "$x^2$");
+
+  caption("Fig.~3.", P(0,-4));
+
+  tikz_format();
+  end();
+}

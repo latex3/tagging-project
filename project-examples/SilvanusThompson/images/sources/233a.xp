@@ -1,0 +1,51 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double mx(0.5), my(0.33), dx(0.05), x1(mx - dx), x2(mx + dx);
+
+double f(double x)
+{
+  return sqrt((1 - x)*(1+x));
+}
+
+double MAX(1.1);
+
+int main()
+{
+  picture(P(-MAX,-MAX), P(MAX,MAX), "2 x 2in");
+
+  begin();
+  arrow_inset(0.75);
+  arrow_ratio(1.5);
+  arrow_width(5);
+
+  cme_dashed();
+  line(P(mx, 0), P(mx, f(mx)));
+  cme_solid();
+
+  arrow(P(mx - 3*dx, my), P(mx - dx, my));
+  arrow(P(mx + 3*dx, my), P(mx + dx, my));
+
+  label(P(x1, 0.66*f(x1)), P(-4,0), "$dx$", l);
+  label(P(x2, 0.66*f(x2)), P(4,0), "$y$", r);
+
+  smallbrace(P(mx,0), P(0,0), "$x$");
+
+  cme_bold();
+  circle();
+  line(P(x1, -f(x1)), P(x1, f(x1)));
+  line(P(x2, -f(x2)), P(x2, f(x2)));
+
+  label(P(0,0), P(-2,-2), "$O$", bl);
+  label(P(xmax(),0), P(2,-2), "$x$", br);
+  label(P(0,ymax()), P(-2,2), "$y$", tl);
+
+  line(P(xmin(), 0), P(xmax(), 0), 10);
+  line(P(0, ymin()), P(0, ymax()), 10);
+
+  caption("Fig.~62.", P(0,12));
+  tikz_format();
+  end();
+}

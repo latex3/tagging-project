@@ -1,0 +1,37 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+double len(1.625), X0(0.9), dx(0.1), X1(X0 + dx);
+
+double f(double x)
+{
+  return sqrt((len - x)*(len + x));
+}
+
+double Y0(f(X0)), Y1(f(X1));
+
+int main()
+{
+  picture(P(0,0), P(1,1.25), "2 x 2.5in");
+
+  begin();
+  cme_init();
+  P O(0,0), pA(X0,0), pB(0,Y0);
+
+  triangle(O, pA, pB);
+  triangle(O, P(X1,0), P(0,Y1));
+
+  brace(O, pA, "$x$");
+  brace(pB, O, "$y$");
+
+  label(O, P(-2,-4), "$O$", bl);
+  label(pA, P(2,-4), "$A$", b);
+  label(pB, P(2, 2), "$B$", tr);
+
+  caption("Fig.~5.", P(0,-8));
+
+  tikz_format();
+  end();
+}

@@ -1,0 +1,39 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+#include "cme_style.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(6,3.5), "3 x 1.75in");
+
+  begin();
+  cme_bold();
+
+  line(P(-0.25,0), P(0,0));
+  h_axis_tick(P(-0.25,0));
+  h_axis_tick(P( 0.25,0));
+
+  double dy(0.1);
+  P tail(P(0.25,0)), head;
+  for (int i=0; i<=10; ++i, dy += 0.04)
+    {
+      head = tail + P(0.5, dy);
+      triangle(tail, P(head.x1(), tail.x2()), head);
+
+      cme_dashed();
+      line(P(tail.x1() + 0.25,0), midpt(tail, head) + P(0, 0.25));
+      cme_solid();
+
+      tail = head;
+    }
+
+  h_axis_labels(P(1,0), P(5,0), 4, P(0,-4), b);
+  label(head, P(0,4), "$P$", t);
+
+  axis_labels();
+  axes();
+  caption("Fig.~50.");
+  tikz_format();
+  end();
+}
