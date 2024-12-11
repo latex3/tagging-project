@@ -390,7 +390,7 @@
   \settowidth{\TmpLen}{9999}%
   \noindent\parbox[b]{\linewidth-\TmpLen}{\ToCBox{#2}%
     \rule{0pt}{16pt}#1\hangindent6em #3\dotfill}% [** TN: Hard-coded spaces]
-  \PadTxt[r]{9999}{\pageref{#4}}\smallskip%
+  \PadTxt[r]{9999}{\pageref{#4}}\par\smallskip%
 }
 
 \newcommand{\ChapterSkip}{\vspace*{0.1\linewidth}}
