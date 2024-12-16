@@ -26,7 +26,7 @@ Tagging is then enabled by loading various modules through the
   lang        = en,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
-  pdfstandard = a-4, % or a-4f
+  pdfstandard = a-4f, % or a-4
   testphase   = 
    {phase-III, title,table, math, firstaid}  
 }
