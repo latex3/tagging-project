@@ -75,9 +75,11 @@ The PDF will (by default) be generated via a standard TeXLive 2024
   automatically generated MathML version.  The resulting tagging, and
   the derived HTML (using the MathML associated with each math
   formula) may be viewed by following the link to the ngPDF site.
- Initially the example will use a MathML "Associated File" for each
- math expression but if you uncomment the line indicated, geneartion
- of associated files is suppressed and instead MathML Structure elements
+
+
+Initially the example will use a MathML "Associated File" for each
+ math expression but if you uncomment the line indicated, generation
+ of associated files is suppressed and instead, MathML Structure elements
  will be used to tag the mathematics.
 
 The submitted TeX source is deleted as soon as the PDF is
