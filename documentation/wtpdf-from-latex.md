@@ -47,7 +47,7 @@ Display math
 \begin{pmatrix}1&2\\3&4\end{pmatrix}
 \begin{pmatrix}1&1\\0&1\end{pmatrix}
 =
-\begin{pmatrix}1&3\\2&6\end{pmatrix}
+\begin{pmatrix}1&3\\3&7\end{pmatrix}
 \]
 
 \end{document}
