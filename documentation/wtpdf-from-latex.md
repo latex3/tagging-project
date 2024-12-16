@@ -21,6 +21,7 @@ Tagging is then enabled by loading various modules through the
 `testphase` key.
 
 ```latex
+% \DocumentMetada to enable tagging and to select options such as the PDF and accessibility standards to target
 \DocumentMetadata{
   lang        = de,
   pdfversion  = 2.0,
@@ -29,9 +30,17 @@ Tagging is then enabled by loading various modules through the
   testphase   = 
    {phase-III, title,table, math, firstaid}  
 }
+
+% Uncomment this line to generate MathML Structure Elements rather than Associated Files.
+% \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
+
 \documentclass{article}
+% Using Uniocde math fonts improves the tagging of math.
 \usepackage{unicode-math}
+
+% Classic LaTeX document markup from here.
 \begin{document}
+
 \section{Start}
 Some inline mathematics involving $x\in\symbb{R}$.
 
@@ -52,6 +61,31 @@ Display math
 
 \end{document}
 ```
+
+
+----
+
+You may directly run the example above, or edit it within this web
+page before generating the PDF.  Please keep the examples
+relatively small.
+
+The PDF will (by default) be generated via a standard TeXLive 2024
+  lualatex-dev. The options used in the above example will tag every
+  math expression with the TeX source of the expression, and with an
+  automatically generated MathML version.  The resulting tagging, and
+  the derived HTML (using the MathML associated with each math
+  formula) may be viewed by following the link to the ngPDF site.
+ Initially the example will use a MathML "Associated File" for each
+ math expression but if you uncomment the line indicated, geneartion
+ of associated files is suppressed and instead MathML Structure elements
+ will be used to tag the mathematics.
+
+The submitted TeX source is deleted as soon as the PDF is
+generated, and the resulting PDF is deleted after an hour.
+If you use the links to view the PDF either directly in your browser
+or via the ngPDF editor, then you may download the PDF locally using
+the save menus in the browser.
+
 
 ----
 
