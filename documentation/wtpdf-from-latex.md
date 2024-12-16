@@ -23,7 +23,7 @@ Tagging is then enabled by loading various modules through the
 ```latex
 % \DocumentMetada to enable tagging and to select options such as the PDF and accessibility standards to target
 \DocumentMetadata{
-  lang        = de,
+  lang        = en,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4, % or a-4f
