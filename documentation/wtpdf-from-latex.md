@@ -11,7 +11,15 @@ lang: "en"
 To enable tagging in supported documents it is enough to add at the
 very beginning of the document, i.e., before `\documentclass`, a
 `\DocumentMetadata` declaration. It takes one argument, a key-value
-list:
+list.
+
+The first four keys in the example set important document metadata,
+like the language, the requested PDF version and the standards the
+document should comply with.
+
+Tagging is then enabled by loading various modules through the
+`testphase` key.
+
 ```latex
 \DocumentMetadata{
   lang        = de,
@@ -19,24 +27,31 @@ list:
   pdfstandard = ua-2,
   pdfstandard = a-4f, %or a-4
   testphase   = 
-   {phase-III,
-    title,
-    table,
-    math,
-    firstaid}  
+   {phase-III, title,table, math, firstaid}  
 }
 \documentclass{article}
+\usepackage{unicode-math}
 \begin{document}
 \section{Start}
-abc
+Some inline mathematics involving $x\in\symbb{R}$.
+
+A list of items
+\begin{enumerate}
+\item a first item;
+\item a second item;
+\item a third item.
+\end{enumerate}
+
+Display math
+\[
+\begin{pmatrix}1&2\\3&4\end{pmatrix}
+\begin{pmatrix}1&1\\0&1\end{pmatrix}
+=
+\begin{pmatrix}1&3\\2&6\end{pmatrix}
+\]
+
 \end{document}
 ```
-The first four keys in the example set important document metadata,
-like the language, the requested PDF version and the standards the
-document should comply with.
-
-Tagging is then enabled by loading various modules through the
-`testphase` key.
 
 ----
 
