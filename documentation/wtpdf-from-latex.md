@@ -6,7 +6,6 @@ lang: "en"
 
 # Generating Well Tagged PDF from LaTeX
 
-## Basic setup
 
 To enable tagging in supported documents it is enough to add at the
 very beginning of the document, i.e., before `\documentclass`, a
@@ -96,7 +95,7 @@ the save menus in the browser.
 <summary><h3 style="display:inline">Notes on the Example Server</h3></summary>
 <p></p>
 
-<p>Each of the examples is shown in an online editor embedded in the
+<p>The example is shown in an online editor embedded in the
 page.</p>
 
 <p>The <button>Generate tagged PDF</button> will run (Lua)LaTeX
@@ -111,6 +110,7 @@ navigated and the derived HTML to be viewed.</p>
 <p>These examples run using the texlive.net and ngpdf.com services
 provided by DANTE and Duallab respectively.
 Please do not over use the services, they aren't set up to process heavy loads
-but are intended just to run small examples in order to show how to use it on your local machine.</p>
+but are intended just to run small examples in order to show how to use
+LaTeX to generate tagged PDF on your local machine.</p>
 
 </details>
