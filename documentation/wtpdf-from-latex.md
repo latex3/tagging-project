@@ -26,7 +26,7 @@ Tagging is then enabled by loading various modules through the
   lang        = de,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
-  pdfstandard = a-4f, %or a-4
+  pdfstandard = a-4, % or a-4f
   testphase   = 
    {phase-III, title,table, math, firstaid}  
 }
@@ -35,7 +35,7 @@ Tagging is then enabled by loading various modules through the
 % \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
 
 \documentclass{article}
-% Using Uniocde math fonts improves the tagging of math.
+% Using Unicode math fonts improves the tagging of math.
 \usepackage{unicode-math}
 
 % Classic LaTeX document markup from here.
