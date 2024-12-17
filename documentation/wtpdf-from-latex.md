@@ -109,7 +109,7 @@ navigated and the derived HTML to be viewed.</p>
 <p><a href="https://ngpdf.com/help">ngPDF help</a></p>
 
 <p>These examples run using the texlive.net and ngpdf.com services
-provided by <a href="https:www.dante.de">DANTE</a> and <a href="https://duallab.com>Duallab</a> respectively.
+provided by <a href="https:www.dante.de">DANTE</a> and <a href="https://duallab.com">Duallab</a> respectively.
 Please do not over use the services, they are not set up to process heavy loads
 but are intended just to run small examples in order to show how to use
 LaTeX to generate tagged PDF.</p>
