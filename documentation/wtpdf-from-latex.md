@@ -92,26 +92,28 @@ generated, and the resulting PDF is deleted after an hour.
 ----
 
 
-<details>
+<details markdown="1">
+
 <summary><h3 style="display:inline">Notes on the Example Server</h3></summary>
-<p></p>
 
-<p>The example is shown in an online editor embedded in the
-page.</p>
 
-<p>The <button>Generate tagged PDF</button> button will run (Lua)LaTeX
+The example is shown in an online editor embedded in the
+page.
+
+The <button>Generate tagged PDF</button> button will run (Lua)LaTeX
 at texlive.net. Links will be generated to directly view the PDF or
 to open the PDF at ngpdf.com which will allow the tagged structure to be
-navigated and the derived HTML to be viewed.</p>
+navigated and the derived HTML to be viewed.
 
-<p><a href="https://davidcarlisle.github.io/latexcgi/">texlive.net help</a></p>
+[texlive.net help](https://davidcarlisle.github.io/latexcgi/)
 
-<p><a href="https://ngpdf.com/help">ngPDF help</a></p>
+[ngPDF help](https://ngpdf.com/help)
 
-<p>These examples run using the texlive.net and ngpdf.com services
-provided by <a href="https:www.dante.de">DANTE</a> and <a href="https://duallab.com">Duallab</a> respectively.
+These examples run using the texlive.net and ngpdf.com services
+provided by [DANTE](https:www.dante.de) and [Duallab](https://duallab.com) respectively.
 Please do not over use the services, they are not set up to process heavy loads
 but are intended just to run small examples in order to show how to use
-LaTeX to generate tagged PDF.</p>
+LaTeX to generate tagged PDF.
+
 
 </details>
