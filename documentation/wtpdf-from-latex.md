@@ -83,9 +83,6 @@ Initially the example will use a MathML "Associated File" for each
 
 The submitted TeX source is deleted as soon as the PDF is
 generated, and the resulting PDF is deleted after an hour.
-If you use the links to view the PDF either directly in your browser
-or via the ngPDF editor, then you may download the PDF locally using
-the save menus in the browser.
 
 
 ----
