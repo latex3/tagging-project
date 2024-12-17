@@ -20,13 +20,13 @@ Tagging is then enabled by loading various modules through the
 `testphase` key.
 
 ```latex
-% \DocumentMetada to enable tagging and to select options
-% such as the PDF and accessibility standards to target
+% Using the \DocumentMetadata key results in a tagged and accessible PDF file.
+% Use ‘pdfversion" and ‘pdfstandard” options to select the output file type.
 \DocumentMetadata{
   lang        = en,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
-  pdfstandard = a-4f, % or a-4
+  pdfstandard = a-4, % or a-4f
   testphase   = 
    {phase-III, title,table, math, firstaid}  
 }
