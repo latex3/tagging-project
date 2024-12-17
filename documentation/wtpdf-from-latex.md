@@ -32,6 +32,7 @@ Tagging is then enabled by loading various modules through the
 }
 
 % Remove this line to generate MathML Associated Files rather than Structure Elements
+% The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
 
 \documentclass{article}
@@ -98,7 +99,7 @@ generated, and the resulting PDF is deleted after an hour.
 <p>The example is shown in an online editor embedded in the
 page.</p>
 
-<p>The <button>Generate tagged PDF</button> will run (Lua)LaTeX
+<p>The <button>Generate tagged PDF</button> button will run (Lua)LaTeX
 at texlive.net. Links will be generated to directly view the PDF or
 to open the PDF at ngpdf.com which will allow the tagged structure to be
 navigated and the derived HTML to be viewed.</p>
@@ -108,9 +109,9 @@ navigated and the derived HTML to be viewed.</p>
 <p><a href="https://ngpdf.com/help">ngPDF help</a></p>
 
 <p>These examples run using the texlive.net and ngpdf.com services
-provided by DANTE and Duallab respectively.
-Please do not over use the services, they aren't set up to process heavy loads
+provided by <a href="https:www.dante.de">DANTE</a> and <a href="https://duallab.com>Duallab</a> respectively.
+Please do not over use the services, they are not set up to process heavy loads
 but are intended just to run small examples in order to show how to use
-LaTeX to generate tagged PDF on your local machine.</p>
+LaTeX to generate tagged PDF.</p>
 
 </details>
