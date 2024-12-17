@@ -21,7 +21,7 @@ Tagging is then enabled by loading various modules through the
 
 ```latex
 % Using the \DocumentMetadata key results in a tagged and accessible PDF file.
-% Use ‘pdfversion" and ‘pdfstandard” options to select the output file type.
+% Use ‘pdfversion’ and ‘pdfstandard’ options to select the output file type.
 \DocumentMetadata{
   lang        = en,
   pdfversion  = 2.0,
