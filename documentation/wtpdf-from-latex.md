@@ -28,8 +28,7 @@ Tagging is then enabled by loading various modules through the
   pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4, % or a-4f
-  testphase   = 
-   {phase-III, title,table, math, firstaid}  
+  testphase   = latest
 }
 
 % Remove this line to generate MathML Associated Files rather than Structure Elements
@@ -98,8 +97,7 @@ generated, and the resulting PDF is deleted after an hour.
   pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4f,
-  testphase   = 
-   {phase-III, title,table, math, firstaid}  
+  testphase   = latest
 }
 
 % Remove this line to generate MathML Associated Files rather than Structure Elements
