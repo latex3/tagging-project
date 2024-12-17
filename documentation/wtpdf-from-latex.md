@@ -6,6 +6,7 @@ lang: "en"
 
 # Generating Well Tagged PDF from LaTeX
 
+## An Intital Example
 
 To enable tagging in supported documents it is enough to add at the
 very beginning of the document, i.e., before `\documentclass`, a
@@ -88,6 +89,114 @@ two associated files, one with the TeX source, and one with generated MathML.
 The submitted TeX source is deleted as soon as the PDF is
 generated, and the resulting PDF is deleted after an hour.
 
+
+## A Larger Example
+
+```latex
+\DocumentMetadata{
+  lang        = en,
+  pdfversion  = 2.0,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f,
+  testphase   = 
+   {phase-III, title,table, math, firstaid}  
+}
+
+% Remove this line to generate MathML Associated Files rather than Structure Elements
+% The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
+\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
+
+\documentclass[a4paper,twocolumn]{article}
+
+\usepackage{unicode-math}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{A Larger Example}
+\date{2024-12-17}
+\author{The \LaTeX\ Team}
+
+\maketitle
+
+\begin{abstract}
+  An example document showing automatic tagging of typical structures
+  found in a \LaTeX\ document, including titles, sections, lists,
+  citations lists and mathematics. A two column layout is used, the
+  tagging enables the reading order to correctly follow the flow of
+  text through the columns.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+This document shows a typical two-column document incorporating tables, figures and mathematics.
+
+Apart from two commands at teh start to enable tagging, and a small
+amount of additional markup to give alternative texts for graphics
+inclusion, and to specify the heading rows of tables. The document
+just uses standard \LaTeX\ markup that would be used in any \LaTeX\
+document since the 1980's.
+
+\section{Document structures}
+
+\subsection{Mathematics}
+
+Let $p$ be a prime, then
+\[n^p=n \mod p\]
+
+An aligned set of equations:
+\begin{align}
+  f(x)&=\sin x + \cos y \\
+  g(x)&=2\cos x - 3\sin y
+\end{align}
+
+\subsection{Lists}
+Lists often occur in documents
+\begin{itemize}
+\item They may be unordered bullet lists
+\item Or may be numbered lists.
+  \begin{enumerate}
+  \item lists may also be nested in an outer list
+  \item \label{item-a}items within such a list may be referenced.
+  \end{enumerate}
+\end{itemize}
+Here we reference item~\ref{item-a}.
+
+\subsection{Figures and Tables}
+
+Small images may be shown inline
+\includegraphics[height=1em,alt=small skull in a diamond]{ghsystem_skull.jpg}
+and small tables may be shown within the paragraph:
+\begin{center}
+\tagpdfsetup{table/header-rows={1,2}}
+\begin{tabular}{lr}
+\multicolumn{2}{c}{Example}\\
+Name&Value\\
+This& 11 \\
+That & 2
+\end{tabular}
+\end{center}
+
+Larger figures are usually placed in a \emph{float} to be positioned at a suitable
+place to help with column and page breaking.
+\begin{figure}
+  \centering
+  \includegraphics[alt=example image A,width=.9\linewidth]{example-image-a}
+  \caption{Larger image set as a \emph{float}}
+\end{figure}
+
+\subsection{Citations}
+It is also possible to cite works from a bib\TeX\ database, here we
+cite \cite{article-full} and \cite{inbook-full} from the
+\texttt{xampl.bib} sample file distributed with bib\TeX.
+
+\bibliographystyle{plain}
+\bibliography{xampl}
+
+\end{document}
+```
 
 ----
 
