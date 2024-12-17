@@ -20,7 +20,8 @@ Tagging is then enabled by loading various modules through the
 `testphase` key.
 
 ```latex
-% \DocumentMetada to enable tagging and to select options such as the PDF and accessibility standards to target
+% \DocumentMetada to enable tagging and to select options
+% such as the PDF and accessibility standards to target
 \DocumentMetadata{
   lang        = en,
   pdfversion  = 2.0,
@@ -30,8 +31,8 @@ Tagging is then enabled by loading various modules through the
    {phase-III, title,table, math, firstaid}  
 }
 
-% Uncomment this line to generate MathML Structure Elements rather than Associated Files.
-% \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
+% Remove this line to generate MathML Associated Files rather than Structure Elements
+\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
 
 \documentclass{article}
 % Using Unicode math fonts improves the tagging of math.
@@ -40,7 +41,8 @@ Tagging is then enabled by loading various modules through the
 % Classic LaTeX document markup from here.
 \begin{document}
 
-\section{Start}
+\section{A small example}
+
 Some inline mathematics involving $x\in\symbb{R}$.
 
 A list of items
@@ -65,7 +67,7 @@ Display math
 ----
 
 You may directly run the example above, or edit it within this web
-page before generating the PDF.  Please keep the examples
+page, before generating the PDF.  Please keep the examples
 relatively small.
 
 The PDF will (by default) be generated via a standard TeXLive 2024
@@ -76,10 +78,11 @@ The PDF will (by default) be generated via a standard TeXLive 2024
   formula) may be viewed by following the link to the ngPDF site.
 
 
-Initially the example will use a MathML "Associated File" for each
- math expression but if you uncomment the line indicated, generation
- of associated files is suppressed and instead, MathML Structure elements
- will be used to tag the mathematics.
+Initially the example will use a MathML Structure Element
+tagging. If you remove the configuration line where indcated, then
+LaTeX will instead associate each math expression with
+two associated files, one with the TeX source, and one with generated MathML.
+
 
 The submitted TeX source is deleted as soon as the PDF is
 generated, and the resulting PDF is deleted after an hour.
