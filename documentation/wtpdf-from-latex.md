@@ -6,7 +6,7 @@ lang: "en"
 
 # Generating Well Tagged PDF from LaTeX
 
-## An Intital Example
+### An Initial Example
 
 To enable tagging in supported documents it is enough to add at the
 very beginning of the document, i.e., before `\documentclass`, a
