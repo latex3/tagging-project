@@ -55,10 +55,7 @@ A list of items
 
 Display math
 \[
-\begin{pmatrix}1&2\\3&4\end{pmatrix}
-\begin{pmatrix}1&1\\0&1\end{pmatrix}
-=
-\begin{pmatrix}1&3\\3&7\end{pmatrix}
+c=\sqrt{a^2+b^2}
 \]
 
 \end{document}
@@ -89,7 +86,22 @@ The submitted TeX source is deleted as soon as the PDF is
 generated, and the resulting PDF is deleted after an hour.
 
 
+
+<details markdown="1">
+
+<summary markdown="1">
+
+
 ## A Larger Example
+
+The above small example shows the basic features of a Tagged LaTeX document.
+Here we show a larger more complex two-column document including generated
+cross references and citations. Some familiarity with LaTeX is assumed, and
+we do not show this by default.
+
+</summary>
+
+
 
 ```latex
 \DocumentMetadata{
@@ -150,6 +162,14 @@ An aligned set of equations:
   g(x)&=2\cos x - 3\sin y
 \end{align}
 
+Matrices.
+\[
+\begin{pmatrix}1&2\\3&4\end{pmatrix}
+\begin{pmatrix}1&1\\0&1\end{pmatrix}
+=
+\begin{pmatrix}1&3\\3&7\end{pmatrix}
+\]
+
 \subsection{Lists}
 Lists often occur in documents
 \begin{itemize}
@@ -195,6 +215,8 @@ cite \cite{article-full} and \cite{inbook-full} from the
 
 \end{document}
 ```
+
+</details>
 
 ----
 
