@@ -3,6 +3,9 @@ layout: "ngpdf"
 lang: "en"
 ---
 
+<script>
+runlatex.editorlines=120;
+</script>
 
 # Generating Well Tagged PDF from LaTeX
 
@@ -101,7 +104,7 @@ we do not show this by default.
 <summary><h3 style="display:inline">A Larger Example</h3></summary>
 
 
-
+<p> </p>
 
 ```latex
 \DocumentMetadata{
