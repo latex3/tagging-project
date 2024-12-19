@@ -143,7 +143,7 @@ we do not show this by default.
 
 This document shows a typical two-column document incorporating tables, figures and mathematics.
 
-Apart from two commands at teh start to enable tagging, and a small
+Apart from two commands at the start to enable tagging, and a small
 amount of additional markup to give alternative texts for graphics
 inclusion, and to specify the heading rows of tables. The document
 just uses standard \LaTeX\ markup that would be used in any \LaTeX\
