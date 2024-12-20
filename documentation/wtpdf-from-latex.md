@@ -21,7 +21,9 @@ like the language, the requested PDF version and the standards the
 document should comply with.
 
 Tagging is then enabled by loading various modules through the
-`testphase` key.
+`testphase` key. The value `latest` loads all modules that we recommend
+so that it is not necessary to specify individual modules.
+
 
 ```latex
 % Using the \DocumentMetadata command results in a tagged and accessible PDF file.
@@ -34,7 +36,7 @@ Tagging is then enabled by loading various modules through the
   testphase   = latest
 }
 
-% Remove this line to generate MathML Associated Files rather than Structure Elements
+% Remove the next declaration line to generate MathML Associated Files rather than Structure Elements
 % The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
@@ -69,14 +71,14 @@ c=\sqrt{a^2+b^2}
 
 You may directly run the example above, or edit it within this web
 page, before generating the PDF.  Please keep the examples
-relatively small.
+relatively small to avoid overburdening the free service provide here.
 
 The PDF will (by default) be generated via a standard TeXLive 2024
-  lualatex-dev. The options used in the above example will tag every
-  math expression with the TeX source of the expression, and with an
-  automatically generated MathML version.  The resulting tagging, and
-  the derived HTML (using the MathML associated with each math
-  formula) may be viewed by following the link to the ngPDF site.
+lualatex-dev. The options used in the above example will tag every
+math expression with the TeX source of the expression, and with an
+automatically generated MathML version.  The resulting tagging, and
+the derived HTML (using the MathML associated with each math formula)
+may be viewed by following the link to the ngPDF site.
 
 
 Initially the example will use a MathML Structure Element
@@ -130,6 +132,8 @@ we do not show this by default.
 \date{2024-12-17}
 \author{The \LaTeX\ Team}
 
+\pagestyle{headings}
+
 \maketitle
 
 \begin{abstract}
@@ -148,7 +152,9 @@ This document shows a typical two-column document incorporating tables, figures 
 
 Apart from two commands at the start to enable tagging, and a small
 amount of additional markup to give alternative texts for graphics
-inclusion, and to specify the heading rows of tables. The document
+inclusion, and to specify the heading rows of tables\footnote{The%
+current tagging markup for tables is temporary and a new interface
+for tagging tables will be developed.}. The document
 just uses standard \LaTeX\ markup that would be used in any \LaTeX\
 document since the 1980's.
 
