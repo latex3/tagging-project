@@ -71,7 +71,7 @@ c=\sqrt{a^2+b^2}
 
 You may directly run the example above, or edit it within this web
 page, before generating the PDF.  Please keep the examples
-relatively small to avoid overburdening the free service provide here.
+relatively small to avoid overburdening the free service provided here.
 
 The PDF will (by default) be generated via a standard TeXLive 2024
 lualatex-dev. The options used in the above example will tag every
@@ -82,7 +82,7 @@ may be viewed by following the link to the ngPDF site.
 
 
 Initially the example will use a MathML Structure Element
-tagging. If you remove the configuration line where indcated, then
+tagging. If you remove the configuration line where indicated, then
 LaTeX will instead associate each math expression with
 two associated files, one with the TeX source, and one with generated MathML.
 
