@@ -9,7 +9,7 @@ runlatex.editorlines=120;
 
 # Generating Well Tagged PDF from LaTeX
 
-### An Initial Example
+## An Initial Example
 
 To enable tagging in supported documents it is enough to add at the
 very beginning of the document, i.e., before `\documentclass`, a
@@ -92,7 +92,8 @@ generated, and the resulting PDF is deleted after an hour.
 
 
 
-----
+
+## A Larger Example
 
 The above small example shows the basic features of a Tagged LaTeX document.
 Here we show a larger more complex two-column document including generated
@@ -103,7 +104,7 @@ we do not show this by default.
 
 <details markdown="1">
 
-<summary><h3 style="display:inline">A Larger Example (click here to open)</h3></summary>
+<summary><h3 style="display:inline">LaTeX Code (click here to open)</h3></summary>
 
 
 <p> </p>
@@ -229,10 +230,7 @@ cite \cite{article-full} and \cite{inbook-full} from the
 
 ----
 
-
-<details markdown="1">
-
-<summary><h3 style="display:inline">Notes on the Example Server</h3></summary>
+## Notes on the Example Server
 
 
 The example is shown in an online editor embedded in the
@@ -253,5 +251,3 @@ Please do not over use the services, they are not set up to process heavy loads
 but are intended just to run small examples in order to show how to use
 LaTeX to generate tagged PDF.
 
-
-</details>
