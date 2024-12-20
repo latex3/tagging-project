@@ -247,7 +247,8 @@ adding the Associated Files.
  math/mathml/structelem,
  math/tex/AF=false,
  math/mathml/AF=false
- }
+ math/mathml/sources=
+}
 
 \documentclass{article}
 \usepackage{unicode-math}
