@@ -36,7 +36,7 @@ Tagging is then enabled by loading various modules through the
 
 % Remove this line to generate MathML Associated Files rather than Structure Elements
 % The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
-\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
+\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
 \documentclass{article}
 % Using Unicode math fonts improves the tagging of math.
@@ -117,7 +117,7 @@ we do not show this by default.
 
 % Remove this line to generate MathML Associated Files rather than Structure Elements
 % The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
-\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false}
+\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
 \documentclass[a4paper,twocolumn]{article}
 
