@@ -103,7 +103,7 @@ we do not show this by default.
 
 <details markdown="1">
 
-<summary><h3 style="display:inline">A Larger Example</h3></summary>
+<summary><h3 style="display:inline">A Larger Example (click here to open)</h3></summary>
 
 
 <p> </p>
