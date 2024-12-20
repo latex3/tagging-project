@@ -36,7 +36,7 @@ so that it is not necessary to specify individual modules.
   testphase   = latest
 }
 
-% Remove the next declaration line to generate MathML Associated Files rather than Structure Elements
+% Remove the next declaration to generate MathML Associated Files rather than Structure Elements
 % The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
@@ -117,7 +117,7 @@ we do not show this by default.
   testphase   = latest
 }
 
-% Remove this line to generate MathML Associated Files rather than Structure Elements
+% Remove the next declaration to generate MathML Associated Files rather than Structure Elements
 % The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
