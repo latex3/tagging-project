@@ -1,0 +1,346 @@
+# MathML 4 (Core Level 1)
+# #######################
+
+#     Copyright 1998-2024 W3C (MIT, ERCIM, Keio, Beihang)
+# 
+#     Use and distribution of this code are permitted under the terms
+#     W3C Software Notice and License
+#     http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231
+
+default namespace m = "http://www.w3.org/1998/Math/MathML"
+namespace h = "http://www.w3.org/1999/xhtml"
+
+start |= math
+
+math = element math {math.attributes,ImpliedMrow}
+
+MathMLoneventAttributes =
+  attribute onabort {text}?,
+  attribute onauxclick {text}?,
+  attribute onblur {text}?,
+  attribute oncancel {text}?,
+  attribute oncanplay {text}?,
+  attribute oncanplaythrough {text}?,
+  attribute onchange {text}?,
+  attribute onclick {text}?,
+  attribute onclose {text}?,
+  attribute oncontextlost {text}?,
+  attribute oncontextmenu {text}?,
+  attribute oncontextrestored {text}?,
+  attribute oncuechange {text}?,
+  attribute ondblclick {text}?,
+  attribute ondrag {text}?,
+  attribute ondragend {text}?,
+  attribute ondragenter {text}?,
+  attribute ondragleave {text}?,
+  attribute ondragover {text}?,
+  attribute ondragstart {text}?,
+  attribute ondrop {text}?,
+  attribute ondurationchange {text}?,
+  attribute onemptied {text}?,
+  attribute onended {text}?,
+  attribute onerror {text}?,
+  attribute onfocus {text}?,
+  attribute onformdata {text}?,
+  attribute oninput {text}?,
+  attribute oninvalid {text}?,
+  attribute onkeydown {text}?,
+  attribute onkeypress {text}?,
+  attribute onkeyup {text}?,
+  attribute onload {text}?,
+  attribute onloadeddata {text}?,
+  attribute onloadedmetadata {text}?,
+  attribute onloadstart {text}?,
+  attribute onmousedown {text}?,
+  attribute onmouseenter {text}?,
+  attribute onmouseleave {text}?,
+  attribute onmousemove {text}?,
+  attribute onmouseout {text}?,
+  attribute onmouseover {text}?,
+  attribute onmouseup {text}?,
+  attribute onpause {text}?,
+  attribute onplay {text}?,
+  attribute onplaying {text}?,
+  attribute onprogress {text}?,
+  attribute onratechange {text}?,
+  attribute onreset {text}?,
+  attribute onresize {text}?,
+  attribute onscroll {text}?,
+  attribute onsecuritypolicyviolation {text}?,
+  attribute onseeked {text}?,
+  attribute onseeking {text}?,
+  attribute onselect {text}?,
+  attribute onslotchange {text}?,
+  attribute onstalled {text}?,
+  attribute onsubmit {text}?,
+  attribute onsuspend {text}?,
+  attribute ontimeupdate {text}?,
+  attribute ontoggle {text}?,
+  attribute onvolumechange {text}?,
+  attribute onwaiting {text}?,
+  attribute onwebkitanimationend {text}?,
+  attribute onwebkitanimationiteration {text}?,
+  attribute onwebkitanimationstart {text}?,
+  attribute onwebkittransitionend {text}?,
+  attribute onwheel {text}?,
+  attribute onafterprint {text}?,
+  attribute onbeforeprint {text}?,
+  attribute onbeforeunload {text}?,
+  attribute onhashchange {text}?,
+  attribute onlanguagechange {text}?,
+  attribute onmessage {text}?,
+  attribute onmessageerror {text}?,
+  attribute onoffline {text}?,
+  attribute ononline {text}?,
+  attribute onpagehide {text}?,
+  attribute onpageshow {text}?,
+  attribute onpopstate {text}?,
+  attribute onrejectionhandled {text}?,
+  attribute onstorage {text}?,
+  attribute onunhandledrejection {text}?,
+  attribute onunload {text}?,
+  attribute oncopy {text}?,
+  attribute oncut {text}?,
+  attribute onpaste {text}?
+
+# Sample set. May need preprocessing 
+# or schema extension to allow more see MathML Core (and HTML) spec
+MathMLDataAttributes =
+  attribute data-other {text}?
+
+
+# sample set, like data- may need preprocessing to allow more
+MathMLARIAattributes =
+  attribute aria-label {text}?,
+  attribute aria-describedby {text}?,
+  attribute aria-description {text}?,
+  attribute aria-details {text}?
+
+MathMLintentAttributes =
+  attribute intent {text}?,
+  attribute arg {xsd:NCName}?
+
+MathMLPGlobalAttributes = attribute id {xsd:ID}?,
+                   attribute class {xsd:NCName}?,
+                   attribute style {xsd:string}?,
+                   attribute dir {"ltr" | "rtl"}?,
+                   attribute mathbackground {color}?,
+                   attribute mathcolor {color}?,
+                   attribute mathsize {length-percentage}?,
+                   attribute mathvariant {xsd:string{pattern="\s*([Nn][Oo][Rr][Mm][Aa][Ll]|[Bb][Oo][Ll][Dd]|[Ii][Tt][Aa][Ll][Ii][Cc]|[Bb][Oo][Ll][Dd]-[Ii][Tt][Aa][Ll][Ii][Cc]|[Dd][Oo][Uu][Bb][Ll][Ee]-[Ss][Tt][Rr][Uu][Cc][Kk]|[Bb][Oo][Ll][Dd]-[Ff][Rr][Aa][Kk][Tt][Uu][Rr]|[Ss][Cc][Rr][Ii][Pp][Tt]|[Bb][Oo][Ll][Dd]-[Ss][Cc][Rr][Ii][Pp][Tt]|[Ff][Rr][Aa][Kk][Tt][Uu][Rr]|[Ss][Aa][Nn][Ss]-[Ss][Ee][Rr][Ii][Ff]|[Bb][Oo][Ll][Dd]-[Ss][Aa][Nn][Ss]-[Ss][Ee][Rr][Ii][Ff]|[Ss][Aa][Nn][Ss]-[Ss][Ee][Rr][Ii][Ff]-[Ii][Tt][Aa][Ll][Ii][Cc]|[Ss][Aa][Nn][Ss]-[Ss][Ee][Rr][Ii][Ff]-[Bb][Oo][Ll][Dd]-[Ii][Tt][Aa][Ll][Ii][Cc]|[Mm][Oo][Nn][Oo][Ss][Pp][Aa][Cc][Ee]|[Ii][Nn][Ii][Tt][Ii][Aa][Ll]|[Tt][Aa][Ii][Ll][Ee][Dd]|[Ll][Oo][Oo][Pp][Ee][Dd]|[Ss][Tt][Rr][Ee][Tt][Cc][Hh][Ee][Dd])\s*"}}?,
+                   attribute displaystyle {mathml-boolean}?,
+                   attribute scriptlevel {xsd:integer}?,
+                   attribute autofocus {mathml-boolean}?,
+                   attribute tabindex {xsd:integer}?,
+                   attribute nonce {text}?,
+		   MathMLoneventAttributes,
+                   # Extension attributes, no defined behavior
+                   MathMLDataAttributes,
+                   # No specified behavior in Core, see MathML4
+		   MathMLintentAttributes,
+                   # No specified behavior in Core, see WAI-ARIA
+		   MathMLARIAattributes
+                       
+
+
+math.attributes = MathMLPGlobalAttributes,
+                  attribute display {"block" | "inline"}?,
+                  # No specified behavior in Core, see MathML4
+                  attribute alttext {text}?
+
+
+annotation = element annotation {MathMLPGlobalAttributes,encoding?,text}
+
+anyElement =  element (*) {(attribute * {text}|text| anyElement)*}
+
+annotation-xml = element annotation-xml {annotation-xml.attributes,
+                                         (MathExpression*|anyElement*)}
+
+annotation-xml.attributes = MathMLPGlobalAttributes, encoding?
+
+encoding=attribute encoding {xsd:string}?
+
+
+semantics = element semantics {semantics.attributes,
+                               MathExpression, 
+                              (annotation|annotation-xml)*}
+
+semantics.attributes = MathMLPGlobalAttributes
+
+mathml-boolean = xsd:string {
+    pattern = '\s*([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])\s*'
+}
+			    
+length-percentage = xsd:string {
+  pattern = '\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(r?em|ex|in|cm|mm|p[xtc]|Q|v[hw]|vmin|vmax|%))|0)\s*'
+}
+
+MathExpression = TokenExpression|
+                     mrow|mfrac|msqrt|mroot|mstyle|merror|mpadded|mphantom|
+                     msub|msup|msubsup|munder|mover|munderover|
+                     mmultiscripts|mtable|maction|
+		     semantics
+
+MathMalignExpression = MathExpression
+			   
+ImpliedMrow = MathMalignExpression*
+
+TableRowExpression = mtr
+
+MultiScriptExpression = (MathExpression|none),(MathExpression|none)
+
+
+color =  xsd:string {
+  pattern = '\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[a-zA-Z]+|[a-zA-Z]+\s*\([0-9, %.]+\))\s*'}
+
+TokenExpression = mi|mn|mo|mtext|mspace|ms
+
+
+textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*})*
+			    
+token.content = textorHTML
+		    
+mi = element mi {mi.attributes, token.content}
+mi.attributes = 
+  MathMLPGlobalAttributes
+
+mn = element mn {mn.attributes, token.content}
+mn.attributes = 
+  MathMLPGlobalAttributes
+
+mo = element mo {mo.attributes, token.content}
+mo.attributes = 
+  MathMLPGlobalAttributes,
+  attribute form {"prefix" | "infix" | "postfix"}?,
+  attribute lspace {length-percentage}?,
+  attribute rspace {length-percentage}?,
+  attribute stretchy {mathml-boolean}?,
+  attribute symmetric {mathml-boolean}?,
+  attribute maxsize {length-percentage}?,
+  attribute minsize {length-percentage}?,
+  attribute largeop {mathml-boolean}?,
+  attribute movablelimits {mathml-boolean}?
+
+
+mtext = element mtext {mtext.attributes, token.content}
+mtext.attributes = 
+  MathMLPGlobalAttributes
+
+mspace = element mspace {mspace.attributes, empty}
+mspace.attributes = 
+  MathMLPGlobalAttributes,
+  attribute width {length-percentage}?,
+  attribute height {length-percentage}?,
+  attribute depth {length-percentage}?
+
+ms = element ms {ms.attributes, token.content}
+ms.attributes = 
+  MathMLPGlobalAttributes
+
+
+none = element none {none.attributes,empty}
+none.attributes = 
+  MathMLPGlobalAttributes
+
+mprescripts = element mprescripts {mprescripts.attributes,empty}
+mprescripts.attributes = 
+  MathMLPGlobalAttributes
+
+mrow = element mrow {mrow.attributes, ImpliedMrow}
+mrow.attributes = 
+  MathMLPGlobalAttributes
+
+mfrac = element mfrac {mfrac.attributes, MathExpression, MathExpression}
+mfrac.attributes = 
+  MathMLPGlobalAttributes,
+  attribute linethickness {length-percentage}?
+
+msqrt = element msqrt {msqrt.attributes, ImpliedMrow}
+msqrt.attributes = 
+  MathMLPGlobalAttributes
+
+mroot = element mroot {mroot.attributes, MathExpression, MathExpression}
+mroot.attributes = 
+  MathMLPGlobalAttributes
+
+mstyle = element mstyle {mstyle.attributes, ImpliedMrow}
+mstyle.attributes = 
+  MathMLPGlobalAttributes
+
+merror = element merror {merror.attributes, ImpliedMrow}
+merror.attributes = 
+  MathMLPGlobalAttributes
+
+mpadded = element mpadded {mpadded.attributes, ImpliedMrow}
+mpadded.attributes = 
+  MathMLPGlobalAttributes,
+  attribute height {mpadded-length-percentage}?,
+  attribute depth {mpadded-length-percentage}?,
+  attribute width {mpadded-length-percentage}?,
+  attribute lspace {mpadded-length-percentage}?,
+  attribute rspace {mpadded-length-percentage}?,
+  attribute voffset {mpadded-length-percentage}?
+
+mpadded-length-percentage=length-percentage
+
+mphantom = element mphantom {mphantom.attributes, ImpliedMrow}
+mphantom.attributes = 
+  MathMLPGlobalAttributes
+
+      
+msub = element msub {msub.attributes, MathExpression, MathExpression}
+msub.attributes = 
+  MathMLPGlobalAttributes
+
+msup = element msup {msup.attributes, MathExpression, MathExpression}
+msup.attributes = 
+  MathMLPGlobalAttributes
+
+msubsup = element msubsup {msubsup.attributes, MathExpression, MathExpression, MathExpression}
+msubsup.attributes = 
+  MathMLPGlobalAttributes
+
+munder = element munder {munder.attributes, MathExpression, MathExpression}
+munder.attributes = 
+  MathMLPGlobalAttributes,
+  attribute accentunder {mathml-boolean}?
+
+mover = element mover {mover.attributes, MathExpression, MathExpression}
+mover.attributes = 
+  MathMLPGlobalAttributes,
+  attribute accent {mathml-boolean}?
+
+munderover = element munderover {munderover.attributes, MathExpression, MathExpression, MathExpression}
+munderover.attributes = 
+  MathMLPGlobalAttributes,
+  attribute accent {mathml-boolean}?,
+  attribute accentunder {mathml-boolean}?
+
+mmultiscripts = element mmultiscripts {mmultiscripts.attributes,
+                                       MathExpression,
+                                       MultiScriptExpression*,
+                                       (mprescripts,MultiScriptExpression*)?}
+mmultiscripts.attributes = 
+  msubsup.attributes
+
+mtable = element mtable {mtable.attributes, TableRowExpression*}
+mtable.attributes = 
+  MathMLPGlobalAttributes
+
+
+mtr = element mtr {mtr.attributes, mtd*}
+mtr.attributes = 
+  MathMLPGlobalAttributes
+
+mtd = element mtd {mtd.attributes, ImpliedMrow}
+mtd.attributes = 
+  MathMLPGlobalAttributes,
+  attribute rowspan {xsd:positiveInteger}?,
+  attribute columnspan {xsd:positiveInteger}?
+
+
+maction = element maction {maction.attributes, ImpliedMrow}
+maction.attributes = 
+  MathMLPGlobalAttributes,
+  attribute actiontype {text}?,
+  attribute selection {xsd:positiveInteger}?
