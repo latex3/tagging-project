@@ -1,0 +1,310 @@
+
+
+namespace pdf1 = "http://iso.org/pdf/ssn"
+namespace pdf2 = "http://iso.org/pdf2/ssn"
+namespace mml = "http://www.w3.org/1998/Math/MathML"
+namespace h = "http://www.w3.org/1999/xhtml"
+namespace latexSE = "https://www.latex-project.org/ns/dflt/2022"
+namespace latexSEbook = "https://www.latex-project.org/ns/book/2022"
+
+namespace d1 = "data:,21F881-80E0-84B6-AFE8-178B9AB7F9D"
+
+include "latex-mathml.rnc" {
+mpadded-length-percentage = text
+textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*} |Link|Lbl)*
+}
+
+
+mo.attributes &= attribute actualtext {text}?
+
+
+H1 |= element latexSE:section       {sechead.content}
+H2 |= element latexSE:subsection    {sechead.content}
+H3 |= element latexSE:subsubsection {sechead.content}
+H4 |= element latexSE:paragraph     {sechead.content}
+H5 |= element latexSE:subparagraph  {sechead.content}
+
+
+
+H1 |= element latexSEbook:chapter       {sechead.content}
+H2 |= element latexSEbook:section       {sechead.content}
+H3 |= element latexSEbook:subsection    {sechead.content}
+H4 |= element latexSEbook:subsubsection {sechead.content}
+H5 |= element latexSEbook:paragraph     {sechead.content}
+H6 |= element latexSEbook:subparagraph  {sechead.content}
+
+
+pdf2-attributes =
+  attribute lang {text}?,
+  attribute Layout-TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
+  attribute Layout-TextPosition {"Sub" | "Sup"}?,
+  attribute actualtext {text}?
+
+
+start = Document
+
+Document = element pdf2:Document {
+   (text-unit|Sect|Div|Part|H1|TOC|Frontmatter|Testament|footnote)*,figures?,tables?
+   }
+
+Frontmatter = element d1:Frontmatter {
+ Frontmatter-Title,
+ TOC?,
+ (text-unit|Span)*
+ }
+
+Testament = element d1:Testament {
+ Testament-Title,
+ TOC?,
+ (text-unit|Span)*,
+ Book*
+ }
+
+Frontmatter-Title = element d1:Frontmatter-Title {
+attribute title {text},
+Span*
+}
+
+Testament-Title = element d1:Testament-Title {
+attribute title {text},
+Span*
+}
+
+Book= element d1:Book {
+ Book-Title,
+ TOC?,
+ (text-unit|Span)*,
+ BChapter*
+ }
+
+Book-Title = element d1:Book-Title {
+attribute title {text},
+Span*
+}
+
+BChapter= element d1:Chapter {
+ Chapter-Title?,
+ TOC?,
+ (text-unit|Span)*,
+ Bverse*
+ }
+
+Chapter-Title = element d1:Chapter-Title {
+pdf2-attributes,
+attribute title {text}?,
+(text|Span)*
+}
+
+Bverse= element d1:verse {
+pdf2-attributes,
+(text|text-unit|Span)*
+ }
+
+
+figures = element latexSE:figures {
+ float*
+ }
+tables = element latexSE:tables {
+ float*
+ }
+float = element latexSE:float {
+ (Caption|text-unit|Div|Figure)*
+ }
+
+Caption = element pdf2:Caption {
+ Lbl?&(\text|text|Reference)*
+ }
+
+Sect = element pdf2:Sect{
+   pdf2-attributes&
+   TOC?&(Part|text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|footnote|\text|theorem-like)*
+   }
+NonStruct = element pdf2:NonStruct{
+   (NonStruct|text-unit|Sect|H1|H2|H3|H4|H5|H6|H7|Span|\text|verbatim)*
+   }
+
+theorem-like = element latexSE:theorem-like {
+  Caption?,
+  Lbl?,
+  (text-unit)*
+}
+
+TOC = element pdf1:TOC {
+  attribute title {text}?,
+   (TOCI|TOC)*
+   }
+
+TOCI = element pdf1:TOCI {
+  attribute title {text}?,
+   (Reference)*
+   }
+
+Reference = element pdf1:Reference {
+   (text|Link)*
+   }
+
+
+Lbl = element pdf2:Lbl {
+(text|Link|Span|Formula|math)*
+   }
+
+
+text-unit = element latexSE:text-unit {
+    pdf2-attributes,
+    attribute title {text}?,
+   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|text-unit)*}
+
+Table = element pdf2:Table {
+ TR*
+ }
+TR = element pdf2:TR {
+ (TH|TD)*
+ }
+
+TH = element pdf2:TH{
+ attribute Table-Scope {"Column" | "Row"},
+ text
+ }
+TD = element pdf2:TD{
+ (text|Formula)*
+ }
+
+verbatim = element latexSE:verbatim {
+codeline*
+}
+
+codeline = element latexSE:codeline {
+Code*
+}
+
+Code = element pdf1:Code {
+pdf2-attributes,
+(text|text-unit)*
+}
+
+
+L = element pdf2:L {
+attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+\list = element latexSE:list {
+attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+itemize = element latexSE:itemize {
+attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+enumerate = element latexSE:enumerate {
+attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+quote = element latexSE:quote {
+(text-unit)*
+}
+quotation = element latexSE:quotation {
+(text-unit)*
+}
+
+description= element latexSE:description {
+attribute List-ListNumbering {"Unordered" | "Ordered" | "Description"}?,
+LI*
+}
+
+LI = element pdf2:LI {
+ Lbl,LBody
+ }
+LBody = element pdf2:LBody {
+ (text-unit|Figure|Part)*
+ }
+ 
+
+sechead.content =
+  pdf2-attributes,
+  attribute title {text}?,
+  Lbl?,Title?,(Span|text|\text|Formula|NonStruct|footnotemark|Link)*
+
+Part = element pdf2:Part {
+   pdf2-attributes&
+   Title?&
+   TOC?&(text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote)*
+   }
+
+BlockQuote = element pdf1:BlockQuote {
+  (Part)*
+  }
+
+H1 = element pdf2:H1 {sechead.content}
+H2 = element pdf2:H2 {sechead.content}
+H3 = element pdf2:H3 {sechead.content}
+H4 = element pdf2:H4 {sechead.content}
+H5 = element pdf2:H5 {sechead.content}
+H6 = element pdf2:H6 {sechead.content}
+H7 = element pdf2:H7 {sechead.content}
+
+
+
+Title = element pdf2:Title {
+ pdf2-attributes, (Span|\text|P)*
+ }
+
+title = element latexSE:title {
+ pdf2-attributes, (Span|\text)*
+ }
+
+P = element pdf2:P {
+pdf2-attributes, (text|Span|Em|Strong|Link|Figure)*
+}
+
+Span = element pdf2:Span {
+pdf2-attributes, (text|Span)*
+}
+Em = element pdf2:Em {
+pdf2-attributes, (text|Span|Formula)*
+}
+Strong = element pdf2:Strong {
+pdf2-attributes, (text|Span|Formula)*
+}
+Div = element pdf2:Div {
+pdf2-attributes, (text|Span|P|Div|NonStruct|text-unit|Code|Figure)*
+}
+Link = element pdf2:Link {
+pdf2-attributes, (text|Span|Lbl|math|Formula)*
+}
+
+Aside = element pdf2:Aside {
+pdf2-attributes, (text|Span|Div|NonStruct|text-unit)*
+}
+
+Figure = element pdf2:Figure {
+pdf2-attributes,
+attribute alt {text},
+attribute Layout-BBox {text}?,
+(text|Span|Div|NonStruct|text-unit)*
+}
+
+\text = element latexSE:text {
+pdf2-attributes, (Figure|text|Span|Link|Lbl|Reference|Em|footnotemark|footnote|Formula)*
+}
+
+Formula = element pdf2:Formula {
+attribute title {text}?,
+attribute alt {text}?,
+attribute af {"yes" | "no"}?,
+attribute Layout-Placement {"Inline" | "Block"}?,
+(text|Lbl|text-unit|math|Formula|Link)*
+}
+
+
+footnotemark = element latexSE:footnotemark {
+pdf2-attributes, (Link|text)*
+}
+footnote = element latexSE:footnote {
+footnotelabel,text-unit*
+}
+
+footnotelabel = element latexSE:footnotelabel {text}

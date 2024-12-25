@@ -1,0 +1,64 @@
+namespace h = "http://www.w3.org/1999/xhtml"
+default namespace m = "http://www.w3.org/1998/Math/MathML"
+
+include "mathml4-core.rnc" {
+}
+
+
+
+start |= html
+
+html = element h:html {\div*}
+
+h2 = element h:h2 {text}
+
+\div = element h:div {h2,p,p,math}
+
+p = element h:p {text}
+
+# allow some constructs from MathML Full
+
+math.attributes &=
+  attribute overflow {"scroll"}?
+
+columnalignstyle = "left" | "center" | "right"
+
+mtable.attributes &= attribute columnalign {list {columnalignstyle+} }?,
+                     attribute align {"axis"}?,
+		     attribute columnlines {text}?,
+		     attribute columnspacing {text}?,
+		     attribute rowspacing {text}?,
+		     attribute equalcolumns {"true"|"false"}?,
+		     attribute equalrows {"true"|"false"}?,
+		     attribute width {text}?
+
+mtr.attributes &= 
+  attribute rowalign {"top" | "bottom" | "center" | "baseline" | "axis"}?,
+  attribute columnalign {list {columnalignstyle+} }?
+
+
+mtd.attributes &= attribute columnalign {columnalignstyle}?
+
+mo.attributes &=
+  attribute fence {"true"|"false"}?,
+  attribute accent {"true"|"false"}?
+
+
+
+menclose = element menclose {menclose.attributes, ImpliedMrow}
+menclose.attributes = 
+  MathMLPGlobalAttributes,
+  attribute notation {text}?
+
+MathExpression |= menclose
+
+token.content |= mglyph
+
+mglyph = element mglyph {mglyph.attributes,empty}
+mglyph.attributes = 
+  MathMLPGlobalAttributes,
+  attribute src {xsd:anyURI}?,
+  attribute width {length-percentage}?,
+  attribute height {length-percentage}?,
+  attribute valign {length-percentage}?,
+  attribute alt {text}?
