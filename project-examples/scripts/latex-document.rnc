@@ -95,7 +95,7 @@ pdf2-attributes,
 
 ### LaTeX structure Namespace
  
-start = Document
+start = Document | DocumentFragment
 
 
 pdf2-attributes =
@@ -107,9 +107,14 @@ pdf2-attributes =
   attribute af {"yes" | "no"}?
 
 
-Document = element pdf2:Document {
+document.content =
    (text-unit|Sect|Div|P|L|Part|H1|TOC|footnote)*,figures?,tables?
-   }
+   
+Document = element pdf2:Document { document.content }
+
+DocumentFragment = element pdf2:DocumentFragment { document.content }
+
+
 
 
 figures = element latexSE:figures {
