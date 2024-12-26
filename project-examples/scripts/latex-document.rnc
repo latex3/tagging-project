@@ -102,11 +102,13 @@ pdf2-attributes =
   attribute lang {text}?,
   attribute Layout-TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
   attribute Layout-TextPosition {"Sub" | "Sup"}?,
-  attribute actualtext {text}?
+  attribute actualtext {text}?,
+  attribute alt {text}?,
+  attribute af {"yes" | "no"}?
 
 
 Document = element pdf2:Document {
-   (text-unit|Sect|Div|Part|H1|TOC|footnote)*,figures?,tables?
+   (text-unit|Sect|Div|P|L|Part|H1|TOC|footnote)*,figures?,tables?
    }
 
 
@@ -231,7 +233,7 @@ LI = element pdf2:LI {
  Lbl,LBody
  }
 LBody = element pdf2:LBody {
- (text-unit|Figure|Part)*
+ (text-unit|Figure|Part|P)*
  }
  
 
@@ -294,7 +296,6 @@ pdf2-attributes, (text|Span|Div|NonStruct|text-unit)*
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-attribute alt {text},
 attribute Layout-BBox {text}?,
 (text|Span|Div|NonStruct|text-unit)*
 }
@@ -304,9 +305,8 @@ pdf2-attributes, (Figure|text|Span|Link|Lbl|Reference|Em|footnotemark|footnote|F
 }
 
 Formula = element pdf2:Formula {
+pdf2-attributes,
 attribute title {text}?,
-attribute alt {text}?,
-attribute af {"yes" | "no"}?,
 attribute Layout-Placement {"Inline" | "Block"}?,
 (text|Lbl|text-unit|math|Formula|Link)*
 }
