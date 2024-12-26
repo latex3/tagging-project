@@ -15,8 +15,12 @@ textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*} |Li
 }
 
 
+# Externsions
+
+## MathML Namespace (temp actualtext moved to content element in new code)
 mo.attributes &= attribute actualtext {text}?
 
+## Default Article Namespace
 
 H1 |= element latexSE:section       {sechead.content}
 H2 |= element latexSE:subsection    {sechead.content}
@@ -25,6 +29,7 @@ H4 |= element latexSE:paragraph     {sechead.content}
 H5 |= element latexSE:subparagraph  {sechead.content}
 
 
+## LaTeX Book structure Namespace
 
 H1 |= element latexSEbook:chapter       {sechead.content}
 H2 |= element latexSEbook:section       {sechead.content}
@@ -34,24 +39,10 @@ H5 |= element latexSEbook:paragraph     {sechead.content}
 H6 |= element latexSEbook:subparagraph  {sechead.content}
 
 
-pdf2-attributes =
-  attribute lang {text}?,
-  attribute Layout-TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
-  attribute Layout-TextPosition {"Sub" | "Sup"}?,
-  attribute actualtext {text}?
+# LaTeX Bible Markup Namepace
 
-
-start = Document
-
-Document = element pdf2:Document {
-   (text-unit|Sect|Div|Part|H1|TOC|Frontmatter|Testament|footnote)*,figures?,tables?
-   }
-
-Frontmatter = element d1:Frontmatter {
- Frontmatter-Title,
- TOC?,
- (text-unit|Span)*
- }
+Sect |= element d1:Frontmatter { Frontmatter-Title,TOC?,text-unit*}
+Sect |= element d1:Testament { Testament-Title,TOC?,text-unit*,Book*}
 
 Testament = element d1:Testament {
  Testament-Title,
@@ -101,12 +92,32 @@ pdf2-attributes,
  }
 
 
+
+### LaTeX structure Namespace
+ 
+start = Document
+
+
+pdf2-attributes =
+  attribute lang {text}?,
+  attribute Layout-TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
+  attribute Layout-TextPosition {"Sub" | "Sup"}?,
+  attribute actualtext {text}?
+
+
+Document = element pdf2:Document {
+   (text-unit|Sect|Div|Part|H1|TOC|footnote)*,figures?,tables?
+   }
+
+
 figures = element latexSE:figures {
  float*
  }
+
 tables = element latexSE:tables {
  float*
  }
+
 float = element latexSE:float {
  (Caption|text-unit|Div|Figure)*
  }
@@ -119,6 +130,7 @@ Sect = element pdf2:Sect{
    pdf2-attributes&
    TOC?&(Part|text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|footnote|\text|theorem-like)*
    }
+
 NonStruct = element pdf2:NonStruct{
    (NonStruct|text-unit|Sect|H1|H2|H3|H4|H5|H6|H7|Span|\text|verbatim)*
    }
