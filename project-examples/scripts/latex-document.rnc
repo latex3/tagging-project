@@ -109,13 +109,186 @@ pdf2-attributes =
 
 document.content =
    (text-unit|Sect|Div|P|L|Part|H1|TOC|footnote)*,figures?,tables?
-   
+
+
+### Document Level
+
 Document = element pdf2:Document { document.content }
 
 DocumentFragment = element pdf2:DocumentFragment { document.content }
 
+### Grouping
+
+Part = element pdf2:Part {
+   pdf2-attributes&
+   Title?&
+   TOC?&(text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote)*
+   }
+
+Sect = element pdf2:Sect{
+   pdf2-attributes&
+   TOC?&(Part|text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|footnote|\text|theorem-like)*
+   }
+
+Div = element pdf2:Div {
+pdf2-attributes, (text|Span|P|Div|NonStruct|text-unit|Code|Figure)*
+}
+
+Aside = element pdf2:Aside {
+pdf2-attributes, (text|Span|Div|NonStruct|text-unit)*
+}
+
+NonStruct = element pdf2:NonStruct{
+   (NonStruct|text-unit|Sect|H1|H2|H3|H4|H5|H6|H7|Span|\text|verbatim)*
+   }
 
 
+## Block
+
+P = element pdf2:P {
+pdf2-attributes, (text|Span|Em|Strong|Link|Figure)*
+}
+
+
+H1 = element pdf2:H1 {sechead.content}
+H2 = element pdf2:H2 {sechead.content}
+H3 = element pdf2:H3 {sechead.content}
+H4 = element pdf2:H4 {sechead.content}
+H5 = element pdf2:H5 {sechead.content}
+H6 = element pdf2:H6 {sechead.content}
+H7 = element pdf2:H7 {sechead.content}
+
+
+H = element pdf2:H {sechead.content}
+
+
+Title = element pdf2:Title {
+ pdf2-attributes, (Span|\text|P)*
+ }
+
+FENote = element pdf2:FENote {
+ pdf2-attributes, (Span|\text|P)*
+ }
+
+### Sub Block
+
+Sub = element pdf2:Sub	 {
+ pdf2-attributes, (Span|\text|P)*
+ }
+
+
+### Inline
+
+Lbl = element pdf2:Lbl {
+(text|Link|Span|Formula|math)*
+   }
+
+Span = element pdf2:Span {
+pdf2-attributes, (text|Span)*
+}
+
+
+Em = element pdf2:Em {
+pdf2-attributes, (text|Span|Formula)*
+}
+
+Strong = element pdf2:Strong {
+pdf2-attributes, (text|Span|Formula)*
+}
+
+Link = element pdf2:Link {
+pdf2-attributes, (text|Span|Lbl|math|Formula)*
+}
+
+Annot = element pdf2:Annot {
+pdf2-attributes, (text|Span|Lbl|math|Formula)*
+}
+
+Form = element pdf2:Link {
+pdf2-attributes
+}
+
+### Rubly
+# to be added
+
+
+### Lists
+
+L = element pdf2:L {
+attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+LI = element pdf2:LI {
+ Lbl,LBody
+ }
+
+
+# FIXME text-unit is latex
+LBody = element pdf2:LBody {
+ (text-unit|Figure|Part|P)*
+ }
+
+### Tables
+
+Table = element pdf2:Table {
+ THead?,TBody?,TFoot?,TR*
+ }
+
+THead = element pdf2:THead {
+ TR*
+ }
+
+TBody = element pdf2:TBody {
+ TR*
+ }
+
+TFoot = element pdf2:TFoot {
+ TR*
+ }
+
+TR = element pdf2:TR {
+ (TH|TD)*
+ }
+
+TH = element pdf2:TH{
+ attribute Table-Scope {"Column" | "Row"},
+ text
+ }
+
+TD = element pdf2:TD{
+ (text|Formula)*
+ }
+
+# Captions and Figures
+
+Caption = element pdf2:Caption {
+ Lbl?&(\text|text|Reference)*
+ }
+
+Figure = element pdf2:Figure {
+pdf2-attributes,
+attribute Layout-BBox {text}?,
+(text|Span|Div|NonStruct|text-unit)*
+}
+
+### Formula
+
+Formula = element pdf2:Formula {
+pdf2-attributes,
+attribute title {text}?,
+attribute Layout-Placement {"Inline" | "Block"}?,
+(text|Lbl|text-unit|math|Formula|Link)*
+}
+
+### Artifact
+
+Artifact = element pdf2:Artifact {
+pdf2-attributes, (text|Span|P|Div|NonStruct|Code|Figure)*
+}
+
+
+### LaTeX
 
 figures = element latexSE:figures {
  float*
@@ -129,18 +302,7 @@ float = element latexSE:float {
  (Caption|text-unit|Div|Figure)*
  }
 
-Caption = element pdf2:Caption {
- Lbl?&(\text|text|Reference)*
- }
 
-Sect = element pdf2:Sect{
-   pdf2-attributes&
-   TOC?&(Part|text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|footnote|\text|theorem-like)*
-   }
-
-NonStruct = element pdf2:NonStruct{
-   (NonStruct|text-unit|Sect|H1|H2|H3|H4|H5|H6|H7|Span|\text|verbatim)*
-   }
 
 theorem-like = element latexSE:theorem-like {
   Caption?,
@@ -163,9 +325,6 @@ Reference = element pdf1:Reference {
    }
 
 
-Lbl = element pdf2:Lbl {
-(text|Link|Span|Formula|math)*
-   }
 
 
 text-unit = element latexSE:text-unit {
@@ -173,20 +332,6 @@ text-unit = element latexSE:text-unit {
     attribute title {text}?,
    (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|text-unit)*}
 
-Table = element pdf2:Table {
- TR*
- }
-TR = element pdf2:TR {
- (TH|TD)*
- }
-
-TH = element pdf2:TH{
- attribute Table-Scope {"Column" | "Row"},
- text
- }
-TD = element pdf2:TD{
- (text|Formula)*
- }
 
 verbatim = element latexSE:verbatim {
 codeline*
@@ -202,10 +347,6 @@ pdf2-attributes,
 }
 
 
-L = element pdf2:L {
-attribute List-ListNumbering {"Unordered" | "Ordered"}?,
-LI*
-}
 
 \list = element latexSE:list {
 attribute List-ListNumbering {"Unordered" | "Ordered"}?,
@@ -234,12 +375,6 @@ attribute List-ListNumbering {"Unordered" | "Ordered" | "Description"}?,
 LI*
 }
 
-LI = element pdf2:LI {
- Lbl,LBody
- }
-LBody = element pdf2:LBody {
- (text-unit|Figure|Part|P)*
- }
  
 
 sechead.content =
@@ -247,74 +382,27 @@ sechead.content =
   attribute title {text}?,
   Lbl?,Title?,(Span|text|\text|Formula|NonStruct|footnotemark|Link)*
 
-Part = element pdf2:Part {
-   pdf2-attributes&
-   Title?&
-   TOC?&(text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote)*
-   }
 
 BlockQuote = element pdf1:BlockQuote {
   (Part)*
   }
 
-H1 = element pdf2:H1 {sechead.content}
-H2 = element pdf2:H2 {sechead.content}
-H3 = element pdf2:H3 {sechead.content}
-H4 = element pdf2:H4 {sechead.content}
-H5 = element pdf2:H5 {sechead.content}
-H6 = element pdf2:H6 {sechead.content}
-H7 = element pdf2:H7 {sechead.content}
 
 
-
-Title = element pdf2:Title {
- pdf2-attributes, (Span|\text|P)*
- }
 
 title = element latexSE:title {
  pdf2-attributes, (Span|\text)*
  }
 
-P = element pdf2:P {
-pdf2-attributes, (text|Span|Em|Strong|Link|Figure)*
-}
 
-Span = element pdf2:Span {
-pdf2-attributes, (text|Span)*
-}
-Em = element pdf2:Em {
-pdf2-attributes, (text|Span|Formula)*
-}
-Strong = element pdf2:Strong {
-pdf2-attributes, (text|Span|Formula)*
-}
-Div = element pdf2:Div {
-pdf2-attributes, (text|Span|P|Div|NonStruct|text-unit|Code|Figure)*
-}
-Link = element pdf2:Link {
-pdf2-attributes, (text|Span|Lbl|math|Formula)*
-}
 
-Aside = element pdf2:Aside {
-pdf2-attributes, (text|Span|Div|NonStruct|text-unit)*
-}
 
-Figure = element pdf2:Figure {
-pdf2-attributes,
-attribute Layout-BBox {text}?,
-(text|Span|Div|NonStruct|text-unit)*
-}
+
 
 \text = element latexSE:text {
 pdf2-attributes, (Figure|text|Span|Link|Lbl|Reference|Em|footnotemark|footnote|Formula)*
 }
 
-Formula = element pdf2:Formula {
-pdf2-attributes,
-attribute title {text}?,
-attribute Layout-Placement {"Inline" | "Block"}?,
-(text|Lbl|text-unit|math|Formula|Link)*
-}
 
 
 footnotemark = element latexSE:footnotemark {
