@@ -107,6 +107,17 @@ pdf2-attributes =
   attribute lang {text}?,
   attribute Layout:TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
   attribute Layout:TextPosition {"Sub" | "Sup"}?,
+  attribute Layout:Padding {text}?,
+  attribute Layout:SpaceBefore {text}?,
+  attribute Layout:SpaceAfter {text}?,
+  attribute Layout:BBox {text}?,
+  attribute Layout:Width {text}?,
+  attribute Layout:Height {text}?,
+  attribute Layout:Color {text}?,
+  attribute Layout:TextDecorationColor {text}?,
+  attribute Layout:TextDecorationType {"Underline" | "Overline"}?,
+  attribute Layout:TextDecorationThickness {text}?,
+  attribute Layout:BaselineShift {text}?,
   attribute actualtext {text}?,
   attribute alt {text}?,
   attribute af {"yes" | "no"}?
@@ -136,7 +147,7 @@ Sect = element pdf2:Sect{
    }
 
 Div = element pdf2:Div {
-pdf2-attributes, (text|Span|P|Div|NonStruct|text-unit|Code|Figure)*
+pdf2-attributes, (text|Span|P|Div|NonStruct|L|text-unit|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7)*
 }
 
 Aside = element pdf2:Aside {
@@ -185,6 +196,7 @@ Sub = element pdf2:Sub	 {
 ### Inline
 
 Lbl = element pdf2:Lbl {
+pdf2-attributes,
 (text|Link|Span|Formula|math)*
    }
 
@@ -220,49 +232,59 @@ pdf2-attributes
 ### Lists
 
 L = element pdf2:L {
+pdf2-attributes,
 attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
 
 LI = element pdf2:LI {
+pdf2-attributes,
  Lbl,LBody
  }
 
 
 # FIXME text-unit is latex
 LBody = element pdf2:LBody {
- (text-unit|Figure|Part|P)*
+pdf2-attributes,
+(text-unit|Figure|Part|P)*
  }
 
 ### Tables
 
 Table = element pdf2:Table {
+pdf2-attributes,
  THead?,TBody?,TFoot?,TR*
  }
 
 THead = element pdf2:THead {
+pdf2-attributes,
  TR*
  }
 
 TBody = element pdf2:TBody {
+pdf2-attributes,
  TR*
  }
 
 TFoot = element pdf2:TFoot {
+pdf2-attributes,
  TR*
  }
 
 TR = element pdf2:TR {
+pdf2-attributes,
  (TH|TD)*
  }
 
 TH = element pdf2:TH{
+pdf2-attributes,
  attribute Table:Scope {"Column" | "Row"},
- text
+ (text|Formula|H1|P|Div)*
  }
 
 TD = element pdf2:TD{
- (text|Formula)*
+pdf2-attributes,
+ (text|Formula|H1|P|Div)*
  }
 
 # Captions and Figures
@@ -273,7 +295,6 @@ Caption = element pdf2:Caption {
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-attribute Layout:BBox {text}?,
 (text|Span|Div|NonStruct|text-unit)*
 }
 
