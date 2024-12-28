@@ -4,6 +4,11 @@ namespace pdf1 = "http://iso.org/pdf/ssn"
 namespace pdf2 = "http://iso.org/pdf2/ssn"
 namespace mml = "http://www.w3.org/1998/Math/MathML"
 namespace h = "http://www.w3.org/1999/xhtml"
+
+namespace Layout = "http://typesetting.eu/pdf_attribute_owner/Layout"
+namespace Table = "http://typesetting.eu/pdf_attribute_owner/Table"
+namespace List = "http://typesetting.eu/pdf_attribute_owner/List"
+
 namespace latexSE = "https://www.latex-project.org/ns/dflt/2022"
 namespace latexSEbook = "https://www.latex-project.org/ns/book/2022"
 
@@ -100,8 +105,8 @@ start = Document | DocumentFragment
 
 pdf2-attributes =
   attribute lang {text}?,
-  attribute Layout-TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
-  attribute Layout-TextPosition {"Sub" | "Sup"}?,
+  attribute Layout:TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
+  attribute Layout:TextPosition {"Sub" | "Sup"}?,
   attribute actualtext {text}?,
   attribute alt {text}?,
   attribute af {"yes" | "no"}?
@@ -215,7 +220,7 @@ pdf2-attributes
 ### Lists
 
 L = element pdf2:L {
-attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
 
@@ -252,7 +257,7 @@ TR = element pdf2:TR {
  }
 
 TH = element pdf2:TH{
- attribute Table-Scope {"Column" | "Row"},
+ attribute Table:Scope {"Column" | "Row"},
  text
  }
 
@@ -268,7 +273,7 @@ Caption = element pdf2:Caption {
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-attribute Layout-BBox {text}?,
+attribute Layout:BBox {text}?,
 (text|Span|Div|NonStruct|text-unit)*
 }
 
@@ -277,7 +282,7 @@ attribute Layout-BBox {text}?,
 Formula = element pdf2:Formula {
 pdf2-attributes,
 attribute title {text}?,
-attribute Layout-Placement {"Inline" | "Block"}?,
+attribute Layout:Placement {"Inline" | "Block"}?,
 (text|Lbl|text-unit|math|Formula|Link)*
 }
 
@@ -349,17 +354,17 @@ pdf2-attributes,
 
 
 \list = element latexSE:list {
-attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
 
 itemize = element latexSE:itemize {
-attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
 
 enumerate = element latexSE:enumerate {
-attribute List-ListNumbering {"Unordered" | "Ordered"}?,
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
 
@@ -371,7 +376,7 @@ quotation = element latexSE:quotation {
 }
 
 description= element latexSE:description {
-attribute List-ListNumbering {"Unordered" | "Ordered" | "Description"}?,
+attribute List:ListNumbering {"Unordered" | "Ordered" | "Description"}?,
 LI*
 }
 
