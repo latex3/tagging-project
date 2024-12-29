@@ -135,7 +135,7 @@ pdf2-attributes =
 
 
 document.content =
-   (Sect|Div|P|L|Part|H1|TOC|Note)*,figures?,tables?
+   (Art|Sect|Div|P|L|Part|H1|TOC|Note)*,figures?,tables?
 
 
 ### Document Level
@@ -196,9 +196,6 @@ attribute rolemaps-to {"P"},
 pdf2-attributes, (text|Span|P)*
  }
 
-Note = element pdf1:Note {
- pdf2-attributes, (Lbl|Span|P|Part|Caption|Div|Figure|Table)*
- }
 
 ### Sub Block
 
@@ -336,6 +333,16 @@ sechead.content =
 
 ### PDF1
 
+Art = element pdf1:Art {
+pdf2-attributes,
+(DocumentFragment|Part|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note)*
+}
+
+Private = element pdf1:Private {
+pdf2-attributes,
+(DocumentFragment|Part|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note)*
+}
+
 TOC = element pdf1:TOC {
   attribute title {text}?,
    (TOCI|TOC)*
@@ -345,6 +352,11 @@ TOCI = element pdf1:TOCI {
   attribute title {text}?,
    (Reference)*
    }
+
+Note = element pdf1:Note {
+ pdf2-attributes,
+ (Lbl|Span|P|Part|Caption|Div|Figure|Table)*
+ }
 
 Reference = element pdf1:Reference {
 pdf2-attributes,
