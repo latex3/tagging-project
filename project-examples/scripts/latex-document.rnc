@@ -133,7 +133,7 @@ pdf2-attributes =
 
 
 document.content =
-   (text-unit|Sect|Div|P|L|Part|H1|TOC|FENote)*,figures?,tables?
+   (Sect|Div|P|L|Part|H1|TOC|FENote)*,figures?,tables?
 
 
 ### Document Level
@@ -148,24 +148,24 @@ Part = element pdf2:Part {
    pdf2-attributes&
   attribute title {text}?&
   Title?&
-   TOC?&(text-unit|Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table)*
+   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table)*
    }
 
 Sect = element pdf2:Sect{
    pdf2-attributes&
-   TOC?&(Part|text-unit|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|FENote|Aside|Caption|\text|theorem-like)*
+   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|FENote|Aside|Caption)*
    }
 
 Div = element pdf2:Div {
-pdf2-attributes, (text|Span|P|Div|NonStruct|L|text-unit|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7)*
+pdf2-attributes, (text|Span|P|Div|NonStruct|L|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7)*
 }
 
 Aside = element pdf2:Aside {
-pdf2-attributes, (text|Span|Div|NonStruct|text-unit|Part|Caption|Figure)*
+pdf2-attributes, (text|Span|Div|NonStruct|Part|Caption|Figure)*
 }
 
 NonStruct = element pdf2:NonStruct{
-   (NonStruct|text-unit|Part|Sect|H1|H2|H3|H4|H5|H6|H7|Span|\text|verbatim|P)*
+   (NonStruct|Part|Sect|H1|H2|H3|H4|H5|H6|H7|Span|P)*
    }
 
 
@@ -189,17 +189,17 @@ H = element pdf2:H {sechead.content}
 
 
 Title = element pdf2:Title {
- pdf2-attributes, (Span|\text|P)*
+ pdf2-attributes, (Span|P)*
  }
 
 FENote = element pdf2:FENote {
- pdf2-attributes, (Lbl & (Span|\text|P|Part)*)
+ pdf2-attributes, (Lbl & (Span|P|Part)*)
  }
 
 ### Sub Block
 
 Sub = element pdf2:Sub	 {
- pdf2-attributes, (Span|\text|P|Code)*
+ pdf2-attributes, (Span|P|Code)*
  }
 
 
@@ -253,10 +253,9 @@ pdf2-attributes,
  }
 
 
-# FIXME text-unit is latex
 LBody = element pdf2:LBody {
 pdf2-attributes,
-(text-unit|Part|Figure|Table|P)*
+(Part|Figure|Table|P)*
  }
 
 ### Tables
@@ -300,12 +299,12 @@ pdf2-attributes,
 # Captions and Figures
 
 Caption = element pdf2:Caption {
- Lbl?&(text|\text|P|Reference)*
+ Lbl?&(text|P|Reference)*
  }
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-(text|Span|Div|NonStruct|text-unit|Part)*
+(text|Span|Div|NonStruct|Part)*
 }
 
 ### Formula
@@ -314,7 +313,7 @@ Formula = element pdf2:Formula {
 pdf2-attributes,
 attribute title {text}?,
 attribute Layout:Placement {"Inline" | "Block"}?,
-(text|Lbl|text-unit|Part|math|Formula|Link)*
+(text|Lbl|Part|math|Formula|Link)*
 }
 
 ### Artifact
@@ -327,7 +326,7 @@ pdf2-attributes, (text|Span|P|Div|NonStruct|Code|Figure)*
 sechead.content =
   pdf2-attributes,
   attribute title {text}?,
-  Lbl?,Title?,(Span|text|\text|Formula|NonStruct|Lbl|Link)*
+  Lbl?,Title?,(Span|text|P|Formula|NonStruct|Lbl|Link)*
 
 ### PDF1
 
@@ -348,7 +347,7 @@ pdf2-attributes,
 
 Code = element pdf1:Code {
 pdf2-attributes,
-(text|text-unit|Part)*
+(text|Part)*
 }
 
 BlockQuote = element pdf1:BlockQuote {
@@ -371,7 +370,7 @@ tables = element latexSE:tables {
 
 float = element latexSE:float {
  attribute rolemaps-to {"Aside"},
- (Caption|text-unit|Part|Div|Figure)*
+ (Caption|Part|Div|Figure)*
  }
 
 
@@ -380,22 +379,23 @@ theorem-like = element latexSE:theorem-like {
  attribute rolemaps-to {"Sect"},
   Caption?,
   Lbl?,
-  (text-unit|Part)*
+  (Part)*
 }
-
+Sect |= theorem-like
 
 
 text-unit = element latexSE:text-unit {
  attribute rolemaps-to {"Part"},
     pdf2-attributes,
     attribute title {text}?,
-   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|text-unit|Part)*}
-
+   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
+Part |= text-unit
 
 verbatim = element latexSE:verbatim {
  attribute rolemaps-to {"P"},
 codeline*
 }
+P |= verbatim
 
 codeline = element latexSE:codeline {
  attribute rolemaps-to {"Sub"},
@@ -425,12 +425,12 @@ LI*
 
 quote = element latexSE:quote {
  attribute rolemaps-to {"BlockQuote"},
-(text-unit|Part)*
+(Part)*
 }
 
 quotation = element latexSE:quotation {
  attribute rolemaps-to {"BlockQuote"},
-(text-unit|Part)*
+(Part)*
 }
 
 description= element latexSE:description {
@@ -445,23 +445,24 @@ title = element latexSE:title {
  pdf2-attributes, (Span|\text)*
  }
 
+
 \text = element latexSE:text {
  attribute rolemaps-to {"P"},
 pdf2-attributes,
-(Figure|text|Span|Link|Lbl|Reference|Em|FENote|Formula)*
+(text|Figure|Span|Link|Lbl|Reference|Em|FENote|Formula)*
 }
-
+P |= \text
 
 
 Lbl |= element latexSE:footnotemark {
  attribute rolemaps-to {"Lbl"},
 pdf2-attributes,
-(Link|text)*
+(text|Link)*
 }
 
 FENote |= element latexSE:footnote {
  attribute rolemaps-to {"FENote"},
-footnotelabel,(text-unit|Part)*
+footnotelabel,(Part)*
 }
 
 footnotelabel = element latexSE:footnotelabel {
