@@ -1,0 +1,477 @@
+
+
+
+
+namespace pdf1 = ""
+namespace pdf2 = ""
+namespace mml = "http://www.w3.org/1998/Math/MathML"
+namespace h = "http://www.w3.org/1999/xhtml"
+
+namespace Layout = "http://typesetting.eu/pdf_attribute_owner/Layout"
+namespace Table = "http://typesetting.eu/pdf_attribute_owner/Table"
+namespace List = "http://typesetting.eu/pdf_attribute_owner/List"
+
+namespace latexSE = ""
+namespace latexSEbook = ""
+
+namespace d1 = ""
+
+include "latex-mathml.rnc" {
+mpadded-length-percentage = text
+textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*} |Link|Lbl)*
+}
+
+
+# Extensions
+
+## MathML Namespace (temp actualtext moved to content element in new code)
+mo.attributes &= attribute actualtext {text}?
+
+## Default Article Namespace
+
+H1 |= element latexSE:section       {attribute rolemaps-to {"H1"}, sechead.content}
+H2 |= element latexSE:subsection    {attribute rolemaps-to {"H2"}, sechead.content}
+H3 |= element latexSE:subsubsection {attribute rolemaps-to {"H3"}, sechead.content}
+H4 |= element latexSE:paragraph     {attribute rolemaps-to {"H4"}, sechead.content}
+H5 |= element latexSE:subparagraph  {attribute rolemaps-to {"H5"}, sechead.content}
+
+
+## LaTeX Book structure Namespace
+
+H1 |= element latexSEbook:chapter       {attribute rolemaps-to {"H1"}, sechead.content}
+H2 |= element latexSEbook:section       {attribute rolemaps-to {"H2"}, sechead.content}
+H3 |= element latexSEbook:subsection    {attribute rolemaps-to {"H3"}, sechead.content}
+H4 |= element latexSEbook:subsubsection {attribute rolemaps-to {"H4"}, sechead.content}
+H5 |= element latexSEbook:paragraph     {attribute rolemaps-to {"H5"}, sechead.content}
+H6 |= element latexSEbook:subparagraph  {attribute rolemaps-to {"H6"}, sechead.content}
+
+
+# LaTeX Bible Markup Namepace
+
+Sect |= element d1:Frontmatter {attribute rolemaps-to {"Sect"}, Frontmatter-Title,TOC?,text-unit*}
+Sect |= element d1:Testament {attribute rolemaps-to {"Sect"}, Testament-Title,TOC?,text-unit*,Book*}
+
+Testament = element d1:Testament {
+attribute rolemaps-to {"Sect"},
+Testament-Title,
+ TOC?,
+ (text-unit|Span)*,
+ Book*
+ }
+
+Frontmatter-Title = element d1:Frontmatter-Title {
+attribute rolemaps-to {"H1"},
+attribute title {text},
+Span*
+}
+
+Testament-Title = element d1:Testament-Title {
+attribute rolemaps-to {"H1"},
+attribute title {text},
+Span*
+}
+
+Book= element d1:Book {
+attribute rolemaps-to {"Sect"},
+Book-Title,
+ TOC?,
+ (text-unit|Span)*,
+ BChapter*
+ }
+
+Book-Title = element d1:Book-Title {
+attribute rolemaps-to {"H2"},
+attribute title {text},
+Span*
+}
+
+BChapter= element d1:Chapter {
+attribute rolemaps-to {"Sect"},
+Chapter-Title?,
+ TOC?,
+ (text-unit|Span)*,
+ Bverse*
+ }
+
+Chapter-Title = element d1:Chapter-Title {
+attribute rolemaps-to {"H3"},
+pdf2-attributes,
+attribute title {text}?,
+(text|Span)*
+}
+
+Bverse= element d1:verse {
+attribute rolemaps-to {"P"},
+pdf2-attributes,
+(text|text-unit|Span)*
+ }
+
+
+
+### LaTeX structure Namespace
+ 
+start = Document | DocumentFragment
+
+
+pdf2-attributes =
+  attribute lang {text}?,
+  attribute Layout:TextAlign {"Center" | "Left" | "Right" | "Start" | "Justify" |"End"}?,
+  attribute Layout:TextPosition {"Sub" | "Sup"}?,
+  attribute Layout:Padding {text}?,
+  attribute Layout:SpaceBefore {text}?,
+  attribute Layout:SpaceAfter {text}?,
+  attribute Layout:BBox {text}?,
+  attribute Layout:Width {text}?,
+  attribute Layout:Height {text}?,
+  attribute Layout:Color {text}?,
+  attribute Layout:TextDecorationColor {text}?,
+  attribute Layout:TextDecorationType {"Underline" | "Overline"}?,
+  attribute Layout:TextDecorationThickness {text}?,
+  attribute Layout:BaselineShift {text}?,
+  attribute actualtext {text}?,
+  attribute alt {text}?,
+  attribute af {"yes" | "no"}?,
+  attribute rolemapped-from {text}?
+
+
+document.content =
+   (Sect|Div|P|L|Part|H1|TOC|Note)*,figures?,tables?
+
+
+### Document Level
+
+Document = element pdf2:Document { document.content }
+
+DocumentFragment = element pdf2:DocumentFragment { document.content }
+
+### Grouping
+
+Part = element pdf2:Part {
+   pdf2-attributes&
+  attribute title {text}?&
+  Title?&
+   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table|Note)*
+   }
+
+Sect = element pdf2:Sect{
+   pdf2-attributes&
+   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|Note|Aside|Caption)*
+   }
+
+Div = element pdf2:Div {
+pdf2-attributes, (text|Span|P|Div|NonStruct|L|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7)*
+}
+
+Aside = element pdf2:Aside {
+ attribute rolemaps-to {"Note"},
+ pdf2-attributes, (text|Span|Div|NonStruct|Part|Caption|Figure)*
+}
+
+NonStruct = element pdf2:NonStruct{
+   (text|NonStruct|Part|Sect|H1|H2|H3|H4|H5|H6|H7|Span|P)*
+   }
+
+
+## Block
+
+P = element pdf2:P {
+pdf2-attributes, (text|Span|Lbl|Em|Strong|Link|Reference|Figure|Note|Sub|Formula)*
+}
+
+
+H1 = element pdf2:H1 {sechead.content}
+H2 = element pdf2:H2 {sechead.content}
+H3 = element pdf2:H3 {sechead.content}
+H4 = element pdf2:H4 {sechead.content}
+H5 = element pdf2:H5 {sechead.content}
+H6 = element pdf2:H6 {sechead.content}
+H7 = element pdf2:H7 {sechead.content}
+
+
+H = element pdf2:H {sechead.content}
+
+
+Title = element pdf2:Title {
+attribute rolemaps-to {"P"},
+pdf2-attributes, (text|Span|P)*
+ }
+
+Note = element pdf1:Note {
+ pdf2-attributes, (Lbl|Span|P|Part|Caption|Div|Figure|Table)*
+ }
+
+### Sub Block
+
+Sub = element pdf2:Sub	 {
+ pdf2-attributes, (Span|P|Code)*
+ }
+
+
+### Inline
+
+Lbl = element pdf2:Lbl {
+pdf2-attributes,
+(text|Link|Span|Formula|NonStruct)*
+   }
+
+Span = element pdf2:Span {
+pdf2-attributes, (text|Span|Code|Formula)*
+}
+
+
+Em = element pdf2:Em {
+ attribute rolemaps-to {"Span"},
+ pdf2-attributes, (text|Span|Formula)*
+}
+
+Strong = element pdf2:Strong {
+ attribute rolemaps-to {"Span"},
+ pdf2-attributes, (text|Span|Formula)*
+}
+
+Link = element pdf2:Link {
+pdf2-attributes, (text|Span|Lbl|math|Formula)*
+}
+
+Annot = element pdf2:Annot {
+pdf2-attributes, (text|Span|Lbl|math|Formula)*
+}
+
+Form = element pdf2:Link {
+pdf2-attributes
+}
+
+### Rubly
+# to be added
+
+
+### Lists
+
+L = element pdf2:L {
+pdf2-attributes,
+attribute List:ListNumbering {"Unordered" | "Ordered" | "Description"}?,
+LI*
+}
+
+LI = element pdf2:LI {
+pdf2-attributes,
+ Lbl,LBody
+ }
+
+
+LBody = element pdf2:LBody {
+pdf2-attributes,
+(Part|Figure|Table|P)*
+ }
+
+### Tables
+
+Table = element pdf2:Table {
+pdf2-attributes,
+ THead?,TBody?,TFoot?,TR*
+ }
+
+THead = element pdf2:THead {
+pdf2-attributes,
+ TR*
+ }
+
+TBody = element pdf2:TBody {
+pdf2-attributes,
+ TR*
+ }
+
+TFoot = element pdf2:TFoot {
+pdf2-attributes,
+ TR*
+ }
+
+TR = element pdf2:TR {
+pdf2-attributes,
+ (TH|TD)*
+ }
+
+TH = element pdf2:TH{
+pdf2-attributes,
+ attribute Table:Scope {"Column" | "Row"},
+ (text|Formula|H1|P|Div)*
+ }
+
+TD = element pdf2:TD{
+pdf2-attributes,
+ (text|Formula|H1|P|Div)*
+ }
+
+# Captions and Figures
+
+Caption = element pdf2:Caption {
+ Lbl?&(text|P|Reference|Formula)*
+ }
+
+Figure = element pdf2:Figure {
+pdf2-attributes,
+(text|Span|Div|NonStruct|Part)*
+}
+
+### Formula
+
+Formula = element pdf2:Formula {
+pdf2-attributes,
+attribute title {text}?,
+attribute Layout:Placement {"Inline" | "Block"}?,
+(text|Lbl|Part|math|Formula|Link)*
+}
+
+### Artifact
+
+Artifact = element pdf2:Artifact {
+pdf2-attributes, (text|Span|P|Div|NonStruct|Code|Figure)*
+}
+
+
+sechead.content =
+  pdf2-attributes,
+  attribute title {text}?,
+  Lbl?,Title?,(Span|text|P|Formula|NonStruct|Lbl|Link)*
+
+### PDF1
+
+TOC = element pdf1:TOC {
+  attribute title {text}?,
+   (TOCI|TOC)*
+   }
+
+TOCI = element pdf1:TOCI {
+  attribute title {text}?,
+   (Reference)*
+   }
+
+Reference = element pdf1:Reference {
+pdf2-attributes,
+(text|Link)*
+   }
+
+Code = element pdf1:Code {
+pdf2-attributes,
+(text|Part)*
+}
+
+BlockQuote = element pdf1:BlockQuote {
+pdf2-attributes,
+  (Part)*
+  }
+
+
+# LaTeX NS
+
+figures = element latexSE:figures {
+ attribute rolemaps-to {"Sect"},
+ float*
+ }
+
+tables = element latexSE:tables {
+ attribute rolemaps-to {"Sect"},
+ float*
+ }
+
+float = element latexSE:float {
+ attribute rolemaps-to {"Note"},
+ (Caption|Part|Div|Figure|\text)*
+ }
+
+
+
+theorem-like = element latexSE:theorem-like {
+ attribute rolemaps-to {"Sect"},
+  Caption?,
+  Lbl?,
+  (Part)*
+}
+Sect |= theorem-like
+
+
+text-unit = element latexSE:text-unit {
+ attribute rolemaps-to {"Part"},
+    pdf2-attributes,
+    attribute title {text}?,
+   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
+Part |= text-unit
+
+verbatim = element latexSE:verbatim {
+ attribute rolemaps-to {"P"},
+codeline*
+}
+P |= verbatim
+
+codeline = element latexSE:codeline {
+ attribute rolemaps-to {"Span"},
+Code*
+}
+
+
+
+
+\list = element latexSE:list {
+ attribute rolemaps-to {"L"},
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+L |= \list
+
+itemize = element latexSE:itemize {
+ attribute rolemaps-to {"L"},
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+enumerate = element latexSE:enumerate {
+ attribute rolemaps-to {"L"},
+attribute List:ListNumbering {"Unordered" | "Ordered"}?,
+LI*
+}
+
+quote = element latexSE:quote {
+ attribute rolemaps-to {"BlockQuote"},
+(Part)*
+}
+
+quotation = element latexSE:quotation {
+ attribute rolemaps-to {"BlockQuote"},
+(Part)*
+}
+
+description= element latexSE:description {
+ attribute rolemaps-to {"L"},
+attribute List:ListNumbering {"Unordered" | "Ordered" | "Description"}?,
+LI*
+}
+
+
+title = element latexSE:title {
+ attribute rolemaps-to {"Title" | "P"},
+ pdf2-attributes, (Span|\text)*
+ }
+
+
+\text = element latexSE:text {
+ attribute rolemaps-to {"P"},
+pdf2-attributes,
+(text|Figure|Span|Link|Lbl|Reference|Em|Note|Formula)*
+}
+P |= \text
+
+
+Lbl |= element latexSE:footnotemark {
+ attribute rolemaps-to {"Lbl"},
+pdf2-attributes,
+(text|Link)*
+}
+
+Note |= element latexSE:footnote {
+ attribute rolemaps-to {"Note"},
+footnotelabel,(Part)*
+}
+
+footnotelabel = element latexSE:footnotelabel {
+ attribute rolemaps-to {"Lbl"},
+(text|NonStruct)*}
