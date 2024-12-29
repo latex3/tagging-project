@@ -10,6 +10,7 @@ namespace h = "http://www.w3.org/1999/xhtml"
 namespace Layout = "http://typesetting.eu/pdf_attribute_owner/Layout"
 namespace Table = "http://typesetting.eu/pdf_attribute_owner/Table"
 namespace List = "http://typesetting.eu/pdf_attribute_owner/List"
+namespace HTML-5.00 = "http://typesetting.eu/pdf_attribute_owner/HTML-5.00"
 
 namespace latexSE = ""
 namespace latexSEbook = ""
@@ -128,10 +129,12 @@ pdf2-attributes =
   attribute Layout:TextDecorationType {"Underline" | "Overline"}?,
   attribute Layout:TextDecorationThickness {text}?,
   attribute Layout:BaselineShift {text}?,
+  attribute Layout:Placement {"Inline" | "Block" | "End"}?,
   attribute actualtext {text}?,
   attribute alt {text}?,
   attribute af {"yes" | "no"}?,
-  attribute rolemapped-from {text}?
+  attribute rolemapped-from {text}?,
+  attribute HTML-5.00:* {text}?
 
 
 document.content =
@@ -140,9 +143,13 @@ document.content =
 
 ### Document Level
 
-Document = element pdf2:Document { document.content }
+Document = element pdf2:Document {
+pdf2-attributes,
+document.content }
 
-DocumentFragment = element pdf2:DocumentFragment { document.content }
+DocumentFragment = element pdf2:DocumentFragment {
+pdf2-attributes,
+document.content }
 
 ### Grouping
 
@@ -150,7 +157,7 @@ Part = element pdf2:Part {
    pdf2-attributes&
   attribute title {text}?&
   Title?&
-   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table|Note)*
+   TOC?&(text|Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table|Note)*
    }
 
 Sect = element pdf2:Sect{
@@ -159,7 +166,7 @@ Sect = element pdf2:Sect{
    }
 
 Div = element pdf2:Div {
-pdf2-attributes, (text|Span|P|Div|NonStruct|L|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7)*
+pdf2-attributes, (text|Span|P|Div|NonStruct|L|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7|Ruby)*
 }
 
 Aside = element pdf2:Aside {
@@ -175,7 +182,7 @@ NonStruct = element pdf2:NonStruct{
 ## Block
 
 P = element pdf2:P {
-pdf2-attributes, (text|Span|Lbl|Em|Strong|Link|Reference|Figure|Note|Sub|Formula)*
+pdf2-attributes, (text|Span|Lbl|Em|Strong|Link|Reference|Figure|Note|Sub|Formula|Ruby)*
 }
 
 
@@ -193,7 +200,8 @@ H = element pdf2:H {sechead.content}
 
 Title = element pdf2:Title {
 attribute rolemaps-to {"P"},
-pdf2-attributes, (text|Span|P)*
+pdf2-attributes,
+(text|Span|P)*
  }
 
 
@@ -238,8 +246,27 @@ Form = element pdf2:Link {
 pdf2-attributes
 }
 
-### Rubly
-# to be added
+### Ruby
+
+Ruby = element pdf2:Ruby {
+pdf2-attributes,
+(text|NonStruct|Private|RB|RT|RP)*
+}
+
+RB = element pdf2:RB {
+pdf2-attributes,
+(text|NonStruct|Private|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Link|Form|Artifact)*
+}
+
+RT = element pdf2:RT {
+pdf2-attributes,
+(text|NonStruct|Private|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Link|Form|Artifact)*
+}
+
+RP = element pdf2:RP {
+pdf2-attributes,
+(text|NonStruct|Private|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Link|Form|Artifact)*
+}
 
 
 ### Lists
@@ -258,7 +285,7 @@ pdf2-attributes,
 
 LBody = element pdf2:LBody {
 pdf2-attributes,
-(Part|Figure|Table|P)*
+(text|Part|Figure|Table|P)*
  }
 
 ### Tables
@@ -315,7 +342,6 @@ pdf2-attributes,
 Formula = element pdf2:Formula {
 pdf2-attributes,
 attribute title {text}?,
-attribute Layout:Placement {"Inline" | "Block"}?,
 (text|Lbl|Part|math|Formula|Link)*
 }
 
@@ -371,6 +397,11 @@ pdf2-attributes,
 BlockQuote = element pdf1:BlockQuote {
 pdf2-attributes,
   (Part)*
+  }
+
+Quote = element pdf1:Quote {
+pdf2-attributes,
+  (NonStruct|Span|Em|Strong|Ruby)*
   }
 
 
