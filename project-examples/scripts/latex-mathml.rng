@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.w3.org/1998/Math/MathML" xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <include href="mathml4-core.rng"/>
+  <start combine="choice">
+    <ref name="html"/>
+  </start>
+  <define name="html">
+    <element name="h:html">
+      <zeroOrMore>
+        <ref name="div"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="h2">
+    <element name="h:h2">
+      <text/>
+    </element>
+  </define>
+  <define name="div">
+    <element name="h:div">
+      <ref name="h2"/>
+      <ref name="p"/>
+      <ref name="p"/>
+      <ref name="math"/>
+    </element>
+  </define>
+  <define name="p">
+    <element name="h:p">
+      <text/>
+    </element>
+  </define>
+  <!-- allow some constructs from MathML Full -->
+  <define name="math.attributes" combine="interleave">
+    <optional>
+      <attribute name="overflow">
+        <value>scroll</value>
+      </attribute>
+    </optional>
+  </define>
+  <define name="columnalignstyle">
+    <choice>
+      <value>left</value>
+      <value>center</value>
+      <value>right</value>
+    </choice>
+  </define>
+  <define name="mtable.attributes" combine="interleave">
+    <optional>
+      <attribute name="columnalign">
+        <list>
+          <oneOrMore>
+            <ref name="columnalignstyle"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="align">
+        <value>axis</value>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="columnlines"/>
+    </optional>
+    <optional>
+      <attribute name="columnspacing"/>
+    </optional>
+    <optional>
+      <attribute name="rowspacing"/>
+    </optional>
+    <optional>
+      <attribute name="equalcolumns">
+        <choice>
+          <value>true</value>
+          <value>false</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="equalrows">
+        <choice>
+          <value>true</value>
+          <value>false</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="width"/>
+    </optional>
+  </define>
+  <define name="mtr.attributes" combine="interleave">
+    <optional>
+      <attribute name="rowalign">
+        <choice>
+          <value>top</value>
+          <value>bottom</value>
+          <value>center</value>
+          <value>baseline</value>
+          <value>axis</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="columnalign">
+        <list>
+          <oneOrMore>
+            <ref name="columnalignstyle"/>
+          </oneOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define name="mtd.attributes" combine="interleave">
+    <optional>
+      <attribute name="columnalign">
+        <ref name="columnalignstyle"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="mo.attributes" combine="interleave">
+    <optional>
+      <attribute name="fence">
+        <choice>
+          <value>true</value>
+          <value>false</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="accent">
+        <choice>
+          <value>true</value>
+          <value>false</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="menclose">
+    <element name="menclose">
+      <ref name="menclose.attributes"/>
+      <ref name="ImpliedMrow"/>
+    </element>
+  </define>
+  <define name="menclose.attributes">
+    <ref name="MathMLPGlobalAttributes"/>
+    <optional>
+      <attribute name="notation"/>
+    </optional>
+  </define>
+  <define name="MathExpression" combine="choice">
+    <ref name="menclose"/>
+  </define>
+  <define name="token.content" combine="choice">
+    <ref name="mglyph"/>
+  </define>
+  <define name="mglyph">
+    <element name="mglyph">
+      <ref name="mglyph.attributes"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="mglyph.attributes">
+    <ref name="MathMLPGlobalAttributes"/>
+    <optional>
+      <attribute name="src">
+        <data type="anyURI"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="width">
+        <ref name="length-percentage"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="height">
+        <ref name="length-percentage"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="valign">
+        <ref name="length-percentage"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="alt"/>
+    </optional>
+  </define>
+</grammar>
