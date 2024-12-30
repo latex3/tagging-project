@@ -18,11 +18,13 @@ namespace latexSEbook = ""
 
 namespace d1 = ""
 
-include "latex-mathml.rnc" {
-mpadded-length-percentage = text
-textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*} |Link|Lbl)*
-}
+include "latex-mathml.rnc"
 
+textorHTML &= (Link|Lbl)*
+
+mpadded-length-percentage |= xsd:string {
+  pattern = '\s*(([\-+]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(r?em|ex|in|cm|mm|p[xtc]|Q|v[hw]|vmin|vmax|%))|0)\s*'
+}
 
 # Extensions
 
@@ -149,7 +151,8 @@ pdf2-attributes,
 document.content }
 
 DocumentFragment = element pdf2:DocumentFragment {
-pdf2-attributes,
+ attribute rolemaps-to {text},
+ pdf2-attributes,
 document.content }
 
 ### Grouping
@@ -193,7 +196,9 @@ H3 = element pdf2:H3 {sechead.content}
 H4 = element pdf2:H4 {sechead.content}
 H5 = element pdf2:H5 {sechead.content}
 H6 = element pdf2:H6 {sechead.content}
-H7 = element pdf2:H7 {sechead.content}
+H7 = element pdf2:H7 {
+ attribute rolemaps-to {text},
+ sechead.content}
 
 
 H = element pdf2:H {sechead.content}
@@ -209,6 +214,7 @@ pdf2-attributes,
 ### Sub Block
 
 Sub = element pdf2:Sub	 {
+ attribute rolemaps-to {text},
  pdf2-attributes, (Span|P|Code)*
  }
 
@@ -349,7 +355,9 @@ attribute title {text}?,
 ### Artifact
 
 Artifact = element pdf2:Artifact {
-pdf2-attributes, (text|Span|P|Div|NonStruct|Code|Figure)*
+ attribute rolemaps-to {text},
+ pdf2-attributes,
+(text|Span|P|Div|NonStruct|Code|Figure)*
 }
 
 
