@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://typesetting.eu/pdf_attribute_owner/Table" xmlns:Layout="http://typesetting.eu/pdf_attribute_owner/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://typesetting.eu/pdf_attribute_owner/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:HTML-5.00="http://typesetting.eu/pdf_attribute_owner/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0">
   <include href="latex-mathml.rng">
    <!--
      <define name="mpadded-length-percentage">
@@ -402,7 +402,7 @@
     </optional>
     <zeroOrMore>
       <attribute>
-        <nsName ns="http://typesetting.eu/pdf_attribute_owner/HTML-5.00"/>
+        <nsName ns="http://iso.org/pdf/ssn/HTML-5.00"/>
       </attribute>
     </zeroOrMore>
   </define>
