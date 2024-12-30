@@ -1,0 +1,6 @@
+for i in latex-mathml latex-document latex-document17
+do
+java -jar trang.jar ${i}.rnc ${i}.rng
+sed -i  's/\r$//' ${i}.rng
+done
+
