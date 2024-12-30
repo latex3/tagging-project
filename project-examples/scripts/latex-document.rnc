@@ -110,7 +110,7 @@ pdf2-attributes,
 
 
 
-### LaTeX structure Namespace
+### PDF2 structure Namespace
  
 start = Document | DocumentFragment
 
@@ -139,36 +139,38 @@ pdf2-attributes =
 
 
 document.content =
-   (Art|Sect|Div|P|L|Part|H1|TOC|FENote|Note)*,figures?,tables?
+   (Document|DocumentFragment|Part|Art|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Link|Annot|Form|FENote|Index|L|Table|Figure|Formula|Artifact)
 
+Hn=H1|H2|H3|H4|H5|H6|H7
 
 ### Document Level
 
 Document = element pdf2:Document {
 pdf2-attributes,
-document.content }
+(document.content)* }
 
 DocumentFragment = element pdf2:DocumentFragment {
 pdf2-attributes,
-document.content }
+(document.content)* }
 
 ### Grouping
 
 Part = element pdf2:Part {
    pdf2-attributes&
   attribute title {text}?&
-  Title?&
-   TOC?&(text|Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|L|BlockQuote|Formula|Aside|Figure|Table)*
+  (document.content|TOCI|Sub|Lbl|Reference|BibEntry|Caption)*
    }
 
 Sect = element pdf2:Sect{
    pdf2-attributes&
-   TOC?&(Part|P|Div|Sect|H1|H2|H3|H4|H5|H6|H7|FENote|Aside|Caption)*
+   (DocumentFragment|Part|Art|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Lbl|Link|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
    }
 
 Div = element pdf2:Div {
-pdf2-attributes, (text|Span|P|Div|NonStruct|L|Part|Code|Figure|Table|H1|H2|H2|H3|H4|H5|H6|H7|Title|Link|Ruby)*
+pdf2-attributes,
+(document.content|TOCI|Sub|Lbl|Em|Strong|Span|Quote|Reference|Ruby|RB|RT|RP|Warichu|WT|WP|LI|LBody|BibEntry|TR|TH|TD|THead|TBody|TFoot|Caption)*
 }
+
 
 Aside = element pdf2:Aside {
 pdf2-attributes, (text|Span|Div|NonStruct|Part|Caption|Figure)*
@@ -205,6 +207,11 @@ Title = element pdf2:Title {
 
 FENote = element pdf2:FENote {
  pdf2-attributes, (Lbl & (Span|P|Part)*)
+ }
+
+BibEntry = element pdf2:BibEntry {
+ pdf2-attributes,
+ (Lbl & (Span|P|Part)*)
  }
 
 ### Sub Block
@@ -269,6 +276,23 @@ pdf2-attributes,
 }
 
 
+Warichu = element pdf2:Warichu {
+pdf2-attributes,
+(text|WT|WP)*
+}
+
+WT = element pdf2:WT {
+pdf2-attributes,
+(text|Span)*
+}
+
+WP = element pdf2:WP {
+pdf2-attributes,
+(text|Span)*
+}
+
+
+
 ### Lists
 
 L = element pdf2:L {
@@ -287,6 +311,12 @@ LBody = element pdf2:LBody {
 pdf2-attributes,
 (text|Part|Figure|Table|P|Link)*
  }
+
+
+Index = element pdf2:Index {
+pdf2-attributes,
+(Span)*
+}
 
 ### Tables
 
@@ -361,7 +391,7 @@ sechead.content =
 
 Art = element pdf1:Art {
 pdf2-attributes,
-(DocumentFragment|Part|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note)*
+(DocumentFragment|Part|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Lbl|Link|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
 }
 
 Private = element pdf1:Private {
@@ -371,12 +401,12 @@ pdf2-attributes,
 
 TOC = element pdf1:TOC {
   attribute title {text}?,
-   (TOCI|TOC)*
+   (Part|TOC|TOCI|NonStruct|Private|Caption|Artifact)*
    }
 
 TOCI = element pdf1:TOCI {
   attribute title {text}?,
-   (Reference)*
+   (Div|TOC|NonStruct|Private|P|Lbl|Reference|Artifact)*
    }
 
 Note = element pdf1:Note {
@@ -406,6 +436,8 @@ pdf2-attributes,
 
 
 # LaTeX NS
+
+document.content &= (figures?,tables?)
 
 figures = element latexSE:figures {
  attribute rolemaps-to {"Sect"},
