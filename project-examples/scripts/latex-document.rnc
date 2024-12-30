@@ -16,11 +16,13 @@ namespace latexSEbook = "https://www.latex-project.org/ns/book/2022"
 
 namespace d1 = "data:,21F881-80E0-84B6-AFE8-178B9AB7F9D"
 
-include "latex-mathml.rnc" {
-mpadded-length-percentage = text
-textorHTML = (text | math | element (h:*)  {attribute * {text}*,textorHTML*} |Link|Lbl)*
-}
+include "latex-mathml.rnc"
 
+textorHTML &= (Link|Lbl)*
+
+mpadded-length-percentage |= xsd:string {
+  pattern = '\s*(([\-+]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(r?em|ex|in|cm|mm|p[xtc]|Q|v[hw]|vmin|vmax|%))|0)\s*'
+}
 
 # Extensions
 

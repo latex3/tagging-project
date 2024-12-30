@@ -1,33 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0">
-  <include href="latex-mathml.rng">
-   <!--
-     <define name="mpadded-length-percentage">
-      <text/>
-    </define>
-    <define name="textorHTML">
-      <zeroOrMore>
-        <choice>
-          <text/>
-          <ref name="math"/>
-          <element>
-            <nsName ns="http://www.w3.org/1999/xhtml"/>
-            <zeroOrMore>
-              <attribute>
-                <anyName/>
-              </attribute>
-            </zeroOrMore>
-            <zeroOrMore>
-              <ref name="textorHTML"/>
-            </zeroOrMore>
-          </element>
-          <ref name="Link"/>
-          <ref name="Lbl"/>
-        </choice>
-      </zeroOrMore>
-      </define>
-      -->
-  </include>
+<!-- These Namespaces to be confirmed. "data:,Layout" would be another possibility -->
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <include href="latex-mathml.rng"/>
+  <define name="textorHTML" combine="interleave">
+    <zeroOrMore>
+      <choice>
+        <ref name="Link"/>
+        <ref name="Lbl"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+  <define name="mpadded-length-percentage" combine="choice">
+    <data type="string">
+      <param name="pattern">\s*(([\-+]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(r?em|ex|in|cm|mm|p[xtc]|Q|v[hw]|vmin|vmax|%))|0)\s*</param>
+    </data>
+  </define>
   <!-- Extensions -->
   <define name="mo.attributes" combine="interleave">
     <a:documentation>MathML Namespace (temp actualtext moved to content element in new code)</a:documentation>
@@ -438,6 +425,7 @@
   <define name="DocumentFragment">
     <element>
       <name ns="">DocumentFragment</name>
+      <attribute name="rolemaps-to"/>
       <ref name="pdf2-attributes"/>
       <ref name="document.content"/>
     </element>
@@ -645,6 +633,7 @@
   <define name="H7">
     <element>
       <name ns="">H7</name>
+      <attribute name="rolemaps-to"/>
       <ref name="sechead.content"/>
     </element>
   </define>
@@ -674,6 +663,7 @@
     <a:documentation>Sub Block</a:documentation>
     <element>
       <name ns="">Sub</name>
+      <attribute name="rolemaps-to"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -1065,6 +1055,7 @@
     <a:documentation>Artifact</a:documentation>
     <element>
       <name ns="">Artifact</name>
+      <attribute name="rolemaps-to"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
