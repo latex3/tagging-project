@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- These Namespaces to be confirmed. "data:,Layout" would be another possibility -->
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:Artifact="http://iso.org/pdf/ssn/Artifact" xmlns:PrintField="http://iso.org/pdf/ssn/PrintField" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <include href="latex-mathml.rng"/>
   <define name="pdf1rolemap-Any">
     <attribute name="rolemaps-to"/>
@@ -323,73 +323,130 @@
       <attribute name="lang"/>
     </optional>
     <optional>
-      <attribute name="Layout:TextAlign">
+      <!--
+        Only validate Layout attributes with Owner Layout
+        PDF 2 states Attributes in this category shall be defined in attribute objects whose O
+        (owner) entry has the value Layout or whose owner is any other owner excluding List, Table,
+        PrintField and Artifact.
+        
+      -->
+      <attribute name="Layout:Placement">
         <choice>
-          <value>Center</value>
-          <value>Left</value>
-          <value>Right</value>
+          <value>Block</value>
+          <value>Inline</value>
+          <value>Before</value>
           <value>Start</value>
-          <value>Justify</value>
           <value>End</value>
         </choice>
       </attribute>
     </optional>
     <optional>
-      <attribute name="Layout:TextPosition">
+      <attribute name="Layout:WritingMode">
         <choice>
-          <value>Sub</value>
-          <value>Sup</value>
+          <value>LrTb</value>
+          <value>RlTb</value>
+          <value>TbRl</value>
+          <value>TbLr</value>
+          <value>LrBt</value>
+          <value>RlBt</value>
+          <value>BtRl</value>
+          <value>BtLr</value>
         </choice>
       </attribute>
+    </optional>
+    <optional>
+      <attribute name="Layout:BackgroundColor"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:BorderColor"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:BorderStyle"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:BorderThickness"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:Color"/>
     </optional>
     <optional>
       <attribute name="Layout:Padding"/>
     </optional>
     <optional>
+      <!---->
       <attribute name="Layout:SpaceBefore"/>
     </optional>
     <optional>
       <attribute name="Layout:SpaceAfter"/>
     </optional>
     <optional>
-      <attribute name="Layout:BBox"/>
+      <attribute name="Layout:StartIndent"/>
     </optional>
     <optional>
-      <attribute name="Layout:Width"/>
+      <attribute name="Layout:EndIndent"/>
     </optional>
     <optional>
-      <attribute name="Layout:Height"/>
+      <!---->
+      <attribute name="Layout:TextIndent"/>
     </optional>
     <optional>
-      <attribute name="Layout:Color"/>
-    </optional>
-    <optional>
-      <attribute name="Layout:TextDecorationColor"/>
-    </optional>
-    <optional>
-      <attribute name="Layout:TextDecorationType">
+      <attribute name="Layout:TextAlign">
         <choice>
-          <value>Underline</value>
-          <value>Overline</value>
+          <value>Start</value>
+          <value>Center</value>
+          <value>End</value>
+          <value>Justify</value>
         </choice>
       </attribute>
     </optional>
     <optional>
-      <attribute name="Layout:TextDecorationThickness"/>
+      <!---->
+      <attribute name="Layout:LineHeight"/>
     </optional>
     <optional>
       <attribute name="Layout:BaselineShift"/>
     </optional>
     <optional>
-      <attribute name="Layout:Placement">
+      <attribute name="Layout:TextDecorationType">
         <choice>
-          <value>Inline</value>
-          <value>Block</value>
-          <value>End</value>
+          <value/>
+          <value>Underline</value>
+          <value>Overline</value>
+          <value>LineThrough</value>
         </choice>
       </attribute>
     </optional>
     <optional>
+      <attribute name="Layout:TextPosition">
+        <choice>
+          <value>Sup</value>
+          <value>Sub</value>
+          <value>Normal</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="Layout:TextDecorationColor"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:TextDecorationThickness"/>
+    </optional>
+    <optional>
+      <!---->
+      <attribute name="Layout:ColumnCount"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:ColumnWidths"/>
+    </optional>
+    <optional>
+      <attribute name="Layout:ColumnGap"/>
+    </optional>
+    <optional>
+      <!---->
+      <attribute name="Layout:GlyphOrientationVertical"/>
+    </optional>
+    <optional>
+      <!--  -->
       <attribute name="actualtext"/>
     </optional>
     <optional>
@@ -411,6 +468,71 @@
         <nsName ns="http://iso.org/pdf/ssn/HTML-5.00"/>
       </attribute>
     </zeroOrMore>
+  </define>
+  <define name="list-attributes">
+    <optional>
+      <attribute name="List:ListNumbering">
+        <choice>
+          <value/>
+          <value>Unordered</value>
+          <value>Description</value>
+          <value>Disc</value>
+          <value>Circle</value>
+          <value>Square</value>
+          <value>Ordered</value>
+          <value>Decimal</value>
+          <value>UpperRoman</value>
+          <value>LowerRoman</value>
+          <value>UpperAlpha</value>
+          <value>LowerAlpha</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="List:ContinuedList"/>
+    </optional>
+    <optional>
+      <attribute name="List:ContinuedFrom"/>
+    </optional>
+  </define>
+  <define name="printfield-attributes">
+    <optional>
+      <attribute name="PrintField:Role"/>
+    </optional>
+    <optional>
+      <attribute name="PrintField:Checked"/>
+    </optional>
+    <optional>
+      <attribute name="PrintField:checked"/>
+    </optional>
+    <optional>
+      <attribute name="PrintField:Desc"/>
+    </optional>
+  </define>
+  <define name="table-attributes">
+    <optional>
+      <attribute name="Table:RowSpan"/>
+    </optional>
+    <optional>
+      <attribute name="Table:ColSpan"/>
+    </optional>
+    <optional>
+      <attribute name="Table:Headers"/>
+    </optional>
+    <optional>
+      <attribute name="Table:Summary"/>
+    </optional>
+  </define>
+  <define name="artifact-attributes">
+    <optional>
+      <attribute name="Artifact:Type"/>
+    </optional>
+    <optional>
+      <attribute name="Artifact:BBox"/>
+    </optional>
+    <optional>
+      <attribute name="Artifact:SubType"/>
+    </optional>
   </define>
   <define name="document.content">
     <choice>
@@ -1284,6 +1406,16 @@
     <element>
       <name ns="">Link</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
+      <ref name="printfield-attributes"/>
       <choice>
         <zeroOrMore>
           <interleave>
@@ -1338,6 +1470,27 @@
     <element>
       <name ns="">Ruby</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:RubyAlign">
+          <choice>
+            <value>Start</value>
+            <value>Center</value>
+            <value>End</value>
+            <value>Justify</value>
+            <value>Distribute</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:RubyPosition">
+          <choice>
+            <value>Before</value>
+            <value>After</value>
+            <value>Warichu</value>
+            <value>Inline</value>
+          </choice>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
@@ -1354,6 +1507,27 @@
     <element>
       <name ns="">RB</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:RubyAlign">
+          <choice>
+            <value>Start</value>
+            <value>Center</value>
+            <value>End</value>
+            <value>Justify</value>
+            <value>Distribute</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:RubyPosition">
+          <choice>
+            <value>Before</value>
+            <value>After</value>
+            <value>Warichu</value>
+            <value>Inline</value>
+          </choice>
+        </attribute>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
@@ -1378,6 +1552,20 @@
     <element>
       <name ns="">RT</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:RubyAlign">
+          <choice>
+            <value>Start</value>
+            <value>Center</value>
+            <value>End</value>
+            <value>Justify</value>
+            <value>Distribute</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:RubyPosition"/>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
@@ -1402,6 +1590,12 @@
     <element>
       <name ns="">RP</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:RubyAlign"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:RubyPosition"/>
+      </optional>
       <zeroOrMore>
         <choice>
           <text/>
@@ -1488,16 +1682,7 @@
     <element>
       <name ns="">L</name>
       <ref name="pdf2-attributes"/>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-            <value>Description</value>
-            <value>Disc</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="list-attributes"/>
       <interleave>
         <optional>
           <ref name="Caption"/>
@@ -1608,6 +1793,16 @@
     <element>
       <name ns="">Table</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
+      <ref name="table-attributes"/>
       <interleave>
         <zeroOrMore>
           <choice>
@@ -1638,6 +1833,7 @@
     <element>
       <name ns="">THead</name>
       <ref name="pdf2-attributes"/>
+      <ref name="table-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="NonStruct"/>
@@ -1652,6 +1848,7 @@
     <element>
       <name ns="">TBody</name>
       <ref name="pdf2-attributes"/>
+      <ref name="table-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="NonStruct"/>
@@ -1680,6 +1877,7 @@
     <element>
       <name ns="">TR</name>
       <ref name="pdf2-attributes"/>
+      <ref name="table-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="NonStruct"/>
@@ -1695,12 +1893,51 @@
     <element>
       <name ns="">TH</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:BlockAlign">
+          <choice>
+            <value>Before</value>
+            <value>Middle</value>
+            <value>After</value>
+            <value>Justify</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:InlineAlign">
+          <choice>
+            <value>Start</value>
+            <value>Center</value>
+            <value>End</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:TBorderStyle"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:TPadding"/>
+      </optional>
+      <!---->
+      <ref name="table-attributes"/>
       <attribute name="Table:Scope">
         <choice>
           <value>Column</value>
           <value>Row</value>
         </choice>
       </attribute>
+      <optional>
+        <attribute name="Table:Short"/>
+      </optional>
       <interleave>
         <optional>
           <ref name="H"/>
@@ -1745,6 +1982,41 @@
     <element>
       <name ns="">TD</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:BlockAlign">
+          <choice>
+            <value>Before</value>
+            <value>Middle</value>
+            <value>After</value>
+            <value>Justify</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:InlineAlign">
+          <choice>
+            <value>Start</value>
+            <value>Center</value>
+            <value>End</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="Layout:TBorderStyle"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:TPadding"/>
+      </optional>
+      <ref name="table-attributes"/>
       <interleave>
         <optional>
           <ref name="H"/>
@@ -1880,6 +2152,15 @@
     <element>
       <name ns="">Figure</name>
       <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
       <choice>
         <interleave>
           <optional>
@@ -1976,7 +2257,18 @@
       <name ns="">Formula</name>
       <ref name="pdf2-attributes"/>
       <optional>
-        <attribute name="title"/>
+        <attribute name="Layout:BBox"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Width"/>
+      </optional>
+      <optional>
+        <attribute name="Layout:Height"/>
+      </optional>
+      <optional>
+        <attribute name="title">
+          <a:documentation>FIXME nonstandard attribute</a:documentation>
+        </attribute>
       </optional>
       <interleave>
         <optional>
@@ -2030,6 +2322,7 @@
       <name ns="">Artifact</name>
       <ref name="pdf1rolemap-Any"/>
       <ref name="pdf2-attributes"/>
+      <ref name="artifact-attributes"/>
       <interleave>
         <optional>
           <ref name="H"/>
