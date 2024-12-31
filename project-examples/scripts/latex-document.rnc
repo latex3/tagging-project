@@ -18,6 +18,13 @@ namespace d1 = "data:,21F881-80E0-84B6-AFE8-178B9AB7F9D"
 
 include "latex-mathml.rnc"
 
+pdf1rolemap-Any = notAllowed?
+pdf1rolemap-P = notAllowed?
+pdf1rolemap-Span = notAllowed?
+pdf1rolemap-Note = notAllowed?
+
+## share with pdf1.7 version from here to end
+
 textorHTML &= (Link|Lbl)*
 
 mpadded-length-percentage |= xsd:string {
@@ -145,11 +152,13 @@ Hn=H1|H2|H3|H4|H5|H6|H7
 
 ### Document Level
 
+
 Document = element pdf2:Document {
 pdf2-attributes,
 (document.content)* }
 
 DocumentFragment = element pdf2:DocumentFragment {
+pdf1rolemap-Any,
 pdf2-attributes,
 (document.content)* }
 
@@ -169,6 +178,7 @@ Sect = element pdf2:Sect{
 
 # text | document.content - Aside
 Aside = element pdf2:Aside {
+pdf1rolemap-Any,
 pdf2-attributes,
 (text|
 Document|DocumentFragment|Part|Art|Div|Sect|TOC|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Lbl|Link|Reference|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
@@ -182,7 +192,7 @@ NonStruct = element pdf2:NonStruct{
 
 Div = element pdf2:Div {
 pdf2-attributes,
-(document.content|TOCI|Sub|Lbl|Em|Strong|Span|Quote|Reference|Ruby|RB|RT|RP|Warichu|WT|WP|LI|LBody|BibEntry|TR|TH|TD|THead|TBody|TFoot|Caption)*
+(Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
 }
 
 ## Block
@@ -203,18 +213,22 @@ H3 = element pdf2:H3 {sechead.content}
 H4 = element pdf2:H4 {sechead.content}
 H5 = element pdf2:H5 {sechead.content}
 H6 = element pdf2:H6 {sechead.content}
-H7 = element pdf2:H7 {sechead.content}
+H7 = element pdf2:H7 {
+pdf1rolemap-Any,
+sechead.content}
 
 
 H = element pdf2:H {sechead.content}
 
 
 Title = element pdf2:Title {
+ pdf1rolemap-P,
  pdf2-attributes,
  (text|Part|Div|Aside|NonStruct|Private|P|Note|Code|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
  }
 
 FENote = element pdf2:FENote {
+ pdf1rolemap-Note,
  pdf2-attributes,
  (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|Table|Caption|Figure|Formula|Artifact)*
  }
@@ -227,7 +241,8 @@ BibEntry = element pdf2:BibEntry {
 ### Sub Block
 
 Sub = element pdf2:Sub	 {
- pdf2-attributes,
+  pdf1rolemap-Any,
+  pdf2-attributes,
  (text|NonStruct|Private|Note|Code|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Figure|Formula|Artifact)*
  }
 
@@ -242,11 +257,13 @@ math)*
 
 
 Em = element pdf2:Em {
+pdf1rolemap-Span,
 pdf2-attributes,
 (text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
 }
 
 Strong = element pdf2:Strong {
+pdf1rolemap-Span,
 pdf2-attributes,
 (text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
 }
@@ -400,6 +417,7 @@ math)*)
 ### Artifact
 
 Artifact = element pdf2:Artifact {
+pdf1rolemap-Any,
 pdf2-attributes,
 (H? & Caption & (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Figure|Formula|Artifact)*)
 }
@@ -470,8 +488,8 @@ tables = element latexSE:tables {
  }
 
 float = element latexSE:float {
- attribute rolemaps-to {"Aside"},
- (Caption|Part|Div|Figure)*
+ attribute rolemaps-to {"Aside"|"Note"},
+ (Caption|Part|Div|Figure|\text)*
  }
 
 
@@ -499,7 +517,7 @@ codeline*
 P |= verbatim
 
 codeline = element latexSE:codeline {
- attribute rolemaps-to {"Sub"},
+ attribute rolemaps-to {"Sub"|"Span"},
 Code*
 }
 
@@ -511,18 +529,21 @@ Code*
 attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
+L |= \list
 
 itemize = element latexSE:itemize {
  attribute rolemaps-to {"L"},
 attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
+L |= itemize
 
 enumerate = element latexSE:enumerate {
  attribute rolemaps-to {"L"},
 attribute List:ListNumbering {"Unordered" | "Ordered"}?,
 LI*
 }
+L |= enumerate
 
 quote = element latexSE:quote {
  attribute rolemaps-to {"BlockQuote"},
@@ -562,10 +583,10 @@ pdf2-attributes,
 }
 
 FENote |= element latexSE:footnote {
- attribute rolemaps-to {"FENote"},
+ attribute rolemaps-to {"FENote"|"Note"},
 footnotelabel,(Part)*
 }
 
 footnotelabel = element latexSE:footnotelabel {
  attribute rolemaps-to {"Lbl"},
-text}
+ (text|NonStruct)*}

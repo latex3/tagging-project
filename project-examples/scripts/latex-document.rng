@@ -2,7 +2,28 @@
 <!-- These Namespaces to be confirmed. "data:,Layout" would be another possibility -->
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:pdf1="http://iso.org/pdf/ssn" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:d1="data:,21F881-80E0-84B6-AFE8-178B9AB7F9D" xmlns:pdf2="http://iso.org/pdf2/ssn" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:latexSE="https://www.latex-project.org/ns/dflt/2022" xmlns:latexSEbook="https://www.latex-project.org/ns/book/2022" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <include href="latex-mathml.rng"/>
+  <define name="pdf1rolemap-Any">
+    <optional>
+      <notAllowed/>
+    </optional>
+  </define>
+  <define name="pdf1rolemap-P">
+    <optional>
+      <notAllowed/>
+    </optional>
+  </define>
+  <define name="pdf1rolemap-Span">
+    <optional>
+      <notAllowed/>
+    </optional>
+  </define>
+  <define name="pdf1rolemap-Note">
+    <optional>
+      <notAllowed/>
+    </optional>
+  </define>
   <define name="textorHTML" combine="interleave">
+    <a:documentation>share with pdf1.7 version from here to end</a:documentation>
     <zeroOrMore>
       <choice>
         <ref name="Link"/>
@@ -425,6 +446,7 @@
   </define>
   <define name="DocumentFragment">
     <element name="pdf2:DocumentFragment">
+      <ref name="pdf1rolemap-Any"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="document.content"/>
@@ -495,6 +517,7 @@
   <!-- text | document.content - Aside -->
   <define name="Aside">
     <element name="pdf2:Aside">
+      <ref name="pdf1rolemap-Any"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -597,15 +620,34 @@
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
-          <ref name="document.content"/>
+          <ref name="Document"/>
+          <ref name="DocumentFragment"/>
+          <ref name="Part"/>
+          <ref name="Art"/>
+          <ref name="Div"/>
+          <ref name="Sect"/>
+          <ref name="TOC"/>
           <ref name="TOCI"/>
+          <ref name="Aside"/>
+          <ref name="BlockQuote"/>
+          <ref name="NonStruct"/>
+          <ref name="Private"/>
+          <ref name="P"/>
+          <ref name="Note"/>
+          <ref name="Code"/>
+          <ref name="Hn"/>
+          <ref name="H"/>
+          <ref name="Title"/>
           <ref name="Sub"/>
           <ref name="Lbl"/>
           <ref name="Em"/>
           <ref name="Strong"/>
           <ref name="Span"/>
           <ref name="Quote"/>
+          <ref name="Link"/>
           <ref name="Reference"/>
+          <ref name="Annot"/>
+          <ref name="Form"/>
           <ref name="Ruby"/>
           <ref name="RB"/>
           <ref name="RT"/>
@@ -613,9 +655,13 @@
           <ref name="Warichu"/>
           <ref name="WT"/>
           <ref name="WP"/>
+          <ref name="FENote"/>
+          <ref name="Index"/>
+          <ref name="L"/>
           <ref name="LI"/>
           <ref name="LBody"/>
           <ref name="BibEntry"/>
+          <ref name="Table"/>
           <ref name="TR"/>
           <ref name="TH"/>
           <ref name="TD"/>
@@ -623,6 +669,9 @@
           <ref name="TBody"/>
           <ref name="TFoot"/>
           <ref name="Caption"/>
+          <ref name="Figure"/>
+          <ref name="Formula"/>
+          <ref name="Artifact"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -735,6 +784,7 @@
   </define>
   <define name="H7">
     <element name="pdf2:H7">
+      <ref name="pdf1rolemap-Any"/>
       <ref name="sechead.content"/>
     </element>
   </define>
@@ -745,6 +795,7 @@
   </define>
   <define name="Title">
     <element name="pdf2:Title">
+      <ref name="pdf1rolemap-P"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -782,6 +833,7 @@
   </define>
   <define name="FENote">
     <element name="pdf2:FENote">
+      <ref name="pdf1rolemap-Note"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -850,6 +902,7 @@
   <define name="Sub">
     <a:documentation>Sub Block</a:documentation>
     <element name="pdf2:Sub">
+      <ref name="pdf1rolemap-Any"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -913,6 +966,7 @@
   </define>
   <define name="Em">
     <element name="pdf2:Em">
+      <ref name="pdf1rolemap-Span"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -944,6 +998,7 @@
   </define>
   <define name="Strong">
     <element name="pdf2:Strong">
+      <ref name="pdf1rolemap-Span"/>
       <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
@@ -1703,6 +1758,7 @@
   <define name="Artifact">
     <a:documentation>Artifact</a:documentation>
     <element name="pdf2:Artifact">
+      <ref name="pdf1rolemap-Any"/>
       <ref name="pdf2-attributes"/>
       <interleave>
         <optional>
@@ -2115,7 +2171,10 @@
   <define name="float">
     <element name="latexSE:float">
       <attribute name="rolemaps-to">
-        <value>Aside</value>
+        <choice>
+          <value>Aside</value>
+          <value>Note</value>
+        </choice>
       </attribute>
       <zeroOrMore>
         <choice>
@@ -2123,6 +2182,7 @@
           <ref name="Part"/>
           <ref name="Div"/>
           <ref name="Figure"/>
+          <ref name="text"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -2203,7 +2263,10 @@
   <define name="codeline">
     <element name="latexSE:codeline">
       <attribute name="rolemaps-to">
-        <value>Sub</value>
+        <choice>
+          <value>Sub</value>
+          <value>Span</value>
+        </choice>
       </attribute>
       <zeroOrMore>
         <ref name="Code"/>
@@ -2228,6 +2291,9 @@
       </zeroOrMore>
     </element>
   </define>
+  <define name="L" combine="choice">
+    <ref name="list"/>
+  </define>
   <define name="itemize">
     <element name="latexSE:itemize">
       <attribute name="rolemaps-to">
@@ -2246,6 +2312,9 @@
       </zeroOrMore>
     </element>
   </define>
+  <define name="L" combine="choice">
+    <ref name="itemize"/>
+  </define>
   <define name="enumerate">
     <element name="latexSE:enumerate">
       <attribute name="rolemaps-to">
@@ -2263,6 +2332,9 @@
         <ref name="LI"/>
       </zeroOrMore>
     </element>
+  </define>
+  <define name="L" combine="choice">
+    <ref name="enumerate"/>
   </define>
   <define name="quote">
     <element name="latexSE:quote">
@@ -2358,7 +2430,10 @@
   <define name="FENote" combine="choice">
     <element name="latexSE:footnote">
       <attribute name="rolemaps-to">
-        <value>FENote</value>
+        <choice>
+          <value>FENote</value>
+          <value>Note</value>
+        </choice>
       </attribute>
       <ref name="footnotelabel"/>
       <zeroOrMore>
@@ -2371,7 +2446,12 @@
       <attribute name="rolemaps-to">
         <value>Lbl</value>
       </attribute>
-      <text/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="NonStruct"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
 </grammar>
