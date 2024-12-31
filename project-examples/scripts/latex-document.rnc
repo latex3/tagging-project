@@ -230,7 +230,11 @@ Title = element pdf2:Title {
 FENote = element pdf2:FENote {
  pdf1rolemap-Note,
  pdf2-attributes,
- (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|Table|Caption|Figure|Formula|Artifact)*
+(
+ (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|Table|Caption|Figure|Formula|Artifact)* # Grouping
+ |
+  (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|Table|Figure|Formula|Artifact)* # Block
+ )
  }
 
 BibEntry = element pdf2:BibEntry {
@@ -276,18 +280,30 @@ pdf2-attributes,
 
 Link = element pdf2:Link {
 pdf2-attributes,
-(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact|
-math)*
+(
+(DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact|
+math)* # Grouping
+|
+(text|Art|Div|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Reference|Annot|Ruby|Warichu|FENote|BibEntry|Table|Figure|Formula|Artifact|
+math)* # 
+)
 }
 
 Annot = element pdf2:Annot {
 pdf2-attributes,
-(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
-}
+(
+(DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)* # Grouping
+|
+(text|Art|Div|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Annot|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)* # 
+)}
 
 Form = element pdf2:Link {
 pdf2-attributes,
-(text|Part|Div|NonStruct|Private|Note|Code|Lbl|Reference|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
+(
+(Caption? & (Part|Div|NonStruct|Private|Note|Code|Lbl|Reference|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact))* # Grouping
+|
+(Caption? & (text|Div|NonStruct|Private|Note|Lbl|FENote|BibEntry|Artifact)*) # Block
+)
 }
 
 ### Ruby
@@ -397,12 +413,20 @@ pdf2-attributes,
 
 Caption = element pdf2:Caption {
  pdf2-attributes,
- (H | (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
- }
+ (
+ (H | (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) # Grouping
+|
+ (H | (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) #
+)
+}
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-(H? & Caption? & (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
+(
+(H? & Caption? & (Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) # Grouping
+|
+(H? & Caption? & (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) #
+)
 }
 
 ### Formula
@@ -448,7 +472,11 @@ TOCI = element pdf1:TOCI {
 
 Note = element pdf1:Note {
  pdf2-attributes,
- (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
+ (
+ (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Sub|Lbl|Em|Strong|Link|Annot|Form|Ruby|Warichu|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)* # Grouping
+ |
+ (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)* # Block
+ )
  }
 
 Reference = element pdf1:Reference {
@@ -458,7 +486,11 @@ pdf2-attributes,
 
 Code = element pdf1:Code {
 pdf2-attributes,
-(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
+ (
+ (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Sub|Lbl|Em|Strong|Link|Annot|Form|Ruby|Warichu|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)* # Grouping
+ |
+ (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)* # Block
+ )
 }
 
 # Aside + Title
