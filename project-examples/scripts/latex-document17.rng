@@ -1701,8 +1701,10 @@
           <value>Row</value>
         </choice>
       </attribute>
-      <choice>
-        <ref name="H"/>
+      <interleave>
+        <optional>
+          <ref name="H"/>
+        </optional>
         <zeroOrMore>
           <choice>
             <text/>
@@ -1736,15 +1738,17 @@
             <ref name="Artifact"/>
           </choice>
         </zeroOrMore>
-      </choice>
+      </interleave>
     </element>
   </define>
   <define name="TD">
     <element>
       <name ns="">TD</name>
       <ref name="pdf2-attributes"/>
-      <choice>
-        <ref name="H"/>
+      <interleave>
+        <optional>
+          <ref name="H"/>
+        </optional>
         <zeroOrMore>
           <choice>
             <text/>
@@ -1778,7 +1782,7 @@
             <ref name="Artifact"/>
           </choice>
         </zeroOrMore>
-      </choice>
+      </interleave>
     </element>
   </define>
   <!-- Captions and Figures -->
@@ -1787,8 +1791,10 @@
       <name ns="">Caption</name>
       <ref name="pdf2-attributes"/>
       <choice>
-        <choice>
-          <ref name="H"/>
+        <interleave>
+          <optional>
+            <ref name="H"/>
+          </optional>
           <zeroOrMore>
             <choice>
               <ref name="DocumentFragment"/>
@@ -1822,10 +1828,12 @@
               <ref name="Artifact"/>
             </choice>
           </zeroOrMore>
-        </choice>
+        </interleave>
         <!-- Grouping -->
-        <choice>
-          <ref name="H"/>
+        <interleave>
+          <optional>
+            <ref name="H"/>
+          </optional>
           <zeroOrMore>
             <choice>
               <text/>
@@ -1863,7 +1871,7 @@
               <ref name="Artifact"/>
             </choice>
           </zeroOrMore>
-        </choice>
+        </interleave>
       </choice>
       <!---->
     </element>
