@@ -403,12 +403,12 @@ pdf2-attributes,
 TH = element pdf2:TH {
 pdf2-attributes,
  attribute Table:Scope {"Column" | "Row"},
- (H | (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
+ (H? & (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
  }
 
 TD = element pdf2:TD {
 pdf2-attributes,
- (H | (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
+ (H? & (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
  }
 
 # Captions and Figures
@@ -416,9 +416,9 @@ pdf2-attributes,
 Caption = element pdf2:Caption {
  pdf2-attributes,
  (
- (H | (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) # Grouping
+ (H? & (DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) # Grouping
 |
- (H | (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) #
+ (H? & (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*) #
 )
 }
 
