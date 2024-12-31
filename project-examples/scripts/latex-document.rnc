@@ -166,27 +166,36 @@ Sect = element pdf2:Sect{
    (DocumentFragment|Part|Art|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Lbl|Link|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
    }
 
+
+# text | document.content - Aside
+Aside = element pdf2:Aside {
+pdf2-attributes,
+(text|
+Document|DocumentFragment|Part|Art|Div|Sect|TOC|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Lbl|Link|Reference|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
+}
+
+
+
+NonStruct = element pdf2:NonStruct{
+   (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
+   }
+
 Div = element pdf2:Div {
 pdf2-attributes,
 (document.content|TOCI|Sub|Lbl|Em|Strong|Span|Quote|Reference|Ruby|RB|RT|RP|Warichu|WT|WP|LI|LBody|BibEntry|TR|TH|TD|THead|TBody|TFoot|Caption)*
 }
 
-
-Aside = element pdf2:Aside {
-pdf2-attributes, (text|Span|Div|NonStruct|Part|Caption|Figure)*
-}
-
-NonStruct = element pdf2:NonStruct{
-   (NonStruct|Part|Sect|H1|H2|H3|H4|H5|H6|H7|Span|P)*
-   }
-
-
 ## Block
 
 P = element pdf2:P {
-pdf2-attributes, (text|Span|Lbl|Em|Strong|Link|Reference|Figure|FENote|Sub|Formula|Ruby)*
+pdf2-attributes,
+(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Figure|Formula|Artifact)*
 }
 
+sechead.content =
+  pdf2-attributes,
+  attribute title {text}?,
+  (Art?&Sect?&(text|Art|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*)
 
 H1 = element pdf2:H1 {sechead.content}
 H2 = element pdf2:H2 {sechead.content}
@@ -202,22 +211,24 @@ H = element pdf2:H {sechead.content}
 
 Title = element pdf2:Title {
  pdf2-attributes,
- (text|Span|P)*
+ (text|Part|Div|Aside|NonStruct|Private|P|Note|Code|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
  }
 
 FENote = element pdf2:FENote {
- pdf2-attributes, (Lbl & (Span|P|Part)*)
+ pdf2-attributes,
+ (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|Table|Caption|Figure|Formula|Artifact)*
  }
 
 BibEntry = element pdf2:BibEntry {
  pdf2-attributes,
- (Lbl & (Span|P|Part)*)
+ (text|Part|Div|NonStruct|Private|P|Note|Lbl|Em|Strong|Span|Link|Reference|Annot|FENote|Figure|Artifact)*
  }
 
 ### Sub Block
 
 Sub = element pdf2:Sub	 {
- pdf2-attributes, (Span|P|Code)*
+ pdf2-attributes,
+ (text|NonStruct|Private|Note|Code|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Figure|Formula|Artifact)*
  }
 
 
@@ -225,32 +236,41 @@ Sub = element pdf2:Sub	 {
 
 Lbl = element pdf2:Lbl {
 pdf2-attributes,
-(text|Link|Span|Formula|math)*
+(text|NonStruct|Private|Note|Code|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact|
+math)*
    }
-
-Span = element pdf2:Span {
-pdf2-attributes, (text|Span)*
-}
 
 
 Em = element pdf2:Em {
-pdf2-attributes, (text|Span|Formula)*
+pdf2-attributes,
+(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
 }
 
 Strong = element pdf2:Strong {
-pdf2-attributes, (text|Span|Formula)*
+pdf2-attributes,
+(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
 }
 
+Span = element pdf2:Span {
+pdf2-attributes,
+(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
+}
+
+
 Link = element pdf2:Link {
-pdf2-attributes, (text|Span|Lbl|math|Formula)*
+pdf2-attributes,
+(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact|
+math)*
 }
 
 Annot = element pdf2:Annot {
-pdf2-attributes, (text|Span|Lbl|math|Formula)*
+pdf2-attributes,
+(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
 }
 
 Form = element pdf2:Link {
-pdf2-attributes
+pdf2-attributes,
+(text|Part|Div|NonStruct|Private|Note|Code|Lbl|Reference|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
 }
 
 ### Ruby
@@ -278,17 +298,17 @@ pdf2-attributes,
 
 Warichu = element pdf2:Warichu {
 pdf2-attributes,
-(text|WT|WP)*
+(text|NonStruct|Private|WT|WP)*
 }
 
 WT = element pdf2:WT {
 pdf2-attributes,
-(text|Span)*
+(text|NonStruct|Private|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Artifact)*
 }
 
 WP = element pdf2:WP {
 pdf2-attributes,
-(text|Span)*
+(text|NonStruct|Private|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Artifact)*
 }
 
 
@@ -298,73 +318,74 @@ pdf2-attributes,
 L = element pdf2:L {
 pdf2-attributes,
 attribute List:ListNumbering {"Unordered" | "Ordered" | "Description" | "Disc"}?,
-LI*
+(Caption? & (NonStruct|Private|L|LI|Artifact)*)
 }
 
 LI = element pdf2:LI {
 pdf2-attributes,
- Lbl,LBody
+ (text|Div|NonStruct|Private|Lbl|LBody|Artifact)*
  }
 
 
 LBody = element pdf2:LBody {
 pdf2-attributes,
-(text|Part|Figure|Table|P|Link)*
+(text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
  }
 
 
 Index = element pdf2:Index {
 pdf2-attributes,
-(Span)*
+(Part|Div|Sect|NonStruct|Private|P|Note|Hn|H|Reference|Annot|FENote|L|Table|Caption|Figure|Formula|Artifact)*
 }
 
 ### Tables
 
 Table = element pdf2:Table {
 pdf2-attributes,
- THead?,TBody?,TFoot?,TR*
+((NonStruct|Private|TR|Artifact)* & (THead?,TBody*,TFoot?) & Caption?)
  }
 
 THead = element pdf2:THead {
 pdf2-attributes,
- TR*
+ (NonStruct|Private|TR|Artifact)*
  }
 
 TBody = element pdf2:TBody {
 pdf2-attributes,
- TR*
+ (NonStruct|Private|TR|Artifact)*
  }
 
 TFoot = element pdf2:TFoot {
 pdf2-attributes,
- TR*
+ (NonStruct|Private|TR|Artifact)*
  }
 
 TR = element pdf2:TR {
 pdf2-attributes,
- (TH|TD)*
+ (NonStruct|Private|TH|TD|Artifact)*
  }
 
-TH = element pdf2:TH{
+TH = element pdf2:TH {
 pdf2-attributes,
  attribute Table:Scope {"Column" | "Row"},
- (text|Formula|H1|P|Div)*
+ (H | (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
  }
 
-TD = element pdf2:TD{
+TD = element pdf2:TD {
 pdf2-attributes,
- (text|Formula|H1|P|Div)*
+ (H | (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
  }
 
 # Captions and Figures
 
 Caption = element pdf2:Caption {
- Lbl?&(text|P|Reference)*
+ pdf2-attributes,
+ (H | (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
  }
 
 Figure = element pdf2:Figure {
 pdf2-attributes,
-(text|Span|Div|NonStruct|Part)*
+(H? & Caption? & (text|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
 }
 
 ### Formula
@@ -372,20 +393,18 @@ pdf2-attributes,
 Formula = element pdf2:Formula {
 pdf2-attributes,
 attribute title {text}?,
-(text|Lbl|Part|math|Formula|Link)*
+(H? & Caption? & (text|Part|Div|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact|
+math)*)
 }
 
 ### Artifact
 
 Artifact = element pdf2:Artifact {
-pdf2-attributes, (text|Span|P|Div|NonStruct|Code|Figure)*
+pdf2-attributes,
+(H? & Caption & (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Figure|Formula|Artifact)*)
 }
 
 
-sechead.content =
-  pdf2-attributes,
-  attribute title {text}?,
-  Lbl?,Title?,(Span|text|P|Formula|NonStruct|Lbl|Link)*
 
 ### PDF1
 
@@ -396,7 +415,7 @@ pdf2-attributes,
 
 Private = element pdf1:Private {
 pdf2-attributes,
-(DocumentFragment|Part|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note)*
+(text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
 }
 
 TOC = element pdf1:TOC {
@@ -411,27 +430,28 @@ TOCI = element pdf1:TOCI {
 
 Note = element pdf1:Note {
  pdf2-attributes,
- (Lbl|Span|P|Part|Caption|Div|Figure|Table)*
+ (text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
  }
 
 Reference = element pdf1:Reference {
 pdf2-attributes,
-(text|Link)*
+(text|NonStruct|Private|Note|Lbl|Em|Strong|Span|Link|Annot|FENote|BibEntry|Figure|Artifact)*
    }
 
 Code = element pdf1:Code {
 pdf2-attributes,
-(text|Part)*
+(text|DocumentFragment|Part|Art|Div|Sect|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Caption|Figure|Formula|Artifact)*
 }
 
+# Aside + Title
 BlockQuote = element pdf1:BlockQuote {
 pdf2-attributes,
-  (Part)*
+ (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Lbl|Link|Reference|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
   }
 
 Quote = element pdf1:Quote {
 pdf2-attributes,
-  (NonStruct|Span|Em|Strong|Ruby)*
+(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
   }
 
 
