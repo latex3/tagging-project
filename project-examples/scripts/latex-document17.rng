@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- These Namespaces to be confirmed. "data:,Layout" would be another possibility -->
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:Artifact="http://iso.org/pdf/ssn/Artifact" xmlns:PrintField="http://iso.org/pdf/ssn/PrintField" xmlns:HTML-5.00="http://iso.org/pdf/ssn/HTML-5.00" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:Artifact="http://iso.org/pdf/ssn/Artifact" xmlns:PrintField="http://iso.org/pdf/ssn/PrintField" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <include href="latex-mathml.rng"/>
   <define name="pdf1rolemap-Any">
     <attribute name="rolemaps-to"/>
@@ -21,7 +21,7 @@
     </attribute>
   </define>
   <define name="textorHTML" combine="interleave">
-    <a:documentation>share with pdf1.7 version from here to end</a:documentation>
+    <a:documentation>share with pdf1.7 version from here to en</a:documentation>
     <zeroOrMore>
       <choice>
         <ref name="Link"/>
@@ -319,9 +319,57 @@
     </choice>
   </start>
   <define name="pdf2-attributes">
+    <ref name="structure-properties"/>
+    <ref name="layout-attributes"/>
+    <ref name="otherns-attributes"/>
+    <ref name="showtags-attributes"/>
+  </define>
+  <define name="showtags-attributes">
+    <optional>
+      <attribute name="af">
+        <choice>
+          <value>yes</value>
+          <value>no</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="rolemapped-from"/>
+    </optional>
+  </define>
+  <!--
+    Standard Attribute Owner Namespaces (such as CSS3, HTML-5.00) apart from the ones listed here
+    and also vendor-specific namespaced attributes are allowed with any name/value.
+  -->
+  <define name="otherns-attributes">
+    <zeroOrMore>
+      <attribute>
+        <anyName>
+          <except>
+            <nsName ns=""/>
+            <nsName ns="http://iso.org/pdf/ssn/Layout"/>
+            <nsName ns="http://iso.org/pdf/ssn/PrintField"/>
+            <nsName ns="http://iso.org/pdf/ssn/Table"/>
+            <nsName ns="http://iso.org/pdf/ssn/List"/>
+            <nsName ns="http://iso.org/pdf/ssn/Artifact"/>
+          </except>
+        </anyName>
+      </attribute>
+    </zeroOrMore>
+  </define>
+  <!-- Properties are modelled as attributes in no namespace -->
+  <define name="structure-properties">
     <optional>
       <attribute name="lang"/>
     </optional>
+    <optional>
+      <attribute name="actualtext"/>
+    </optional>
+    <optional>
+      <attribute name="alt"/>
+    </optional>
+  </define>
+  <define name="layout-attributes">
     <optional>
       <!--
         Only validate Layout attributes with Owner Layout
@@ -446,29 +494,11 @@
       <attribute name="Layout:GlyphOrientationVertical"/>
     </optional>
     <optional>
-      <!--  -->
-      <attribute name="actualtext"/>
+      <!---->
+      <attribute name="Layout:BBox"/>
     </optional>
-    <optional>
-      <attribute name="alt"/>
-    </optional>
-    <optional>
-      <attribute name="af">
-        <choice>
-          <value>yes</value>
-          <value>no</value>
-        </choice>
-      </attribute>
-    </optional>
-    <optional>
-      <attribute name="rolemapped-from"/>
-    </optional>
-    <zeroOrMore>
-      <attribute>
-        <nsName ns="http://iso.org/pdf/ssn/HTML-5.00"/>
-      </attribute>
-    </zeroOrMore>
   </define>
+  <!--  see apryse PDFA example -->
   <define name="list-attributes">
     <optional>
       <attribute name="List:ListNumbering">
@@ -1683,6 +1713,9 @@
       <name ns="">L</name>
       <ref name="pdf2-attributes"/>
       <ref name="list-attributes"/>
+      <optional>
+        <attribute name="Layout:BBox"/>
+      </optional>
       <interleave>
         <optional>
           <ref name="Caption"/>
