@@ -363,12 +363,23 @@
       <attribute name="lang"/>
     </optional>
     <optional>
+      <!-- Lang -->
+      <attribute name="expanded"/>
+    </optional>
+    <optional>
+      <!-- E -->
       <attribute name="actualtext"/>
     </optional>
     <optional>
+      <!-- ActualText -->
       <attribute name="alt"/>
     </optional>
+    <optional>
+      <!-- Alt -->
+      <attribute name="title"/>
+    </optional>
   </define>
+  <!-- T -->
   <define name="layout-attributes">
     <optional>
       <!--
@@ -448,7 +459,13 @@
       </attribute>
     </optional>
     <optional>
-      <!---->
+      <attribute name="Layout:BBox"/>
+    </optional>
+    <optional>
+      <!--
+         see apryse PDFA example
+        
+      -->
       <attribute name="Layout:LineHeight"/>
     </optional>
     <optional>
@@ -493,12 +510,7 @@
       <!---->
       <attribute name="Layout:GlyphOrientationVertical"/>
     </optional>
-    <optional>
-      <!---->
-      <attribute name="Layout:BBox"/>
-    </optional>
   </define>
-  <!--  see apryse PDFA example -->
   <define name="list-attributes">
     <optional>
       <attribute name="List:ListNumbering">
@@ -632,9 +644,6 @@
       <name ns="">Part</name>
       <interleave>
         <ref name="pdf2-attributes"/>
-        <optional>
-          <attribute name="title"/>
-        </optional>
         <zeroOrMore>
           <choice>
             <ref name="document.content"/>
@@ -891,9 +900,6 @@
   </define>
   <define name="sechead.content">
     <ref name="pdf2-attributes"/>
-    <optional>
-      <attribute name="title"/>
-    </optional>
     <interleave>
       <optional>
         <ref name="Art"/>
@@ -2298,11 +2304,6 @@
       <optional>
         <attribute name="Layout:Height"/>
       </optional>
-      <optional>
-        <attribute name="title">
-          <a:documentation>FIXME nonstandard attribute</a:documentation>
-        </attribute>
-      </optional>
       <interleave>
         <optional>
           <ref name="H"/>
@@ -2523,9 +2524,7 @@
   <define name="TOC">
     <element>
       <name ns="">TOC</name>
-      <optional>
-        <attribute name="title"/>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="Part"/>
@@ -2542,9 +2541,7 @@
   <define name="TOCI">
     <element>
       <name ns="">TOCI</name>
-      <optional>
-        <attribute name="title"/>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="Div"/>
@@ -2890,9 +2887,6 @@
         <value>Part</value>
       </attribute>
       <ref name="pdf2-attributes"/>
-      <optional>
-        <attribute name="title"/>
-      </optional>
       <optional>
         <choice>
           <ref name="title"/>
