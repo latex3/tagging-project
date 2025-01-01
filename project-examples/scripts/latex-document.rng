@@ -344,12 +344,23 @@
       <attribute name="lang"/>
     </optional>
     <optional>
+      <!-- Lang -->
+      <attribute name="expanded"/>
+    </optional>
+    <optional>
+      <!-- E -->
       <attribute name="actualtext"/>
     </optional>
     <optional>
+      <!-- ActualText -->
       <attribute name="alt"/>
     </optional>
+    <optional>
+      <!-- Alt -->
+      <attribute name="title"/>
+    </optional>
   </define>
+  <!-- T -->
   <define name="layout-attributes">
     <optional>
       <!--
@@ -611,9 +622,6 @@
     <element name="pdf2:Part">
       <interleave>
         <ref name="pdf2-attributes"/>
-        <optional>
-          <attribute name="title"/>
-        </optional>
         <zeroOrMore>
           <choice>
             <ref name="document.content"/>
@@ -865,9 +873,6 @@
   </define>
   <define name="sechead.content">
     <ref name="pdf2-attributes"/>
-    <optional>
-      <attribute name="title"/>
-    </optional>
     <interleave>
       <optional>
         <ref name="Art"/>
@@ -2232,11 +2237,6 @@
       <optional>
         <attribute name="Layout:Height"/>
       </optional>
-      <optional>
-        <attribute name="title">
-          <a:documentation>FIXME nonstandard attribute</a:documentation>
-        </attribute>
-      </optional>
       <interleave>
         <optional>
           <ref name="H"/>
@@ -2453,9 +2453,7 @@
   </define>
   <define name="TOC">
     <element name="pdf1:TOC">
-      <optional>
-        <attribute name="title"/>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="Part"/>
@@ -2471,9 +2469,7 @@
   </define>
   <define name="TOCI">
     <element name="pdf1:TOCI">
-      <optional>
-        <attribute name="title"/>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <ref name="Div"/>
@@ -2809,9 +2805,6 @@
         <value>Part</value>
       </attribute>
       <ref name="pdf2-attributes"/>
-      <optional>
-        <attribute name="title"/>
-      </optional>
       <optional>
         <choice>
           <ref name="title"/>

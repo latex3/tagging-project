@@ -140,9 +140,11 @@ otherns-attributes =
 
 # Properties are modelled as attributes in no namespace
 structure-properties =
-  attribute lang {text}?,
-  attribute actualtext {text}?,
-  attribute alt {text}?
+  attribute lang {text}?,         # Lang
+  attribute expanded {text}?,     # E
+  attribute actualtext {text}?,   # ActualText
+  attribute alt {text}?,          # Alt
+  attribute title {text}?         # T
   
 layout-attributes =
   # Only validate Layout attributes with Owner Layout
@@ -225,7 +227,6 @@ pdf2-attributes,
 
 Part = element pdf2:Part {
    pdf2-attributes&
-  attribute title {text}?&
   (document.content|TOCI|Sub|Lbl|Reference|BibEntry|Caption)*
    }
 
@@ -263,7 +264,6 @@ pdf2-attributes,
 
 sechead.content =
   pdf2-attributes,
-  attribute title {text}?,
   (Art?&Sect?&(text|Art|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*)
 
 H1 = element pdf2:H1 {sechead.content}
@@ -537,8 +537,6 @@ Formula = element pdf2:Formula {
   attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
-  ## FIXME nonstandard attribute
-  attribute title {text}?,
 (H? & Caption? & (text|Part|Div|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact|
 math)*)
 }
@@ -567,12 +565,12 @@ pdf2-attributes,
 }
 
 TOC = element pdf1:TOC {
-  attribute title {text}?,
+pdf2-attributes,
    (Part|TOC|TOCI|NonStruct|Private|Caption|Artifact)*
    }
 
 TOCI = element pdf1:TOCI {
-  attribute title {text}?,
+pdf2-attributes,
    (Div|TOC|NonStruct|Private|P|Lbl|Reference|Artifact)*
    }
 
@@ -644,7 +642,6 @@ Sect |= theorem-like
 text-unit = element latexSE:text-unit {
  attribute rolemaps-to {"Part"},
     pdf2-attributes,
-    attribute title {text}?,
    (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
 Part |= text-unit
 
