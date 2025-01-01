@@ -1,7 +1,5 @@
 
-
-
-
+namespace nons = ""
 namespace pdf1 = ""
 namespace pdf2 = ""
 namespace mml = "http://www.w3.org/1998/Math/MathML"
@@ -13,7 +11,7 @@ namespace PrintField = "http://iso.org/pdf/ssn/PrintField"
 namespace Table = "http://iso.org/pdf/ssn/Table"
 namespace List = "http://iso.org/pdf/ssn/List"
 namespace Artifact = "http://iso.org/pdf/ssn/Artifact"
-namespace HTML-5.00 = "http://iso.org/pdf/ssn/HTML-5.00"
+
 
 namespace latexSE = ""
 namespace latexSEbook = ""
@@ -27,7 +25,7 @@ pdf1rolemap-P = attribute rolemaps-to {"P"}
 pdf1rolemap-Span = attribute rolemaps-to {"Span"}
 pdf1rolemap-Note = attribute rolemaps-to {"Note"}
 
-## share with pdf1.7 version from here to end
+## share with pdf1.7 version from here to en
 
 textorHTML &= (Link|Lbl)*
 
@@ -127,7 +125,27 @@ start = Document | DocumentFragment
 
 
 pdf2-attributes =
+  structure-properties,
+  layout-attributes,
+  otherns-attributes,
+  showtags-attributes
+
+showtags-attributes =
+  attribute af {"yes" | "no"}?,
+  attribute rolemapped-from {text}?
+
+# Standard Attribute Owner Namespaces (such as CSS3, HTML-5.00) apart from the ones listed here
+# and also vendor-specific namespaced attributes are allowed with any name/value.
+otherns-attributes =
+  attribute (* - (nons:*|Layout:*|PrintField:*|Table:*|List:*|Artifact:*)) {text}*
+
+# Properties are modelled as attributes in no namespace
+structure-properties =
   attribute lang {text}?,
+  attribute actualtext {text}?,
+  attribute alt {text}?
+  
+layout-attributes =
   # Only validate Layout attributes with Owner Layout
   # PDF 2 states Attributes in this category shall be defined in attribute objects whose O
   # (owner) entry has the value Layout or whose owner is any other owner excluding List, Table,
@@ -149,6 +167,7 @@ pdf2-attributes =
 #
   attribute Layout:TextIndent {text}?,
   attribute Layout:TextAlign { "Start" | "Center" | "End" | "Justify"}?,
+  attribute Layout:BBox {text}? #  see apryse PDFA example
 #
   attribute Layout:LineHeight {text}?,
   attribute Layout:BaselineShift {text}?,
@@ -161,13 +180,9 @@ pdf2-attributes =
   attribute Layout:ColumnWidths {text}?,
   attribute Layout:ColumnGap {text}?,
 #
-  attribute Layout:GlyphOrientationVertical {text}?,
-#  
-  attribute actualtext {text}?,
-  attribute alt {text}?,
-  attribute af {"yes" | "no"}?,
-  attribute rolemapped-from {text}?,
-  attribute HTML-5.00:* {text}*
+  attribute Layout:GlyphOrientationVertical {text}?
+#
+
 
 list-attributes =
   attribute List:ListNumbering {"" | "Unordered" | "Description" | "Disc" | "Circle" | "Square" | "Ordered" | "Decimal" | "UpperRoman" | "LowerRoman" | "UpperAlpha" | "LowerAlpha"}?,
@@ -300,16 +315,16 @@ Sub = element pdf2:Sub	 {
 ### Inline
 
 Lbl = element pdf2:Lbl {
-pdf2-attributes,
-(text|NonStruct|Private|Note|Code|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact|
+  pdf2-attributes,
+  (text|NonStruct|Private|Note|Code|Sub|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact|
 math)*
    }
 
 
 Em = element pdf2:Em {
-pdf1rolemap-Span,
-pdf2-attributes,
-(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
+  pdf1rolemap-Span,
+  pdf2-attributes,
+ (text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*
 }
 
 Strong = element pdf2:Strong {
@@ -407,14 +422,15 @@ pdf2-attributes,
 ### Lists
 
 L = element pdf2:L {
-pdf2-attributes,
-list-attributes,
-(Caption? & (NonStruct|Private|L|LI|Artifact)*)
+  pdf2-attributes,
+  list-attributes,
+  attribute Layout:BBox {text}?,
+  (Caption? & (NonStruct|Private|L|LI|Artifact)*)
 }
 
 LI = element pdf2:LI {
-pdf2-attributes,
- (text|Div|NonStruct|Private|Lbl|LBody|Artifact)*
+  pdf2-attributes,
+  (text|Div|NonStruct|Private|Lbl|LBody|Artifact)*
  }
 
 
@@ -702,7 +718,7 @@ P |= \text
 
 Lbl |= element latexSE:footnotemark {
  attribute rolemaps-to {"Lbl"},
-pdf2-attributes,
+ pdf2-attributes,
 (text|Link)*
 }
 
