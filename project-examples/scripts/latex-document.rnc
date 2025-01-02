@@ -488,7 +488,7 @@ TH = element pdf2:TH {
   attribute Layout:TPadding {text}?,
 #
   table-attributes,
-  attribute Table:Scope {"Column" | "Row"},
+  attribute Table:Scope {"Column" | "Row"}?,
   attribute Table:Short {text}?,
 
  (H? & (text|Art|Div|Sect|NonStruct|Private|P|Note|Code|Hn|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact)*)
