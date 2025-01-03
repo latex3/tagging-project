@@ -21,7 +21,7 @@
     </attribute>
   </define>
   <define name="textorHTML" combine="interleave">
-    <a:documentation>share with pdf1.7 version from here to en</a:documentation>
+    <a:documentation>share with pdf1.7 version from here to end</a:documentation>
     <zeroOrMore>
       <choice>
         <ref name="Link"/>
@@ -149,6 +149,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Frontmatter-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -164,6 +167,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Testament-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -182,6 +188,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Testament-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -203,6 +212,9 @@
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -215,6 +227,9 @@
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -227,6 +242,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Book-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -248,6 +266,9 @@
       <attribute name="rolemaps-to">
         <value>H2</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -260,6 +281,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <optional>
         <ref name="Chapter-Title"/>
       </optional>
@@ -378,8 +402,12 @@
       <!-- Alt -->
       <attribute name="title"/>
     </optional>
+    <optional>
+      <!-- T -->
+      <attribute name="id"/>
+    </optional>
   </define>
-  <!-- T -->
+  <!-- ID -->
   <define name="layout-attributes">
     <optional>
       <!--
@@ -1968,12 +1996,14 @@
       </optional>
       <!---->
       <ref name="table-attributes"/>
-      <attribute name="Table:Scope">
-        <choice>
-          <value>Column</value>
-          <value>Row</value>
-        </choice>
-      </attribute>
+      <optional>
+        <attribute name="Table:Scope">
+          <choice>
+            <value>Column</value>
+            <value>Row</value>
+          </choice>
+        </attribute>
+      </optional>
       <optional>
         <attribute name="Table:Short"/>
       </optional>
@@ -3019,6 +3049,7 @@
       <attribute name="rolemaps-to">
         <value>BlockQuote</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Part"/>
       </zeroOrMore>
@@ -3030,6 +3061,7 @@
       <attribute name="rolemaps-to">
         <value>BlockQuote</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Part"/>
       </zeroOrMore>
@@ -3041,15 +3073,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-            <value>Description</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>

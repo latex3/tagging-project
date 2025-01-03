@@ -12,10 +12,9 @@ namespace Table = "http://iso.org/pdf/ssn/Table"
 namespace List = "http://iso.org/pdf/ssn/List"
 namespace Artifact = "http://iso.org/pdf/ssn/Artifact"
 
-namespace latexSE = "https://www.latex-project.org/ns/dflt/2022"
-namespace latexSEbook = "https://www.latex-project.org/ns/book/2022"
-
-namespace d1 = "data:,21F881-80E0-84B6-AFE8-178B9AB7F9D"
+namespace latexSE = "https://www.latex-project.org/ns/dflt"
+namespace latexSEbook = "https://www.latex-project.org/ns/book"
+namespace latexSEbible = "https://www.latex-project.org/ns/local/bible"
 
 include "latex-mathml.rnc"
 
@@ -58,62 +57,75 @@ H6 |= element latexSEbook:subparagraph  {attribute rolemaps-to {"H6"}, sechead.c
 
 # LaTeX Bible Markup Namepace
 
-Sect |= element d1:Frontmatter {attribute rolemaps-to {"Sect"}, Frontmatter-Title,TOC?,text-unit*}
-Sect |= element d1:Testament {attribute rolemaps-to {"Sect"}, Testament-Title,TOC?,text-unit*,Book*}
+Sect |= element latexSEbible:Frontmatter {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Frontmatter-Title,TOC?,text-unit*}
+  
+Sect |= element latexSEbible:Testament {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Testament-Title,TOC?,text-unit*,Book*}
 
-Testament = element d1:Testament {
-attribute rolemaps-to {"Sect"},
-Testament-Title,
- TOC?,
- (text-unit|Span)*,
- Book*
+Testament = element latexSEbible:Testament {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Testament-Title,
+  TOC?,
+  (text-unit|Span)*,
+  Book*
  }
 
-Frontmatter-Title = element d1:Frontmatter-Title {
-attribute rolemaps-to {"H1"},
-attribute title {text},
-Span*
+Frontmatter-Title = element latexSEbible:Frontmatter-Title {
+  attribute rolemaps-to {"H1"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-Testament-Title = element d1:Testament-Title {
-attribute rolemaps-to {"H1"},
-attribute title {text},
-Span*
+Testament-Title = element latexSEbible:Testament-Title {
+  attribute rolemaps-to {"H1"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-Book= element d1:Book {
-attribute rolemaps-to {"Sect"},
-Book-Title,
- TOC?,
- (text-unit|Span)*,
- BChapter*
+Book = element latexSEbible:Book {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Book-Title,
+  TOC?,
+  (text-unit|Span)*,
+  BChapter*
  }
 
-Book-Title = element d1:Book-Title {
-attribute rolemaps-to {"H2"},
-attribute title {text},
-Span*
+Book-Title = element latexSEbible:Book-Title {
+  attribute rolemaps-to {"H2"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-BChapter= element d1:Chapter {
-attribute rolemaps-to {"Sect"},
-Chapter-Title?,
- TOC?,
- (text-unit|Span)*,
- Bverse*
+BChapter= element latexSEbible:Chapter {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Chapter-Title?,
+  TOC?,
+  (text-unit|Span)*,
+  Bverse*
  }
 
-Chapter-Title = element d1:Chapter-Title {
-attribute rolemaps-to {"H3"},
-pdf2-attributes,
-attribute title {text}?,
-(text|Span)*
+Chapter-Title = element latexSEbible:Chapter-Title {
+  attribute rolemaps-to {"H3"},
+  pdf2-attributes,
+  attribute title {text}?,
+  (text|Span)*
 }
 
-Bverse= element d1:verse {
-attribute rolemaps-to {"P"},
-pdf2-attributes,
-(text|text-unit|Span)*
+Bverse= element latexSEbible:verse {
+  attribute rolemaps-to {"P"},
+  pdf2-attributes,
+  (text|text-unit|Span)*
  }
 
 
@@ -144,7 +156,8 @@ structure-properties =
   attribute expanded {text}?,     # E
   attribute actualtext {text}?,   # ActualText
   attribute alt {text}?,          # Alt
-  attribute title {text}?         # T
+  attribute title {text}?,        # T
+  attribute id {text}?            # ID
   
 layout-attributes =
   # Only validate Layout attributes with Owner Layout
@@ -247,7 +260,8 @@ Document|DocumentFragment|Part|Art|Div|Sect|TOC|BlockQuote|NonStruct|Private|P|N
 
 
 NonStruct = element pdf2:NonStruct{
-   (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
+  pdf2-attributes,
+  (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
    }
 
 Div = element pdf2:Div {
@@ -614,24 +628,28 @@ pdf2-attributes,
 document.content &= (figures?,tables?)
 
 figures = element latexSE:figures {
- attribute rolemaps-to {"Sect"},
- float*
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  float*
  }
 
 tables = element latexSE:tables {
- attribute rolemaps-to {"Sect"},
- float*
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  float*
  }
 
 float = element latexSE:float {
- attribute rolemaps-to {"Aside"|"Note"},
- (Caption|Part|Div|Figure|\text)*
+  attribute rolemaps-to {"Aside"|"Note"},
+  attribute id {text}?,
+  (Caption|Part|Div|Figure|\text)*
  }
 
 
 
 theorem-like = element latexSE:theorem-like {
- attribute rolemaps-to {"Sect"},
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
   Caption?,
   Lbl?,
   (Part)*
@@ -640,20 +658,22 @@ Sect |= theorem-like
 
 
 text-unit = element latexSE:text-unit {
- attribute rolemaps-to {"Part"},
-    pdf2-attributes,
-   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
+  attribute rolemaps-to {"Part"},
+  pdf2-attributes,
+   (title|Title)?,(H4|H5|Div|Sect|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
 Part |= text-unit
 
 verbatim = element latexSE:verbatim {
- attribute rolemaps-to {"P"},
-codeline*
+  attribute rolemaps-to {"P"},
+  pdf2-attributes,
+  codeline*
 }
 P |= verbatim
 
 codeline = element latexSE:codeline {
- attribute rolemaps-to {"Sub"|"Span"},
-Code*
+  attribute rolemaps-to {"Sub"|"Span"},
+  pdf2-attributes,
+  Code*
 }
 
 
@@ -661,52 +681,55 @@ Code*
 
 \list = element latexSE:list {
  attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  pdf2-attributes,
+  LI*
 }
 L |= \list
 
 itemize = element latexSE:itemize {
- attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  attribute rolemaps-to {"L"},
+  pdf2-attributes,
+  LI*
 }
 L |= itemize
 
 enumerate = element latexSE:enumerate {
- attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  attribute rolemaps-to {"L"},
+  pdf2-attributes,
+  LI*
 }
 L |= enumerate
 
 quote = element latexSE:quote {
  attribute rolemaps-to {"BlockQuote"},
-(Part)*
+ pdf2-attributes,
+ (Part)*
 }
 
 quotation = element latexSE:quotation {
  attribute rolemaps-to {"BlockQuote"},
-(Part)*
+ pdf2-attributes,
+ (Part)*
 }
 
 description= element latexSE:description {
  attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered" | "Description"}?,
-LI*
+ pdf2-attributes,
+ LI*
 }
 
 
 title = element latexSE:title {
  attribute rolemaps-to {"Title"},
- pdf2-attributes, (Span|\text)*
+ pdf2-attributes,
+ (Span|\text)*
  }
 
 
 \text = element latexSE:text {
  attribute rolemaps-to {"P"},
-pdf2-attributes,
-(text|Figure|Span|Link|Lbl|Reference|Em|FENote|Formula)*
+ pdf2-attributes,
+ (text|Figure|Span|Link|Lbl|Reference|Em|FENote|Formula)*
 }
 P |= \text
 
@@ -718,10 +741,13 @@ Lbl |= element latexSE:footnotemark {
 }
 
 FENote |= element latexSE:footnote {
- attribute rolemaps-to {"FENote"|"Note"},
-footnotelabel,(Part)*
+  attribute rolemaps-to {"FENote"|"Note"},
+  pdf2-attributes,
+  footnotelabel,(Part)*
 }
 
 footnotelabel = element latexSE:footnotelabel {
  attribute rolemaps-to {"Lbl"},
- (text|NonStruct)*}
+ pdf2-attributes,
+ (text|NonStruct)*
+}
