@@ -16,7 +16,7 @@ namespace Artifact = "http://iso.org/pdf/ssn/Artifact"
 namespace latexSE = ""
 namespace latexSEbook = ""
 
-namespace d1 = ""
+namespace latexSEbible = ""
 
 include "latex-mathml.rnc"
 
@@ -25,7 +25,7 @@ pdf1rolemap-P = attribute rolemaps-to {"P"}
 pdf1rolemap-Span = attribute rolemaps-to {"Span"}
 pdf1rolemap-Note = attribute rolemaps-to {"Note"}
 
-## share with pdf1.7 version from here to en
+## share with pdf1.7 version from here to end
 
 textorHTML &= (Link|Lbl)*
 
@@ -59,62 +59,75 @@ H6 |= element latexSEbook:subparagraph  {attribute rolemaps-to {"H6"}, sechead.c
 
 # LaTeX Bible Markup Namepace
 
-Sect |= element d1:Frontmatter {attribute rolemaps-to {"Sect"}, Frontmatter-Title,TOC?,text-unit*}
-Sect |= element d1:Testament {attribute rolemaps-to {"Sect"}, Testament-Title,TOC?,text-unit*,Book*}
+Sect |= element latexSEbible:Frontmatter {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Frontmatter-Title,TOC?,text-unit*}
+  
+Sect |= element latexSEbible:Testament {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Testament-Title,TOC?,text-unit*,Book*}
 
-Testament = element d1:Testament {
-attribute rolemaps-to {"Sect"},
-Testament-Title,
- TOC?,
- (text-unit|Span)*,
- Book*
+Testament = element latexSEbible:Testament {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Testament-Title,
+  TOC?,
+  (text-unit|Span)*,
+  Book*
  }
 
-Frontmatter-Title = element d1:Frontmatter-Title {
-attribute rolemaps-to {"H1"},
-attribute title {text},
-Span*
+Frontmatter-Title = element latexSEbible:Frontmatter-Title {
+  attribute rolemaps-to {"H1"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-Testament-Title = element d1:Testament-Title {
-attribute rolemaps-to {"H1"},
-attribute title {text},
-Span*
+Testament-Title = element latexSEbible:Testament-Title {
+  attribute rolemaps-to {"H1"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-Book= element d1:Book {
-attribute rolemaps-to {"Sect"},
-Book-Title,
- TOC?,
- (text-unit|Span)*,
- BChapter*
+Book = element latexSEbible:Book {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Book-Title,
+  TOC?,
+  (text-unit|Span)*,
+  BChapter*
  }
 
-Book-Title = element d1:Book-Title {
-attribute rolemaps-to {"H2"},
-attribute title {text},
-Span*
+Book-Title = element latexSEbible:Book-Title {
+  attribute rolemaps-to {"H2"},
+  attribute id {text}?,
+  attribute title {text},
+  Span*
 }
 
-BChapter= element d1:Chapter {
-attribute rolemaps-to {"Sect"},
-Chapter-Title?,
- TOC?,
- (text-unit|Span)*,
- Bverse*
+BChapter= element latexSEbible:Chapter {
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  Chapter-Title?,
+  TOC?,
+  (text-unit|Span)*,
+  Bverse*
  }
 
-Chapter-Title = element d1:Chapter-Title {
-attribute rolemaps-to {"H3"},
-pdf2-attributes,
-attribute title {text}?,
-(text|Span)*
+Chapter-Title = element latexSEbible:Chapter-Title {
+  attribute rolemaps-to {"H3"},
+  pdf2-attributes,
+  attribute title {text}?,
+  (text|Span)*
 }
 
-Bverse= element d1:verse {
-attribute rolemaps-to {"P"},
-pdf2-attributes,
-(text|text-unit|Span)*
+Bverse= element latexSEbible:verse {
+  attribute rolemaps-to {"P"},
+  pdf2-attributes,
+  (text|text-unit|Span)*
  }
 
 
@@ -145,7 +158,7 @@ structure-properties =
   attribute expanded {text}?,     # E
   attribute actualtext {text}?,   # ActualText
   attribute alt {text}?,          # Alt
-  attribute title {text}?,         # T
+  attribute title {text}?,        # T
   attribute id {text}?            # ID
   
 layout-attributes =
@@ -684,31 +697,34 @@ L |= enumerate
 
 quote = element latexSE:quote {
  attribute rolemaps-to {"BlockQuote"},
-(Part)*
+ pdf2-attributes,
+ (Part)*
 }
 
 quotation = element latexSE:quotation {
  attribute rolemaps-to {"BlockQuote"},
-(Part)*
+ pdf2-attributes,
+ (Part)*
 }
 
 description= element latexSE:description {
  attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered" | "Description"}?,
-LI*
+ pdf2-attributes,
+ LI*
 }
 
 
 title = element latexSE:title {
  attribute rolemaps-to {"Title"},
- pdf2-attributes, (Span|\text)*
+ pdf2-attributes,
+ (Span|\text)*
  }
 
 
 \text = element latexSE:text {
  attribute rolemaps-to {"P"},
-pdf2-attributes,
-(text|Figure|Span|Link|Lbl|Reference|Em|FENote|Formula)*
+ pdf2-attributes,
+ (text|Figure|Span|Link|Lbl|Reference|Em|FENote|Formula)*
 }
 P |= \text
 

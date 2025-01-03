@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- These Namespaces to be confirmed. "data:,Layout" would be another possibility -->
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:pdf1="http://iso.org/pdf/ssn" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:d1="data:,21F881-80E0-84B6-AFE8-178B9AB7F9D" xmlns:Artifact="http://iso.org/pdf/ssn/Artifact" xmlns:pdf2="http://iso.org/pdf2/ssn" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:latexSE="https://www.latex-project.org/ns/dflt/2022" xmlns:latexSEbook="https://www.latex-project.org/ns/book/2022" xmlns:PrintField="http://iso.org/pdf/ssn/PrintField" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:Table="http://iso.org/pdf/ssn/Table" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:pdf1="http://iso.org/pdf/ssn" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:Artifact="http://iso.org/pdf/ssn/Artifact" xmlns:pdf2="http://iso.org/pdf2/ssn" xmlns:Layout="http://iso.org/pdf/ssn/Layout" xmlns:latexSEbible="https://www.latex-project.org/ns/local/bible" xmlns:List="http://iso.org/pdf/ssn/List" xmlns:latexSE="https://www.latex-project.org/ns/dflt" xmlns:latexSEbook="https://www.latex-project.org/ns/book" xmlns:PrintField="http://iso.org/pdf/ssn/PrintField" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <include href="latex-mathml.rng"/>
   <define name="pdf1rolemap-Any">
     <optional>
@@ -135,10 +135,13 @@
   </define>
   <!-- LaTeX Bible Markup Namepace -->
   <define name="Sect" combine="choice">
-    <element name="d1:Frontmatter">
+    <element name="latexSEbible:Frontmatter">
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Frontmatter-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -149,10 +152,13 @@
     </element>
   </define>
   <define name="Sect" combine="choice">
-    <element name="d1:Testament">
+    <element name="latexSEbible:Testament">
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Testament-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -166,10 +172,13 @@
     </element>
   </define>
   <define name="Testament">
-    <element name="d1:Testament">
+    <element name="latexSEbible:Testament">
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Testament-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -186,10 +195,13 @@
     </element>
   </define>
   <define name="Frontmatter-Title">
-    <element name="d1:Frontmatter-Title">
+    <element name="latexSEbible:Frontmatter-Title">
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -197,10 +209,13 @@
     </element>
   </define>
   <define name="Testament-Title">
-    <element name="d1:Testament-Title">
+    <element name="latexSEbible:Testament-Title">
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -208,10 +223,13 @@
     </element>
   </define>
   <define name="Book">
-    <element name="d1:Book">
+    <element name="latexSEbible:Book">
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <ref name="Book-Title"/>
       <optional>
         <ref name="TOC"/>
@@ -228,10 +246,13 @@
     </element>
   </define>
   <define name="Book-Title">
-    <element name="d1:Book-Title">
+    <element name="latexSEbible:Book-Title">
       <attribute name="rolemaps-to">
         <value>H2</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <attribute name="title"/>
       <zeroOrMore>
         <ref name="Span"/>
@@ -239,10 +260,13 @@
     </element>
   </define>
   <define name="BChapter">
-    <element name="d1:Chapter">
+    <element name="latexSEbible:Chapter">
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <optional>
         <ref name="Chapter-Title"/>
       </optional>
@@ -261,7 +285,7 @@
     </element>
   </define>
   <define name="Chapter-Title">
-    <element name="d1:Chapter-Title">
+    <element name="latexSEbible:Chapter-Title">
       <attribute name="rolemaps-to">
         <value>H3</value>
       </attribute>
@@ -278,7 +302,7 @@
     </element>
   </define>
   <define name="Bverse">
-    <element name="d1:verse">
+    <element name="latexSEbible:verse">
       <attribute name="rolemaps-to">
         <value>P</value>
       </attribute>
@@ -359,8 +383,12 @@
       <!-- Alt -->
       <attribute name="title"/>
     </optional>
+    <optional>
+      <!-- T -->
+      <attribute name="id"/>
+    </optional>
   </define>
-  <!-- T -->
+  <!-- ID -->
   <define name="layout-attributes">
     <optional>
       <!--
@@ -717,6 +745,7 @@
   </define>
   <define name="NonStruct">
     <element name="pdf2:NonStruct">
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <text/>
@@ -1905,12 +1934,14 @@
       </optional>
       <!---->
       <ref name="table-attributes"/>
-      <attribute name="Table:Scope">
-        <choice>
-          <value>Column</value>
-          <value>Row</value>
-        </choice>
-      </attribute>
+      <optional>
+        <attribute name="Table:Scope">
+          <choice>
+            <value>Column</value>
+            <value>Row</value>
+          </choice>
+        </attribute>
+      </optional>
       <optional>
         <attribute name="Table:Short"/>
       </optional>
@@ -2746,6 +2777,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <ref name="float"/>
       </zeroOrMore>
@@ -2756,6 +2790,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <ref name="float"/>
       </zeroOrMore>
@@ -2769,6 +2806,9 @@
           <value>Note</value>
         </choice>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="Caption"/>
@@ -2785,6 +2825,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <optional>
         <ref name="Caption"/>
       </optional>
@@ -2816,6 +2859,7 @@
           <ref name="H4"/>
           <ref name="H5"/>
           <ref name="Div"/>
+          <ref name="Sect"/>
           <ref name="P"/>
           <ref name="Aside"/>
           <ref name="Figure"/>
@@ -2842,6 +2886,7 @@
       <attribute name="rolemaps-to">
         <value>P</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="codeline"/>
       </zeroOrMore>
@@ -2858,6 +2903,7 @@
           <value>Span</value>
         </choice>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Code"/>
       </zeroOrMore>
@@ -2868,14 +2914,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -2889,14 +2928,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -2910,14 +2942,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -2931,6 +2956,7 @@
       <attribute name="rolemaps-to">
         <value>BlockQuote</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Part"/>
       </zeroOrMore>
@@ -2941,6 +2967,7 @@
       <attribute name="rolemaps-to">
         <value>BlockQuote</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Part"/>
       </zeroOrMore>
@@ -2951,15 +2978,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-            <value>Description</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3025,6 +3044,7 @@
           <value>Note</value>
         </choice>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <ref name="footnotelabel"/>
       <zeroOrMore>
         <ref name="Part"/>
@@ -3036,6 +3056,7 @@
       <attribute name="rolemaps-to">
         <value>Lbl</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <text/>
