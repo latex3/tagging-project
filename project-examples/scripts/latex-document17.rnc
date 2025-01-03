@@ -25,6 +25,9 @@ pdf1rolemap-P = attribute rolemaps-to {"P"}
 pdf1rolemap-Span = attribute rolemaps-to {"Span"}
 pdf1rolemap-Note = attribute rolemaps-to {"Note"}
 
+start = document.content
+
+
 ## share with pdf1.7 version from here to end
 
 textorHTML &= (Link|Lbl)*
@@ -134,7 +137,6 @@ Bverse= element latexSEbible:verse {
 
 ### PDF2 structure Namespace
  
-start = Document | DocumentFragment
 
 
 pdf2-attributes =
@@ -262,7 +264,8 @@ Document|DocumentFragment|Part|Art|Div|Sect|TOC|BlockQuote|NonStruct|Private|P|N
 
 
 NonStruct = element pdf2:NonStruct{
-   (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
+  pdf2-attributes,
+  (text|Document|DocumentFragment|Part|Art|Div|Sect|TOC|TOCI|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|RB|RT|RP|Warichu|WT|WP|FENote|Index|L|LI|LBody|BibEntry|Table|TR|TH|TD|THead|TBody|TFoot|Caption|Figure|Formula|Artifact)*
    }
 
 Div = element pdf2:Div {
@@ -629,24 +632,28 @@ pdf2-attributes,
 document.content &= (figures?,tables?)
 
 figures = element latexSE:figures {
- attribute rolemaps-to {"Sect"},
- float*
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  float*
  }
 
 tables = element latexSE:tables {
- attribute rolemaps-to {"Sect"},
- float*
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
+  float*
  }
 
 float = element latexSE:float {
- attribute rolemaps-to {"Aside"|"Note"},
- (Caption|Part|Div|Figure|\text)*
+  attribute rolemaps-to {"Aside"|"Note"},
+  attribute id {text}?,
+  (Caption|Part|Div|Figure|\text)*
  }
 
 
 
 theorem-like = element latexSE:theorem-like {
- attribute rolemaps-to {"Sect"},
+  attribute rolemaps-to {"Sect"},
+  attribute id {text}?,
   Caption?,
   Lbl?,
   (Part)*
@@ -655,20 +662,22 @@ Sect |= theorem-like
 
 
 text-unit = element latexSE:text-unit {
- attribute rolemaps-to {"Part"},
-    pdf2-attributes,
-   (title|Title)?,(H4|H5|Div|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
+  attribute rolemaps-to {"Part"},
+  pdf2-attributes,
+   (title|Title)?,(H4|H5|Div|Sect|P|Aside|Figure|Table|Formula|quote|quotation|\text|itemize|description|enumerate|verbatim|\list|Part)*}
 Part |= text-unit
 
 verbatim = element latexSE:verbatim {
- attribute rolemaps-to {"P"},
-codeline*
+  attribute rolemaps-to {"P"},
+  pdf2-attributes,
+  codeline*
 }
 P |= verbatim
 
 codeline = element latexSE:codeline {
- attribute rolemaps-to {"Sub"|"Span"},
-Code*
+  attribute rolemaps-to {"Sub"|"Span"},
+  pdf2-attributes,
+  Code*
 }
 
 
@@ -676,22 +685,22 @@ Code*
 
 \list = element latexSE:list {
  attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  pdf2-attributes,
+  LI*
 }
 L |= \list
 
 itemize = element latexSE:itemize {
- attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  attribute rolemaps-to {"L"},
+  pdf2-attributes,
+  LI*
 }
 L |= itemize
 
 enumerate = element latexSE:enumerate {
- attribute rolemaps-to {"L"},
-attribute List:ListNumbering {"Unordered" | "Ordered"}?,
-LI*
+  attribute rolemaps-to {"L"},
+  pdf2-attributes,
+  LI*
 }
 L |= enumerate
 
@@ -736,10 +745,13 @@ Lbl |= element latexSE:footnotemark {
 }
 
 FENote |= element latexSE:footnote {
- attribute rolemaps-to {"FENote"|"Note"},
-footnotelabel,(Part)*
+  attribute rolemaps-to {"FENote"|"Note"},
+  pdf2-attributes,
+  footnotelabel,(Part)*
 }
 
 footnotelabel = element latexSE:footnotelabel {
  attribute rolemaps-to {"Lbl"},
- (text|NonStruct)*}
+ pdf2-attributes,
+ (text|NonStruct)*
+}

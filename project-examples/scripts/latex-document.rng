@@ -22,6 +22,12 @@
       <notAllowed/>
     </optional>
   </define>
+  <start>
+    <choice>
+      <ref name="Document"/>
+      <ref name="DocumentFragment"/>
+    </choice>
+  </start>
   <define name="textorHTML" combine="interleave">
     <a:documentation>share with pdf1.7 version from here to end</a:documentation>
     <zeroOrMore>
@@ -316,14 +322,8 @@
       </zeroOrMore>
     </element>
   </define>
-  <start>
-    <a:documentation>PDF2 structure Namespace</a:documentation>
-    <choice>
-      <ref name="Document"/>
-      <ref name="DocumentFragment"/>
-    </choice>
-  </start>
   <define name="pdf2-attributes">
+    <a:documentation>PDF2 structure Namespace</a:documentation>
     <ref name="structure-properties"/>
     <ref name="layout-attributes"/>
     <ref name="otherns-attributes"/>

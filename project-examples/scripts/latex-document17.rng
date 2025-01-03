@@ -20,6 +20,9 @@
       <value>Note</value>
     </attribute>
   </define>
+  <start>
+    <ref name="document.content"/>
+  </start>
   <define name="textorHTML" combine="interleave">
     <a:documentation>share with pdf1.7 version from here to end</a:documentation>
     <zeroOrMore>
@@ -335,14 +338,8 @@
       </zeroOrMore>
     </element>
   </define>
-  <start>
-    <a:documentation>PDF2 structure Namespace</a:documentation>
-    <choice>
-      <ref name="Document"/>
-      <ref name="DocumentFragment"/>
-    </choice>
-  </start>
   <define name="pdf2-attributes">
+    <a:documentation>PDF2 structure Namespace</a:documentation>
     <ref name="structure-properties"/>
     <ref name="layout-attributes"/>
     <ref name="otherns-attributes"/>
@@ -770,6 +767,7 @@
   <define name="NonStruct">
     <element>
       <name ns="">NonStruct</name>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <text/>
@@ -2854,6 +2852,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <ref name="float"/>
       </zeroOrMore>
@@ -2865,6 +2866,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <ref name="float"/>
       </zeroOrMore>
@@ -2879,6 +2883,9 @@
           <value>Note</value>
         </choice>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <zeroOrMore>
         <choice>
           <ref name="Caption"/>
@@ -2896,6 +2903,9 @@
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <optional>
         <ref name="Caption"/>
       </optional>
@@ -2928,6 +2938,7 @@
           <ref name="H4"/>
           <ref name="H5"/>
           <ref name="Div"/>
+          <ref name="Sect"/>
           <ref name="P"/>
           <ref name="Aside"/>
           <ref name="Figure"/>
@@ -2955,6 +2966,7 @@
       <attribute name="rolemaps-to">
         <value>P</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="codeline"/>
       </zeroOrMore>
@@ -2972,6 +2984,7 @@
           <value>Span</value>
         </choice>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="Code"/>
       </zeroOrMore>
@@ -2983,14 +2996,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3005,14 +3011,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3027,14 +3026,7 @@
       <attribute name="rolemaps-to">
         <value>L</value>
       </attribute>
-      <optional>
-        <attribute name="List:ListNumbering">
-          <choice>
-            <value>Unordered</value>
-            <value>Ordered</value>
-          </choice>
-        </attribute>
-      </optional>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3143,6 +3135,7 @@
           <value>Note</value>
         </choice>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <ref name="footnotelabel"/>
       <zeroOrMore>
         <ref name="Part"/>
@@ -3155,6 +3148,7 @@
       <attribute name="rolemaps-to">
         <value>Lbl</value>
       </attribute>
+      <ref name="pdf2-attributes"/>
       <zeroOrMore>
         <choice>
           <text/>
