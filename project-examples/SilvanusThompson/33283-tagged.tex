@@ -381,18 +381,23 @@
 \newcommand{\ToCAnchor}{}
 
 %\ToCLine[font style]{Chapter}{Title}{label}
+\ExplSyntaxOn
 \newcommand{\ToCLine}[4][\scshape]{%
-  \par\noindent\label{toc:#4}%
+  \par
+  \tag_struct_begin:n{tag=TOCI}
+  \noindent\label{toc:#4}%
   \ifthenelse{\not\equal{\pageref{toc:#4}}{\ToCAnchor}}{%
     \noindent\textsc{\scriptsize Chapter\hfill Page}\medskip%
     \renewcommand{\ToCAnchor}{\pageref{toc:#4}}\par%
   }{}%
   \settowidth{\TmpLen}{9999}%
   \noindent\parbox[b]{\linewidth-\TmpLen}{\ToCBox{#2}%
-    \rule{0pt}{16pt}#1\hangindent6em #3\dotfill}% [** TN: Hard-coded spaces]
-  \PadTxt[r]{9999}{\pageref{#4}}\par\smallskip%
+    \rule{0pt}{16pt}#1\hangindent6em #3\dotfill% [** TN: Hard-coded spaces]
+  \PadTxt[r]{9999}{\pageref{#4}}}
+  \tag_struct_end:
+  \par\smallskip%
 }
-
+\ExplSyntaxOff
 \newcommand{\ChapterSkip}{\vspace*{0.1\linewidth}}
 \newcommand{\flushpage}{\clearpage\fancyhf{}\cleardoublepage}
 
@@ -697,18 +702,18 @@
 % and links
 \newcommand{\Pageref}[2][p.]{%
   \ifthenelse{\not\equal{#1}{}}{%
-    \hyperref[#2]{#1~\pageref{#2}}%
+    \hyperref[#2]{#1~\pageref*{#2}}%
   }{%
-    \hyperref[#2]{\pageref{#2}}%
+    \hyperref[#2]{\pageref{*#2}}%
   }%
 }
 
 \newcommand{\Pagerange}[2]{%
   \ifthenelse{\equal{\pageref{#1}}{\pageref{#2}}}{%
-    \hyperref[#1]{p.~\pageref{#1}}%
+    \hyperref[#1]{p.~\pageref*{#1}}%
   }{%
 %[** TN: Formatting as pp. m--n instead of pp. n, n+1.]
-    pp.~\hyperref[#1]{\pageref{#1}}--\hyperref[#2]{\pageref{#2}}%
+    pp.~\hyperref[#1]{\pageref*{#1}}--\hyperref[#2]{\pageref*{#2}}%
   }%
 }
 
