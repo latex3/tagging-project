@@ -8405,9 +8405,10 @@ business will then be to discover an expression for
 the area of any one narrow strip, and to integrate it
 so as to add together all the strips. Now think of
 any one of the strips. It
-\begin{wrapfigure}[7]{r}{0.5in}
-  \hfill\smash[t]{\raisebox{-1.375in}{\Graphic[0.375in]{219a}}}
-\end{wrapfigure}
+\SuspendTagging{a}\begin{wrapfigure}[7]{r}{0.5in}
+  \hfill\smash[t]{\raisebox{-1.375in}{%
+      \ResumeTagging{a}\Graphic[0.375in]{219a}\SuspendTagging{b}}}
+\end{wrapfigure}\ResumeTagging{b}
 will be like this:
 being bounded between two vertical sides, with
 a flat bottom~$dx$, and with a slightly curved
