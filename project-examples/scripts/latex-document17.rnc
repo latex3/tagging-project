@@ -25,7 +25,7 @@ pdf1rolemap-P = attribute rolemaps-to {"P"}
 pdf1rolemap-Span = attribute rolemaps-to {"Span"}
 pdf1rolemap-Note = attribute rolemaps-to {"Note"}
 
-start = document.content
+start = Document
 
 
 ## share with pdf1.7 version from here to end
@@ -374,7 +374,7 @@ pdf2-attributes,
 (text|Art|Div|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Annot|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)* # 
 )}
 
-Form = element pdf2:Link {
+Form = element pdf2:Form {
   pdf2-attributes,
   attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
