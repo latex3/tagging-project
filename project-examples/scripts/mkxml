@@ -1,11 +1,11 @@
  for i in *.pdf
  do
  echo $i
- texlua ../../../../davidcarlisle/show_pdf_tags/show_pdf_tags.lua --xml  "$i" > "${i/.pdf/.xml}"
+ texlua ../../../../davidcarlisle/show_pdf_tags/show_pdf_tags.lua --xml  "$i" > "${i/.pdf/.xml}" 2>"${i/.pdf/xml.log}"
  done
 
 for i in *.pdf
  do
  echo "--map $i"
- texlua ../../../../davidcarlisle/show_pdf_tags/show_pdf_tags.lua --xml  --map "$i" > "${i/.pdf/map.xml}"
+ texlua ../../../../davidcarlisle/show_pdf_tags/show_pdf_tags.lua --xml  --map "$i" > "${i/.pdf/map.xml}" 2> "${i/.pdf/mapxml.log}"
 done
