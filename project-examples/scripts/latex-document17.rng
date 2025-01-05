@@ -21,7 +21,35 @@
     </attribute>
   </define>
   <start>
-    <ref name="Document"/>
+    <choice>
+      <ref name="Document"/>
+      <ref name="DocumentFragment"/>
+      <ref name="Part"/>
+      <ref name="Art"/>
+      <ref name="Div"/>
+      <ref name="Sect"/>
+      <ref name="TOC"/>
+      <ref name="Aside"/>
+      <ref name="BlockQuote"/>
+      <ref name="NonStruct"/>
+      <ref name="Private"/>
+      <ref name="P"/>
+      <ref name="Note"/>
+      <ref name="Code"/>
+      <ref name="Hn"/>
+      <ref name="H"/>
+      <ref name="Title"/>
+      <ref name="Link"/>
+      <ref name="Annot"/>
+      <ref name="Form"/>
+      <ref name="FENote"/>
+      <ref name="Index"/>
+      <ref name="L"/>
+      <ref name="Table"/>
+      <ref name="Figure"/>
+      <ref name="Formula"/>
+      <ref name="Artifact"/>
+    </choice>
   </start>
   <define name="textorHTML" combine="interleave">
     <a:documentation>share with pdf1.7 version from here to end</a:documentation>
