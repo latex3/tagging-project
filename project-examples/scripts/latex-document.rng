@@ -295,7 +295,9 @@
       <attribute name="rolemaps-to">
         <value>H3</value>
       </attribute>
-      <ref name="pdf2-attributes"/>
+      <optional>
+        <attribute name="id"/>
+      </optional>
       <optional>
         <attribute name="title"/>
       </optional>
@@ -912,8 +914,6 @@
       <zeroOrMore>
         <choice>
           <text/>
-          <ref name="Art"/>
-          <ref name="Sect"/>
           <ref name="NonStruct"/>
           <ref name="Private"/>
           <ref name="Note"/>
@@ -1426,9 +1426,6 @@
     <element name="pdf2:Form">
       <ref name="pdf2-attributes"/>
       <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
-      <optional>
         <attribute name="Layout:Width"/>
       </optional>
       <optional>
@@ -1454,7 +1451,6 @@
               <ref name="L"/>
               <ref name="BibEntry"/>
               <ref name="Table"/>
-              <ref name="Caption"/>
               <ref name="Figure"/>
               <ref name="Formula"/>
               <ref name="Artifact"/>
@@ -1694,9 +1690,6 @@
     <element name="pdf2:L">
       <ref name="pdf2-attributes"/>
       <ref name="list-attributes"/>
-      <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
       <interleave>
         <optional>
           <ref name="Caption"/>
@@ -1804,9 +1797,6 @@
     <element name="pdf2:Table">
       <ref name="pdf2-attributes"/>
       <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
-      <optional>
         <attribute name="Layout:Width"/>
       </optional>
       <optional>
@@ -1899,9 +1889,6 @@
     <element name="pdf2:TH">
       <ref name="pdf2-attributes"/>
       <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
-      <optional>
         <attribute name="Layout:Width"/>
       </optional>
       <optional>
@@ -1988,9 +1975,6 @@
   <define name="TD">
     <element name="pdf2:TD">
       <ref name="pdf2-attributes"/>
-      <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
       <optional>
         <attribute name="Layout:Width"/>
       </optional>
@@ -2157,9 +2141,6 @@
     <element name="pdf2:Figure">
       <ref name="pdf2-attributes"/>
       <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
-      <optional>
         <attribute name="Layout:Width"/>
       </optional>
       <optional>
@@ -2259,9 +2240,6 @@
     <a:documentation>Formula</a:documentation>
     <element name="pdf2:Formula">
       <ref name="pdf2-attributes"/>
-      <optional>
-        <attribute name="Layout:BBox"/>
-      </optional>
       <optional>
         <attribute name="Layout:Width"/>
       </optional>

@@ -122,7 +122,7 @@ BChapter= element latexSEbible:Chapter {
 
 Chapter-Title = element latexSEbible:Chapter-Title {
   attribute rolemaps-to {"H3"},
-  pdf2-attributes,
+  attribute id {text}?,
   attribute title {text}?,
   (text|Span)*
 }
@@ -282,7 +282,7 @@ pdf2-attributes,
 
 sechead.content =
   pdf2-attributes,
-  (Art?&Sect?&(text|Art|Sect|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*)
+  (Art?&Sect?&(text|NonStruct|Private|Note|Code|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|BibEntry|Figure|Formula|Artifact)*)
 
 H1 = element pdf2:H1 {sechead.content}
 H2 = element pdf2:H2 {sechead.content}
@@ -376,12 +376,11 @@ pdf2-attributes,
 
 Form = element pdf2:Form {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
   printfield-attributes,
 (
-(Caption? & (Part|Div|NonStruct|Private|Note|Code|Lbl|Reference|FENote|L|BibEntry|Table|Caption|Figure|Formula|Artifact))* # Grouping
+(Caption? & (Part|Div|NonStruct|Private|Note|Code|Lbl|Reference|FENote|L|BibEntry|Table|Figure|Formula|Artifact))* # Grouping
 |
 (Caption? & (text|Div|NonStruct|Private|Note|Lbl|FENote|BibEntry|Artifact)*) # Block
 )
@@ -440,7 +439,6 @@ pdf2-attributes,
 L = element pdf2:L {
   pdf2-attributes,
   list-attributes,
-  attribute Layout:BBox {text}?,
   (Caption? & (NonStruct|Private|L|LI|Artifact)*)
 }
 
@@ -465,7 +463,6 @@ pdf2-attributes,
 
 Table = element pdf2:Table {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
   table-attributes,
@@ -497,7 +494,6 @@ TR = element pdf2:TR {
 
 TH = element pdf2:TH {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
   attribute Layout:BlockAlign {"Before" | "Middle" | "After" | "Justify"}?,
@@ -514,7 +510,6 @@ TH = element pdf2:TH {
 
 TD = element pdf2:TD {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
   attribute Layout:BlockAlign {"Before" | "Middle" | "After" | "Justify"}?,
@@ -538,7 +533,6 @@ Caption = element pdf2:Caption {
 
 Figure = element pdf2:Figure {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
 (
@@ -552,7 +546,6 @@ Figure = element pdf2:Figure {
 
 Formula = element pdf2:Formula {
   pdf2-attributes,
-  attribute Layout:BBox {text}?,
   attribute Layout:Width {text}?,
   attribute Layout:Height {text}?,
 (H? & Caption? & (text|Part|Div|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|Sub|Lbl|Em|Strong|Span|Quote|Link|Reference|Annot|Form|Ruby|Warichu|FENote|Index|L|BibEntry|Table|Figure|Formula|Artifact|
