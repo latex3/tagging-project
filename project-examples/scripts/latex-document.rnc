@@ -60,16 +60,19 @@ H6 |= element latexSEbook:subparagraph  {attribute rolemaps-to {"H6"}, sechead.c
 # LaTeX Bible Markup Namepace
 
 Sect |= element latexSEbible:Frontmatter {
+  showtags-attributes,
   attribute rolemaps-to {"Sect"},
   attribute id {text}?,
   Frontmatter-Title,TOC?,text-unit*}
   
 Sect |= element latexSEbible:Testament {
+  showtags-attributes,
   attribute rolemaps-to {"Sect"},
   attribute id {text}?,
   Testament-Title,TOC?,text-unit*,Book*}
 
 Testament = element latexSEbible:Testament {
+  showtags-attributes,
   attribute rolemaps-to {"Sect"},
   attribute id {text}?,
   Testament-Title,
@@ -79,6 +82,7 @@ Testament = element latexSEbible:Testament {
  }
 
 Frontmatter-Title = element latexSEbible:Frontmatter-Title {
+  showtags-attributes,
   attribute rolemaps-to {"H1"},
   attribute id {text}?,
   attribute title {text},
@@ -86,6 +90,7 @@ Frontmatter-Title = element latexSEbible:Frontmatter-Title {
 }
 
 Testament-Title = element latexSEbible:Testament-Title {
+  showtags-attributes,
   attribute rolemaps-to {"H1"},
   attribute id {text}?,
   attribute title {text},
@@ -93,6 +98,7 @@ Testament-Title = element latexSEbible:Testament-Title {
 }
 
 Book = element latexSEbible:Book {
+  showtags-attributes,
   attribute rolemaps-to {"Sect"},
   attribute id {text}?,
   Book-Title,
@@ -102,6 +108,7 @@ Book = element latexSEbible:Book {
  }
 
 Book-Title = element latexSEbible:Book-Title {
+  showtags-attributes,
   attribute rolemaps-to {"H2"},
   attribute id {text}?,
   attribute title {text},
@@ -109,6 +116,7 @@ Book-Title = element latexSEbible:Book-Title {
 }
 
 BChapter= element latexSEbible:Chapter {
+  showtags-attributes,
   attribute rolemaps-to {"Sect"},
   attribute id {text}?,
   Chapter-Title?,
@@ -118,6 +126,7 @@ BChapter= element latexSEbible:Chapter {
  }
 
 Chapter-Title = element latexSEbible:Chapter-Title {
+  showtags-attributes,
   attribute rolemaps-to {"H3"},
   attribute id {text}?,
   attribute title {text}?,
@@ -125,6 +134,7 @@ Chapter-Title = element latexSEbible:Chapter-Title {
 }
 
 Bverse= element latexSEbible:verse {
+  showtags-attributes,
   attribute rolemaps-to {"P"},
   pdf2-attributes,
   (text|text-unit|Span)*
@@ -144,7 +154,8 @@ pdf2-attributes =
 
 showtags-attributes =
   attribute af {"yes" | "no"}?,
-  attribute rolemapped-from {text}?
+  attribute rolemapped-from {text}?,
+  attribute referenced-as {text}?
 
 # Standard Attribute Owner Namespaces (such as CSS3, HTML-5.00) apart from the ones listed here
 # and also vendor-specific namespaced attributes are allowed with any name/value.

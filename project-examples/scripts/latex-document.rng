@@ -142,6 +142,7 @@
   <!-- LaTeX Bible Markup Namepace -->
   <define name="Sect" combine="choice">
     <element name="latexSEbible:Frontmatter">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -159,6 +160,7 @@
   </define>
   <define name="Sect" combine="choice">
     <element name="latexSEbible:Testament">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -179,6 +181,7 @@
   </define>
   <define name="Testament">
     <element name="latexSEbible:Testament">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -202,6 +205,7 @@
   </define>
   <define name="Frontmatter-Title">
     <element name="latexSEbible:Frontmatter-Title">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
@@ -216,6 +220,7 @@
   </define>
   <define name="Testament-Title">
     <element name="latexSEbible:Testament-Title">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
@@ -230,6 +235,7 @@
   </define>
   <define name="Book">
     <element name="latexSEbible:Book">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -253,6 +259,7 @@
   </define>
   <define name="Book-Title">
     <element name="latexSEbible:Book-Title">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H2</value>
       </attribute>
@@ -267,6 +274,7 @@
   </define>
   <define name="BChapter">
     <element name="latexSEbible:Chapter">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -292,6 +300,7 @@
   </define>
   <define name="Chapter-Title">
     <element name="latexSEbible:Chapter-Title">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H3</value>
       </attribute>
@@ -311,6 +320,7 @@
   </define>
   <define name="Bverse">
     <element name="latexSEbible:verse">
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>P</value>
       </attribute>
@@ -342,6 +352,9 @@
     </optional>
     <optional>
       <attribute name="rolemapped-from"/>
+    </optional>
+    <optional>
+      <attribute name="referenced-as"/>
     </optional>
   </define>
   <!--

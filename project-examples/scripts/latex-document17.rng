@@ -177,6 +177,7 @@
   <define name="Sect" combine="choice">
     <element>
       <name ns="">Frontmatter</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -195,6 +196,7 @@
   <define name="Sect" combine="choice">
     <element>
       <name ns="">Testament</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -216,6 +218,7 @@
   <define name="Testament">
     <element>
       <name ns="">Testament</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -240,6 +243,7 @@
   <define name="Frontmatter-Title">
     <element>
       <name ns="">Frontmatter-Title</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
@@ -255,6 +259,7 @@
   <define name="Testament-Title">
     <element>
       <name ns="">Testament-Title</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H1</value>
       </attribute>
@@ -270,6 +275,7 @@
   <define name="Book">
     <element>
       <name ns="">Book</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -294,6 +300,7 @@
   <define name="Book-Title">
     <element>
       <name ns="">Book-Title</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H2</value>
       </attribute>
@@ -309,6 +316,7 @@
   <define name="BChapter">
     <element>
       <name ns="">Chapter</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>Sect</value>
       </attribute>
@@ -335,6 +343,7 @@
   <define name="Chapter-Title">
     <element>
       <name ns="">Chapter-Title</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>H3</value>
       </attribute>
@@ -355,6 +364,7 @@
   <define name="Bverse">
     <element>
       <name ns="">verse</name>
+      <ref name="showtags-attributes"/>
       <attribute name="rolemaps-to">
         <value>P</value>
       </attribute>
@@ -386,6 +396,9 @@
     </optional>
     <optional>
       <attribute name="rolemapped-from"/>
+    </optional>
+    <optional>
+      <attribute name="referenced-as"/>
     </optional>
   </define>
   <!--
