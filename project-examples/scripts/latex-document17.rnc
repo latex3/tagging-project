@@ -243,12 +243,12 @@ pdf2-attributes,
 ### Grouping
 
 Part = element pdf2:Part {
-   pdf2-attributes&
+   pdf2-attributes,
   (document.content|TOCI|Sub|Lbl|Reference|BibEntry|Caption)*
    }
 
 Sect = element pdf2:Sect{
-   pdf2-attributes&
+   pdf2-attributes,
    (DocumentFragment|Part|Art|Div|Sect|TOC|Aside|BlockQuote|NonStruct|Private|P|Note|Code|Hn|H|Title|Lbl|Link|Annot|Form|FENote|Index|L|Table|Caption|Figure|Formula|Artifact)*
    }
 

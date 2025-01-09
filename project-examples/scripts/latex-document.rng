@@ -650,59 +650,55 @@
   <define name="Part">
     <a:documentation>Grouping</a:documentation>
     <element name="pdf2:Part">
-      <interleave>
-        <ref name="pdf2-attributes"/>
-        <zeroOrMore>
-          <choice>
-            <ref name="document.content"/>
-            <ref name="TOCI"/>
-            <ref name="Sub"/>
-            <ref name="Lbl"/>
-            <ref name="Reference"/>
-            <ref name="BibEntry"/>
-            <ref name="Caption"/>
-          </choice>
-        </zeroOrMore>
-      </interleave>
+      <ref name="pdf2-attributes"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="document.content"/>
+          <ref name="TOCI"/>
+          <ref name="Sub"/>
+          <ref name="Lbl"/>
+          <ref name="Reference"/>
+          <ref name="BibEntry"/>
+          <ref name="Caption"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
   <define name="Sect">
     <element name="pdf2:Sect">
-      <interleave>
-        <ref name="pdf2-attributes"/>
-        <zeroOrMore>
-          <choice>
-            <ref name="DocumentFragment"/>
-            <ref name="Part"/>
-            <ref name="Art"/>
-            <ref name="Div"/>
-            <ref name="Sect"/>
-            <ref name="TOC"/>
-            <ref name="Aside"/>
-            <ref name="BlockQuote"/>
-            <ref name="NonStruct"/>
-            <ref name="Private"/>
-            <ref name="P"/>
-            <ref name="Note"/>
-            <ref name="Code"/>
-            <ref name="Hn"/>
-            <ref name="H"/>
-            <ref name="Title"/>
-            <ref name="Lbl"/>
-            <ref name="Link"/>
-            <ref name="Annot"/>
-            <ref name="Form"/>
-            <ref name="FENote"/>
-            <ref name="Index"/>
-            <ref name="L"/>
-            <ref name="Table"/>
-            <ref name="Caption"/>
-            <ref name="Figure"/>
-            <ref name="Formula"/>
-            <ref name="Artifact"/>
-          </choice>
-        </zeroOrMore>
-      </interleave>
+      <ref name="pdf2-attributes"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="DocumentFragment"/>
+          <ref name="Part"/>
+          <ref name="Art"/>
+          <ref name="Div"/>
+          <ref name="Sect"/>
+          <ref name="TOC"/>
+          <ref name="Aside"/>
+          <ref name="BlockQuote"/>
+          <ref name="NonStruct"/>
+          <ref name="Private"/>
+          <ref name="P"/>
+          <ref name="Note"/>
+          <ref name="Code"/>
+          <ref name="Hn"/>
+          <ref name="H"/>
+          <ref name="Title"/>
+          <ref name="Lbl"/>
+          <ref name="Link"/>
+          <ref name="Annot"/>
+          <ref name="Form"/>
+          <ref name="FENote"/>
+          <ref name="Index"/>
+          <ref name="L"/>
+          <ref name="Table"/>
+          <ref name="Caption"/>
+          <ref name="Figure"/>
+          <ref name="Formula"/>
+          <ref name="Artifact"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
   <!-- text | document.content - Aside -->
