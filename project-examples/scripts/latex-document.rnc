@@ -127,6 +127,7 @@ BChapter= element latexSEbible:Chapter {
 
 Chapter-Title = element latexSEbible:Chapter-Title {
   showtags-attributes,
+  layout-attributes,
   attribute rolemaps-to {"H3"},
   attribute id {text}?,
   attribute title {text}?,
@@ -153,7 +154,7 @@ pdf2-attributes =
   showtags-attributes
 
 showtags-attributes =
-  attribute af {"yes" | "no"}?,
+  attribute af {text}?,
   attribute rolemapped-from {text}?,
   attribute referenced-as {text}?
 
@@ -687,6 +688,7 @@ codeline = element latexSE:codeline {
 \list = element latexSE:list {
  attribute rolemaps-to {"L"},
   pdf2-attributes,
+  list-attributes,
   LI*
 }
 L |= \list
@@ -694,6 +696,7 @@ L |= \list
 itemize = element latexSE:itemize {
   attribute rolemaps-to {"L"},
   pdf2-attributes,
+  list-attributes,
   LI*
 }
 L |= itemize
@@ -701,6 +704,7 @@ L |= itemize
 enumerate = element latexSE:enumerate {
   attribute rolemaps-to {"L"},
   pdf2-attributes,
+  list-attributes,
   LI*
 }
 L |= enumerate
@@ -720,6 +724,7 @@ quotation = element latexSE:quotation {
 description= element latexSE:description {
  attribute rolemaps-to {"L"},
  pdf2-attributes,
+ list-attributes,
  LI*
 }
 

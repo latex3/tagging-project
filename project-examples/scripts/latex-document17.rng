@@ -344,6 +344,7 @@
     <element>
       <name ns="">Chapter-Title</name>
       <ref name="showtags-attributes"/>
+      <ref name="layout-attributes"/>
       <attribute name="rolemaps-to">
         <value>H3</value>
       </attribute>
@@ -387,12 +388,7 @@
   </define>
   <define name="showtags-attributes">
     <optional>
-      <attribute name="af">
-        <choice>
-          <value>yes</value>
-          <value>no</value>
-        </choice>
-      </attribute>
+      <attribute name="af"/>
     </optional>
     <optional>
       <attribute name="rolemapped-from"/>
@@ -3012,6 +3008,7 @@
         <value>L</value>
       </attribute>
       <ref name="pdf2-attributes"/>
+      <ref name="list-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3027,6 +3024,7 @@
         <value>L</value>
       </attribute>
       <ref name="pdf2-attributes"/>
+      <ref name="list-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3042,6 +3040,7 @@
         <value>L</value>
       </attribute>
       <ref name="pdf2-attributes"/>
+      <ref name="list-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
@@ -3081,6 +3080,7 @@
         <value>L</value>
       </attribute>
       <ref name="pdf2-attributes"/>
+      <ref name="list-attributes"/>
       <zeroOrMore>
         <ref name="LI"/>
       </zeroOrMore>
