@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <define name="ua2">
+    <externalRef href="latex-document.rng"/>
+  </define>
+  <define name="ua1">
+    <externalRef href="latex-document17.rng"/>
+  </define>
+  <start>
+    <choice>
+      <ref name="ua2"/>
+      <ref name="ua1"/>
+    </choice>
+  </start>
+</grammar>
