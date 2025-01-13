@@ -32,7 +32,7 @@ so that it is not necessary to specify individual modules.
   lang        = en,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
-  pdfversion  = 2.0,  % or 1.7  if desired pdfstandard = ua-2
+  pdfversion  = 2.0,  % or 1.7 if desired pdfstandard = ua-1
   pdfstandard = ua-2, % or ua-1 if pdfversion = 1.7
   pdfstandard = a-4,  % or a-4f (see below)
   testphase   = latest
