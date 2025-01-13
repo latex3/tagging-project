@@ -17,8 +17,8 @@ very beginning of the document, i.e., before `\documentclass`, a
 list.
 
 The first four keys in the example set important document metadata,
-like the language, the requested PDF version and the standards the
-document should comply with.
+including the document's language, the requested PDF version and the
+standards to which the document should comply.
 
 Tagging is then enabled by loading various modules through the
 `testphase` key. The value `latest` loads all modules that we recommend
@@ -32,12 +32,17 @@ so that it is not necessary to specify individual modules.
   lang        = en,
   pdfversion  = 2.0,
   pdfstandard = ua-2,
-  pdfstandard = a-4, % or a-4f
+  pdfversion  = 2.0,  % or 1.7  if desired pdfstandard = ua-2
+  pdfstandard = ua-2, % or ua-1 if pdfversion = 1.7
+  pdfstandard = a-4,  % or a-4f (see below)
   testphase   = latest
 }
 
-% Remove the next declaration to generate MathML Associated Files rather than Structure Elements
-% The file would then need to declare PDF/A-4f rather than PDF/A-4 conformance.
+% The next declaration results in a tagged PDF with MathML included via structure elements (tags).
+% Remove this declaration to generate a tagged PDF with MathML Associated Files, as the use
+% of this feature requires the PDF file to declare conformance with PDF/A-4f rather than PDF/A-4.
+% LaTeX will automatically switch to declare PDF/A-4f if Associated Files are used when the
+% document declares `pdfstandard = a-4`
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
 \documentclass{article}
@@ -69,9 +74,11 @@ c=\sqrt{a^2+b^2}
 
 ----
 
-You may directly run the example above, or edit it within this web
-page, before generating the PDF.  Please keep the examples
-relatively small to avoid overburdening the free service provided here.
+You may simply click the "Generate PDF" button to run the example above,
+or edit the example within this web page before generating a PDF.
+
+Please keep the examples relatively small to avoid overburdening the free 
+service provided here.
 
 The PDF will (by default) be generated via a standard TeXLive 2024
 lualatex-dev. The options used in the above example will tag every
@@ -81,16 +88,15 @@ the derived HTML (using the MathML associated with each math formula)
 may be viewed by following the link to the ngPDF site.
 
 
-Initially the example will use a MathML Structure Element
-tagging. If you remove the configuration line where indicated, then
-LaTeX will instead associate each math expression with
-two associated files, one with the TeX source, and one with generated MathML.
 
+As provided, the example will generate MathML tags in the output PDF's
+tag tree. If you remove the configuration line where indicated, then
+LaTeX will instead associate each math expression in the PDF with 
+embedded and associated MathML files, one with the TeX source, and 
+one with MathML.
 
 The submitted TeX source is deleted as soon as the PDF is
 generated, and the resulting PDF is deleted after an hour.
-
-
 
 
 ## A Larger Example
