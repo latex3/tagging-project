@@ -42,7 +42,7 @@ so that it is not necessary to specify individual modules.
 % Remove this declaration to generate a tagged PDF with MathML Associated Files, as the use
 % of this feature requires the PDF file to declare conformance with PDF/A-4f rather than PDF/A-4.
 % LaTeX will automatically switch to declare PDF/A-4f if Associated Files are used when the
-% document declares `pdfstandard = a-4`
+% document declares pdfstandard = a-4.
 \tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
 
 \documentclass{article}
