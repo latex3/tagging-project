@@ -72,7 +72,7 @@ c=\sqrt{a^2+b^2}
 
 ----
 
-You may simply click the "Generate PDF" button to run the example above,
+You may simply click the "Generate Tagged PDF" button to run the example above,
 or edit the example within this web page before generating a PDF.
 
 Please keep the examples relatively small to avoid overburdening the free 
