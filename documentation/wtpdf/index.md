@@ -34,6 +34,28 @@ Available in three forms
 [TeX](https://drive.google.com/file/d/1G2F3ObXlLfX6wQZqLJ7P2smbs--Q65kc/view?usp=drive_link)
 [PDF](https://drive.google.com/file/d/17uJ7cIHkiTqr5HkPS3l0kmyvA4iW5HGA/view?usp=drive_link)
 
+
+## YouTube
+
+### Tagged AF YT markdown
+
+![tagged AF Foxit](https://youtu.be/A1M3THorcVU)
+
+
+
+Tagged###  AF YT html 
+
+
+<video controls width="100%">
+  <source src="https://youtu.be/A1M3THorcVU" type="video/mp4" />
+
+  Download the
+  <a href="https://youtu.be/A1M3THorcVU">MP4</a>
+  video.
+</video>
+
+
+
 ## Complete videos (markdown)
 
 Untagged, with Foxit: ![untagged foxit](https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link)
