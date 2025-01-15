@@ -41,27 +41,30 @@ Available in three forms
 
 ## Complete videos (markdown)
 
-Untagged, with Foxit: [untagged foxit](https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link)
+### Untagged, with Foxit:
 
-Tagged AF Foxit [tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
 
-Tagged SE Acrobat [tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpcnVIKSFjNzHLhv2bIChyVs7V/view?usp=drive_link)
+% include youtube.html id="lHMQOh8aYKo" %}
+
+
+### Tagged AF Foxit
+
+% include youtube.html id="lanL1s8fJPI" %}
+
+
+### Tagged SE Acrobat
+
+% include youtube.html id="v1Ydk8XhBv4" %}
+
 
 
 ## TOC
 
-untagged [untagged toc](https://drive.google.com/file/d/1JbmHmr6cRwxRrXOWCr4cONkGwcwl3KVr/view?usp=drive_link)
-
-tagged [tagged toc foxit](https://drive.google.com/file/d/1W0iT2-GtJja6mOxIqjMARlVCv411q308/view?usp=drive_link)
-
-
-## Embed
-
-TOC
+### Untagged TOC foxit
 
 {% include youtube.html id="vEuz1bIluU0" %}
 
-Toc Tagged
+### Toc Tagged TOC foxit
 
 {% include youtube.html id="R01XRT7PSz4" %}
 
