@@ -68,3 +68,18 @@ Available in three forms
 
 {% include youtube.html id="R01XRT7PSz4" %}
 
+## Math
+
+## Untagged (Foxit)
+
+{% include youtube.html id="https://youtu.be/9a1oFMe_Rxk" %}
+
+
+## Tagged MathML AF (Foxit)
+
+{% include youtube.html id="Csu2Npbi7Tg" %}
+
+## Tagged Math SE (Acrobat)
+
+{% include youtube.html id="Dj6ZQldpdqo" %}
+
