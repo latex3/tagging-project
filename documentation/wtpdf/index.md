@@ -53,3 +53,15 @@ Tagged SE Acrobat [tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpc
 untagged [untagged toc](https://drive.google.com/file/d/1JbmHmr6cRwxRrXOWCr4cONkGwcwl3KVr/view?usp=drive_link)
 
 tagged [tagged toc foxit](https://drive.google.com/file/d/1W0iT2-GtJja6mOxIqjMARlVCv411q308/view?usp=drive_link)
+
+
+## Embed
+
+TOC
+
+{% include youtube.html id="vEuz1bIluU0" %}
+
+Toc Tagged
+
+{% include youtube.html id="R01XRT7PSz4" %}
+
