@@ -1,8 +1,10 @@
 <!-- https://github.com/codepo8/youtube-embed/blob/main/_includes/youtube.html -->
+<div style="display:inline-block;width:{{ include.width | default: 100% }}">
 <div class="embed-container">
     <iframe width="640" height="390" 
     src="https://www.youtube.com/embed/{{ include.id }}" 
     frameborder="0" allowfullscreen></iframe>
+</div>
 </div>
 <style>
 .embed-container {

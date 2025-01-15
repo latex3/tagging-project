@@ -73,14 +73,14 @@ Available in three forms
 
 ### Untagged Math (Foxit)
 
-{% include youtube.html id="9a1oFMe_Rxk" %}
+{% include youtube.html id="9a1oFMe_Rxk" width="25%"%}
 
 
 ### Tagged MathML AF (Foxit)
 
-{% include youtube.html id="Csu2Npbi7Tg" %}
+{% include youtube.html id="Csu2Npbi7Tg"  width="25%"%}
 
 ### Tagged Math SE (Acrobat)
 
-{% include youtube.html id="Dj6ZQldpdqo" %}
+{% include youtube.html id="Dj6ZQldpdqo"  width="25%"%}
 
