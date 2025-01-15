@@ -55,6 +55,16 @@ Tagged###  AF YT html
 </video>
 
 
+### embed
+
+<embed type="video/mp4" src="https://youtu.be/A1M3THorcVU" width="100%" height="200" />
+
+
+### embed2
+
+<embed  src="https://youtu.be/A1M3THorcVU" width="100%" height="200" />
+
+
 
 ## Complete videos (markdown)
 
