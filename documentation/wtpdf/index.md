@@ -73,7 +73,7 @@ Available in three forms
 
 ### Untagged Math (Foxit)
 
-{% include youtube.html id="9a1oFMe_Rxk" width="medium"%}
+{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
 
 
 ### Tagged MathML AF (Foxit)
