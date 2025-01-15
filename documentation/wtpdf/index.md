@@ -14,13 +14,13 @@ use the test release of NVDA 2025 (enabling interfacing to MathML
 readings), along with the current stable versions of athCat, and Foxit
 Acrobat Reader on Windows 11.
 
-All files are available on Google Drive](https://drive.google.com/drive/folders/1hN19CVsWrChMxJLOSuGE7cv6Hy5ifZ7S?usp=sharing)
+All files are available on [Google Drive](https://drive.google.com/drive/folders/1hN19CVsWrChMxJLOSuGE7cv6Hy5ifZ7S?usp=sharing)
 
 
 
 ## The TeX source and LaTeX generated PDF
 
-`cavailable in three forms
+Available in three forms
 
 `t1`, Classic LaTeX, typeset with pdftex and no tagging enabled.
 [TeX](https://drive.google.com/file/d/1e-RD0C94hhoC9MyaXACqfwHJPqfhGLy7/view?usp=sharing)
@@ -34,9 +34,27 @@ All files are available on Google Drive](https://drive.google.com/drive/folders/
 [TeX](https://drive.google.com/file/d/1G2F3ObXlLfX6wQZqLJ7P2smbs--Q65kc/view?usp=drive_link)
 [PDF](https://drive.google.com/file/d/17uJ7cIHkiTqr5HkPS3l0kmyvA4iW5HGA/view?usp=drive_link)
 
-## Complete videos
+## Complete videos (markdown)
 
 Untagged, with Foxit: ![untagged foxit](https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link)
+
+Tagged AF Foxit ![tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
+
+Tagged SE Acrobat ![tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpcnVIKSFjNzHLhv2bIChyVs7V/view?usp=drive_link)
+
+## Complete videos (html)
+
+Untagged, with Foxit:
+
+<video controls width="100%">
+  <source src="https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link" type="video/mp4" />
+
+  Download the
+  <a href="https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link">MP4</a>
+  video.
+</video>
+
+[untagged foxit]()
 
 Tagged AF Foxit ![tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
 
