@@ -1,5 +1,5 @@
 <!-- https://github.com/codepo8/youtube-embed/blob/main/_includes/youtube.html -->
-<div style="display:inline-block;width:{{ include.width }}">
+<div class="embed-{{include.width}}">
 <div class="embed-container">
     <iframe width="640" height="390" 
     src="https://www.youtube.com/embed/{{ include.id }}" 
@@ -7,7 +7,19 @@
 </div>
 </div>
 <style>
-.embed-container {
+
+
+ .embed-wide   {width: 100%;}
+ .embed-medium {width: 75%;}
+ .embed-narrow {width: 75%;}
+
+ @media (min-width: 1024px) {
+ .embed-wide   {width: 70%;}
+ .embed-medium {width: 40%;}
+ .embed-narrow {width: 25%;}
+    }
+
+ .embed-container {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;

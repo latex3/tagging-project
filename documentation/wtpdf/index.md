@@ -44,17 +44,17 @@ Available in three forms
 ### Untagged, with Foxit:
 
 
-{% include youtube.html id="lHMQOh8aYKo" width="70%"%}
+{% include youtube.html id="lHMQOh8aYKo" width="wide"%}
 
 
 ### Tagged AF Foxit
 
-{% include youtube.html id="lanL1s8fJPI" width="70%"%}
+{% include youtube.html id="lanL1s8fJPI" width="wide"%}
 
 
 ### Tagged SE Acrobat
 
-{% include youtube.html id="v1Ydk8XhBv4" width="70%"%}
+{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
 
 
@@ -62,25 +62,25 @@ Available in three forms
 
 ### Untagged TOC foxit
 
-{% include youtube.html id="vEuz1bIluU0" width="40%"%}
+{% include youtube.html id="vEuz1bIluU0" width="medium"%}
 
 
 ### Toc Tagged TOC foxit
 
-{% include youtube.html id="R01XRT7PSz4" width="40%"%}
+{% include youtube.html id="R01XRT7PSz4" width="medium"%}
 
 ## Math
 
 ### Untagged Math (Foxit)
 
-{% include youtube.html id="9a1oFMe_Rxk" width="25%"%}
+{% include youtube.html id="9a1oFMe_Rxk" width="medium"%}
 
 
 ### Tagged MathML AF (Foxit)
 
-{% include youtube.html id="Csu2Npbi7Tg" width="25%"%}
+{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
 
 ### Tagged Math SE (Acrobat)
 
-{% include youtube.html id="Dj6ZQldpdqo" width="25%"%}
+{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
 
