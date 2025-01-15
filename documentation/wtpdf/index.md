@@ -39,22 +39,22 @@ Available in three forms
 
 
 
-## Complete videos (markdown)
+## Complete Videos
 
 ### Untagged, with Foxit:
 
 
-{% include youtube.html id="lHMQOh8aYKo" %}
+{% include youtube.html id="lHMQOh8aYKo" width="100%"%}
 
 
 ### Tagged AF Foxit
 
-{% include youtube.html id="lanL1s8fJPI" %}
+{% include youtube.html id="lanL1s8fJPI" width="100%"%}
 
 
 ### Tagged SE Acrobat
 
-{% include youtube.html id="v1Ydk8XhBv4" %}
+{% include youtube.html id="v1Ydk8XhBv4" width="100%"%}
 
 
 
@@ -62,12 +62,12 @@ Available in three forms
 
 ### Untagged TOC foxit
 
-{% include youtube.html id="vEuz1bIluU0" %}
+{% include youtube.html id="vEuz1bIluU0" width="50%"%}
 
 
 ### Toc Tagged TOC foxit
 
-{% include youtube.html id="R01XRT7PSz4" %}
+{% include youtube.html id="R01XRT7PSz4" width="50%"%}
 
 ## Math
 
@@ -78,9 +78,9 @@ Available in three forms
 
 ### Tagged MathML AF (Foxit)
 
-{% include youtube.html id="Csu2Npbi7Tg"  width="25%"%}
+{% include youtube.html id="Csu2Npbi7Tg" width="25%"%}
 
 ### Tagged Math SE (Acrobat)
 
-{% include youtube.html id="Dj6ZQldpdqo"  width="25%"%}
+{% include youtube.html id="Dj6ZQldpdqo" width="25%"%}
 
