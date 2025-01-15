@@ -7,11 +7,11 @@
 ---
 
 The "Larger Example" on the [WTPDF from LaTeX page](https://latex3.github.io/tagging-project/documentation/wtpdf-from-latex#a-larger-example)
-shows a small typical LaTeX artucle set in two columns with tables and figures.
+shows a small typical LaTeX article set in two columns with tables and figures.
 
 Here we show the effect of tagging on generated speech. All examples
 use the test release of NVDA 2025 (enabling interfacing to MathML
-readings), along with the current stable versions of athCat, and Foxit
+readings), along with the current stable versions of MathCat, and Foxit
 Acrobat Reader on Windows 11.
 
 All files are available on [Google Drive](https://drive.google.com/drive/folders/1hN19CVsWrChMxJLOSuGE7cv6Hy5ifZ7S?usp=sharing)
