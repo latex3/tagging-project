@@ -35,66 +35,21 @@ Available in three forms
 [PDF](https://drive.google.com/file/d/17uJ7cIHkiTqr5HkPS3l0kmyvA4iW5HGA/view?usp=drive_link)
 
 
-## YouTube
 
-### Tagged AF YT markdown
-
-![tagged AF Foxit](https://youtu.be/A1M3THorcVU)
-
-
-
-Tagged###  AF YT html 
-
-
-<video controls width="100%">
-  <source src="https://youtu.be/A1M3THorcVU" type="video/mp4" />
-
-  Download the
-  <a href="https://youtu.be/A1M3THorcVU">MP4</a>
-  video.
-</video>
-
-
-### embed
-
-<embed type="video/mp4" src="https://youtu.be/A1M3THorcVU" width="100%" height="200" />
-
-
-### embed2
-
-<embed  src="https://youtu.be/A1M3THorcVU" width="100%" height="200" />
 
 
 
 ## Complete videos (markdown)
 
-Untagged, with Foxit: ![untagged foxit](https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link)
+Untagged, with Foxit: [untagged foxit](https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link)
 
-Tagged AF Foxit ![tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
+Tagged AF Foxit [tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
 
-Tagged SE Acrobat ![tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpcnVIKSFjNzHLhv2bIChyVs7V/view?usp=drive_link)
-
-## Complete videos (html)
-
-Untagged, with Foxit:
-
-<video controls width="100%">
-  <source src="https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link" type="video/mp4" />
-
-  Download the
-  <a href="https://drive.google.com/file/d/117tmwUNuL4gRkbFTfQ-bWrkbRYjFXwr5/view?usp=drive_link">MP4</a>
-  video.
-</video>
-
-[untagged foxit]()
-
-Tagged AF Foxit ![tagged AF Foxit](https://drive.google.com/file/d/17l5jy1itXJyM6bc0JPp99zNyvyLtOC0l/view?usp=drive_link)
-
-Tagged SE Acrobat ![tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpcnVIKSFjNzHLhv2bIChyVs7V/view?usp=drive_link)
+Tagged SE Acrobat [tagged SE acrobat](https://drive.google.com/file/d/1iWrCGuUpcnVIKSFjNzHLhv2bIChyVs7V/view?usp=drive_link)
 
 
 ## TOC
 
-untagged ![untagged toc](https://drive.google.com/file/d/1JbmHmr6cRwxRrXOWCr4cONkGwcwl3KVr/view?usp=drive_link)
+untagged [untagged toc](https://drive.google.com/file/d/1JbmHmr6cRwxRrXOWCr4cONkGwcwl3KVr/view?usp=drive_link)
 
-tagged ![tagged toc foxit](https://drive.google.com/file/d/1W0iT2-GtJja6mOxIqjMARlVCv411q308/view?usp=drive_link)
+tagged [tagged toc foxit](https://drive.google.com/file/d/1W0iT2-GtJja6mOxIqjMARlVCv411q308/view?usp=drive_link)
