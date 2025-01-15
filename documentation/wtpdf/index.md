@@ -2,9 +2,9 @@
 # Screen Reading Examples
 
 
-** DRAFT VERSION: Experimenting with recording and markup possibilities **
+## DRAFT VERSION: Experimenting with recording and markup possibilities
 
----
+
 
 The "Larger Example" on the [WTPDF from LaTeX page](https://latex3.github.io/tagging-project/documentation/wtpdf-from-latex#a-larger-example)
 shows a small typical LaTeX article set in two columns with tables and figures.
