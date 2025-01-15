@@ -44,17 +44,17 @@ Available in three forms
 ### Untagged, with Foxit:
 
 
-% include youtube.html id="lHMQOh8aYKo" %}
+{% include youtube.html id="lHMQOh8aYKo" %}
 
 
 ### Tagged AF Foxit
 
-% include youtube.html id="lanL1s8fJPI" %}
+{% include youtube.html id="lanL1s8fJPI" %}
 
 
 ### Tagged SE Acrobat
 
-% include youtube.html id="v1Ydk8XhBv4" %}
+{% include youtube.html id="v1Ydk8XhBv4" %}
 
 
 
