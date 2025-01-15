@@ -64,22 +64,23 @@ Available in three forms
 
 {% include youtube.html id="vEuz1bIluU0" %}
 
+
 ### Toc Tagged TOC foxit
 
 {% include youtube.html id="R01XRT7PSz4" %}
 
 ## Math
 
-## Untagged (Foxit)
+### Untagged Math (Foxit)
 
 {% include youtube.html id="9a1oFMe_Rxk" %}
 
 
-## Tagged MathML AF (Foxit)
+### Tagged MathML AF (Foxit)
 
 {% include youtube.html id="Csu2Npbi7Tg" %}
 
-## Tagged Math SE (Acrobat)
+### Tagged Math SE (Acrobat)
 
 {% include youtube.html id="Dj6ZQldpdqo" %}
 
