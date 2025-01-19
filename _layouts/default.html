@@ -10,6 +10,9 @@
     <style>
       header img {display:block; margin: 1em auto}
     </style>
+{% if page.extrahead %}
+  {% include {{ page.extrahead }}.html %}
+{% endif %}
   </head>
   <body style="background-color: #F5F1E8">
     <header>

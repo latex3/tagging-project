@@ -1,0 +1,29 @@
+<style>
+
+ .embed-wide   {display:inline-block;width: 100%;}
+ .embed-medium {display:inline-block;width: 75%;}
+ .embed-narrow {display:inline-block;width: 75%;}
+
+ @media (min-width: 1024px) {
+ .embed-wide   {display:inline-block;width: 70%;}
+ .embed-medium {display:inline-block;width: 40%;}
+ .embed-narrow {display:inline-block;width: 25%;}
+    }
+
+ .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
