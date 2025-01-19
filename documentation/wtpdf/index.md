@@ -75,18 +75,18 @@ Structure Elements and Acrobat
 
 ## Complete Videos
 
-### Untagged, with Foxit:
+### Untagged PDF, with Foxit:
 
 
 {% include youtube.html id="lHMQOh8aYKo" width="wide"%}
 
 
-### Tagged AF Foxit
+### Tagged PDF using Associated MathML Files, with Foxit:
 
 {% include youtube.html id="lanL1s8fJPI" width="wide"%}
 
 
-### Tagged SE Acrobat
+### Tagged PDF using MathML Structure Elements,with Acrobat:
 
 {% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
