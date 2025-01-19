@@ -27,7 +27,7 @@ part the document in each case.
 The first overview of a document is often presented by a table of
 contents. However a screen reader may have difficulty inferring a
 usable reading. With an untagged document it relies on the screen
-reader inferring teh structure to pass to the underlying Accessibility
+reader inferring the structure, to pass to the underlying Accessibility
 tools.
 
 On this document foxit produces the following reading (Acrobat is similar).
@@ -86,7 +86,7 @@ Structure Elements and Acrobat
 {% include youtube.html id="lanL1s8fJPI" width="wide"%}
 
 
-### Tagged PDF using MathML Structure Elements,with Acrobat:
+### Tagged PDF using MathML Structure Elements, with Acrobat:
 
 {% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
