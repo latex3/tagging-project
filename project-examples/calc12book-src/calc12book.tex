@@ -1,0 +1,557 @@
+\documentclass[paper=letter,fontsize=11pt,headings=big,chapterprefix=false,
+appendixprefix,twoside,titlepage,open=any,numbers=noenddot,
+index=totoc]{scrbook}
+\usepackage[standardsections]{scrhack}
+\usepackage{etex}
+\usepackage[dvips,marginparwidth=0pt,marginparsep=0pt,headsep=12pt,inner=1.2in,
+outer=1.2in,top=1in,bottom=0.85in,includehead,bindingoffset=0pt,includefoot,
+vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
+\usepackage[dvips]{graphicx}
+\usepackage{float}
+\usepackage[intoc]{nomencl}
+\usepackage{xfrac}
+\usepackage{fancybox}
+\usepackage{braket}
+\usepackage{pifont}
+\usepackage{phaistos}
+\usepackage{dingbat}
+% Disable the \checkmark command from dingbat, to avoid conflict with amssymb's \checkmark
+\let\checkmark\relax
+\usepackage{cancel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{relsize}
+\usepackage{bigints}
+\usepackage{mathtools}
+%\usepackage[dvips,gray]{xcolor}
+\usepackage[dvips]{xcolor}
+\usepackage[english]{babel}
+\usepackage{fancyvrb}
+\usepackage[titletoc]{appendix}
+\usepackage{imakeidx}
+\usepackage[unbalanced]{idxlayout}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.80]{beramono}
+\usepackage{fouriernc,bm}
+\usepackage{ragged2e}
+\usepackage{paralist}
+\usepackage{mdwlist}
+\usepackage{multicol}
+\usepackage[labelsep=none]{caption}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{gnuplot-lua-tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations}
+\usetikzlibrary{intersections}
+\usetikzlibrary{matrix}
+\usetikzlibrary{shadows}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{picins}
+\usepackage{framed}
+\usepackage{nextpage}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\lstloadlanguages{Java,C,Octave,Gnuplot,Python}
+\usepackage{clrscode}
+\usepackage[pdfproducer={GPL Ghostscript 9.55.0},pdfcreator={TeX Live 2020},
+            pdfauthor={Michael Corral},pdftitle={Elementary Calculus},
+            pdfsubject={Calculus},pdfkeywords={calculus},
+            pdfdisplaydoctitle=true,dvips,bookmarks,pdfborder={0 0 0},
+            bookmarksnumbered=true,colorlinks=false]{hyperref}
+\usepackage{breakurl}
+\definecolor{captioncolor}{HTML}{000000}
+\definecolor{linecolor}{HTML}{0074C8}
+\definecolor{linecolor2}{HTML}{E14B4B}
+\definecolor{linecolor3}{HTML}{657822}
+\definecolor{fillcolor}{cmyk}{0.1,0.05,0,0}
+\definecolor{fillcolor2}{HTML}{96CBE9}
+\definecolor{brickcolor}{HTML}{F0D8B2}
+\definecolor{blockcolor}{HTML}{B6B6B6}
+\definecolor{groundcolor}{HTML}{E4D8C5}
+\definecolor{earthcolor}{HTML}{C5FFFF}
+\definecolor{watercolor}{cmyk}{0.1,0.05,0,0}
+\definecolor{codecolor}{HTML}{FFF7E0}
+\definecolor{linenumcolor}{HTML}{8C8C8C}
+\definecolor{headercolor}{HTML}{DEDEDE}
+\definecolor{insideo}{HTML}{798084}
+\definecolor{insidei}{HTML}{F0F0F0}
+\definecolor{outer}{HTML}{424296}
+\definecolor{inner}{HTML}{D8D8FF}
+\definecolor{planecolor}{HTML}{5AB487}
+\definecolor{conicfillcolor}{HTML}{31805A}
+\definecolor{spherecolor}{HTML}{80DCFF}
+\definecolor{titleblue}{HTML}{0871B0}
+\DeclareCaptionFont{blue}{\color{captioncolor}}
+\definecolor{mred}{HTML}{EC1E0B}
+\captionsetup{labelfont={small,bf,blue},font={small,blue},textfont={small,blue}}
+\providecommand{\lineacross}{\hrule width \textwidth height 0.5pt}
+
+% Set the sans serif font to Helvetica (for chapter and section headings)
+\renewcommand\sfdefault{phv}
+\newcommand{\startexercises}{
+ \centerline{\setlength{\fboxsep}{3pt}\fbox{\textsf{\textbf{\large Exercises}}}}
+}
+\newcommand{\probs}[1]{\par\noindent\textsf{\textbf{\large #1}}}
+\newcommand{\hrulethick}{\leaders\hrule height 4pt depth -2pt\hfill}
+\newcommand{\divider}{\noindent{\color{black}\rule{\linewidth}{2pt}}}
+\setlength{\multicolsep}{2.5mm}
+\setlength{\leftmargini}{1.4em}
+\theoremstyle{definition}
+\newtheoremstyle{itexmp}%
+ {\topsep}
+ {\topsep}
+ {\normalfont\small}
+ {0pt}
+ {\itshape\bfseries}{}
+ { }
+ {#1 \textbf{#2} \enskip {\color{black}\hrulethick}\\[6pt]}
+\theoremstyle{itexmp}
+\newtheorem{exmp}{Example}[chapter]
+\newcommand{\statedefn}[2]{
+ \definecolor{defncolor}{HTML}{E6F0FF}
+ \definecolor{defnrulecolor}{HTML}{0074C8}
+ \begin{center}
+ \tikzstyle{mybox} = [draw=defnrulecolor,fill=defncolor,line width=1.2pt,
+  rectangle,inner sep=8pt]
+ \begin{tikzpicture}
+  \node [mybox] (box){%
+   \begin{minipage}[t]{0.96\textwidth}\label{#1}{#2}\end{minipage}
+  };
+ \end{tikzpicture}
+ \end{center}
+}
+\newcommand{\statethm}[2]{
+ \definecolor{thmcolor}{HTML}{FFFFD8}
+ \definecolor{thmrulecolor}{HTML}{9B5900}
+ \begin{center}
+ \tikzstyle{mybox} = [draw=thmrulecolor,fill=thmcolor,line width=1.2pt,
+  rectangle,inner sep=8pt]
+ \begin{tikzpicture}
+  \node [mybox] (box){%
+   \begin{minipage}[t]{0.96\textwidth}\label{#1}{#2}\end{minipage}
+  };
+ \end{tikzpicture}
+ \end{center}
+}
+\newcommand{\statecor}[2]{
+ \definecolor{corcolor}{HTML}{FAF2FF}
+ \definecolor{corrulecolor}{HTML}{4B3880}
+ \begin{center}
+ \tikzstyle{mybox} = [draw=corrulecolor,fill=corcolor,line width=1.2pt,
+  rectangle,inner sep=8pt]
+ \begin{tikzpicture}
+  \node [mybox] (box){%
+   \begin{minipage}[t]{0.96\textwidth}\label{#1}{#2}\end{minipage}
+  };
+ \end{tikzpicture}
+ \end{center}
+}
+\newcommand{\statecomment}[2][0.96\textwidth]{
+ \begin{center}
+ \tikzstyle{mybox} = [draw=green!70!black,fill=green!12,line width=1.2pt,
+  rectangle,inner sep=8pt]
+ \begin{tikzpicture}
+  \node [mybox] (box){%
+   \begin{minipage}{#1}{#2}\end{minipage}
+  };
+ \end{tikzpicture}
+ \end{center}
+}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+\renewcommand{\CancelColor}{\color{red}}
+\newcommand\myclearpage{\cleartooddpage
+ [\thispagestyle{empty}]}
+\providecommand{\abs}[1]{\lvert\mspace{1mu}#1\mspace{1mu}\rvert}
+\providecommand{\Abs}[1]{\bigl\lvert\mspace{1mu}#1\mspace{1mu}\bigr\rvert}
+\providecommand{\ABS}[1]{\Biggl\lvert\mspace{1mu}#1\mspace{1mu}\Biggr\rvert}
+\providecommand{\norm}[1]{\lVert\mspace{1mu}#1\mspace{1mu}\rVert}
+\providecommand{\Norm}[1]{\bigl\lVert\mspace{1mu}#1\mspace{1mu}\bigr\rVert}
+\providecommand{\NORM}[1]{\Biggl\lVert\mspace{1mu}#1\mspace{1mu}\Biggr\rVert}
+\providecommand{\avg}[1]{\langle\mspace{1mu}#1\mspace{1mu}\rangle}
+\providecommand{\Avg}[1]{\left\langle\mspace{1mu}#1\mspace{1mu}\right\rangle}
+\providecommand{\ssub}[2]{#1_{\scriptscriptstyle #2}}
+\providecommand{\ssubsum}[3]{#1_{\scriptscriptstyle #3} + 
+ #2_{\scriptscriptstyle #3}}
+\providecommand{\dy}{d\!y}
+\providecommand{\df}{d\negmedspace f}
+\providecommand{\dg}{d\negmedspace g}
+\providecommand{\dP}{d\negmedspace P}
+\providecommand{\dV}{d\negmedspace V}
+\providecommand{\dT}{d\negmedspace T}
+\providecommand{\dG}{d\negmedspace G}
+\providecommand{\dA}{d\negmedspace A}
+\providecommand{\dr}{d\!r}
+\providecommand{\du}{d\!u}
+\providecommand{\dv}{d\!v}
+\providecommand{\dx}{d\!x}
+\providecommand{\dt}{d\!t}
+\providecommand{\dm}{d\!m}
+\providecommand{\dtheta}{d\!\theta}
+\providecommand{\da}{d\!a}
+\providecommand{\ds}{d\!s}
+\providecommand{\dalpha}{d\!\alpha}
+\providecommand{\dphi}{d\!\phi}
+\providecommand{\dydx}{\frac{d\negmedspace y}{d\!x}}
+\providecommand{\Dydx}{\dfrac{d\negmedspace y}{d\!x}}
+\providecommand{\dxdy}{\frac{d\negmedspace x}{d\!y}}
+\providecommand{\dfdx}{\frac{d\negmedspace f}{d\!x}}
+\providecommand{\dgdx}{\frac{d\negmedspace g}{d\!x}}
+\providecommand{\dydu}{\frac{d\negmedspace y}{d\!u}}
+\providecommand{\dfdu}{\frac{d\negmedspace f}{d\!u}}
+\providecommand{\dudx}{\frac{d\negmedspace u}{d\!x}}
+\providecommand{\dvdu}{\frac{d\negmedspace v}{d\!u}}
+\providecommand{\dfdv}{\frac{d\negmedspace f}{d\!v}}
+\providecommand{\dfdt}{\frac{d\negmedspace f}{d\!t}}
+\providecommand{\dxdt}{\frac{d\negmedspace x}{d\!t}}
+\providecommand{\dydt}{\frac{d\negmedspace y}{d\!t}}
+\providecommand{\Dxdt}{\dfrac{d\negmedspace x}{d\!t}}
+\providecommand{\Dydt}{\dfrac{d\negmedspace y}{d\!t}}
+\providecommand{\dsdt}{\frac{d\negmedspace s}{d\!t}}
+\providecommand{\drdt}{\frac{d\negmedspace r}{d\!t}}
+\providecommand{\dvdt}{\frac{d\negmedspace v}{d\!t}}
+\providecommand{\dVdt}{\frac{d\negmedspace V}{d\!t}}
+\providecommand{\ddx}{\frac{d}{d\!x}}
+\providecommand{\Ddx}{\dfrac{d}{d\!x}}
+\providecommand{\ddt}{\frac{d}{d\!t}}
+\providecommand{\Ddt}{\dfrac{d}{d\!t}}
+\providecommand{\ddu}{\frac{d}{d\!u}}
+\providecommand{\ddy}{\frac{d}{d\!y}}
+\providecommand{\Reals}{\mathbb{R}}
+\providecommand{\Complex}{\mathbb{C}}
+\providecommand{\Rationals}{\mathbb{Q}}
+\providecommand{\Naturals}{\mathbb{N}}
+\providecommand{\Integers}{\mathbb{Z}}
+\providecommand{\Degrees}[0]{\ensuremath{^\circ}}
+\providecommand{\ival}[2]{\lbrack #1,#2 \rbrack}
+\providecommand{\lival}[2]{\lbrack #1,#2 )}
+\providecommand{\rival}[2]{( #1,#2 \rbrack}
+\providecommand{\seq}[1]{\left\lbrace\mspace{3mu}#1\mspace{3mu}\right\rbrace}
+\providecommand{\bigsum}[2]{\displaystyle\mathlarger{\sum}\limits_{#1}^{#2}}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cn}{cn}
+\DeclareMathOperator{\dn}{dn}
+\newcommand*{\sector}{%
+  \begin{pgfpicture}
+   \pgfpathmoveto{\pgforigin}%
+   \pgfpathlineto{\pgfpointpolar{45}{1ex}}%
+   \pgfarc{45}{-45}{1ex}%
+   \pgfpathclose%
+   \pgfsetlinewidth{0.4pt}%
+   \pgfusepath{stroke}%
+  \end{pgfpicture}%
+}
+\newcommand*{\hypsector}{%
+  \begin{pgfpicture}
+   \pgfpathmoveto{\pgfpoint{2ex}{0ex}}%
+   \pgfarc{225}{135}{1ex}%
+   \pgfpathlineto{\pgfpoint{0ex}{0.7ex}}%
+   \pgfpathclose%
+   \pgfsetlinewidth{0.4pt}%
+   \pgfusepath{stroke}%
+  \end{pgfpicture}%
+}
+\newenvironment{proofbar}{%
+  \def\FrameCommand{{\color{black}\vrule width 1pt \hspace{5pt}}}%
+  \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+ {\endMakeFramed}
+\allowdisplaybreaks[1]
+\numberwithin{figure}{section}
+\setlength\topmargin{0pt}
+\setlength\headsep{10pt}
+\setlength\textheight{202mm}
+%Change indent after chapter number in TOC from 1.5em to 2.2em, and from 2.3 to
+%3.0 for sections (see Ch.10)
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2.2em}%
+    \if@tocleft
+      \ifx\toc@l@number\@empty\else
+        \setlength\@tempdima{0\toc@l@number}%
+      \fi
+    \fi
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \sectfont
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\renewcommand*\l@section{\@dottedtocline{1}{2.2em}{3.0em}}
+\makeatother
+\makeindex[intoc,options=-s myindex]
+\begin{document}
+\VerbatimFootnotes
+\deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}}
+\frontmatter
+\pagestyle{empty}
+%Put the front cover here
+% \thisfancypage{\setlength{\fboxsep}{1pt}\setlength\fboxrule{1.5pt}\fbox}{}
+
+% \includegraphics[scale=1.0]{calc12bookcover.eps}\vspace{7mm}
+
+% \centerline{\includegraphics[scale=0.86]{coverplot}}
+\newgeometry{left=0cm,top=0cm,bottom=0cm,right=0.5in}
+\begin{flushright}
+\begin{tikzpicture}[remember picture,overlay]
+ \node[right] at (-15,-6) {\includegraphics[scale=1.0]{calcbookcovertitle}};
+ \node[right] at (-16.5,-15) {\includegraphics[scale=0.86]{coverplot}};
+ \node[right] at (-4.5,-23) {\includegraphics[scale=1.0]{calcbookcoverbottom}};
+ \node[shape=rectangle,fill=mred,minimum height=\paperheight,minimum width=1.8in,anchor=west] at (current page.west) {};
+\end{tikzpicture}
+\end{flushright}
+\restoregeometry
+%Put the title page here
+\title{Elementary Calculus}
+\author{\textsf{\textbf{Michael Corral}}}
+\date{\large \textsf{\textsl{Schoolcraft College}}}
+%Put the author/copyright info here
+\uppertitleback{\emph{About the author}:\\
+Michael Corral is an Adjunct Faculty member of the Department of Mathematics at
+Schoolcraft College. He received a B.A. in Mathematics from the University of
+California, Berkeley, and received an M.A. in Mathematics and an M.S. in
+Industrial \& Operations Engineering from the University of Michigan.\\\\
+This text was typeset in \LaTeX\medspace with the \textsf{KOMA-Script} bundle,
+using the GNU Emacs text editor on a
+Fedora Linux system. The graphics were created using TikZ and Gnuplot.}
+\lowertitleback{Copyright \copyright ~2020 ~Michael Corral.\\
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.}
+\maketitle
+\pagestyle{fancy}
+\addtokomafont{footnotelabel}{\color{linecolor}}
+\addtokomafont{footnotereference}{\color{linecolor}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\qedsymbol}{\textsf{\textbf{\textsc{\small{QED}}}}}
+\fancyhf{}
+\setlength{\headheight}{22.26332pt}
+\renewcommand{\headrulewidth}{0pt}
+\newlength{\fminilength}%
+\setlength{\fminilength}{\textwidth-2\fboxsep-2\fboxrule}%
+\fancyhf{}
+\fancyhead[LE]{\small\thepage}
+\fancyhead[CE]{\small\scshape\leftmark}
+\fancyhead[RO]{\small\thepage}
+\fancyhead[CO]{\small\scshape\leftmark}
+%Put the preface here
+%\titleformat{\chapter}[display]
+%  {\filcenter\huge\selectfont\bfseries\sffamily}
+%  {}{0mm}{}[\vspace{3mm}\titlerule]
+%\renewcommand*{\chapterformat}{\filcenter\huge\selectfont\bfseries\sffamily}
+\titleformat{\chapter}[display]
+  {\filcenter\huge\selectfont\bfseries\sffamily}
+  {}{0mm}{\titlerule[1.5pt]\vspace{3mm}}[\vspace{3mm}{\titlerule[1.5pt]}]
+\titleformat*{\section}{\Large\bfseries\sffamily}
+\include{calc12book-preface}
+%\thispagestyle{empty}
+\pdfbookmark[0]{\contentsname}{toc}
+%Put the table of contents here
+%\titlecontents{chapter}
+%[0pt]
+%{\addvspace{1.5pc}%
+%\filright}
+%{\selectfont\bfseries\sffamily\MakeUppercase{\chaptername} \thecontentslabel\\*[.2pc]%
+%\large\selectfont\bfseries\sffamily}
+%{}
+%{\hfill\contentspage} % That is, without page number
+%[\addvspace{.5pc}]
+\tableofcontents
+%Put a completely blank page here since the TOC has an odd number of pages
+\clearpage{\pagestyle{empty}\include{calc12book-greek}}
+
+\mainmatter
+\fancyhf{}
+\fancyhead[LE]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,
+ rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily{\bfseries\thepage\qquad Chapter \thechapter}\enskip $\bullet$
+      \enskip\leftmark\hfill{\bfseries\S\thesection}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\fancyhead[LO]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,
+ rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily {}\hfill\rightmark\enskip $\bullet$ \enskip{\bfseries{Section
+     \thesection\qquad\thepage}}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+%\titleformat{\chapter}[display]
+%  {\filcenter\LARGE\selectfont\bfseries\sffamily}
+%  {CHAPTER \thechapter}{3mm}{\titlerule\vspace{3mm}\huge}
+\titleformat{\chapter}[display]
+  {\filcenter\LARGE\selectfont\bfseries\sffamily}
+  {\titlerule[1.5pt]\vspace{3mm}\MakeUppercase{\chaptertitlename}
+   \thechapter}{3mm}
+  {\titlerule[1.5pt]\vspace{3mm}\huge}
+%Put the main chapters here
+\include{calc12book-chapter1}
+\include{calc12book-chapter2}
+\include{calc12book-chapter3}
+\include{calc12book-chapter4}
+\include{calc12book-chapter5}
+\include{calc12book-chapter6}
+\include{calc12book-chapter7}
+\include{calc12book-chapter8}
+\include{calc12book-chapter9}
+\newpage
+%Put the bibliography here
+\fancyhf{}
+\fancyhf{}
+\fancyhead[LE]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,
+ rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily{\bfseries\thepage\qquad \enskip\leftmark}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\fancyhead[LO]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,
+ rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily {}\hfill{\bfseries{\leftmark\qquad\thepage}}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+%\titleformat{\chapter}[display]
+%  {\filcenter\huge\selectfont\bfseries\sffamily}
+%  {}{0mm}{\titlerule[1.5pt]\vspace{3mm}}[\vspace{3mm}{\titlerule[1.5pt]}]
+%\include{calc12book-biblio}
+%Put appendices here
+\titleformat{\chapter}[display]
+  {\filcenter\LARGE\selectfont\bfseries\sffamily}
+  {\titlerule[1.5pt]\vspace{3mm}\MakeUppercase{\chaptertitlename}
+   \thechapter}{3mm}
+  {\titlerule[1.5pt]\vspace{3mm}\huge}
+\titleformat*{\section}{\Large\bfseries\sffamily}
+\fancyhf{}
+\fancyhead[LE]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily{\bfseries\thepage\qquad \enskip Appendix A:\quad\leftmark}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\fancyhead[LO]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily {}\hfill{\bfseries{Appendix A:\quad\leftmark\qquad\thepage}}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\begin{appendices}
+ \include{calc12book-appendixa}
+\end{appendices}
+\newpage
+%Put the GNU FDL here
+\titleformat{\chapter}[display]
+  {\filcenter\huge\selectfont\bfseries\sffamily}
+  {}{0mm}{\titlerule[1.5pt]\vspace{3mm}}[\vspace{3mm}{\titlerule[1.5pt]}]
+\fancyhead[LE]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily{\bfseries\thepage\qquad \enskip\leftmark}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\fancyhead[LO]{\tikzstyle{headbox} = [fill=headercolor,line width=0pt,rectangle,rounded corners]
+ \begin{tikzpicture}
+  \node [headbox] (box){%
+   \begin{minipage}{\fminilength}%
+     \sffamily {}\hfill{\bfseries{\leftmark\qquad\thepage}}
+    \end{minipage}%
+  };
+ \end{tikzpicture}}
+\include{fdl-1.3}
+%Put the history section here
+\addchap{History}
+This section contains the revision history of the book. For persons making
+modifications to the book, please record the pertinent information here,
+following the format in the first item below.
+
+\begin{enumerate}
+
+\item VERSION: 0.1
+\begin{description}
+\item[Date:] 2016-01-24
+\item[Author(s):] Michael Corral
+\item[Title:] Elementary Calculus
+\item[Modification(s):] Initial version
+\end{description}
+
+\item VERSION: 0.5
+\begin{description}
+\item[Date:] 2020-05-27
+\item[Author(s):] Michael Corral
+\item[Title:] Elementary Calculus
+\item[Modification(s):] Numerous corrections of typos and errors, as well as
+enhancements of some sections and more exercises.
+\end{description}
+
+\item VERSION: 0.5a
+\begin{description}
+\item[Date:] 2020-06-03
+\item[Author(s):] Michael Corral
+\item[Title:] Elementary Calculus
+\item[Modification(s):] Replaced the old Section 5.5 (Average Value of a
+Function) with the new Section 5.5 (Improper Integrals). Average Value of a
+Function will be moved to Chapter 8 in the second half of the book.
+\end{description}
+
+\item VERSION: 1.0
+\begin{description}
+\item[Date:] 2020-12-31
+\item[Author(s):] Michael Corral
+\item[Title:] Elementary Calculus
+\item[Modification(s):] Full version.
+\end{description}
+
+\end{enumerate}
+
+\backmatter
+\clearpage
+\phantomsection
+%Put the index here
+\printindex
+
+%Add a blank page at the end to make the number of pages divisible by 4
+\myclearpage
+\end{document}
