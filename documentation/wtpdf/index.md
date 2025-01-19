@@ -4,11 +4,7 @@ layout: default
 extrahead: youtube-head
 ---
 
-# Screen Reading Examples
-
-
-## DRAFT VERSION: Experimenting with recording and markup possibilities
-
+# Screen Reading Examples (DRAFT)
 
 
 The "Larger Example" on the [WTPDF from LaTeX page](https://latex3.github.io/tagging-project/documentation/wtpdf-from-latex#a-larger-example)
@@ -16,11 +12,83 @@ shows a small typical LaTeX article set in two columns with tables and figures.
 
 Here we show the effect of tagging on generated speech. All examples
 use the test release of NVDA 2025 (enabling interfacing to MathML
-readings), along with the current stable versions of MathCat, and Foxit
+readings), along with public versions of MathCat,  Foxit and 
 Acrobat Reader on Windows 11.
 
-All files are available on [Google Drive](https://drive.google.com/drive/folders/1hN19CVsWrChMxJLOSuGE7cv6Hy5ifZ7S?usp=sharing)
+To present something of the experience to users not familiar with screen
+readers, we have provided video clips of readings of the full document
+and of specific sections. Although a video format is used they are all
+recordings of the screen reader, with a fixed video frame showing the
+part the document in each case.
 
+
+## Table of Contents.
+
+The first overview of a document is often presented by a table of
+contents. However a screen reader may have difficulty inferring a
+usable reading. With an untagged document it relies on the screen
+reader inferring teh structure to pass to the underlying Accessibility
+tools.
+
+On this document foxit produces the following reading (Acrobat is similar).
+
+
+{% include youtube.html id="vEuz1bIluU0" width="medium"%}
+
+
+Using the tagged PDF, the structure is made explicit to the screen
+reader and typesetting atrtifacts such as leader dots are marked as
+artifacts and not read, producing a far more understandable reading.
+
+{% include youtube.html id="R01XRT7PSz4" width="medium"%}
+
+## Mathematics
+
+Mathematics is traditionally hard to automatically present.
+
+In the untagged PDF the screen reader is just passed the raw
+character data.  The superscript in the first equation is not read, so
+losing the meaning, and the matrix equation is completely scrambled
+with the entries being read in the wrong order.
+
+{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
+
+
+At the present time different PDF readers support different ways of
+tagging mathematics, here we present a version with math tagged with
+Associated files containing MathML, which is understood by foxit, and
+a version with the same MathML used as PDF Structure Element tagging,
+which is understood by Acrobat. Identical readings are generated as in
+either case the resulting MathML is passed via NVDA to MathCat to
+generate the reading.
+
+Associated Files and foxit  
+{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
+
+Structure Elements and Acrobat  
+{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
+
+
+
+-----
+
+
+## Complete Videos
+
+### Untagged, with Foxit:
+
+
+{% include youtube.html id="lHMQOh8aYKo" width="wide"%}
+
+
+### Tagged AF Foxit
+
+{% include youtube.html id="lanL1s8fJPI" width="wide"%}
+
+
+### Tagged SE Acrobat
+
+{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
 
 ## The TeX source and LaTeX generated PDF
@@ -43,49 +111,4 @@ Available in three forms
 
 
 
-
-## Complete Videos
-
-### Untagged, with Foxit:
-
-
-{% include youtube.html id="lHMQOh8aYKo" width="wide"%}
-
-
-### Tagged AF Foxit
-
-{% include youtube.html id="lanL1s8fJPI" width="wide"%}
-
-
-### Tagged SE Acrobat
-
-{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
-
-
-
-## TOC
-
-### Untagged TOC foxit
-
-{% include youtube.html id="vEuz1bIluU0" width="medium"%}
-
-
-### Toc Tagged TOC foxit
-
-{% include youtube.html id="R01XRT7PSz4" width="medium"%}
-
-## Math
-
-### Untagged Math (Foxit)
-
-{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
-
-
-### Tagged MathML AF (Foxit)
-
-{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
-
-### Tagged Math SE (Acrobat)
-
-{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
 
