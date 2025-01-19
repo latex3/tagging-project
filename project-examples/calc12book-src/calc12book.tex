@@ -1,12 +1,22 @@
+\DocumentMetadata{
+  lang        = en,
+  pdfversion  = 2.0,
+  pdfstandard = ua-2,
+  pdfstandard = a-4,
+  testphase   = latest
+}
+
+
+\tagpdfsetup{math/mathml/structelem, math/mathml/AF=false, math/tex/AF=false, math/mathml/sources=}
+
 \documentclass[paper=letter,fontsize=11pt,headings=big,chapterprefix=false,
 appendixprefix,twoside,titlepage,open=any,numbers=noenddot,
 index=totoc]{scrbook}
 \usepackage[standardsections]{scrhack}
-\usepackage{etex}
-\usepackage[dvips,marginparwidth=0pt,marginparsep=0pt,headsep=12pt,inner=1.2in,
+\usepackage[,marginparwidth=0pt,marginparsep=0pt,headsep=12pt,inner=1.2in,
 outer=1.2in,top=1in,bottom=0.85in,includehead,bindingoffset=0pt,includefoot,
 vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
-\usepackage[dvips]{graphicx}
+\usepackage{graphicx}
 \usepackage{float}
 \usepackage[intoc]{nomencl}
 \usepackage{xfrac}
@@ -18,22 +28,33 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 % Disable the \checkmark command from dingbat, to avoid conflict with amssymb's \checkmark
 \let\checkmark\relax
 \usepackage{cancel}
-\usepackage{amssymb}
-\usepackage{amsmath}
+\ifx\directlua\undefined
+  \usepackage{amssymb}
+  \usepackage{amsmath}
+\else
+  \usepackage{unicode-math}
+  \def\wideparen#1{\overparen{#1}}
+\fi
 \usepackage{amsthm}
 \usepackage{relsize}
 \usepackage{bigints}
 \usepackage{mathtools}
 %\usepackage[dvips,gray]{xcolor}
-\usepackage[dvips]{xcolor}
+\usepackage{xcolor}
+\usepackage{colortbl}\show\columncolor
 \usepackage[english]{babel}
 \usepackage{fancyvrb}
 \usepackage[titletoc]{appendix}
 \usepackage{imakeidx}
 \usepackage[unbalanced]{idxlayout}
-\usepackage[T1]{fontenc}
+\ifx\directlua\undefined
+  \usepackage[T1]{fontenc}
+  \usepackage{fouriernc}
+\else
+  \usepackage{fourier-otf}
+\fi
 \usepackage[scaled=0.80]{beramono}
-\usepackage{fouriernc,bm}
+\usepackage{bm}
 \usepackage{ragged2e}
 \usepackage{paralist}
 \usepackage{mdwlist}
@@ -54,7 +75,7 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathmorphing}
 \usepackage{tkz-euclide}
-\usetkzobj{all}
+%\usetkzobj{all}
 \usepackage{picins}
 \usepackage{framed}
 \usepackage{nextpage}
@@ -67,7 +88,7 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \usepackage[pdfproducer={GPL Ghostscript 9.55.0},pdfcreator={TeX Live 2020},
             pdfauthor={Michael Corral},pdftitle={Elementary Calculus},
             pdfsubject={Calculus},pdfkeywords={calculus},
-            pdfdisplaydoctitle=true,dvips,bookmarks,pdfborder={0 0 0},
+            pdfdisplaydoctitle=true,bookmarks,pdfborder={0 0 0},
             bookmarksnumbered=true,colorlinks=false]{hyperref}
 \usepackage{breakurl}
 \definecolor{captioncolor}{HTML}{000000}
@@ -303,6 +324,7 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \renewcommand*\l@section{\@dottedtocline{1}{2.2em}{3.0em}}
 \makeatother
 \makeindex[intoc,options=-s myindex]
+\setlength{\headheight}{22.29259pt}\addtolength{\topmargin}{-0.02927pt}
 \begin{document}
 \VerbatimFootnotes
 \deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}}
@@ -324,7 +346,8 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \end{tikzpicture}
 \end{flushright}
 \restoregeometry
-%Put the title page here
+\setlength{\headheight}{22.29259pt}\addtolength{\topmargin}{-0.02927pt}
+% Put the title page here
 \title{Elementary Calculus}
 \author{\textsf{\textbf{Michael Corral}}}
 \date{\large \textsf{\textsl{Schoolcraft College}}}
@@ -351,7 +374,7 @@ Texts.}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 \renewcommand{\qedsymbol}{\textsf{\textbf{\textsc{\small{QED}}}}}
 \fancyhf{}
-\setlength{\headheight}{22.26332pt}
+\setlength{\headheight}{22.6pt}\addtolength{\topmargin}{-0.3pt}
 \renewcommand{\headrulewidth}{0pt}
 \newlength{\fminilength}%
 \setlength{\fminilength}{\textwidth-2\fboxsep-2\fboxrule}%
