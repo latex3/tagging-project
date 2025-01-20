@@ -34,3 +34,11 @@ artifacts and not read, producing a far more understandable reading.
 <!-- toc tagged foxit -->
 {% include youtube.html id="R01XRT7PSz4" width="medium"%}
 
+
+
+Autotagged document, with Acrobat
+
+
+<!-- t1 autotag toc acrobat-->
+{% include youtube.html id="ZX2oWvT2_N4" width="medium"%}
+

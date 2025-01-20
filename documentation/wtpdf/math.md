@@ -48,3 +48,10 @@ Structure Elements and Acrobat
 <!-- math se acrobat -->
 {% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
 
+
+Autotagged with Acrobat
+
+<!-- t1 autotag math acrobat-->
+{% include youtube.html id="MCRAWKOd4cM" width="narrow"%}
+
+

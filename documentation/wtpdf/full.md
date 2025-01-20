@@ -35,3 +35,8 @@ extrahead: youtube-head
 {% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
 
+
+### Auto Tagged PDF
+
+<!-- t1 autotag full acrobat-->
+{% include youtube.html id="HukXwFLPw68" width="wide"%}
