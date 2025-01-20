@@ -70,6 +70,10 @@ which is understood by Acrobat. Identical readings are generated as in
 either case the resulting MathML is passed via NVDA to MathCat to
 generate the reading.
 
+We hope that this is a temporary situation and that PDF readers will
+soon support either mechanism of supplying MathML to the accessibility
+tools. However for now, we need to build two separate PDF.
+
 Associated Files and foxit
 
 <!-- math af  foxit -->
