@@ -9,8 +9,6 @@ extrahead: youtube-head
 ----
 
 # Screen Reading Examples
-## Table of Contents
-
 
 ## Table of Contents.
 
