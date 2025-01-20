@@ -44,9 +44,12 @@ extrahead: youtube-head
 
 ### Chatgpt
 
-ChatGPT generated Markdown plus LaTeX, then rendered in github markdown preview
-with mathjax rendering the tex fragments and supplying its conversion to MathML to MathCat,
-Document read by nvda+Foxit. Note some of the text has been abreviated by ChatGPT.
+ChatGPT generated Markdown plus LaTeX from the untagged PDF.
+
+Rendered in github markdown preview with MathJax rendering the TeX
+fragments and supplying its conversion to MathML to MathCat. The resulting
+document then read by Foxit+nvda. Note some of the text has been abbreviated by
+ChatGPT.
 
 <!-- t2 full chatgpt-->
 {% include youtube.html id="_dXtOUk6NWg" width="medium"%}
