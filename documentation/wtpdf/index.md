@@ -33,13 +33,20 @@ tools.
 On this document foxit produces the following reading (Acrobat is similar).
 
 
+<!-- toc untagged foxit -->
+{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
 
+<!-- toc untagged -->
+{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
 
 Using the tagged PDF, the structure is made explicit to the screen
 reader and typesetting atrtifacts such as leader dots are marked as
 artifacts and not read, producing a far more understandable reading.
 
+
+<!-- toc tagged foxit -->
+{% include youtube.html id="vEuz1bIluU0" width="medium"%}
 
 
 ## Mathematics
@@ -51,9 +58,8 @@ character data.  The superscript in the first equation is not read, so
 losing the meaning, and the matrix equation is completely scrambled
 with the entries being read in the wrong order.
 
-
 <!-- math untagged foxit -->
-{% include youtube.html id="lHMQOh8aYKo" width="wide"%}
+{% include youtube.html id="R01XRT7PSz4" width="medium"%}
 
 
 At the present time different PDF readers support different ways of
@@ -64,14 +70,14 @@ which is understood by Acrobat. Identical readings are generated as in
 either case the resulting MathML is passed via NVDA to MathCat to
 generate the reading.
 
-Associated Files and foxit  
-{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
+Associated Files and foxit
 
-Structure Elements and Acrobat  
-{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
+<!-- math af foxit -->
+{% include youtube.html id="lanL1s8fJPI" width="wide"%}
 
-<!-- math se acrobat -->
-{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
+Structure Elements and Acrobat
+
+
 
 
 -----
@@ -81,15 +87,17 @@ Structure Elements and Acrobat
 
 ### Untagged PDF, with Foxit:
 
-{% include youtube.html id="vEuz1bIluU0" width="medium"%}
+
+<!-- t1 full foxit -->
+{% include youtube.html id="lHMQOh8aYKo" width="wide"%}
 
 
 ### Tagged PDF using Associated MathML Files, with Foxit:
 
-{% include youtube.html id="R01XRT7PSz4" width="medium"%}
+<!-- t1 af full foxit -->
+{% include youtube.html id="Csu2Npbi7Tg" width="wide"%}
 
-<!-- math af foxit -->
-{% include youtube.html id="lanL1s8fJPI" width="wide"%}
+
 
 
 ### Tagged PDF using MathML Structure Elements, with Acrobat:
