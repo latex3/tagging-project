@@ -40,3 +40,14 @@ extrahead: youtube-head
 
 <!-- t1 autotag full acrobat-->
 {% include youtube.html id="HukXwFLPw68" width="wide"%}
+
+
+### Chatgpt
+
+ChatGPT generated Markdown plus LaTeX, then rendered in github markdown preview
+with mathjax rendering the tex fragments and supplying its conversion to MathML to MathCat,
+Document read by nvda+Foxit. Note some of the text has been abreviated by ChatGPT.
+
+<!-- t2 full chatgpt-->
+{% include youtube.html id="_dXtOUk6NWg" width="medium"%}
+
