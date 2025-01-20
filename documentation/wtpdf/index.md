@@ -33,20 +33,20 @@ tools.
 On this document foxit produces the following reading (Acrobat is similar).
 
 
-<!-- toc untagged foxit -->
-{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
+<!-- toc untagged tagged foxit -->
+{% include youtube.html id="vEuz1bIluU0" width="medium"%}
 
-<!-- toc untagged -->
-{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
+
 
 
 Using the tagged PDF, the structure is made explicit to the screen
 reader and typesetting atrtifacts such as leader dots are marked as
 artifacts and not read, producing a far more understandable reading.
 
-
 <!-- toc tagged foxit -->
-{% include youtube.html id="vEuz1bIluU0" width="medium"%}
+{% include youtube.html id="R01XRT7PSz4" width="medium"%}
+
+
 
 
 ## Mathematics
@@ -59,7 +59,7 @@ losing the meaning, and the matrix equation is completely scrambled
 with the entries being read in the wrong order.
 
 <!-- math untagged foxit -->
-{% include youtube.html id="R01XRT7PSz4" width="medium"%}
+{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
 
 
 At the present time different PDF readers support different ways of
@@ -72,12 +72,13 @@ generate the reading.
 
 Associated Files and foxit
 
-<!-- math af foxit -->
-{% include youtube.html id="lanL1s8fJPI" width="wide"%}
+<!-- math af  foxit -->
+{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
 
 Structure Elements and Acrobat
 
-
+<!-- math se acrobat -->
+{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
 
 
 -----
@@ -94,16 +95,17 @@ Structure Elements and Acrobat
 
 ### Tagged PDF using Associated MathML Files, with Foxit:
 
+
 <!-- t1 af full foxit -->
-{% include youtube.html id="Csu2Npbi7Tg" width="wide"%}
+{% include youtube.html id="lanL1s8fJPI" width="wide"%}
 
 
 
 
 ### Tagged PDF using MathML Structure Elements, with Acrobat:
 
-<!-- se full acrobat -->
-{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
+<!-- t1 se full acrobat -->
+{% include youtube.html id="v1Ydk8XhBv4" width="wide"%}
 
 
 
