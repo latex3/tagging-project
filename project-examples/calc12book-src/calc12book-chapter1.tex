@@ -326,7 +326,7 @@ such that its position $s$ after time $t$ is the given function $s=s(t)$. Find
 the instantaneous velocity of the object at a general time $t \ge 0$.
 You should mimic the earlier example for the instantaneous velocity when
 $s = -16t^2 + 100$.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label=\bfseries \arabic*.]
  \begin{multicols}{4}
   \item $s = t^2$
   \item $s = 9.8t^2$
@@ -346,7 +346,7 @@ $s = -16t^2 + 100$.
   rounding off in the approximations.
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={[\bfseries \arabic*.]}]
  \item In elementary geometry you learned that the area inside a circle of
   radius $r>0$ is $\pi r^2$ (that formula will be proved later in the text). So
   in particular, let $C$ be a circle of radius $1$. Then the area inside $C$ is
@@ -393,7 +393,7 @@ $s = -16t^2 + 100$.
 \end{minipage}
 \end{figure}\vspace{-2mm}
 
- \begin{enumerate}[\bfseries (a)]
+ \begin{enumerate}[item-label={\bfseries (\alph*)}]
   \item Inscribe a square inside $C$, as in Figure \ref{fig:insquare}. Show that
    the area inside the square is $2$. This is a poor approximation of $\pi =
    3.14159265...$, obviously.
@@ -415,7 +415,7 @@ $s = -16t^2 + 100$.
 \newpage
 \suspend{enumerate}
 \probs{C}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item What is the flaw in the following ``proof'' that $\pi = 4$?:
 
 \parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
@@ -735,7 +735,7 @@ Below are some simple rules for limits, which will be proved later:
 Suppose that $a$ is a real number and that $f(x)$ and $g(x)$ are real-valued
 functions such that $\lim_{x \to a} f(x)$ and $\lim_{x \to a} g(x)$ both exist.
 Then:
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
  \item $\displaystyle\lim_{x \to a} ~(f(x) + g(x)) ~=~
   \left(\displaystyle\lim_{x \to a} ~f(x)\right) ~+~
   \left(\displaystyle\lim_{x \to a} ~g(x)\right)$
@@ -901,7 +901,7 @@ discussed so far (including previous exercises).\vspace{2mm}
 \probs{A}
 \par\noindent For Exercises 1-11, find the derivative of the
 given function $f(x)$ for all $x$ (unless indicated otherwise).
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
  \begin{multicols}{4}
   \item $f(x) = 0$
   \item $f(x) = 1 - 3x$
@@ -925,7 +925,7 @@ given function $f(x)$ for all $x$ (unless indicated otherwise).
  Can you explain why $x=0$ was excluded?
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Show that for all functions $f$ such that $f'(x)$ exists,
 $f'(x) ~=~ \displaystyle\lim_{w \to x} ~\dfrac{f(x) ~-~ f(w)}{x ~-~ w} ~$.
   % \begin{displaymath}
@@ -941,7 +941,7 @@ $f'(x) ~=~ \displaystyle\lim_{w \to x} ~\dfrac{f(x) ~-~ f(w)}{x ~-~ w} ~$.
 \probs{C}
 \par\noindent For Exercises \ref{exer:altderivfirst}-\ref{exer:altderivlast},
 assuming that $f'(x)$ exists, prove the given formula.
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \begin{multicols}{2}
   \item\label{exer:altderivfirst} $f'(x) ~=~ \displaystyle\lim_{h \to 0}
   ~\dfrac{f(x + 2h) ~-~ f(x - 2h)}{4h} ~$
@@ -1011,7 +1011,7 @@ Cambridge, U.K.: Cambridge University Press, 1998.}, namely:
 
 \statedefn{defn:infinitesimal}{A number $\delta$ is an \textbf{infinitesimal} if
 the conditions (a)-(d) hold:
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (a)}]
  \item $\delta \ne 0$
  \item if $\delta > 0$ then $\delta$ is smaller than any positive real number
  \item if $\delta < 0$ then $\delta$ is larger than any negative real number
@@ -1083,7 +1083,9 @@ $x$, producing an infinitesimally small change $\dy$ in the value of $y=f(x)$.
   &=~ 2x
  \end{align*}
 \end{exmp}
+
 \divider
+
 \newpage
 You might have noticed that the above example did not involve limits, and that
 the derivative $2x$ represents a real number (i.e. no infinitesimals appear in
@@ -1348,7 +1350,7 @@ mathematics).\vspace{3mm}
 {\small
 \probs{A}
 \par\noindent For Exercises 1-9, let $\dx$ be an infinitesimal and prove the given formula.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{3}
  \item $(\dx \;+\; 1)^2 ~=~ 2\dx \;+\; 1$
  \item $(\dx \;+\; 1)^3 ~=~ 3\dx \;+\; 1$
@@ -1371,13 +1373,13 @@ mathematics).\vspace{3mm}
  Why was the other possible solution $\cos\,\dx\ = -1$ ignored?
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Show that $\ddx \,(\cos\,x) ~=~ -\sin\,x$.
  \item Show that $\ddx \,(\cos\,2x) ~=~ -2\,\sin\,2x$. \emph{(Hint: Use Exercises
  5 and 6.)}
 \suspend{enumerate}
 \probs{C}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Show that $\ddx \,(\tan\,x) ~=~ \sec^2 \,x$. \emph{(Hint: Use Exercise 4.)}
 \end{enumerate}}
 \newpage
@@ -1652,7 +1654,7 @@ then reduce the variable's original exponent by 1. This works even for negative 
 \probs{A}
 \par\noindent For Exercises 1-14, use the rules from this section to find the
  derivative of the given function.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{2}
  \item $f(x) ~=~ x^2 ~-~ x ~-~ 1$
  \item $f(x) ~=~ x^8 ~+~ 2x^4 ~+~ 1$
@@ -1687,7 +1689,7 @@ then reduce the variable's original exponent by 1. This works even for negative 
 \end{multicols}
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
 \begin{multicols}{2}
  \item Prove the Difference Rule.
  \item Prove the Constant Multiple Rule.
@@ -1697,10 +1699,10 @@ then reduce the variable's original exponent by 1. This works even for negative 
   $(fgh)' = f'gh + fg'h + fgh'$.
 \suspend{enumerate}
 \probs{C}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Provide an alternative proof of the Product Rule for two differentiable
  functions $f$ and $g$ of $x$:
- \begin{enumerate}[\bfseries (a)]
+ \begin{enumerate}[item-label={\bfseries (\alph*)}]
   \item Show that $(\df)(\dg) = 0$.
   \item By definition, the derivative of the product $f \cdot g$ is
    \begin{displaymath}
@@ -1868,7 +1870,7 @@ the derivative with respect to $x$ of both sides of this equation gives
 {\small
 \probs{A}
 \par\noindent For Exercises 1-18, find the derivative of the given function.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{2}
  \item $f(x) ~=~ (1 ~-~ 5x)^4$
  \item $f(x) ~=~ 5\,(x^3 ~+~ x ~-~ 1)^4$
@@ -1908,7 +1910,7 @@ the derivative with respect to $x$ of both sides of this equation gives
 \end{multicols}
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item In a certain type of electronic circuit\footnote{This is an example of a
   \emph{current-differencing negative feedback amplifier}. See pp.473-479 in
   \textsc{Schilling, D.L. and C. Belove}, \emph{Electronic Circuits: Discrete and Integrated},
@@ -1917,7 +1919,7 @@ the derivative with respect to $x$ of both sides of this equation gives
    A_v ~=~ \frac{A_o}{1 ~-~ T}
   \end{displaymath}
   where the \emph{loop gain} $T$ is a function of the \emph{open-loop gain} $A_o$.
-  \begin{enumerate}[\bfseries (a)]
+  \begin{enumerate}[item-label={\bfseries (\alph*)}]
    \item Show that
     \begin{displaymath}
      \frac{d \negmedspace A_v}{d\!A_o} ~=~ \frac{1}{1 ~-~ T} ~-~ \frac{A_o}{(1 ~-~ T)^2}
@@ -1992,7 +1994,7 @@ does not move. As the crank rotates it makes an
 angle $\theta$ with the line $\overline{OA}$. Let $l = AB$ and $s = OA$ as in
 the picture. Assume that all lengths are measured in centimeters, and let the time
 variable $t$ be measured in minutes.
- \begin{enumerate}[\bfseries (a)]
+ \begin{enumerate}[item-label={\bfseries (\alph*)}]
   \item Show that $s ~=~ a \cos\,\theta ~+~ \left(l^2 ~-~ a^2 \sin^2\theta\right)^{1/2}~$
   for $0 \le \theta \le \pi$.
   \item The \emph{mean piston speed} is $\bar{S}_p = 2LN$, where $L = 2a$ is the
@@ -2226,7 +2228,7 @@ would yield 0 (as would differentiating more than 101 times).\vspace{3mm}
 {\small
 \probs{A}
 \par\noindent For Exercises 1-6 find the second derivative of the given function.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
  \begin{multicols}{3}
   \item $f(x) ~=~ x^3 ~+~ x^2 ~+~ x ~+~ 1$
   \item $f(x) ~=~ x^2\,\sin x$
@@ -2244,7 +2246,7 @@ would yield 0 (as would differentiating more than 101 times).\vspace{3mm}
   $s \propto t$), then show that the object's acceleration is always 0.
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item\label{exer:dnxn} Use induction to show that
   $\frac{d^n}{\dx^n}\,\left(x^n\right) ~=~ n!~$ for all integers $n \ge 1$.
  \item Show that for all integers $n \ge m \ge 1$,
@@ -2267,7 +2269,7 @@ would yield 0 (as would differentiating more than 101 times).\vspace{3mm}
   $\;(f \cdot g)'' = f'' \cdot g ~+~ 2 f' \cdot g' ~+~ f \cdot g''$.
 \suspend{enumerate}
 \probs{C}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Recall that taking a derivative is a way of
  \emph{operating} on a function. That is, think of $\ddx$ as the
  \emph{differentiation operator} on the collection of differentiable functions,
@@ -2305,7 +2307,7 @@ would yield 0 (as would differentiating more than 101 times).\vspace{3mm}
  \end{center}
   for all $x$ in the domain of $\phi$, for some constant $\lambda$ called the
   \emph{eigenvalue} of the eigenfunction.\index{eigenfunction}\index{eigenvalue}
-  \begin{enumerate}[\bfseries (a)]
+  \begin{enumerate}[item-label={\bfseries (a)}]
    \item Show for all constants $k$ that $\phi(x) ~=~ \cos\,kx$ is an
     eigenfunction of the $\frac{d^2}{d\!x^2}$ operator, and find its eigenvalue.
     That is, show that $\frac{d^2}{d\!x^2}(\phi(x)) = \lambda \cdot \phi(x)$ for

@@ -57,7 +57,13 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \usepackage{bm}
 \usepackage{ragged2e}
 \usepackage{paralist}
-\usepackage{mdwlist}
+% not good for tagging \usepackage{mdwlist}
+\makeatletter
+\ExpandArgs{c}\def{c@*}{\value\@currentcounter}
+\def\resume#1[#2]{\begin{#1}[resume,#2]}
+\def\suspend#1{\end{#1}}
+\makeatother
+
 \usepackage{multicol}
 \usepackage[labelsep=none]{caption}
 \usepackage{subfig}
@@ -119,7 +125,12 @@ vcentering,hcentering,ignoremp,portrait,letterpaper]{geometry}
 \providecommand{\lineacross}{\hrule width \textwidth height 0.5pt}
 
 % Set the sans serif font to Helvetica (for chapter and section headings)
-\renewcommand\sfdefault{phv}
+\ifx\directlua\undefined
+  \renewcommand\sfdefault{phv}
+\else
+  \setsansfont{TeX Gyre Heros}
+\fi
+
 \newcommand{\startexercises}{
  \centerline{\setlength{\fboxsep}{3pt}\fbox{\textsf{\textbf{\large Exercises}}}}
 }

@@ -1,5 +1,8 @@
 \chapter{Infinite Sequences and Series}
-%Begin Section 9.1
+
+\emph{Omitted from this excerpt}\endinput
+
+% Begin Section 9.1
 \section{Sequences and Series}
 In the 5\textsuperscript{th} century B.C. the ancient Greek philosopher Zeno of
 Elea\index{Zeno's motion paradox} devised several paradoxes, the most famous of
@@ -336,7 +339,7 @@ the quantum: basics.'' \emph{J. High Energy Phys.} \textbf{2014}, 98 (2014).
 \probs{A}
 \par\noindent For Exercises 1-8, determine if the given sequence is
 convergent. If so then find its limit.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{4}
  \item $\seq{n\,e^{-n}}_{n = 0}^{\infty}\vphantom{\seq{\dfrac{n^2}{3n^2 ~+~ 7n ~-~ 2}}_{n = 1}^{\infty}}$
  \item $\seq{\dfrac{n^2}{3n^2 ~+~ 7n ~-~ 2}}_{n = 1}^{\infty}$
@@ -352,17 +355,18 @@ convergent. If so then find its limit.
 \suspend{enumerate}
 \par\noindent For Exercises 9-12 determine whether the given series is
 convergent. If so then find its sum.
-\resume{enumerate}[{[\bfseries 1.]}]
+
 \begin{multicols}{4}
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item $\bigsum{n = 0}{\infty}~ 2\;\left(\dfrac{2}{3}\right)^n$
  \item $\bigsum{n = 1}{\infty}~ 7^{-n}$
  \item $\bigsum{n = 0}{\infty}~ \dfrac{3^n ~+~ 5^{n + 1}}{6^n}$
  \item $\bigsum{n = 0}{\infty}~ n$
-\end{multicols}
 \suspend{enumerate}
+\end{multicols}
 \par\noindent For Exercises 13-16 use a geometric progression to write the given
 repeating decimal as a rational number.
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
 \begin{multicols}{4}
  \item $0.\overline{113}$
  \item $0.\overline{9}$
@@ -371,7 +375,7 @@ repeating decimal as a rational number.
 \end{multicols}
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item In Example \ref{exmp:fib} define $b_n = F_n/F_{n+1}$ for $n\ge 0$ and
  show that $\seq{b_n}_{n=0}^{\infty}$ converges to $\frac{\sqrt{5}-1}{2}$.
  \item Show that formula (\ref{eqn:newton}) for Newton's method with
@@ -387,7 +391,7 @@ $\sqrt{2}$. \emph{(Hint: See Example \ref{exmp:fib}.)}
   equation $x^2 - x - 1 = 0$ by $\phi_{+} = \frac{1+\sqrt{5}}{2}$ and
   $\phi_{-} = \frac{1-\sqrt{5}}{2}$, respectively. Note that $\phi_{+}$ is the
   golden ratio mentioned in Example \ref{exmp:fib}.
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
  \item Use the equation $x^2 - x - 1 = 0$ to show that
 \[
 \phi_{+}^{n+1} ~=~ \phi_{+}^{n} ~+~ \phi_{+}^{n-1} \qquad\text{and}\qquad
@@ -409,7 +413,7 @@ F_n ~=~ \frac{\phi_{+}^{n} \;-\; \phi_{-}^{n}}{\sqrt{5}} \quad\text{for $n\ge 0$
 \[
 a ~=~ a_0 ~+~ \cfrac{1}{a_1 \;+\; \cfrac{1}{a_2 \;+\; \cfrac{1}{a_3 \;+\; \cdots}}}
 \]
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
  \item Show that the golden ratio $\phi_{+} = \frac{1+\sqrt{5}}{2}$ (a solution of
  $x^2-x-1=0$) can be written as\index{golden ratio}
 \[
@@ -438,7 +442,7 @@ There are many ways to determine if a sequence converges---two are
 listed below. In all cases changing or removing a finite number of terms in a
 sequence does not affect its convergence or divergence:\index{Comparison Test}
 
-\statethm{thm:seqtests}{\begin{enumerate}[\bfseries 1.]
+\statethm{thm:seqtests}{\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \item \textbf{Monotone Bounded Test}: A sequence that is bounded and
 \emph{monotone}---i.e. either always increasing or always decreasing---is
 convergent.\index{sequence!Monotone Bounded Test}\index{Monotone Bounded Test}
@@ -505,7 +509,7 @@ bound. Similarly, for an increasing sequence only the upper bound matters.
 \newpage
 \noindent Some tests for convergence of a series are listed below:
 
-\statethm{thm:seriestests}{\begin{enumerate}[\bfseries 1.]
+\statethm{thm:seriestests}{\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \item \textbf{n-th Term Test}: If\index{series!n-th Term Test}
 $\sum a_n$ converges then $\displaystyle\lim_{n \to \infty} a_n = 0$.
 \item \textbf{Ratio Test}: For a series $\sum a_n$ of positive terms let
@@ -513,7 +517,7 @@ $\sum a_n$ converges then $\displaystyle\lim_{n \to \infty} a_n = 0$.
 R ~=~ \lim_{n \to \infty} \;\frac{a_{n+1}}{a_n} ~.
 \]
 Then\index{Ratio Test}\index{series!Ratio Test}
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item if $R < 1$ then the series converges,
 \item if $R > 1$ (including $R = \infty$) then the series diverges,
 \item if $R=1$ then the test fails.
@@ -539,7 +543,7 @@ of positive terms let\index{Limit Comparison Test}
 L ~=~ \lim_{n \to \infty} \;\frac{a_n}{b_n} ~.
 \]
 Then\index{series!Limit Comparison Test}
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item if $0 < L < \infty$ then $\sum a_n$ and $\sum b_n$ either both converge or
 both diverge,\index{series!Telescoping Series Test}
 \item if $L = 0$ and $\sum b_n$ converges then $\sum a_n$ converges,
@@ -784,7 +788,7 @@ properties of limits):
 
 \statethm{thm:seriesprops}{Let $\sum a_n$ and $\sum b_n$ be convergent series,
 and let $c$ be a number. Then:
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item $\sum (a_n \pm b_n)$ is convergent, with
 $\sum (a_n \pm b_n) = \sum a_n \pm \sum b_n$
 \item $\sum ca_n$ is convergent, with
@@ -797,7 +801,7 @@ $\sum ca_n = c \,\cdot\, \sum a_n$
 \probs{A}
 \par\noindent For Exercises 1-5 show that the given sequence
 $\seq{a_n}_{n=1}^{\infty}$ is convergent.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{3}
  \item $a_n = \dfrac{2 \,\cdot\, 4 \,\cdot\, 6 \,\cdots\, (2n)}
 {3 \,\cdot\, 5 \,\cdot\, 7 \,\cdots\, (2n+1)}\vphantom{\dfrac{2^n}{n!}}$
@@ -817,7 +821,7 @@ $\seq{a_n}_{n=1}^{\infty}$ is convergent.
 \suspend{enumerate}
 \par\noindent For Exercises 6-17 determine whether the given series is
 convergent.
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
 \begin{multicols}{4}
  \item $\bigsum{n = 0}{\infty}~ \sin\,\left(\dfrac{n \pi}{2}\right)$
  \item $\bigsum{n = 1}{\infty}~ \dfrac{1}{n\,(n + 2)}$
@@ -839,7 +843,7 @@ convergent.
 \suspend{enumerate}
 \par\noindent For Exercises 18-21 determine whether the given series is
 convergent. If convergent then find its sum.
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
 \begin{multicols}{4}
  \item $\bigsum{n = 1}{\infty}~ \dfrac{1}{(2n+1)\,(2n+3)}$
  \item $\bigsum{n = 1}{\infty}~ \dfrac{1}{(2n + 3)\,(2n + 5)}$
@@ -848,7 +852,7 @@ convergent. If convergent then find its sum.
 \end{multicols}
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Continue Example \ref{exmp:pseries} with a proof of the p-series Test for
   $p < 1$.
  \item Show that $\seq{a_n}_{n=1}^{\infty}$ is convergent, where
@@ -860,7 +864,7 @@ for $n \ge 1$. \emph{(Hint: Use the Monotone Bounded test by using a bound on
 $\frac{1}{n!}$ for $n > 2$.)}
  \item Consider the series $~\bigsum{n = 1}{\infty}~ \dfrac{1}{2n-1} ~=~
 1 \;+\; \frac{1}{3} \;+\; \frac{1}{5} \;+\; \frac{1}{7} \;+\; \dotsb ~$.
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item Show that the series is divergent.
 \item The textbook \emph{Applied Mathematics for Physical Chemistry}
  (3\textsuperscript{rd} ed.), J. Barrante, provides the following argument that
@@ -1054,7 +1058,7 @@ sum.\footnote{For formal proofs of these statements, see pp.442-444 in
 \par\noindent For Exercises 1-5 determine whether the given alternating series is
 convergent. If convergent, then determine if it is conditionally convergent or
 absolutely convergent.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{5}
  \item $\bigsum{n = 1}{\infty}~ \dfrac{(-1)^{n - 1}}{\sqrt{n}}$
  \item $\bigsum{n = 1}{\infty}~ \dfrac{(-1)^{n - 1}\;n\,!}{2^n}$
@@ -1301,7 +1305,7 @@ and sine functions, respectively.\vspace{-2mm}
 \probs{A}
 \par\noindent For Exercises 1-8 find the interval of convergence of the given
 power series.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{4}
  \item $\bigsum{n = 1}{\infty}~ \dfrac{n x^n}{(n + 1)^2}$
  \item $\bigsum{n = 1}{\infty}~ \dfrac{n x^n}{2^n}$
@@ -1330,7 +1334,7 @@ power series.
 \]
 \suspend{enumerate}
 \probs{B}
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
  \item Differentiating term by term, verify that the Bessel function $J_0(x)$
   satisfies Bessel's equation (see equation (\ref{eqn:besseldiffeq})).
  \item Show that for all $m \ge 1$ the Bessel functions $J_m(x)$ converge for
@@ -1340,7 +1344,7 @@ power series.
   (see equation(\ref{eqn:besseldiffeqgen})).
  \item\label{exer:besselderiv} For the Bessel functions $J_0(x)$ and $J_1(x)$
   show that:
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item $\Ddx\,(x\,J_1(x)) ~=~ x\,J_0(x)$
 \item $\int J_0(x)\,J_1(x)~\dx ~=~ -\frac{1}{2}\,J_0^2(x)$
 \item $\int x\,J_0(x)\,J_1(x)~\dx ~=~ -\frac{1}{2}\,x\,J_0^2(x) ~+~
@@ -1354,7 +1358,7 @@ power series.
 \end{enumerate}
  \item For all integers $m\ge 2$ show that the Bessel functions $J_m(x)$
   satisfy the relations:
-\begin{enumerate}[\bfseries (a)]
+\begin{enumerate}[item-label={\bfseries (\alph*)}]
 \item $m\,J_m(x) ~+~ x\,J_m'(x) ~=~ x\,J_{m-1}(x)$
 \item $J_{m-1}(x) ~-~ J_{m+1}(x) ~=~ 2J_{m}'(x)$
 \end{enumerate}
@@ -1666,7 +1670,7 @@ calculators produce an answer close to that.}
 \par\noindent For Exercises 1-9 write out the first three nonzero terms in the
 Taylor's series for the given function $f(x)$ about the given value $c$. You may
 use any method you like.
-\begin{enumerate}[\bfseries 1.]
+\begin{enumerate}[item-label={\bfseries \arabic*.}]
 \begin{multicols}{3}
  \item $f(x) = \sin\,x$ ; $c = \pi/2$
  \item $f(x) = \sinh\,x$ ; $c = 0$
@@ -1692,7 +1696,7 @@ use any method you like.
 \par\noindent For Exercises 12-15 replace the function $f(x)$ by its Taylor's
  series about $x=0$ to evaluate the given indefinite integral $\int f(x) \;\dx$
  (up to the first three nonzero terms in the series).
-\resume{enumerate}[{[\bfseries 1.]}]
+\resume{enumerate}[item-label={{[\bfseries \arabic*.]}}]
 \begin{multicols}{4}
  \item $\displaystyle\int \frac{\sin\,x}{x}~\dx$
  \item $\displaystyle\int \cos\,(x^2)~\dx\vphantom{\displaystyle\int \frac{\sin\,x}{x}}$
@@ -1752,4 +1756,6 @@ use any method you like.
  Which is better? The actual value of $\tanh (1)$ is 0.7615941559558. How do
  the two approximations compare at $x=2$?
 \end{enumerate}
+
+
 }
