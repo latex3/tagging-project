@@ -106,13 +106,6 @@ we do not show this by default.
 
 
 
-<details markdown="1">
-
-<summary><h3 style="display:inline">LaTeX Code (click here to open)</h3></summary>
-
-
-<p> </p>
-
 ```latex
 \DocumentMetadata{
   lang        = en,
@@ -230,7 +223,7 @@ cite \cite{article-full} and \cite{inbook-full} from the
 \end{document}
 ```
 
-</details>
+
 
 ----
 
