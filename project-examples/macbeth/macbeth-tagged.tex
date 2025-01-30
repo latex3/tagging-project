@@ -122,7 +122,7 @@
 \newcommand{\PgScene}[1]{\NewPage\FRule\section{#1}\vspace*{-1ex}\FRule\vspace*{2ex}}
 
 %% Verse control
-\newcommand{\Speaker}[1]{\textsc{\tagstructbegin{tag=Speaker}\tagmcbegin{}#1\tagmcend\tagstructend}} % speaker in small caps
+\newcommand{\Speaker}[1]{\leavevmode\tagmcend\textsc{\tagstructbegin{tag=Speaker}\tagmcbegin{}#1\tagmcend\tagstructend}\tagmcbegin{}} % speaker in small caps
 \newcommand{\Spk}[1]{\Tab\Speaker{#1}} % full stop (period) after the speaker.
 \newcommand{\Indent}[1]{\begin{quote}#1\end{quote}} 
 \newcommand{\Tab}{\vspace*{1ex}\hspace*{-1.0em}}% negative indent gives outdent: used for the speaker line
