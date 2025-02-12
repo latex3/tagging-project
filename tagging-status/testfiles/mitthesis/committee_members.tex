@@ -1,0 +1,78 @@
+% Sample thesis committee page for mitthesis.cls
+% Version 1.02, 2025/01/28
+%
+% This page is not required by the MIT Libraries, but some departments require it.
+%
+% Insert between title page and abstract page.
+% Format this page in any way that you like.  
+% Add supervisor titles, degrees, and departments as appropriate.
+
+%%%%% FORMATTING COMMANDS %%%%%%%%%%%%%%%%%%
+
+%% Format title
+\NewDocumentCommand\CommitteePageTitle{m}{
+	\vspace*{75pt}%36pt}
+	\IfPackageLoadedTF{microtype}
+		{\textls*{\Large\textbf{\MakeUppercase{#1}}}}
+		{{\Large\textbf{\MakeUppercase{#1}}}}%
+	\pdfbookmark[0]{#1}{Committee}%
+	\vspace*{10pt}%
+}
+% \textls* produces additional letter separation (appropriate for capitalized display text),
+% PROVIDED THAT \usepackage{microtype} has been loaded in the preamble. 
+% The extra space added is 100/1000 em (adjustable, see package documentation).
+
+%% Format committee member subheadings
+\NewDocumentCommand\Role{m}{
+	\vspace*{50pt}%25pt}
+	\IfPackageLoadedTF{microtype}
+		{\textls*{\large{\textsc{#1}}}}
+		{{\large\textsc{#1}}}%
+	\vspace*{12pt}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ExplSyntaxOn % class file includes code for when tagging is not active.
+\tag_struct_begin:n {tag=Sect, title=Committee~Members}
+\ExplSyntaxOff
+
+\begin{flushright}
+
+\CommitteePageTitle{Thesis committee}
+
+\Role{Thesis Supervisor}
+
+ \textbf{Marcus Gavius Apicius} \\
+ {\itshape
+ Professor of Cooking Arts \\
+ Department of Food Science \\
+ }
+
+\Role{Thesis Readers}
+
+ \textbf{Marie-Antoine Carême} \\
+ {\itshape
+   Professor of Haute Cuisine \\
+   Department of Food Science \\[18pt]
+ }
+
+ \textbf{Julia Child}\\
+ {\itshape
+   Professor of French Cuisine \\
+   Department of Food Science \\[18pt]
+ }
+
+ \textbf{Miles Gloriosus} \\
+ {\itshape
+   Professor of Personal Pronouns \\
+   Department of Rhetoric \\
+ }
+
+\end{flushright}
+
+\ExplSyntaxOn
+\tag_struct_end:
+\ExplSyntaxOff
+
+\cleardoublepage

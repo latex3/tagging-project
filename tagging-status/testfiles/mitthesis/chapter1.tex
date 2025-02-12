@@ -1,0 +1,159 @@
+% From mitthesis package
+% Version: 1.09, 2025/01/28
+% Documentation: https://ctan.org/pkg/mitthesis
+
+
+\chapter{Introduction}
+
+\lipsum[1-2] Postremo aliquos futuros suspicor, qui me ad alias litteras vocent, genus hoc scribendi, etsi sit elegans, personae tamen et dignitatis esse negent~\cite{DKE1969,ww1920,kirk2288a,churchill1948,gibbs1863}.
+
+\section[A section discussing the first issue: \(J/\psi\)]{A section discussing the first issue: \ifpdftex\(\bm{J}/\bm{\psi}\)\else{\(\symbfit{J/\psi}\)}\fi}
+
+
+We begin with some ideas from the literature \cite{Fong2015,sharpe1}. 
+\begin{equation}\label{eqn:1}
+\frac{\partial}{\partial t}\left[\rho\bigl(e + \lvert\vec{u}\rvert^2\big/2\bigr)\right]  + \nabla\cdot\left[\rho\bigl(h + \lvert\vec{u}\rvert^2\big/2 \bigr)\vec{u}\right]
+ ={}-\nabla \cdot \vec{q} +  \rho \vec{u}\cdot\vec{g}+ \frac{\partial}{\partial x_j}\bigl(d_{ji}u_i\bigr)
+\end{equation}
+ \lipsum[3]
+
+\lipsum[4] And more citations~\cite{sharpe1,GSL}.  Then we write some more and include our citations~\cite{Swaminathan2017IDABRO,dlmf,amsmath}. The configuration is shown in Fig.~\ref{fig:golden2}.
+
+%%%%%%%%%%%%%%%%%  begin figure  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+% sample images are from mwe package, but should be found by latex in the tex tree w/o loading that package
+\begin{subfigure}[c]{0.495\textwidth}
+\centering{\includegraphics[alt={sample image},width=0.99\textwidth]{example-image-c.jpg}}%
+\subcaption{\label{fig:golden}}
+\end{subfigure}
+%%%%%%%% don't leave a break here
+\begin{subfigure}[c]{0.495\textwidth}
+\centering{\includegraphics[alt={sample image},width=0.99\textwidth]{example-image-c.jpg}}%
+\subcaption{\label{fig:golden2}}%
+\end{subfigure}%
+\caption{A figure with two subfigures: (a) first subfigure; (b) second subfigure.\label{fig:4}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%  end figure  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[4]
+
+%% note use of \ref* here to avoid placing a nested link in the table of contents
+\subsection[Subsection~eqn.~(\ref*{eqn:WT1})]{Subsection~eqn.~\eqref{eqn:WT1}}
+\lipsum[5-6]
+
+\subsubsection{A subsubsection}
+\lipsum[7]
+
+\begin{equation}\label{eqn:WT1}
+L(\ifpdftex\bm{A}\else\symbfup{A}\fi) = \begin{pmatrix}
+\dfrac\varphi{(\varphi_1,\varepsilon_1)}			& 0 												 & \hdotsfor{3} 							& 0 \\[4\jot]
+\dfrac{\varphi k_{2,1}}{(\varphi_2,\varepsilon_1)}	& \dfrac\varphi{(\varphi_2,\varepsilon_2)}			 & 0 										& \hdotsfor{2} & 0 \\[4\jot]
+\dfrac{\varphi k_{3,1}}{(\varphi_3,\varepsilon_1)}	& \dfrac{\varphi k_{3,2}}{(\varphi_3,\varepsilon_2)} & \dfrac\varphi{(\varphi_3,\varepsilon_3)}	& 0 & \hdotsfor{1} & 0 \\[\jot]
+\vdots 												&  													 &  & \smash{\rotatebox{15}{$\ddots$}} &  & \vdots \\[\jot]
+\dfrac{\varphi k_{n-1, 1}}{(\varphi_{n-1},\varepsilon_1)}		& \dfrac{\varphi k_{n-1, 2}}{(\varphi_{n-1},\varepsilon_2)} & \hdotsfor{1} & 
+	\dfrac{\varphi k_{n-1,n-2}}{(\varphi_{n-1},\varepsilon_{n-2})}	& \dfrac{\varphi}{(\varphi_{n-1},\varepsilon_{n-1})} 		& 0 \\[4\jot]
+\dfrac{\varphi k_{n,1}}{(\varphi_n,\varepsilon_1)}				& \dfrac{\varphi k_{n,2}}{(\varphi_n,\varepsilon_2)}		& \hdotsfor{2}	&
+	\dfrac{\varphi k_{n,n-1}}{(\varphi_n,\varepsilon_{n-1})} 		& \dfrac{\varphi}{(\varphi_n,\varepsilon_n)}
+\end{pmatrix}
+\end{equation}
+
+\section{Description our paradigm}\label{ch1:theidea}
+
+\lipsum[8] No dissertation is complete without footnotes.\footnote{First footnote. $a_h = F_m$ See section~\ref{sec:stratified-flow}.}\footnote{Another interesting detail.}\footnote{And another really important idea to have in mind~\cite{reynolds1958,clauser56,lienhard2020,johnson1980,johnson1965,mpl}.} 
+
+\begin{figure}[t]
+% sample image is from mwe package, but should be found by latex in the tex tree w/o loading that package
+\centering\includegraphics[alt={sample image},width=6.67cm]{example-image-b.jpg} 
+\caption{Caption text\label{example-image-b}~\cite{GSL}.}
+\end{figure}
+
+
+\subsection{Conversion to a metaheuristic}
+
+\lipsum[11-12] This concept is discussed further in section~\ref{sec:stratified-flow}, and Refs.~\cite{euler1740,fourier1822}.
+
+
+
+\section{Other generalizations}
+
+\subsection{The most general case}
+
+\lipsum[7] And another citation, so that our sources will be unambiguous~\cite{montijano2014}.
+%\begin{gather}
+%\ce{x Na(NH4)HPO4 ->[\Delta] (NaPO3)_x + x NH3 ^ + x H2O} \\[0.5em]
+%\ce{^234_90Th -> ^0_-1$\beta${} + ^234_91Pa} \\[0.5em]
+%\ce{SO4^2- + Ba^2+ -> BaSO4 v} \\[0.5em]
+%\ce{Zn^2+
+%<=>[+ 2OH-][+ 2H+]
+%$\underset{\textrm{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$
+%<=>[+ 2OH-][+ 2H+]
+%$\underset{\textrm{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$
+%}
+%\end{gather}
+%These examples of chemical formul\ae\ are copied directly from the documentation of the \texttt{mhchem} package, which was used to typeset them.
+
+\section{Baroclinic generation of vorticity\label{sec:stratified-flow}}
+
+Substitution of the particle acceleration and application Stokes theorem leads to the \textit{Kelvin-Bjerknes circulation theorem}, for
+$\rho \neq \textrm{fn}(p)$:
+\begin{align}
+\frac{d\Gamma}{dt} &{}= \frac{d}{dt} \int_{\mathcal{C}} \mathbf{u} \cdot d\mathbf{r}\\
+				   &{}= \int_{\mathcal{C}} \frac{D\mathbf{u}}{Dt} \cdot d\mathbf{r} + \underbrace{\int_{\mathcal{C}} \mathbf{u}\cdot d\biggl( \frac{d\mathbf{r}}{dt}\biggr)}_{=\, 0} \\[-2pt]
+                   &{}= \iint_{\mathcal{S}} \nabla \times \frac{D\mathbf{u}}{Dt}  \cdot d\mathbf{A}\\
+                   &{}= \iint_{\mathcal{S}}  \nabla p \times \nabla \left( \frac{1}{\rho}\right) \cdot d\mathbf{A}
+\end{align}
+
+Baroclinic generation of vorticity accounts for the sea breeze and various other atmospheric currents in which temperature, rather than pressure, creates density gradients. Further, this phenomenon accounts for ocean currents in straits joining more and less saline seas, with surface currents flowing from the fresher to the saltier water and with bottom current going oppositely.
+
+%% Nomenclature list is optional
+%
+%  This environment takes four optional arguments:
+%		[1] adjust space between symbol and definition
+%		[2] name (heading) of the nomenclature list
+%		[3] level - can be "section" or "chapter" depending on whether you
+%			have one nomenclature list for whole thesis or one for each
+%			chapter. 
+%		[4] style. The default matches the style of [3], but you can 
+%			instead choose [frontmatter] or [backmatter] if desired.
+\begin{nomenclature}[2em][Nomenclature for Chapter~1][section]
+\EntryHeading{Roman letters}
+\entry{$\mathcal{C}$}{material curve}
+\entry{$\mathbf{r}$}{material position [m]}
+\entry{$\mathbf{u}$}{velocity [m s$^{-1}$]}
+\EntryHeading{Greek letters}
+\entry{$\Gamma$}{circulation [m$^2$ s$^{-1}$]}
+\entry{$\rho$}{mass density [kg m$^{-3}$]}
+\end{nomenclature}
+
+%%%%%%%%%%%%%%% begin table %%%%%%%%%%%%%%%%%% 
+\begin{table}[t]
+\caption{The error function and complementary error function}\label{tab:1}%
+\centering{%
+\begin{tabular*}{0.8\textwidth}{@{\hspace*{1.5em}}@{\extracolsep{\fill}}ccc!{\hspace*{3.em}}ccc@{\hspace*{1.5em}}}
+\\[-0.5em]
+\toprule
+\multicolumn{1}{@{\hspace*{1.5em}}c}{$x$\rule{0pt}{8pt}} &
+\multicolumn{1}{c}{$\erf{x}$} &
+\multicolumn{1}{c!{\hspace*{3.em}}}{$\erf{x}$} &
+\multicolumn{1}{c}{$x$} &
+\multicolumn{1}{c}{$\erfc{x}$} &
+\multicolumn{1}{c@{\hspace*{1.5em}}}{$\erfc{x}$} \\ \midrule
+0.00 & 0.00000 & 1.00000 & 1.10 & 0.88021 & 0.11980 \\
+0.05 & 0.05637 & 0.94363 & 1.20 & 0.91031 & 0.08969 \\
+0.10 & 0.11246 & 0.88754 & 1.30 & 0.93401 & 0.06599 \\
+0.15 & 0.16800 & 0.83200 & 1.40 & 0.95229 & 0.04771 \\
+0.20 & 0.22270 & 0.77730 & 1.50 & 0.96611 & 0.03389 \\
+0.30 & 0.32863 & 0.67137 & 1.60 & 0.97635 & 0.02365 \\
+0.40 & 0.42839 & 0.57161 & 1.70 & 0.98379 & 0.01621 \\
+0.50 & 0.52050 & 0.47950 & 1.80 & 0.98909 & 0.01091 \\
+0.60 & 0.60386 & 0.39614 & 1.82\makebox[0pt][l]{14} & 0.99000 & 0.01000 \\
+0.70 & 0.67780 & 0.32220 & 1.90 & 0.99279 & 0.00721 \\
+0.80 & 0.74210 & 0.25790 & 2.00 & 0.99532 & 0.00468 \\
+0.90 & 0.79691 & 0.20309 & 2.50 & 0.99959 & 0.00041 \\
+1.00 & 0.84270 & 0.15730 & 3.00 & 0.99998 & 0.00002 \\
+\bottomrule
+\end{tabular*}
+}%
+\end{table}
+%%%%%%%%%%%%%%%% end table %%%%%%%%%%%%%%%%%%% 
+
