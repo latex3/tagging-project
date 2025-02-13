@@ -12048,8 +12048,9 @@
    included-in:
    priority: 9
    supported-through: [latest]
-   comments: "Use class option [captionpatch] with pdftex and do not load [spanish] option. With these settings,
-             asmeconf pdfs validate as PDF 2.0/A-4F. PDF 2.0/UA-2 validation is not possible at present."
+   comments: "PDF 2.0/A-4F validation is possible using pdftex with the class option [captionpatch] and 
+              omitting the [spanish] option. PDF 2.0/UA-2 validation fails due to external issues related 
+              to the caption package and tagging of rules."
    issues:
    tests: true
    updated: 2025-02-12
