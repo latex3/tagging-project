@@ -1,0 +1,104 @@
+
+\DocumentMetadata{uncompress,testphase={latest},pdfversion=2.0,
+ }
+
+\ExplSyntaxOn
+\group_begin:
+\pdfdict_put:nnn {l_pdffile/Filespec} {AFRelationship}{/Supplement}
+\pdffile_embed_stream:nnn{
+<style>
+mtable[columnalign="right ~left"] > mtr > mtd:nth-child(odd) {
+padding-right:0;text-align:right;text-align:-moz-right;text-align:-webkit-right;
+}
+mtable[columnalign="right ~left"] > mtr > mtd:nth-child(even) {
+padding-left:0;text-align:left;text-align:-moz-left;text-align:-webkit-left;
+}
+mtd[intent=":no-equation-label"], mtd[intent=":equation-label"] {
+margin-right: 1em;display:block; position:absolute; right:0em
+}
+</style>
+}{latex-math-css.html}{tag/AFCSStest}
+\group_end:
+\ExplSyntaxOff
+
+\tagpdfsetup{root-AF=tag/AFCSStest, math/setup=mathml-AF }
+
+\documentclass[a4paper]{article}
+
+\usepackage{unicode-math}
+\usepackage{parskip}
+
+\usepackage{unicode-math}
+
+\title{Aligned equations}
+\author{\LaTeX\ Team}
+\date{February 2025}
+
+\addtolength\textheight{6cm}
+\addtolength\topmargin{-4cm}
+\begin{document}
+
+\maketitle
+
+
+
+Simple \texttt{align}
+\begin{align}
+  a+b&=x^2+x+2\\
+    b&=x
+\end{align}
+
+
+
+Simple \texttt{align*}
+\begin{align*}
+  c+d&=x^2+x+2\\
+    d&=x
+\end{align*}
+
+
+\texttt{aligned} in \texttt{equation}
+\begin{equation}
+\begin{aligned}
+  e+f&=x^2+x+2\\
+    f&=x
+\end{aligned}
+\end{equation}
+
+\texttt{split} in \texttt{align}
+\begin{align}
+\begin{split}
+  x&= a  +  b\\
+   &\quad + c
+\end{split}\\
+  y&=d
+\end{align}
+
+\texttt{split} in \texttt{equation}
+\begin{equation}
+\begin{split}
+ a & = b+b\\
+   &\quad + c
+\end{split} 
+\end{equation}
+
+\texttt{split} in \texttt{[}
+\[
+\begin{split}
+ a & = b-b\\
+   &\quad + c
+\end{split} 
+  \]
+
+\texttt{split} in \texttt{gather} 
+\begin{gather}
+\begin{split}
+ a & = b\times b\\
+   &\quad + c
+\end{split}\\
+x=1
+\end{gather}
+
+
+\end{document}
+
