@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+\usepackage{unicode-math}
+\usepackage{parskip}
+
+\usepackage{unicode-math}
+
+\title{Aligned equations}
+\author{\LaTeX\ Team}
+\date{February 2025}
+
+\addtolength\textheight{6cm}
+\addtolength\topmargin{-4cm}
+\begin{document}
+
+\maketitle
+
+
+
+Simple \texttt{align}
+\begin{align}
+  a+b&=x^2+x+2\\
+    b&=x
+\end{align}
+
+
+
+Simple \texttt{align*}
+\begin{align*}
+  c+d&=x^2+x+2\\
+    d&=x
+\end{align*}
+
+
+\texttt{aligned} in \texttt{equation}
+\begin{equation}
+\begin{aligned}
+  e+f&=x^2+x+2\\
+    f&=x
+\end{aligned}
+\end{equation}
+
+\texttt{split} in \texttt{align}
+\begin{align}
+\begin{split}
+  x&= a  +  b\\
+   &\quad + c
+\end{split}\\
+  y&=d
+\end{align}
+
+\texttt{split} in \texttt{equation}
+\begin{equation}
+\begin{split}
+ a & = b+b\\
+   &\quad + c
+\end{split} 
+\end{equation}
+
+\texttt{split} in \texttt{displaymath}
+\[
+\begin{split}
+ a & = b-b\\
+   &\quad + c
+\end{split} 
+\]
+
+\texttt{split} in \texttt{gather} 
+\begin{gather}
+\begin{split}
+ a & = b\times b\\
+   &\quad + c
+\end{split}\\
+x=1
+\end{gather}
+
+
+notag in  \texttt{align}
+\begin{align}
+  a+b&=y^2+y+2\notag\\
+    b&=y
+\end{align}
+
+
+tag in  \texttt{align*}
+\begin{align*}
+  r+s&=y^2+y+2\\
+    t&=y\tag{\dagger}
+\end{align*}
+
+\end{document}
+
