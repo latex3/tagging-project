@@ -1,26 +1,15 @@
 
-\DocumentMetadata{uncompress,testphase={latest},pdfversion=2.0,
+\DocumentMetadata{
+  uncompress,
+  lang=en,
+  testphase={latest},
+  pdfversion=2.0
  }
 
-\ExplSyntaxOn
-\group_begin:
-\pdfdict_put:nnn {l_pdffile/Filespec} {AFRelationship}{/Supplement}
-\pdffile_embed_stream:nnn{
-<style>
-mtable[columnalign="right ~left"] > mtr > mtd:nth-child(odd) {
-padding-right:0;text-align:right;text-align:-moz-right;text-align:-webkit-right;
-}
-mtable[columnalign="right ~left"] > mtr > mtd:nth-child(even) {
-padding-left:0;text-align:left;text-align:-moz-left;text-align:-webkit-left;
-}
-mtd[intent=":no-equation-label"], mtd[intent=":equation-label"] {
-margin-right: 1em;display:block; position:absolute; right:0em
-}
-</style>
-}{latex-math-css.html}{tag/AFCSStest}
-\group_end:
-\ExplSyntaxOff
 
-\tagpdfsetup{root-AF=tag/AFCSStest, math/setup=mathml-AF }
+\tagpdfsetup{
+  math/setup=mathml-AF,
+  root-supplemental-file=latex-align-css.html
+  }
 
 \input{align}
