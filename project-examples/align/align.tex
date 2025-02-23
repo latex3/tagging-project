@@ -75,18 +75,40 @@ x=1
 \end{gather}
 
 
-notag in  \texttt{align}
+\texttt{notag} in  \texttt{align}
 \begin{align}
   a+b&=y^2+y+2\notag\\
     b&=y
 \end{align}
 
 
-tag in  \texttt{align*}
+\texttt{tag} in  \texttt{align*}
 \begin{align*}
   r+s&=y^2+y+2\\
     t&=y\tag{\dagger}
 \end{align*}
+
+
+\clearpage
+
+Two groups in \texttt{align}
+\begin{align}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{align}
+
+Two groups in \texttt{alignat}
+\begin{alignat}{2}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{alignat}
+
+Two groups in \texttt{flalign}
+\begin{flalign}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{flalign}
+
 
 \end{document}
 
