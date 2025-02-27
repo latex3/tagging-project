@@ -1,0 +1,20 @@
+\DocumentMetadata{testphase=latest}
+\documentclass{article}
+\usepackage{unicode-math}
+\usepackage{eqnlines}
+\tagpdfsetup{math/setup={mathml-SE,mathml-AF}}
+\begin{document}
+% errors with 
+% ! Argument of \__math_grab_dollardollar:w has an extra }.
+
+%\begin{align}
+%x&=y 
+%\end{align}
+
+% errors with 
+% ! Argument of \__math_grab_dollardollar:w has an extra }.
+\begin{equations}[single]
+x = y
+\end{equations}
+
+\end{document}
