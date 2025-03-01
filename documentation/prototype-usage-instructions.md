@@ -29,7 +29,7 @@ runlatex.packageregex = [
 
 
 
-# Using the LaTeX prototype for accessible PDF (as of 2024/11)
+# Using the LaTeX prototype for accessible PDF (as of 2025/02)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
@@ -51,12 +51,7 @@ list:
   pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4f, %or a-4
-  testphase   = 
-   {phase-III,
-    title,
-    table,
-    math,
-    firstaid}  
+  testphase   = latest
 }
 \documentclass{article}
 \begin{document}
@@ -71,6 +66,11 @@ document should comply with.
 Tagging is then enabled by loading various modules through the
 `testphase` key.
 
+- The `latest` key loads all modules that we think are sensible. This is the recommended
+  value, it will load new modules automatically once they are added.
+
+
+It is possible to load only individual modules
 - The `phase-III` module activates tagging and loads support for most
   standard document elements like paragraphs, lists, sectioning, table
   of contents, graphics, floats, links and more. You should always use
@@ -80,7 +80,7 @@ Tagging is then enabled by loading various modules through the
   care that the title and author are added to the XMP metadata.
 
 - The `table` module adds tagging support to tables like `tabular`,
-  `tabularx`, `tabulary` and `longtable`. 
+  `tabularx`, `tabulary` and `longtable`.
 -  The `math` module enables basic tagging of equations.
 - Finally, the `firstaid` contains small fixes of
   external packages to make them compatible with the tagging code, e.g.,
@@ -134,12 +134,12 @@ key as shown below.
 
 At the moment this isn't transferred well by the derivation algorithm
 from PDF to HTML, but this area will see improvements. (The PDF structure
-is already correct, as one cane see in ngPDF, but the HTML/CSS
+is already correct, as one can see in ngPDF, but the HTML/CSS
 styling currently loses the grid layout.)
 
 ## Handling lists and other block structures
 
-Most lists using standard LaTeX enviornmenst such as `enumerate` will
+Most lists using standard LaTeX environments such as `enumerate` will
 be tagged automatically. The new list implementation also implement an
 optional _key-value_ interface with similar features to the well known
 `enumitem` package, although with a different implementation.
@@ -149,7 +149,7 @@ optional _key-value_ interface with similar features to the well known
 
 A list starting at 5
 
-\begin{enumerate}[start=5] 
+\begin{enumerate}[start=5]
 \item Level A1
   \begin{enumerate}
   \item Level B1
@@ -184,7 +184,7 @@ LuaLaTeX, but may also be provided by the author.
 Technically there are two methods of associating MathML with each
 formula:
 
- * As an _associated file_ This is an embedded stream of XML within
+ * As an _associated file_. This is an embedded stream of XML within
    the PDF that exactly matches the MathML that you would use in other
    contexts such as a web page.
  * Using MathML Namespace _Structure Element_ tagging. This is a
@@ -236,7 +236,8 @@ A matrix equation.
 
 To use MathML Structure Element tagging you may use the
 `math/mathml/structelem` key as shown below. Here we also suppress
-adding the Associated Files.
+adding the Associated Files. With a current lualatex-dev the same can be achieved
+with the key `math/setup=mathml-SE`.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
@@ -330,8 +331,8 @@ A matrix equation.
 \end{document}
 ```
 
-Here we supply an additional file with MathML versions of each formula.  
-[pdflatexexample-mathml.html](pdflatexexample-mathml.html)  
+Here we supply an additional file with MathML versions of each formula.
+[pdflatexexample-mathml.html](pdflatexexample-mathml.html)
 _View Source_ to see the MathML markup used.
 
 **Note:** If the math in the above example is edited, the checksum will not match
@@ -427,4 +428,4 @@ provided by DANTE and Duallab respectively.
 Please do not over use the services, they aren't set up to process heavy loads
 but are intended just to run small examples in order to show how to use it on your local machine.</p>
 
-</details>
+</details> 
