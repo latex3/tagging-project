@@ -135,7 +135,7 @@ key as shown below.
 At the moment this isn't transferred well by the derivation algorithm
 from PDF to HTML, but this area will see improvements. (The PDF structure
 is already correct, as one can see in ngPDF, but the HTML/CSS
-styling currently looses the grid layout.)
+styling currently loses the grid layout.)
 
 ## Handling lists and other block structures
 
