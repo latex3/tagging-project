@@ -6451,14 +6451,14 @@
 
  - name: longtable
    type: package
-   status: partially-compatible
+   status: compatible
    included-in: [tlc3, arxiv10]
    priority: 2
    supported-through: [phase-III,table]
    issues: [22]
-   comments: longtables with page breaks works only with luatex
+   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
    related-issues: [38]
-   updated: 2024-07-06
+   updated: 2025-03-02
 
  - name: lpic
    type: package
@@ -11699,13 +11699,14 @@
 
  - name: xltabular
    type: package
-   status: currently-incompatible
+   status: compatible
    included-in: [tlc3, arxiv001]
    priority: 2
    supported-through: [phase-III,table]
    issues: [170]
+   comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
    tests: true
-   updated: 2024-07-17
+   updated: 2025-03-02
 
  - name: xparse
    type: package
