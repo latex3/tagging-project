@@ -205,7 +205,7 @@ tagged with an Associated File of the generated MathML.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
- testphase={phase-III,math,table,title},
+ testphase=latest,
  pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
 
 \documentclass{article}
@@ -241,13 +241,13 @@ with the key `math/setup=mathml-SE`.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
- testphase={phase-III,math,table,title},
+ testphase=latest,
  pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
 
 \tagpdfsetup{
  math/mathml/structelem,
  math/tex/AF=false,
- math/mathml/AF=false
+ math/mathml/AF=false,
  math/mathml/sources=
 }
 
@@ -302,7 +302,7 @@ still be edited and the file renamed to `<file>-mathml.html` .
 ```
 % !TeX pdflatex
 \DocumentMetadata{uncompress,lang=en,
- testphase={phase-III,math,table,title},
+ testphase=latest,
  pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
 
 %\tagpdfsetup{math/mathml/write-dummy}
