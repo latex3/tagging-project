@@ -6,6 +6,7 @@ extrahead: youtube-head
 
 <script>
 runlatex.adddefaultpreamble=false;
+runlatex.texts.metadata="";
 runlatex.preincludes = {
  "pre1": {"pre0": "t3.tex"}
  "pre2": {"pre0": "t3.tex"}
