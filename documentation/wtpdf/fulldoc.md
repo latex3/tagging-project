@@ -153,22 +153,8 @@ cite \cite{Knuth:TB5-1-67} and \cite{Hoekwater:TB28-3-312} from the
 ```
 
 
-## Tagging, using Associated Files for Math
+## Tagging, using MathML Structure Elements
 ```latex
-\DocumentMetadata{
-  lang        = en,
-  pdfversion  = 2.0,
-  pdfstandard = ua-2,
-  pdfstandard = a-4,
-  testphase   = latest
-}
+{% include_relative t3-se.tex %}
 
-\tagpdfsetup{
-  math/setup=mathml-AF,
-  root-supplemental-file=latex-align-css.html,
-  root-supplemental-file=latex-list-css.html
-  }
-
-
-\input{t3}
 ```
