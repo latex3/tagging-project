@@ -5,7 +5,7 @@ extrahead: youtube-head
 ---
 
 <script>
-runlatex.adddefaultpreamble=false;
+function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.preincludes = {
  "pre1": {"pre0": "t3.tex"},
