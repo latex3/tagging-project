@@ -1,0 +1,17 @@
+name: validate-yaml-tagging-status-List
+
+on:
+  push:
+    branches: [ main ]
+    paths: ['_data/tagging-status.yml']
+  pull_request:
+    branches: [ main ]
+    paths: ['_data/tagging-status.yml']
+
+jobs:
+  validate-yaml-tagging-status-list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate YAML tagging status list
+        run: yamllint -c _data/_config_yamllint.yml _data/tagging-status.yml
