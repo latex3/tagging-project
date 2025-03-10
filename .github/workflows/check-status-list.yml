@@ -2,11 +2,11 @@ name: validate-yaml-tagging-status-List
 
 on:
   push:
-    branches: [ main ]
-    paths: ['_data/status.yml']
+    branches: [ main,lint ]
+    paths: ['_data/tagging-status.yml']
   pull_request:
-    branches: [ main ]
-    paths: ['_data/status.yml']
+    branches: [ main,lint ]
+    paths: ['_data/tagging-status.yml']
 
 jobs:
   validate-yaml-tagging-status-list:
