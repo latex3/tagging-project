@@ -3,6 +3,7 @@
 \usepackage{unicode-math}
 \usepackage{graphicx}
 \usepackage[colorlinks]{hyperref}
+\addtolength\marginparwidth{1.3cm}
 
 % stub if not tagging
 \providecommand\tagpdfsetup[1]{}
@@ -61,7 +62,9 @@ Matrices.
 \]
 
 \subsection{Lists}
-Lists often occur in documents
+Lists\marginpar{\raggedright
+  Marginal notes are usually placed in the outer margin.}
+ often occur in documents.
 \begin{itemize}
 \item They may be unordered bullet lists
 \item Or may be numbered lists.
@@ -87,13 +90,22 @@ That & 2
 \end{tabular}
 \end{center}
 
-Larger figures are usually placed in a \emph{float} to be positioned at a suitable
-place to help with column and page breaking.
+Larger figures such as Figure~\ref{float} are usually placed in a
+\emph{float} to be positioned at a suitable place to help with column
+and page breaking.
 \begin{figure}
   \centering
   \includegraphics[alt=example image A,width=.9\linewidth]{example-image-a}
-  \caption{Larger image set as a \emph{float}}
+  \caption{\label{float}Larger image set as a \emph{float}}
 \end{figure}
+
+\section{Verbatim}
+Some documents require verbatim code blocks to be displayed.
+\begin{verbatim}
+main( ) {
+        printf("hello, world");
+}
+\end{verbatim}
 
 \subsection{Citations}
 It is also possible to cite works from a bib\TeX\ database, here we
