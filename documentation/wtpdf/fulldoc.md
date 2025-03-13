@@ -39,9 +39,13 @@ runlatex.preincludes = {
 
 {% include youtube.html id="dr01lgvri3Y" width="medium" comment="t4 chatgpt foxit"%}
 
-###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging T3
+###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (FMi)
 
-{% include youtube.html id="FXjLUTR6XxA" width="medium" comment="t3-autotagged foxit"%}
+{% include youtube.html id="b4u0OIRuJ0I" width="medium" comment="t4-autotagged FMi foxit"%}
+
+###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (UF)
+
+{% include youtube.html id="7OeeU5Qmy1o" width="medium" comment="t4-autotagged UF foxit"%}
 
 ## Tagging, using associated files for math
 
