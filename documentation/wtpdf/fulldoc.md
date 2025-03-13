@@ -33,6 +33,12 @@ runlatex.preincludes = {
 
 {% include youtube.html id="G_yr1w4EyZw" width="medium" comment="t4 acrobat"%}
 
+
+### Foxit reading GitHub display of markdown extracted by ChatGPT
+
+
+{% include youtube.html id="dr01lgvri3Y" width="medium" comment="t4 chatgpt foxit"%}
+
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging T3
 
 {% include youtube.html id="FXjLUTR6XxA" width="medium" comment="t3-autotagged foxit"%}
