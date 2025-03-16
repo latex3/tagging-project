@@ -29,17 +29,18 @@ runlatex.preincludes = {
 
 {% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
 
-Observations
+#### Observations
 
 It is very difficult to find all issues if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is  a (possibly incomplete) list of issues:
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction"_
  - TOC is read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
- - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_) 
+ - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
+ - hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - The heading _"2 Document structures"_ is interpreted as a list with one item
  - Subheadings are read as _"Two One Mathematics"_ not as "2.1 Mathematics"
- - Reading of math is garbled as sub- and superscripts are announced and punctuations and other symbols are not read
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
  - Equation labels are read as numbers so difficult to understand
  - The second display math equation and the following text "Matrices" are interpreted as a single table and a list with one item producing an incomprehensible reading
  - The matrix equation is read backwards _"3 4 1 2"_ not as "1 2 3 4" and without any indication what the matrices are
@@ -57,23 +58,39 @@ It is very difficult to find all issues if you are looking at the text in parall
  - Instead of "such that \$a^n + b^n = c^n\$" it reads _"such then plus b-en equals c-en"_ (the _"then"_ is probably a Microsoft speech generator issue)
  - The display of verbatim code is read without the parentheses and curly brackets
 
+In summary the untagged PDF is basically incomprehensible.
+
+
 ### Acrobat/NVDA reading untagged PDF
 
 {% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
 
-Observations
+#### Observations
 
- - 
- - 
- - 
+ - From each TOC line with dots one dot is read, e.g., _"2 POINT 1 LINK Mathematics DOT 1"_
+ - The paragraph "Apart from ..." is read strangly: many words are read letter by letter
+ - "link" announcement for footnote appears in a random place in the same line (two words earlier) and the footnote number is read as normal text
+ - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - Mathematics and text are read without a pause even if a new paragraph starts 
+ - The matrices are read top down, e.g., _"thirteen twentyfour"_ without any indication that these are matrices
+ - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fatc that the sentence contains a link)
+ - On page 2 the running header is read as text _"3 CITATIONS"_
+ - The sentence "Small images may ..." is garbled with words read letter by letter
+ - The table is not recognized and read as if it is a normal paragraph
+ - The paragraph after the table and the marginal are read horizonatally across marginal and paragraph; additionally the text is garbled and mostly read letter by letter
+ - The 2 from 2.4 is appended to the end of the marginal and the heading is read as _"4 Theorems"_
+ - The formula is read as _"an + b-en = c-en"_
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - The paragraph starting "It is also possible..." is again garbled and read partly letter by letter
 
-
+In summary the same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
 
 {% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
 
-Observations
+#### Observations
 
  - 
  - 
@@ -85,7 +102,7 @@ Observations
 
 {% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
-Observations
+#### Observations
 
  - 
  - 
@@ -97,7 +114,7 @@ Observations
 
 {% include youtube.html id="7OeeU5Qmy1o" width="medium" comment="t4-autotagged UF foxit"%}
 
-Observations
+#### Observations
 
  - 
  - 
@@ -111,7 +128,7 @@ Observations
 {% include_relative t5-af.tex %}
 ```
 
-Observations
+#### Observations
 
  - 
  - 
@@ -128,7 +145,7 @@ Observations
 {% include_relative t5-se.tex %}
 ```
 
-Observations
+#### Observations
 
  - 
  - 
@@ -140,7 +157,7 @@ Observations
 
 {% include youtube.html id="AwxQ0zYYKqw" width="medium" comment="t5-se acrobat"%}
 
-Observations
+#### Observations
 
  - 
  - 
