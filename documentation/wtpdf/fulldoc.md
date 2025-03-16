@@ -94,6 +94,17 @@ The same untagged PDF gets a different reading compared to the previous one, but
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
 
+#### Notes
+
+This document is shown as one possible alternative. ChatGPT 3 was used.
+The untagged PDF was uploaded and the following question posed:
+
+> Please show full markdown source for an accessible document suitable for a blind reader extracted from this PDF
+
+The supplied markdown was not edited other than changing `\(` and `\[` to `$` and `$$` to match the default MathJax cinfiguration at GitHub.
+
+The markdown was then viewed in GitHub markdown preview, Foxit was used to read the rendered web page.
+
 {% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
 
 #### Observations
@@ -113,7 +124,7 @@ The same untagged PDF gets a different reading compared to the previous one, but
 
 #### Summary
 
-ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by not handling graphics and tables correctly, dropping relevant footnotes and marginal notes, losing equation labels and possibly misrepresenting the authors intentions by rewriting portions of the text. The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing  a crippled and incorrect variant of the information that the author tries to convay.
+ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by not handling graphics and tables correctly, dropping relevant footnotes and marginal notes, losing equation labels and possibly misrepresenting the authors intentions by rewriting portions of the text. The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing  a crippled and incorrect variant of the information that the author tries to convey.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
