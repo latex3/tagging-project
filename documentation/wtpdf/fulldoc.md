@@ -8,6 +8,7 @@ extrahead: youtube-head
 function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.texts["TeXLive.net"]="Generate PDF";
+runlatex.texts["Compiling PDF"]="Compiling PDF";
 runlatex.preincludes = {
  "pre1": {"pre0": "t5.tex"},
  "pre2": {"pre0": "t5.tex"}
