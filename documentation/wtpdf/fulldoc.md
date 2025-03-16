@@ -36,8 +36,7 @@ runlatex.preincludes = {
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
 
-
-{% include youtube.html id="dr01lgvri3Y" width="medium" comment="t4 chatgpt foxit"%}
+{% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (FMi)
 
