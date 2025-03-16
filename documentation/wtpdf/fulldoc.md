@@ -15,7 +15,7 @@ runlatex.preincludes = {
  }
 </script>
 
-[Well Tagged PDF Video Examples T5](./)
+[Well Tagged PDF Video Examples](./)
 
 ----
 
