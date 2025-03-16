@@ -23,7 +23,7 @@ runlatex.preincludes = {
 
 ## LaTeX document with no tagging
 
-This is the source of the document whose output is used in the sample videos.
+This is the source of the document whose output is used in the sample videos below.
 
 ```latex
 {% include_relative t5.tex %}
@@ -41,7 +41,7 @@ It is very difficult to find all issues if you are looking at the text in parall
  - TOC is read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
- - hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
+ - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - The heading _"2 Document structures"_ is interpreted as a list with one item
  - Subheadings are read as _"Two One Mathematics"_ not as "2.1 Mathematics"
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
@@ -111,7 +111,7 @@ The markdown was then viewed in GitHub markdown preview, Foxit was used to read 
 
 #### Observations
 
- - Text and visual presentation do no longer match (this is now a one column document) but for AT usage that is ok
+ - Text and visual presentation do no longer match (this is now a one column document but the text talks about it being a 2-column document), but for AT usage that is ok
  - The footnote with important information was dropped
  - The equation labels are lost
  - The matrices are shown with brackets not parentheses
@@ -126,19 +126,38 @@ The markdown was then viewed in GitHub markdown preview, Foxit was used to read 
 
 #### Summary
 
-ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by not handling graphics and tables correctly, dropping relevant footnotes and marginal notes, losing equation labels and possibly misrepresenting the authors intentions by rewriting portions of the text. The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing  a crippled and incorrect variant of the information that the author tries to convey.
+ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by
+ - not handling graphics and tables correctly,
+ - dropping relevant footnotes and marginal notes,
+ - losing equation labels, and
+ - possibly misrepresenting the authors intentions by rewriting portions of the text.
+
+The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a crippled and incorrect variant of the information that the author tries to convay.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
+
+This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
 {% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
 #### Observations
 
- - 
- - 
- - 
+ - The LaTeX logo is read as _"L A tek" (the only pronounciation that Leslie Lamport always said no to :-) )
+ - The last line of the TOC is incorrectly identified as a list with 2 items
+ - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
+ - Formulas are introduced as graphics and the content is incomplete and incorrectly read, i.e. no indication of sub- and superscripts, parentheses etc are seen as punctuation and are not read
+ - The separate equations (on a single line) are joined and read without any pause despite the space in the source
+ - Equation labels are read as numbers so difficult to understand
+ - The inline graphics in section 3.4 is not shown and not read
+ - The marginal is correctly separated from the main text and read separately
+ - The formula is read as _"an + b-en = c-en"_
+ - The display of verbatim code is read without the parentheses and curly brackets
 
+
+#### Summary
+
+For normal text structures the auto-tagging heuristics makes reasonable guess and seldom fails (in this document the misinterpretation of the TOC row. However, the quality varies with the complexity of the document structure. With respect to mathematics and graphics the reading fails severily; basically only text characters contained in the  formula or graphics are read, everything else is ignored. This makes auto-tagging unstuitable for STEM documents.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version)
@@ -150,6 +169,8 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
  - 
  - 
  - 
+
+#### Summary
 
 
 
@@ -164,6 +185,8 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
  - 
  - 
  - 
+
+#### Summary
 
 
 
@@ -182,6 +205,8 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
  - 
  - 
 
+#### Summary
+
 
 
 ### Acrobat Reader/NVDA reading PDF with MathML SE
@@ -193,5 +218,7 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
  - 
  - 
  - 
+
+#### Summary
 
 
