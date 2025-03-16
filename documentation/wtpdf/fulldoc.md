@@ -143,7 +143,7 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 
 #### Observations
 
- - The LaTeX logo is read as _"L A tek" (the only pronounciation that Leslie Lamport always said no to :-) )
+ - The LaTeX logo is read as _"L A T E EX" (the only pronounciation that Leslie Lamport always said no to :-) )
  - The last line of the TOC is incorrectly identified as a list with 2 items
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - Formulas are introduced as graphics and the content is incomplete and incorrectly read, i.e. no indication of sub- and superscripts, parentheses etc are seen as punctuation and are not read
@@ -157,21 +157,40 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 
 #### Summary
 
-For normal text structures the auto-tagging heuristics makes reasonable guess and seldom fails (in this document the misinterpretation of the TOC row. However, the quality varies with the complexity of the document structure. With respect to mathematics and graphics the reading fails severily; basically only text characters contained in the  formula or graphics are read, everything else is ignored. This makes auto-tagging unstuitable for STEM documents.
+For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severily; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version)
+
+This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
 {% include youtube.html id="7OeeU5Qmy1o" width="medium" comment="t4-autotagged UF foxit"%}
 
 #### Observations
 
- - 
- - 
- - 
+ - The LaTeX logo is read as _"L A T E EX"
+ - The last line of the TOC is misinterpreted as a heading level 5 (different heuristic result compared to the MacOS version)
+ - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
+ - "link" announcement for footnote appears in a random place in the same line (two words earlier) and the footnote number is read as normal text (does not happen with the MacOS version)
+ - The footnote text is not correctly identified and read as part of the main paragraph in the middle of the hyphenated word _"docu- ment"_
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - Mathematics and text are read without a pause even if a new paragraph starts 
+ - The separate equations (on a single line) are joined and read without any pause despite the space in the source
+ - Equation labels are read as numbers so difficult to understand
+ - The matrices have a very strange reading order starting with _"Twentyone three one four one one equals..."_ and none of the matices are announced
+ - The heuristic invented a third (nested) list
+ - The page number _"1"_ and the running header _"3 CITATIONS"_ are both read as text
+ - The float graphic is ignored and only the caption is read as normal text
+ - The inline graphics in section 3.4 is not shown and not read
+ - The table is read as normal paragraph text
+ - The marginal and the paragraph next to it are identified as a single paragraph and the reading alters between both line by line
+ - The formula is read as _"an + b-en = c-en"_
+ - The display of verbatim code is read without the parentheses and curly brackets
 
 #### Summary
 
+Auto-tagging using the Windows software gives worse results than the corresponding version on MacOS, which is a bit surprising, but should the general problem that auto-tagging is faced with: it has to interpret visual clues that by themselves allow for several interpretation and it is often not clear to the software if alignments (e.g., same baseline) indicate a reading order or if other  aspects (e.g., size of spaces) should take precidence---on themarginal the software fail spectacular in this document.
+ With respect to mathematics and graphics the reading always fails severily; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This alone makes auto-tagging unsuitable for STEM documents.
 
 
 ## Tagging, using associated files for math
