@@ -27,11 +27,11 @@ runlatex.preincludes = {
 
 ###  Foxit/NVDA reading untagged PDF
 
-{% include youtube.html id="ajIryIgEasA" width="medium" comment="t4 foxit"%}
+{% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
 
 ### Acrobat/NVDA reading untagged PDF
 
-{% include youtube.html id="G_yr1w4EyZw" width="medium" comment="t4 acrobat"%}
+{% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
 
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
