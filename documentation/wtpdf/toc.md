@@ -20,10 +20,7 @@ tools.
 
 On this document foxit produces the following reading (Acrobat is similar).
 
-
-<!-- toc untagged tagged foxit -->
-{% include youtube.html id="vEuz1bIluU0" width="medium"%}
-
+{% include youtube.html id="HylCvun3q1g" width="medium" comment="T5 untagged toc, foxit" %}
 
 
 
@@ -31,14 +28,10 @@ Using the tagged PDF, the structure is made explicit to the screen
 reader and typesetting atrtifacts such as leader dots are marked as
 artifacts and not read, producing a far more understandable reading.
 
-<!-- toc tagged foxit -->
-{% include youtube.html id="R01XRT7PSz4" width="medium"%}
+{% include youtube.html id="IQz3Xouc6Ko" width="medium" comment="T5 tagged toc, foxit" %}
 
 
+Autotagged document.
 
-Autotagged document, with Acrobat
-
-
-<!-- t1 autotag toc acrobat-->
-{% include youtube.html id="ZX2oWvT2_N4" width="medium"%}
+{% include youtube.html id="NkDYH9doLI4" width="medium" comment="t5 autotagged toc, foxit" %}
 
