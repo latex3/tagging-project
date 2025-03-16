@@ -21,6 +21,8 @@ runlatex.preincludes = {
 
 ## LaTeX document with no tagging
 
+This is the source of the document whose output is used in the sample videos.
+
 ```latex
 {% include_relative t5.tex %}
 ```
@@ -58,7 +60,9 @@ It is very difficult to find all issues if you are looking at the text in parall
  - Instead of "such that \$a^n + b^n = c^n\$" it reads _"such then plus b-en equals c-en"_ (the _"then"_ is probably a Microsoft speech generator issue)
  - The display of verbatim code is read without the parentheses and curly brackets
 
-In summary the untagged PDF is basically incomprehensible.
+#### Summary
+
+The untagged PDF is basically incomprehensible.
 
 
 ### Acrobat/NVDA reading untagged PDF
@@ -84,7 +88,9 @@ In summary the untagged PDF is basically incomprehensible.
  - The display of verbatim code is read without the parentheses and curly brackets
  - The paragraph starting "It is also possible..." is again garbled and read partly letter by letter
 
-In summary the same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
+#### Summary
+
+The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
 
@@ -92,10 +98,22 @@ In summary the same untagged PDF gets a different reading compared to the previo
 
 #### Observations
 
- - 
- - 
- - 
+ - Text and visual presentation do no longer match (this is now a one column document) but for AT usage that is ok
+ - The footnote with important information was dropped
+ - The equation labels are lost
+ - The matrices are shown with brackets not parentheses
+ - The sentence after the list "Here we reference ..." is incorrectly shown as a third-level list item
+ - The inline graphics in section 3.4 is not shown and not read
+ - The table is misinterpreted, changing it to a 3-column table with the headers not matching their columns (i.e., not possible to navigate or understand the table content)
+ - The marginal note with (important) information was dropped
+ - The graphic of the float is lost and only a caption is placed in the document
+ - ChatGPT invented a word and changed "Fermat's last" to _"Fermat's last theorem"_
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - The last two sections have been rewritten and shortened by ChatGPT, i.e., the Reference section was dropped and the references put inline
 
+#### Summary
+
+ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by not handling graphics and tables correctly, dropping relevant footnotes and marginal notes, losing equation labels and possibly misrepresenting the authors intentions by rewriting portions of the text. The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing  a crippled and incorrect variant of the information that the author tries to convay.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
