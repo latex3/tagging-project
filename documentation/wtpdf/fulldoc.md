@@ -8,12 +8,12 @@ extrahead: youtube-head
 function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.preincludes = {
- "pre1": {"pre0": "t4.tex"},
- "pre2": {"pre0": "t4.tex"}
+ "pre1": {"pre0": "t5.tex"},
+ "pre2": {"pre0": "t5.tex"}
  }
 </script>
 
-[Well Tagged PDF Video Examples](./)
+[Well Tagged PDF Video Examples T5](./)
 
 ----
 
@@ -22,12 +22,12 @@ runlatex.preincludes = {
 ## LaTeX document with no tagging
 
 ```latex
-{% include_relative t4.tex %}
+{% include_relative t5.tex %}
 ```
 
 ###  Foxit/NVDA reading untagged PDF
 
-{% include youtube.html id="ajIryIgEasA" width="medium" comment="t4 foxit"%}
+{% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
 
 Observations
 
@@ -59,7 +59,7 @@ It is very difficult to find all issues if you are looking at the text in parall
 
 ### Acrobat/NVDA reading untagged PDF
 
-{% include youtube.html id="G_yr1w4EyZw" width="medium" comment="t4 acrobat"%}
+{% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
 
 Observations
 
@@ -71,7 +71,7 @@ Observations
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT
 
-{% include youtube.html id="dr01lgvri3Y" width="medium" comment="t4 chatgpt foxit"%}
+{% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
 
 Observations
 
@@ -83,7 +83,7 @@ Observations
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
 
-{% include youtube.html id="b4u0OIRuJ0I" width="medium" comment="t4-autotagged FMi foxit"%}
+{% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
 Observations
 
@@ -108,7 +108,7 @@ Observations
 ## Tagging, using associated files for math
 
 ```latex
-{% include_relative t4-af.tex %}
+{% include_relative t5-af.tex %}
 ```
 
 Observations
@@ -121,11 +121,11 @@ Observations
 
 ### Foxit/NVDA reading PDF with MathML AF
 
-{% include youtube.html id="uCwsCv-2hps" width="medium" comment="t4-af foxit"%}
+{% include youtube.html id="kyZMO1N96tw" width="medium" comment="t5-af foxit"%}
 
 ## Tagging, using MathML structure elements
 ```latex
-{% include_relative t4-se.tex %}
+{% include_relative t5-se.tex %}
 ```
 
 Observations
@@ -138,7 +138,7 @@ Observations
 
 ### Acrobat Reader/NVDA reading PDF with MathML SE
 
-{% include youtube.html id="bgCp7Mk3fOE" width="medium" comment="t4-se acrobat"%}
+{% include youtube.html id="AwxQ0zYYKqw" width="medium" comment="t5-se acrobat"%}
 
 Observations
 
