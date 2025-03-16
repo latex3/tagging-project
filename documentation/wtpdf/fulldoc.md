@@ -13,7 +13,7 @@ runlatex.preincludes = {
  }
 </script>
 
-[Well Tagged PDF Video Examples](./)
+[Well Tagged PDF Video Examples T5](./)
 
 ----
 
@@ -54,7 +54,7 @@ runlatex.preincludes = {
 
 ### Foxit/NVDA reading PDF with MathML AF
 
-{% include youtube.html id="uCwsCv-2hps" width="medium" comment="t4-af foxit"%}
+{% include youtube.html id="kyZMO1N96tw" width="medium" comment="t5-af foxit"%}
 
 ## Tagging, using MathML structure elements
 ```latex
@@ -63,4 +63,4 @@ runlatex.preincludes = {
 
 ### Acrobat Reader/NVDA reading PDF with MathML SE
 
-{% include youtube.html id="bgCp7Mk3fOE" width="medium" comment="t4-se acrobat"%}
+{% include youtube.html id="AwxQ0zYYKqw" width="medium" comment="t5-se acrobat"%}
