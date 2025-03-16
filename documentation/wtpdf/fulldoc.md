@@ -45,7 +45,7 @@ It is very difficult to find all issues if you are looking at the text in parall
  - The matrix equation is read backwards _"3 4 1 2"_ not as "1 2 3 4" and without any indication what the matrices are
  - The nested structure of the lists is not deducible
  - The reference back to item 2 in the sentence after the list makes the list entry come out as _"2 items within such a list may be refer items within such a list may be referenced"_
- - The word _"Link"_ is added before _"Here we reference item 2"_
+ - The link area is identified as being on the line before, therefore the word _"Link"_ is added before _"Here we reference item 2"_ (same problem as with the footnote mark, except that there the previous line has text)
  - The float with the Helvetica A is interpreted as a table and its caption is read as normal text
  - The heading "2.3 Figures and Tables" is read as _"LIST WITH ONE ITEM 2 3 figures and tables 3 figures an  d tables OUT OF LIST"_
  - The inline graphic is not announced
