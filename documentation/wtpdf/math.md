@@ -20,8 +20,9 @@ character data.  The superscript in the first equation is not read, so
 losing the meaning, and the matrix equation is completely scrambled
 with the entries being read in the wrong order.
 
-<!-- math untagged foxit -->
-{% include youtube.html id="9a1oFMe_Rxk" width="narrow"%}
+
+
+{% include youtube.html id="eYO6_ereNhs" width="narrow" comment="t5 untagged math foxit"%}
 
 
 At the present time different PDF readers support different ways of
