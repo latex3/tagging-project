@@ -40,7 +40,7 @@ runlatex.preincludes = {
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (FMi)
 
-{% include youtube.html id="b4u0OIRuJ0I" width="medium" comment="t4-autotagged FMi foxit"%}
+{% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (UF)
 
