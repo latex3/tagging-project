@@ -228,3 +228,30 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 #### Summary
 
 
+
+----
+
+## Software and Settings
+
+All the readings were generated on Microsoft Windows, using
+a test release of NVDA 2025.1 with Windows OneCore voice "Zira".
+The NVDA addon MathCAT 0.67-rc.9 is responsible for reading MathML.
+
+Pronunciation of some technical words was improved by using the following
+settings in the NVDA speech dictionary 
+
+| Pattern   | Replacement | case | Type       |
+|----       |----         |----  |----        | 
+| LaTeX	    | lay-tech	  | on   | whole word |
+| alignat   | align-at    | on   | whole word |
+| flalign   | f-l-align   | on   | whole word |
+| notag	    | no-tag      | on   | whole word | 
+| bibTEX    | bib-tech    | off  | whole word | 
+| unordered | un-ordered  | off	 | whole word | 
+| TeX       | tech        | on   | whole word |
+
+Foxit Reader used was version 2025.3.0.28197
+
+Acrobat Reader used was version 2025.001.20432
+
+
