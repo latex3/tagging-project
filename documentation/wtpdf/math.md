@@ -41,18 +41,15 @@ PDF viewers.
 
 Associated Files and foxit
 
-<!-- math af  foxit -->
-{% include youtube.html id="Csu2Npbi7Tg" width="narrow"%}
+{% include youtube.html id="6qU00UsWh3c" width="narrow" comment="t5 math af foxit%}
 
 Structure Elements and Acrobat
 
-<!-- math se acrobat -->
-{% include youtube.html id="Dj6ZQldpdqo" width="narrow"%}
+{% include youtube.html id="W6SMNdHwoHw" width="narrow" comment="t5 math se acrobat%}
 
 
 Autotagged with Acrobat
 
-<!-- t1 autotag math acrobat-->
-{% include youtube.html id="MCRAWKOd4cM" width="narrow"%}
+{% include youtube.html id="5qe18epTNgE" width="narrow" comment="t5 autotagged foxit"%}
 
 
