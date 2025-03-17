@@ -21,7 +21,7 @@ runlatex.preincludes = {
 
 # Full Document Sources
 
-## LaTeX document with no tagging
+## A LaTeX document with no tagging
 
 This is the source of the document whose output is used in the sample videos below.
 
@@ -186,11 +186,26 @@ This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same s
 
 #### Summary
 
-Auto-tagging using the Windows software gives worse results than the corresponding version on MacOS, which is a bit surprising, but should the general problem that auto-tagging is faced with: it has to interpret visual clues that by themselves allow for several interpretation and it is often not clear to the software if alignments (e.g., same baseline) indicate a reading order or if other  aspects (e.g., size of spaces) should take precidence---on themarginal the software fail spectacular in this document.
+Auto-tagging using the Windows software gives worse results than the corresponding version on MacOS. This is a bit surprising, but it shows the general problem that auto-tagging is faced with: it has to interpret visual clues that by themselves allow for several interpretation and it is often not clear to the software if alignments (e.g., same baseline) indicate a reading order or if other aspects (e.g., size of spaces) should take precidence---on the marginal the software failed spectacularly in this document.
  With respect to mathematics and graphics the reading always fails severily; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This alone makes auto-tagging unsuitable for STEM documents.
 
 
-## Tagging, using associated files for math
+
+## Tagged PDF generated directly from LaTeX
+
+When generating tagged PDF directly from LaTeX source there are two possibilities when the document contains math formulas:
+
+- Each formula can have a so called Associated File (AF) attached inside the PDF (that contains a MathML representation of the formula)
+- The MathML representation is directly embeded as structure elements in the PDF
+
+Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on the consumer application (e.g., the reader) which is understood if PDF 2.0 is understood at all. We hope that the majority of the PDF readers soon support PDF 2.0, including both of above methods.
+
+LaTeX can automatically produce the necessary MathML from the source if the LuaTeX engine is used. If pdfTeX is used as an engine only the AF method is supported and the data for the AF files have to be prepared in a separate step. How to do the latter is explained elsewhere.
+
+
+### Tagging, using associated files for math
+
+To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
 {% include_relative t5-af.tex %}
@@ -198,9 +213,34 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 ### Foxit/NVDA reading PDF with MathML AF
 
+The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speed generator.
+
+ 
 {% include youtube.html id="kyZMO1N96tw" width="medium" comment="t5-af foxit"%}
 
+#### Observations
+
+ - The normal text structures are all handled correctly
+ - The footnote is correctly identified and the footnote text is read in a suitable place 
+ - All mathematics are read correctly and can be understood
+ - Graphics are not dropped; instead their Alt text is read
+
+#### Remaining issues
+
+ - There is a strange pause when reading the verbatim text (to be investigated)
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - Reading of hpyhenated words is incorrect (this is a Foxit Reader issue; to be fixed)
+
+#### Summary
+
+The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are are no problems with complex material apart from code displays.
+
+The fact that code displays are read incompletely is a general problem of the speech software and unrelated to PDF, i.e., the same defects show up if code is displayed in HTML. We do, however, expect to ensure that LaTeX puts additional Aria guidance in the code displays so that punctuations and other symbols relevant to understanding code are not dropped by the speech software.
+
+
+
 ## Tagging, using MathML structure elements
+
 ```latex
 {% include_relative t5-se.tex %}
 ```
