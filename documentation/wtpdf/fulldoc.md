@@ -129,7 +129,7 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
  - losing equation labels, and
  - possibly misrepresenting the authors intentions by rewriting portions of the text.
 
-The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a crippled and incorrect variant of the information that the author tries to convay.
+The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
@@ -235,7 +235,7 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 All the readings were generated on Microsoft Windows, using
 a test release of NVDA 2025.1 with Windows OneCore voice "Zira".
-The NVDA addon MathCAT 0.67-rc.9 is responsible for reading MathML.
+The NVDA addon MathCAT 0.6.8-rc.9 is responsible for reading MathML.
 
 Pronunciation of some technical words was improved by using the following
 settings in the NVDA speech dictionary 
