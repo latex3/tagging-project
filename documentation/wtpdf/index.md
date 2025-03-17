@@ -24,7 +24,7 @@ part the document in each case.
 
  * [Tables Of Contents](toc)
  * [Mathematics](math)
- * [Full Document (t5 version)](fulldoc)
+ * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
- * [Original version of this file, to make sure I don't lose anything](original)
+
 
