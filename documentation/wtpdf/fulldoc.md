@@ -161,7 +161,7 @@ For normal text structures the auto-tagging heuristics makes reasonable guesses 
 
 This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="7OeeU5Qmy1o" width="medium" comment="t4-autotagged UF foxit"%}
+{% include youtube.html id="OZPOekam3y8" width="medium" comment="t5-autotagged UF foxit"%}
 
 #### Observations
 
