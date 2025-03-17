@@ -74,17 +74,17 @@ The untagged PDF is basically incomprehensible.
 #### Observations
 
  - From each TOC line with dots one dot is read, e.g., _"2 POINT 1 LINK Mathematics DOT 1"_
- - The paragraph "Apart from ..." is read strangly: many words are read letter by letter
+ - The paragraph "Apart from ..." is read strangely: many words are read letter by letter
  - "link" announcement for footnote appears in a random place in the same line (two words earlier) and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
  - Mathematics and text are read without a pause even if a new paragraph starts 
- - The matrices are read top down, e.g., _"thirteen twentyfour"_ without any indication that these are matrices
- - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fatc that the sentence contains a link)
+ - The matrices are read top down, e.g., _"thirteen twenty four"_ without any indication that these are matrices
+ - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fact that the sentence contains a link)
  - On page 2 the running header is read as text _"3 CITATIONS"_
  - The sentence "Small images may ..." is garbled with words read letter by letter
  - The table is not recognized and read as if it is a normal paragraph
- - The paragraph after the table and the marginal are read horizonatally across marginal and paragraph; additionally the text is garbled and mostly read letter by letter
+ - The paragraph after the table and the marginal are read horizontally across marginal and paragraph; additionally the text is garbled and mostly read letter by letter
  - The 2 from 2.4 is appended to the end of the marginal and the heading is read as _"4 Theorems"_
  - The formula is read as _"an + b-en = c-en"_
  - The display of verbatim code is read without the parentheses and curly brackets
@@ -140,7 +140,7 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 
 #### Observations
 
- - The LaTeX logo is read as _"L A T E EX"_ (the only pronounciation that Leslie Lamport always said no to :-) )
+ - The LaTeX logo is read as _"L A T E EX"_ (the only pronunciation that Leslie Lamport always said no to :-) )
  - The last line of the TOC is incorrectly identified as a list with 2 items
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - Formulas are introduced as graphics and the content is incomplete and incorrectly read, i.e. no indication of sub- and superscripts, parentheses etc are seen as punctuation and are not read
@@ -154,7 +154,7 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 
 #### Summary
 
-For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severily; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
+For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version)
@@ -174,7 +174,7 @@ This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same s
  - Mathematics and text are read without a pause even if a new paragraph starts 
  - The separate equations (on a single line) are joined and read without any pause despite the space in the source
  - Equation labels are read as numbers so difficult to understand
- - The matrices have a very strange reading order starting with _"Twentyone three one four one one equals..."_ and none of the matices are announced
+ - The matrices have a very strange reading order starting with _"Twenty-one three one four one one equals..."_ and none of the matrices are announced
  - The heuristic invented a third (nested) list
  - The page number _"1"_ and the running header _"3 CITATIONS"_ are both read as text
  - The float graphic is ignored and only the caption is read as normal text
@@ -186,8 +186,8 @@ This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same s
 
 #### Summary
 
-Auto-tagging using the Windows software gives worse results than the corresponding version on MacOS. This is a bit surprising, but it shows the general problem that auto-tagging is faced with: it has to interpret visual clues that by themselves allow for several interpretation and it is often not clear to the software if alignments (e.g., same baseline) indicate a reading order or if other aspects (e.g., size of spaces) should take precidence---on the marginal the software failed spectacularly in this document.
- With respect to mathematics and graphics the reading always fails severily; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This alone makes auto-tagging unsuitable for STEM documents.
+Auto-tagging using the Windows software gives worse results than the corresponding version on MacOS. This is a bit surprising, but it shows the general problem that auto-tagging is faced with: it has to interpret visual clues that by themselves allow for several interpretation and it is often not clear to the software if alignments (e.g., same baseline) indicate a reading order or if other aspects (e.g., size of spaces) should take precedence---on the marginal the software failed spectacularly in this document.
+ With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This alone makes auto-tagging unsuitable for STEM documents.
 
 
 
@@ -196,7 +196,7 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 When generating tagged PDF directly from LaTeX source there are two possibilities when the document contains math formulas:
 
 - Each formula can have a so called Associated File (AF) attached inside the PDF (that contains a MathML representation of the formula)
-- The MathML representation is directly embeded as structure elements in the PDF
+- The MathML representation is directly embedded as structure elements in the PDF
 
 Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on the consumer application (e.g., the reader) which is understood if PDF 2.0 is understood at all. We hope that the majority of the PDF readers soon support PDF 2.0, including both of above methods.
 
@@ -213,7 +213,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 
 ### Foxit/NVDA reading PDF with MathML AF
 
-The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speed generator.
+The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
  
 {% include youtube.html id="kyZMO1N96tw" width="medium" comment="t5-af foxit"%}
@@ -229,29 +229,23 @@ The sample document shown in the video was compiled with the above configuration
 
  - There is a strange pause when reading the verbatim text (to be investigated)
  - The display of verbatim code is read without the parentheses and curly brackets
- - Reading of hpyhenated words is incorrect (this is a Foxit Reader issue; to be fixed)
+ - Reading of hyphenated words is incorrect (this is a Foxit Reader issue; to be fixed)
 
 #### Summary
 
-The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are are no problems with complex material apart from code displays.
+The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material apart from code displays.
 
 The fact that code displays are read incompletely is a general problem of the speech software and unrelated to PDF, i.e., the same defects show up if code is displayed in HTML. We do, however, expect to ensure that LaTeX puts additional Aria guidance in the code displays so that punctuations and other symbols relevant to understanding code are not dropped by the speech software.
 
 
 
-## Tagging, using MathML structure elements
+### Tagging, using MathML structure elements
+
+To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
 {% include_relative t5-se.tex %}
 ```
-
-#### Observations
-
- - 
- - 
- - 
-
-#### Summary
 
 
 
@@ -261,13 +255,24 @@ The fact that code displays are read incompletely is a general problem of the sp
 
 #### Observations
 
- - 
- - 
- - 
+ - The normal text structures are all handled correctly
+ - The footnote is correctly identified and the footnote text is read in a suitable place
+ - In general, this reader announces the kind of link it encounters, e.g., footnote, enumitem, or figure (and its internal label, the latter is probably not so helpful)
+ - All mathematics are read correctly and can be understood
+ - Graphics are not dropped; instead their Alt text is read and the information is introduced with the word _"GRAPHIC"_
+
+#### Remaining issues
+
+ - Repeats links in TOC lines several times, e.g., _"LINK LINK LINK LINK 1 Introduction"_  (but in Acrobat?)
+ - A similar problem in other places, e.g., reference to bib entries
+ - The display of verbatim code is read without the parentheses and curly brackets
+
 
 #### Summary
 
+The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material apart from code displays.
 
+The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the reading software used. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), it is likely that some of this is configurable to user choices.
 
 ----
 
