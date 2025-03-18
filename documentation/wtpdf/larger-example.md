@@ -74,6 +74,7 @@ If you prefer a smaller demonstration file, that’s available.
 ### Document Text
 
 ```latex
+%!TeX norun
 {% include_relative t6.tex %}
 ```
 {: .norun :}
