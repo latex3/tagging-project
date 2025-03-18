@@ -295,21 +295,22 @@ LaTeX can automatically produce the necessary MathML from the source if the LuaT
 
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
-In line 6 the `latest` tagging code is loaded and in addition `verbatim-alt` (which handles the reading of verbatim code, which is still under development). Line 11 loads the main document source shown in section [Source](#untagged-source).
-
 ```latex
 {% include_relative t6-af.tex %}
 ```
+
+In line 6 the `latest` tagging code is loaded and in addition `verbatim-alt` (which handles the reading of verbatim code, which is still under development). Line 11 loads the main document source shown in section [Source](#untagged-source).
+
 
 ### Tagging, using MathML structure elements {#mathml-se}
 
 To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
-The differences to the configuration with AF files are line 5 (one can optionally use `a-4` instead of `a-4f`) and line 9.
 ```latex
 {% include_relative t6-se.tex %}
 ```
 
+The differences to the configuration with [AF files](#mathml-af) are in line 5 (one does not have to use `a-4f` but can use `a-4f`) and in line 9 (where the setup for MathML structure elements is specified).
 
 
 
