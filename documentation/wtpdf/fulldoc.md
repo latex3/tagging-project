@@ -10,8 +10,8 @@ runlatex.texts.metadata="";
 runlatex.texts["TeXLive.net"]="Generate PDF";
 runlatex.texts["Compiling PDF"]="Compiling PDF";
 runlatex.preincludes = {
- "pre1": {"pre0": "t5.tex"},
- "pre2": {"pre0": "t5.tex"}
+ "pre1": {"pre0": "t6.tex"},
+ "pre2": {"pre0": "t6.tex"}
  }
 </script>
 
@@ -26,7 +26,7 @@ runlatex.preincludes = {
 This is the source of the document whose output is used in the sample videos below.
 
 ```latex
-{% include_relative t5.tex %}
+{% include_relative t6.tex %}
 ```
 
 ###  Foxit/NVDA reading untagged PDF
@@ -208,7 +208,7 @@ LaTeX can automatically produce the necessary MathML from the source if the LuaT
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
-{% include_relative t5-af.tex %}
+{% include_relative t6-af.tex %}
 ```
 
 ### Foxit/NVDA reading PDF with MathML AF
@@ -244,7 +244,7 @@ The fact that code displays are read incompletely is a general problem of the sp
 To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
-{% include_relative t5-se.tex %}
+{% include_relative t6-se.tex %}
 ```
 
 
@@ -294,6 +294,7 @@ settings in the NVDA speech dictionary
 | bibTEX    | bib-tech    | off  | whole word | 
 | unordered | un-ordered  | off	 | whole word | 
 | TeX       | tech        | on   | whole word |
+| tugboat   |  tug-boat   | off  | Anywhere   |
 
 Foxit Reader used was version 2025.3.0.28197
 
