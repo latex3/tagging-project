@@ -1,9 +1,6 @@
 ---
 layout: "ngpdf"
 lang: "en"
-kramdown:
-    syntax_highlighter_opts:
-      disable: true
 ---
 
 <script>
@@ -16,6 +13,7 @@ runlatex.preincludes = {
  }
 </script>
 
+[Well Tagged PDF Video Examples](./)
 
 # Generating Well-Tagged PDF from LaTeX
 
