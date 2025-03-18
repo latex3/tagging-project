@@ -30,19 +30,19 @@ runlatex.preincludes = {
 * [Untagged PDF](#untagged)
   * [Read with Foxit/NVDA](#foxit-untagged)
   * [Read with Acrobat/NVDA](#acrobat-untagged)
-* [ChatGPT](#chatgpt)
-  * [ChatGPT3](#chatgpt3)
+* [ChatGPT interpretation](#chatgpt)
+  * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
 * [Autotagged](#autotagged)
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF from LaTeX](#latex-tag)
-  * [Configurations](#latex-configs)
+  * [Configuration options](#latex-configs)
     * [using MathML AF](#mathml-af)
     * [using MathML SE](#mathml-se)
-  * [MathML AF with Foxit/NVDA](#foxit-af)
-  * [MathML SE with Acrobat/NVDA](#acrobat-se)
+  * [Read MathML AF with Foxit/NVDA](#foxit-af)
+  * [Read MathML SE with Acrobat/NVDA](#acrobat-se)
 * [Settings](#settings)
 </nav>
 
@@ -184,7 +184,7 @@ Using ChatGPT4 a similar query produced a markdown document immediately displaye
 
 #### Summary
 
-ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surfac this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that ir "reads well" while at the same time presents corrupted information is a dangerous combination. 
+ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination. 
 
 
 
@@ -295,6 +295,8 @@ LaTeX can automatically produce the necessary MathML from the source if the LuaT
 
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
+In line 6 the `latest` tagging code is loaded and in addition `verbatim-alt` (which handles the reading of verbatim code, which is still under development). Line 11 loads the main document source shown in section [Source](#untagged-source).
+
 ```latex
 {% include_relative t6-af.tex %}
 ```
@@ -303,6 +305,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 
 To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
+The differences to the configuration with AF files are line 5 (one can optionally use `a-4` instead of `a-4f`) and line 9.
 ```latex
 {% include_relative t6-se.tex %}
 ```
@@ -353,7 +356,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 #### Remaining issues
 
- - Repeats links in TOC lines several times, e.g., _"LINK LINK LINK LINK 1 Introduction"_  (but in Acrobat?)
+ - Repeats links in TOC lines several times, e.g., _"LINK LINK LINK LINK 1 Introduction"_  (bug in Acrobat?)
  - A similar problem in other places, e.g., reference to bib entries
  - The display of verbatim code is read without the parentheses and curly brackets
 
