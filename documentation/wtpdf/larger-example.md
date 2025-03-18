@@ -1,6 +1,9 @@
 ---
 layout: "ngpdf"
 lang: "en"
+kramdown:
+    syntax_highlighter_opts:
+      disable: true
 ---
 
 <script>
@@ -8,8 +11,8 @@ function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.editorlines=120;
 runlatex.preincludes = {
- "pre1": {"pre0": "t6.tex"},
- "pre2": {"pre0": "t6.tex"}
+ "pre0": {"pre2": "t6.tex"},
+ "pre1": {"pre2": "t6.tex"}
  }
 </script>
 
@@ -69,6 +72,7 @@ If you prefer a smaller demonstration file, that’s available.
 ```
 
 ### Document Text
+
 ```latex
 {% include_relative t6.tex %}
 ```
