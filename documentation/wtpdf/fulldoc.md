@@ -30,17 +30,18 @@ runlatex.preincludes = {
 * [Untagged PDF](#reading-untagged-pdf)
   * [Foxit](#foxitnvda-reading-untagged-pdf)
   * [Acrobat](#acrobatnvda-reading-untagged-pdf)
-* [Autotagged](#foxitnvda-reading-untagged-pdf)
-  * [Autotagged Acrobat/MacOS](#)
-  * [Autotagged Acrobat/Windows](#)
-* [ChatGPT](#reading-documents-extracted-by-chatgpt)
+* [ChatGPT](#chatgpt)
   * [ChatGPT3](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
-* [Reading Tagged PDF with MathML AF](#)
-  * [Foxit](#foxit-af)
-* [Reading Tagged PDF with MathML SE](#)
-  * [Acrobat](#acrobat-se)
+* [Autotagged](#autotagged)
+  * [Autotagged Acrobat/MacOS](#auto-macos)
+  * [Autotagged Acrobat/Windows](#auto-windows)
+* [Tagged PDF from LaTeX](#latex-tag)
+  * [Reading Tagged PDF with MathML AF](#mathml-af)
+    * [Foxit](#foxit-af)
+  * [Reading Tagged PDF with MathML SE](#mathml-se)
+    * [Acrobat](#acrobat-se)
 * [Settings](#settings)
 </nav>
 
@@ -120,7 +121,7 @@ The untagged PDF is basically incomprehensible.
 The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
 
-## Reading documents extracted by ChatGPT
+## Reading documents extracted by ChatGPT {#chatgpt}
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 
@@ -214,8 +215,10 @@ Note here the document text has been extensively re-worded by ChatGPT.
  In many places important information in the original document is completely lost (e.g., the note stating that the table syntax is temporary, etc.).  None of the supporting cross-references to other places in the document are preserved (text containing them was thrown away) and all footnotes, marginals, and graphics in the document have been eliminated. The result clearly shows the unpredictability of the approach: there is no way for the consumers to understand that what is read to them is not what was written in the original.
 
 
+## Reading PDF Auto Tagged by Acrobat {#autotagged}
 
-###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
+###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version) {#auto-macos}
+
 
 This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -240,7 +243,7 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
 
 
-###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version)
+###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auoto-windows}
 
 This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -274,7 +277,7 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 
 
-## Tagged PDF generated directly from LaTeX
+## Tagged PDF generated directly from LaTeX {#latex-tag}
 
 When generating tagged PDF directly from LaTeX source there are two possibilities when the document contains math formulas:
 
@@ -286,7 +289,7 @@ Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on
 LaTeX can automatically produce the necessary MathML from the source if the LuaTeX engine is used. If pdfTeX is used as an engine only the AF method is supported and the data for the AF files have to be prepared in a separate step. How to do the latter is explained elsewhere.
 
 
-### Tagging, using associated files for math
+### Tagging, using associated files for math {#mathml-af}
 
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
@@ -322,7 +325,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 
 
-### Tagging, using MathML structure elements
+### Tagging, using MathML structure elements {#mathml-se}
 
 To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
