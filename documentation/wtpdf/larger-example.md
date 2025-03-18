@@ -4,6 +4,8 @@ lang: "en"
 ---
 
 <script>
+function generatepreamble(t,e) {return e.getValue();}
+runlatex.texts.metadata="";
 runlatex.editorlines=120;
 runlatex.preincludes = {
  "pre1": {"pre0": "t6.tex"},

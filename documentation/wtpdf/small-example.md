@@ -17,7 +17,7 @@ generate Tagged PDF on your own system you’ll need a recent
 distribution.
 
 To enable standards-conforming Tagged PDF output, simply add at the
-very beginning of the document, i.e., before `\documentclass, a
+very beginning of the document, i.e., before `\documentclass`, a
 `\DocumentMetadata` declaration. It takes one argument, a key-value
 list.
 
