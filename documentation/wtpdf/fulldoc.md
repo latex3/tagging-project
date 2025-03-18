@@ -177,7 +177,7 @@ Using ChatGPT4 a similar query produced a markdown document immediately displaye
  - Overall math a reading is understandable, but not all components are recognized, e.g., no reading of "mod" but _"M O D"_
  - The equation numbers are dropped (would be a problem if cross-referenced)
  - The inline graphics in section 3.4 is not shown and not read
- - The orginal table had 2 header rows and two data rows, The first header row spanning both columns was converted to normal text. While this works reasonably well for this table it alters the table data and would break more complex table structures
+ - The original table had 2 header rows and two data rows, The first header row spanning both columns was converted to normal text. While this works reasonably well for this table it alters the table data and would break more complex table structures
  - The graphic of the float is dropped and the caption is read as normal text
  - Minor rewrite of the Theorem caption
  - The display of verbatim code is read without the parentheses and curly brackets
@@ -285,7 +285,7 @@ When generating tagged PDF directly from LaTeX source there are two possibilitie
 - Each formula can have a so called Associated File (AF) attached inside the PDF (that contains a MathML representation of the formula)
 - The MathML representation is directly embedded as structure elements in the PDF
 
-Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on the consumer application (e.g., the reader) which is understood if PDF 2.0 is understood at all. We hope that the majority of the PDF readers soon support PDF 2.0, including both of above methods.
+Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on the consumer application (e.g., the reader) which is understood if PDF 2.0 is understood at all. We hope that the majority of the PDF readers soon support PDF 2.0, including both of the above methods.
 
 LaTeX can automatically produce the necessary MathML from the source if the LuaTeX engine is used. If pdfTeX is used as an engine only the AF method is supported and the data for the AF files have to be prepared in a separate step. How to do the latter is explained elsewhere.
 
@@ -330,7 +330,7 @@ The sample document shown in the video was compiled with the above configuration
 
 #### Remaining issues
 
- - Not all newlines are announcement in the verbatim text (bug in LaTeX code to handle that; to be fixed)
+ - Not all newlines are announced in the verbatim text (bug in LaTeX code to handle that; to be fixed)
  - Reading of hyphenated words is incorrect (this is a Foxit Reader issue; to be fixed)
 
 #### Summary
