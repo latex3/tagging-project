@@ -37,9 +37,9 @@ runlatex.preincludes = {
   * [ChatGPT3](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
-* [Reading Tagged PDF with MathML AF]
+* [Reading Tagged PDF with MathML AF](#)
   * [Foxit](#foxit-af)
-* [Reading Tagged PDF with MathML SE](#}
+* [Reading Tagged PDF with MathML SE](#)
   * [Acrobat](#acrobat-se)
 * [Settings](#settings)
 </nav>
