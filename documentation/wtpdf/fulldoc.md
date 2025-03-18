@@ -38,10 +38,11 @@ runlatex.preincludes = {
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF from LaTeX](#latex-tag)
-  * [Using MathML AF](#mathml-af)
-    * [Read with Foxit/NVDA](#foxit-af)
-  * [Using MathML SE](#mathml-se)
-    * [Read with Acrobat/NVDA](#acrobat-se)
+  * [Configurations](#latex-configs)
+    * [using MathML AF](#mathml-af)
+    * [using MathML SE](#mathml-se)
+  * [MathML AF with Foxit/NVDA](#foxit-af)
+  * [MathML SE with Acrobat/NVDA](#acrobat-se)
 * [Settings](#settings)
 </nav>
 
@@ -288,14 +289,26 @@ Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on
 
 LaTeX can automatically produce the necessary MathML from the source if the LuaTeX engine is used. If pdfTeX is used as an engine only the AF method is supported and the data for the AF files have to be prepared in a separate step. How to do the latter is explained elsewhere.
 
+### Configuration possibilities {#latex-configs}
 
-### Tagging, using associated files for math {#mathml-af}
+#### Tagging, using associated files for math {#mathml-af}
 
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
 {% include_relative t6-af.tex %}
 ```
+
+### Tagging, using MathML structure elements {#mathml-se}
+
+To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
+
+```latex
+{% include_relative t6-se.tex %}
+```
+
+
+
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 
@@ -323,15 +336,6 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 
 
-
-
-### Tagging, using MathML structure elements {#mathml-se}
-
-To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
-
-```latex
-{% include_relative t6-se.tex %}
-```
 
 
 
