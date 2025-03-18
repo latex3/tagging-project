@@ -229,8 +229,8 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
- 
-{% include youtube.html id="kyZMO1N96tw" width="medium" comment="t5-af foxit"%}
+
+{% include youtube.html id="SGKAwRxbO7w" width="medium" comment="t6-af foxit"%}
 
 #### Observations
 
