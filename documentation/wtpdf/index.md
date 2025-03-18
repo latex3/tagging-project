@@ -27,4 +27,8 @@ part the document in each case.
  * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
+----
+
+ * [Small Example](small-example)
+ * [Larger Example](larger-example)
 
