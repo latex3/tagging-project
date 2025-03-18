@@ -298,7 +298,11 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 ```latex
 {% include_relative t6-af.tex %}
 ```
-Line 2 specifies that the document language is English, line 3 sasy that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be complient with the PDF/A-4f standard. I has to be `f` because embedded associated files are used.  In line 6 the `latest` tagging code is loaded and in additionally `verbatim-alt` (which handles the reading of verbatim code---this is still under development and not yet integrated in `latest`). Line 9 directs the tagging code to use AF files for formulas. Finally, line 11 loads the main document source which is displayed in section [Source](#untagged-source) above.
+Line 2 specifies that the document language is English, line 3 sasy that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be complient with the PDF/A-4f standard. It has to be `a-4f` (not `a-4`) because embedded associated files are used.
+
+In line 6 the `latest` tagging code is loaded and in additionally `verbatim-alt` (which handles the reading of verbatim code---this is still under development and not yet integrated in `latest`). Line 9 then directs the tagging code to use AF files for formulas.
+
+Finally, line 11 loads the main document source which is displayed in section [Source](#untagged-source) above.
 
 
 ### Tagging, using MathML structure elements {#mathml-se}
