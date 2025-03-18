@@ -74,7 +74,7 @@ If you prefer a smaller demonstration file, that’s available.
 ### Document Text
 
 ```latex
-%!TeX norun
+%!TeX Use one of the above buttonsto generate Tagged PDF, suppress button here: none
 {% include_relative t6.tex %}
 ```
 {: .norun :}
