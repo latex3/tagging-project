@@ -94,7 +94,7 @@ The untagged PDF is basically incomprehensible.
 
 The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
-### Foxit reading GitHub display of markdown extracted by ChatGPT
+### Foxit reading GitHub display of markdown extracted by ChatGPT 3
 
 #### Notes
 
@@ -123,7 +123,7 @@ The supplied markdown was not edited other than changing `\(` and `\[` to `$` an
 
 #### Summary
 
-ChatGPT produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by
+ChatGPT 3 produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by
  - not handling graphics and tables correctly,
  - dropping relevant footnotes and marginal notes,
  - losing equation labels, and
@@ -131,20 +131,62 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
 
 The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
+
+
 ### Foxit Reading ChatGPT 4 display
 
 Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source,
 
-
 {% include youtube.html id="oByx8Q1ypM4" width="medium" comment="t5-chatgpt4-chatgpt foxit"%}
+
+#### Observations
+
+ - ChatGPT 4 is not only trying to produce an accessible document but also rewriting the text
+ - Headings lose their numbers (would be a problem if cross-referenced)
+ - The footnote is turned into an inline note (which works well)
+ - Overall math a reading is understandable, but not all components are recognized, e.g., no reading of "mod" but _"M O D"_
+ - The equation numbers are dropped (would be a problem if cross-referenced)
+ - The inline graphics in section 3.4 is not shown and not read
+ - The orginal table had 2 header rows and two data rows, The first header row spanning both columns was converted to normal text. While this works reasonably well for this table it alters the table data and would break more complex table structures
+ - The graphic of the float is dropped and the caption is read as normal text
+ - Minor rewrite of the Theorem caption
+ - The display of verbatim code is read without the parentheses and curly brackets
+
+#### Summary
+
+ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surfac this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that ir "reads well" while at the same time presents corrupted information is a dangerous combination. 
+
+
+
 
 ### Foxit Reading GitHub display of ChatGPT 4 markdown
 
 ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
 Note here the document text has been extensively re-worded by ChatGPT.
 
-
 {% include youtube.html id="G7g8AqQdlSQ" width="medium" comment="t5-chatgpt4-github foxit"%}
+
+#### Observations
+
+ - The markdown returned from ChatGPT 4 is heavy reworded and shortened
+ - The equation numbers are dropped (would be a problem if cross-referenced)
+ - The introductory text to the set of equations has been altered
+ - A comma on the first like of equations has been invented (but not on the second line)
+ - The last item of the inner list as been rewritten incorrectly (new meaning is incorrect)
+ - The text following the lists has been completely dropped
+ - The sentence on small figures and tables has been dropped; the sentence on floats as been altered (no longer mentioning floats) and marginal has been dropped
+ - The graphic of the float has been dropped and the caption is read as normal text
+ - The theorem caption and text have been rewritten
+ - The text explaining the requirement for verbatim code blocks has been dropped
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - The last two sections have been merged and shortened to just a bibliography list
+ - The bibliography list items have been reordered and are not labeled (i.e., can't be referenced from  within the document)
+
+#### Summary
+
+ In many places important information in the original document is completely lost (e.g., the note stating that the table syntax is temporary, etc.).  None of the supporting cross-references to other places in the document are preserved (text containing them was thrown away) and all footnotes, marginals, and graphics in the document have been eliminated. The result clearly shows the unpredictability of the approach: there is no way for the consumers to understand that what is read to them is not what was written in the original.
+
+
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
 
@@ -238,18 +280,18 @@ The sample document shown in the video was compiled with the above configuration
  - The footnote is correctly identified and the footnote text is read in a suitable place 
  - All mathematics are read correctly and can be understood
  - Graphics are not dropped; instead their Alt text is read
+ - Punctuations, symbols, and newlines are announced in verbatim text
 
 #### Remaining issues
 
- - There is a strange pause when reading the verbatim text (to be investigated)
- - The display of verbatim code is read without the parentheses and curly brackets
+ - Not all newlines are announcement in the verbatim text (bug in LaTeX code to handle that; to be fixed)
  - Reading of hyphenated words is incorrect (this is a Foxit Reader issue; to be fixed)
 
 #### Summary
 
-The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material apart from code displays.
+The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
-The fact that code displays are read incompletely is a general problem of the speech software and unrelated to PDF, i.e., the same defects show up if code is displayed in HTML. We do, however, expect to ensure that LaTeX puts additional Aria guidance in the code displays so that punctuations and other symbols relevant to understanding code are not dropped by the speech software.
+
 
 
 
@@ -284,9 +326,9 @@ To produce a tagged PDF  with LaTeX, where the math formulas are represented as 
 
 #### Summary
 
-The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material apart from code displays.
+The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
-The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the reading software used. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), it is likely that some of this is configurable to user choices.
+The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
 
 ----
 
