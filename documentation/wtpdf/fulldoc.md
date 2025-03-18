@@ -28,8 +28,8 @@ runlatex.preincludes = {
 
 * [Source](#untagged-source)
 * [Untagged PDF](#untagged)
-  * [Foxit](#foxit-untagged)
-  * [Acrobat](#acrobat-untagged)
+  * [Read with Foxit/NVDA](#foxit-untagged)
+  * [Read with Acrobat/NVDA](#acrobat-untagged)
 * [ChatGPT](#chatgpt)
   * [ChatGPT3](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
@@ -38,10 +38,10 @@ runlatex.preincludes = {
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF from LaTeX](#latex-tag)
-  * [Reading Tagged PDF with MathML AF](#mathml-af)
-    * [Foxit](#foxit-af)
-  * [Reading Tagged PDF with MathML SE](#mathml-se)
-    * [Acrobat](#acrobat-se)
+  * [Using MathML AF](#mathml-af)
+    * [Read with Foxit/NVDA](#foxit-af)
+  * [Using MathML SE](#mathml-se)
+    * [Read with Acrobat/NVDA](#acrobat-se)
 * [Settings](#settings)
 </nav>
 
