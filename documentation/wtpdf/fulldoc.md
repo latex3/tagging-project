@@ -131,6 +131,20 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
 
 The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
+### Foxit Reading ChatGPT 4 display
+
+Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source,
+
+
+{% include youtube.html id="oByx8Q1ypM4" width="medium" comment="t5-chatgpt4-chatgpt foxit"%}
+
+### Foxit Reading GitHub display of ChatGPT 4 markdown
+
+ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
+Note here the document text has been extensively re-worded by ChatGPT.
+
+
+{% include youtube.html id="G7g8AqQdlSQ" width="medium" comment="t5-chatgpt4-github foxit"%}
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version)
 
