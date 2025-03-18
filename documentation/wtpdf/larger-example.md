@@ -68,7 +68,7 @@ If you prefer a smaller demonstration file, that’s available.
 ### SE
 
 ```latex
-{% include_relative t6-af.tex %}
+{% include_relative t6-se.tex %}
 ```
 
 ### Document Text
