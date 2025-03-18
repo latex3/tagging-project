@@ -21,6 +21,29 @@ runlatex.preincludes = {
 
 # Full Document Sources
 
+
+<nav id="toc" markdown=1>
+
+## Table of Contents
+
+* [Source](#A-latex-document-with-no-tagging)
+* [Untagged PDF](reading-untagged-pdf)
+  * [Foxit](#foxitnvda-reading-untagged-pdf)
+  * [Acrobat](#acrobatnvda-reading-untagged-pdf)
+* [Autotagged](#foxitnvda-reading-untagged-pdf)
+  * [Autotagged Acrobat/MacOS](#)
+  * [Autotagged Acrobat/Windows](#)
+* [ChatGPT](#reading-documents-extracted-by-chatgpt)
+  * [ChatGPT3](#chatgpt3)
+  * [ChatGPT4 HTML](#chatgpt4html)
+  * [ChatGPT4 Markdown](#chatgpt4markdown)
+* [Reading Tagged PDF with MathML AF]
+*    [Foxit](#foxit-af)
+* [Reading Tagged PDF with MathML SE]
+*    [Acrobat](#acrobat-se)
+* [Settings](#settings)
+</nav>
+
 ## A LaTeX document with no tagging
 
 This is the source of the document whose output is used in the sample videos below.
@@ -28,6 +51,8 @@ This is the source of the document whose output is used in the sample videos bel
 ```latex
 {% include_relative t6.tex %}
 ```
+
+## Reading Untagged PDF
 
 ###  Foxit/NVDA reading untagged PDF
 
@@ -94,7 +119,9 @@ The untagged PDF is basically incomprehensible.
 
 The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
-### Foxit reading GitHub display of markdown extracted by ChatGPT
+## Reading documents extracted by ChatGPT
+
+### Foxit reading GitHub display of markdown extracted by ChatGPT {#chatgpt3}
 
 #### Notes
 
@@ -131,14 +158,14 @@ ChatGPT produces a fairly reasonable result for a larger portion of the document
 
 The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
-### Foxit Reading ChatGPT 4 display
+### Foxit Reading ChatGPT 4 display {#chatgpt4html}
 
 Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source,
 
 
 {% include youtube.html id="oByx8Q1ypM4" width="medium" comment="t5-chatgpt4-chatgpt foxit"%}
 
-### Foxit Reading GitHub display of ChatGPT 4 markdown
+### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
 
 ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
 Note here the document text has been extensively re-worded by ChatGPT.
@@ -290,7 +317,7 @@ The use of structure elements instead of AF files give identical results for mat
 
 ----
 
-## Software and Settings
+## Software and Settings {#settings}
 
 All the readings were generated on Microsoft Windows, using
 a test release of NVDA 2025.1 with Windows OneCore voice "Zira".
