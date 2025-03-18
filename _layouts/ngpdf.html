@@ -11,7 +11,9 @@
     <style>
       header img {display:block; margin: 1em auto}
       .hide {display: none;}
-      #toc {
+
+      @media screen and (min-width: 90em) {
+	  #toc {
 	  position: fixed;
 	  left: .5em;
 	  top: 5em;
@@ -19,9 +21,9 @@
 	  padding: 1em;
 	  z-index:-1;
       }
+      
+       #toc  ul {margin-left:.5em;padding-left:0em;}
       }
-       #toc  > ul {margin-left:.5em;padding-left:0em;}
-       #toc ul ul {margin-left:1em;padding-left:0em;}
     </style>
   </head>
   <body style="background-color: #F5F1E8">
