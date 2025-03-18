@@ -243,7 +243,7 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
 For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
 
 
-###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auoto-windows}
+###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auto-windows}
 
 This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -297,7 +297,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 {% include_relative t6-af.tex %}
 ```
 
-### Foxit/NVDA reading PDF with MathML AF
+### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
@@ -335,7 +335,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are represented as 
 
 
 
-### Acrobat Reader/NVDA reading PDF with MathML SE
+### Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
 
 {% include youtube.html id="AwxQ0zYYKqw" width="medium" comment="t5-se acrobat"%}
 
