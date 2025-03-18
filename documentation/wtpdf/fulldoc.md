@@ -26,10 +26,10 @@ runlatex.preincludes = {
 
 ## Table of Contents
 
-* [Source](#A-latex-document-with-no-tagging)
-* [Untagged PDF](#reading-untagged-pdf)
-  * [Foxit](#foxitnvda-reading-untagged-pdf)
-  * [Acrobat](#acrobatnvda-reading-untagged-pdf)
+* [Source](#untagged-source)
+* [Untagged PDF](#untagged)
+  * [Foxit](#foxit-untagged)
+  * [Acrobat](#acrobat-untagged)
 * [ChatGPT](#chatgpt)
   * [ChatGPT3](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
@@ -45,7 +45,7 @@ runlatex.preincludes = {
 * [Settings](#settings)
 </nav>
 
-## A LaTeX document with no tagging
+## A LaTeX document with no tagging {#untagged-source}
 
 This is the source of the document whose output is used in the sample videos below.
 
@@ -53,9 +53,9 @@ This is the source of the document whose output is used in the sample videos bel
 {% include_relative t6.tex %}
 ```
 
-## Reading Untagged PDF
+## Reading Untagged PDF {#untagged}
 
-###  Foxit/NVDA reading untagged PDF
+###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
 
 {% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
 
@@ -93,7 +93,7 @@ It is very difficult to find all issues if you are looking at the text in parall
 The untagged PDF is basically incomprehensible.
 
 
-### Acrobat/NVDA reading untagged PDF
+### Acrobat/NVDA reading untagged PDF {#acrobat-untagged}
 
 {% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
 
