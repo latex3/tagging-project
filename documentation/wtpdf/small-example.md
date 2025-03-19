@@ -14,7 +14,7 @@ runlatex.editorlines=120;
 ## A small demonstration file
 
 This page allows you to create a demonstration PDF from LaTeX. To
-generate Tagged PDF on your own system you’ll need a recent
+generate Tagged PDF on your own system you’ll need a recent LaTeX
 distribution.
 
 To enable standards-conforming Tagged PDF output, simply add at the
@@ -23,8 +23,9 @@ very beginning of the document, i.e., before `\documentclass`, a
 list.
 
 The first four keys in the document metadata declaration below set
-necessary document metadata, including language, PDF version and the
-ISO-standardized subset of PDF to which the document should comply.
+necessary document metadata, including main  document language, PDF version and the
+ISO-standardized subset(s) of PDF to which the document should comply with.
+The final `testphase`key is temporarily needed while the tagging support is still under development.
 
 ## Demonstration
 
@@ -42,6 +43,7 @@ display, a bibliography, a generated cross reference and citations,
 ```latex
 % Using the \DocumentMetadata command results in a tagged and accessible PDF file.
 % Use ‘pdfversion’ and ‘pdfstandard’ keys to select the output file type.
+
 \DocumentMetadata{
   lang        = en,
   pdfversion  = 2.0,  % or 1.7 if desired pdfstandard = ua-1
@@ -55,6 +57,7 @@ display, a bibliography, a generated cross reference and citations,
 % of this feature requires the PDF file to declare conformance with PDF/A-4f rather than PDF/A-4.
 % LaTeX will automatically switch to declare PDF/A-4f if Associated Files are used when the
 % document declares pdfstandard = a-4.
+
 \tagpdfsetup{math/setup=mathml-SE}
 
 \documentclass{article}
@@ -109,4 +112,4 @@ intended just to run small examples in order to show how to use LaTeX
 to generate tagged PDF. The submitted TeX source is deleted after the
 PDF is generated. The generated PDF is deleted after one hour.
 
-To generate Tagged PDF on your own system you’ll need a recent distribution.
+To generate Tagged PDF on your own system you’ll need a recent LaTeX distribution.
