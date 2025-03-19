@@ -57,17 +57,18 @@ Please keep your example relatively small to avoid overburdening the free servic
 If you prefer a smaller demonstration file, that’s available.
 
 
-### AF
+### Generate a PDF that represents MathML via structure elements
+
+```latex
+{% include_relative t6-se.tex %}
+```
+
+###  Generate a PDF that includes MathML in embedded and associated files
 
 ```latex
 {% include_relative t6-af.tex %}
 ```
 
-### SE
-
-```latex
-{% include_relative t6-se.tex %}
-```
 
 ### Document Text
 
@@ -83,12 +84,12 @@ If you prefer a smaller demonstration file, that’s available.
 
 Your demonstration PDF will, by default, be generated via a standard TeXLive 2025 `lualatex-dev`.
 
-As provided, the options used in the demonstration code will result in
-MathML tags in the output PDF’s tag tree. If you remove the
-configuration line indicated in the comments, LaTeX will instead
-associate each math expression in the PDF with two embedded and
-associated MathML files, one containing the TeX source, and one
-containing the MathML equivalent.
+Two configurations are provided, they input the same document but differently configure
+the way MathML is encoded. The first uses
+MathML tags in the output PDF’s tag tree. In the second, LaTeX will instead
+associate each math expression in the PDF with an embedded and
+associated MathML file. One could edit this example to add `,math/tex/AF` to the `\tagpdf`
+command, and then in addition a file containing the TeX source would be associated with each formula.
 
 The “Generate tagged PDF” button runs (Lua)LaTeX at
 [texlive.net](https://texlive.net) (see [texlive.net help](https://davidcarlisle.github.io/latexcgi/)). Once the
