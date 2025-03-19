@@ -4,18 +4,18 @@ layout: default
 extrahead: youtube-head
 ---
 
-# Screen Reading Examples (DRAFT)
+# Generating Well-Tagged PDF from LaTeX Examples
 
 
 Examples demonstrating generating Well-Tagged PDF from LaTeX.
 
 Firstly a small example is provided.
 
-A more realistic example showing variuous structures common in STEM publications
+A more realistic example showing various structures common in STEM publications
 is provded in the second page.
 
 The later pages go in to detail on the effect of various options, all using
-this second example document,
+this second example document.
 
 All examples use the test release of NVDA 2025 (enabling interfacing
 to MathML readings), along with public versions of MathCat, Foxit and
@@ -40,4 +40,4 @@ part the document in each case.
  * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
-
+----
