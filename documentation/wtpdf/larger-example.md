@@ -54,7 +54,7 @@ in a separate step.
 
 ## Demonstration
 
-Simply click the “Generate Tagged PDF” button below the following example code, or edit the [example document](example-doc) before generating a PDF.
+Simply click the “Generate Tagged PDF” button below the following example code, or edit the [example document](#example-doc) before generating a PDF.
 Please keep your example relatively small to avoid overburdening the free service we’re providing here.
 If you prefer a smaller demonstration file, [that’s available](small-example).
 
@@ -72,7 +72,7 @@ If you prefer a smaller demonstration file, [that’s available](small-example).
 ```
 
 
-### Document Text (`t6.tex` used above) {example-doc}}
+### Document Text (`t6.tex` used above) {#example-doc}
 
 You can edit the document in the box below and then use one of the compile buttons above to see the effects of your changes.
 
