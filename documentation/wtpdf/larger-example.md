@@ -22,7 +22,8 @@ runlatex.preincludes = {
 This page allows you to create a demonstration PDF from a complex
 two-column LaTeX document including a table of contents, mathematical
 formulae and theorem, graphics, marginal notes, footnotes, a code
-display, a bibliography, a generated cross reference and citations.
+display, a bibliography, and generated cross references and citations.
+To generate Tagged PDF on your own system you’ll need a recent LaTeX distribution.
 
 To enable standards-conforming Tagged PDF output, simply add at the
 very beginning of the document, i.e., before `\documentclass`, a
@@ -30,8 +31,9 @@ very beginning of the document, i.e., before `\documentclass`, a
 list.
 
 The first four keys in the document metadata declaration below set
-necessary document metadata, including language, PDF version and the
-ISO-standardized subset of PDF to which the document should comply.
+necessary document metadata, including main  document language, PDF version and the
+ISO-standardized subset(s) of PDF to which the document should comply with.
+The final `testphase`key is temporarily needed while the tagging support is still under development.
 
 ## Structure elements or Associated Files
 
@@ -52,9 +54,9 @@ in a separate step.
 
 ## Demonstration
 
-Simply click the “Generate Tagged PDF” button below the following example code, or edit the example before generating a PDF.
+Simply click the “Generate Tagged PDF” button below the following example code, or edit the [example document](example-doc) before generating a PDF.
 Please keep your example relatively small to avoid overburdening the free service we’re providing here.
-If you prefer a smaller demonstration file, that’s available.
+If you prefer a smaller demonstration file, [that’s available](small-example).
 
 
 ### Generate a PDF that represents MathML via structure elements
@@ -70,7 +72,9 @@ If you prefer a smaller demonstration file, that’s available.
 ```
 
 
-### Document Text
+### Document Text (`t6.tex` used above) {example-doc}}
+
+You can edit the document in the box below and then use one of the compile buttons above to see the effects of your changes.
 
 <pre class="norun" markdown="1">
 
@@ -106,7 +110,7 @@ intended just to run small examples in order to show how to use LaTeX
 to generate tagged PDF. The submitted TeX source is deleted after the
 PDF is generated. The generated PDF is deleted after one hour.
 
-To generate Tagged PDF on your own system you’ll need a recent distribution.
+To generate Tagged PDF on your own system you’ll need a recent LaTeX distribution.
 
 
 ## Full Document Videos
