@@ -223,7 +223,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
 
 This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
+{% include youtube.html id="3U0HRT1xaqo" width="medium" comment="t5-autotagged MacOS foxit"%}
 
 #### Observations
 
@@ -348,7 +348,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 ### Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
 
-{% include youtube.html id="AwxQ0zYYKqw" width="medium" comment="t5-se acrobat"%}
+{% include youtube.html id="V2kfks4BceM" width="medium" comment="t6-se acrobat"%}
 
 #### Observations
 
