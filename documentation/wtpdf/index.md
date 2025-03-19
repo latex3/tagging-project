@@ -4,12 +4,12 @@ layout: default
 extrahead: youtube-head
 ---
 
-# Generating Well-Tagged PDF from LaTeX Examples
+# Generating Well-Tagged PDF from LaTeX
 
 
 Examples demonstrating generating Well-Tagged PDF from LaTeX.
 
-Firstly a small example is provided.
+Firstly a small example demonstration is provided.
 
 A more realistic example showing various structures common in STEM publications
 is provded in the second page.
@@ -30,8 +30,8 @@ part the document in each case.
 
 ----
 
- * [Small Example](small-example)
- * [Larger Example](larger-example)
+ * [Small Demonstration](small-example)
+ * [More Realistic Demonstration](larger-example)
  
 ----
 
