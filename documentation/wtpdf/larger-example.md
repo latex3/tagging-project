@@ -6,7 +6,7 @@ lang: "en"
 <script>
 function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
-runlatex.editorlines=135;
+//runlatex.editorlines=135;
 runlatex.preincludes = {
  "pre0": {"pre2": "t6.tex"},
  "pre1": {"pre2": "t6.tex"}
