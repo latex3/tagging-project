@@ -8,8 +8,8 @@ function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.editorlines=120;
 runlatex.preincludes = {
- "pre0": {"pre2": "t6.tex"},
- "pre1": {"pre2": "t6.tex"}
+ "pre0": {"pre2": "untagged-doc.tex"},
+ "pre1": {"pre2": "untagged-doc.tex"}
  }
 </script>
 
@@ -72,7 +72,7 @@ If you prefer a smaller demonstration file, [that’s available](small-example).
 ```
 
 
-### Document Text (`t6.tex` used above) {#example-doc}
+### Document Text (`untagged-doc.tex` used above) {#example-doc}
 
 You can edit the document in the box below and then use one of the compile buttons above to see the effects of your changes.
 
