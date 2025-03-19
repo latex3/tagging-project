@@ -223,7 +223,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
 
 This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="3U0HRT1xaqo" width="medium" comment="t5-autotagged MacOS foxit"%}
+{% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
 #### Observations
 
@@ -248,7 +248,7 @@ For normal text structures the auto-tagging heuristics makes reasonable guesses 
 
 This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="OZPOekam3y8" width="medium" comment="t5-autotagged UF foxit"%}
+{% include youtube.html id="3U0HRT1xaqo" width="medium" comment="t5-autotagged UF foxit"%}
 
 #### Observations
 
