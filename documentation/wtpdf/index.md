@@ -7,12 +7,18 @@ extrahead: youtube-head
 # Screen Reading Examples (DRAFT)
 
 
-The "Larger Example" on the [WTPDF from LaTeX page](https://latex3.github.io/tagging-project/documentation/wtpdf-from-latex#a-larger-example)
-shows a small typical LaTeX article set in two columns with tables and figures.
+Examples demonstrating generating Well-Tagged PDF from LaTeX.
 
-Here we show the effect of tagging on generated speech. All examples
-use the test release of NVDA 2025 (enabling interfacing to MathML
-readings), along with public versions of MathCat,  Foxit and 
+Firstly a small example is provided.
+
+A more realistic example showing variuous structures common in STEM publications
+is provded in the second page.
+
+The later pages go in to detail on the effect of various options, all using
+this second example document,
+
+All examples use the test release of NVDA 2025 (enabling interfacing
+to MathML readings), along with public versions of MathCat, Foxit and
 Acrobat Reader on Windows 11.
 
 To present something of the experience to users not familiar with screen
@@ -22,13 +28,16 @@ recordings of the screen reader, with a fixed video frame showing the
 part the document in each case.
 
 
+----
+
+ * [Small Example](small-example)
+ * [Larger Example](larger-example)
+ 
+----
+
  * [Tables Of Contents](toc)
  * [Mathematics](math)
  * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
-----
-
- * [Small Example](small-example)
- * [Larger Example](larger-example)
 
