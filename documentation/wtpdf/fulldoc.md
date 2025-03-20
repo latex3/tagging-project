@@ -321,8 +321,7 @@ The differences to the configuration with [AF files](#mathml-af) are in line 5 (
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
-
-{% include youtube.html id="SGKAwRxbO7w" width="medium" comment="t6-af foxit"%}
+{% include youtube.html id="IEJ16QI9UhE" width="medium" comment="t6v-af foxit"%}
 
 #### Observations
 
@@ -382,16 +381,18 @@ The NVDA addon MathCAT 0.6.8-rc.9 is responsible for reading MathML.
 Pronunciation of some technical words was improved by using the following
 settings in the NVDA speech dictionary 
 
-| Pattern   | Replacement | case | Type       |
-|----       |----         |----  |----        | 
-| LaTeX	    | lay-tech	  | on   | whole word |
-| alignat   | align-at    | on   | whole word |
-| flalign   | f-l-align   | on   | whole word |
-| notag	    | no-tag      | on   | whole word | 
-| bibTEX    | bib-tech    | off  | whole word | 
-| unordered | un-ordered  | off	 | whole word | 
-| TeX       | tech        | on   | whole word |
-| tugboat   |  tug-boat   | off  | Anywhere   |
+| Comment          | Pattern   | Replacement | case | Type       |
+|----              |----       |----         |----  |----        | 
+|                  | LaTeX     | lay-tech    | on   | whole word |
+|                  | alignat   | align-at    | on   | whole word |
+|                  | flalign   | f-l-align   | on   | whole word |
+|                  | notag     | no-tag      | on   | whole word | 
+|                  | bibTEX    | bib-tech    | off  | whole word | 
+|                  | unordered | un-ordered  | off  | whole word | 
+|                  | TeX       | tech        | on   | whole word |
+|                  | tugboat   |  tug-boat   | off  | Anywhere   |
+| Hyphenation help | ­         |             | off  | Anywhere   | 
+| Hyphenation help | cluding   | clueding    | off  | whole word | 
 
 Foxit Reader used was version 2025.3.0.28197
 
