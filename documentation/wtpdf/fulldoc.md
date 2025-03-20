@@ -38,7 +38,7 @@ runlatex.preincludes = {
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF from LaTeX](#latex-tag)
-  * [Configuration options](#latex-configs)
+  * [Configuration possibilities](#latex-configs)
     * [using MathML AF](#mathml-af)
     * [using MathML SE](#mathml-se)
   * [Read MathML AF with Foxit/NVDA](#foxit-af)
@@ -54,6 +54,8 @@ This is the source of the document whose output is used in the sample videos bel
 {% include_relative t6.tex %}
 ```
 
+If you use the `Generate PDF` button an untagged PDF is produced as used in the first examples below.
+
 ## Reading Untagged PDF {#untagged}
 
 ###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
@@ -62,13 +64,13 @@ This is the source of the document whose output is used in the sample videos bel
 
 #### Observations
 
-It is very difficult to find all issues if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is  a (possibly incomplete) list of issues:
+It is very difficult to find all issues with this document if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is a (possibly incomplete) list of issues:
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction"_
  - TOC is read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
- - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
+ - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
  - The heading _"2 Document structures"_ is interpreted as a list with one item
  - Subheadings are read as _"Two One Mathematics"_ not as "2.1 Mathematics"
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
@@ -298,7 +300,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 ```latex
 {% include_relative t6-af.tex %}
 ```
-Line 2 specifies that the document language is English, line 3 sasy that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be complient with the PDF/A-4f standard. It has to be `a-4f` (not `a-4`) because embedded associated files are used.
+Line 2 specifies that the document language is English, line 3 says that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be compliant with the PDF/A-4f standard. It has to be `a-4f` (not `a-4`) because embedded associated files are used.
 
 In line 6 the `latest` tagging code is loaded and additionally the `verbatim-alt` test module (which handles the reading of verbatim code---this is still under development and not yet integrated in `latest`). Line 9 then directs the tagging code to use AF files for formulas.
 
@@ -333,8 +335,8 @@ The sample document shown in the video was compiled with the above configuration
 
 #### Remaining issues
 
- - Not all newlines are announced in the verbatim text (bug in LaTeX code to handle that; to be fixed)
- - Reading of hyphenated words is incorrect (this is a Foxit Reader issue; to be fixed)
+ - Handling of verbatim is still under development with improvements possible
+ - Foxit passes on softhyphens which are not ignored by NVDA (resulting in distorted reading). Workaround applied which improves the situation but a general fix would be better
 
 #### Summary
 
@@ -379,20 +381,22 @@ a test release of NVDA 2025.1 with Windows OneCore voice "Zira".
 The NVDA addon MathCAT 0.6.8-rc.9 is responsible for reading MathML.
 
 Pronunciation of some technical words was improved by using the following
-settings in the NVDA speech dictionary 
+settings in the NVDA speech dictionary:
 
-| Comment          | Pattern   | Replacement | case | Type       |
-|----              |----       |----         |----  |----        | 
-|                  | LaTeX     | lay-tech    | on   | whole word |
-|                  | alignat   | align-at    | on   | whole word |
-|                  | flalign   | f-l-align   | on   | whole word |
-|                  | notag     | no-tag      | on   | whole word | 
-|                  | bibTEX    | bib-tech    | off  | whole word | 
-|                  | unordered | un-ordered  | off  | whole word | 
-|                  | TeX       | tech        | on   | whole word |
-|                  | tugboat   |  tug-boat   | off  | Anywhere   |
-| Hyphenation help | ­         |             | off  | Anywhere   | 
-| Hyphenation help | cluding   | clueding    | off  | whole word | 
+| Comment            | Pattern   | Replacement | case | Type       |
+|----                |----       |----         |----  |----        | 
+|                    | LaTeX     | lay-tech    | on   | whole word |
+|                    | alignat   | align-at    | on   | whole word |
+|                    | flalign   | f-l-align   | on   | whole word |
+|                    | notag     | no-tag      | on   | whole word | 
+|                    | bibTEX    | bib-tech    | off  | whole word | 
+|                    | unordered | un-ordered  | off  | whole word | 
+|                    | TeX       | tech        | on   | whole word |
+|                    | tugboat   |  tug-boat   | off  | Anywhere   |
+| Ignore softhyphens | ­         |             | off  | Anywhere   | 
+| Hyphenation help   | cluding   | clueding    | off  | whole word |
+
+The _Ignore softhyphens_ row contains an invisible softhyphen character in the second column replaced by "nothing". This improves the reading of hyphenated words in the Foxit/NVDA workflow.
 
 Foxit Reader used was version 2025.3.0.28197
 
