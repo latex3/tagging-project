@@ -29,6 +29,9 @@
 	  #toc {font-size:75%;}
       }
     </style>
+{% if page.extrahead %}
+  {% include {{ page.extrahead }}.html %}
+{% endif %}
   </head>
   <body style="background-color: #F5F1E8">
     <header>
