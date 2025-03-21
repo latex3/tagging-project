@@ -306,7 +306,7 @@ In line 6 the `latest` tagging code is loaded and additionally the `verbatim-alt
 
 Finally, line 11 loads the main document source which is displayed in section [Source](#untagged-source) above.
 
-**Note:** if you intend to use this configuration locally with your own documents then please remove the `verbatim-alt` as it is not yet plublicly available.
+**Note:** if you intend to use this configuration locally with your own documents then please remove the `verbatim-alt` as it is not yet publicly available.
 
 
 ### Tagging, using MathML structure elements {#mathml-se}
