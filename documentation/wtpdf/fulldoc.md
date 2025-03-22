@@ -202,7 +202,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
  - The markdown returned from ChatGPT 4 is heavy reworded and shortened
  - The equation numbers are dropped (would be a problem if cross-referenced)
  - The introductory text to the set of equations has been altered
- - A comma on the first like of equations has been invented (but not on the second line)
+ - A comma on the first line of equations has been invented (but not on the second line)
  - The last item of the inner list as been rewritten incorrectly (new meaning is incorrect)
  - The text following the lists has been completely dropped
  - The sentence on small figures and tables has been dropped; the sentence on floats as been altered (no longer mentioning floats) and marginal has been dropped
@@ -317,7 +317,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are represented as 
 {% include_relative t6-se.tex %}
 ```
 
-The differences to the configuration with [AF files](#mathml-af) are in line 5 (one does not have to use `a-4f` but can use `a-4f`) and in line 9 (where the setup for MathML structure elements is specified).
+The differences to the configuration with [AF files](#mathml-af) are in line 5 (using `a-4` rather than `a-4f`) and in line 9 (where the setup for MathML structure elements is specified).
 
 
 
