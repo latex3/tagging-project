@@ -46,9 +46,9 @@ display, a bibliography, a generated cross reference and citations,
 
 \DocumentMetadata{
   lang          = en,
-  pdfversion    = 2.0,  % or 1.7 if desired pdfstandard = ua-1
-  pdfstandard   = ua-2, % or ua-1 if pdfversion = 1.7
-  pdfstandard   = a-4,  % or a-4f (see below)
+  pdfversion    = 2.0,  % or 1.7 if desired pdfstandard = UA-1
+  pdfstandard   = UA-2, % or UA-1 if pdfversion = 1.7
+  pdfstandard   = A-4,  % or A-4f (see below)
   tagging-setup = {math/setup=mathml-SE} % Or mathml-AF (see below)
 }
 
@@ -57,7 +57,7 @@ display, a bibliography, a generated cross reference and citations,
 % MathML Associated Files, as the use  of this feature requires the PDF file to
 % declare conformance with PDF/A-4f rather than PDF/A-4.
 % LaTeX will automatically switch to declare PDF/A-4f if Associated Files are used when the
-% document declares pdfstandard = a-4.
+% document declares pdfstandard = A-4.
 
 
 \documentclass{article}
