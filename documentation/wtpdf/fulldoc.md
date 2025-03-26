@@ -300,7 +300,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are handled using A
 ```latex
 {% include_relative stem-article-2col-af.tex %}
 ```
-Line 2 specifies that the document language is English, line 3 says that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be compliant with the PDF/A-4f standard. It has to be `a-4f` (not `a-4`) because embedded associated files are used.
+Line 2 specifies that the document language is English, line 3 says that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be compliant with the PDF/A-4f standard. It has to be `A-4f` (not `A-4`) because embedded associated files are used.
 
 Line 6 then directs the tagging code to use AF files for formulas, and loads the `verbatim-alt` test module (which improves the reading of verbatim code---this is still under development and not yet fully integrated). 
 
@@ -315,7 +315,7 @@ To produce a tagged PDF  with LaTeX, where the math formulas are represented as 
 {% include_relative stem-article-2col-se.tex %}
 ```
 
-The differences to the configuration with [AF files](#mathml-af) are in line 5 (using `a-4` rather than `a-4f`) and in line 6 (where the setup for MathML structure elements is specified).
+The differences to the configuration with [AF files](#mathml-af) are in line 5 (using `A-4` rather than `A-4f`) and in line 6 (where the setup for MathML structure elements is specified).
 
 
 
