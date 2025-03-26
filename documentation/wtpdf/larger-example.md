@@ -33,7 +33,7 @@ list.
 The first four keys in the document metadata declaration below set
 necessary document metadata, including main  document language, PDF version and the
 ISO-standardized subset(s) of PDF to which the document should comply with.
-The final `testphase`key is temporarily needed while the tagging support is still under development.
+The final `tagging-setup` key controls the details of the tagging used.
 
 ## Structure elements or Associated Files
 
@@ -92,8 +92,8 @@ Two configurations are provided, they input the same document but differently co
 the way MathML is encoded. The first uses
 MathML tags in the output PDF’s tag tree. In the second, LaTeX will instead
 associate each math expression in the PDF with an embedded and
-associated MathML file. One could edit this example to add `,math/tex/AF` to the `\tagpdf`
-command, and then in addition a file containing the TeX source would be associated with each formula.
+associated MathML file. One could edit this example to add `math/setup={mathml-AF,tex-AF}` to the `tagging-setup`
+key, and then in addition a file containing the TeX source would be associated with each formula.
 
 The “Generate tagged PDF” button runs (Lua)LaTeX at
 [texlive.net](https://texlive.net) (see [texlive.net help](https://davidcarlisle.github.io/latexcgi/)). Once the
