@@ -10,8 +10,8 @@ runlatex.texts.metadata="";
 runlatex.texts["TeXLive.net"]="Generate PDF";
 runlatex.texts["Compiling PDF"]="Compiling PDF";
 runlatex.preincludes = {
- "pre1": {"pre0": "t6.tex"},
- "pre2": {"pre0": "t6.tex"}
+ "pre1": {"pre0": "stem-article-2col.tex"},
+ "pre2": {"pre0": "stem-article-2col.tex"}
  }
 </script>
 
@@ -51,7 +51,7 @@ runlatex.preincludes = {
 This is the source of the document whose output is used in the sample videos below.
 
 ```latex
-{% include_relative t6.tex %}
+{% include_relative stem-article-2col.tex %}
 ```
 
 If you use the `Generate PDF` button an untagged PDF is produced as used in the first examples below.
@@ -298,7 +298,7 @@ LaTeX can automatically produce the necessary MathML from the source if the LuaT
 To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
-{% include_relative t6-af.tex %}
+{% include_relative stem-article-2col-af.tex %}
 ```
 Line 2 specifies that the document language is English, line 3 says that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be compliant with the PDF/A-4f standard. It has to be `a-4f` (not `a-4`) because embedded associated files are used.
 
@@ -312,7 +312,7 @@ Finally, line 9 loads the main document source which is displayed in section [So
 To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
 
 ```latex
-{% include_relative t6-se.tex %}
+{% include_relative stem-article-2col-se.tex %}
 ```
 
 The differences to the configuration with [AF files](#mathml-af) are in line 5 (using `a-4` rather than `a-4f`) and in line 6 (where the setup for MathML structure elements is specified).

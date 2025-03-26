@@ -8,8 +8,8 @@ function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.editorlines=45;
 runlatex.preincludes = {
- "pre0": {"pre2": "t6.tex"},
- "pre1": {"pre2": "t6.tex"}
+ "pre0": {"pre2": "stem-article-2col.tex"},
+ "pre1": {"pre2": "stem-article-2col.tex"}
  }
 </script>
 
@@ -62,23 +62,23 @@ If you prefer a smaller demonstration file, [that’s available](small-example).
 ### Generate a PDF that represents MathML via structure elements
 
 ```latex
-{% include_relative t6-se.tex %}
+{% include_relative stem-article-2col-se.tex %}
 ```
 
 ###  Generate a PDF that includes MathML in embedded and associated files
 
 ```latex
-{% include_relative t6-af.tex %}
+{% include_relative stem-article-2col-af.tex %}
 ```
 
 
-### Document Text (`t6.tex` as used above) {#example-doc}
+### Document Text (`stem-article-2col.tex` as used above) {#example-doc}
 
 You can edit the document in the box below and then use one of the compile buttons above to see the effects of your changes.
 
 <pre class="norun" markdown="1">
 
-{% include_relative t6.tex %}
+{% include_relative stem-article-2col.tex %}
 
 </pre>
 
