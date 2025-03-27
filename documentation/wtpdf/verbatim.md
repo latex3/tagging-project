@@ -155,8 +155,8 @@ In addition, the original code file could be offered as an Embedded Associated f
 the PDF readers's "Attached Files" menu., allowing the user to extract the code and process it in a code editor
 or other environemnt more directly suited to handling code in an accessible way.
 
-Some experiences coders may reasonably argue that for such code blocks
-it is not too important if the document based reading misses details,
+Some experienced programmers may reasonably argue that for such code blocks
+it is not too important if the document-based reading misses details,
 as it is only used to skim over the code and all real use would be
 achieved by moving the code to a code editor.
 However, not all readers of documents that have such block use code editors, or are familiar enough
@@ -167,7 +167,7 @@ In addition, documents often have many small inline code fragments such as
 `\LaTeX` or `this_variable_name` or `class.method`. In most cases it
 would not be appropriate to offer such fragments as files that may be
 extracted, and the user may have far less contextual information to
-tell then to switch reading style. In the absence of a mechanism to have the
-reader automatically increase the verbosity of symbol pronunciation in such
+tell them to switch reading style. In the absence of a mechanism to have the
+screen reader automatically increase the verbosity of symbol pronunciation in such
 code blocks, one of the methods discussed above to individually tag each symbol
-would seem prefereable.
+would seem preferable.
