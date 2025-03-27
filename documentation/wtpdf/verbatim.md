@@ -144,7 +144,7 @@ Each line of the display is then encoded as, for example:
 
 
 
-## Inline Code (LaTeX `\verb`) {#inline}
+## Inline Code (LaTeX `\verb`, HTML `<code>`) {#inline}
 
 The above examples all show an example of a displayed code block (LaTeX `verbatim` environment).
 It is usually clear to a reader from the context that such a region is being added, and for example
@@ -164,7 +164,7 @@ with the programming language that not announcing syntax characters would be acc
 
 
 In addition, documents often have many small inline code fragments such as
-`\LaTeX` or `this_variable_name` or `class.method`. In most cases it
+`\LaTeX` or `<h2>` or `this_variable_name` or `class.method`. In most cases it
 would not be appropriate to offer such fragments as files that may be
 extracted, and the user may have far less contextual information to
 tell them to switch reading style. In the absence of a mechanism to have the
