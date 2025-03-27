@@ -115,6 +115,12 @@ way as the current `/Alt tagging.
 * Verbosity and words used customisable by the reader.
 * In verbose modes the entering and leaving of mathematics will be announced
 * line breaks are not announced.
+* Braille is compact but using math (nemeth) not text style for symbols.
+
+  <pre>
+  main ( ) {
+  &#x00A0; &#x280D; &#x2801; &#x280A; &#x281D; &#x00A0; &#x2837; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x283E; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x2828; &#x2837; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
+  </pre>
 
 
 ### Using a MathML table
