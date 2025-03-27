@@ -37,6 +37,7 @@ part the document in each case.
 
  * [Tables Of Contents](toc)
  * [Mathematics](math)
+ * [Verbatim](verbatim)
  * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
