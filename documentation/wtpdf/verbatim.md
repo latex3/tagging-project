@@ -82,22 +82,22 @@ In comparison to the previous section navigation by character with the code usin
   separately. The Braille is similar: each character is spelled out
   (which is more or less unusable in a one or two line Braille display.
 
-  * The Braile for the first line in the original source code (using default nvda Braille settings)
-
-```
-main( ) {
-⠍ ⠁ ⠊ ⠝ ⠐ ⠣   ⠐ ⠜   ⠸ ⠣
-```
-
-Becomes the two lines
-
-```
-new line  main open paren   close p
-&#x00A0; &#x281D; &#x2811; &#x283A; &#x00A0; &#x2807; &#x280A; &#x281D; &#x2811; &#x00A0; &#x00A0; &#x280D; &#x2801; &#x280A; &#x281D; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2809; &#x2807; &#x2815; &#x280E; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
-
-paren   open brace  
-&#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x2803; &#x2817; &#x2801; &#x2809; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
-```
+* The Braile for the first line in the original source code (using default nvda Braille settings)
+   
+   ```
+   main( ) {
+   ⠍ ⠁ ⠊ ⠝ ⠐ ⠣   ⠐ ⠜   ⠸ ⠣
+   ```
+   
+   Becomes the two lines
+   
+   <pre>
+   new line  main open paren   close p
+   &#x00A0; &#x281D; &#x2811; &#x283A; &#x00A0; &#x2807; &#x280A; &#x281D; &#x2811; &#x00A0; &#x00A0; &#x280D; &#x2801; &#x280A; &#x281D; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2809; &#x2807; &#x2815; &#x280E; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
+   
+   paren   open brace  
+   &#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x2803; &#x2817; &#x2801; &#x2809; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
+   </pre>
 
 {% include youtube.html id="UkIT2je-sj8" width="medium" comment="vebatim alt by character"%}
 
