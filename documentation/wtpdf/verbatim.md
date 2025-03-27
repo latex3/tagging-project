@@ -27,7 +27,7 @@ used for natural language text.
 ### Reading with symbol pronunciation set to "All"
 
 Screen readers have customisable settings for punctuation symbols,
-With NVDA, `<nvda>p` cycles bewteen `none`, `some` (the default), `many` and `all`
+With NVDA, `<nvda>p` cycles between `none`, `some` (the default), `many` and `all`.
 
 With `all` the reading is
 
@@ -35,13 +35,13 @@ With `all` the reading is
 
 * Symbols read (using text settings)
 * Verbosity and words used customisable by the reader.
-* linebreaks not announced.
+* Linebreaks are not announced.
 * Requires interaction by the user to enable/disable this. Note the
   end of sentence full stop (period) is announced `dot` with this
-  setting. Reading the entire document with every comma and punctuation symbol announced is not really an option.
+  setting. Reading the entire document with every comma and punctuation symbol announced is not usually desirable.
 
 It would be good if screen readers had a setting to automatically
-switch to thi smode in `<pre>` (html) or `/Code` (pdf) contexts, but
+switch to this mode in `<pre>` (html) or `/Code` (pdf) contexts, but
 they do not currently.
 
 
@@ -51,11 +51,11 @@ PDF has two main attributes to control the text used by AT, `/Alt` and `/ActualT
 The latter would affect other uses, such as cut and paste, preventing the common
 requirement to  copy code out of the document. The mechansim used in the
 [Example document](larger-example) on this site is for LaTeX to annotate each symbol
-with an Alt, and to add an empty `/Span` with an `/Alt` to announce each new line.
+with an `Alt` attribute, and to add an empty `/Span` with an `/Alt` to announce each new line.
 
 {% include youtube.html id="imQzEHpdtT4" width="medium" comment="verbatim alt"%}
 
-* Good Reading and cut and paste
+* Good Reading and cut and paste.
 * Character names localised to the document language (not to that of the listener).
 * Braille is severely impacted, the braille for the character names rather than the characters is generated.
 * Navigating with a screen reader by character is similarly impacted.
@@ -74,13 +74,13 @@ The navigation of just the first line of the verbatim example is shown here.
 
 In comparison to the previous section navigation by character with the code using `/Alt.
 
-### Reading the verbatin-alt code by character
+### Reading the verbatim-alt code by character
 
-* Here AT is only passed the Alt text and so for example` the single
+* Here AT is only passed the Alt text and so for example the single
   character `{` is reported as the ten characters `open brace` and
   each requires a separate right arrow and is announced
-  separately. the Braille is similar each character is spelled out
-  (which is more or less unusable in one or two line Braille display.
+  separately. The Braille is similar: each character is spelled out
+  (which is more or less unusable in a one or two line Braille display.
 
 
 {% include youtube.html id="UkIT2je-sj8" width="medium" comment="vebatim alt by character"%}
@@ -88,8 +88,8 @@ In comparison to the previous section navigation by character with the code usin
 
 ### Using MathML for each symbol
 
-It is possible to use Math, for example tag `{` as `<math><mo>{</mo></math>`
-(This woul dnot require any explicit tagging in the document, it could be added in the same
+It is possible to use MathML, for example tag `{` as `<math><mo>{</mo></math>`
+(This would not require any explicit tagging in the document, it could be added in the same
 way as the current `/Alt tagging.
 
 {% include youtube.html id="rUwvv6qWI7A" width="medium" comment="verbatim mo"%}
@@ -102,7 +102,9 @@ way as the current `/Alt tagging.
 
 ### Using a MathML table
 
-An alternative way of using MathMl would b eto use an `mtable` with a `:lines` intent so taht itisn't announced as a matriix but simply "L3 lines; line 1 ..., line 2 ..."
+An alternative way of using MathML would be to use an `mtable` with a
+`:lines` intent so that it isn't announced as a matrix, but simply "3
+lines; line 1 ..., line 2 ..."
 
 Each line of the display is then encoded as, for example:
 
@@ -112,7 +114,7 @@ Each line of the display is then encoded as, for example:
 
 {% include youtube.html id="lhBjP2ZqUIY" width="medium" comment="verbatim mtable"%}
 
-* Each line is announced
+* Each line is announced.
 * Only one "spurious" math is announced in verbose modes.
 
 
