@@ -4,36 +4,25 @@ layout: default
 extrahead: youtube-head
 ---
 
-# Generating Well-Tagged PDF from LaTeX
+# Accessible STEM documents
+## Generating Well-Tagged PDF from LaTeX
 
+STEM publishing requires precision; the content's visual appearance must precisely and reliably reflect the author's intention. Historically, this concern was limited simply to the content's visual appearance. To ensure equal access to users with disabilities, today it's vital to ensure that similar precision is applied to alternative representations and usage of the content. 
 
-Examples demonstrating generating Well-Tagged PDF from LaTeX.
+As an addtional benefit, well-tagged PDF is optimized for reuse by software capable of directly leveraging the author's intent as expressed via PDF's tag tree.
 
-Firstly a small example demonstration is provided.
+These pages demonstrate LaTeX to accessible PDF conversion:
 
-A more realistic example showing various structures common in STEM publications
-is provded in the second page.
+ * [A very simple demonstration](small-example)
+ * [A more realistic demonstration](larger-example)
 
-The later pages go in to detail on the effect of various options, all using
-this second example document.
+## Can automation produce acceptable results? 
 
-All examples use the test release of NVDA 2025 (enabling interfacing
-to MathML readings), along with public versions of MathCat, Foxit and
-Acrobat Reader on Windows 11.
+Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
 
-To present something of the experience to users not familiar with screen
-readers, we have provided video clips of readings of the full document
-and of specific sections. Although a video format is used they are all
-recordings of the screen reader, with a fixed video frame showing the
-part the document in each case.
+There are many ways to try to make PDF documents accessible. To highlight the importance of accuracy in representing the author's intent we recorded a screen-reader reading the results from various attempts by software to understand the "realistic" demonstration PDF. In each case we provide an analysis of the results.
 
-
-----
-
- * [Small Demonstration](small-example)
- * [More Realistic Demonstration](larger-example)
- 
-----
+You can listen to the [full document](fulldoc) or focus on:
 
  * [Tables Of Contents](toc)
  * [Mathematics](math)
@@ -41,4 +30,4 @@ part the document in each case.
  * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
-----
+All examples were on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe.
