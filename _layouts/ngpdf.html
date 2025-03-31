@@ -13,20 +13,25 @@
       .hide {display: none;}
 
       @media screen and (min-width: 80em) {
-	  #toc {
-	  position: fixed;
-	  left: .5em;
-	  top: 5em;
-	  background-color: #EEE;
-	  padding: 1em;
-	  z-index:-1;
+      #toc {
+      position: fixed;
+      left: .5em;
+      top: 5em;
+      background-color: #EEE;
+      padding: 1em;
+      z-index:-1;
       }
       
-       #toc  ul {margin-left:.5em;padding-left:0em;}
+      #toc  ul {margin-left:.5em;padding-left:0em;}
       }
-
-      @media screen and (max-width: 90em) {
-	  #toc {font-size:75%;}
+      @media screen and (min-width:90em) and (max-width: 97em) {
+      #toc {font-size:90%;}
+      }
+      @media screen and (min-width:85em) and (max-width: 90em) {
+      #toc {font-size:75%;}
+      }  
+      @media screen and (min-width:80em) and (max-width: 85em) {
+      #toc {font-size:70%;padding:0}
       }
     </style>
 {% if page.extrahead %}

@@ -26,6 +26,8 @@ You can listen to the [full document](fulldoc) or focus on:
 
  * [Tables Of Contents](toc)
  * [Mathematics](math)
+ * [Verbatim](verbatim)
+ * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
 All examples were on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe.

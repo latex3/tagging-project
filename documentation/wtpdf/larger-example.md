@@ -8,8 +8,8 @@ function generatepreamble(t,e) {return e.getValue();}
 runlatex.texts.metadata="";
 runlatex.editorlines=45;
 runlatex.preincludes = {
- "pre0": {"pre2": "t6.tex"},
- "pre1": {"pre2": "t6.tex"}
+ "pre0": {"pre2": "stem-article-2col.tex"},
+ "pre1": {"pre2": "stem-article-2col.tex"}
  }
 </script>
 
@@ -33,7 +33,7 @@ list.
 The first four keys in the document metadata declaration below set
 necessary document metadata, including main  document language, PDF version and the
 ISO-standardized subset(s) of PDF to which the document should comply with.
-The final `testphase`key is temporarily needed while the tagging support is still under development.
+The final `tagging-setup` key controls the details of the tagging used.
 
 ## Structure elements or Associated Files
 
@@ -62,23 +62,23 @@ If you prefer a smaller demonstration file, [that’s available](small-example).
 ### Generate a PDF that represents MathML via structure elements
 
 ```latex
-{% include_relative t6-se.tex %}
+{% include_relative stem-article-2col-se.tex %}
 ```
 
 ###  Generate a PDF that includes MathML in embedded and associated files
 
 ```latex
-{% include_relative t6-af.tex %}
+{% include_relative stem-article-2col-af.tex %}
 ```
 
 
-### Document Text (`t6.tex` as used above) {#example-doc}
+### Document Text (`stem-article-2col.tex` as used above) {#example-doc}
 
 You can edit the document in the box below and then use one of the compile buttons above to see the effects of your changes.
 
 <pre class="norun" markdown="1">
 
-{% include_relative t6.tex %}
+{% include_relative stem-article-2col.tex %}
 
 </pre>
 
@@ -92,8 +92,8 @@ Two configurations are provided, they input the same document but differently co
 the way MathML is encoded. The first uses
 MathML tags in the output PDF’s tag tree. In the second, LaTeX will instead
 associate each math expression in the PDF with an embedded and
-associated MathML file. One could edit this example to add `,math/tex/AF` to the `\tagpdf`
-command, and then in addition a file containing the TeX source would be associated with each formula.
+associated MathML file. One could edit this example to add `math/setup={mathml-AF,tex-AF}` to the `tagging-setup`
+key, and then in addition a file containing the TeX source would be associated with each formula.
 
 The “Generate tagged PDF” button runs (Lua)LaTeX at
 [texlive.net](https://texlive.net) (see [texlive.net help](https://davidcarlisle.github.io/latexcgi/)). Once the
