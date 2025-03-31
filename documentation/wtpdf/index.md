@@ -9,7 +9,7 @@ extrahead: youtube-head
 
 STEM publishing requires precision; the content's visual appearance must precisely and reliably reflect the author's intention. Historically, this concern was limited simply to the content's visual appearance. To ensure equal access to users with disabilities, today it's vital to ensure that similar precision is applied to alternative representations and usage of the content. 
 
-As an addtional benefit, well-tagged PDF is optimized for reuse by software capable of directly leveraging the author's intent as expressed via PDF's tag tree.
+As an additional benefit, well-tagged PDF is optimized for reuse by software capable of directly leveraging the author's intent as expressed via PDF's tag tree.
 
 These pages demonstrate LaTeX to accessible PDF conversion:
 
@@ -27,7 +27,6 @@ You can listen to the [full document](fulldoc) or focus on:
  * [Tables Of Contents](toc)
  * [Mathematics](math)
  * [Verbatim](verbatim)
- * [Full Document](fulldoc)
  * [TeX and PDF files](sources)
 
 All examples were on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe.
