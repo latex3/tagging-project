@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{filemod}
+\begin{filecontents}[force]{trial1}
+  content Trial1 % rewritten always!
+\end{filecontents}
+\begin{filecontents}{trial2}
+  content Trial2 % written once!
+\end{filecontents}
+
+\title{filemod tagging test}
+
+\begin{document}
+Date: \filemodprintdate{trial1.tex}
+
+Time: \filemodprinttime{trial1.tex}
+
+trial1.tex: \filemodprint{trial1}
+
+trial2.tex: \filemodprint{trial2}
+
+Oldest: \input{\filemodoldest{trial1}{trial2}}
+
+Newest: \input{\filemodnewest{trial1}{trial2}}
+\end{document}

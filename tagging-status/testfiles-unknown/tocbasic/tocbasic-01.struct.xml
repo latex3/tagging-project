@@ -1,0 +1,120 @@
+<Document xmlns="http://iso.org/pdf2/ssn"
+   id="ID.002"
+  >
+ <Sect xmlns="http://iso.org/pdf2/ssn"
+    id="ID.005"
+   >
+  <section xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.006"
+     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+     Layout:TextAlign="Justify"
+     rolemaps-to="H1"
+    >
+   <?MarkedContent page="1" ?>Contents
+  </section>
+  <TOC xmlns="http://iso.org/pdf/ssn"
+     id="ID.007"
+     title="toc"
+    >
+   <TOCI xmlns="http://iso.org/pdf/ssn"
+      id="ID.008"
+      title="Section heading"
+     >
+     <?References objects="1" ?>
+    <Lbl xmlns="http://iso.org/pdf2/ssn"
+       id="ID.009"
+      >
+     <?MarkedContent page="1" ?>1
+    </Lbl>
+    <?MarkedContent page="1" ?>Section heading1
+   </TOCI>
+   <TOC xmlns="http://iso.org/pdf/ssn"
+      id="ID.010"
+     >
+    <TOCI xmlns="http://iso.org/pdf/ssn"
+       id="ID.011"
+       title="Subsection heading"
+      >
+      <?References objects="2" ?>
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
+        id="ID.012"
+       >
+     </Lbl>
+     <?MarkedContent page="1" ?>1.1Subsection heading............................1
+    </TOCI>
+    <TOC xmlns="http://iso.org/pdf/ssn"
+       id="ID.013"
+      >
+     <TOCI xmlns="http://iso.org/pdf/ssn"
+        id="ID.014"
+        title="Subsubsection heading"
+       >
+       <?References objects="3" ?>
+      <Reference xmlns="http://iso.org/pdf/ssn"
+         id="ID.015"
+        >
+       <Lbl xmlns="http://iso.org/pdf2/ssn"
+          id="ID.016"
+         >
+        <?MarkedContent page="1" ?>1.1.1
+       </Lbl>
+       <?MarkedContent page="1" ?>Subsubsection heading
+       <?MarkedContent page="1" ?>1
+      </Reference>
+     </TOCI>
+    </TOC>
+   </TOC>
+  </TOC>
+ </Sect>
+ <Sect xmlns="http://iso.org/pdf2/ssn"
+    id="ID.017"
+   >
+  <section xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.018"
+     rolemaps-to="H1"
+    >
+   <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.019"
+      rolemaps-to="Span"
+      referenced-as="1"
+     >
+    <?MarkedContent page="1" ?>1 
+   </section-number>
+   <?MarkedContent page="1" ?>Section heading
+  </section>
+  <Sect xmlns="http://iso.org/pdf2/ssn"
+     id="ID.020"
+    >
+   <subsection xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.021"
+      rolemaps-to="H2"
+     >
+    <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.022"
+       rolemaps-to="Span"
+       referenced-as="2"
+      >
+     <?MarkedContent page="1" ?>1.1 
+    </section-number>
+    <?MarkedContent page="1" ?>Subsection heading
+   </subsection>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.023"
+     >
+    <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.024"
+       rolemaps-to="H3"
+      >
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.025"
+        rolemaps-to="Span"
+        referenced-as="3"
+       >
+      <?MarkedContent page="1" ?>1.1.1 
+     </section-number>
+     <?MarkedContent page="1" ?>Subsubsection heading
+    </subsubsection>
+   </Sect>
+  </Sect>
+ </Sect>
+</Document>

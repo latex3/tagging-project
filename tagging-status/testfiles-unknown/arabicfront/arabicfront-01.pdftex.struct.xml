@@ -1,0 +1,161 @@
+<Document xmlns="http://iso.org/pdf2/ssn"
+   id="ID.002"
+  >
+ <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    id="ID.005"
+    rolemaps-to="Part"
+   >
+  <Title xmlns="http://iso.org/pdf2/ssn"
+     id="ID.006"
+    >
+   <text xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.007"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Center"
+      rolemaps-to="P"
+     >
+    <?MarkedContent page="1" ?>arabicfront tagging test
+   </text>
+  </Title>
+  <text xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.008"
+     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+     Layout:TextAlign="Center"
+     rolemaps-to="P"
+    >
+   <?MarkedContent page="1" ?>Some author
+  </text>
+  <text xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.009"
+     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+     Layout:TextAlign="Center"
+     rolemaps-to="P"
+    >
+   <?MarkedContent page="1" ?>May 20, 2016
+  </text>
+ </text-unit>
+ <Sect xmlns="http://iso.org/pdf2/ssn"
+    id="ID.010"
+   >
+  <chapter xmlns="https://www.latex-project.org/ns/book"
+     id="ID.011"
+     title="\contentsname \@mkboth {\MakeUppercase \contentsname }{\MakeUppercase \contentsname }"
+     rolemaps-to="H1"
+    >
+   <NonStruct xmlns="http://iso.org/pdf2/ssn"
+      id="ID.012"
+     >
+    <Span xmlns="http://iso.org/pdf2/ssn"
+       id="ID.013"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Start"
+      >
+     <?MarkedContent page="3" ?>Contents
+    </Span>
+   </NonStruct>
+  </chapter>
+  <TOC xmlns="http://iso.org/pdf/ssn"
+     id="ID.014"
+     title="toc"
+    >
+   <TOCI xmlns="http://iso.org/pdf/ssn"
+      id="ID.015"
+      title="Some chapter"
+     >
+     <?References objects="1" ?>
+    <Reference xmlns="http://iso.org/pdf/ssn"
+       id="ID.016"
+      >
+     <?MarkedContent page="3" ?>
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
+        id="ID.017"
+       >
+      <?MarkedContent page="3" ?>1
+     </Lbl>
+     <?MarkedContent page="3" ?>Some chapter
+     <?MarkedContent page="3" ?>5
+    </Reference>
+   </TOCI>
+   <TOCI xmlns="http://iso.org/pdf/ssn"
+      id="ID.018"
+      title="Some end chapter"
+     >
+     <?References objects="2" ?>
+    <Reference xmlns="http://iso.org/pdf/ssn"
+       id="ID.019"
+      >
+     <?MarkedContent page="3" ?>Some end chapter
+     <?MarkedContent page="3" ?>7
+    </Reference>
+   </TOCI>
+  </TOC>
+ </Sect>
+ <Sect xmlns="http://iso.org/pdf2/ssn"
+    id="ID.020"
+   >
+  <chapter xmlns="https://www.latex-project.org/ns/book"
+     id="ID.021"
+     title="Some chapter"
+     rolemaps-to="H1"
+     referenced-as="1"
+    >
+   <NonStruct xmlns="http://iso.org/pdf2/ssn"
+      id="ID.022"
+     >
+    <Span xmlns="http://iso.org/pdf2/ssn"
+       id="ID.023"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Start"
+      >
+     <?MarkedContent page="5" ?>Chapter 1
+    </Span>
+   </NonStruct>
+   <NonStruct xmlns="http://iso.org/pdf2/ssn"
+      id="ID.024"
+     >
+    <Span xmlns="http://iso.org/pdf2/ssn"
+       id="ID.025"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Start"
+      >
+     <?MarkedContent page="5" ?>Some chapter
+    </Span>
+   </NonStruct>
+  </chapter>
+  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.026"
+     rolemaps-to="Part"
+    >
+   <text xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.027"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="P"
+     >
+    <?MarkedContent page="5" ?>text
+   </text>
+  </text-unit>
+ </Sect>
+ <Sect xmlns="http://iso.org/pdf2/ssn"
+    id="ID.028"
+   >
+  <chapter xmlns="https://www.latex-project.org/ns/book"
+     id="ID.029"
+     title="Some end chapter"
+     rolemaps-to="H1"
+     referenced-as="2"
+    >
+   <NonStruct xmlns="http://iso.org/pdf2/ssn"
+      id="ID.030"
+     >
+    <Span xmlns="http://iso.org/pdf2/ssn"
+       id="ID.031"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Start"
+      >
+     <?MarkedContent page="7" ?>Some end chapter
+    </Span>
+   </NonStruct>
+  </chapter>
+ </Sect>
+</Document>

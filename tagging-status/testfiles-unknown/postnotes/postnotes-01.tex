@@ -1,0 +1,57 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{1000}
+\ExplSyntaxOff
+\DocumentMetadata{
+  tagging=on,
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  % alternatively:
+  % pdfversion=1.7,
+  % pdfstandard=ua-1,
+  lang=en,
+}
+
+\documentclass{article}
+
+% This file focuses on the document elements which are actually being tagged
+% by the support provided by the package: the notes themselves, the marks,
+% cross-references (both LaTeX and PDF ones), and some special cases.
+\usepackage{postnotes}
+\postnotesetup{multiple}
+
+\usepackage{zref-user,zref-hyperref}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\title{Example file for postnotes PDF tagging support}
+
+\begin{document}
+
+\section{Section 1}
+
+\postnote[label=en:mark:1,zlabel=zen:mark:1]{%
+  \label{en:text:1}\zlabel{zen:text:1}1}
+
+\postnoteref{en:text:1}\par
+\postnotezref{zen:text:1}\par
+\postnoteref{en:mark:1}\par
+\postnotezref{zen:mark:1}
+
+\postnote[label=en:mark:2,zlabel=zen:mark:2]{%
+  \label{en:text:2}\zlabel{zen:text:2}2}
+
+\postnoteref{en:text:2}\par
+\postnotezref{zen:text:2}\par
+\postnoteref{en:mark:2}\par
+\postnotezref{zen:mark:2}
+
+% A nomark note is tagged as a NonStruct element, but gets all references.
+\postnote[nomark]{\label{en:text:3}3}
+\postnoteref{en:text:3}
+
+% The multisep is tagged as an artifact.
+\postnote{4}\postnote{5}
+
+\printpostnotes
+
+\end{document}
