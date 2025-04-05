@@ -107,28 +107,14 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \listfiles
+
 \DocumentMetadata{
  lang=en,
  pdfversion=2.0,
  pdfstandard=ua-2,
- pdfstandard=a-4f,
- testphase=
-   {
-    phase-III, %lists,footnotes,sectioning,
-               %toc,marginpar,bibliography,floats,
-               %graphics ...
-    math,  
-    table, %tabular, tabularx, longtable
-    title  %maketitle
-   }
- }
-\tagpdfsetup{
- math/mathml/structelem,
- math/mathml/luamml=false,
- math/mathml/sources=,
- math/alt/use=false,
- math/tex/AF=false
- }
+ pdfstandard=a-4,
+ tagging-setup={math/setup=mathml-SE}
+}
 
 \documentclass[12pt]{book}[2005/09/16]
 
