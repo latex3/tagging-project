@@ -1,0 +1,47 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+
+\usepackage{aliascnt}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+
+% compare with
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+
+\providecommand{\theoremautorefname}{Theorem}
+\providecommand{\lemmaautorefname}{Lemma}
+
+\begin{document}
+
+\begin{theorem}\label{thm}
+Some text
+\end{theorem}
+
+\begin{lemma}\label{lem}
+Some more text
+\end{lemma}
+
+\begin{theorem}
+Some text
+\end{theorem}
+
+\begin{lemma}
+Some more text
+\end{lemma}
+
+\autoref{thm}
+
+\autoref{lem}
+
+\end{document}
