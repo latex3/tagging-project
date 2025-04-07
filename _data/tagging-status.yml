@@ -338,13 +338,14 @@
 
 - name: aliascnt
   type: package
-  status: unknown
+  status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [229]
+  comments: "Actual function is not affected but one of its main uses, creating
+            sibling theorems, does not work with redefined `\\newtheorem`."
+  tests: true
+  updated: 2025-04-06
 
 - name: aligned-overset
   type: package
@@ -10675,7 +10676,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  issues:
+  issues: [229]
   tests: true
   comments: "Numbering with sibling key is wrong."
   updated: 2024-08-08
