@@ -4,7 +4,7 @@ layout: default
 extrahead: youtube-head
 ---
 
-[Well Tagged PDF Video Examples](./)
+[Accessible STEM documents](./)
 
 ----
 

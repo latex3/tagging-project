@@ -15,7 +15,7 @@ runlatex.preincludes = {
  }
 </script>
 
-[Well Tagged PDF Video Examples](./)
+[Accessible STEM documents](./)
 
 ----
 
