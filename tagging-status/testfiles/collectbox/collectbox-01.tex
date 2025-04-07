@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+\usepackage{collectbox}
+
+\newsavebox\mybox
+
+\newcommand*{\foobar}{%
+  \collectboxcheckenv{foobar}%
+  \collectbox*{\textit}%
+  }
+
+\begin{document}
+
+\collectbox{\textbf{\BOXCONTENT}}{Stuff}
+
+\collectbox*{\textbf}{Stuff}
+
+\collectbox[ABC]{\textbf{\BOXCONTENT}}[DEF]{Stuff}
+
+\collectboxto{\mybox}{XYZ}{More stuff}
+
+\usebox\mybox
+
+\foobar{Blub}
+
+\begin{foobar}
+Blub blub
+\end{foobar}
+
+\end{document}

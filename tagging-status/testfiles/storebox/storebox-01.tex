@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+\usepackage{storebox}
+\usepackage{luatex85}
+
+\newstorebox{\mybox}
+\begin{document}
+
+\storebox{\mybox}{\verb+Supports verbatim #$\empty+}
+
+\usestorebox{\mybox}
+\usestorebox{\mybox}
+
+\storebox\mybox\bgroup
+Can also be split
+\verb+\empty+
+\egroup
+
+\usestorebox{\mybox}
+\usestorebox{\mybox}
+
+\begin{storebox}{\mybox}
+ Or used as environment
+ (then will ignore leading and trailing spaces)
+\end{storebox}
+
+\usestorebox{\mybox}
+\usestorebox{\mybox}
+
+\end{document}

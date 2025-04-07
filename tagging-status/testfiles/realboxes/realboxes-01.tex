@@ -1,0 +1,54 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+\usepackage[all]{realboxes}
+
+\def\examplecontent{ABC xyz}
+
+\newsavebox\mybox
+
+\begin{document}
+
+\examplecontent
+
+\Mbox{\examplecontent}
+
+\Makebox{\examplecontent}
+
+\Fbox{\examplecontent}
+
+\Framebox{\examplecontent}
+
+\Frame{\examplecontent}
+
+\Centerline{\examplecontent}
+
+\Rightline{\examplecontent}
+
+\Parbox{1cm}{\examplecontent} % parent-child warnings
+
+\Sbox{\mybox}{\examplecontent}
+
+\Colorbox{green}{\examplecontent}
+
+\Fcolorbox{blue}{green}{\examplecontent}
+
+\Rotatebox{30}{\examplecontent}
+
+\Scalebox{2}{\examplecontent}
+
+\Resizebox{2cm}{2cm}{\examplecontent}
+
+\Dbox{\examplecontent}
+
+\Dashbox{\examplecontent}
+
+\Lbox{\examplecontent}
+
+%\Dlbox{\examplecontent} % errors unrelated to tagging
+\end{document}

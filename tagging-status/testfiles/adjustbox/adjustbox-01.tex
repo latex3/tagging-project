@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+\usepackage{adjustbox}
+
+\def\examplecontent{\includegraphics[width=2cm,alt=Example image]{example-image}}
+
+\begin{document}
+
+\adjustbox{}{\examplecontent}
+
+\adjustbox{scale=0.5}{\examplecontent}
+
+\adjincludegraphics[width=2cm,alt=Example image]{example-image}
+
+\end{document}

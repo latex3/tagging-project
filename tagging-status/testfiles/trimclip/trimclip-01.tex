@@ -1,0 +1,41 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest
+  }
+\documentclass{article}
+\usepackage{trimclip}
+
+\def\examplecontent{\includegraphics[width=2cm,alt=Example image]{example-image}}
+
+\begin{document}
+
+\examplecontent
+
+\trimbox{1cm}{\examplecontent}
+
+\trimbox*{5pt 0pt 3em 2em}{\examplecontent}
+
+\begin{trimbox}{1cm}
+\examplecontent
+\end{trimbox}
+
+\clipbox{1cm}{\examplecontent}
+
+\clipbox*{5pt 0pt 3em 2em}{\examplecontent}
+
+\begin{clipbox}{1cm}
+\examplecontent
+\end{clipbox}
+
+\marginbox{1cm}{\examplecontent}
+
+\marginbox*{5pt 0pt 3em 2em}{\examplecontent}
+
+\begin{marginbox}{1cm}
+\examplecontent
+\end{marginbox}
+
+\end{document}
