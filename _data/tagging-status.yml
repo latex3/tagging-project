@@ -2869,13 +2869,14 @@
 
 - name: collcell
   type: package
-  status: unknown
+  status: compatible
   included-in: [arxiv001]
   priority: 7
+  supported-through: [phase-III,table]
+  package-repository: "https://github.com/MartinScharrer/collcell"
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  updated: 2025-04-07
 
 - name: collectbox
   type: package

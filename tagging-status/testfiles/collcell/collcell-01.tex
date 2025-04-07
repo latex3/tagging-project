@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest,
+  }
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{collcell}
+
+\title{collcell tagging test}
+
+\newcolumntype{E}{>{\collectcell\textbf}c<{\endcollectcell}}
+
+\begin{document}
+
+\begin{tabular}{lE}
+A and B & One and two \\
+C and D &
+{\begin{tabular}{cc} % extra braces necessary, tagging or no tagging
+Inner one & Inner two \\
+Inner three & Inner four
+\end{tabular}}
+\end{tabular}
+
+% normal tabular
+\begin{tabular}{lc}
+A and B & One and two \\
+C and D &
+\begin{tabular}{cc}
+Inner one & Inner two \\
+Inner three & Inner four
+\end{tabular}
+\end{tabular}
+
+\end{document}
