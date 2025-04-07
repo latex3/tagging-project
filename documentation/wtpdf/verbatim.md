@@ -4,7 +4,7 @@ layout: default
 extrahead: youtube-head
 ---
 
-[Well Tagged PDF Video Examples](./)
+[Accessible STEM documents](./)
 
 ----
 
@@ -105,18 +105,20 @@ In comparison to the previous section navigation by character with the code usin
 
 ### Using MathML for each symbol
 
-It is possible to use MathML, for example tag `{` as `<math><mo>{</mo></math>`
-(This would not require any explicit tagging in the document, it could be added in the same
-way as the current `/Alt tagging.
+It is possible to use MathML, for example tag `{` as
+`<math><mo>{</mo></math>` This would not require any explicit tagging
+in the document, it could be added in the same way as the `/Alt`
+tagging described above.
+In the TeX source, simply by change the included additional module
+from `verbatim-alt` to `verbatim-af`.
 
-{% include youtube.html id="rUwvv6qWI7A" width="medium" comment="verbatim mo"%}
+{% include youtube.html id="JjWOAXLdmzY" width="medium" comment="verbatim af"%}
 
-* This example is showing HTML display not PDF, to allow experiementation with the tagging. Equivalent PDF Tagging could be constructed.
 * Symbols read (using math settings)
 * Verbosity and words used customisable by the reader.
-* In verbose modes the entering and leaving of mathematics will be announced
-* line breaks are not announced.
-* Braille is compact but using math (nemeth) not text style for symbols.
+* In verbose modes, the entering and leaving of mathematics may be announced
+* Braille is compact but using math not text style for symbols (which
+  will be more noticable if Nemeth math Braille is used).
 
   <pre>
   main ( ) {

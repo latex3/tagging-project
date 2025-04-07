@@ -7,7 +7,7 @@ lang: "en"
 runlatex.editorlines=120;
 </script>
 
-[Well Tagged PDF Video Examples](./)
+[Accessible STEM documents](./)
 
 # Generating Well-Tagged PDF from LaTeX
 

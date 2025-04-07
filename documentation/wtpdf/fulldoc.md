@@ -15,7 +15,7 @@ runlatex.preincludes = {
  }
 </script>
 
-[Well Tagged PDF Video Examples](./)
+[Accessible STEM documents](./)
 
 ----
 
@@ -39,8 +39,6 @@ runlatex.preincludes = {
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF from LaTeX](#latex-tag)
   * [Configuration possibilities](#latex-configs)
-    * [Tagging, using MathML AF](#mathml-af)
-    * [Tagging, using MathML SE](#mathml-se)
   * [Read MathML AF with Foxit/NVDA](#foxit-af)
   * [Read MathML SE with Acrobat/NVDA](#acrobat-se)
 * [Settings](#settings)
@@ -48,13 +46,8 @@ runlatex.preincludes = {
 
 ## A LaTeX document with no tagging {#untagged-source}
 
-This is the source of the document whose output is used in the sample videos below.
-
-```latex
-{% include_relative stem-article-2col.tex %}
-```
-
-If you use the `Generate PDF` button an untagged PDF is produced as used in the first examples below.
+The source of the document whose output is used in the sample videos below is available
+in the [realistic demonstration page](larger-example#example-doc)
 
 ## Reading Untagged PDF {#untagged}
 
@@ -293,29 +286,9 @@ LaTeX can automatically produce the necessary MathML from the source if the LuaT
 
 ### Configuration possibilities {#latex-configs}
 
-#### Tagging, using associated files for math {#mathml-af}
+As shown in [the example page](larger-example) LaTeX may beconfigured to use
+Associated files or Structure Elements to provide MathML tagging for mathematics.
 
-To produce a tagged PDF  with LaTeX, where the math formulas are handled using AF files, a configuration such as the following one has to be added at the top of the source file.
-
-```latex
-{% include_relative stem-article-2col-af.tex %}
-```
-Line 2 specifies that the document language is English, line 3 says that PDF 2.0 should be used, line 4 that PDF/UA-2 should be produced and line 5 that the document should also be compliant with the PDF/A-4f standard. It has to be `A-4f` (not `A-4`) because embedded associated files are used.
-
-Line 6 then directs the tagging code to use AF files for formulas, and loads the `verbatim-alt` test module (which improves the reading of verbatim code---this is still under development and not yet fully integrated). 
-
-Finally, line 9 loads the main document source which is displayed in section [Source](#untagged-source) above.
-
-
-### Tagging, using MathML structure elements {#mathml-se}
-
-To produce a tagged PDF  with LaTeX, where the math formulas are represented as MathML structure elements inside the PDF, a configuration such as the following one has to be added at the top of the source file.
-
-```latex
-{% include_relative stem-article-2col-se.tex %}
-```
-
-The differences to the configuration with [AF files](#mathml-af) are in line 5 (using `A-4` rather than `A-4f`) and in line 6 (where the setup for MathML structure elements is specified).
 
 
 
