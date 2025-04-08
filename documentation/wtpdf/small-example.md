@@ -113,3 +113,7 @@ to generate tagged PDF. The submitted TeX source is deleted after the
 PDF is generated. The generated PDF is deleted after one hour.
 
 To generate Tagged PDF on your own system you’ll need a recent LaTeX distribution.
+
+## Listening to STEM content
+
+We've made some [videos](fulldoc) of how various combinations of technology vocalize this document.
