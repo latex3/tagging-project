@@ -26,25 +26,25 @@ runlatex.preincludes = {
 
 ## Table of Contents
 
-* [Source](#untagged-source)
-* [Untagged PDF](#untagged)
+* [Can automation product acceptable results?](#results)
+* [Listening to untagged PDF](#untagged)
   * [Read with Foxit/NVDA](#foxit-untagged)
   * [Read with Acrobat/NVDA](#acrobat-untagged)
-* [ChatGPT interpretation](#chatgpt)
-  * [ChatGPT3 Markdown](#chatgpt3)
-  * [ChatGPT4 HTML](#chatgpt4html)
-  * [ChatGPT4 Markdown](#chatgpt4markdown)
-* [Autotagged](#autotagged)
+* [Listening to "autotagged" PDF](#autotagged)
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
-* [Tagged PDF from LaTeX](#latex-tag)
+* [Listening to PDF generated from LaTeX](#latex-tag)
   * [Configuration possibilities](#latex-configs)
   * [Read MathML AF with Foxit/NVDA](#foxit-af)
   * [Read MathML SE with Acrobat/NVDA](#acrobat-se)
+* [Listening to ChatGPT's interpretation](#chatgpt)
+  * [ChatGPT3 Markdown](#chatgpt3)
+  * [ChatGPT4 HTML](#chatgpt4html)
+  * [ChatGPT4 Markdown](#chatgpt4markdown)
 * [Settings](#settings)
 </nav>
 
-## Can automation produce acceptable results?
+## Can automation produce acceptable results?  {#results}
 
 Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
 
@@ -58,7 +58,7 @@ All examples were on Windows 11 using the test release of NVDA 2025 (which enabl
 
 The LaTeX source of the test PDF used to make these recordings [is available](larger-example#example-doc).
 
-## Reading Untagged PDF {#untagged}
+## Listening to untagged PDF {#untagged}
 
 ###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
 
@@ -125,18 +125,9 @@ The untagged PDF is basically incomprehensible.
 
 The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
-
-
-
-
-
-
-
-
 ## Reading PDF Auto Tagged by Acrobat {#autotagged}
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version) {#auto-macos}
-
 
 This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -194,7 +185,7 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 
 
-## Tagged PDF generated directly from LaTeX {#latex-tag}
+## Listening to Tagged PDF generated directly from LaTeX {#latex-tag}
 
 When LaTeX source content includes math formulas there are two ways to generate tagged PDF:
 
@@ -259,7 +250,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
 
 
-## Reading documents extracted by ChatGPT {#chatgpt}
+## Listening to ChatGPT's interpretation {#chatgpt}
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 
