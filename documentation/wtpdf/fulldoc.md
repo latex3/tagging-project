@@ -44,10 +44,19 @@ runlatex.preincludes = {
 * [Settings](#settings)
 </nav>
 
-## A LaTeX document with no tagging {#untagged-source}
+## Can automation produce acceptable results?
 
-The source of the document whose output is used in the sample videos below is available
-in the [realistic demonstration page](larger-example#example-doc)
+Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
+
+There are many ways to try to make PDF documents accessible. To highlight the importance of accuracy in representing the author’s intent we recorded a screen-reader reading the results from various attempts by software to understand the “realistic” demonstration PDF. 
+
+In each case we provide an analysis of the results.
+
+Everyone might understand that [math is hard](https://latex3.github.io/tagging-project/documentation/wtpdf/math). But surely, commonplace elements such as [tables of contents](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) or [pronouncing symbols in code-blocks](https://latex3.github.io/tagging-project/documentation/wtpdf/verbatim) must produce reasonable results when vocalized, regardless of system? Not necessarily.
+
+All examples were on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe.
+
+The LaTeX source of the test PDF used to make these recordings [is available](larger-example#example-doc).
 
 ## Reading Untagged PDF {#untagged}
 
@@ -117,98 +126,11 @@ The untagged PDF is basically incomprehensible.
 The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
 
 
-## Reading documents extracted by ChatGPT {#chatgpt}
-
-### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
-
-#### Notes
-
-This document is shown as one possible alternative. ChatGPT 3 was used. The untagged PDF was uploaded and the following question posed:
-
-> Please show full markdown source for an accessible document suitable for a blind reader extracted from this PDF
-
-The supplied markdown was not edited other than changing `\(` and `\[` to `$` and `$$` to match the default MathJax configuration at GitHub. The markdown was then viewed in GitHub markdown preview, Foxit was used to read the rendered web page.
-
-{% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
-
-#### Observations
-
- - Text and visual presentation do no longer match (this is now a one column document but the text talks about it being a 2-column document), but for AT usage that is ok
- - The footnote with important information was dropped
- - The equation labels are lost
- - The matrices are shown with brackets not parentheses
- - The sentence after the list "Here we reference ..." is incorrectly shown as a third-level list item
- - The inline graphics in section 3.4 is not shown and not read
- - The table is misinterpreted, changing it to a 3-column table with the headers not matching their columns (i.e., not possible to navigate or understand the table content)
- - The marginal note with (important) information was dropped
- - The graphic of the float is lost and only a caption is placed in the document
- - ChatGPT invented a word and changed "Fermat's last" to _"Fermat's last theorem"_
- - The display of verbatim code is read without the parentheses and curly brackets
- - The last two sections have been rewritten and shortened by ChatGPT, i.e., the Reference section was dropped and the references put inline
-
-#### Summary
-
-ChatGPT 3 produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by
- - not handling graphics and tables correctly,
- - dropping relevant footnotes and marginal notes,
- - losing equation labels, and
- - possibly misrepresenting the authors intentions by rewriting portions of the text.
-
-The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
 
 
-### Foxit Reading ChatGPT 4 display {#chatgpt4html}
-
-Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source.
-
-{% include youtube.html id="oByx8Q1ypM4" width="medium" comment="t5-chatgpt4-chatgpt foxit"%}
-
-#### Observations
-
- - ChatGPT 4 is not only trying to produce an accessible document but also rewriting the text
- - Headings lose their numbers (would be a problem if cross-referenced)
- - The footnote is turned into an inline note (which works well)
- - Overall math a reading is understandable, but not all components are recognized, e.g., no reading of "mod" but _"M O D"_
- - The equation numbers are dropped (would be a problem if cross-referenced)
- - The inline graphics in section 3.4 is not shown and not read
- - The original table had 2 header rows and two data rows, The first header row spanning both columns was converted to normal text. While this works reasonably well for this table it alters the table data and would break more complex table structures
- - The graphic of the float is dropped and the caption is read as normal text
- - Minor rewrite of the Theorem caption
- - The display of verbatim code is read without the parentheses and curly brackets
-
-#### Summary
-
-ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination. 
 
 
-
-### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
-
-ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
-Note here the document text has been extensively re-worded by ChatGPT.
-
-{% include youtube.html id="G7g8AqQdlSQ" width="medium" comment="t5-chatgpt4-github foxit"%}
-
-#### Observations
-
- - The markdown returned from ChatGPT 4 is heavy reworded and shortened
- - The equation numbers are dropped (would be a problem if cross-referenced)
- - The introductory text to the set of equations has been altered
- - A comma on the first line of equations has been invented (but not on the second line)
- - The last item of the inner list as been rewritten incorrectly (new meaning is incorrect)
- - The text following the lists has been completely dropped
- - The sentence on small figures and tables has been dropped; the sentence on floats as been altered (no longer mentioning floats) and marginal has been dropped
- - The graphic of the float has been dropped and the caption is read as normal text
- - The theorem caption and text have been rewritten
- - The text explaining the requirement for verbatim code blocks has been dropped
- - The display of verbatim code is read without the parentheses and curly brackets
- - The last two sections have been merged and shortened to just a bibliography list
- - The bibliography list items have been reordered and are not labeled (i.e., can't be referenced from  within the document)
-
-#### Summary
-
- In many places important information in the original document is completely lost (e.g., the note stating that the table syntax is temporary, etc.).  None of the supporting cross-references to other places in the document are preserved (text containing them was thrown away) and all footnotes, marginals, and graphics in the document have been eliminated. The result clearly shows the unpredictability of the approach: there is no way for the consumers to understand that what is read to them is not what was written in the original.
 
 
 ## Reading PDF Auto Tagged by Acrobat {#autotagged}
@@ -232,7 +154,6 @@ This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to
  - The marginal is correctly separated from the main text and read separately
  - The formula is read as _"an + b-en = c-en"_
  - The display of verbatim code is read without the parentheses and curly brackets
-
 
 #### Summary
 
@@ -275,22 +196,19 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 ## Tagged PDF generated directly from LaTeX {#latex-tag}
 
-When generating tagged PDF directly from LaTeX source there are two possibilities when the document contains math formulas:
+When LaTeX source content includes math formulas there are two ways to generate tagged PDF:
 
-- Each formula can have a so called Associated File (AF) attached inside the PDF (that contains a MathML representation of the formula)
-- The MathML representation is directly embedded as structure elements in the PDF
+- The AF method. In this case a MathML representation of each formula is contained within a so-called Associated File (AF) embedded within the PDF, or
+- The SE method. In this case, the MathML representation is embedded into PDF structure elements (the "tags tree")
 
-Both are valid approaches in PDF 2.0, but unfortunately, up to now it depends on the consumer application (e.g., the reader) which is understood if PDF 2.0 is understood at all. We hope that the majority of the PDF readers soon support PDF 2.0, including both of the above methods.
+Both are valid approaches in PDF 2.0, but unfortunately, as of today, PDF consumer applications differ in their support. We hope that the majority of the PDF readers soon fully support PDF 2.0, including both of the above methods.
 
-LaTeX can automatically produce the necessary MathML from the source if the LuaTeX engine is used. If pdfTeX is used as an engine only the AF method is supported and the data for the AF files have to be prepared in a separate step. How to do the latter is explained elsewhere.
+LaTeX can automatically produce the necessary MathML for either method if the LuaTeX engine is used. If pdfTeX is used only the AF method is supported and the data for the AF files have to be prepared in a separate step, as is explained elsewhere.
 
 ### Configuration possibilities {#latex-configs}
 
 As shown in [the example page](larger-example) LaTeX may beconfigured to use
 Associated files or Structure Elements to provide MathML tagging for mathematics.
-
-
-
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 
@@ -316,10 +234,6 @@ The sample document shown in the video was compiled with the above configuration
 The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
 
-
-
-
-
 ### Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
 
 {% include youtube.html id="V2kfks4BceM" width="medium" comment="t6-se acrobat"%}
@@ -338,12 +252,101 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
  - A similar problem in other places, e.g., reference to bib entries
  - The display of verbatim code is read without the parentheses and curly brackets
 
-
 #### Summary
 
 The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
 The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
+
+
+## Reading documents extracted by ChatGPT {#chatgpt}
+
+### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
+
+#### Notes
+
+This document is shown as one possible alternative. ChatGPT 3 was used. The untagged PDF was uploaded and the following question posed:
+
+> Please show full markdown source for an accessible document suitable for a blind reader extracted from this PDF
+
+The supplied markdown was not edited other than changing `\(` and `\[` to `$` and `$$` to match the default MathJax configuration at GitHub. The markdown was then viewed in GitHub markdown preview, Foxit was used to read the rendered web page.
+
+{% include youtube.html id="hzVnFZqD9BE" width="medium" comment="t5 chatgpt foxit"%}
+
+#### Observations
+
+ - Text and visual presentation do no longer match (this is now a one column document but the text talks about it being a 2-column document), but for AT usage that is ok
+ - The footnote with important information was dropped
+ - The equation labels are lost
+ - The matrices are shown with brackets not parentheses
+ - The sentence after the list "Here we reference ..." is incorrectly shown as a third-level list item
+ - The inline graphics in section 3.4 is not shown and not read
+ - The table is misinterpreted, changing it to a 3-column table with the headers not matching their columns (i.e., not possible to navigate or understand the table content)
+ - The marginal note with (important) information was dropped
+ - The graphic of the float is lost and only a caption is placed in the document
+ - ChatGPT invented a word and changed "Fermat's last" to _"Fermat's last theorem"_
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - The last two sections have been rewritten and shortened by ChatGPT, i.e., the Reference section was dropped and the references put inline
+
+#### Summary
+
+ChatGPT 3 produces a fairly reasonable result for a larger portion of the document, but fails it in several critical areas by
+ - not handling graphics and tables correctly,
+ - dropping relevant footnotes and marginal notes,
+ - losing equation labels, and
+ - possibly misrepresenting the authors intentions by rewriting portions of the text.
+
+The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
+
+### Foxit Reading ChatGPT 4 display {#chatgpt4html}
+
+Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source.
+
+{% include youtube.html id="oByx8Q1ypM4" width="medium" comment="t5-chatgpt4-chatgpt foxit"%}
+
+#### Observations
+
+ - ChatGPT 4 is not only trying to produce an accessible document but also rewriting the text
+ - Headings lose their numbers (would be a problem if cross-referenced)
+ - The footnote is turned into an inline note (which works well)
+ - Overall math a reading is understandable, but not all components are recognized, e.g., no reading of "mod" but _"M O D"_
+ - The equation numbers are dropped (would be a problem if cross-referenced)
+ - The inline graphics in section 3.4 is not shown and not read
+ - The original table had 2 header rows and two data rows, The first header row spanning both columns was converted to normal text. While this works reasonably well for this table it alters the table data and would break more complex table structures
+ - The graphic of the float is dropped and the caption is read as normal text
+ - Minor rewrite of the Theorem caption
+ - The display of verbatim code is read without the parentheses and curly brackets
+
+#### Summary
+
+ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination. 
+
+### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
+
+ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
+Note here the document text has been extensively re-worded by ChatGPT.
+
+{% include youtube.html id="G7g8AqQdlSQ" width="medium" comment="t5-chatgpt4-github foxit"%}
+
+#### Observations
+
+ - The markdown returned from ChatGPT 4 is heavy reworded and shortened
+ - The equation numbers are dropped (would be a problem if cross-referenced)
+ - The introductory text to the set of equations has been altered
+ - A comma on the first line of equations has been invented (but not on the second line)
+ - The last item of the inner list as been rewritten incorrectly (new meaning is incorrect)
+ - The text following the lists has been completely dropped
+ - The sentence on small figures and tables has been dropped; the sentence on floats as been altered (no longer mentioning floats) and marginal has been dropped
+ - The graphic of the float has been dropped and the caption is read as normal text
+ - The theorem caption and text have been rewritten
+ - The text explaining the requirement for verbatim code blocks has been dropped
+ - The display of verbatim code is read without the parentheses and curly brackets
+ - The last two sections have been merged and shortened to just a bibliography list
+ - The bibliography list items have been reordered and are not labeled (i.e., can't be referenced from  within the document)
+
+#### Summary
+
+ In many places important information in the original document is completely lost (e.g., the note stating that the table syntax is temporary, etc.).  None of the supporting cross-references to other places in the document are preserved (text containing them was thrown away) and all footnotes, marginals, and graphics in the document have been eliminated. The result clearly shows the unpredictability of the approach: there is no way for the consumers to understand that what is read to them is not what was written in the original.
 
 ----
 
