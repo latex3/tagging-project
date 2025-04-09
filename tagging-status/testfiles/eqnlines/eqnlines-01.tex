@@ -1,20 +1,377 @@
-\DocumentMetadata{testphase=latest}
-\documentclass{article}
-\usepackage{unicode-math}
-\usepackage{eqnlines}
-\tagpdfsetup{math/setup={mathml-SE,mathml-AF}}
+\documentclass[a4paper]{article}
+
+\setlength\parskip{6pt plus 2pt}
+\setlength\parindent{0pt}
+\addtolength\textheight{6cm}
+\addtolength\topmargin{-4cm}
+
+
+%\usepackage{unicode-math}
+\usepackage{amsmath}
+\usepackage[backup]{eqnlines}
+
+\title{eqnlines test}
+\author{Niklas Beisert}
+\date{April 2025}
+
 \begin{document}
-% errors with 
-% ! Argument of \__math_grab_dollardollar:w has an extra }.
 
-%\begin{align}
-%x&=y 
-%\end{align}
 
-% errors with 
-% ! Argument of \__math_grab_dollardollar:w has an extra }.
-\begin{equations}[single]
+\maketitle
+
+NOTE when tagging active: vertical spacing below title changed 
+
+\section{eqnlines environments}
+
+equation
+\begin{equation}
 x = y
+\end{equation}
+
+symbolic equation
+\[
+x = y
+\]
+
+gather
+\begin{equations}~
+x=y\\
+\donumber
+y=\sin z
 \end{equations}
 
+align with last numbering
+\begin{equations}[n=l]
+x&=y\\
+\donumber
+y&=\sin z
+\end{equations}
+
+gather with numbering options
+\begin{equations}~*
+x=y\\
+\donumber
+y=\sin z
+\end{equations}
+
+symbolic gather
+\<~
+x=y\\
+y=\sin z
+\>
+
+symbolic align
+\<
+x&=y\\
+y&=\sin z
+\>
+
+symbolic align several columns
+\<!
+x&=y & y&=x\\
+y&=\sin z & \sin z&=y
+\>
+
+correct placement for option * in \texttt{equations}
+\begin{equations}*
+x&=y\\
+y&=\sin z
+\end{equations}
+%
+misplaced option * 
+\begin{equations} *
+x&=y\\
+y&=\sin z
+\end{equations}
+%
+\let\altequations\equations
+\let\endaltequations\endequations
+\ifdefined\RegisterMathEnvironment
+\RegisterMathEnvironment{altequations}
+\fi
+misplaced option for \texttt{altequations}
+registered via RegisterMathEnvironment
+\begin{altequations} *
+x&=y\\
+y&=\sin z
+\end{altequations}
+NOTE when tagging active: option ought not have been accepted
+
+correct placement for option ! in symbolic equation
+\[!
+x=y
+\]
+misplaced option ! for symbolic equation
+\[ !
+x=y
+\]
+
+
+multi-column alignment (not correctly reproduced in mathml)
+\[
+\begin{equationsbox}~
+xxxxxxxx&xxxxxxxxx\\
+\shoveleft left&\shoveright right\\
+\shoveright right&\shoveleft left\\
+\shoveright right&\shovecenter center\\
+\shoveright right& center\\
+\end{equationsbox}
+\]
+NOTE:
+mathml output does not follow alignment choice
+for individual cells (option not yet available)
+
+aligned equationsbox in inline\quad
+$\begin{equationsbox}
+x&=y\\
+y&=\sin z
+\end{equationsbox}$
+
+multline with shoves
+\begin{equations}~[shape=steps,n=a]
+\mbox{first}\\
+\mbox{middle}\\
+\mbox{middlemiddlemiddle}\\
+\shoveleft\mbox{left}\\
+\shovecenter\mbox{center}\\
+\shoveright\mbox{right}\\
+\mbox{middle}\\
+\mbox{last}
+\end{equations}
+
+continued equation
+\[
+x = y
+\]
+\[
+x = y
+\]
+NOTE when tagging active: spacing differ between equations
+
+equation at new paragraph
+
+\[
+x = y
+\]
+
+ends here
+
+vertical spacing removed
+\[[noskip]
+x = y
+\]
+ends here
+
+equation at nointerlineskip\par\nointerlineskip
+\[
+x = y
+\]
+ends here
+
+equation in a parbox
+\fbox{\parbox{5cm}{
+\[!
+x = y
+\]
+}}
+
+alignment with intertext
+\<
+  e+f&=x^2+x+2
+\begin{intertext}
+intertext
+\end{intertext}
+    f&=x
+\>
+
+\newpage
+
+\section{align.tex examples: eqnlines environments only}
+
+Simple \texttt{align}
+\begin{align}
+  a+b&=x^2+x+2\\
+    b&=x
+\end{align}
+
+
+
+Simple \texttt{align*}
+\begin{align*}
+  c+d&=x^2+x+2\\
+    d&=x
+\end{align*}
+
+
+\texttt{aligned} in \texttt{equation}
+\begin{equation}
+\begin{aligned}
+  e+f&=x^2+x+2\\
+    f&=x
+\end{aligned}
+\end{equation}
+
+
+\texttt{nonumber} in  \texttt{align}
+\begin{align}
+  a+b&=y^2+y+2\nonumber\\
+    b&=y
+\end{align}
+
+\texttt{tag} in  \texttt{align*}
+\begin{align*}
+  r+s&=y^2+y+2\\
+    t&=y\tag{\textdagger}
+\end{align*}
+
+
+Two groups in \texttt{align}
+\begin{align}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{align}
+
+Two groups in \texttt{flalign}
+\begin{flalign}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{flalign}
+
+
+\newpage
+
+\section{align.tex examples: mixed eqnlines and amsmath environments}
+
+\texttt{split} in \texttt{equation}
+\begin{equation}
+\begin{split}
+ a & = b+b\\
+   &\quad + c
+\end{split} 
+\end{equation}
+amsmath Warning: uses backup solution via \texttt{aligned}
+
+\texttt{amsaligned} in \texttt{equation}
+\begin{equation}
+\begin{amsaligned}
+  e+f&=x^2+x+2\\
+    f&=x
+\end{amsaligned}
+\end{equation}
+
+
+
+\newpage
+
+\eqnlinesset{defaults=classic}
+
+\section{align.tex examples: original amsmath environments only}
+
+\texttt{amsequation}
+\begin{amsequation}
+  a+b=x^2+x+2
+\end{amsequation}
+
+
+
+Simple \texttt{amsalign}
+\begin{amsalign}
+  a+b&=x^2+x+2\\
+    b&=x
+\end{amsalign}
+NOTE when tagging active:
+\texttt{amsalign} registers as \texttt{align} in mathml source line
+(hardcoded behaviour), same for other amsmath environments
+
+alignment with intertext
+\begin{amsalign*}
+  e+f&=x^2+x+2\\
+\intertext{intertext}
+    f&=x
+\end{amsalign*}
+
+
+
+Simple \texttt{amsalign*}
+\begin{amsalign*}
+  c+d&=x^2+x+2\\
+    d&=x
+\end{amsalign*}
+
+\texttt{amsaligned} in \texttt{amsequation}
+\begin{amsequation}
+\begin{amsaligned}
+  e+f&=x^2+x+2\\
+    f&=x
+\end{amsaligned}
+\end{amsequation}
+
+\texttt{split} in \texttt{equation}
+\begin{amsequation}
+\begin{split}
+ a & = b+b\\
+   &\quad + c
+\end{split} 
+\end{amsequation}
+
+\texttt{split} in \texttt{amsalign}
+\begin{amsalign}
+\begin{split}
+  x&= a  +  b\\
+   &\quad + c
+\end{split}\\
+  y&=d
+\end{amsalign}
+
+\texttt{split} in \texttt{amsgather} 
+\begin{amsgather}
+\begin{split}
+ a & = b\times b\\
+   &\quad + c
+\end{split}\\
+x=1
+\end{amsgather}
+
+\texttt{notag} in  \texttt{amsalign}
+\begin{amsalign}
+  a+b&=y^2+y+2\notag\\
+    b&=y
+\end{amsalign}
+
+\texttt{tag} in  \texttt{amsalign*}
+\begin{amsalign*}
+  r+s&=y^2+y+2\\
+    t&=y\tag{\textdagger}
+\end{amsalign*}
+
+
+\clearpage
+
+Two groups in \texttt{amsalign}
+\begin{amsalign}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{amsalign}
+
+Two groups in \texttt{alignat}
+\begin{alignat}{2}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{alignat}
+
+Two groups in \texttt{amsflalign}
+\begin{amsflalign}
+  aaa&=bbb &ccc&=ddd\\
+    a&=b   &  c&=d
+\end{amsflalign}
+
+\texttt{alignat*} with no intercolumn space
+\begin{alignat*}{-1}
+  3&x^3&&+{}& 4&x^2&&+{}&10&x&&+{}&5&=0\\
+ -2&x^3&&+{}&12&x^2&&+{}& 6&x&&+{}&20&=0\\
+ 10&x^3&&-{}& 5&x^2&&+{}&  &x&&+{}&5&=0
+\end{alignat*}
+
+
 \end{document}
+
