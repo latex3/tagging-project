@@ -4,22 +4,11 @@ layout: "ngpdf"
 extrahead: youtube-head
 ---
 
-<script>
-function generatepreamble(t,e) {return e.getValue();}
-runlatex.texts.metadata="";
-runlatex.texts["TeXLive.net"]="Generate PDF";
-runlatex.texts["Compiling PDF"]="Compiling PDF";
-runlatex.preincludes = {
- "pre1": {"pre0": "stem-article-2col.tex"},
- "pre2": {"pre0": "stem-article-2col.tex"}
- }
-</script>
-
 [Accessible STEM documents](./)
 
 ----
 
-# Full Document Sources
+# Listening to PDF
 
 
 <nav id="toc" markdown=1>
