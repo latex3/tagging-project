@@ -15,41 +15,41 @@ extrahead: youtube-head
 
 ## Table of Contents
 
-* [Can automation product acceptable results?](#results)
-* [Listening to untagged PDF](#untagged)
+* [Untagged PDF](#untagged)
   * [Read with Foxit/NVDA](#foxit-untagged)
   * [Read with Acrobat/NVDA](#acrobat-untagged)
-* [Listening to "autotagged" PDF](#autotagged)
+* ["Autotagged" PDF](#autotagged)
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
-* [Listening to PDF generated from LaTeX](#latex-tag)
+* [Tagged PDF generated from LaTeX](#latex-tag)
   * [Configuration possibilities](#latex-configs)
-  * [Read MathML AF with Foxit/NVDA](#foxit-af)
-  * [Read MathML SE with Acrobat/NVDA](#acrobat-se)
-* [Listening to ChatGPT's interpretation](#chatgpt)
+  * [MathML AF with Foxit/NVDA](#foxit-af)
+  * [MathML SE with Acrobat/NVDA](#acrobat-se)
+* [ChatGPT's interpretation](#chatgpt)
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
-* [Settings](#settings)
+* [NVDA's pronounciation settings](#settings)
 </nav>
-
-## Can automation produce acceptable results?  {#results}
 
 Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
 
-There are many ways to try to make PDF documents accessible. To highlight the importance of accuracy in representing the author’s intent we recorded a screen-reader reading the results from various attempts by software to understand the “realistic” demonstration PDF. 
+There are many ways to try to make PDF documents accessible. To highlight the importance of accuracy in representing the author’s intent we recorded and analyzed a screen-reader reading the results from various attempts by software to understand a “realistic” demonstration PDF.
 
-In each case we provide an analysis of the results.
+The recordings were made on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and version 0.6.8-rc.9 of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe Acrobat.
 
-Everyone might understand that [math is hard](https://latex3.github.io/tagging-project/documentation/wtpdf/math). But surely, commonplace elements such as [tables of contents](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) or [pronouncing symbols in code-blocks](https://latex3.github.io/tagging-project/documentation/wtpdf/verbatim) must produce reasonable results when vocalized, regardless of system? Not necessarily.
+For the recording of a [tagged PDF generated from LaTeX](#latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree. 
 
-All examples were on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe.
-
-The LaTeX source of the test PDF used to make these recordings [is available](larger-example#example-doc).
+Access the [LaTeX source](larger-example#example-doc) of the test file used to make these recordings.
 
 ## Listening to untagged PDF {#untagged}
 
+Everyone might understand that [math is hard](https://latex3.github.io/tagging-project/documentation/wtpdf/math). But surely, commonplace elements such as [tables of contents](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) or [pronouncing symbols in code-blocks](https://latex3.github.io/tagging-project/documentation/wtpdf/verbatim) must produce reasonable results when vocalized, regardless of system? Not necessarily.
+
 ###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 {% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
 
@@ -88,6 +88,9 @@ The untagged PDF is basically incomprehensible.
 
 
 ### Acrobat/NVDA reading untagged PDF {#acrobat-untagged}
+- Adobe Acrobat Reader 2025.001.20432 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 {% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
 
@@ -117,8 +120,11 @@ The same untagged PDF gets a different reading compared to the previous one, but
 ## Reading PDF Auto Tagged by Acrobat {#autotagged}
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version) {#auto-macos}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
-This is the untagged PDF given to Acrobat Pro on a Mac and asked the software to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
+The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
 {% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
 
@@ -141,8 +147,11 @@ For normal text structures the auto-tagging heuristics makes reasonable guesses 
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auto-windows}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
-This is the untagged PDF this time given to Acrobat Pro on Windows (i.e., same software but on a different platform) to auto-tag it. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
+The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
 {% include youtube.html id="3U0HRT1xaqo" width="medium" comment="t5-autotagged UF foxit"%}
 
@@ -176,10 +185,10 @@ Auto-tagging using the Windows software gives worse results than the correspondi
 
 ## Listening to Tagged PDF generated directly from LaTeX {#latex-tag}
 
-When LaTeX source content includes math formulas there are two ways to generate tagged PDF:
+When LaTeX source content includes math formulas there are two ways to generate tagged PDF directly from LaTeX:
 
-- The AF method. In this case a MathML representation of each formula is contained within a so-called Associated File (AF) embedded within the PDF, or
-- The SE method. In this case, the MathML representation is embedded into PDF structure elements (the "tags tree")
+- The AF method, in which a MathML representation of each formula is contained within a so-called Associated File (AF) embedded within the PDF.
+- The SE method, in which the MathML representation is embedded into PDF structure elements (the "tags tree").
 
 Both are valid approaches in PDF 2.0, but unfortunately, as of today, PDF consumer applications differ in their support. We hope that the majority of the PDF readers soon fully support PDF 2.0, including both of the above methods.
 
@@ -187,10 +196,13 @@ LaTeX can automatically produce the necessary MathML for either method if the Lu
 
 ### Configuration possibilities {#latex-configs}
 
-As shown in [the example page](larger-example) LaTeX may beconfigured to use
+As shown in [the example page](larger-example) LaTeX may be configured to use
 Associated files or Structure Elements to provide MathML tagging for mathematics.
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
@@ -214,7 +226,10 @@ The sample document shown in the video was compiled with the above configuration
 The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
 
-### Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
+### Adobe Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
+- Adobe Acrobat Reader 2025.001.20432 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 {% include youtube.html id="V2kfks4BceM" width="medium" comment="t6-se acrobat"%}
 
@@ -242,6 +257,9 @@ The use of structure elements instead of AF files give identical results for mat
 ## Listening to ChatGPT's interpretation {#chatgpt}
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 #### Notes
 
@@ -279,6 +297,9 @@ ChatGPT 3 produces a fairly reasonable result for a larger portion of the docume
 The sample document is too short to assess how severe these limitations are in longer and more complex documents. It is likely, though, that this approach to accessibility, while appearing  on the surface as a good representation, is in fact producing a distorted and incorrect variant of the information that the author tries to convey.
 
 ### Foxit Reading ChatGPT 4 display {#chatgpt4html}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source.
 
@@ -302,6 +323,9 @@ Using ChatGPT4 a similar query produced a markdown document immediately displaye
 ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination. 
 
 ### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
+- Foxit Reader 2025.3.0.28197 (Windows 11)
+- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.8-rc.9
 
 ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
 Note here the document text has been extensively re-worded by ChatGPT.
@@ -330,11 +354,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
 
 ----
 
-## Software and Settings {#settings}
-
-All the readings were generated on Microsoft Windows, using
-a test release of NVDA 2025.1 with Windows OneCore voice "Zira".
-The NVDA addon MathCAT 0.6.8-rc.9 is responsible for reading MathML.
+## NVDA pronounciation settings {#settings}
 
 Pronunciation of some technical words was improved by using the following
 settings in the NVDA speech dictionary:
@@ -352,9 +372,4 @@ settings in the NVDA speech dictionary:
 | Ignore softhyphens | ­         |             | off  | Anywhere   | 
 | Hyphenation help   | cluding   | clueding    | off  | whole word |
 
-The _Ignore softhyphens_ row contains an invisible softhyphen character in the second column replaced by "nothing". This improves the reading of hyphenated words in the Foxit/NVDA workflow.
-
-Foxit Reader used was version 2025.3.0.28197
-
-Acrobat Reader used was version 2025.001.20432
-
+The _Ignore softhyphens_ row contains an invisible softhyphen character in the second column replaced by "nothing", which improved the reading of hyphenated words in the Foxit/NVDA workflow.
