@@ -49,7 +49,7 @@ There are many ways to try to make PDF documents accessible. To highlight the im
 
 The recordings were made on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and the public version (as of March 2025) of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe Acrobat.
 
-For the recording of a [tagged PDF generated from LaTeX](latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree. 
+For the recording of a [tagged PDF generated from LaTeX](#latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree. 
 
 Access the [LaTeX source](larger-example#example-doc) of the test file used to make these recordings.
 
