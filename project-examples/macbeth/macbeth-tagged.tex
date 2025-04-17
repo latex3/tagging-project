@@ -8,24 +8,12 @@
  pdfversion=2.0,
  pdfstandard=ua-2,
  pdfstandard=a-4,
- testphase=
-   {
-    phase-III, %lists,footnotes,sectioning,
-               %toc,marginpar,bibliography,floats,
-               %graphics ...
-    math,  
-    table, %tabular, tabularx, longtable
-    title  %maketitle
-   }
- }
-
-\tagpdfsetup
- {
+ tagging-setup = {
   add-new-tag=Speaker/Strong,
   add-new-tag=SceneDescription/Span,
-  role/user-NS=plays,
-  math/mathml/luamml/load=false
- }
+  role/user-NS=plays
+  }
+}
 
 
 \documentclass{book}

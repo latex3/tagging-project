@@ -1,13 +1,11 @@
-% \DocumentMetadata (in input file)
+\DocumentMetadata{
+   lang=en,
+   pdfversion=2.0,
+   pdfstandard=ua-2,
+   pdfstandard=a-4f, %  AF not in document catalog dictionary
+   tagging=on
+   }
 
-\providecommand\thispdftagsetup{
-\tagpdfsetup{
-% math/mathml/structelem,
- math/mathml/luamml=true,
-% math/mathml/sources=,
-%  math/mathml/write-dummy
- math/alt/use=false,
- math/tex/AF=true
-}
-}
+\renewcommand\DocumentMetadata[1]{}   
+
 \input{5250A-23-group-theory}
