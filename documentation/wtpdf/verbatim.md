@@ -8,23 +8,20 @@ extrahead: youtube-head
 
 ----
 
-# Screen Reading Examples (DRAFT)
-
-
-## Verbatim
+# Reading Verbatim Code blocks
 
 Verbatim has similar requirements to mathematics, in that symbols
 should ideally be read and not ignored or just read as pause, as is
 used for natural language text.
 
 
-### Default Reading
+## Default Reading
 
 {% include youtube.html id="gnr8bZxxSGQ" width="medium" comment="verbatim some"%}
 
 * Here all the symbols are not read at all.
 
-### Reading with symbol pronunciation set to "All" {#symbols-all}
+## Reading with symbol pronunciation set to "All" {#symbols-all}
 
 Screen readers have customisable settings for punctuation symbols,
 With NVDA, `<nvda>p` cycles between `none`, `some` (the default), `many` and `all`.
@@ -45,7 +42,7 @@ switch to this mode in `<pre>` (html) or `/Code` (pdf) contexts, but
 they do not currently.
 
 
-### Alt attribute
+## Alt attribute
 
 PDF has two main attributes to control the text used by AT, `/Alt` and `/ActualText`.
 The latter would affect other uses, such as cut and paste, preventing the common
@@ -103,7 +100,7 @@ In comparison to the previous section navigation by character with the code usin
 {% include youtube.html id="UkIT2je-sj8" width="medium" comment="vebatim alt by character"%}
 
 
-### Using MathML for each symbol
+## Using MathML for each symbol
 
 It is possible to use MathML, for example tag `{` as
 `<math><mo>{</mo></math>` This would not require any explicit tagging
@@ -126,7 +123,7 @@ from `verbatim-alt` to `verbatim-af`.
   </pre>
 
 
-### Using a MathML table
+## Using a MathML table
 
 An alternative way of using MathML would be to use an `mtable` with a
 `:lines` intent so that it isn't announced as a matrix, but simply "3

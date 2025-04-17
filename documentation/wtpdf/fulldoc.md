@@ -231,7 +231,8 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
 - NVDA addon MathCAT 0.6.8-rc.9
 
-{% include youtube.html id="V2kfks4BceM" width="medium" comment="t6-se acrobat"%}
+
+{% include youtube.html id="JqD21fx-Muw" width="medium" comment="t7-se acrobat"%}
 
 #### Observations
 
@@ -245,7 +246,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
  - Repeats links in TOC lines several times, e.g., _"LINK LINK LINK LINK 1 Introduction"_  (bug in Acrobat?)
  - A similar problem in other places, e.g., reference to bib entries
- - The display of verbatim code is read without the parentheses and curly brackets
+
 
 #### Summary
 
