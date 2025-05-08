@@ -1,0 +1,35 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    testphase=latest,
+  }
+\documentclass{article}
+
+\usepackage{unicode-math}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[alt=some axes]
+\draw (-1.5,0) -- (1.5,0);
+\draw (0,-1.5) -- (0,1.5);
+\end{tikzpicture}
+
+\begin{tikzpicture}[actualtext=just a test]
+\filldraw [gray] (0,0) circle [radius=2pt]
+(1,1) circle [radius=2pt]
+(2,1) circle [radius=2pt]
+(2,0) circle [radius=2pt];
+\draw (0,0) .. controls (1,1) and (2,1) .. (2,0);
+\end{tikzpicture}
+
+\begin{tikzpicture}[artifact]
+\draw (-1.5,0) -- (1.5,0);
+\draw (0,-1.5) -- (0,1.5);
+\draw (-1,0) .. controls (-1,0.555) and (-0.555,1) .. (0,1)
+.. controls (0.555,1) and (1,0.555) .. (1,0);
+\end{tikzpicture}
+
+\end{document}
