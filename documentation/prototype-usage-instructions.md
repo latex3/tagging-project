@@ -82,7 +82,7 @@ It is possible to load only individual modules
 - The `table` module adds tagging support to tables like `tabular`,
   `tabularx`, `tabulary` and `longtable`.
 -  The `math` module enables basic tagging of equations.
-- Finally, the `firstaid` contains small fixes of
+- Finally, the `firstaid` module contains small fixes of
   external packages to make them compatible with the tagging code, e.g.,
   it fixes clashes with the `cleveref` and the `booktabs`
   packages.
@@ -280,7 +280,7 @@ A matrix equation.
 For engines other than LuaTeX, or if you want to modify the automatically
 generated MathML,then LaTeX needs to be supplied MathML in a separate file.
 
-The format of the file may be seen in the example below.  which has a
+The format of the file may be seen in the example below which has a
 prepared section for every equation found in the document. The section
 shows the LaTeX-source and a hash value and a `<math></math>` tag.
 LaTeX can write out a "dummy" version of this file with an empty math
@@ -292,7 +292,7 @@ The math should be filled with a suitable MathML representation and
 the dummy file should then be renamed to `<file>-mathml.html`.
 
 Even if using pdfLaTeX for the final document, you may prefer to use
-LuaLaTeX for an intitial run as LuaLaTeX will write out a version of
+LuaLaTeX for an initial run as LuaLaTeX will write out a version of
 the file with MathML already generated. If needed this MathML may
 still be edited and the file renamed to `<file>-mathml.html` .
 

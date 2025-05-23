@@ -29,7 +29,7 @@ extrahead: youtube-head
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
-* [NVDA's pronounciation settings](#settings)
+* [NVDA's pronunciation settings](#settings)
 </nav>
 
 Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
@@ -355,7 +355,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
 
 ----
 
-## NVDA pronounciation settings {#settings}
+## NVDA pronunciation settings {#settings}
 
 Pronunciation of some technical words was improved by using the following
 settings in the NVDA speech dictionary:
