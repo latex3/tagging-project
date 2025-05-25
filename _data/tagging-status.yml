@@ -540,7 +540,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,firstaid]
-  issues: [83,733,736]
+  issues: [83,733,736,759,790,792,835]
   tests: true
   updated: 2024-10-16
 
@@ -3951,14 +3951,14 @@
 
 - name: esvect
   type: package
-  status: compatible
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
   comments: "Use of math tagging currently requires support from external tools."
-  issues:
+  issues: [836]
   tests: true
-  updated: 2024-08-02
+  updated: 2025-05-12
 
 - name: etaremune
   type: package
@@ -6940,9 +6940,10 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-15
+  comments: "A pdftex engine bug has been fixed."
+  issues: [837]
+  tests: true
+  updated: 2025-05-18
 
 - name: mathpple
   type: package
@@ -7603,12 +7604,14 @@
 
 - name: needspace
   type: package
-  status: compatible
+  status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
+  external-issues: "https://github.com/LaTeX-Package-Repositories/herries-press/issues/54"
   tests: true
-  updated: 2024-08-03
+  updated: 2025-05-12
 
 - name: newapa
   type: package
@@ -10728,8 +10731,12 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv10]
   priority: 2
+  supported-through: [phase-III,tikz]
+  comments: tikz testphase module defines `alt`, `actualtext`, and `artifact` tikz keys.
+  issues: [30]
   references: [1]
-  updated: 2024-07-06
+  test: true
+  updated: 2025-05-08
 
 - name: tikz-cd
   type: package
@@ -10737,7 +10744,8 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [30]
-  updated: 2024-07-06
+  tests: true
+  updated: 2025-05-08
 
 - name: tikzducks
   type: package
@@ -12224,6 +12232,16 @@
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
   tests: false
   updated: 2024-07-05
+
+- name: minimal
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority:
+  comments: "The minimal class is not useful even for MWE's. Don't use it."
+  issues: [284]
+  tests: true
+  updated: 2025-05-08
 
 - name: mitthesis
   type: class

@@ -6,17 +6,18 @@
     testphase=latest,
   }
 \documentclass{article}
-\usepackage{esvect}
-\usepackage{unicode-math}
 
-\title{esvect tagging test}
+\usepackage{unicode-math}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
 
 \begin{document}
 
-$\vv{E}$
-
-\[\vv{E}_{\vv{u}_{\vv{u}}}\]
-
-$\vv*{L}{\Delta}$
+\begin{tikzpicture}
+\matrix[matrix of math nodes]
+  {
+    A & B \\
+  };
+\end{tikzpicture}
 
 \end{document}
