@@ -3871,13 +3871,16 @@
 
 - name: eqnlines
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
-  comments: "Main environment errors with tagging. Breaks tagging support for amsmath environments
-             unless loaded with the option amsmath=false."
+  supported-through: [phase-III,math]
+  comments: "Works with minor deficiencies.
+             Uses adaption of latex-lab-math.ltx internal macro
+             \\math_register_halign_env:nn to grab math contents.
+             Adjustments towards final tagging interfaces likely necessary."
   issues:
   tests: true
-  updated: 2025-02-27
+  updated: 2025-04-09
 
 - name: eqparbox
   type: package
