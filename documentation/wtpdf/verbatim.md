@@ -46,7 +46,7 @@ they do not currently.
 
 PDF has two main attributes to control the text used by AT, `/Alt` and `/ActualText`.
 The latter would affect other uses, such as cut and paste, preventing the common
-requirement to  copy code out of the document. The mechansim used in the
+requirement to  copy code out of the document. The mechanism used in the
 [Example document](larger-example) on this site is for LaTeX to annotate each symbol
 with an `Alt` attribute, and to add an empty `/Span` with an `/Alt` to announce each new line.
 
@@ -115,7 +115,7 @@ from `verbatim-alt` to `verbatim-af`.
 * Verbosity and words used customisable by the reader.
 * In verbose modes, the entering and leaving of mathematics may be announced
 * Braille is compact but using math not text style for symbols (which
-  will be more noticable if Nemeth math Braille is used).
+  will be more noticeable if Nemeth math Braille is used).
 
   <pre>
   main ( ) {
@@ -137,7 +137,7 @@ Each line of the display is then encoded as, for example:
 
 {% include youtube.html id="lhBjP2ZqUIY" width="medium" comment="verbatim mtable"%}
 
-* This example is showing HTML display not PDF, to allow experiementation with the tagging. Equivalent PDF Tagging could be constructed.
+* This example is showing HTML display not PDF, to allow experimentation with the tagging. Equivalent PDF Tagging could be constructed.
 * Each line is announced.
 * Only one "spurious" math is announced in verbose modes.
 
@@ -152,7 +152,7 @@ just for the code block.
 
 In addition, the original code file could be offered as an Embedded Associated file and made available by
 the PDF readers's "Attached Files" menu., allowing the user to extract the code and process it in a code editor
-or other environemnt more directly suited to handling code in an accessible way.
+or other environment more directly suited to handling code in an accessible way.
 
 Some experienced programmers may reasonably argue that for such code blocks
 it is not too important if the document-based reading misses details,
