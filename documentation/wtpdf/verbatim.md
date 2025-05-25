@@ -8,23 +8,20 @@ extrahead: youtube-head
 
 ----
 
-# Screen Reading Examples (DRAFT)
-
-
-## Verbatim
+# Reading Verbatim Code blocks
 
 Verbatim has similar requirements to mathematics, in that symbols
 should ideally be read and not ignored or just read as pause, as is
 used for natural language text.
 
 
-### Default Reading
+## Default Reading
 
 {% include youtube.html id="gnr8bZxxSGQ" width="medium" comment="verbatim some"%}
 
 * Here all the symbols are not read at all.
 
-### Reading with symbol pronunciation set to "All" {#symbols-all}
+## Reading with symbol pronunciation set to "All" {#symbols-all}
 
 Screen readers have customisable settings for punctuation symbols,
 With NVDA, `<nvda>p` cycles between `none`, `some` (the default), `many` and `all`.
@@ -45,11 +42,11 @@ switch to this mode in `<pre>` (html) or `/Code` (pdf) contexts, but
 they do not currently.
 
 
-### Alt attribute
+## Alt attribute
 
 PDF has two main attributes to control the text used by AT, `/Alt` and `/ActualText`.
 The latter would affect other uses, such as cut and paste, preventing the common
-requirement to  copy code out of the document. The mechansim used in the
+requirement to  copy code out of the document. The mechanism used in the
 [Example document](larger-example) on this site is for LaTeX to annotate each symbol
 with an `Alt` attribute, and to add an empty `/Span` with an `/Alt` to announce each new line.
 
@@ -103,7 +100,7 @@ In comparison to the previous section navigation by character with the code usin
 {% include youtube.html id="UkIT2je-sj8" width="medium" comment="vebatim alt by character"%}
 
 
-### Using MathML for each symbol
+## Using MathML for each symbol
 
 It is possible to use MathML, for example tag `{` as
 `<math><mo>{</mo></math>` This would not require any explicit tagging
@@ -118,7 +115,7 @@ from `verbatim-alt` to `verbatim-af`.
 * Verbosity and words used customisable by the reader.
 * In verbose modes, the entering and leaving of mathematics may be announced
 * Braille is compact but using math not text style for symbols (which
-  will be more noticable if Nemeth math Braille is used).
+  will be more noticeable if Nemeth math Braille is used).
 
   <pre>
   main ( ) {
@@ -126,7 +123,7 @@ from `verbatim-alt` to `verbatim-af`.
   </pre>
 
 
-### Using a MathML table
+## Using a MathML table
 
 An alternative way of using MathML would be to use an `mtable` with a
 `:lines` intent so that it isn't announced as a matrix, but simply "3
@@ -140,7 +137,7 @@ Each line of the display is then encoded as, for example:
 
 {% include youtube.html id="lhBjP2ZqUIY" width="medium" comment="verbatim mtable"%}
 
-* This example is showing HTML display not PDF, to allow experiementation with the tagging. Equivalent PDF Tagging could be constructed.
+* This example is showing HTML display not PDF, to allow experimentation with the tagging. Equivalent PDF Tagging could be constructed.
 * Each line is announced.
 * Only one "spurious" math is announced in verbose modes.
 
@@ -155,7 +152,7 @@ just for the code block.
 
 In addition, the original code file could be offered as an Embedded Associated file and made available by
 the PDF readers's "Attached Files" menu., allowing the user to extract the code and process it in a code editor
-or other environemnt more directly suited to handling code in an accessible way.
+or other environment more directly suited to handling code in an accessible way.
 
 Some experienced programmers may reasonably argue that for such code blocks
 it is not too important if the document-based reading misses details,
