@@ -427,14 +427,15 @@
 
 - name: amscd
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv5]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Breaks with unicode-math. Use of math tagging currently requires support from external tools."
   issues:
+  external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
   tests: true
-  updated: 2024-07-12
+  updated: 2025-05-26
 
 - name: amscdx
   type: package
@@ -459,7 +460,7 @@
   updated: 2024-07-17
 
 - name: amsgen
-  ctan-pkg: amsmath
+  ctan-pkg: latex-amsmath
   type: package
   status: compatible
   included-in: [arxiv10]
@@ -476,9 +477,9 @@
   supported-through: [phase-III,math]
   comments: "Use of math tagging currently requires support from external tools."
   references: [1,2]
-  issues: [77]
+  issues: [77,803,811,846,848,850,851,852,857,859]
   tasks: also needs more tests
-  updated: 2024-07-08
+  updated: 2025-05-26
 
 - name: amsmidx
   type: package
@@ -11276,8 +11277,8 @@
   priority: 2
   supported-through: [phase-III,math]
   comments: "Use of math tagging currently requires support from external tools."
-  issues:
-  updated: 2024-07-12
+  issues: [847]
+  updated: 2025-05-26
 
 - name: unicodefonttable
   type: package
