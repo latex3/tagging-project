@@ -1,9 +1,14 @@
-\tagpdfsetup{
- math/mathml/structelem,
-% math/mathml/luamml=true,
- math/alt/use=false,
- math/tex/AF=false
- }
 
+\DocumentMetadata{
+ lang=en,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ pdfstandard=a-4,
+ uncompress,
+ tagging-setup={math/setup=mathml-SE}
+}
+
+% hide existing \DocumentMetadata
+\renewcommand\DocumentMetadata[1]{}
 \input{Sample-AF-Math-LaTeX}
 

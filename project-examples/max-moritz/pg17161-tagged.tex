@@ -2,18 +2,11 @@
   
 \DocumentMetadata{
  lang=en,
+ lang=de-DE, 
  pdfversion=2.0,
  pdfstandard=ua-2,
  pdfstandard=a-4,
- testphase=
-   {
-    phase-III, %lists,footnotes,sectioning,
-               %toc,marginpar,bibliography,floats,
-               %graphics ...
-    table, %tabular, tabularx, longtable
-    title  %maketitle
-   },
- lang=de-DE  
+ tagging-setup={math/mathml/luamml/load=false}
  }
 \AddToHookWithArguments{env/otherlanguage/begin}{\tagpdfsetup{text/lang=\BCPdata{language}}} 
   \documentclass[a4paper,12pt]{article}
