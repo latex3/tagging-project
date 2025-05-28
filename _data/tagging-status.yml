@@ -115,14 +115,14 @@
 
 - name: abraces
   type: package
-  status: compatible
+  status: currently-incompatible
   included-in: [tlc3, arxiv001]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2024-05-28
 
 - name: abstract
   type: package
@@ -155,15 +155,15 @@
 
 - name: accents
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
   supported-through: [phase-III,math]
   comments: "amsmath must be loaded before accents.
-             Use of math tagging currently requires support from external tools."
+             Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: accsupp
   type: package
@@ -353,7 +353,7 @@
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-29
@@ -427,37 +427,37 @@
 
 - name: amscd
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [tlc3, arxiv5]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Breaks with unicode-math. Use of math tagging currently requires support from external tools."
+  comments: "Breaks with unicode-math. No luamml support."
   issues:
   external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
   tests: true
-  updated: 2025-05-26
+  updated: 2025-05-28
 
 - name: amscdx
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in:
   priority: 9
   supported-through: [phase-III,math]
-  comments: "See status of amscd. Use of math tagging currently requires support from external tools."
+  comments: "See status of amscd."
   issues:
   tests: true
-  updated: 2025-05-26
+  updated: 2025-05-28
 
 - name: amsfonts
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-17
+  updated: 2025-05-28
 
 - name: amsgen
   ctan-pkg: latex-amsmath
@@ -497,7 +497,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-09
@@ -515,14 +515,14 @@
 - name: amssymb
   ctan-pkg: amsfonts
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-17
+  updated: 2025-05-28
 
 - name: amstext
   type: package
@@ -530,8 +530,9 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
+  external-issues: ["https://github.com/latex3/luamml/issues/5"]
   tests: true
   updated: 2024-07-12
 
@@ -548,14 +549,14 @@
 - name: amsxtra
   ctan-pkg: latex-amsmath
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "`\\accentedsymbol` not supported by luamml."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: andika
   type: package
@@ -854,15 +855,15 @@
 
 - name: autoaligne
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in:
   priority: 9
   supported-through: [phase-III,math]
   comments: "Errors with vertical alignment types `h` and `b`.
-             Use of math tagging currently requires support from external tools."
+             No luamml support."
   issues:
   tests: true
-  updated: 2024-07-21
+  updated: 2025-05-28
 
 - name: autonum
   type: package
@@ -1885,36 +1886,36 @@
 
 - name: bbm
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv5]
   priority: 4
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: bbold
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv1]
   priority: 5
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-08-02
+  updated: 2025-05-28
 
 - name: bboldx
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-16
+  updated: 2025-05-28
 
 - name: bclogo
   type: package
@@ -2128,7 +2129,7 @@
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-08-02
@@ -2199,14 +2200,14 @@
 
 - name: bm
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-12
+  updated: 2025-05-28
 
 - name: bmpsize
   type: package
@@ -2282,7 +2283,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-17
@@ -2454,7 +2455,7 @@
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-08-02
@@ -9279,9 +9280,10 @@
   status: compatible
   included-in: [tlc3, arxiv1]
   priority: 2
+  supported-through: [phase-III,math]
   issues:
   tests: true
-  updated: 2024-08-01
+  updated: 2025-05-28
 
 - name: repeatindex
   type: package
@@ -9442,21 +9444,21 @@
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
   updated: 2024-07-29
 
 - name: sansmathaccent
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Incompatible with unicode-math. No luamml support."
   priority: 9
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: sansmathfonts
   type: package
@@ -9465,9 +9467,10 @@
   supported-through: [phase-III,math]
   priority: 9
   issues:
-  comments: "Symbols in math mode are not mapped correctly to unicode."
+  comments: "Symbols in math mode are not mapped correctly to unicode.
+            Incompatible with unicode-math. No luamml support."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: savetrees
   type: package
@@ -9494,7 +9497,7 @@
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-29
@@ -9695,7 +9698,7 @@
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
   updated: 2024-07-29
@@ -9894,14 +9897,14 @@
 
 - name: slashed
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv1]
   priority: 5
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "No luamml support."
   issues:
   tests: true
-  updated: 2024-07-26
+  updated: 2025-05-28
 
 - name: smartref
   type: package
@@ -10060,7 +10063,7 @@
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-29
@@ -10092,9 +10095,9 @@
   supported-through: [phase-III,math]
   issues:
   comments: "Picture used to draw symbol should be Artifact.
-             Use of math tagging currently requires support from external tools."
+             No luamml support."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: step
   type: package
@@ -10127,21 +10130,23 @@
 - name: stix2
   ctan-pkg: stix2-type1
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2025-05-28
 
 - name: stmaryrd
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2025-05-28
 
 - name: storebox
   type: package
@@ -10187,7 +10192,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: true
   updated: 2024-07-29
@@ -10312,8 +10317,9 @@
   included-in: [arxiv001]
   priority: 7
   issues: [358]
+  comments: "No luamml support."
   tests: true
-  updated: 2024-07-31
+  updated: 2025-05-28
 
 #------------------------ TTT ----------------------------
 
@@ -10437,7 +10443,9 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
+  package-repository: "https://github.com/lvjr/tabularray"
   issues: [177]
+  external-issues: ["https://github.com/lvjr/tabularray/issues/27"]
   tests: true
   updated: 2024-07-17
 
@@ -10516,25 +10524,25 @@
 
 - name: tensind
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Incompatible with unicode-math."
   issues:
   tests: true
-  updated: 2024-07-25
+  updated: 2025-05-28
 
 - name: tensor
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "luamml support is suboptimal."
   issues:
   tests: true
-  updated: 2024-07-25
+  updated: 2025-05-28
 
 - name: termes-otf
   type: package
@@ -11133,14 +11141,14 @@
 
 - name: turnstile
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "No luamml support."
   issues:
   tests: true
-  updated: 2024-08-13
+  updated: 2025-05-28
 
 - name: turnthepage
   type: package
@@ -11163,13 +11171,14 @@
 
 - name: txfonts
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  comments: Obsolete package; suggested replacement `newtxmath`.
+  comments: "Obsolete package; suggested replacement `newtxmath`.
+             Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2025-05-28
 
 - name: tx-ds
   ctan-pkg: pxtxalfa
@@ -11179,7 +11188,8 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-05-28
 
 - name: tx-of
   ctan-pkg: pxtxalfa
@@ -11189,16 +11199,18 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-05-28
 
 - name: txuprcal
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-05-28
 
 - name: typearea
   type: package
@@ -11243,11 +11255,11 @@
 
 - name: underoverlap
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "No luamml support."
   issues:
   tests: true
   updated: 2024-07-26
@@ -11276,7 +11288,7 @@
   included-in: [tlc3]
   priority: 2
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues: [847]
   updated: 2025-05-26
 
@@ -11318,14 +11330,14 @@
 
 - name: upgreek
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Most commands overwritten by unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: upquote
   type: package
@@ -11627,7 +11639,7 @@
   included-in:
   priority: 9
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments:
   issues:
   tests: false
   updated: 2024-07-21
@@ -11709,12 +11721,13 @@
 
 - name: xfrac
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  comments: "luamml support is suboptimal."
   tests: true
-  updated: 2024-07-18
+  updated: 2025-05-28
 
 - name: xgreek
   type: package
@@ -11790,7 +11803,7 @@
   priority: 2
   supported-through: [phase-III,table]
   issues: [170]
-  comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
+  comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used"
   tests: true
   updated: 2025-03-02
 
@@ -11941,10 +11954,10 @@
   priority: 2
   supported-through: [phase-III,math]
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
-             Use of math tagging currently requires support from external tools."
+             No luamml support."
   issues:
   tests: true
-  updated: 2024-07-26
+  updated: 2025-05-28
 
 #------------------------ YYY ----------------------------
 
@@ -11968,14 +11981,14 @@
 
 - name: yhmath
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools."
+  comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-05-28
 
 - name: youngtab
   type: package
@@ -11983,8 +11996,7 @@
   included-in: [arxiv01]
   priority: 6
   supported-through: [phase-III,math]
-  comments: "Use of math tagging currently requires support from external tools.
-             Diagrams in text mode need Alt text and for rules to be tagged as Artifacts."
+  comments: "No luamml support. Diagrams in text mode need Alt text and for rules to be tagged as Artifacts."
   issues:
   tests: true
   updated: 2024-08-06
