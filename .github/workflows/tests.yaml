@@ -36,6 +36,7 @@ jobs:
   l3build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         # include indicates that we want to set explicitly these combinations
         # and don't want full matrix testing.
@@ -59,7 +60,8 @@ jobs:
       - run: echo $HOME/texlive/bin/x86_64-linux >> $GITHUB_PATH
       - name: Run l3build
         working-directory: tagging-status
-        run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
+        run: "l3build check -S -e ${{ matrix.engine }}"
+        # run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
       # Now we create the artifacts for the logs of failed tests
       - name: Archive failed test output
         if: ${{ always() }}

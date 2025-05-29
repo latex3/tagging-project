@@ -3,7 +3,7 @@ module = "tagging-project-examples"
 test_order = {'structure_test'}
 includetests = {'*'}
 checkengines = {'luatex', 'pdftex'}
-excludetests = {'shapepar-01', 'warpcol-01', 'footnpag-02'}
+-- excludetests = {'shapepar-01', 'warpcol-01', 'footnpag-02'}
 
 local pdf_structure do
   local output_handle
