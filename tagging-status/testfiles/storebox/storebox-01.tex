@@ -7,9 +7,12 @@
   }
 \documentclass{article}
 \usepackage{storebox}
-\usepackage{luatex85}
+\UseName{sys_if_engine_luatex:T}{\usepackage{luatex85}}
 
 \newstorebox{\mybox}
+
+\title{storebox tagging test}
+
 \begin{document}
 
 \storebox{\mybox}{\verb+Supports verbatim #$\empty+}
