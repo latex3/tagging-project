@@ -865,6 +865,16 @@
   tests: true
   updated: 2025-05-28
 
+- name: autobreak
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  comments: "Does not error but the package functionality is disabled with tagging."
+  issues:
+  tests: true
+  updated: 2025-06-03
+
 - name: autonum
   type: package
   status: no-support
@@ -2539,6 +2549,15 @@
   tests: false
   updated: 2024-07-21
 
+- name: cascadiamono-otf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-03
+  
 - name: cases
   type: package
   status: currently-incompatible
@@ -2810,6 +2829,16 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-18
+
+- name: cistercian
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Provides actualtext for `\\cistercian` command."
+  tests: true
+  updated: 2025-06-03
 
 - name: citation-style-language
   type: package
@@ -3483,6 +3512,16 @@
   issues:
   tests: true
   updated: 2025-05-29
+
+- name: dotseqn
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Redefines `equation` and `eqnarray` incompatibly."
+  tests: true
+  updated: 2025-06-03
 
 - name: draftwatermark
   type: package
@@ -4158,14 +4197,6 @@
   tasks: needs tests
   updated: 2024-07-18
 
-- name: exscale
-  type: package
-  status: compatible
-  included-in: [tlc3, arxiv01]
-  priority: 2
-  issues:
-  updated: 2024-07-06
-
 - name: expl3
   type: package
   status: compatible
@@ -4174,6 +4205,14 @@
   issues:
   tests: false
   updated: 2024-07-14
+
+- name: exscale
+  type: package
+  status: compatible
+  included-in: [tlc3, arxiv01]
+  priority: 2
+  issues:
+  updated: 2024-07-06
 
 - name: extarrows
   type: package
@@ -4194,6 +4233,17 @@
   issues:
   tests: true
   updated: 2024-08-02
+
+- name: extpfeil
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  supported-through: [phase-III,math]
+  comments: "Incomplete luamml support. Must be loaded before unicode-math."
+  issues:
+  tests: true
+  updated: 2025-06-03
 
 - name: extramarks
   ctan-pkg: fancyhdr
@@ -4664,8 +4714,20 @@
   priority: 2
   issues:
   tests: true
-  comments: Symbols missing ToUnicode/ActualText.
-  updated: 2024-07-31
+  comments: "Symbols missing ToUnicode.
+             Produces reasonable replacement text in ngPDF with luatex."
+  updated: 2025-06-03
+
+- name: fontawesome6
+  type: package
+  status: partially-compatible
+  included-in: [tlc3, arxiv001]
+  priority: 2
+  issues:
+  tests: true
+  comments: "Symbols missing ToUnicode with pdftex.
+             Fully compatible with luatex."
+  updated: 2025-06-03
 
 - name: fontaxes
   type: package
@@ -5069,9 +5131,19 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
+  comments: "This package was removed from texlive."
   issues:
   tests: false
-  updated: 2024-07-14
+  updated: 2025-06-03
+
+- name: gentium-otf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-03
 
 - name: gentombow
   type: package
@@ -5976,6 +6048,15 @@
 
 #------------------------ JJJ ----------------------------
 
+- name: jetbrainsmono-otf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-03
+
 - name: jmb
   type: package
   status: compatible
@@ -5994,6 +6075,15 @@
   tests: false
   updated: 2024-07-18
 
+- name: juliamono
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-03
+  
 - name: junicode
   type: package
   status: compatible
@@ -6041,6 +6131,16 @@
   issues:
   tests: false
   updated: 2024-07-15
+
+- name: kbordermatrix
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "No luamml support. Not included in texlive."
+  tests: true
+  updated: 2025-06-03
 
 - name: keyfloat
   type: package
@@ -6118,6 +6218,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   supported-through: [phase-III,math]
+  comments: "Loads kpfonts-otf with unicode engine, required for producing mathml."
   issues:
   tests: false
   updated: 2024-07-15
@@ -6127,6 +6228,7 @@
   status: compatible
   included-in:
   priority: 9
+  supported-through: [phase-III,math]
   issues:
   tests: false
   updated: 2024-07-15
@@ -6773,6 +6875,16 @@
   issues:
   tests: false
   updated: 2024-07-15
+
+- name: luciole
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  supported-through: [phase-III,math]
+  issues:
+  tests: false
+  updated: 2025-06-03
 
 - name: luximono
   type: package
@@ -7929,6 +8041,17 @@
   issues: [638]
   tests: true
   updated: 2024-08-22
+
+- name: noitcrul
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  supported-through: [phase-III,math]
+  comments:
+  issues:
+  tests: true
+  updated: 2025-06-03
 
 - name: nolbreaks
   type: package
