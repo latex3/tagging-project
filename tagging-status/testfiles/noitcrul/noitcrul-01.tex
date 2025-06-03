@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{unicode-math}
+\usepackage{noitcrul}
+
+\title{noitcrul tagging test}
+
+\begin{document}
+
+$\noitUnderline{M}$
+
+$\noitUnderline{M}_k$
+% ^ no _k in mathml is luamml bug
+
+% compare with
+$\underline{M}$
+
+\end{document}
