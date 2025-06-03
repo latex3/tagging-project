@@ -44,7 +44,7 @@ local bundleunpack = bundleunpack
 function _ENV.bundleunpack(sourcedirs, sources)
   bundleunpack(sourcedirs, sources)
 
-  cp('**', 'testfiles', unpackdir)
+  cp('**', testfiledir, unpackdir)
 end
 
 test_types = {
