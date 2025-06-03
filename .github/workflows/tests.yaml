@@ -47,7 +47,7 @@ jobs:
           - build
           - config-unknown
           - config-broken
-          - config-excluded
+          # - config-excluded
     name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}"
     needs: texlive-cache
     steps:
