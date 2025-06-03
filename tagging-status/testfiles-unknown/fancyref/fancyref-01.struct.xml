@@ -38,23 +38,19 @@
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
      id="ID.00010"
-     rolemaps-to="P"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.00011"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00012"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="1" ?>   \Fref{eq:pythagoras} has ...
-    </Code>
+    <?MarkedContent page="1" ?>   \Fref{eq:pythagoras} has ...
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00013"
+     id="ID.00012"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -62,22 +58,31 @@
    <?MarkedContent page="1" ?>I did not use:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00014"
-     rolemaps-to="P"
+     id="ID.00013"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00015"
+      id="ID.00014"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00016"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="1" ?>   Equation~(\Fref{eq:pythagoras}) has ...
-    </Code>
+    <?MarkedContent page="1" ?>   Equation~(\Fref{eq:pythagoras}) has ...
    </codeline>
   </verbatim>
+ </text-unit>
+ <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    id="ID.00015"
+    rolemaps-to="Part"
+   >
+  <text xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.00016"
+     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+     Layout:TextAlign="Justify"
+     rolemaps-to="P"
+    >
+   <?MarkedContent page="1" ?>See the next page for further features of the fancyref package, I need this page break for demonstration purposes.
+  </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
     id="ID.00017"
@@ -89,7 +94,7 @@
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
-   <?MarkedContent page="1" ?>See the next page for further features of the fancyref package, I need this page break for demonstration purposes.
+   <?MarkedContent page="2" ?>The cross-reference works also in the middle of a sentence: Pythagoras has proven equation (??). And this cross-reference was made with \fref{eq:pythagoras}. You can see the fancy output from the varioref package.
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -102,40 +107,23 @@
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
-   <?MarkedContent page="2" ?>The cross-reference works also in the middle of a sentence: Pythagoras has proven equation (??). And this cross-reference was made with \fref{eq:pythagoras}. You can see the fancy output from the varioref package.
-  </text>
- </text-unit>
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00021"
-    rolemaps-to="Part"
-   >
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00022"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
-    >
    <?MarkedContent page="2" ?>Oh, you do not like this package and want normal \ref output instead? No problem, just redefine the default format:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00023"
-     rolemaps-to="P"
+     id="ID.00021"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00024"
+      id="ID.00022"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00025"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefdefaultformat}{plain}
-    </Code>
+    <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefdefaultformat}{plain}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00026"
+     id="ID.00023"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -144,11 +132,11 @@
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00027"
+    id="ID.00024"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00028"
+     id="ID.00025"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -156,24 +144,20 @@
    <?MarkedContent page="2" ?>Oh, you do not like “Equation” and want “Eq.” instead? No problem, just redefine the string:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00029"
-     rolemaps-to="P"
+     id="ID.00026"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00030"
+      id="ID.00027"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00031"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   \renewcommand*{\Frefeqname}{Eq.}
-    </Code>
+    <?MarkedContent page="2" ?>   \renewcommand*{\Frefeqname}{Eq.}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00032"
+     id="ID.00028"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -182,11 +166,11 @@
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00033"
+    id="ID.00029"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00034"
+     id="ID.00030"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -194,24 +178,20 @@
    <?MarkedContent page="2" ?>Oh, you are not using the colon as a delimitor but rather the dash? No problem, just redefine the character:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00035"
-     rolemaps-to="P"
+     id="ID.00031"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00036"
+      id="ID.00032"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00037"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefargdelim}{-}
-    </Code>
+    <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefargdelim}{-}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00038"
+     id="ID.00033"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -219,7 +199,7 @@
    <?MarkedContent page="2" ?>The new test equation with label eq-trivial will be:
   </text>
   <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.00039"
+     id="ID.00034"
      title="equation"
      af="tag-AFfile2.tex"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -227,14 +207,14 @@
     >
    <?MarkedContent page="2" ?>a=a
    <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.00040"
+      id="ID.00035"
      >
     <?MarkedContent page="2" ?>(2)
    </Lbl>
    <?MarkedContent page="2" ?>
   </Formula>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00041"
+     id="ID.00036"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -243,11 +223,11 @@
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00042"
+    id="ID.00037"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00043"
+     id="ID.00038"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -255,24 +235,20 @@
    <?MarkedContent page="2" ?>All that stuff may be nice, but you are using eqn instead of eq? No problem, just redefine the prefix:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00044"
-     rolemaps-to="P"
+     id="ID.00039"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00045"
+      id="ID.00040"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00046"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   \fancyrefchangeprefix{\fancyrefeqlabelprefix}{eqn}
-    </Code>
+    <?MarkedContent page="2" ?>   \fancyrefchangeprefix{\fancyrefeqlabelprefix}{eqn}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00047"
+     id="ID.00041"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -280,7 +256,7 @@
    <?MarkedContent page="2" ?>We need a new, fantastic test equation with label eqn-fantastic:
   </text>
   <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.00048"
+     id="ID.00042"
      title="equation"
      af="tag-AFfile3.tex"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -288,14 +264,14 @@
     >
    <?MarkedContent page="2" ?>b=b
    <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.00049"
+      id="ID.00043"
      >
     <?MarkedContent page="2" ?>(3)
    </Lbl>
    <?MarkedContent page="2" ?>
   </Formula>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00050"
+     id="ID.00044"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -304,11 +280,11 @@
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00051"
+    id="ID.00045"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00052"
+     id="ID.00046"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -316,48 +292,36 @@
    <?MarkedContent page="2" ?>Maybe the spacing between “eq.” and “3” is too generous, let us tighten things a bit, with
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00053"
-     rolemaps-to="P"
+     id="ID.00047"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00054"
+      id="ID.00048"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00055"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefdefaultspacing}{%
-    </Code>
+    <?MarkedContent page="2" ?>   \renewcommand*{\fancyrefdefaultspacing}{%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00056"
+      id="ID.00049"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00057"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>     \fancyreftightspacing
-    </Code>
+    <?MarkedContent page="2" ?>     \fancyreftightspacing
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00058"
+      id="ID.00050"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00059"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="2" ?>   }
-    </Code>
+    <?MarkedContent page="2" ?>   }
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00060"
+     id="ID.00051"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -366,11 +330,11 @@
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00061"
+    id="ID.00052"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00062"
+     id="ID.00053"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -378,24 +342,20 @@
    <?MarkedContent page="2" ?>Perhaps you want parentheses around the cross-reference? No problem, just redefine the appropriate hook:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00063"
-     rolemaps-to="P"
+     id="ID.00054"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00064"
+      id="ID.00055"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00065"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \renewcommand*{\fancyrefhook}[1]{(#1)}
-    </Code>
+    <?MarkedContent page="3" ?>   \renewcommand*{\fancyrefhook}[1]{(#1)}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00066"
+     id="ID.00056"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -403,29 +363,25 @@
    <?MarkedContent page="3" ?>The result from \fref{eq-trivial} is (eq.(??)). In fact this could have been obtained easier, as I provided an package option just for this purpose:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00067"
-     rolemaps-to="P"
+     id="ID.00057"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00068"
+      id="ID.00058"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00069"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \usepackage[paren]{fancyref}
-    </Code>
+    <?MarkedContent page="3" ?>   \usepackage[paren]{fancyref}
    </codeline>
   </verbatim>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00070"
+    id="ID.00059"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00071"
+     id="ID.00060"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -433,20 +389,109 @@
    <?MarkedContent page="3" ?>Now let us try something really cool. What about introducing a new type of objects, e.g. theorems, with thm prefixed, new strings like “Theorem” added and the cross-reference in huge italics? Also, as you have read in that bargain textbook on typography (“cAN U rEaD It” by John Badmountain), cross-references to theorems should be typeset as footnotes. No problem: First, we need a new prefix:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00072"
-     rolemaps-to="P"
+     id="ID.00061"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00073"
+      id="ID.00062"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00074"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \newcommand*{\fancyrefthmlabelprefix}{thm}
-    </Code>
+    <?MarkedContent page="3" ?>   \newcommand*{\fancyrefthmlabelprefix}{thm}
+   </codeline>
+  </verbatim>
+  <text xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.00063"
+     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+     Layout:TextAlign="Justify"
+     rolemaps-to="P"
+    >
+   <?MarkedContent page="3" ?>Then we declare a new fancyref format called foot:
+  </text>
+  <verbatim xmlns="https://www.latex-project.org/ns/dflt"
+     id="ID.00064"
+     rolemaps-to="Code"
+    >
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00065"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>   \frefformat{foot}{\fancyrefthmlabelprefix}{%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00066"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>     \unskip\footnote{%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00067"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>       \huge\itshape\Frefthmname\fancyrefdefaultspacing#1#3%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00068"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>     }%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00069"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>   }
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00070"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>   \Frefformat{foot}{\fancyrefthmlabelprefix}{%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00071"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>     \unskip\footnote{%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00072"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>       \huge\itshape\Frefthmname\fancyrefdefaultspacing#1#3%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00073"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>     }%
+   </codeline>
+   <codeline xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.00074"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
+      rolemaps-to="Sub"
+     >
+    <?MarkedContent page="3" ?>   }
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
@@ -455,220 +500,63 @@
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
-   <?MarkedContent page="3" ?>Then we declare a new fancyref format called foot:
-  </text>
-  <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00076"
-     rolemaps-to="P"
-    >
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00077"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00078"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \frefformat{foot}{\fancyrefthmlabelprefix}{%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00079"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00080"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     \unskip\footnote{%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00081"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00082"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>       \huge\itshape\Frefthmname\fancyrefdefaultspacing#1#3%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00083"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00084"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     }%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00085"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00086"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   }
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00087"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00088"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \Frefformat{foot}{\fancyrefthmlabelprefix}{%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00089"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00090"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     \unskip\footnote{%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00091"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00092"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>       \huge\itshape\Frefthmname\fancyrefdefaultspacing#1#3%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00093"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00094"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     }%
-    </Code>
-   </codeline>
-   <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00095"
-      rolemaps-to="Sub"
-     >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00096"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   }
-    </Code>
-   </codeline>
-  </verbatim>
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00097"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
-    >
    <?MarkedContent page="3" ?>The strings have to be setup in the preamble of the document, I did this already, because I knew it would be necessary. The code I used was:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00098"
-     rolemaps-to="P"
+     id="ID.00076"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00099"
+      id="ID.00077"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00100"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \fancyrefaddcaptions{english}{%
-    </Code>
+    <?MarkedContent page="3" ?>   \fancyrefaddcaptions{english}{%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00101"
+      id="ID.00078"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00102"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     \newcommand*{\Frefthmname}{Theorem}%
-    </Code>
+    <?MarkedContent page="3" ?>     \newcommand*{\Frefthmname}{Theorem}%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00103"
+      id="ID.00079"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00104"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     \newcommand*{\frefthmname}{%
-    </Code>
+    <?MarkedContent page="3" ?>     \newcommand*{\frefthmname}{%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00105"
+      id="ID.00080"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00106"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>       \MakeLowercase{\Frefthmname}%
-    </Code>
+    <?MarkedContent page="3" ?>       \MakeLowercase{\Frefthmname}%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00107"
+      id="ID.00081"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00108"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>     }%
-    </Code>
+    <?MarkedContent page="3" ?>     }%
    </codeline>
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00109"
+      id="ID.00082"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00110"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   }%
-    </Code>
+    <?MarkedContent page="3" ?>   }%
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00111"
+     id="ID.00083"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
@@ -677,39 +565,39 @@
   </text>
  </text-unit>
  <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00112"
+    id="ID.00084"
     rolemaps-to="Sect"
    >
   <Caption xmlns="http://iso.org/pdf2/ssn"
-     id="ID.00113"
+     id="ID.00085"
     >
    <?MarkedContent page="3" ?>Theorem 
    <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.00114"
+      id="ID.00086"
      >
     <?MarkedContent page="3" ?>1
    </Lbl>
    <?MarkedContent page="3" ?> (Murphy)
   </Caption>
   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00115"
+     id="ID.00087"
      rolemaps-to="Part"
     >
    <text xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00116"
+      id="ID.00088"
       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
       Layout:TextAlign="Justify"
       rolemaps-to="P"
      >
     <?MarkedContent page="3" ?> If something
     <Em xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00117"
+       id="ID.00089"
       >
      <?MarkedContent page="3" ?> can
     </Em>
     <?MarkedContent page="3" ?> go wrong, it
     <Em xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00118"
+       id="ID.00090"
       >
      <?MarkedContent page="3" ?> will
     </Em>
@@ -718,47 +606,47 @@
   </text-unit>
  </theorem-like>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00119"
+    id="ID.00091"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00120"
+     id="ID.00092"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
    <?MarkedContent page="3" ?>Now let us try it. \Fref[foot]{thm-murphy} comes out as (
    <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00121"
+      id="ID.00093"
       rolemaps-to="Lbl"
       referenced-as="2"
      >
      <?References objects="1" ?>
     <Link xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00122"
+       id="ID.00094"
       >
      <?MarkedContent page="3" ?>1
      <?ReferencedObject type="Annot" page="1" ?>
     </Link>
    </footnotemark>
    <footnote xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00123"
+      id="ID.00095"
       rolemaps-to="FENote"
       referenced-as="1"
      >
      <?References objects="2" ?>
     <footnotelabel xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.00126"
+       id="ID.00098"
        rolemaps-to="Lbl"
       >
      <?MarkedContent page="3" ?>1
     </footnotelabel>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.00124"
+       id="ID.00096"
        rolemaps-to="Part"
       >
      <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.00125"
+        id="ID.00097"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -770,60 +658,56 @@
    <?MarkedContent page="3" ?>). Oops, the hook is still at work, I will just reset it to its default value:
   </text>
   <verbatim xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00127"
-     rolemaps-to="P"
+     id="ID.00099"
+     rolemaps-to="Code"
     >
    <codeline xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00128"
+      id="ID.00100"
+      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+      Layout:TextAlign="Justify"
       rolemaps-to="Sub"
      >
-    <Code xmlns="http://iso.org/pdf/ssn"
-       id="ID.00129"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-      >
-     <?MarkedContent page="3" ?>   \renewcommand*{\fancyrefhook}[1]{#1}
-    </Code>
+    <?MarkedContent page="3" ?>   \renewcommand*{\fancyrefhook}[1]{#1}
    </codeline>
   </verbatim>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00130"
+     id="ID.00101"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
    <?MarkedContent page="3" ?>And now?
    <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00131"
+      id="ID.00102"
       rolemaps-to="Lbl"
       referenced-as="4"
      >
      <?References objects="3" ?>
     <Link xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00132"
+       id="ID.00103"
       >
      <?MarkedContent page="3" ?>2
      <?ReferencedObject type="Annot" page="1" ?>
     </Link>
    </footnotemark>
    <footnote xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00133"
+      id="ID.00104"
       rolemaps-to="FENote"
       referenced-as="3"
      >
      <?References objects="4" ?>
     <footnotelabel xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.00136"
+       id="ID.00107"
        rolemaps-to="Lbl"
       >
      <?MarkedContent page="3" ?>2
     </footnotelabel>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.00134"
+       id="ID.00105"
        rolemaps-to="Part"
       >
      <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.00135"
+        id="ID.00106"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
