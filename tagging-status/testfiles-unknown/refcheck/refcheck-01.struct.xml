@@ -1,12 +1,12 @@
 <Document xmlns="http://iso.org/pdf2/ssn"
-   id="ID.00002"
+   id="ID.002"
   >
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00005"
+    id="ID.005"
     rolemaps-to="Part"
    >
   <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.00006"
+     id="ID.006"
      title="equation"
      af="tag-AFfile1.tex"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -14,19 +14,19 @@
     >
    <?MarkedContent page="1" ?>a=b
    <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.00007"
+      id="ID.007"
      >
     <?MarkedContent page="1" ?>(1)
    </Lbl>
-   <?MarkedContent page="1" ?>?eq1?
+   <?MarkedContent page="1" ?>eq1
   </Formula>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00008"
+    id="ID.008"
     rolemaps-to="Part"
    >
   <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.00009"
+     id="ID.009"
      title="equation"
      af="tag-AFfile2.tex"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -34,39 +34,53 @@
     >
    <?MarkedContent page="1" ?>c=d
    <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.00010"
+      id="ID.010"
      >
     <?MarkedContent page="1" ?>(2)
    </Lbl>
-   <?MarkedContent page="1" ?>?eq2?
+   <?MarkedContent page="1" ?>eq2
   </Formula>
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00011"
+     id="ID.011"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
-   <?MarkedContent page="1" ?>(??), (??).
+   <?MarkedContent page="1" ?>(1), (2).
   </text>
  </text-unit>
  <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.00012"
+    id="ID.012"
     rolemaps-to="Part"
    >
   <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00013"
+     id="ID.013"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="P"
     >
-   <?MarkedContent page="1" ?>[?], [?]
+   <?MarkedContent page="1" ?>[
+   <Reference xmlns="http://iso.org/pdf/ssn"
+      id="ID.014"
+     >
+     <?References objects="1" ?>
+    <?MarkedContent page="1" ?>1
+   </Reference>
+   <?MarkedContent page="1" ?>], [
+   <Reference xmlns="http://iso.org/pdf/ssn"
+      id="ID.015"
+     >
+     <?References objects="2" ?>
+    <?MarkedContent page="1" ?>3
+   </Reference>
+   <?MarkedContent page="1" ?>]
   </text>
  </text-unit>
  <Sect xmlns="http://iso.org/pdf2/ssn"
-    id="ID.00014"
+    id="ID.016"
    >
   <section xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00015"
+     id="ID.017"
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:TextAlign="Justify"
      rolemaps-to="H1"
@@ -74,24 +88,25 @@
    <?MarkedContent page="1" ?>References
   </section>
   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.00016"
+     id="ID.018"
      rolemaps-to="Part"
     >
    <list xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.00017"
+      id="ID.019"
       xmlns:List="http://iso.org/pdf/ssn/List"
       List:ListNumbering="Ordered"
       rolemaps-to="L"
      >
     <LI xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00018"
+       id="ID.020"
+       referenced-as="1"
       >
      <Lbl xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00019"
+        id="ID.021"
        >
-      <?MarkedContent page="1" ?>?book1?
+      <?MarkedContent page="1" ?>book1
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.00020"
+         id="ID.022"
          title="math"
          af="tag-AFfile3.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -102,14 +117,14 @@
       <?MarkedContent page="1" ?>[1]
      </Lbl>
      <LBody xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00021"
+        id="ID.023"
        >
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.00022"
+         id="ID.024"
          rolemaps-to="Part"
         >
        <text xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.00023"
+          id="ID.025"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
@@ -120,14 +135,14 @@
      </LBody>
     </LI>
     <LI xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00024"
+       id="ID.026"
       >
      <Lbl xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00025"
+        id="ID.027"
        >
       <?MarkedContent page="1" ?>?book2?
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.00026"
+         id="ID.028"
          title="math"
          af="tag-AFfile4.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -138,14 +153,14 @@
       <?MarkedContent page="1" ?>[2]
      </Lbl>
      <LBody xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00027"
+        id="ID.029"
        >
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.00028"
+         id="ID.030"
          rolemaps-to="Part"
         >
        <text xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.00029"
+          id="ID.031"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
@@ -156,14 +171,15 @@
      </LBody>
     </LI>
     <LI xmlns="http://iso.org/pdf2/ssn"
-       id="ID.00030"
+       id="ID.032"
+       referenced-as="2"
       >
      <Lbl xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00031"
+        id="ID.033"
        >
-      <?MarkedContent page="1" ?>?book3?
+      <?MarkedContent page="1" ?>book3
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.00032"
+         id="ID.034"
          title="math"
          af="tag-AFfile5.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -174,14 +190,14 @@
       <?MarkedContent page="1" ?>[3]
      </Lbl>
      <LBody xmlns="http://iso.org/pdf2/ssn"
-        id="ID.00033"
+        id="ID.035"
        >
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.00034"
+         id="ID.036"
          rolemaps-to="Part"
         >
        <text xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.00035"
+          id="ID.037"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
