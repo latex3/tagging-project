@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{unicode-math}
+\usepackage{bracealign}
+
+\begin{document}
+
+\[
+\rho c \frac{\partial T}{\partial t} =
+\begin{bracealign}
+\underbrace{
+\begin{bracealign}
+\underbrace{
+- \lambda \frac{\partial^2 T}{\partial x^2}
+}_{\text{diffusion}}
+- \underbrace{
+\mu (T^4 - {T_0}^4)
+}_{\text{radiative loss}}
+\end{bracealign}
+}_{\text{heat transfers}}
++ \underbrace{
+\sum_{i=1}^{n} \dot{q}_i
+}_{\text{heat sources}}
+\end{bracealign}
+\]
+
+\end{document}
