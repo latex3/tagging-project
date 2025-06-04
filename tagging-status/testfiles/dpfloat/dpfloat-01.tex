@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{dpfloat}
+
+\begin{document}
+
+Some text
+\begin{figure}[p]% will be the left-side figure
+\begin{leftfullpage}
+This is the left side figure
+\end{leftfullpage}
+\end{figure}
+\begin{figure}[p]% will be the right-side figure
+\begin{fullpage}
+This is the right side figure
+\end{fullpage}
+\end{figure}
+Some more text
+
+\end{document}

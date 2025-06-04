@@ -2287,6 +2287,17 @@
   tests: true
   updated: 2024-07-15
 
+- name: bracealign
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  supported-through: [phase-III,math]
+  issues:
+  comments:
+  tests: true
+  updated: 2025-06-04
+
 - name: braket
   type: package
   status: compatible
@@ -3015,6 +3026,16 @@
   issues:
   updated: 2024-07-06
 
+- name: colorframed
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  comments: "See entry for the `framed` package."
+  issues:
+  tests: true
+  updated: 2025-06-04
+
 - name: colorspace
   type: package
   status: unknown
@@ -3523,6 +3544,16 @@
   tests: true
   updated: 2025-06-03
 
+- name: dpfloat
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [873]
+  tests: true
+  comments:
+  updated: 2025-06-04
+
 - name: draftwatermark
   type: package
   status: compatible
@@ -3694,6 +3725,16 @@
   tests: true
   comments: "Does not work with pdflatex or lualatex. Suggested replacement is the package bxeepic."
   updated: 2024-08-22
+
+- name: efbox
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: true
+  comments: "No errors but there is no tagging information about the boxes."
+  updated: 2025-06-04
 
 - name: eforms
   type: package
@@ -7755,6 +7796,16 @@
   priority: 2
   updated: 2024-07-06
 
+- name: nath
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  comments: "Incompatibly redefines nearly all math commands."
+  tests: false
+  updated: 2025-06-03
+
 - name: natmove
   type: package
   status: compatible
@@ -10148,6 +10199,17 @@
   issues:
   tests: false
   updated: 2024-07-15
+
+- name: spalign
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  supported-through: [phase-III,table,math]
+  issues:
+  comments: "No luamml support for `\\spalignsys`. Otherwise appears compatible."
+  tests: true
+  updated: 2025-06-03
 
 - name: spark-otf
   type: package

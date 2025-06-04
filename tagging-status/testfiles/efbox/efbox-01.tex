@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{efbox}
+
+\begin{document}
+
+\efbox{Foo}
+
+\efbox[rightline=false,topline=false]{Foo}
+
+\efbox[topline,backgroundcolor=red]{Foo}
+
+\efbox[linewidth=2pt,font=\Large]{Large Foo}
+
+\efbox[rightline=false,topline=false,linecolor=blue,linewidth=2pt]{Foo}
+
+\efbox[margin=10pt,backgroundcolor=yellow,font=\ttfamily\itshape]{Italic
+Typewriter Foo}
+
+\efbox[linewidth=3pt,margin=5pt,backgroundcolor=red]{Foo}
+
+\efbox[hidealllines,backgroundcolor=red]{Foo}
+
+\efbox{Foo}
+
+\efbox[hidealllines,backgroundcolor=red,margin=15pt]{Foo}
+
+\efbox[margin=15pt,linewidth=5pt]{Foo}
+
+\efbox[bottomline=false,rightline=false,linewidth=2pt,margin=1pt,
+backgroundcolor=yellow]{Foo}
+
+\efbox{Foo}
+
+\end{document}
