@@ -6,26 +6,31 @@
     tagging=on
   }
 \documentclass{article}
+
+\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
 \usepackage{autoaligne}
 
 \begin{document}
 
 % this is okay
 Alignement c :
-\autoaligne(c){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}\medbreak
+\autoaligne(c){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}
+\medbreak
 
 % these error
 Alignement h :
-\autoaligne(h){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}\medbreak
-%Alignement b :
-%\autoaligne(b){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}
+\autoaligne(h){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}
+\medbreak
+
+Alignement b :
+\autoaligne(b){4=1+1+1+1\\=1+1+2\\=2+2\\=3+1}
 
 %Un calcul :
-%\definirseparateurs{\\}{+||-}{}
-%\autoaligne[*c](h){
-%15+2\times3-4\times5\\
-%15+6-20\\
-%21+-20\\
-%1}
+\definirseparateurs{\\}{+||-}{}
+\autoaligne[*c](h){
+15+2\times3-4\times5\\
+15+6-20\\
+21+-20\\
+1}
 
 \end{document}
