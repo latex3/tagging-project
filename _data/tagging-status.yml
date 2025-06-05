@@ -477,7 +477,7 @@
   supported-through: [phase-III,math]
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859]
+  issues: [77,712,803,811,846,848,850,851,852,857,859,875]
   tasks: also needs more tests
   updated: 2025-05-26
 
@@ -871,7 +871,7 @@
   included-in:
   priority: 9
   comments: "Does not error but the package functionality is disabled with tagging."
-  issues:
+  issues: [877]
   tests: true
   updated: 2025-06-03
 
@@ -2489,7 +2489,7 @@
   priority: 5
   supported-through: [phase-III,math]
   comments: "No luamml support. Text mode commands are tagged incorrectly."
-  issues:
+  issues: [880]
   tests: true
   updated: 2025-05-29
 
@@ -3539,7 +3539,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [876]
   comments: "Redefines `equation` and `eqnarray` incompatibly."
   tests: true
   updated: 2025-06-03
@@ -6178,7 +6178,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [878]
   comments: "No luamml support. Not included in texlive."
   tests: true
   updated: 2025-06-03
@@ -7064,6 +7064,15 @@
   tests: false
   updated: 2024-07-15
 
+- name: marginalia
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [874]
+  tests: true
+  updated: 2025-06-05
+
 - name: marginfit
   type: package
   status: partially-compatible
@@ -7311,7 +7320,7 @@
   status: unknown
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [868]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -11945,7 +11954,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  issues:
+  issues: [879]
   comments: "luamml support is suboptimal."
   tests: true
   updated: 2025-05-28
