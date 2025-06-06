@@ -1204,14 +1204,13 @@
 - name: babel/esperanto
   ctan-pkg: babel-esperanto
   type: package
-  status: unknown
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  comments:
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-09-01
+  comments: "Shorthand `^h` does not correctly map to Unicode."
+  issues: [752]
+  tests: true
+  updated: 2025-06-06
 
 - name: babel/estonian
   ctan-pkg: babel-estonian
