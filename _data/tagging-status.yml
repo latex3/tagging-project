@@ -3150,7 +3150,7 @@
   included-in:
   priority: 5
   comments: "Breaks TOC and errors in math mode."
-  issues:
+  issues: [885]
   tests: true
   updated: 2024-07-18
 
@@ -3168,9 +3168,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  comments: "`blockquote` can't be used."
+  comments: "`blockquote` produces duplicate tags."
   issues: [3]
-  updated: 2024-07-06
+  tests: true
+  updated: 2025-06-05
 
 - name: csvsimple
   type: package
@@ -3244,7 +3245,7 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [561]
   tests: true
   updated: 2024-08-14
 
@@ -3333,7 +3334,7 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 2
-  issues:
+  issues: [887]
   tests: true
   comments: "Missing TextDecoration attributes."
   updated: 2024-08-01
@@ -4013,7 +4014,7 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  issues:
+  issues: [577]
   tests: true
   updated: 2024-08-14
 
@@ -4732,7 +4733,7 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [888]
   comments: Redefines `\\@makecol`.
   tests: true
   tasks: Revisit once OR is altered.
