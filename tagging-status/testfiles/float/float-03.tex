@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{float}
+
+\title{float tagging test - 3}
+
+\newfloat{myfloat}{tbp}{lop}[section]
+
+\begin{document}
+
+\listof{myfloat}{List of my floats}
+
+\begin{myfloat}
+Some figure
+\caption{A caption}
+\end{myfloat}
+
+\begin{myfloat}
+Another figure
+\caption{Another caption}
+\end{myfloat}
+
+\end{document}
