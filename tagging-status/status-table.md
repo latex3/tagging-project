@@ -67,8 +67,10 @@ Other:
 <a href="{{u}}">{{ltext | slice: -2}}/{{ltext | slice: -1}}</a>
 {% endfor %}
 {% endif %}
-{% if p.tests %}
+{% if p.tests == true %}
 <a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
+{% elsif p.tests %}
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles-{{p.tests}}/{{p.name}}/">test(s)</a>
 {% endif %}
 </td>
 <td>
