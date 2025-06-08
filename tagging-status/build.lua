@@ -3,6 +3,12 @@ module = "tagging-project-examples"
 test_order = {'structure_test'}
 includetests = {'*'}
 checkengines = {'luatex', 'pdftex'}
+checkconfig = {
+  'build',
+  'config-broken',
+  'config-unknown',
+}
+checkruns = 3
 -- excludetests = {'shapepar-01', 'warpcol-01', 'footnpag-02'}
 
 local pdf_structure do
