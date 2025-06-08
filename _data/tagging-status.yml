@@ -2237,6 +2237,15 @@
   tests: true
   updated: 2024-08-16
 
+- name: bonum-otf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-07
+
 - name: booklet
   type: package
   status: currently-incompatible
@@ -6910,12 +6919,14 @@
 
 - name: lucidabr
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
+  supported-through: [phase-III,math]
+  comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2025-06-07
 
 - name: luciole
   type: package
@@ -7184,6 +7195,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
+  supported-through: [phase-III,math]
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
   issues: [837]
@@ -7417,7 +7429,7 @@
   status: unknown
   included-in: [arxiv01]
   priority: 6
-  issues:
+  issues: [793]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -9089,6 +9101,15 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: plex-otf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-06-07
 
 - name: plex-sans
   ctan-pkg: plex
