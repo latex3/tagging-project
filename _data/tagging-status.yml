@@ -477,7 +477,7 @@
   supported-through: [phase-III,math]
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859]
+  issues: [77,712,803,811,846,848,850,851,852,857,859,875]
   tasks: also needs more tests
   updated: 2025-05-26
 
@@ -859,11 +859,11 @@
   included-in:
   priority: 9
   supported-through: [phase-III,math]
-  comments: "Errors with vertical alignment types `h` and `b`.
+  comments: "Tags each character as a separate formula.
              No luamml support."
-  issues:
+  issues: [881]
   tests: true
-  updated: 2025-05-28
+  updated: 2025-06-08
 
 - name: autobreak
   type: package
@@ -871,7 +871,7 @@
   included-in:
   priority: 9
   comments: "Does not error but the package functionality is disabled with tagging."
-  issues:
+  issues: [877]
   tests: true
   updated: 2025-06-03
 
@@ -1204,14 +1204,13 @@
 - name: babel/esperanto
   ctan-pkg: babel-esperanto
   type: package
-  status: unknown
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  comments:
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-09-01
+  comments: "Shorthand `^h` does not correctly map to Unicode."
+  issues: [752]
+  tests: true
+  updated: 2025-06-06
 
 - name: babel/estonian
   ctan-pkg: babel-estonian
@@ -1993,6 +1992,7 @@
   references: [2]
   issues: [18]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
+  tasks: needs tests
   updated: 2024-07-07
 
 - name: biblatex-chicago
@@ -2001,7 +2001,7 @@
   included-in:
   priority: 2
   comments: See biblatex.
-  tasks: Package should be changed to use sockets in its footnote adaption
+  tasks: Package should be changed to use sockets in its footnote adaption; needs tests
   issues: [62]
   updated: 2024-07-15
 
@@ -2489,7 +2489,7 @@
   priority: 5
   supported-through: [phase-III,math]
   comments: "No luamml support. Text mode commands are tagged incorrectly."
-  issues:
+  issues: [880]
   tests: true
   updated: 2025-05-29
 
@@ -2508,7 +2508,7 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Incorrect reading order of captions."
-  issues:
+  issues: [882]
   tests: true
   updated: 2024-07-22
 
@@ -2518,7 +2518,7 @@
   status: currently-incompatible
   included-in:
   comments: "Incorrect reading order of captions."
-  issues:
+  issues: [883]
   tests: true
   updated: 2024-07-22
 
@@ -3054,6 +3054,7 @@
   supported-through: [phase-III,table]
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
   issues: [90,379,749]
+  tasks: needs tests
   updated: 2024-10-29
 
 - name: comfortaa
@@ -3110,7 +3111,7 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Typesets the content many times which produces incorrect tags."
-  issues:
+  issues: [884]
   tests: true
   updated: 2024-07-25
 
@@ -3150,7 +3151,7 @@
   included-in:
   priority: 5
   comments: "Breaks TOC and errors in math mode."
-  issues:
+  issues: [885]
   tests: true
   updated: 2024-07-18
 
@@ -3168,9 +3169,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  comments: "`blockquote` can't be used."
+  comments: "`blockquote` produces duplicate tags."
   issues: [3]
-  updated: 2024-07-06
+  tests: true
+  updated: 2025-06-05
 
 - name: csvsimple
   type: package
@@ -3244,7 +3246,7 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [561]
   tests: true
   updated: 2024-08-14
 
@@ -3333,7 +3335,7 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 2
-  issues:
+  issues: [887]
   tests: true
   comments: "Missing TextDecoration attributes."
   updated: 2024-08-01
@@ -3501,6 +3503,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   issues: [44]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: doclicense
@@ -3539,7 +3542,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [876]
   comments: "Redefines `equation` and `eqnarray` incompatibly."
   tests: true
   updated: 2025-06-03
@@ -3897,7 +3900,9 @@
   included-in: [tlc3, arxiv5]
   priority: 2
   references: [1]
-  updated: 2024-07-06
+  issues: [889]
+  tests: true
+  updated: 2025-06-05
 
 - name: enumext
   type: package
@@ -4013,7 +4018,7 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  issues:
+  issues: [577]
   tests: true
   updated: 2024-08-14
 
@@ -4610,8 +4615,9 @@
   priority: 2
   comments: "[H] floats are not yet automatically tagged."
   references: [1]
-  tasks: needs tests
-  updated: 2024-07-06
+  issues: [890]
+  tests: true
+  updated: 2025-06-05
 
 - name: floatpag
   type: package
@@ -4732,7 +4738,7 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [888]
   comments: Redefines `\\@makecol`.
   tests: true
   tasks: Revisit once OR is altered.
@@ -4850,7 +4856,7 @@
   priority: 7
   issues:
   tests: true
-  tasks: "Similar issues as footnote package." 
+  comments: "Similar issues as footnote package." 
   updated: 2024-08-07
 
 - name: footnoterange
@@ -5707,12 +5713,14 @@
 
 - name: hyperref
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [package]
   references: [2]
-  updated: 2024-07-06
+  issues: [892]
+  comments: "Forms not supported; use l3pdffield-testphase for forms."
+  updated: 2025-06-07
 
 - name: hyperxmp
   type: package
@@ -6178,7 +6186,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [878]
   comments: "No luamml support. Not included in texlive."
   tests: true
   updated: 2025-06-03
@@ -6704,6 +6712,7 @@
   issues: [22]
   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
   related-issues: [38]
+  tasks: needs tests
   updated: 2025-03-02
 
 - name: lpic
@@ -7064,6 +7073,15 @@
   tests: false
   updated: 2024-07-15
 
+- name: marginalia
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [874]
+  tests: true
+  updated: 2025-06-05
+
 - name: marginfit
   type: package
   status: partially-compatible
@@ -7110,6 +7128,7 @@
   comments: "Missing ToUnicode for text symbols."
   issues: [272]
   tests: false
+  tasks: needs tests
   updated: 2024-07-25
 
 - name: mathabx
@@ -7311,7 +7330,7 @@
   status: unknown
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [868]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -7438,6 +7457,7 @@
   priority: 2
   comments: Footnote patching doesn’t work but otherwise supported.
   issues: [67]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: midfloat
@@ -8222,8 +8242,7 @@
   priority: 2
   issues:
   tests: false
-  tasks: raise with author, only available in ctan `.tds.zip` archive. Not installed in texlive.
-  updated: 2024-07-15
+  updated: 2025-06-07
 
 - name: notocondensed-mono
   ctan-pkg: notocondensed
@@ -8233,8 +8252,7 @@
   priority: 9
   issues:
   tests: false
-  tasks: raise with author, only available in ctan `.tds.zip` archive. Not installed in texlive.
-  updated: 2024-07-15
+  updated: 2025-06-07
 
 - name: notomath
   type: package
@@ -9650,14 +9668,14 @@
 
 - name: sansmath
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
-  updated: 2024-07-29
+  updated: 2025-06-08
 
 - name: sansmathaccent
   type: package
@@ -9689,7 +9707,7 @@
   priority: 2
   issues:
   tests: true
-  tasks: "Redefines `\\maketitle` and uses titlesec to redefine section commands."
+  comments: "Redefines `\\maketitle` and uses titlesec to redefine section commands."
   updated: 2024-08-05
 
 - name: scalefnt
@@ -10405,6 +10423,7 @@
   priority: 2
   comments: Issue when hyperref and both listoffigures are used.
   issues: [85]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: subdepth
@@ -10678,6 +10697,7 @@
   supported-through: [phase-III,table]
   comments: An old issue has been fixed.
   issues: [42]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: tabulary
@@ -11025,7 +11045,7 @@
   comments: tikz testphase module defines `alt`, `actualtext`, and `artifact` tikz keys.
   issues: [30]
   references: [1]
-  test: true
+  tests: true
   updated: 2025-05-08
 
 - name: tikz-cd
@@ -11129,6 +11149,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [24]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: titletoc
@@ -11138,6 +11159,7 @@
   priority: 2
   comments: Mentioned in issue.
   issues: [24]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: titling
@@ -11693,6 +11715,7 @@
   supported-through: [phase-III,firstaid]
   comments: firstaid is required for the fix of issue 49
   issues: [49]
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: version
@@ -11759,10 +11782,11 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 4
-  comments: "Missing ToUnicode for text symbols."
+  comments: "Missing ToUnicode for text symbols. amsmath must be loaded before wasysym."
   issues: [272]
   tests: false
-  updated: 2024-07-25
+  tasks: needs tests
+  updated: 2025-06-08
 
 - name: watermark
   type: package
@@ -11816,7 +11840,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  comments: generated tagging structure is incorrect
+  comments: Generated tagging structure is incorrect.
   issues: [40]
   tests: true
   updated: 2024-07-10
@@ -11826,7 +11850,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  comments: generated tagging structure is incorrect
+  comments: Generated tagging structure is incorrect.
   issues:
   tests: true
   updated: 2024-07-26
@@ -11872,7 +11896,7 @@
   priority: 2
   issues:
   tests: false
-  comments: This package now simply loads xr.
+  comments: "This package now simply loads xr."
   updated: 2024-08-04
 
 - name: xcolor
@@ -11945,7 +11969,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  issues:
+  issues: [879]
   comments: "luamml support is suboptimal."
   tests: true
   updated: 2025-05-28
@@ -12024,7 +12048,7 @@
   priority: 2
   supported-through: [phase-III,table]
   issues: [170]
-  comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used"
+  comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used."
   tests: true
   updated: 2025-03-02
 
@@ -12321,7 +12345,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [latest]
-  comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3"
+  comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
   issues: [443,737]
   tests: false
   tasks: needs further tests
@@ -12346,7 +12370,7 @@
   included-in:
   priority: 2
   issues: [737]
-  comments: "See some needed adjustments in project example `amsldoc`"
+  comments: "See some needed adjustments in project example `amsldoc`."
   tests: false
   tasks: needs further tests
   updated: 2024-10-18
@@ -12502,8 +12526,8 @@
   supported-through: [latest]
   issues:
   tests: true
-  comments: "`\\bull` and `\\cents` need Unicode mappings."
-  updated: 2024-08-07
+  comments: "`\\bull` needs proper Unicode mapping."
+  updated: 2025-06-08
 
 - name: ltxdoc
   type: class
@@ -12523,7 +12547,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   comments: "Some code showing the needed adjustments can be found in the
-             [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)"
+             [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
   tests: false
   updated: 2024-07-05
 
@@ -12584,7 +12608,7 @@
   priority: 9
   supported-through: [latest]
   issues:
-  comments: "Based on article class"
+  comments: "Based on article class."
   tests: true
   updated: 2024-07-11
 
@@ -12603,7 +12627,7 @@
   status: unknown
   included-in: [arxiv5]
   priority: 4
-  comments: "obsolete class: new documents should use 4-2"
+  comments: "Obsolete class: new documents should use 4-2."
   tests: false
   updated: 2024-07-28
 

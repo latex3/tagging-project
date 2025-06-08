@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{marginalia}
+
+\title{marginalia tagging test}
+
+\begin{document}
+
+Here is some body text.\marginalia{Here is a marginal note.} Some more
+body text.\marginalia[style=\footnotesize\itshape\raggedright]{Here is another
+marginal note, set in smaller text and italics, whose position has been been
+adjusted automatically.}
+Some final body text.\marginalia[pos=left, valign=b, style=\sffamily\raggedleft,
+width=35mm]{This note is placed on the left side of the page, wider, in sans
+serif, ragged left, and bottom-aligned.}
+
+\end{document}

@@ -1,0 +1,67 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{float}
+
+\title{float tagging test}
+
+\floatstyle{plain}
+\newfloat{plainfloat}{tbp}{lop}[section]
+\floatstyle{plaintop}
+\newfloat{plaintopfloat}{tbp}{lopt}
+\floatstyle{boxed}
+\newfloat{boxedfloat}{tbp}{lob}
+\floatstyle{ruled}
+\newfloat{ruledfloat}{tbp}{lor}
+
+\title{float tagging test - 1}
+
+\begin{document}
+
+\begin{plainfloat}
+\caption{A caption}
+Some figure
+\end{plainfloat}
+
+\begin{plainfloat}
+Another figure
+\caption{Another caption}
+\end{plainfloat}
+
+\begin{plaintopfloat}
+\caption{A caption}
+Some figure
+\end{plaintopfloat}
+
+\begin{plaintopfloat}
+Another figure
+\caption{Another caption}
+\end{plaintopfloat}
+
+\begin{boxedfloat}
+\caption{A caption}
+Some figure
+\end{boxedfloat}
+
+\begin{boxedfloat}
+Another figure
+\caption{Another caption}
+\end{boxedfloat}
+
+\begin{ruledfloat}
+\caption{A caption}
+Some figure
+\end{ruledfloat}
+
+\begin{ruledfloat}
+Another figure
+\caption{Another caption}
+\end{ruledfloat}
+
+\end{document}
