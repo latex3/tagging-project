@@ -2106,13 +2106,14 @@
 
 - name: bigdelim
   type: package
-  status: unknown
+  status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  comments: "Relies on incompatible multirow."
   tests: false
   tasks: needs tests
-  updated: 2024-07-14
+  updated: 2025-06-09
 
 - name: bigfoot
   type: package
@@ -2146,13 +2147,12 @@
 
 - name: bigstrut
   type: package
-  status: unknown
+  status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-14
+  tests: true
+  updated: 2025-06-09
 
 - name: biolinum
   ctan-pkg: libertine
@@ -3391,9 +3391,9 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "`d` columns are set as text not math, which is arguably correct, but needs some further evaluation."
-  issues:
+  issues: [896]
   tests: true
-  updated: 2024-07-08
+  updated: 2025-06-09
 
 - name: decorule
   type: package
@@ -7711,13 +7711,12 @@
 
 - name: multirow
   type: package
-  status: unknown
+  status: currently-incompatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  issues: [894]
+  tests: true
+  updated: 2025-06-09
 
 - name: multitoc
   type: package
@@ -8067,10 +8066,10 @@
   status: currently-incompatible
   included-in: [arxiv5]
   priority: 4
-  issues:
+  issues: [897]
   comments: "Text-mode fractions are implemented as a sequence of formulas."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-06-09
 
 - name: niceframe
   type: package
