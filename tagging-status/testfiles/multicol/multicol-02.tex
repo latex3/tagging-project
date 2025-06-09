@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{multicol}
+\usepackage{kantlipsum}
+
+\title{multicol tagging test - 2}
+
+\begin{document}
+
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}[\section{Some section}]
+\kant[1-2]
+
+some text\footnote{some footnote}
+\end{multicols}
+
+\end{document}

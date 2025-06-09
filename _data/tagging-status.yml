@@ -4074,10 +4074,10 @@
   status: partially-compatible
   included-in: [arxiv1]
   priority: 5
-  issues:
+  issues: [898]
   tests: true
   comments: "Content of `\\AddToShipoutPictureBG` should always be Artifact."
-  updated: 2024-08-05
+  updated: 2025-06-09
 
 - name: esstixbb
   type: package
@@ -7634,13 +7634,13 @@
 
 - name: multicol
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv5]
   priority: 2
   issues: [705]
-  tasks: test column rules
-  comments: "Full-sized floats currently do not work with tagging."
-  updated: 2024-09-12
+  tasks:
+  comments:
+  updated: 2025-06-09
 
 - name: multicolrule
   type: package
@@ -9615,12 +9615,12 @@
 
 - name: rotating
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  issues: [112]
+  issues: [112,751]
   tests: true
-  updated: 2024-07-11
+  updated: 2025-06-09
 
 - name: rotchiffre
   type: package
@@ -12198,10 +12198,11 @@
   priority: 2
   supported-through: [phase-III,math]
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
-             No luamml support."
-  issues:
+             No luamml support. Requires luatex85 with luatex.
+             unicode-math must be loaded after xy."
+  issues: [899]
   tests: true
-  updated: 2025-05-28
+  updated: 2025-06-09
 
 #------------------------ YYY ----------------------------
 
