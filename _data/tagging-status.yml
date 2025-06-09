@@ -6885,10 +6885,13 @@
   status: unknown
   included-in:
   priority: 9
+  supported-through: [phase-III,package]
+  package-repository: "https://github.com/dohyunkim/luatexko"
+  comments: "Package provides tagging support for `\\ruby`, `\\dotemph`, `\\uline`, and other underline-type commands."
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  tasks: Tests need to be checked.
+  updated: 2025-06-08
 
 - name: luatodonotes
   type: package
