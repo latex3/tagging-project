@@ -250,8 +250,8 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   comments: "`varwidth` and `stack` keys rely on currently-incompatible varwidth package.
-            Does not register `alt`, `artifact`, or `actualtext` keys for `\adjincludegraphics`.
-            `\adjustbox` creates empty tags."
+            Does not register `alt`, `artifact`, or `actualtext` keys for `\\adjincludegraphics`.
+            `\\adjustbox` creates empty tags."
   issues:
   external-issues: ["https://github.com/MartinScharrer/adjustbox/issues/4"]
   package-repository: "https://github.com/MartinScharrer/adjustbox"
@@ -799,7 +799,7 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  comments: This is an obsolete package. The hooks it defines are available directly from the LaTeX kernel when using the `\AddToHook` interface.
+  comments: "This is an obsolete package. The hooks it defines are available directly from the LaTeX kernel when using the `\\AddToHook` interface."
   issues:
   tests: false
   updated: 2024-07-14
@@ -1990,7 +1990,7 @@
   priority: 2
   comments: "Requires hyperref."
   references: [2]
-  issues: [18]
+  issues: [18,902]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tasks: needs tests
   updated: 2024-07-07
@@ -2913,10 +2913,11 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   supported-through: [phase-III,firstaid]
-  comments: "Partially supported in the firstaid module, but open issue with hyperref (workaround suggested)"
+  comments: "Must be loaded after amsmath."
   issues: [2]
   tests: true
-  updated: 2024-07-08
+  tasks: More tests needed
+  updated: 2025-06-10
 
 - name: clrstrip
   type: package
@@ -3920,7 +3921,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  comments: The package itself can't be loaded right now. However, the tagging code supports (most of) the document-level  syntax of `enumitem`, so that one can use, for example, `\begin{itemize}[...]` out of the box.
+  comments: "The package itself can't be loaded right now. However, the tagging code
+             supports (most of) the document-level  syntax of `enumitem`, so that one
+             can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
   issues: [61]
@@ -4624,7 +4627,7 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  comments: "redefines \\@xfloat"
+  comments: "Redefines \\@xfloat."
   issues: [209]
   tests: true
   updated: 2024-07-19
@@ -4739,7 +4742,7 @@
   included-in: [arxiv001]
   priority: 7
   issues: [888]
-  comments: Redefines `\\@makecol`.
+  comments: "Redefines `\\@makecol`."
   tests: true
   tasks: Revisit once OR is altered.
   updated: 2024-08-01
@@ -4768,13 +4771,13 @@
 - name: fontawesome6
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
-  priority: 2
+  included-in:
+  priority: 9
   issues:
   tests: true
   comments: "Symbols missing ToUnicode with pdftex.
              Fully compatible with luatex."
-  updated: 2025-06-03
+  updated: 2025-06-10
 
 - name: fontaxes
   type: package
@@ -4877,9 +4880,9 @@
   included-in: [arxiv001]
   priority: 7
   comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
-  issues:
+  issues: [908]
   tests: true
-  updated: 2024-07-21
+  updated: 2025-06-10
 
 - name: forest
   type: package
@@ -5650,14 +5653,13 @@
 
 - name: hypbmsec
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [arxiv001]
   priority: 7
   issues:
-  comments: Currently compatible, but once the new template interface for headings is in place this might stop working
-  tasks: Recheck after latex-lab-sections has been updated
+  comments:
   tests: true
-  updated: 2024-08-07
+  updated: 2025-06-10
 
 - name: hypcap
   type: package
@@ -7357,13 +7359,14 @@
 
 - name: menukeys
   type: package
-  status: unknown
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [907]
+  comments: "None of the formatting is represented at the tag level; spaces between
+             keywords are lost."
+  tests: true
+  updated: 2025-06-10
 
 - name: merriweather
   type: package
@@ -7480,13 +7483,13 @@
 
 - name: minibox
   type: package
-  status: unknown
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [905]
+  comments: "Tags `\\minibox`es as tables."
+  tests: true
+  updated: 2025-06-10
 
 - name: minitoc
   type: package
@@ -7606,9 +7609,9 @@
   included-in: [tlc3, arxiv001]
   priority: 4
   comments: "Errors with `debug` option."
-  issues:
+  issues: [906]
   tests: true
-  updated: 2024-07-24
+  updated: 2025-06-10
 
 - name: multiaudience
   type: package
@@ -7666,6 +7669,7 @@
   updated: 2024-08-06
 
 - name: multienum
+  ctan-pkg: multenum
   type: package
   status: currently-incompatible
   included-in: [arxiv001]
@@ -9016,9 +9020,9 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
+  issues: [904]
   tests: true
-  updated: 2024-08-15
+  updated: 2025-06-10
 
 - name: picins
   type: package
@@ -9432,7 +9436,7 @@
   included-in: [arxiv001]
   priority: 7
   package-repository: "https://github.com/MartinScharrer/realboxes"
-  comments: "Depends on partially-compatible collectbox. `\Parbox` produces parent-child
+  comments: "Depends on partially-compatible collectbox. `\\Parbox` produces parent-child
             warnings. Graphics and dashbox macros not tagged correctly."
   issues:
   tests: true
@@ -10633,7 +10637,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  issues:
+  issues: [903]
   tests: true
   comments: Inserts empty `equation*` tags.
   updated: 2024-08-02
