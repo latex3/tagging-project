@@ -12412,13 +12412,16 @@
 
 - name: beamer
   type: class
-  status: currently-incompatible
+  status: no-support
   included-in:
-  priority: 2
+  priority: 9
+  comments: "Internals rebox material repeately in a way that is not compatible
+             with any form of tagging support. The ltx-talk class is being
+             developed as an alternative, and is recommended for new tagged
+             presentations."
   issues: [710]
   tests: false
-  tasks: needs tests
-  updated: 2024-10-18
+  updated: 2025-06-11
 
 - name: book
   type: class
@@ -12538,6 +12541,17 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-17
+
+#------------------------ ltx- ----------------------------
+
+- name: ltx-talk
+  type: class
+  status: compatible
+  comment: "A new class developed from scratch for tagging; intended as a
+            substitute for the popular beamer class for presentations"
+  priority: 2
+  supported-through: [latest]
+  updated: 2025-06-11
 
 #------------------------ MMM ----------------------------
 
