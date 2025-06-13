@@ -2268,14 +2268,14 @@
 
 - name: booktabs
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,firstaid,table]
-  comments: requires the firstaid module which contains a fix.
+  comments: "Requires the firstaid module which contains a fix."
   issues: [69]
   tests: true
-  updated: 2024-07-08
+  updated: 2025-06-13
 
 - name: boxedminipage
   type: package
@@ -9285,11 +9285,11 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   comments: "Compatibility is only with lualatex; dvips cannot properly support PDF/UA.
-            Offers `alt`, `actualtext`, `artifact`, and `correct-BBox` keys.
-            Not tagged as figures."
-  issues:
+            Offers `alt`, `actualtext`, `artifact`, and `correct-BBox` keys,
+            however these seem not to work. Not tagged as figures."
+  issues: [913]
   tests: true
-  updated: 2024-11-19
+  updated: 2025-06-13
 
 - name: px-ds
   ctan-pkg: pxtxalfa
@@ -9299,7 +9299,8 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-06-13
 
 - name: pxpic
   type: package
@@ -9319,7 +9320,8 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-06-13
 
 - name: pxtx-frak
   ctan-pkg: pxtxalfa
@@ -9329,7 +9331,8 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-05
+  comments: "No luamml support."
+  updated: 2025-06-13
 
 - name: pyluatex
   type: package
