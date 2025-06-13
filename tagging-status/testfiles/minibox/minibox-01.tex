@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{minibox}
+
+\title{minibox tagging test}
+
+\def\sample{abcd\\efg\\h}
+
+\begin{document}
+
+\minibox{\sample}
+
+% compare with
+\parbox{2cm}{\sample}
+
+\minibox[frame,rule=1pt,pad=0pt]{\sample}
+
+text\minibox[frame,c,b]{\sample}
+
+\end{document}

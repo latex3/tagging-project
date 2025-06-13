@@ -3,7 +3,7 @@
     lang=en-US,
     pdfversion=2.0,
     pdfstandard=ua-2,
-    tagging=on
+    tagging=on,
   }
 \documentclass{article}
 
@@ -15,26 +15,34 @@
 \begin{document}
 \begin{tabular}{r}
 aaa\\
-\midrule %works
+\midrule
 bbb
 \end{tabular}    
 
 \begin{tabular}{r}
 aaa\\
- \cmidrule{1-1} %fails
+ \cmidrule{1-1}
 bbb
 \end{tabular}    
 
 \begin{longtable}{r}
 aaaa\\
- \midrule %fails
+ \midrule
 bbbb
 \end{longtable}
 
-\begin{tabular}{r}
-aaa\\
-\multispan 1 xxx \cr %fails
-bbb
+\begin{tabular}{rc}
+\toprule[10pt]
+Some text & A\\
+\midrule[4pt]
+More text & B\\
+\addlinespace[1cm]
+Even more text & C\\
+\cmidrule{1-1}\morecmidrules\cmidrule{1-1}
+And more \\
+\specialrule{3pt}{3mm}{1mm}
+Blub & foo \\
+\bottomrule[0.5pt]
 \end{tabular}    
 
 \end{document}

@@ -7,13 +7,21 @@
   }
 \documentclass{book}
 
-\usepackage{amsmath}
-
+\UseName{sys_if_engine_opentype:TF}
+  {\usepackage{unicode-math}}
+  {\usepackage{amsmath}}
 \usepackage{hyperref}
 \usepackage{cleveref}
 
 \title{cleveref tagging test - 2}
 
 \begin{document}
+
+\begin{align}
+A &= B \label{foo} \\
+C &= D
+\end{align}
+
+\cref{foo}
 
 \end{document}
