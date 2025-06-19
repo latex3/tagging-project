@@ -64,13 +64,13 @@ like the language and the standards the
 document should comply with. By default the PDF version will be set to 2.0. 
 The `pdfversion` key can be used to change this.
 
-Tagging is then enabled by loading various modules through the
-`tagging` key. It will load all modules that we think are sensible. 
-It will load new modules automatically once they are added. 
+Tagging is then enabled through the `tagging` key. It will load all modules with tagging support code that we think are currently sensible and will load new modules automatically once they are added. 
 The value `on` will then enable tagging. The value `off` will disable it. 
 
 The `tagging-setup` key allows to configure the tagging. It accepts all keys that can also be used in `\tagpdfsetup`. The value `math/setup=mathml-SE` shown in the prototype is explained below.
 
+It is still possible to load some or all modules and to activate tagging with the `testphase` key, which takes a list of values like `latest`, `phase-III`, `math`, `table` or `firstaid`, but this is no longer recommended. 
+ 
 
 ## Handling graphics in the document
 
