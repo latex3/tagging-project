@@ -5,9 +5,12 @@
     pdfstandard=ua-2,
     tagging=on
   }
-
 \documentclass[a4paper,10pt]{article}
 
+\UseName{sys_if_engine_opentype:TF}
+  {\usepackage{unicode-math}}
+  {\usepackage{amsmath}}
+% ^ need to load amsmath before cleveref
 \usepackage{varioref}
 %\usepackage{hyperref}
 \usepackage{cleveref}
