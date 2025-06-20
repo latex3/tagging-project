@@ -2,7 +2,6 @@
 % Changes from original file:
 %   1. Convert all P_\X to P_{\X} (for unicode-math)
 %   2. Comment out redefinition of \@makecol
-%   3. Until new luamml is released, comment out smallmatrix envs (#875)
 \DocumentMetadata
   {
     lang=en-US,
@@ -348,9 +347,9 @@ where
 \begin{equation}\label{delta-l}
 D_{l}=\eval[2]{\sum_{I_{l}\subseteq \mathbf{n}}
 D(t_1,\dots,t_n)}_{t_i=
-%\left\{\begin{smallmatrix}
-%0,& \text{if }i\in I_{l}\quad\\% \quad added for centering
-%1,& \text{otherwise}\end{smallmatrix}\right.
+\left\{\begin{smallmatrix}
+0,& \text{if }i\in I_{l}\quad\\% \quad added for centering
+1,& \text{otherwise}\end{smallmatrix}\right.
 \;,\;\; i=1,\dots,n}.
 \end{equation}
 \end{prop}
@@ -1577,11 +1576,11 @@ To produce a small matrix suitable for use in text, use the
 To show
 the effect of the matrix on the surrounding lines of
 a paragraph, we put it here:
-%\begin{math}
-%  \bigl( \begin{smallmatrix}
-%      a&b\\ c&d
-%    \end{smallmatrix} \bigr)
-%\end{math}
+\begin{math}
+  \bigl( \begin{smallmatrix}
+      a&b\\ c&d
+    \end{smallmatrix} \bigr)
+\end{math}
 and follow it with enough text to ensure that there will
 be at least one full line below the matrix.
 
