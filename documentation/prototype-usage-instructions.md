@@ -29,7 +29,7 @@ runlatex.packageregex = [
 
 
 
-# Using the LaTeX prototype for accessible PDF (as of 2025/02)
+# Using the LaTeX prototype for accessible PDF (as of 2025/06)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
@@ -48,10 +48,10 @@ list:
 ```latex
 \DocumentMetadata{
   lang        = de,
-  pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4f, %or a-4
-  testphase   = latest
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE} 
 }
 \documentclass{article}
 \begin{document}
@@ -59,34 +59,18 @@ list:
 abc
 \end{document}
 ```
-The first four keys in the example set important document metadata,
-like the language, the requested PDF version and the standards the
-document should comply with.
+The first three keys in the example set important document metadata,
+like the language and the standards the
+document should comply with. By default the PDF version will be set to 2.0. 
+The `pdfversion` key can be used to change this.
 
-Tagging is then enabled by loading various modules through the
-`testphase` key.
+Tagging is then enabled through the `tagging` key. It will load all modules with tagging support code that we think are currently sensible and will load new modules automatically once they are added. 
+The value `on` will then enable tagging. The value `off` will disable it. 
 
-- The `latest` key loads all modules that we think are sensible. This is the recommended
-  value, it will load new modules automatically once they are added.
+The `tagging-setup` key allows to configure the tagging. It accepts all keys that can also be used in `\tagpdfsetup`. The value `math/setup=mathml-SE` shown in the prototype is explained below.
 
-
-It is possible to load only individual modules
-- The `phase-III` module activates tagging and loads support for most
-  standard document elements like paragraphs, lists, sectioning, table
-  of contents, graphics, floats, links and more. You should always use
-  this key first.
-- The `title` module redefines the `\title`, `\author`
-  and `\maketitle` command to make them tagging aware. It also takes
-  care that the title and author are added to the XMP metadata.
-
-- The `table` module adds tagging support to tables like `tabular`,
-  `tabularx`, `tabulary` and `longtable`.
--  The `math` module enables basic tagging of equations.
-- Finally, the `firstaid` module contains small fixes of
-  external packages to make them compatible with the tagging code, e.g.,
-  it fixes clashes with the `cleveref` and the `booktabs`
-  packages.
-
+It is still possible to load some or all modules and to activate tagging with the `testphase` key, which takes a list of values like `latest`, `phase-III`, `math`, `table` or `firstaid`, but this is no longer recommended. 
+ 
 
 ## Handling graphics in the document
 
@@ -100,7 +84,11 @@ have been added to the `\includegraphics` command:
 ```latex
 \includegraphics[height=4cm,alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
 \includegraphics[height=4cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
+\includegraphics[height=\baselineskip,actualtext=A]{A.jpg}
 ```
+
+These keys can also be used with the `\tikz` command and the `tikzpicture` and `picture` environment.
+
 
 ## Handling tables (`tabular`) in the document
 
@@ -205,8 +193,8 @@ tagged with an Associated File of the generated MathML.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
- testphase=latest,
- pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+ tagging=on,
+ pdfstandard=ua-2,pdfstandard=a-4f}
 
 \documentclass{article}
 \usepackage{unicode-math}
@@ -234,22 +222,15 @@ A matrix equation.
 
 ### MathML Structure Element Tagging
 
-To use MathML Structure Element tagging you may use the
-`math/mathml/structelem` key as shown below. Here we also suppress
-adding the Associated Files. With a current lualatex-dev the same can be achieved
-with the key `math/setup=mathml-SE`.
+To use MathML Structure Element tagging you may use the `tagging-setup` key with 
+the value `math/setup=mathml-SE` key as shown below. This suppresses
+adding the Associated Files, you can use `tagging-setup={math/setup={mathml-SE,mathml-AF}}` if you want to enable both methods.
 
 ```
 \DocumentMetadata{uncompress,lang=en,
- testphase=latest,
- pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
-
-\tagpdfsetup{
- math/mathml/structelem,
- math/tex/AF=false,
- math/mathml/AF=false,
- math/mathml/sources=
-}
+ tagging=on,
+ tagging-setup={math/setup=mathml-SE},
+ pdfstandard=ua-2,pdfstandard=a-4f}
 
 \documentclass{article}
 \usepackage{unicode-math}
@@ -301,9 +282,9 @@ still be edited and the file renamed to `<file>-mathml.html` .
 
 ```
 % !TeX pdflatex
-\DocumentMetadata{uncompress,lang=en,
- testphase=latest,
- pdfversion=2.0,pdfstandard=ua-2,pdfstandard=a-4f}
+\DocumentMetadata{lang=en,
+ tagging=on,
+ pdfstandard=ua-2,pdfstandard=a-4f}
 
 %\tagpdfsetup{math/mathml/write-dummy}
 
