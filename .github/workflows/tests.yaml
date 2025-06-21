@@ -45,17 +45,79 @@ jobs:
           - pdftex
         config:
           - build
-          - config-unknown
           - config-broken
+        include:
+          - engine: luatex
+            config: config-unknown
+            first: ''
+            last: braket-01
+          - engine: luatex
+            config: config-unknown
+            first: braket-01
+            last: embrac-01
+          - engine: luatex
+            config: config-unknown
+            first: embrac-01
+            last: gensymb-01
+          - engine: luatex
+            config: config-unknown
+            first: gensymb-01
+            last: mathalpha-01
+          - engine: luatex
+            config: config-unknown
+            first: mathalpha-01
+            last: overpic-02
+          - engine: luatex
+            config: config-unknown
+            first: overpic-02
+            last: relsize-01
+          - engine: luatex
+            config: config-unknown
+            first: relsize-01
+            last: tagging-01
+          - engine: luatex
+            config: config-unknown
+            first: tagging-01
+            last: ''
+          - engine: pdftex
+            config: config-unknown
+            first: ''
+            last: braket-01
+          - engine: pdftex
+            config: config-unknown
+            first: braket-01
+            last: embrac-01
+          - engine: pdftex
+            config: config-unknown
+            first: embrac-01
+            last: gensymb-01
+          - engine: pdftex
+            config: config-unknown
+            first: gensymb-01
+            last: mathalpha-01
+          - engine: pdftex
+            config: config-unknown
+            first: mathalpha-01
+            last: overpic-02
+          - engine: pdftex
+            config: config-unknown
+            first: overpic-02
+            last: relsize-01
+          - engine: pdftex
+            config: config-unknown
+            first: relsize-01
+            last: tagging-01
+          - engine: pdftex
+            config: config-unknown
+            first: tagging-01
+            last: ''
           # - config-excluded
-    name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}"
+    name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}${{ (matrix.first || matrix.last) && format(' ({0} - {1})', matrix.first || '<first>', matrix.last || '<last>') || ''}}"
     needs: texlive-cache
     steps:
       # Boilerplate
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: 'true'
       - name: Restore TeX Live from cache
         uses: actions/cache/restore@v4
         with:
@@ -65,7 +127,7 @@ jobs:
       - run: echo $HOME/texlive/bin/x86_64-linux >> $GITHUB_PATH
       - name: Run l3build
         working-directory: tagging-status
-        run: "l3build check -S -e ${{ matrix.engine }} -c ${{ matrix.config }}"
+        run: "l3build check -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
         # run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
       # Now we create the artifacts for the logs of failed tests
       - name: Archive failed test output
@@ -73,6 +135,6 @@ jobs:
         uses: zauguin/l3build-failure-artifacts@v1
         with:
           path: tagging-status/build
-          name: testfiles-${{ matrix.engine }}-${{ matrix.config }}
+          name: testfiles-${{ matrix.engine }}-${{ matrix.config }}${{ matrix.first && format('-{0}', matrix.first) || ''}}${{ matrix.last && format('-{0}', matrix.last) || ''}}
           # Decide how long to keep the test output artifact:
           retention-days: 3
