@@ -1,0 +1,59 @@
+\ExplSyntaxOn
+\sys_gset_rand_seed:n{1000}
+\ExplSyntaxOff
+\DocumentMetadata{
+  tagging=on,
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en,
+}
+
+\documentclass{book}
+
+\usepackage{postnotes}
+
+% 'style=endnotes' sets 'listenv=none'. With that, \printpostnotes is typeset
+% without a list environment, hence the tagged structure is different.
+\postnotesetup{style=endnotes}
+
+\usepackage{lipsum}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\title{Example file for postnotes PDF tagging support}
+
+\begin{document}
+
+\chapter{Chapter 1}
+
+\lipsum[1]\postnote[label=en:mark:1]{\label{en:text:1}\lipsum[2-3]}
+
+\postnoteref{en:text:1}\par
+\postnoteref{en:mark:1}
+
+\lipsum[4]\postnote{\lipsum[5]}
+
+\lipsum[6]\postnote{\lipsum[7]}
+
+\chapter{Chapter 2}
+
+\lipsum[8]\postnote[label=en:mark:3]{\label{en:text:3}\lipsum[9-10]}
+
+\postnoteref{en:text:3}\par
+\postnoteref{en:mark:3}
+
+\lipsum[11]\postnote{\lipsum[12]}
+
+\lipsum[13]\postnote{\lipsum[14]}
+
+\chapter{Chapter 3}
+
+\lipsum[15]\postnote{\lipsum[16-17]}
+
+\lipsum[18]\postnote{\lipsum[19]}
+
+\lipsum[20]\postnote{\lipsum[21]}
+
+\printpostnotes
+
+\end{document}

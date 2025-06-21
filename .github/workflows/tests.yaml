@@ -1,0 +1,140 @@
+name: Automated testing
+
+# Currently we run in two situations:
+on:
+  # Whenever someone pushes to a branch in our repo
+  push:
+    branches:
+      - "**"
+  # Whenever a pull request is opened, reopened or gets new commits.
+  pull_request:
+# This implies that for every push to a local branch in our repo for which a
+# pull request is open this runs twice. But it's important to ensure that pull
+# requests get tested even if their branch comes from a fork.
+
+jobs:
+  # Update the TeX Live tree if necessary
+  texlive-cache:
+    runs-on: ubuntu-latest
+    name: Update TeX Live
+    outputs:
+      cache_key: ${{ steps.texlive.outputs.cache_key }}
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install TeX Live
+        id: texlive
+        uses: zauguin/install-texlive@v4
+        with:
+          # List the required TeX Live packages in a separate file to allow reuse in
+          # different workflows.
+          package_file: .github/tl_packages
+  # The l3build job contains the actual work. We misuse the matrix mechanism to
+  # create three jobs which only differ in minimal elements.
+  # For tags we do not run this since we run the release job instead.
+  l3build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # include indicates that we want to set explicitly these combinations
+        # and don't want full matrix testing.
+        engine:
+          - luatex
+          - pdftex
+        config:
+          - build
+          - config-broken
+        include:
+          - engine: luatex
+            config: config-unknown
+            first: ''
+            last: braket-01
+          - engine: luatex
+            config: config-unknown
+            first: braket-01
+            last: embrac-01
+          - engine: luatex
+            config: config-unknown
+            first: embrac-01
+            last: gensymb-01
+          - engine: luatex
+            config: config-unknown
+            first: gensymb-01
+            last: mathalpha-01
+          - engine: luatex
+            config: config-unknown
+            first: mathalpha-01
+            last: overpic-02
+          - engine: luatex
+            config: config-unknown
+            first: overpic-02
+            last: relsize-01
+          - engine: luatex
+            config: config-unknown
+            first: relsize-01
+            last: tagging-01
+          - engine: luatex
+            config: config-unknown
+            first: tagging-01
+            last: ''
+          - engine: pdftex
+            config: config-unknown
+            first: ''
+            last: braket-01
+          - engine: pdftex
+            config: config-unknown
+            first: braket-01
+            last: embrac-01
+          - engine: pdftex
+            config: config-unknown
+            first: embrac-01
+            last: gensymb-01
+          - engine: pdftex
+            config: config-unknown
+            first: gensymb-01
+            last: mathalpha-01
+          - engine: pdftex
+            config: config-unknown
+            first: mathalpha-01
+            last: overpic-02
+          - engine: pdftex
+            config: config-unknown
+            first: overpic-02
+            last: relsize-01
+          - engine: pdftex
+            config: config-unknown
+            first: relsize-01
+            last: tagging-01
+          - engine: pdftex
+            config: config-unknown
+            first: tagging-01
+            last: ''
+          # - config-excluded
+    name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}${{ (matrix.first || matrix.last) && format(' ({0} - {1})', matrix.first || '<first>', matrix.last || '<last>') || ''}}"
+    needs: texlive-cache
+    steps:
+      # Boilerplate
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Restore TeX Live from cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/texlive
+          key: ${{ needs.texlive-cache.outputs.cache_key }}
+          fail-on-cache-miss: true
+      - run: echo $HOME/texlive/bin/x86_64-linux >> $GITHUB_PATH
+      - name: Run l3build
+        working-directory: tagging-status
+        run: "l3build check -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
+        # run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
+      # Now we create the artifacts for the logs of failed tests
+      - name: Archive failed test output
+        if: ${{ always() }}
+        uses: zauguin/l3build-failure-artifacts@v1
+        with:
+          path: tagging-status/build
+          name: testfiles-${{ matrix.engine }}-${{ matrix.config }}${{ matrix.first && format('-{0}', matrix.first) || ''}}${{ matrix.last && format('-{0}', matrix.last) || ''}}
+          # Decide how long to keep the test output artifact:
+          retention-days: 3
