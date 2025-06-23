@@ -121,12 +121,12 @@ The same untagged PDF gets a different reading compared to the previous one, but
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version) {#auto-macos}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.10
 
 The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="v46SNqqBNJ8" width="medium" comment="t5-autotagged MacOS foxit"%}
+{% include youtube.html id="L9vph4rLTFk" width="medium" comment="t8 autotagged macOS foxit"%}
 
 #### Observations
 
