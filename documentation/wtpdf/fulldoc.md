@@ -48,10 +48,10 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 
 ###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.10
 
-{% include youtube.html id="PSpth4oyQdo" width="medium" comment="t5 foxit"%}
+{% include youtube.html id="txELZR_EDTo" width="medium" comment="t8 foxit"%}
 
 #### Observations
 
@@ -89,10 +89,10 @@ The untagged PDF is basically incomprehensible.
 
 ### Acrobat/NVDA reading untagged PDF {#acrobat-untagged}
 - Adobe Acrobat Reader 2025.001.20432 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.10
 
-{% include youtube.html id="OpIjDwJqFKc" width="medium" comment="t5 acrobat"%}
+{% include youtube.html id="HGm-vCuyQdo" width="medium" comment="t8 acrobat"%}
 
 #### Observations
 
@@ -206,7 +206,7 @@ Associated files or Structure Elements to provide MathML tagging for mathematics
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
-{% include youtube.html id="IEJ16QI9UhE" width="medium" comment="t6v-af foxit"%}
+{% include youtube.html id="KznoGTQmWeM" width="medium" comment="t8 af foxit"%}
 
 #### Observations
 
@@ -228,11 +228,11 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 ### Adobe Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
 - Adobe Acrobat Reader 2025.001.20432 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.10
 
 
-{% include youtube.html id="JqD21fx-Muw" width="medium" comment="t7-se acrobat"%}
+{% include youtube.html id="gDCz_zkIq2k" width="medium" comment="t8 se acrobat"%}
 
 #### Observations
 
