@@ -13,7 +13,7 @@ runlatex.preincludes = {
  }
 </script>
 
-[Accessible STEM documents](./)
+[Accessible STEM documents](./) > [Document videos](fulldoc)
 
 # Generating Well-Tagged PDF from LaTeX
 

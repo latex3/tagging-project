@@ -31,6 +31,7 @@ extrahead: youtube-head
   * [ChatGPT4 Markdown](#chatgpt4markdown)
 * [NVDA's pronunciation settings](#settings)
 * **Sections**
+  * [TeX sources](larger-example)
   * [Table of Contents](toc)
   * [Mathematics](math)
   * [Code blocks](verbatim)
