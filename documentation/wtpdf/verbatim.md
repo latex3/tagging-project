@@ -107,7 +107,7 @@ It is possible to use MathML, for example tag `{` as
 in the document, it could be added in the same way as the `/Alt`
 tagging described above.
 In the TeX source, simply by change the included additional module
-from `verbatim-alt` to `verbatim-af`.
+from `verbatim-alt` to `verbatim-af` or `verbatim-se`.
 
 {% include youtube.html id="JjWOAXLdmzY" width="medium" comment="verbatim af"%}
 
