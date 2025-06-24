@@ -29,7 +29,7 @@ of multiple dots and the reading with NVDA 2025.1 is much better
 however this does illustrate the difficulty in reading documenst when no
 explicit structure is provided.
 
-{% include youtube.html id="txELZR_EDTo" width="medium" comment="placeholder for t8 toc, foxit" %}
+{% include youtube.html id="YTQez-MQ7ZM" width="medium" comment="t8 toc, foxit" %}
 
 
 
@@ -39,10 +39,10 @@ Using the tagged PDF, the structure is made explicit to the screen
 reader and typesetting artifacts such as leader dots are marked as
 artifacts and not read, producing a far more reliably understandable reading.
 
-{% include youtube.html id="IQz3Xouc6Ko" width="medium" comment="T5 tagged toc, foxit" %}
+{% include youtube.html id="_6KiEhAMa4o" width="medium" comment="T8 tagged toc, foxit" %}
 
 
 ## Autotagged document.
 
-{% include youtube.html id="NkDYH9doLI4" width="medium" comment="t5 autotagged toc, foxit" %}
+{% include youtube.html id="KprMkcefKCA" width="medium" comment="t8 autotagged toc, foxit" %}
 
