@@ -30,7 +30,7 @@ tagging mathematics, here we present a version with math tagged with
 Associated files containing MathML, which is understood by foxit, and
 a version with the same MathML used as PDF Structure Element tagging,
 which is understood by Acrobat. Identical readings are generated as in
-either case the resulting MathML is passed via NVDA to MathCat to
+either case the resulting MathML is passed via NVDA to MathCAT to
 generate the reading.
 
 We expect that this is a temporary situation and that PDF readers will
