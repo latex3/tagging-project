@@ -30,6 +30,10 @@ extrahead: youtube-head
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
 * [NVDA's pronunciation settings](#settings)
+* **Sections**
+  * [Table of Contents](toc)
+  * [Mathematics](math)
+  * [Code blocks](verbatim)
 </nav>
 
 Accurate reading is critical; even small mistakes in reading STEM content can result in entirely incorrect understandings.
