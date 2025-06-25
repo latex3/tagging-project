@@ -26,7 +26,7 @@ when using a 2024 NVDA screen reader release.
 
 Recent NVDA Releases have improved heuristics to control the reading
 of multiple dots and the reading with NVDA 2025.1 is much better
-however this does illustrate the difficulty in reading documenst when no
+however this does illustrate the difficulty in reading documents when no
 explicit structure is provided.
 
 {% include youtube.html id="YTQez-MQ7ZM" width="medium" comment="t8 toc, foxit" %}
@@ -48,7 +48,7 @@ This produces a far more reliably understandable reading.
 
 Here the recognition of the table of contents is unreliable, in some
 cases "Link" is announced before the section number, and sometimes
-after. The final link to the Citations section is not recognised as
+after. The final link to the Citations section is not recognized as
 part of the table of contents at all, and is announced as a new list.
 
 {% include youtube.html id="KprMkcefKCA" width="medium" comment="t8 autotagged toc, foxit" %}

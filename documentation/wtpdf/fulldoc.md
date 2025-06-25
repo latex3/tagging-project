@@ -54,7 +54,7 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 ###  Foxit/NVDA reading untagged PDF  {#foxit-untagged}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.10
+- NVDA add-on MathCAT 0.6.10
 
 {% include youtube.html id="txELZR_EDTo" width="medium" comment="t8 foxit"%}
 
@@ -84,11 +84,11 @@ It is very difficult to find all issues with this document if you are looking at
      - the reading order reads lines from the marginal and
      - the paragraph and several bits of text are repeated
      - The heading "2.4 Theorem" is  read as two columns of that table
- - The caption of the reorem is read as _"Theorem 1 Fermat ESS last"_
+ - The caption of the theorem is read as _"Theorem 1 Fermat ESS last"_
  - Instead of "such that \$a^n + b^n = c^n\$" it reads _"such than plus b-en equals c-en"_ (the _"than"_ is probably a Microsoft speech generator issue combing in _"that a n"_ to _"than"_)
  - The display of verbatim code is read without the parentheses and curly brackets
  - The readout of the paragraph in section 3 has the word _"database"_ added several times in place of the citations `[1]` and `[2]`
- - In the bibligraphy the page number 312 is read as _"three twelve"_ but 313 is read correctly
+ - In the bibliography the page number 312 is read as _"three twelve"_ but 313 is read correctly
  - Important punctuations to correctly identify the bibliography items are dropped
 
 #### Summary
@@ -99,7 +99,7 @@ The untagged PDF is basically incomprehensible.
 ### Acrobat/NVDA reading untagged PDF {#acrobat-untagged}
 - Adobe Acrobat Reader 2025.001.20432 (Windows 11)
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.10
+- NVDA add-on MathCAT 0.6.10
 
 {% include youtube.html id="HGm-vCuyQdo" width="medium" comment="t8 acrobat"%}
 
@@ -130,7 +130,7 @@ The same untagged PDF gets a different reading compared to the previous one, but
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (MacOS version) {#auto-macos}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.10
+- NVDA add-on MathCAT 0.6.10
 
 The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -147,7 +147,7 @@ The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is t
  - Equation labels are read as numbers so difficult to understand
  - The inline graphics in section 3.4 is not shown and not read
  - The marginal is correctly separated from the main text and read separately
- - The formula is read as _"a-en  b-en  c-en"_, i.e., the plus and equal are dropped and the exponents arn't announced
+ - The formula is read as _"a-en  b-en  c-en"_, i.e., the plus and equal are dropped and the exponents aren't announced
  - The display of verbatim code is read without the parentheses and curly brackets
 
 #### Summary
@@ -158,7 +158,7 @@ For normal text structures the auto-tagging heuristics make reasonable guesses a
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auto-windows}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.10
+- NVDA add-on MathCAT 0.6.10
 
 The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
@@ -210,7 +210,7 @@ Associated files or Structure Elements to provide MathML tagging for mathematics
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA add-on MathCAT 0.6.8-rc.9
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
@@ -237,7 +237,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 ### Adobe Acrobat Reader/NVDA reading PDF with MathML SE {#acrobat-se}
 - Adobe Acrobat Reader 2025.001.20432 (Windows 11)
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.10
+- NVDA add-on MathCAT 0.6.10
 
 
 {% include youtube.html id="gDCz_zkIq2k" width="medium" comment="t8 se acrobat"%}
@@ -265,12 +265,12 @@ The use of structure elements instead of AF files give identical results for mat
 
 ## Listening to ChatGPT's interpretation {#chatgpt}
 
-These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile  to repeat the exercise, just to have a correted text of Fermat's last theorem and a few other minor corrections. The intend here is to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
+These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile to repeat the exercise, just to have a corrected text of Fermat's last theorem and a few other minor corrections. The intend here was to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA add-on MathCAT 0.6.8-rc.9
 
 #### Notes
 
@@ -310,7 +310,7 @@ The sample document is too short to assess how severe these limitations are in l
 ### Foxit Reading ChatGPT 4 display {#chatgpt4html}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA add-on MathCAT 0.6.8-rc.9
 
 Using ChatGPT4 a similar query produced a markdown document immediately displayed rather than shown as source.
 
@@ -336,7 +336,7 @@ ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on t
 ### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA add-on MathCAT 0.6.8-rc.9
 
 ChatGPT was then queried to show the markdown source, which (as for ChatGPT3) is then rendered in GitHub.
 Note here the document text has been extensively re-worded by ChatGPT.

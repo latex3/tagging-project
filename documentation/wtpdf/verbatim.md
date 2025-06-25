@@ -23,7 +23,7 @@ used for natural language text.
 
 ## Reading with symbol pronunciation set to "All" {#symbols-all}
 
-Screen readers have customisable settings for punctuation symbols,
+Screen readers have customizable settings for punctuation symbols,
 With NVDA, `<nvda>p` cycles between `none`, `some` (the default), `many` and `all`.
 
 With `all` the reading is
@@ -31,7 +31,7 @@ With `all` the reading is
 {% include youtube.html id="HEswkxdRJw8" width="medium" comment="verbatim all"%}
 
 * Symbols read (using text settings)
-* Verbosity and words used customisable by the reader.
+* Verbosity and words used customizable by the reader.
 * Linebreaks are not announced.
 * Requires interaction by the user to enable/disable this. Note the
   end of sentence full stop (period) is announced `dot` with this
@@ -53,7 +53,7 @@ with an `Alt` attribute, and to add an empty `/Span` with an `/Alt` to announce 
 {% include youtube.html id="imQzEHpdtT4" width="medium" comment="verbatim alt"%}
 
 * Good Reading and cut and paste.
-* Character names localised to the document language (not to that of the listener).
+* Character names localized to the document language (not to that of the listener).
 * Braille is severely impacted, the braille for the character names rather than the characters is generated.
 * Navigating with a screen reader by character is similarly impacted.
 * The Braille for the first line in the original source code (using default NVDA Braille settings)
@@ -97,7 +97,7 @@ In comparison to the previous section navigation by character with the code usin
   (which is more or less unusable in a one or two line Braille display.
 
 
-{% include youtube.html id="UkIT2je-sj8" width="medium" comment="vebatim alt by character"%}
+{% include youtube.html id="UkIT2je-sj8" width="medium" comment="verbatim alt by character"%}
 
 
 ## Using MathML for each symbol
@@ -112,7 +112,7 @@ from `verbatim-alt` to `verbatim-af` or `verbatim-se`.
 {% include youtube.html id="JjWOAXLdmzY" width="medium" comment="verbatim af"%}
 
 * Symbols read (using math settings)
-* Verbosity and words used customisable by the reader.
+* Verbosity and words used customizable by the reader.
 * In verbose modes, the entering and leaving of mathematics may be announced
 * Braille is compact but using math not text style for symbols (which
   will be more noticeable if Nemeth math Braille is used).
