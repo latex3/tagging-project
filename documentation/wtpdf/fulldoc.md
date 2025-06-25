@@ -265,6 +265,8 @@ The use of structure elements instead of AF files give identical results for mat
 
 ## Listening to ChatGPT's interpretation {#chatgpt}
 
+These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile  to repeat the exercise, just to have a correted text of Fermat's last theorem and a few other minor corrections. The intend here is to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
+
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
 - NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
