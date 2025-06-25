@@ -141,17 +141,18 @@ The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is t
  - The LaTeX logo is read as _"L A T E EX"_ (the only pronunciation that Leslie Lamport always said no to :-) )
  - The last line of the TOC is incorrectly identified as a list with 2 items
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
+ - The footnote text is no longer read in the middle of the paragraph but after the paragraph has finished, so it was correctly identified by the auto-tagging!
  - Formulas are introduced as graphics and the content is incomplete and incorrectly read, i.e. no indication of sub- and superscripts, parentheses etc are seen as punctuation and are not read
  - The separate equations (on a single line) are joined and read without any pause despite the space in the source
  - Equation labels are read as numbers so difficult to understand
  - The inline graphics in section 3.4 is not shown and not read
  - The marginal is correctly separated from the main text and read separately
- - The formula is read as _"an + b-en = c-en"_
+ - The formula is read as _"a-en  b-en  c-en"_, i.e., the plus and equal are dropped and the exponents arn't announced
  - The display of verbatim code is read without the parentheses and curly brackets
 
 #### Summary
 
-For normal text structures the auto-tagging heuristics makes reasonable guesses and seldom fails (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
+For normal text structures the auto-tagging heuristics make reasonable guesses and seldom fail (in this document the misinterpretation of the TOC row). However, the quality varies with the complexity of the document structure as we saw when using different documents. With respect to mathematics and graphics the reading always fails severely; basically only text characters contained in the formulas or in graphics are read, everything else is ignored. This makes auto-tagging unsuitable for STEM documents.
 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auto-windows}
@@ -168,17 +169,16 @@ The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting 
  - The LaTeX logo is read as _"L A T E EX"_
  - The last line of the TOC is misinterpreted as a heading level 5 (different heuristic result compared to the MacOS version)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
- - "link" announcement for footnote appears in a random place in the same line (two words earlier) and the footnote number is read as normal text (does not happen with the MacOS version)
- - The footnote text is not correctly identified and read as part of the main paragraph in the middle of the hyphenated word _"docu- ment"_
+ - The footnote text is not correctly identified and read as part of the main paragraph in the middle of the hyphenated word _"docu- ment"_ (does not happen with the MacOS auto-tagged version)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
  - Mathematics and text are read without a pause even if a new paragraph starts 
  - The separate equations (on a single line) are joined and read without any pause despite the space in the source
  - Equation labels are read as numbers so difficult to understand
- - The matrices have a very strange reading order starting with _"Twenty-one three one four one one equals..."_ and none of the matrices are announced
+ - The matrices have a very strange reading order starting with _"Twenty-one three one four one one ..."_ and none of the matrices are announced
  - The heuristic invented a third (nested) list
- - The page number _"1"_ and the running header _"3 CITATIONS"_ are both read as text
+ - The page number _"1"_ and the running header _"3 CITATIONS"_ are both read as text (despite auto-tagging)
  - The float graphic is ignored and only the caption is read as normal text
- - The inline graphics in section 3.4 is not shown and not read
+ - The inline graphics in section 3.4 is not read
  - The table is read as normal paragraph text
  - The marginal and the paragraph next to it are identified as a single paragraph and the reading alters between both line by line
  - The formula is read as _"an + b-en = c-en"_
