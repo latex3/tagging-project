@@ -63,7 +63,7 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 It is very difficult to find all issues with this document if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is a (possibly incomplete) list of issues:
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction 1"_
- - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots, but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in the last years
+ - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots; but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in the last years
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
@@ -105,26 +105,25 @@ The untagged PDF is basically incomprehensible.
 
 #### Observations
 
- - From each TOC line with dots one dot is read, e.g., _"2 POINT 1 LINK Mathematics DOT 1"_
- - The paragraph "Apart from ..." is read strangely: many words are read letter by letter
- - "link" announcement for footnote appears in a random place in the same line (two words earlier) and the footnote number is read as normal text
+ - The reading of the TOC lines are now (with NVDA 2025) fairly good; until recently at least one dot was read (probably interpreted as a sentence ending), e.g., _"2 POINT 1 LINK Mathematics DOT 1"_
+ - The paragraph "Apart from ..." is read strangely: many words are suddenly read letter by letter
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
  - Mathematics and text are read without a pause even if a new paragraph starts 
  - The matrices are read top down, e.g., _"thirteen twenty four"_ without any indication that these are matrices
+ - The lists are not announced as lists and their nesting is not made clear
  - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fact that the sentence contains a link)
  - On page 2 the running header is read as text _"3 CITATIONS"_
  - The sentence "Small images may ..." is garbled with words read letter by letter
  - The table is not recognized and read as if it is a normal paragraph
  - The paragraph after the table and the marginal are read horizontally across marginal and paragraph; additionally the text is garbled and mostly read letter by letter
- - The 2 from 2.4 is appended to the end of the marginal and the heading is read as _"4 Theorems"_
- - The formula is read as _"an + b-en = c-en"_
+ - The formula is read as _"that an b-en c-en"_
  - The display of verbatim code is read without the parentheses and curly brackets
  - The paragraph starting "It is also possible..." is again garbled and read partly letter by letter
 
 #### Summary
 
-The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible.
+The same untagged PDF gets a different reading compared to the previous one, but overall the results are equally incomprehensible or perhaps even worse with the random letter by letter reading.
 
 ## Reading PDF Auto Tagged by Acrobat {#autotagged}
 
