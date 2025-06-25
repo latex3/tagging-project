@@ -62,8 +62,8 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 
 It is very difficult to find all issues with this document if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is a (possibly incomplete) list of issues:
 
- - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction"_
- - TOC is read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause
+ - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction 1"_
+ - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots, but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in the last years
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
@@ -72,20 +72,24 @@ It is very difficult to find all issues with this document if you are looking at
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
  - Equation labels are read as numbers so difficult to understand
  - The second display math equation and the following text "Matrices" are interpreted as a single table and a list with one item producing an incomprehensible reading
- - The matrix equation is read backwards _"3 4 1 2"_ not as "1 2 3 4" and without any indication what the matrices are
+ - The matrix equation is read backwards _"3 4 1 2"_ not as "1 2 3 4" and without any indication that these are matrices
  - The nested structure of the lists is not deducible
  - The reference back to item 2 in the sentence after the list makes the list entry come out as _"2 items within such a list may be refer items within such a list may be referenced"_
  - The link area is identified as being on the line before, therefore the word _"Link"_ is added before _"Here we reference item 2"_ (same problem as with the footnote mark, except that there the previous line has text)
  - The float with the Helvetica A is interpreted as a table and its caption is read as normal text
  - The heading "2.3 Figures and Tables" is read as _"LIST WITH ONE ITEM 2 3 figures and tables 3 figures an  d tables OUT OF LIST"_
- - The inline graphic is not announced
+ - The inline graphic is not announced and simply dropped
  - The small table and the following paragraph with a marginal confuses the reading software totally:
-     - everything is announced as a table with 11 rows,
+     - everything is announced as a table with 7 rows,
      - the reading order reads lines from the marginal and
      - the paragraph and several bits of text are repeated
- - It reads _"Theorem 1 Fermat ESS last"_
- - Instead of "such that \$a^n + b^n = c^n\$" it reads _"such then plus b-en equals c-en"_ (the _"then"_ is probably a Microsoft speech generator issue)
+     - The heading "2.4 Theorem" is  read as two columns of that table
+ - The caption of the reorem is read as _"Theorem 1 Fermat ESS last"_
+ - Instead of "such that \$a^n + b^n = c^n\$" it reads _"such than plus b-en equals c-en"_ (the _"than"_ is probably a Microsoft speech generator issue combing in _"that a n"_ to _"than"_)
  - The display of verbatim code is read without the parentheses and curly brackets
+ - The readout of the paragraph in section 3 has the word _"database"_ added several times in place of the citations `[1]` and `[2]`
+ - In the bibligraphy the page number 312 is read as _"three twelve"_ but 313 is read correctly
+ - Important punctuations to correctly identify the bibliography items are dropped
 
 #### Summary
 
