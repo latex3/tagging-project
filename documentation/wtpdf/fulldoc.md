@@ -156,8 +156,8 @@ For normal text structures the auto-tagging heuristics makes reasonable guesses 
 
 ###  Foxit/NVDA reading PDF tagged by Acrobat Pro auto-tagging (Windows version) {#auto-windows}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA addon MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA addon MathCAT 0.6.10
 
 The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
