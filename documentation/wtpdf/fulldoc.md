@@ -29,6 +29,7 @@ extrahead: youtube-head
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
   * [ChatGPT4 Markdown](#chatgpt4markdown)
+  * [Other prompts](#otherprompts)
 * [NVDA's pronunciation settings](#settings)
 * **Sections**
   * [TeX sources](larger-example)
@@ -370,7 +371,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
  In many places important information in the original document is completely lost (e.g., the note stating that the table syntax is temporary, etc.).  None of the supporting cross-references to other places in the document are preserved (text containing them was thrown away) and all footnotes, marginals, and graphics in the document have been eliminated. The result clearly shows the unpredictability of the approach: there is no way for the consumers to understand that what is read to them is not what was written in the original.
 
 
-### Experimenting with other prompts
+### Experimenting with other prompts {#otherprompts}
 
 In the light of the results we got returned from our initial prompts we did a few more experiments, altering and extending the prompts in order to prevent ChatGPT from altering the textual content of the document. This was partly successful after several iterations of refining the prompts further and further. However, in all cases the resulting documents exhibit structural deficiencies (e.g., incorrectly nested lists, incorrect TOC, etc.), loss of material (graphics not shown, marginal note dropped), missing naviation aids (textual links no longer functional, e.g., from the TOC or to figures or list items).
 
