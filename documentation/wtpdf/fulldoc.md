@@ -56,7 +56,8 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
 - NVDA add-on MathCAT 0.6.10
 
-{% include youtube.html id="txELZR_EDTo" width="medium" comment="t8 foxit"%}
+{% include youtube.html id="txELZR_EDTo" width="small" comment="t8 foxit"%}
+{% include youtube.html id="vptaWgd388Q" width="medium" comment="t8s foxit"%}
 
 #### Observations
 
@@ -101,7 +102,8 @@ The untagged PDF is basically incomprehensible.
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
 - NVDA add-on MathCAT 0.6.10
 
-{% include youtube.html id="HGm-vCuyQdo" width="medium" comment="t8 acrobat"%}
+{% include youtube.html id="HGm-vCuyQdo" width="small" comment="t8 acrobat"%}
+{% include youtube.html id="wxV2d5QV2Z0" width="medium" comment="t8s acrobat"%}
 
 #### Observations
 
@@ -134,7 +136,8 @@ The same untagged PDF gets a different reading compared to the previous one, but
 
 The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="L9vph4rLTFk" width="medium" comment="t8 autotagged macOS foxit"%}
+{% include youtube.html id="L9vph4rLTFk" width="small" comment="t8 autotagged macOS foxit"%}
+{% include youtube.html id="rHmrRgU4myI" width="medium" comment="t8s autotagged macOS foxit"%}
 
 #### Observations
 
@@ -162,7 +165,8 @@ For normal text structures the auto-tagging heuristics make reasonable guesses a
 
 The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting PDF is then read by Foxit/NVDA. A similar readout is produced when passing it to Acrobat Reader/NVDA.
 
-{% include youtube.html id="dHvhTxZWd7E" width="medium" comment="t8 -autotagged Windows foxit"%}
+{% include youtube.html id="dHvhTxZWd7E" width="small" comment="t8 autotagged Windows foxit"%}
+{% include youtube.html id="mVqMs05gxiA" width="medium" comment="t8s autotagged Windows foxit"%}
 
 #### Observations
 
@@ -214,7 +218,8 @@ Associated files or Structure Elements to provide MathML tagging for mathematics
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
-{% include youtube.html id="KznoGTQmWeM" width="medium" comment="t8 af foxit"%}
+{% include youtube.html id="KznoGTQmWeM" width="small" comment="t8 af foxit"%}
+{% include youtube.html id="-Bs9h4PtXS0" width="medium" comment="t8s af foxit"%}
 
 #### Observations
 
@@ -240,7 +245,8 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 - NVDA add-on MathCAT 0.6.10
 
 
-{% include youtube.html id="gDCz_zkIq2k" width="medium" comment="t8 se acrobat"%}
+{% include youtube.html id="gDCz_zkIq2k" width="small" comment="t8 se acrobat"%}
+{% include youtube.html id="p4TC1JqyVN0" width="medium" comment="t8s se acrobat"%}
 
 #### Observations
 
