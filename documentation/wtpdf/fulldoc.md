@@ -115,11 +115,11 @@ The untagged PDF is basically incomprehensible.
  - The matrices are read top down, e.g., _"thirteen twenty four"_ without any indication that these are matrices
  - The lists are not announced as lists and their nesting is not made clear
  - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fact that the sentence contains a link)
- - On page 2 the running header is read as text _"3 CITATIONS"_
+ - On page 2 the running header is read as text _"Page 2 3 CITATIONS"_
  - The sentence "Small images may ..." is garbled with words read letter by letter
  - The table is not recognized and read as if it is a normal paragraph
  - The paragraph after the table and the marginal are read horizontally across marginal and paragraph; additionally the text is garbled and mostly read letter by letter
- - The formula is read as _"that an b-en c-en"_
+ - The formula is read as _"that an plus b-en equals c-en"_
  - The display of verbatim code is read without the parentheses and curly brackets
  - The paragraph starting "It is also possible..." is again garbled and read partly letter by letter
 
@@ -150,7 +150,7 @@ The untagged PDF was auto-tagged by Acrobat Pro on a Mac. The resulting PDF is t
  - Equation labels are read as numbers so difficult to understand
  - The inline graphics in section 3.4 is not shown and not read
  - The marginal is correctly separated from the main text and read separately
- - The formula is read as _"a-en  b-en  c-en"_, i.e., the plus and equal are dropped and the exponents aren't announced
+ - The formula is read as _"a-en  plus b-en equals c-en"_, i.e., the exponents aren't announced
  - The display of verbatim code is read without the parentheses and curly brackets
 
 #### Summary
@@ -269,9 +269,9 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
 
 
-## Listening to ChatGPT's interpretation {#chatgpt}
+## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
-These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile to repeat the exercise, just to have a corrected text of Fermat's last theorem and a few other minor corrections. The intend here was to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
+For this section we used LLMs to enhance the untagged PDF in order to change them into an accessible document. These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile to repeat the exercise, just to have a corrected text of Fermat's last theorem and a few other minor corrections. The intend here was to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
@@ -280,7 +280,7 @@ These experiments have been done with a slightly earlier version of the source d
 
 #### Notes
 
-This document is shown as one possible alternative. ChatGPT 3 was used. The untagged PDF was uploaded and the following question posed:
+In the first experiment ChatGPT 3 was used. The untagged PDF was uploaded and the following question posed:
 
 > Please show full markdown source for an accessible document suitable for a blind reader extracted from this PDF
 
