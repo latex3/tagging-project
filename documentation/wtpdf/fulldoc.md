@@ -103,7 +103,7 @@ The untagged PDF is basically incomprehensible.
 - NVDA add-on MathCAT 0.6.10
 
 {% include youtube.html id="HGm-vCuyQdo" width="small" comment="t8 acrobat"%}
-{% include youtube.html id="wxV2d5QV2Z0" width="medium" comment="t8s acrobat"%}
+{% include youtube.html id="p4TC1JqyVN0" width="medium" comment="t8s acrobat"%}
 
 #### Observations
 
@@ -246,7 +246,7 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 
 {% include youtube.html id="gDCz_zkIq2k" width="small" comment="t8 se acrobat"%}
-{% include youtube.html id="p4TC1JqyVN0" width="medium" comment="t8s se acrobat"%}
+{% include youtube.html id="wxV2d5QV2Z0" width="medium" comment="t8s se acrobat"%}
 
 #### Observations
 
