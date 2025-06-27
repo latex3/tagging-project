@@ -210,8 +210,8 @@ Associated files or Structure Elements to provide MathML tagging for mathematics
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
-- NVDA 2025.1 (test-release) using Windows OneCore voice "Zira"
-- NVDA add-on MathCAT 0.6.8-rc.9
+- NVDA 2025.1.2 using Windows OneCore voice "Zira"
+- NVDA add-on MathCAT 0.6.10
 
 The sample document shown in the video was compiled with the above configuration lines using the LuaTeX engine. The resulting PDF was then displayed in Foxit with NVDA as a speech generator.
 
