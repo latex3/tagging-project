@@ -64,7 +64,7 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 It is very difficult to find all issues with this document if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is a (possibly incomplete) list of issues:
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction 1"_
- - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots; but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in the last years
+ - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots; but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in previous years
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
@@ -266,7 +266,7 @@ The use of structure elements instead of AF files give identical results for mat
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
-For this section we used LLMs to enhance the untagged PDF in order to change them into an accessible document. These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile to repeat the exercise, just to have a corrected text of Fermat's last theorem and a few other minor corrections. The intend here was to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
+For this section we used LLMs to enhance the untagged PDF in order to change them into an accessible document. These experiments have been done with a slightly earlier version of the source document and they haven't been redone since. Given that with the same prompt you get different results on each occasion it didn't seem worthwhile to repeat the exercise, just to have a corrected text of Fermat's last theorem and a few other minor corrections. The intent here was to give examples for this approach and to see if it could be a suitable way to produce accessible versions of given STEM documents and to do this the current samples seem good enough.
 
 ### Foxit reading GitHub display of markdown extracted by ChatGPT 3 {#chatgpt3}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
@@ -346,7 +346,7 @@ Note here the document text has been extensively re-worded by ChatGPT.
 
 #### Observations
 
- - The markdown returned from ChatGPT 4 is heavy reworded and shortened
+ - The markdown returned from ChatGPT 4 is heavily reworded and shortened
  - The equation numbers are dropped (would be a problem if cross-referenced)
  - The introductory text to the set of equations has been altered
  - A comma on the first line of equations has been invented (but not on the second line)
