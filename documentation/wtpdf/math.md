@@ -23,7 +23,7 @@ with the entries being read in the wrong order.
 
 
 
-{% include youtube.html id="56vM4xtpQUA" width="narrow" comment="t8 untagged math foxit"%}
+{% include youtube.html id="_Mu81hBV4_4" width="narrow" comment="t8s untagged math foxit"%}
 
 
 At the present time different PDF readers support different ways of
@@ -42,15 +42,15 @@ PDF viewers.
 
 ## Associated Files and foxit
 
-{% include youtube.html id="6qHNrLO0Tlg" width="narrow" comment="t8 math af foxit"%}
+{% include youtube.html id="9zI0Z-hj4ZA" width="narrow" comment="t8s math af foxit"%}
 
 ## Structure Elements and Acrobat
 
 
-{% include youtube.html id="-J8UD-94S3Q" width="narrow" comment="t8 math se acrobat"%}
+{% include youtube.html id="8u5QDvSc7_I" width="narrow" comment="t8s math se acrobat"%}
 
 ## Autotagged with Acrobat
 
-{% include youtube.html id="W9y7kPepqds" width="narrow" comment="t8 macos autotagged foxit"%}
+{% include youtube.html id="F2s7aJimCsU" width="narrow" comment="t8s macos autotagged foxit"%}
 
 
