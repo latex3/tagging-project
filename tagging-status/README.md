@@ -23,7 +23,7 @@ When moving files between these directories, please remember to update `tagging-
 Currently most testfiles are on `testfiles-unknown` and need to be categorized.
 To move a test into another category, follow the following three step process:
 
-1. Look at the `.struct.xml` file and compare it with the `.tex` file's content. If the file looks correct and represents the content of the `.tex` document`, then the test can be moved into the `testfiles` directory. Otherwise it should go into `testfiles-broken`.
+1. Look at the `.struct.xml` file and compare it with the `.tex` file's content. If the file looks correct and represents the content of the `.tex` document, then the test can be moved into the `testfiles` directory. Otherwise it should go into `testfiles-broken`.
  If you are unsure, keep the test in `testfiles-unknown` for now.
 2. Move both the testfiles ending with `.tex` and the reference file ending with `.struct.xml` into the chosen new testfiles directory. You might have to create a new directory for the package.
 3. If you are removing the last test for a package from `testfiles-unknown` (so if the directory of the package is empty afterwards), remove the directory and update the package entry in ../_data/tagging-status.yml:
