@@ -64,7 +64,8 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 It is very difficult to find all issues with this document if you are looking at the text in parallel, so close your eyes and try to understand what is told to you. Here is a (possibly incomplete) list of issues:
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction 1"_
- - Until June 2025 the TOC was read with a lot of  _"dot dot dot ..."_ and page number and next heading number without any pause. This has now been improved through configuration settings in NVDA that can ignore multiple dots; but listen to [this recording](https://latex3.github.io/tagging-project/documentation/wtpdf/toc) to hear what was produced in previous years
+
+- The TOC is read with a lot of  _"dot dot dot ..."_ and with page number and next heading number without any pause inbetween. (In the June 2025 release of NVDA there are now configuration possibilities to _finally_  improve on this "dots" situation. However, these configuration options have possibly unwanted side effects (as they also suppress dots in other places) and are not enabled by default)
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
