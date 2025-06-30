@@ -107,7 +107,8 @@ The untagged PDF is basically incomprehensible.
 
 #### Observations
 
- - The reading of the TOC lines are now (with NVDA 2025) fairly good; until recently at least one dot was read (probably interpreted as a sentence ending), e.g., _"2 POINT 1 LINK Mathematics DOT 1"_
+ - The reading of the TOC lines are better in this case. Instead of multiple dots we get something like  _"2 POINT 1 LINK Mathematics DOT 1"_ which is somewhat confusing, but less horrible to listen to.
+ - The links in the TOC are inconsistenly provided: usually just for the heading title but we also hear _"LINK LINK 2.2 LINK Lists 1"_  (so no DOT this time but two extra LINKs)
  - The paragraph "Apart from ..." is read strangely: many words are suddenly read letter by letter
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
