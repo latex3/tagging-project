@@ -57,7 +57,7 @@ Everyone might understand that [math is hard](https://latex3.github.io/tagging-p
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
 - NVDA add-on MathCAT 0.6.10
 
-{% include youtube.html id="vptaWgd388Q" width="medium" comment="t8s foxit"%}
+{% include youtube.html id="ieUWiSGBndk" width="medium" comment="t8sd foxit"%}
 
 #### Observations
 

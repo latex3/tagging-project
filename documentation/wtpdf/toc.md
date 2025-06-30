@@ -21,13 +21,12 @@ tools.
 On this document foxit produced the following reading (Acrobat is similar)
 when using a 2024 NVDA screen reader release.
 
-{% include youtube.html id="HylCvun3q1g" width="medium" comment="T5 untagged toc, foxit" %}
+{% include youtube.html id="lYBYaplZLrQ" width="medium" comment="t8sd untagged toc, foxit" %}
 
 
-Recent NVDA Releases have improved heuristics to control the reading
-of multiple dots and the reading with NVDA 2025.1 is much better
-however this does illustrate the difficulty in reading documents when no
-explicit structure is provided.
+It is possible to configure NVDA's symbol setting so the dots are not announced, however that is a global
+setting affecting all `.` in all documents that are not recognised as "end of sentence2 or other special contexts.
+
 
 {% include youtube.html id="YTQez-MQ7ZM" width="medium" comment="t8 toc, foxit" %}
 
