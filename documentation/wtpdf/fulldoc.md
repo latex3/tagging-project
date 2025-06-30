@@ -103,7 +103,7 @@ The untagged PDF is basically incomprehensible.
 - NVDA 2025.1.2 using Windows OneCore voice "Zira"
 - NVDA add-on MathCAT 0.6.10
 
-{% include youtube.html id="p4TC1JqyVN0" width="medium" comment="t8s acrobat"%}
+{% include youtube.html id="HxUD1m76GKk" width="medium" comment="t8sd acrobat"%}
 
 #### Observations
 
