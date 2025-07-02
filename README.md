@@ -6,12 +6,7 @@ This [tagging-project repository](https://github.com/latex3/tagging-project/)  d
 
 It is meant to track issues and suggestions related to the "LaTeX Tagged PDF" 
 project. The code for this project is split over several other repositories 
-([latex2e](https://github.com/latex3/latex2e),
-[latex3](https://github.com/latex3/latex3),
-[tagpdf](https://github.com/latex3/tagpdf),
-... to name a few) and so this here is a convenient 
-place to  keep any more general topics or issues that cut across the 
-different repositories in a single place. 
+([latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to  keep any more general topics or issues that cut across the different repositories in a single place. 
 
 If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories 
 sub-issues can then be opened (by us) in those repositories and linked back, 
@@ -26,7 +21,11 @@ PDF 1.7 versions of the documents (also generated automatically by altering the 
 
 ## Using the LaTeX prototype for accessible PDF
 
-We have written a few guidelines explaining how to [use the prototype for generating accessible PDFs](https://latex3.github.io/tagging-project/documentation/prototype-usage-instructions). The documentation will be updated whenever we alter the still temporary interfaces.
+We have written a few [guidelines explaining how to use the prototype for generating accessible PDFs](https://latex3.github.io/tagging-project/documentation/prototype-usage-instructions). The documentation will be updated whenever we alter the still temporary interfaces.
+
+## Other documentation
+
+ At the moment other documentation about tagging is sprinkled across different places. Here is [an overview on where to find these places](https://latex3.github.io/tagging-project/documentation/documentation-pointers). Eventually, this  will be combined into a single document.
 
 ## Status of LaTeX classes and packages with respect to Tagging
 
