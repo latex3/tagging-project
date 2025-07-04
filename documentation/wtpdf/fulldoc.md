@@ -72,8 +72,9 @@ It is very difficult to find all issues with this document if you are looking at
  - The heading _"2 Document structures"_ is interpreted as a list with one item
  - Subheadings are read as _"Two One Mathematics"_ not as "2.1 Mathematics"
  - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - The four equations are read without pause, so it is impossible to deduce which part of the readout belongs to which formula
+ - The second pair of math equations (labeled 2.2) and the following text "Matrices" are interpreted as a single table and a list with one item producing an incomprehensible reading
  - Equation labels are read as numbers so difficult to understand
- - The second display math equation and the following text "Matrices" are interpreted as a single table and a list with one item producing an incomprehensible reading
  - The matrix equation is read backwards _"3 4 1 2"_ not as "1 2 3 4" and without any indication that these are matrices
  - The nested structure of the lists is not deducible
  - The reference back to item 2 in the sentence after the list makes the list entry come out as _"2 items within such a list may be refer items within such a list may be referenced"_
