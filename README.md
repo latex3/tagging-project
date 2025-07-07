@@ -20,10 +20,6 @@ This basic example compiles a tagged PDF 2.0 without any errors. To fully comply
 		tagging-setup = {math/setup=mathml-SE} 
     }
     \documentclass{article}
-    \usepackage{hyperref}
-    \hypersetup{
-    	pdftitle=Accessible Document Example
-    }
     \begin{document}
       This is a tagged PDF with some accessible content.
     \end{document}
