@@ -1,4 +1,14 @@
 # The LaTeX Tagged PDF repository
+## General remarks
+This [tagging-project repository](https://github.com/latex3/tagging-project/) does not contain any code.
+
+It is meant to track issues and suggestions related to the "LaTeX Tagged PDF" project. The code for this project is split over several other repositories ( [latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to keep any more general topics or issues that cut across the different repositories in a single place.
+
+If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories
+sub-issues can then be opened (by us) in those repositories and linked back,
+or, if such changes are confined to a single repository, the issue could be
+transferred there – whatever is more appropriate.
+
 ## Basic example for accessible PDFs
 This basic example compiles a tagged PDF 2.0 without any errors. To fully comply with the PDF/UA-2 standard, ensure you explicitly set the document's title and language.
 
@@ -29,15 +39,6 @@ Help is welcomed to combine them into a single document.
 Beyond the documentation, you can also find answers to various issues in " [Discussions](https://github.com/latex3/tagging-project/discussions)" or [Tex.stackexchange.com ](https://tex.stackexchange.com/questions/tagged/tagged-pdf)(searching with `[tagged-pdf])`
 ## Status of LaTeX classes
 Here's a list of core and contributed LaTeX packages, showing [their compatibility with the tagging code](https://latex3.github.io/tagging-project/tagging-status/).
-## General remarks
-This [tagging-project repository](https://github.com/latex3/tagging-project/) does not contain any code.
-
-It is meant to track issues and suggestions related to the "LaTeX Tagged PDF" project. The code for this project is split over several other repositories ( [latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to keep any more general topics or issues that cut across the different repositories in a single place.
-
-If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories
-sub-issues can then be opened (by us) in those repositories and linked back,
-or, if such changes are confined to a single repository, the issue could be
-transferred there – whatever is more appropriate.
 ## History and archive
 Example documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project by March 2024 are available at [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72)
 
