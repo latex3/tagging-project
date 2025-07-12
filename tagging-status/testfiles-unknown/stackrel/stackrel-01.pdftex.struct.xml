@@ -1,27 +1,34 @@
-<Document xmlns="http://iso.org/pdf2/ssn"
-   id="ID.02"
-  >
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.05"
-    rolemaps-to="Part"
-   >
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.06"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.02"
     >
-   <?MarkedContent page="1" ?>
-   <Formula xmlns="http://iso.org/pdf2/ssn"
-      id="ID.07"
-      title="math"
-      af="tag-AFfile1.tex"
-      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-      Layout:Placement="Inline"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.05"
+      rolemaps-to="Part"
      >
-    <?MarkedContent page="1" ?>A +andB!=xC
-   </Formula>
-   <?MarkedContent page="1" ?>
-  </text>
- </text-unit>
-</Document>
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.06"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <?MarkedContent page="1" ?>
+     <Formula xmlns="http://iso.org/pdf2/ssn"
+        id="ID.07"
+        title="math"
+        af="tag-AFfile1.tex"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:Placement="Inline"
+       >
+       <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+       $A \stackbin [\text {and}]{}{+} B \stackrel [x]{!}{=} C$
+       </AssociatedFile>
+      <?MarkedContent page="1" ?>A +andB!=xC
+     </Formula>
+     <?MarkedContent page="1" ?>
+    </text>
+   </text-unit>
+  </Document>
+ </StructTreeRoot>
+</PDF>

@@ -1,50 +1,57 @@
-<Document xmlns="http://iso.org/pdf2/ssn"
-   id="ID.002"
-  >
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.005"
-    rolemaps-to="Part"
-   >
-  <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.006"
-     title="align"
-     af="tag-AFfile1.tex"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:Placement="Block"
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.002"
     >
-   <?MarkedContent page="1" ?>A =B
-   <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.007"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.005"
+      rolemaps-to="Part"
      >
-    <?MarkedContent page="1" ?>(1)
-   </Lbl>
-   <?MarkedContent page="1" ?>C =D
-   <Lbl xmlns="http://iso.org/pdf2/ssn"
-      id="ID.008"
+    <Formula xmlns="http://iso.org/pdf2/ssn"
+       id="ID.006"
+       title="align"
+       af="tag-AFfile1.tex"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:Placement="Block"
+      >
+      <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+      \begin {align}A &amp;= B \label {foo} \\ C &amp;= D\end {align}
+      </AssociatedFile>
+     <?MarkedContent page="1" ?>A =B
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
+        id="ID.007"
+       >
+      <?MarkedContent page="1" ?>(1)
+     </Lbl>
+     <?MarkedContent page="1" ?>C =D
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
+        id="ID.008"
+       >
+      <?MarkedContent page="1" ?>(2)
+     </Lbl>
+     <?MarkedContent page="1" ?>
+    </Formula>
+   </text-unit>
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.009"
+      rolemaps-to="Part"
      >
-    <?MarkedContent page="1" ?>(2)
-   </Lbl>
-   <?MarkedContent page="1" ?>
-  </Formula>
- </text-unit>
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.009"
-    rolemaps-to="Part"
-   >
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.010"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
-    >
-   <?MarkedContent page="1" ?>eq. (
-   <Link xmlns="http://iso.org/pdf2/ssn"
-      id="ID.011"
-     >
-    <?MarkedContent page="1" ?>1
-    <?ReferencedObject type="Annot" page="1" ?>
-   </Link>
-   <?MarkedContent page="1" ?>)
-  </text>
- </text-unit>
-</Document>
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.010"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <?MarkedContent page="1" ?>eq. (
+     <Link xmlns="http://iso.org/pdf2/ssn"
+        id="ID.011"
+       >
+      <?MarkedContent page="1" ?>1
+      <?ReferencedObject type="Annot" page="1" ?>
+     </Link>
+     <?MarkedContent page="1" ?>)
+    </text>
+   </text-unit>
+  </Document>
+ </StructTreeRoot>
+</PDF>
