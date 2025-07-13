@@ -1,2 +1,2 @@
 
-Run lualatex on MIT-thesis.tex (the other .tex files are input)
+Run lualatex on mitthesis-01.tex (the other .tex files have been renamed to .ltx)

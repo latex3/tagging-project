@@ -306,17 +306,20 @@
 %%% Frontmatter (write this material in the mentioned files)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % This page is optional. Edit the file committee_members.tex 
-\include{committee_members}
+%\include{committee_members}
+\clearpage\input{committee_members.ltx}\clearpage
 
 % The abstract environment creates all the required headings and footers. 
 % You only need to the text of the abstract in the file abstract.tex
 \begin{abstract}
-	\input{abstract.tex}% use \input rather than \include because we're inside an environment
+	\input{abstract.ltx}% use \input rather than \include because we're inside an environment
 \end{abstract}
 
-\include{acknowledgments}% acknowledgments.tex (.tex extension is presumed by \include) 
+%\include{acknowledgments}% acknowledgments.tex (.tex extension is presumed by \include) 
+\clearpage\input{acknowledgments.ltx}\clearpage
 
-\include{biography}% biography.tex (optional, see https://libraries.mit.edu/distinctive-collections/thesis-specs/#format)
+%\include{biography}% biography.tex (optional, see https://libraries.mit.edu/distinctive-collections/thesis-specs/#format)
+\clearpage\input{biography.ltx}\clearpage
 
 %%% Table of contents and lists of stuff (delete unused lists, i.e., if no tables or figures) %%%%%
 
@@ -328,7 +331,8 @@
 
 %% If you want to use "double spacing", you should start here...
 
- \include{chapter1}% .tex extension is presumed
+% \include{chapter1}% .tex extension is presumed
+\clearpage\input{chapter1.ltx}\clearpage
 % \include{chapter2}
 % \include{chapter3}
 % \include{chapter4}
@@ -338,7 +342,8 @@
 
 \appendix
 %\include{appendixa}% listings example
-\include{appendixb}% longtable example
+%\include{appendixb}% longtable example
+\clearpage\input{appendixb.ltx}\clearpage
 
 %%% Bibliography (biblatex)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

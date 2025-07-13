@@ -269,10 +269,10 @@
 	\input{fontsets/\ClassName-\mit@fontset.tex}
 }{%
 	\ClassWarning{\ClassName}{Fontset file \ClassName-\mit@fontset.tex or subdirectory fontsets not found, will look for \mit@fontset.tex in your working directory}
-	\IfFileExists{\mit@fontset.tex}{% 2023/08/30
-		\input{\mit@fontset.tex}
+	\IfFileExists{\mit@fontset.ltx}{% 2023/08/30
+		\input{\mit@fontset.ltx}
 		}{
-    	\ClassWarning{\ClassName}{Fontset file \mit@fontset.tex not found, using default fonts. You may need to place the fontset file into your working directory}
+    	\ClassWarning{\ClassName}{Fontset file \mit@fontset.ltx not found, using default fonts. You may need to place the fontset file into your working directory}
     	\ifpdftex
         	\ClassNoteNoLine{\ClassName}{Loading Computer Modern text and math fonts (default for pdftex)}
         	\RequirePackage[T1]{fontenc}
