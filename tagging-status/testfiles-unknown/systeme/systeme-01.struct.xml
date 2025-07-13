@@ -1,5 +1,5 @@
-<!-- Warning: Multiple document elements -->
-<Document>
+<PDF>
+ <StructTreeRoot>
   <Formula xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
      title="math"
@@ -7,6 +7,9 @@
      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
      Layout:Placement="Inline"
     >
+    <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+    $\mkern 0mu$
+    </AssociatedFile>
   </Formula>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.003"
@@ -18,6 +21,12 @@
       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
       Layout:Placement="Inline"
      >
+     <AssociatedFile name="mathml-1.xml" xmlns="">
+     <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0" stretchy="false">(</mo> </math>
+     </AssociatedFile>
+     <AssociatedFile name="tag-AFfile2.tex" xmlns="">
+     $($
+     </AssociatedFile>
    </Formula>
    <Formula xmlns="http://iso.org/pdf2/ssn"
       id="ID.007"
@@ -26,6 +35,12 @@
       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
       Layout:Placement="Inline"
      >
+     <AssociatedFile name="mathml-2.xml" xmlns="">
+     <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0.222em" rspace="0.222em">+</mo> </math>
+     </AssociatedFile>
+     <AssociatedFile name="tag-AFfile3.tex" xmlns="">
+     ${}+{}$
+     </AssociatedFile>
    </Formula>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.008"
@@ -44,9 +59,16 @@
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:Placement="Inline"
        >
+       <AssociatedFile name="mathml-3.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo fence="true" lspace="0" rspace="0" symmetric="true">{</mo> <mi> <mglyph/> </mi> <mspace width="1.196pt"/> </math>
+       </AssociatedFile>
+       <AssociatedFile name="tag-AFfile4.tex" xmlns="">
+       $\relax \SYS_delim_left \vcenter {\lineskiplimit =0pt \lineskip =0pt \baselineskip \SYS_lineskip_coeff \normalbaselineskip \useKV [systeme]{code before}\halign \expandafter \expandafter \expandafter {\expandafter \the \expandafter \SYS_preamble_toks \the \SYS_tab_toks }}\SYS_delim_right $
+       </AssociatedFile>
       <?MarkedContent page="1" ?>⎧{⎨{⎩2𝑎−3𝑏+4𝑐=2𝑎+8𝑏+5𝑐=8−𝑎+2𝑏+𝑐=−5
      </Formula>
     </text>
    </text-unit>
   </Document>
-</Document>
+ </StructTreeRoot>
+</PDF>

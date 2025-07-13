@@ -1,18 +1,25 @@
-<Document xmlns="http://iso.org/pdf2/ssn"
-   id="ID.02"
-  >
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.05"
-    rolemaps-to="Part"
-   >
-  <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.06"
-     title="equation*"
-     af="tag-AFfile1.tex"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:Placement="Block"
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.02"
     >
-   <?MarkedContent page="1" ?>ρc∂T∂t=−λ∂2T∂x2⏞⏟⏟⏞diffusion−µ(T4−T04)⏞⏟⏟⏞radiative loss⏞⏟⏟⏞heat transfers+n∑︂i=1˙qi⏞⏟⏟⏞heat sources
-  </Formula>
- </text-unit>
-</Document>
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.05"
+      rolemaps-to="Part"
+     >
+    <Formula xmlns="http://iso.org/pdf2/ssn"
+       id="ID.06"
+       title="equation*"
+       af="tag-AFfile1.tex"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:Placement="Block"
+      >
+      <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+      \begin {equation*}\rho c \frac {\partial T}{\partial t} = \begin {bracealign} \underbrace { \begin {bracealign} \underbrace { - \lambda \frac {\partial ^2 T}{\partial x^2} }_{\text {diffusion}} - \underbrace { \mu (T^4 - {T_0}^4) }_{\text {radiative loss}} \end {bracealign} }_{\text {heat transfers}} + \underbrace { \sum _{i=1}^{n} \dot {q}_i }_{\text {heat sources}} \end {bracealign}\end {equation*}
+      </AssociatedFile>
+     <?MarkedContent page="1" ?>ρc∂T∂t=−λ∂2T∂x2⏞⏟⏟⏞diffusion−µ(T4−T04)⏞⏟⏟⏞radiative loss⏞⏟⏟⏞heat transfers+n∑︂i=1˙qi⏞⏟⏟⏞heat sources
+    </Formula>
+   </text-unit>
+  </Document>
+ </StructTreeRoot>
+</PDF>

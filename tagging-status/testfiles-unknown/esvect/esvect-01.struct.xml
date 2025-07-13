@@ -1,60 +1,82 @@
-<Document xmlns="http://iso.org/pdf2/ssn"
-   id="ID.002"
-  >
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.005"
-    rolemaps-to="Part"
-   >
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.006"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.002"
     >
-   <Formula xmlns="http://iso.org/pdf2/ssn"
-      id="ID.007"
-      title="math"
-      af="mathml-1.xml tag-AFfile1.tex"
-      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-      Layout:Placement="Inline"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.005"
+      rolemaps-to="Part"
      >
-    <?MarkedContent page="1" ?>#»𝐸
-   </Formula>
-  </text>
- </text-unit>
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.008"
-    rolemaps-to="Part"
-   >
-  <Formula xmlns="http://iso.org/pdf2/ssn"
-     id="ID.009"
-     title="equation*"
-     af="mathml-2.xml tag-AFfile2.tex"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:Placement="Block"
-    >
-   <?MarkedContent page="1" ?>#»𝐸#»𝑢#»𝑢
-  </Formula>
- </text-unit>
- <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-    id="ID.010"
-    rolemaps-to="Part"
-   >
-  <text xmlns="https://www.latex-project.org/ns/dflt"
-     id="ID.011"
-     xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-     Layout:TextAlign="Justify"
-     rolemaps-to="P"
-    >
-   <Formula xmlns="http://iso.org/pdf2/ssn"
-      id="ID.012"
-      title="math"
-      af="mathml-3.xml tag-AFfile3.tex"
-      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-      Layout:Placement="Inline"
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.006"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <Formula xmlns="http://iso.org/pdf2/ssn"
+        id="ID.007"
+        title="math"
+        af="mathml-1.xml tag-AFfile1.tex"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:Placement="Inline"
+       >
+       <AssociatedFile name="mathml-1.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi> <mglyph/> </mi> </math>
+       </AssociatedFile>
+       <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+       $\vv {E}$
+       </AssociatedFile>
+      <?MarkedContent page="1" ?>#»𝐸
+     </Formula>
+    </text>
+   </text-unit>
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.008"
+      rolemaps-to="Part"
      >
-    <?MarkedContent page="1" ?>#»𝐿Δ
-   </Formula>
-  </text>
- </text-unit>
-</Document>
+    <Formula xmlns="http://iso.org/pdf2/ssn"
+       id="ID.009"
+       title="equation*"
+       af="mathml-2.xml tag-AFfile2.tex"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:Placement="Block"
+      >
+      <AssociatedFile name="mathml-2.xml" xmlns="">
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <msub> <mi> <mglyph/> </mi> <msub> <mi> <mglyph/> </mi> <mi> <mglyph/> </mi> </msub> </msub> </math>
+      </AssociatedFile>
+      <AssociatedFile name="tag-AFfile2.tex" xmlns="">
+      \begin {equation*}\vv {E}_{\vv {u}_{\vv {u}}}\end {equation*}
+      </AssociatedFile>
+     <?MarkedContent page="1" ?>#»𝐸#»𝑢#»𝑢
+    </Formula>
+   </text-unit>
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.010"
+      rolemaps-to="Part"
+     >
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.011"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <Formula xmlns="http://iso.org/pdf2/ssn"
+        id="ID.012"
+        title="math"
+        af="mathml-3.xml tag-AFfile3.tex"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:Placement="Inline"
+       >
+       <AssociatedFile name="mathml-3.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <msub> <mi> <mglyph/> </mi> <mrow> <mspace width="-0.056em"/> <mi mathvariant="normal">Δ</mi> </mrow> </msub> </math>
+       </AssociatedFile>
+       <AssociatedFile name="tag-AFfile3.tex" xmlns="">
+       $\vv *{L}{\Delta }$
+       </AssociatedFile>
+      <?MarkedContent page="1" ?>#»𝐿Δ
+     </Formula>
+    </text>
+   </text-unit>
+  </Document>
+ </StructTreeRoot>
+</PDF>
