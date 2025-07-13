@@ -56,7 +56,7 @@ Click on the column headings to sort the table by the chosen column.
 </thead>
 <tbody>
 {%- for p in t-s -%}
-<tr>
+<tr id="{{p.name}}">
 <td>{{p.type}}</td>
 <td class="{{p.status}}"><a href="https://ctan.org/pkg/
 {%- if p.ctan-pkg -%}{{p.ctan-pkg}}{%- else -%}{{p.name}}{%- endif -%}
