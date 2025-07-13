@@ -6,7 +6,7 @@
 #  field              optional?  type            usage
 #  -----              ---------  ----            -----
 #  name               required   string          Package or Class name
-#  type               required   string          "class" or "package" (may need eg tikz or beamer themes in the end?)
+#  type               required   string          "class", "package" or "library" (library for babel languages, tikz libraries etc)
 #  status             required   string          Status of package, see list below.
 #  ctan-pkg           optional   string          Name for ctan.org/pkg/?? link if different to name
 #  included-in        optional   string-list     tlc3 arxiv10 arxiv5 arxiv1 arxiv01 arxiv001 (included in TLC or top n% of arxiv package use)
@@ -1000,7 +1000,7 @@
 
 - name: babel/afrikaans
   ctan-pkg: babel-dutch
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1012,7 +1012,7 @@
 
 - name: babel/australian
   ctan-pkg: babel-english
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1024,7 +1024,7 @@
 
 - name: babel/albanian
   ctan-pkg: babel-albanian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1036,7 +1036,7 @@
 
 - name: babel/austrian
   ctan-pkg: babel-german
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1048,7 +1048,7 @@
 
 - name: babel/azerbaijani
   ctan-pkg: babel-azerbaijani
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1060,7 +1060,7 @@
 
 - name: babel/basque
   ctan-pkg: babel-basque
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1072,7 +1072,7 @@
 
 - name: babel/belarusian
   ctan-pkg: babel-belarusian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1084,7 +1084,7 @@
 
 - name: babel/bosnian
   ctan-pkg: babel-bosnian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1096,7 +1096,7 @@
 
 - name: babel/brazilian
   ctan-pkg: babel-portuges
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1108,7 +1108,7 @@
 
 - name: babel/breton
   ctan-pkg: babel-breton
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1120,7 +1120,7 @@
 
 - name: babel/bulgarian
   ctan-pkg: babel-bulgarian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1132,7 +1132,7 @@
 
 - name: babel/catalan
   ctan-pkg: babel-catalan
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1144,7 +1144,7 @@
 
 - name: babel/croatian
   ctan-pkg: babel-croatian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1156,7 +1156,7 @@
 
 - name: babel/czech
   ctan-pkg: babel-czech
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1168,7 +1168,7 @@
 
 - name: babel/danish
   ctan-pkg: babel-danish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1180,7 +1180,7 @@
 
 - name: babel/dutch
   ctan-pkg: babel-dutch
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1192,7 +1192,7 @@
 
 - name: babel/english
   ctan-pkg: babel-english
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1204,7 +1204,7 @@
 
 - name: babel/esperanto
   ctan-pkg: babel-esperanto
-  type: package
+  type: library
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
@@ -1215,7 +1215,7 @@
 
 - name: babel/estonian
   ctan-pkg: babel-estonian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1227,7 +1227,7 @@
 
 - name: babel/finnish
   ctan-pkg: babel-finnish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1239,7 +1239,7 @@
 
 - name: babel/french
   ctan-pkg: babel-french
-  type: package
+  type: library
   status: currently-incompatible
   included-in: [tlc3]
   priority: 2
@@ -1251,7 +1251,7 @@
 
 - name: babel/friulan
   ctan-pkg: babel-friulan
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1263,7 +1263,7 @@
 
 - name: babel/galician
   ctan-pkg: babel-galician
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1275,7 +1275,7 @@
 
 - name: babel/georgian
   ctan-pkg: babel-georgian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1287,7 +1287,7 @@
 
 - name: babel/german
   ctan-pkg: babel-german
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1299,7 +1299,7 @@
 
 - name: babel/greek
   ctan-pkg: babel-greek
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1311,7 +1311,7 @@
 
 - name: babel/hebrew
   ctan-pkg: babel-hebrew
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1323,7 +1323,7 @@
 
 - name: babel/icelandic
   ctan-pkg: babel-icelandic
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1335,7 +1335,7 @@
 
 - name: babel/indonesian
   ctan-pkg: babel-indonesian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1347,7 +1347,7 @@
 
 - name: babel/interlingua
   ctan-pkg: babel-interlingua
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1359,7 +1359,7 @@
 
 - name: babel/irish
   ctan-pkg: babel-irish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1371,7 +1371,7 @@
 
 - name: babel/japanese
   ctan-pkg: babel-japanese
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1383,7 +1383,7 @@
 
 - name: babel/kurmanji
   ctan-pkg: babel-kurmanji
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1395,7 +1395,7 @@
 
 - name: babel/latin
   ctan-pkg: babel-latin
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1407,7 +1407,7 @@
 
 - name: babel/latvian
   ctan-pkg: babel-latvian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1419,7 +1419,7 @@
 
 - name: babel/lithuanian
   ctan-pkg: babel-lithuanian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1431,7 +1431,7 @@
 
 - name: babel/lowersorbian
   ctan-pkg: babel-sorbian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1443,7 +1443,7 @@
 
 - name: babel/macedonian
   ctan-pkg: babel-macedonian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1455,7 +1455,7 @@
 
 - name: babel/malay
   ctan-pkg: babel-malay
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1467,7 +1467,7 @@
 
 - name: babel/magyar
   ctan-pkg: babel-hungarian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1491,7 +1491,7 @@
 
 - name: babel/naustrian
   ctan-pkg: babel-german
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1503,7 +1503,7 @@
 
 - name: babel/ngerman
   ctan-pkg: babel-german
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1515,7 +1515,7 @@
 
 - name: babel/norsk
   ctan-pkg: babel-norsk
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1527,7 +1527,7 @@
 
 - name: babel/nynorsk
   ctan-pkg: babel-norsk
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1539,7 +1539,7 @@
 
 - name: babel/occitan
   ctan-pkg: babel-occitan
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1551,7 +1551,7 @@
 
 - name: babel/piedmontese
   ctan-pkg: babel-piedmontese
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1563,7 +1563,7 @@
 
 - name: babel/polish
   ctan-pkg: babel-polish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1575,7 +1575,7 @@
 
 - name: babel/polutonikogreek
   ctan-pkg: babel-greek
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1587,7 +1587,7 @@
 
 - name: babel/portuguese
   ctan-pkg: babel-portuges
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1599,7 +1599,7 @@
 
 - name: babel/romanian
   ctan-pkg: babel-romanian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1611,7 +1611,7 @@
 
 - name: babel/romansh
   ctan-pkg: babel-romansh
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1623,7 +1623,7 @@
 
 - name: babel/russian
   ctan-pkg: babel-russian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1635,7 +1635,7 @@
 
 - name: babel/samin
   ctan-pkg: babel-samin
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1647,7 +1647,7 @@
 
 - name: babel/scottish
   ctan-pkg: babel-scottish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1659,7 +1659,7 @@
 
 - name: babel/serbian
   ctan-pkg: babel-serbian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1671,7 +1671,7 @@
 
 - name: babel/serbianc
   ctan-pkg: babel-serbianc
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1683,7 +1683,7 @@
 
 - name: babel/slovak
   ctan-pkg: babel-slovak
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1695,7 +1695,7 @@
 
 - name: babel/slovene
   ctan-pkg: babel-slovenian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1707,7 +1707,7 @@
 
 - name: babel/spanish
   ctan-pkg: babel-spanish
-  type: package
+  type: library
   status: currently-incompatible
   included-in: [tlc3]
   priority: 2
@@ -1719,7 +1719,7 @@
 
 - name: babel/swedish
   ctan-pkg: babel-swedish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1731,7 +1731,7 @@
 
 - name: babel/thai
   ctan-pkg: babel-thai
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1743,7 +1743,7 @@
 
 - name: babel/turkish
   ctan-pkg: babel-turkish
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1767,7 +1767,7 @@
 
 - name: babel/ukrainian
   ctan-pkg: babel-ukrainian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1779,7 +1779,7 @@
 
 - name: babel/uppersorbian
   ctan-pkg: babel-sorbian
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1791,7 +1791,7 @@
 
 - name: babel/UKenglish
   ctan-pkg: babel-english
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1803,7 +1803,7 @@
 
 - name: babel/USenglish
   ctan-pkg: babel-english
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1815,7 +1815,7 @@
 
 - name: babel/vietnamese
   ctan-pkg: babel-vietnamese
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -1827,7 +1827,7 @@
 
 - name: babel/welsh
   ctan-pkg: babel-welsh
-  type: package
+  type: library
   status: unknown
   included-in: [tlc3]
   priority: 2
@@ -5520,7 +5520,7 @@
 
 - name: grmath
   ctan-pkg: babel-greek
-  type: package
+  type: library
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
