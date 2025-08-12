@@ -10,6 +10,11 @@
    - sub-item
  * another item
 \end{filecontents*}
+\begin{filecontents*}[overwrite]{AsciiDocList.example}
+* item
+*+ sub-item
+* another item
+\end{filecontents*}
 
 \documentclass{article}
 \usepackage{asciilist}
@@ -23,6 +28,7 @@
 \item blub
 \end{enumerate}
 
-\AsciiListFromFile{auto}{AsciiList.example}
+\AsciiListFromFile{auto}{AsciiContents.example}
+\AsciiDocListFromFile{AsciiDocList.example}
 
 \end{document}

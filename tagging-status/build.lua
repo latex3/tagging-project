@@ -3,7 +3,7 @@ module = "tagging-project-examples"
 test_order = {'structure_test'}
 includetests = {'*'}
 checkengines = {'luatex', 'pdftex'}
-checkconfig = {
+checkconfigs = {
   'build',
   'config-broken',
   'config-unknown',
