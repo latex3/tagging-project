@@ -4,7 +4,7 @@
 
 The file latex-tagging-status.ltx provides data extracted from the YAML source
 of
-https://latex3.github.io/tagging-project/tagging-status/full
+[https://latex3.github.io/tagging-project/tagging-status/full](https://latex3.github.io/tagging-project/tagging-status/full)
 
 The TeX commands and their arguments are internal to code in latex-lab
 and are likely to change.
@@ -13,7 +13,7 @@ So it is not possible to use them directly.
 Instead latex-lab will provide higher level interfaces to the data.
 
 LaTeX Project  
-Licence LPPL
+Licence [LPPL](https://www.latex-project.org/lppl/lppl-1-3c/)
 
 ```
 Code Status                 Meaning  
