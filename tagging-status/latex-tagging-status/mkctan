@@ -1,6 +1,9 @@
 mkdir -p build/latex-tagging-status
 cd build/latex-tagging-status
+
 curl -s -o latex-tagging-status.ltx https://latex3.github.io/tagging-project/tagging-status/latex-tagging-status/latex-tagging-status.ltx
+chmod a-x latex-tagging-status.ltx
+
 cp ../../README.md .
 
 sed -i -e "s/{{ site.time | date: \"%Y-%m-%d\" }}/`date -I`/" README.md
