@@ -26,11 +26,6 @@ do
 	if [ -f ${b}.idx ] ; then
 	    makeindex $b
 	fi
-	# 5 runs here
-	if [ -f tagpdf.tex ] ; then
-	    biber $b
-	    lualatex-dev $b
-	fi
 	lualatex-dev $b
 	if grep -q Rerun ${b}.log ; then
 	    lualatex-dev $b
