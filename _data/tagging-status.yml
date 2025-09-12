@@ -477,7 +477,7 @@
   supported-through: [phase-III,math]
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919]
+  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
   tests: broken
   tasks: also needs more tests
   updated: 2025-06-29
@@ -543,9 +543,9 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,firstaid]
-  issues: [83,733,736,759,790,792,835]
+  issues: [83,733,736,759,790,792,835,944]
   tests: unknown
-  updated: 2024-10-16
+  updated: 2025-09-12
 
 - name: amsxtra
   ctan-pkg: latex-amsmath
@@ -2345,10 +2345,10 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  issues:
+  issues: [985]
   tests: unknown
   comments: "Tagged as normal text instead of figure with Alt text."
-  updated: 2024-08-06
+  updated: 2025-09-12
 
 - name: bxeepic
   type: package
@@ -3716,7 +3716,7 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  issues: [568]
+  issues: [568,985]
   tests: unknown
   comments: "Tagging of `prooftree` is not ideal."
   updated: 2024-08-17
@@ -4847,8 +4847,8 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [12]
-  updated: 2024-07-06
+  issues: [12,958]
+  updated: 2025-09-12
 
 - name: footnote
   type: package
@@ -11079,15 +11079,15 @@
 
 - name: tikz
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
   supported-through: [phase-III,tikz]
   comments: tikz testphase module defines `alt`, `actualtext`, and `artifact` tikz keys.
-  issues: [30]
+  issues:
   references: [1]
   tests: unknown
-  updated: 2025-05-08
+  updated: 2025-09-12
 
 - name: tikz-cd
   type: package
@@ -11107,6 +11107,26 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-15
+
+- name: tikzlibrary-matrix
+  ctan-pkg: tikz
+  type: library
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [30]
+  tests: broken
+  updated: 2025-09-12
+
+- name: tikzlibrary-external
+  ctan-pkg: tikz
+  type: library
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [945]
+  tests: broken
+  updated: 2025-09-12
 
 - name: tikzlings
   type: package
@@ -12388,22 +12408,22 @@
   priority: 2
   supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737]
+  issues: [443,737,970]
   tests: false
   tasks: needs further tests
-  updated: 2024-10-28
+  updated: 2025-09-12
 
 - name: amsbook
   type: class
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737]
+  issues: [443,737,970]
   supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: false
   tasks: needs further tests
-  updated: 2024-10-28
+  updated: 2025-09-12
 
 - name: amsldoc
   ctan-pkg: amscls
@@ -12424,10 +12444,10 @@
   priority: 6
   supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737]
+  issues: [443,737,970]
   tests: false
   tasks: needs further tests
-  updated: 2024-10-28
+  updated: 2025-09-12
 
 - name: article
   type: class
@@ -12489,13 +12509,13 @@
 
 - name: exam
   type: class
-  status: unknown
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-17
+  tests: broken
+  tasks: needs more tests
+  updated: 2025-09-12
 
 - name: extarticle
   type: class

@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\title{matrix tikz library tagging test - 1}
+
+\begin{document}
+
+\begin{tikzpicture}
+\matrix[matrix of math nodes]
+  {
+    A & B \\
+  };
+\end{tikzpicture}
+
+\end{document}
