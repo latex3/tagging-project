@@ -36,7 +36,7 @@ layout: null
       {%- elsif p.name contains "tikzlibrary-" -%}
         {{ p.name | remove_first: "-" }}
       {%- else -%}
-        ltx
+        {{p.name}}
       {%- endif -%}
 }{
     {%-  if p.type == "package" -%}sty{%- endif -%}
