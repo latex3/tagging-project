@@ -9,8 +9,11 @@ of
 The TeX commands and their arguments are internal to code in latex-lab
 and are likely to change.
 
-So it is not possible to use them directly.
-Instead latex-lab will provide higher level interfaces to the data.
+This data is used in a report in a log file if documents specify checking
+the status with
+
+\DocumentMetadata{check-tagging-status}
+
 
 LaTeX Project  
 Licence [LPPL](https://www.latex-project.org/lppl/lppl-1-3c/)
