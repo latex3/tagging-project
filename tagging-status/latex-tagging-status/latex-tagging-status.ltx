@@ -28,14 +28,28 @@ layout: null
 \def\@kernel@tagging@status#1#2#3{\expandafter\chardef\csname t@status@#1.#2\endcsname#3\relax}
 
 {%  assign t-s = site.data.tagging-status %}
-{%- assign lb = "{" -%}
-{%- assign rb = "}" -%}
 
 {%- for p in t-s -%}
-\@kernel@tagging@status{{lb}}{{p.name}}{{rb}}{{lb}}
+\@kernel@tagging@status{
+      {%- if p.name contains "babel-" -%}
+        {{ p.name | remove_first: "babel-" }}
+      {%- elsif p.name contains "tikzlibrary-" -%}
+        {{ p.name | remove_first: "-" }}.code
+      {%- else -%}
+        ltx
+      {%- endif -%}
+}{
     {%-  if p.type == "package" -%}sty{%- endif -%}
     {%-  if p.type == "class" -%}cls{%- endif -%}
-    {%-  if p.type == "library" -%}ltx{%- endif -%}
+    {%-  if p.type == "library" -%}
+      {%- if p.name contains "babel-" -%}
+        ldb
+      {%- elsif p.name contains "tikzlibrary-" -%}
+        tex
+      {%- else -%}
+        ltx
+      {%- endif -%}
+    {%- endif -%}
 }{
     {%-  if p.status == "compatible" -%}4{%- endif -%}
     {%-  if p.status == "partially-compatible" -%}3{%- endif -%}
