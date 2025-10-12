@@ -34,7 +34,7 @@ layout: null
       {%- if p.name contains "babel-" -%}
         {{ p.name | remove_first: "babel-" }}
       {%- elsif p.name contains "tikzlibrary-" -%}
-        {{ p.name | remove_first: "-" }}.code
+        {{ p.name | remove_first: "-" }}
       {%- else -%}
         ltx
       {%- endif -%}
@@ -45,7 +45,7 @@ layout: null
       {%- if p.name contains "babel-" -%}
         ldf
       {%- elsif p.name contains "tikzlibrary-" -%}
-        tex
+        code.tex
       {%- else -%}
         ltx
       {%- endif -%}
