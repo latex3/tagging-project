@@ -1,0 +1,41 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage[pgf]{rpgicons}
+
+\title{rpgicons (PGF variant) tagging test}
+
+\begin{document}
+
+\die{twentyside}[actualtext={d20}]{1}
+
+\die[large]{twentyside}[actualtext={d20}]{1}
+
+\ability{strength}[actualtext={strength}]
+
+\ability[negative]{strength}[actualtext={strength}]
+
+\saving{strength}[actualtext={strength}]
+
+\saving[empty]{}[actualtext={saving}]
+
+\spell{linear}[actualtext={linear}]
+
+\spellschool{abjuration}[actualtext={abjuration}]
+
+\spellschool[positive]{abjuration}[actualtext={abjuration}]
+
+\damage{acid}[actualtext={acid}]
+
+\attack{melee}[actualtext={melee}]
+
+\condition{buff}[actualtext={buff}]
+
+\roll{2d6 + 3d4 - 1}
+
+\end{document}
