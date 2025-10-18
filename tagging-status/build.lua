@@ -4,6 +4,9 @@ test_order = {'structure_test'}
 includetests = {'*'}
 checkengines = {'luatex', 'pdftex'}
 checkconfigs = {
+  'config-compatible',
+  'config-partial',
+  'config-incompatible',
   'build',
   'config-broken',
   'config-unknown',
