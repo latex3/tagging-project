@@ -110,7 +110,7 @@
   priority: 9
   issues:
   comments: "Text not correctly mapped to unicode."
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: abraces
@@ -293,7 +293,7 @@
   included-in: [arxiv1]
   priority: 2
   issues: [564]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: algorithm
@@ -364,7 +364,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues: [131]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: almendra
@@ -434,7 +434,7 @@
   comments: "Breaks with unicode-math. No luamml support."
   issues:
   external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: amscdx
@@ -445,7 +445,7 @@
   supported-through: [phase-III,math]
   comments: "See status of amscd."
   issues:
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: amsfonts
@@ -716,7 +716,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [193]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: ascii
@@ -736,7 +736,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [357]
-  tests: okay
+  tests: true
   comments:
   updated: 2025-07-16
 
@@ -821,7 +821,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [654]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: authordate1-4
@@ -863,7 +863,7 @@
   comments: "Tags each character as a separate formula.
              No luamml support."
   issues: [881]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: autobreak
@@ -4317,6 +4317,7 @@
 - name: extsizes
   type: package
   status: compatible
+  priority: 9
   issues:
   tests: false
   updated: 2025-07-07
@@ -10889,8 +10890,8 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
-  updated: 2024-07-25
+  tests: excluded
+  updated: 2025-10-17
 
 - name: textalpha
   ctan-pkg: greek-fontenc
@@ -11133,7 +11134,7 @@
   included-in:
   priority: 9
   issues: [30]
-  tests: broken
+  tests: true
   updated: 2025-09-12
 
 - name: tikzlibrary-external
@@ -11143,7 +11144,7 @@
   included-in:
   priority: 9
   issues: [945]
-  tests: broken
+  tests: true
   updated: 2025-09-12
 
 - name: tikzlings
@@ -12531,13 +12532,14 @@
   included-in:
   priority: 9
   issues:
-  tests: broken
+  tests: true
   tasks: needs more tests
   updated: 2025-09-12
 
 - name: extarticle
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12547,6 +12549,7 @@
 - name: extbook
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12556,6 +12559,7 @@
 - name: extletter
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12565,6 +12569,7 @@
 - name: extproc
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12574,6 +12579,7 @@
 - name: extreport
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12695,7 +12701,7 @@
   type: class
   status: currently-incompatible
   included-in:
-  priority:
+  priority: 9
   comments: "The minimal class is not useful even for MWE's. Don't use it."
   issues: [284]
   tests: unknown
