@@ -5,6 +5,7 @@ includetests = {'*'}
 checkengines = {'luatex', 'pdftex'}
 checkconfigs = {
   'config-compatible',
+  'config-compatible-luatex',
   'config-partial',
   'config-incompatible',
   'build',
