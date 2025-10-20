@@ -110,7 +110,7 @@
   priority: 9
   issues:
   comments: "Text not correctly mapped to unicode."
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: abraces
@@ -140,9 +140,9 @@
   included-in: [arxiv001]
   priority: 7
   issues:
-  comments: "Symbols need Alt/ActualText."
+  comments: "Symbols need ToUnicode values or Alt text."
   tests: unknown
-  updated: 2024-07-29
+  updated: 2025-10-17
 
 - name: accanthis
   type: package
@@ -293,7 +293,7 @@
   included-in: [arxiv1]
   priority: 2
   issues: [564]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: algorithm
@@ -364,7 +364,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues: [131]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: almendra
@@ -434,7 +434,7 @@
   comments: "Breaks with unicode-math. No luamml support."
   issues:
   external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: amscdx
@@ -445,7 +445,7 @@
   supported-through: [phase-III,math]
   comments: "See status of amscd."
   issues:
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: amsfonts
@@ -716,7 +716,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [193]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: ascii
@@ -736,7 +736,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [357]
-  tests: okay
+  tests: true
   comments:
   updated: 2025-07-16
 
@@ -821,7 +821,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [654]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: authordate1-4
@@ -863,7 +863,7 @@
   comments: "Tags each character as a separate formula.
              No luamml support."
   issues: [881]
-  tests: broken
+  tests: true
   updated: 2025-07-16
 
 - name: autobreak
@@ -2152,7 +2152,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
-  tests: true
+  tests: unknown
   updated: 2025-06-09
 
 - name: biolinum
@@ -4317,6 +4317,7 @@
 - name: extsizes
   type: package
   status: compatible
+  priority: 9
   issues:
   tests: false
   updated: 2025-07-07
@@ -6622,7 +6623,7 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-07-23
 
 - name: lineno
@@ -6815,7 +6816,7 @@
   included-in:
   priority: 2
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-02
 
 - name: lua-typo
@@ -6824,7 +6825,7 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-15
 
 - name: lua-ul
@@ -6843,7 +6844,7 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-07-25
 
 - name: luacode
@@ -6863,7 +6864,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-07-25
 
 - name: luamathalign
@@ -6918,7 +6919,7 @@
   package-repository: "https://github.com/dohyunkim/luatexko"
   comments: "Package provides tagging support for `\\ruby`, `\\dotemph`, `\\uline`, and other underline-type commands."
   issues:
-  tests: true
+  tests: unknown
   tasks: Tests need to be checked.
   updated: 2025-06-08
 
@@ -6937,7 +6938,7 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-07
 
 - name: lucida-otf
@@ -7399,7 +7400,7 @@
   issues: [907]
   comments: "None of the formatting is represented at the tag level; spaces between
              keywords are lost."
-  tests: true
+  tests: unknown
   updated: 2025-06-10
 
 - name: merriweather
@@ -7522,7 +7523,7 @@
   priority: 7
   issues: [905]
   comments: "Tags `\\minibox`es as tables."
-  tests: true
+  tests: unknown
   updated: 2025-06-10
 
 - name: minitoc
@@ -7758,7 +7759,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues: [894]
-  tests: true
+  tests: unknown
   updated: 2025-06-09
 
 - name: multitoc
@@ -9383,7 +9384,8 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: false
+  comments: "test file requires shell escape and is excluded by default"
   updated: 2024-07-25
 
 - name: pythontex
@@ -9937,7 +9939,7 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-07
 
 - name: sepfootnotes
@@ -10070,7 +10072,7 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-02
 
 - name: showidx
@@ -10889,8 +10891,8 @@
   included-in:
   priority: 9
   issues:
-  tests: unknown
-  updated: 2024-07-25
+  tests: excluded
+  updated: 2025-10-17
 
 - name: textalpha
   ctan-pkg: greek-fontenc
@@ -11133,7 +11135,7 @@
   included-in:
   priority: 9
   issues: [30]
-  tests: broken
+  tests: true
   updated: 2025-09-12
 
 - name: tikzlibrary-external
@@ -11143,7 +11145,7 @@
   included-in:
   priority: 9
   issues: [945]
-  tests: broken
+  tests: true
   updated: 2025-09-12
 
 - name: tikzlings
@@ -12027,11 +12029,12 @@
 
 - name: xevlna
   type: package
-  status: compatible
+  status: no-support
   included-in:
   priority: 9
   issues:
-  tests: unknown
+  tests: false
+  comment: tests excluded as package requires xetex
   updated: 2024-08-07
 
 - name: xfakebold
@@ -12059,7 +12062,7 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: unknown
+  tests: luatex
   updated: 2024-08-01
 
 - name: xhfill
@@ -12531,13 +12534,14 @@
   included-in:
   priority: 9
   issues:
-  tests: broken
+  tests: true
   tasks: needs more tests
   updated: 2025-09-12
 
 - name: extarticle
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12547,6 +12551,7 @@
 - name: extbook
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12556,6 +12561,7 @@
 - name: extletter
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12565,6 +12571,7 @@
 - name: extproc
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12574,6 +12581,7 @@
 - name: extreport
   type: class
   status: unknown
+  priority: 9
   issues:
   tests: false
   tasks: needs tests
@@ -12622,7 +12630,7 @@
   included-in:
   priority: 2
   issues: [912]
-  tests: true
+  tests: unknown
   comments: "Tagging is not ideal."
   updated: 2025-06-12
 
@@ -12648,13 +12656,13 @@
 - name: ltugboat
   ctan-pkg: tugboat
   type: class
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   supported-through: [latest]
   issues:
   tests: unknown
-  comments: "`\\bull` needs proper Unicode mapping."
+  comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
 
 - name: ltxdoc
@@ -12695,7 +12703,7 @@
   type: class
   status: currently-incompatible
   included-in:
-  priority:
+  priority: 9
   comments: "The minimal class is not useful even for MWE's. Don't use it."
   issues: [284]
   tests: unknown

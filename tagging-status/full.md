@@ -25,7 +25,7 @@ This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) an
 with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
 
 This is the full list of data in the [YAML file](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
-Revert to the [filtered tables of compatible or higher priority classes and packages](./).
+Revert to the [display of main properties](./).
 
 The values in the *Status* column have the following meaning:
 
@@ -115,7 +115,28 @@ Other:
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
+{%  if p.tests == "luatex" -%}
+{%-   if p.status == "compatible" -%}
+{%-     assign dir = "-compatible-luatex" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial-luatex" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-broken-luatex" -%}
+{%-   else -%}
+{%-     assign dir = "-unknown" -%}
+{%-   endif -%}
+{%- else -%}
+{%-   if p.status == "compatible" -%}
+{%-     assign dir = "-compatible" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-broken" -%}
+{%-   else -%}
+{%-     assign dir = "-unknown" -%}
+{%-   endif -%}
+{%- endif -%}
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>
 {% endif %}
 </td>
 <td>
