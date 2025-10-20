@@ -115,7 +115,28 @@ Other:
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
+{%  if p.tests == "luatex" -%}
+{%-   if p.status == "compatible" -%}
+{%-     assign dir = "-compatible-luatex" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial-luatex" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-broken-luatex" -%}
+{%-   else -%}
+{%-     assign dir = "-unknown" -%}
+{%-   endif -%}
+{%- else -%}
+{%-   if p.status == "compatible" -%}
+{%-     assign dir = "-compatible" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-broken" -%}
+{%-   else -%}
+{%-     assign dir = "-unknown" -%}
+{%-   endif -%}
+{%- endif -%}
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/">test(s)</a>
 {% endif %}
 </td>
 <td>
