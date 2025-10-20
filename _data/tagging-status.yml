@@ -478,9 +478,9 @@
   comments:
   references: [1,2]
   issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
-  tests: broken
+  tests: true
   tasks: also needs more tests
-  updated: 2025-06-29
+  updated: 2025-10-20
 
 - name: amsmidx
   type: package
@@ -4534,7 +4534,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   issues:
-  tests: excluded
+  tests: true
   updated: 2024-08-02
 
 - name: firamath-otf
@@ -4900,7 +4900,7 @@
   priority: 7
   comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
   issues: [908]
-  tests: unknown
+  tests: true
   updated: 2025-06-10
 
 - name: forest
@@ -10017,7 +10017,7 @@
   included-in: [arxiv001]
   priority: 7
   issues: [630]
-  tests: excluded
+  tests: true
   updated: 2024-08-20
 
 - name: shellesc
@@ -10891,8 +10891,8 @@
   included-in:
   priority: 9
   issues:
-  tests: excluded
-  updated: 2025-10-17
+  tests: false
+  updated: 2025-10-20
 
 - name: textalpha
   ctan-pkg: greek-fontenc
@@ -11855,7 +11855,7 @@
   included-in:
   priority: 2
   issues: [186]
-  tests: excluded
+  tests: true
   updated: 2024-07-17
 
 - name: wasysym
@@ -11913,7 +11913,7 @@
   priority: 9
   issues:
   comments: "Generates empty tags; should probably be tagged as Figure."
-  tests: excluded
+  tests: true
   updated: 2024-07-26
 
 - name: wrapfig
