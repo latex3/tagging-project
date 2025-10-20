@@ -45,7 +45,7 @@ This file will also serve as test file against which the tagging status of your 
 
 If you spot XML comments such as `<!-- UTF16 to UTF8 conversion failure -->` in the generated XML file, 
 it is likely that `cm-super` is not installed. 
-These comments appear as there are not Unicode mappings for bitmap fonts which are maybe used because `cm-super` is not installed. 
+These comments appear as there are not Unicode mappings for bitmap fonts which might get used because `cm-super` is not installed. 
 
 ## Add your test files to this repository
 
