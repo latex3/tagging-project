@@ -136,7 +136,7 @@ Other:
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
 {%- endif -%}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/">test(s)</a>
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>
 {% endif %}
 </td>
 <td>
