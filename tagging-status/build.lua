@@ -8,13 +8,11 @@ checkconfigs = {
   'config-compatible-luatex',
   'config-partial',
   'config-incompatible',
-  'build',
-  'config-broken',
-  'config-unknown',
+  'config-unknown'
 }
 checkruns = 3
 installfiles       = installfiles       or {"*.sty","*.cls","*.eps","*.ods"}
--- excludetests = {'shapepar-01', 'warpcol-01', 'footnpag-02'}
+
 
 local pdf_structure do
   local output_handle

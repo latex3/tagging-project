@@ -1,3 +1,3 @@
-testfiledir = "testfiles-compatible"
-checkengines = {"luatex"}
+testfiledir = "testfiles-incompatible"
+
 
