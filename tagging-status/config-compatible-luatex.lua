@@ -1,3 +1,3 @@
-testfiledir = "testfiles-compatible"
+testfiledir = "testfiles-compatible-luatex"
 checkengines = {"luatex"}
 
