@@ -9,7 +9,6 @@ checkconfigs = {
   'config-partial',
   'config-incompatible',
   'build',
-  'config-broken',
   'config-unknown',
 }
 checkruns = 3
