@@ -45,73 +45,27 @@ jobs:
           - pdftex
         config:
           - build
-          - config-broken
         include:
           - engine: luatex
-            config: config-unknown
-            first: ''
-            last: braket-01
+            config: config-compatible
+          - engine: pdftex
+            config: config-compatible
+          - engine: luatex
+            config: config-compatible-luatex
+          - engine: luatex
+            config: config-partial
+          - engine: pdftex
+            config: config-partial
+          - engine: luatex
+            config: config-incompatible
+          - engine: pdftex
+            config: config-incompatible
           - engine: luatex
             config: config-unknown
-            first: braket-01
-            last: embrac-01
-          - engine: luatex
-            config: config-unknown
-            first: embrac-01
-            last: gensymb-01
-          - engine: luatex
-            config: config-unknown
-            first: gensymb-01
-            last: mathalpha-01
-          - engine: luatex
-            config: config-unknown
-            first: mathalpha-01
-            last: overpic-02
-          - engine: luatex
-            config: config-unknown
-            first: overpic-02
-            last: relsize-01
-          - engine: luatex
-            config: config-unknown
-            first: relsize-01
-            last: tagging-01
-          - engine: luatex
-            config: config-unknown
-            first: tagging-01
-            last: ''
           - engine: pdftex
             config: config-unknown
-            first: ''
-            last: braket-01
-          - engine: pdftex
-            config: config-unknown
-            first: braket-01
-            last: embrac-01
-          - engine: pdftex
-            config: config-unknown
-            first: embrac-01
-            last: gensymb-01
-          - engine: pdftex
-            config: config-unknown
-            first: gensymb-01
-            last: mathalpha-01
-          - engine: pdftex
-            config: config-unknown
-            first: mathalpha-01
-            last: overpic-02
-          - engine: pdftex
-            config: config-unknown
-            first: overpic-02
-            last: relsize-01
-          - engine: pdftex
-            config: config-unknown
-            first: relsize-01
-            last: tagging-01
-          - engine: pdftex
-            config: config-unknown
-            first: tagging-01
-            last: ''
           # - config-excluded
+          # - config-triage
     name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}${{ (matrix.first || matrix.last) && format(' ({0} - {1})', matrix.first || '<first>', matrix.last || '<last>') || ''}}"
     needs: texlive-cache
     steps:

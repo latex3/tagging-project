@@ -8,13 +8,11 @@ checkconfigs = {
   'config-compatible-luatex',
   'config-partial',
   'config-incompatible',
-  'build',
-  'config-broken',
-  'config-unknown',
+  'config-unknown'
 }
 checkruns = 3
-installfiles       = installfiles       or {"*.sty","*.cls","*.eps","*.ods"}
--- excludetests = {'shapepar-01', 'warpcol-01', 'footnpag-02'}
+installfiles       = installfiles       or {"*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
+
 
 local pdf_structure do
   local output_handle
@@ -59,7 +57,7 @@ test_types = {
       if errorcode[1] == 0 then
         local success, err = pdf_structure(output_file, '--xml', source)
         if not success then
-          output_file:write(string.format('<run-error err="%q" />', err))
+          output_file:write(string.format('<run-error err=%q />\n', err:gsub(".*: ","")))
         end
       else
         output_file:write(string.format('<run-error code="%i" />', errorcode[1]))
