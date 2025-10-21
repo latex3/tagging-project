@@ -11,10 +11,11 @@
 
 \begin{document}
 
+% this shouldn't error but don't use in test result as working directory path unstable.
 \QueryWorkingDirectory{\RESULT}
 
-\RESULT
+\TeX\ Files:
 
-\QueryFiles{*.png}{#1\par}
+\QueryFiles{l3sys-query*.tex}{#1\par}
 
 \end{document}
