@@ -13,7 +13,8 @@
 
 \QueryWorkingDirectory{\RESULT}
 
-\RESULT
+\def\tmp#1-{}% remove everything before - in tagging-project, for portability
+\expandafter\tmp\RESULT
 
 \QueryFiles{*.png}{#1\par}
 
