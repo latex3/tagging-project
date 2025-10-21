@@ -7,10 +7,10 @@
   }
 \documentclass{article}
 \usepackage{chemgreek}
-\usepackage{fontspec}
+\ifdefined\Uchar\usepackage{fontspec}\fi
 \usepackage{textgreek}
 
-\setmainfont{Libertinus Serif}
+\ifdefined\Uchar\setmainfont{Libertinus Serif}\fi
 
 \title{chemgreek tagging test}
 
@@ -21,8 +21,10 @@ default mapping: \chemphi\ and \chemPhi, $\phi$ and $\Phi$
 
 \printchemgreekalphabet
 
+\ifdefined\Uchar
 \selectchemgreekmapping{fontspec}
 fontspec mapping: \chemphi\ and \chemPhi, $\phi$ and $\Phi$
+\fi
 
 \printchemgreekalphabet
 
