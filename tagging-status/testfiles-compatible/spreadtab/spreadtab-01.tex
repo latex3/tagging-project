@@ -75,12 +75,12 @@ value 1 : :={50} & value 2 : :={29} & average : \textbf{:={(a1+b1)/2}}\\\hline
 
 \bigskip
 
-\begin{spreadtab}[\STsavecell\result{c1}]{{tabular}{|c|c|c|c|c|}}
-\hline
-10 & a1+10 & b1+10 & a1+b1+c1 & @cell c1 : \result\\\hline
+\STset{ save list = { \resultC = c1 , \resultB = b1 }}
+\begin{spreadtab}{{tabular}{|c|c|c|c|c|}}\hline
+10 & a1+10 & b1+10 & a1+b1+c1 & @cell c1: \resultC\\\hline
 \end{spreadtab}
 \par\medskip
-Here is the cell c1 : \result
+Here is cell c1: \resultC\ and b1: \resultB
 
 \bigskip
 
