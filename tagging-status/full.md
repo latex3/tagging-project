@@ -115,7 +115,7 @@ Other:
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-{%  if p.luatex-only == "true" -%}
+{%  if p.luatex-only -%}
 {%-   if p.tests == "excluded" -%}
 {%-     assign dir = "-excluded" -%}
 {%-   elsif p.status == "compatible" -%}
