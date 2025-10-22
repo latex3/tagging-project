@@ -126,14 +126,14 @@ Other:
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
 {%- else -%}
-{%-   if p.status == "compatible" -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
 {%-     assign dir = "-compatible" -%}
 {%-   elsif p.status == "partially-compatible" -%}
 {%-     assign dir = "-partial" -%}
 {%-   elsif  p.status == "currently-incompatible" -%}
 {%-     assign dir = "-incompatible" -%}
-{%-   elsif  p.tests == "excluded" -%}
-{%-     assign dir = "-excluded" -%}
 {%-   else -%}
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
