@@ -4538,7 +4538,7 @@
   priority: 2
   comments: tests excluded as modification times not reproducible
   issues:
-  tests: false
+  tests: excluded
   updated: 2024-08-02
 
 - name: firamath-otf
@@ -4904,7 +4904,7 @@
   priority: 7
   comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`. Tests excluded as loops after error."
   issues: [908]
-  tests: false
+  tests: excluded
   updated: 2025-06-10
 
 - name: forest
@@ -6032,8 +6032,8 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: false
-  comments: "See harvard and index packages. Not distributed with texlive."
+  tests: excluded
+  comments: "See harvard and index packages. Not distributed with texlive. so tests excluded"
   updated: 2025-10-21
 
 - name: infwarerr
@@ -6221,8 +6221,8 @@
   included-in:
   priority: 9
   issues: [878]
-  comments: "No luamml support. Not included in texlive."
-  tests: false
+  comments: "No luamml support. Not included in texlive, so tests excluded"
+  tests: excluded
   updated: 2025-10-21
 
 - name: keyfloat
@@ -7508,8 +7508,8 @@
   included-in:
   priority: 9
   issues:
-  tests: false
-  comments: "No longer included in texlive."
+  tests: excluded
+  comments: "No longer included in texlive, so tests excluded"
   updated: 2025-10-21
 
 - name: midpage
@@ -7754,9 +7754,9 @@
   included-in: [arxiv001]
   priority: 7
   issues:
-  tests: false
+  tests: excluded
   comments: "Does not use section command for index headings. Not distributed
-             with texlive."
+             with texlive, tests excluded."
   updated: 2025-10-21
 
 - name: multirow
@@ -9390,7 +9390,7 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  tests: excluded
   comments: "test file requires shell escape and is excluded by default"
   updated: 2024-07-25
 
@@ -10023,7 +10023,7 @@
   included-in: [arxiv001]
   priority: 7
   issues: [630,1014]
-  tests: false
+  tests: excluded
   comments: test currently excluded as it loops with pdftex
   updated: 2025-10-21
 
@@ -10898,7 +10898,8 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  tests: excluded
+  comments: tests currently excluded
   updated: 2025-10-20
 
 - name: textalpha
@@ -11863,7 +11864,7 @@
   priority: 2
   comments: tests excluded as loops (no error raised).
   issues: [186]
-  tests: false
+  tests: excluded
   updated: 2024-07-17
 
 - name: wasysym
@@ -11920,8 +11921,8 @@
   included-in:
   priority: 9
   issues:
-  comments: "Generates empty tags; should probably be tagged as Figure. tests disabled as randomised cloud not reproducible"
-  tests: false
+  comments: "Generates empty tags; should probably be tagged as Figure. tests excluded as randomised cloud not reproducible"
+  tests: excluded
   updated: 2024-07-26
 
 - name: wrapfig
@@ -12041,7 +12042,7 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  tests: excluded
   comment: tests excluded as package requires xetex
   updated: 2024-08-07
 

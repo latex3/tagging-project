@@ -131,7 +131,9 @@ Other:
 {%-   elsif p.status == "partially-compatible" -%}
 {%-     assign dir = "-partial" -%}
 {%-   elsif  p.status == "currently-incompatible" -%}
-{%-     assign dir = "-broken" -%}
+{%-     assign dir = "-incompatible" -%}
+{%-   elsif  p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
 {%-   else -%}
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
