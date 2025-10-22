@@ -115,13 +115,15 @@ Other:
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-{%  if p.tests == "luatex" -%}
-{%-   if p.status == "compatible" -%}
+{%  if p.luatex-only == "true" -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
 {%-     assign dir = "-compatible-luatex" -%}
 {%-   elsif p.status == "partially-compatible" -%}
 {%-     assign dir = "-partial-luatex" -%}
 {%-   elsif  p.status == "currently-incompatible" -%}
-{%-     assign dir = "-broken-luatex" -%}
+{%-     assign dir = "-incompatible" -%}
 {%-   else -%}
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
