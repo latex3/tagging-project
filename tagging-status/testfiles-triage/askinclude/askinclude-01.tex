@@ -5,6 +5,16 @@
     pdfstandard=ua-2,
     tagging=on,
   }
+\begin{filecontents}[overwrite]{askinclude-01-part1.tex}
+\chapter{One}
+aaa
+\end{filecontents}
+\begin{filecontents}[overwrite]{askinclude-01-part2.tex}
+\chapter{Two}
+bbb
+\end{filecontents}
+% for testing: always answer *
+\def\typein[#1]#2{\typeout{#2}\def#1{*}}
 \documentclass{report}
 \usepackage{askinclude}
 
