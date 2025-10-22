@@ -4901,9 +4901,9 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
+  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`. Tests excluded as loops after error."
   issues: [908]
-  tests: true
+  tests: false
   updated: 2025-06-10
 
 - name: forest
@@ -11859,8 +11859,9 @@
   status: currently-incompatible
   included-in:
   priority: 2
+  comments: tests excluded as loops (no error raised).
   issues: [186]
-  tests: true
+  tests: false
   updated: 2024-07-17
 
 - name: wasysym
