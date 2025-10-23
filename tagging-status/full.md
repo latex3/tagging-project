@@ -115,23 +115,27 @@ Other:
 {% endfor %}
 {% endif %}
 {% if p.tests %}
-{%  if p.tests == "luatex" -%}
-{%-   if p.status == "compatible" -%}
+{%  if p.luatex-only -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
 {%-     assign dir = "-compatible-luatex" -%}
 {%-   elsif p.status == "partially-compatible" -%}
 {%-     assign dir = "-partial-luatex" -%}
 {%-   elsif  p.status == "currently-incompatible" -%}
-{%-     assign dir = "-broken-luatex" -%}
+{%-     assign dir = "-incompatible" -%}
 {%-   else -%}
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}
 {%- else -%}
-{%-   if p.status == "compatible" -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
 {%-     assign dir = "-compatible" -%}
 {%-   elsif p.status == "partially-compatible" -%}
 {%-     assign dir = "-partial" -%}
 {%-   elsif  p.status == "currently-incompatible" -%}
-{%-     assign dir = "-broken" -%}
+{%-     assign dir = "-incompatible" -%}
 {%-   else -%}
 {%-     assign dir = "-unknown" -%}
 {%-   endif -%}

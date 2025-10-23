@@ -11,7 +11,7 @@ checkconfigs = {
   'config-unknown'
 }
 checkruns = 3
-installfiles       = installfiles       or {"*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
+installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
 
 
 local pdf_structure do
