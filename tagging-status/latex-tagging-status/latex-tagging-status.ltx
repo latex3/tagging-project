@@ -21,7 +21,7 @@ layout: null
 %% 3   partially-compatible   Currently partially compatible, see comments column
 %% 2   currently-incompatible Currently incompatible with the tagging code, may be updated eventually
 %% 1   no-support             Incompatible with the tagging code, not expected to be supported
-%% 0   unknown                Status is not known
+%% 0   unchecked              Status is not known
 %%
 
 
@@ -55,6 +55,6 @@ layout: null
     {%-  if p.status == "partially-compatible" -%}3{%- endif -%}
     {%-  if p.status == "currently-incompatible" -%}2{%- endif -%}
     {%-  if p.status == "no-support" -%}1{%- endif -%}
-    {%-  if p.status == "unknown" -%}0{%- endif -%}
+    {%-  if p.status == "unchecked" -%}0{%- endif -%}
 }
 {% endfor %}
