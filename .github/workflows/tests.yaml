@@ -57,13 +57,19 @@ jobs:
           - engine: pdftex
             config: config-partial
           - engine: luatex
+            config: config-partial-luatex
+          - engine: luatex
             config: config-incompatible
           - engine: pdftex
             config: config-incompatible
           - engine: luatex
+            config: config-incompatible-luatex
+          - engine: luatex
             config: config-unknown
           - engine: pdftex
             config: config-unknown
+          - engine: luatex
+            config: config-unknown-luatex
           # - config-excluded
           # - config-triage
     name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}${{ (matrix.first || matrix.last) && format(' ({0} - {1})', matrix.first || '<first>', matrix.last || '<last>') || ''}}"
