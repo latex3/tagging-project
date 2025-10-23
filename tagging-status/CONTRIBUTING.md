@@ -78,11 +78,10 @@ Also, add a relevant entry to the YAML file at `_data/tagging-status.yml` by fol
 
 In this YAML template, change `name` to the name of the class or package and `type` to `class` or `package`.  
 Change `status` to `compatible` or `partially-compatible` if your package is completely or at least partially compatible with tagging. 
+If your package is compatible and does not require testfiles, set `tests: false`, otherwise, set `tests: true`.
 Change `updated` to the current date.
 
-If your package is only to be used wirh LuaTeX, set `tests: luatex`, 
-otherwise, set `tests: true`. 
-If your package is compatible and does not require testfiles, set `tests: false`.
+If your package is only to be used wirh LuaTeX, add `luatex-only: true` to the settings.
 
 Finally, push your changes and wait for the Team to inspect your test file and the accompanied XML file. 
 You may be asked about specific implementation details and may need to explain your implementation decisions. 
