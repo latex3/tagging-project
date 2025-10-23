@@ -35,7 +35,7 @@
        Layout:Placement="Block"
       >
       <AssociatedFile name="mathml-2.xml" xmlns="">
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow/> <munder> <mo lspace="0" movablelimits="true" rspace="0">∑</mo> <mtext> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="false" scriptlevel="1"> <mrow> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mrow> </mstyle> </math> </mtext> </munder> <mspace width="19.925pt"/> <munder> <mo lspace="0.167em" movablelimits="true" rspace="0">∑</mo> <mrow> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mrow> </munder> </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mtable displaystyle="true"> <mtr> <mtd intent=":equation-label"> <mtext> (1) </mtext> </mtd> <mtd intent=":pause-medium"> <mrow/> <munder> <mo lspace="0" movablelimits="true" rspace="0">∑</mo> <mtext> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="false" scriptlevel="1"> <mrow> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mrow> </mstyle> </math> </mtext> </munder> <mspace width="19.925pt"/> <munder> <mo lspace="0.167em" movablelimits="true" rspace="0">∑</mo> <mrow> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mrow> </munder> </mtd> </mtr> </mtable> </math>
       </AssociatedFile>
       <AssociatedFile name="tag-AFfile2.tex" xmlns="">
       \begin {equation}\label {eq:mathclap} \sum _{\mathclap {a^2&lt;b^2&lt;c}}\qquad \sum _{a^2&lt;b^2&lt;c}\end {equation}
@@ -61,7 +61,7 @@
        Layout:Placement="Block"
       >
       <AssociatedFile name="mathml-3.xml" xmlns="">
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <munder> <mo lspace="0" movablelimits="true" rspace="0">∑</mo> <mtext> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="false" scriptlevel="1"> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mstyle> </math> </mtext> </munder> </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mtable displaystyle="true"> <mtr> <mtd intent=":equation-label"> <mtext> (1*) </mtext> </mtd> <mtd intent=":pause-medium"> <munder> <mo lspace="0" movablelimits="true" rspace="0">∑</mo> <mtext> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="false" scriptlevel="1"> <msup> <mi>𝑎</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <msup> <mi>𝑏</mi> <mn>2</mn> </msup> <mo lspace="0" rspace="0">&lt;</mo> <mi>𝑐</mi> </mstyle> </math> </mtext> </munder> </mtd> </mtr> </mtable> </math>
       </AssociatedFile>
       <AssociatedFile name="tag-AFfile3.tex" xmlns="">
       \begin {equation*}\label {eq:mathclap-b} \sum _{\crampedclap {a^2&lt;b^2&lt;c}} \tag {\ref {eq:mathclap}*}\end {equation*}
@@ -155,7 +155,7 @@
        Layout:Placement="Block"
       >
       <AssociatedFile name="mathml-7.xml" xmlns="">
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mtable class="align" columnalign="left right left" columnspacing="0 0" displaystyle="true" intent=":system-of-equations"> <mtr> <mtd intent=":equation-label"> <mtext> (1*) </mtext> </mtd> <mtd intent=":pause-medium"> <mi>𝐴</mi> </mtd> <mtd> <mo lspace="0.278em" rspace="0.278em">=</mo> <mi>𝐵</mi> </mtd> </mtr> </mtable> </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mtable class="align" columnalign="left right left" columnspacing="0 0" displaystyle="true" intent=":system-of-equations"> <mtr> <mtd intent=":no-equation-label"></mtd> <mtd intent=":pause-medium"> <mi>𝐴</mi> </mtd> <mtd> <mo lspace="0.278em" rspace="0.278em">=</mo> <mi>𝐵</mi> </mtd> </mtr> </mtable> </math>
       </AssociatedFile>
       <AssociatedFile name="tag-AFfile7.tex" xmlns="">
       \begin {align*}A &amp;= B\end {align*}

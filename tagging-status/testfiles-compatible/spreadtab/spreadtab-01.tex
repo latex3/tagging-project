@@ -1,0 +1,103 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{spreadtab}
+
+\title{spreadtab tagging test}
+
+\begin{document}
+
+\begin{spreadtab}{{tabular}{rr|r}}
+22 & 54 & a1+b1 \\
+43 & 65 & a2+b2 \\
+49 & 37 & a3+b3 \\
+\hline
+a1+a2+a3 & b1+b2+b3 & a4+b4
+\end{spreadtab}
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{ccccc}}
+1  &       &       &       &    \\
+a1 & a1    &       &       &    \\
+a2 & a2+b2 & b2    &       &    \\
+a3 & a3+b3 & b3+c3 & c3    &    \\
+a2 & a4+b4 & b4+c4 & c4+d4 & d4
+\end{spreadtab}
+
+\bigskip
+
+$
+\begin{spreadtab}{{matrix}{}}
+1\\
+[0,-1] & [-1,-1]\\
+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]\\
+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]\\
+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]+[0,-1] & [-1,-1]
+\end{spreadtab}
+$
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{|r|ccc|}}
+\hline
+@ values of $x$ & -5       &        -1 &        4 \\
+@ $f(x)=2x$     & 2*[0,-1] &  2*[0,-1] & 2*[0,-1] \\\hline
+\end{spreadtab}
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{|c|c||c|}}\hline
+value 1 : :={50} & value 2 : :={29} & average : \textbf{:={(a1+b1)/2}}\\\hline
+\end{spreadtab}
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{|c|*{10}{c}|}}
+\hline
+@$\times$        & 1                     & \STcopy{>}{b1+1}  & & & & & & & & \\\hline
+1                & \STcopy{>,v}{!a2*b!1} &                   & & & & & & & & \\
+\STcopy{v}{a2+1} &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\
+                 &                       &                   & & & & & & & & \\\hline
+\end{spreadtab}
+
+\bigskip
+
+\STset{ save list = { \resultC = c1 , \resultB = b1 }}
+\begin{spreadtab}{{tabular}{|c|c|c|c|c|}}\hline
+10 & a1+10 & b1+10 & a1+b1+c1 & @cell c1: \resultC\\\hline
+\end{spreadtab}
+\par\medskip
+Here is cell c1: \resultC\ and b1: \resultB
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{cc}}
+@1789/7/14              & engshortdatetonum(a1)\\
+2001/1/1 :={}           & engshortdatetonum(a2)\\\hline
+engshortdatetonum(0/3/1) & engshortdatetonum(\number\year/\number\month/\number\day)
+\end{spreadtab}
+
+\bigskip
+
+\begin{spreadtab}{{tabular}{|r|ccc|}}
+\hline
+@ values of $x$        & -1         & 0\SThidecol & 2          & 3          \\\hline
+@$f(x)=2x-1$           & 2*[0,-1]-1 & 2*[0,-1]-1  & 2*[0,-1]-1 & 2*[0,-1]-1 \\
+@$g(x)=x-10$\SThiderow & [0,-2]-10  & [0,-2]-10   & [0,-2]-10  & [0,-2]-10  \\
+@$h(x)=1-x$            & 1-[0,-3]   & 1-[0,-3]    & 1-[0,-3]   & 1-[0,-3]   \\\hline
+\end{spreadtab}
+
+\end{document}

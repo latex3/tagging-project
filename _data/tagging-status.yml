@@ -16,7 +16,8 @@
 #  issues             optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
 #  related-issues     optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
 #  external-issues    optional   string-list     List of urls referencing related issues at other trackers
-#  tests              optional   string or false Are there tests in testfiles/<name> ?
+#  luatex-only        optional   boolean         true if package only works with lualatex
+#  tests              optional   string          true|false|excluded Are there tests in testfiles-<status>/<name> ?
 #  tasks              optional   markdown-string Free text markdown action items for team or volunteers
 #  supported-through  optional   string-list     List of either "package" or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
 #  package-repository optional   string          URL to repository for tagging support of package, use if "package" is in the supported-through list.
@@ -670,6 +671,7 @@
   included-in: [tlc3]
   priority: 2
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-13
@@ -850,6 +852,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -2244,6 +2247,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2025-06-07
 
@@ -2576,6 +2580,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2025-06-03
   
@@ -3106,6 +3111,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -3427,6 +3433,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-14
 
@@ -3837,6 +3844,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -4224,6 +4232,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -4536,8 +4545,9 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
+  comments: tests excluded as modification times not reproducible
   issues:
-  tests: true
+  tests: excluded
   updated: 2024-08-02
 
 - name: firamath-otf
@@ -4548,6 +4558,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -4824,6 +4835,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-08-13
 
@@ -4833,6 +4845,8 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  luatex-only: true
+  tests: false
   updated: 2024-07-12
 
 - name: fonttable
@@ -4901,9 +4915,9 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`."
+  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`. Tests excluded as loops after error."
   issues: [908]
-  tests: true
+  tests: excluded
   updated: 2025-06-10
 
 - name: forest
@@ -4966,6 +4980,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -5214,6 +5229,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2025-06-03
 
@@ -5395,6 +5411,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -5600,6 +5617,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -6031,9 +6049,9 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: true
-  comments: "See harvard and index packages. Not distributed with texlive."
-  updated: 2024-08-06
+  tests: excluded
+  comments: "See harvard and index packages. Not distributed with texlive. so tests excluded"
+  updated: 2025-10-21
 
 - name: infwarerr
   type: package
@@ -6127,6 +6145,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2025-06-03
 
@@ -6181,6 +6200,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -6220,9 +6240,9 @@
   included-in:
   priority: 9
   issues: [878]
-  comments: "No luamml support. Not included in texlive."
-  tests: true
-  updated: 2025-06-03
+  comments: "No luamml support. Not included in texlive, so tests excluded"
+  tests: excluded
+  updated: 2025-10-21
 
 - name: keyfloat
   type: package
@@ -6312,6 +6332,7 @@
   priority: 9
   supported-through: [phase-III,math]
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-15
 
@@ -6569,6 +6590,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: true
   comments: Keyboard font needs ActualText.
   updated: 2024-08-02
@@ -6626,7 +6648,8 @@
   included-in:
   priority: 9
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-07-23
 
 - name: lineno
@@ -6819,7 +6842,8 @@
   included-in:
   priority: 2
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-02
 
 - name: lua-typo
@@ -6828,7 +6852,8 @@
   included-in:
   priority: 9
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-15
 
 - name: lua-ul
@@ -6838,6 +6863,7 @@
   priority: 2
   comments: "Missing TextDecoration attributes."
   issues:
+  luatex-only: true
   tests: true
   updated: 2024-07-25
 
@@ -6847,7 +6873,8 @@
   included-in:
   priority: 9
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-07-25
 
 - name: luacode
@@ -6856,6 +6883,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-08-06
 
@@ -6867,7 +6895,8 @@
   supported-through: [phase-III,math]
   comments:
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-07-25
 
 - name: luamathalign
@@ -6878,6 +6907,7 @@
   supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
+  luatex-only: true
   tests: true
   updated: 2025-05-29
 
@@ -6887,6 +6917,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -6901,6 +6932,7 @@
   comments: "An old issue has been fixed. Offers several keys for figures
              including `alt` and `artifact`."
   issues: [8,252]
+  luatex-only: true
   tests: true
   updated: 2024-11-12
 
@@ -6911,6 +6943,8 @@
   priority: 2
   comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
   issues: [713]
+  luatex-only: true
+  tests: true
   updated: 2024-09-28
 
 - name: luatexko
@@ -6922,6 +6956,7 @@
   package-repository: "https://github.com/dohyunkim/luatexko"
   comments: "Package provides tagging support for `\\ruby`, `\\dotemph`, `\\uline`, and other underline-type commands."
   issues:
+  luatex-only: true
   tests: true
   tasks: Tests need to be checked.
   updated: 2025-06-08
@@ -6932,6 +6967,7 @@
   included-in:
   priority: 9
   issues: [425]
+  luatex-only: true
   tests: true
   updated: 2024-08-02
 
@@ -6941,7 +6977,8 @@
   included-in:
   priority: 9
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-07
 
 - name: lucida-otf
@@ -6950,6 +6987,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -7009,6 +7047,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -7118,6 +7157,7 @@
   included-in:
   priority: 9
   issues: [874]
+  luatex-only: true
   tests: true
   updated: 2025-06-05
 
@@ -7507,8 +7547,9 @@
   included-in:
   priority: 9
   issues:
-  tests: true
-  updated: 2024-08-07
+  tests: excluded
+  comments: "No longer included in texlive, so tests excluded"
+  updated: 2025-10-21
 
 - name: midpage
   type: package
@@ -7727,7 +7768,8 @@
 
 - name: multilang
   type: package
-  status: compatible
+  status: currently-incompatible
+  comments: Argument structure is not recognised once tagging enabled
   included-in:
   priority: 9
   issues:
@@ -7751,10 +7793,10 @@
   included-in: [arxiv001]
   priority: 7
   issues:
-  tests: true
+  tests: excluded
   comments: "Does not use section command for index headings. Not distributed
-             with texlive."
-  updated: 2024-08-23
+             with texlive, tests excluded."
+  updated: 2025-10-21
 
 - name: multirow
   type: package
@@ -8418,7 +8460,8 @@
   priority: 9
   supported-through: [phase-III,table]
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-15
 
 - name: old-arrows
@@ -8654,6 +8697,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -9128,6 +9172,7 @@
   included-in:
   priority: 9
   issues: [260]
+  luatex-only: true
   tests: true
   updated: 2024-07-26
 
@@ -9156,6 +9201,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2025-06-07
 
@@ -9335,6 +9381,7 @@
             Offers `alt`, `actualtext`, `artifact`, and `correct-BBox` keys,
             however these seem not to work. Not tagged as figures."
   issues: [913]
+  luatex-only: true
   tests: true
   updated: 2025-06-13
 
@@ -9387,7 +9434,8 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  luatex-only: true
+  tests: excluded
   comments: "test file requires shell escape and is excluded by default"
   updated: 2024-07-25
 
@@ -9800,6 +9848,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -9942,7 +9991,8 @@
   included-in:
   priority: 9
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-07
 
 - name: sepfootnotes
@@ -10019,9 +10069,10 @@
   status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues: [630]
-  tests: true
-  updated: 2024-08-20
+  issues: [630,1014]
+  tests: excluded
+  comments: test currently excluded as it loops with pdftex
+  updated: 2025-10-21
 
 - name: shellesc
   type: package
@@ -10075,7 +10126,8 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-02
 
 - name: showidx
@@ -10299,6 +10351,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: true
   comments: "Spark charts need to be tagged as figure with Alt text."
   updated: 2024-08-07
@@ -10855,6 +10908,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -10894,7 +10948,8 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  tests: excluded
+  comments: tests currently excluded
   updated: 2025-10-20
 
 - name: textalpha
@@ -11616,7 +11671,9 @@
   priority: 2
   supported-through: [phase-III,math]
   comments:
+  luatex-only: true
   issues: [847]
+  tests: false
   updated: 2025-05-26
 
 - name: unicodefonttable
@@ -11625,6 +11682,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [175]
+  luatex-only: true  
   tests: true
   updated: 2024-07-17
 
@@ -11857,8 +11915,9 @@
   status: currently-incompatible
   included-in:
   priority: 2
+  comments: tests excluded as loops (no error raised).
   issues: [186]
-  tests: true
+  tests: excluded
   updated: 2024-07-17
 
 - name: wasysym
@@ -11915,8 +11974,9 @@
   included-in:
   priority: 9
   issues:
-  comments: "Generates empty tags; should probably be tagged as Figure."
-  tests: true
+  luatex-only: true
+  comments: "Generates empty tags; should probably be tagged as Figure. tests excluded as randomised cloud not reproducible"
+  tests: excluded
   updated: 2024-07-26
 
 - name: wrapfig
@@ -11970,6 +12030,7 @@
   supported-through: [phase-III,math]
   comments:
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
@@ -12036,7 +12097,7 @@
   included-in:
   priority: 9
   issues:
-  tests: false
+  tests: excluded
   comment: tests excluded as package requires xetex
   updated: 2024-08-07
 
@@ -12065,7 +12126,8 @@
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: luatex
+  luatex-only: true
+  tests: true
   updated: 2024-08-01
 
 - name: xhfill
@@ -12307,6 +12369,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
   updated: 2024-07-21
 
