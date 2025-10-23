@@ -65,11 +65,11 @@ jobs:
           - engine: luatex
             config: config-incompatible-luatex
           - engine: luatex
-            config: config-unknown
+            config: config-unchecked
           - engine: pdftex
-            config: config-unknown
+            config: config-unchecked
           - engine: luatex
-            config: config-unknown-luatex
+            config: config-unchecked-luatex
           # - config-excluded
           # - config-triage
     name: "Tests: ${{ matrix.engine }} - ${{ matrix.config }}${{ (matrix.first || matrix.last) && format(' ({0} - {1})', matrix.first || '<first>', matrix.last || '<last>') || ''}}"
