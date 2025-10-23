@@ -6,7 +6,7 @@ td.compatible {background-color: #DDFFDD55;font-weight:bold;}
 td.partially-compatible {background-color: #FFFFDD55;font-weight:bold;}
 td.no-support {background-color: #FFDDDD55;font-weight:bold;}
 td.currently-incompatible {font-weight:bold;}
-td.unknown {background-color: #FFEE9955;font-weight:bold;}
+td.unchecked {background-color: #FFEE9955;font-weight:bold;}
 td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
@@ -33,7 +33,7 @@ The values in the *Status* column have the following meaning:
 - `partially-compatible` The package or class is currently partially compatible, e.g., some parts may not work yet, but with some restrictions it can already be used. See comments for details. (**{{t-s | where: "status", "partially-compatible" | size }}** entries)
 - `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. (**{{t-s | where: "status", "currently-incompatible" | size }}** entries)
 - `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported. (**{{t-s | where: "status", "no-support" | size }}** entries)
-- `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unknown" | size }}** entries)
+- `unchecked` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unchecked" | size }}** entries)
 
 
 Click on the column headings to sort the table by the chosen column.
@@ -125,7 +125,7 @@ Other:
 {%-   elsif  p.status == "currently-incompatible" -%}
 {%-     assign dir = "-incompatible" -%}
 {%-   else -%}
-{%-     assign dir = "-unknown" -%}
+{%-     assign dir = "-unchecked" -%}
 {%-   endif -%}
 {%- else -%}
 {%-   if p.tests == "excluded" -%}
@@ -137,7 +137,7 @@ Other:
 {%-   elsif  p.status == "currently-incompatible" -%}
 {%-     assign dir = "-incompatible" -%}
 {%-   else -%}
-{%-     assign dir = "-unknown" -%}
+{%-     assign dir = "-unchecked" -%}
 {%-   endif -%}
 {%- endif -%}
 <a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>

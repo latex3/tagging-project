@@ -6,7 +6,7 @@ td.compatible {background-color: #DDFFDD55;font-weight:bold;}
 td.partially-compatible {background-color: #FFFFDD55;font-weight:bold;}
 td.no-support {background-color: #FFDDDD55;font-weight:bold;}
 td.currently-incompatible {font-weight:bold;}
-td.unknown {background-color: #FFEE9955;font-weight:bold;}
+td.unchecked {background-color: #FFEE9955;font-weight:bold;}
 td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
@@ -34,7 +34,7 @@ The values in the *Status* column have the following meaning:
 - `partially-compatible` The package or class is currently partially compatible, e.g., some parts may not work yet, but with some restrictions it can already be used. See comments for details. (**{{t-s | where: "status", "partially-compatible" | size }}** entries across all tables)
 - `currently-incompatible` The package or class is currently incompatible with the tagging code, but we expect it to be updated eventually. (**{{t-s | where: "status", "currently-incompatible" | size }}** entries across all tables)
 - `no-support` This package or class or class is incompatible with the tagging code and we do *not* believe that it will ever be supported. (**{{t-s | where: "status", "no-support" | size }}** entries across all tables)
-- `unknown` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unknown" | size }}** entries across all tables)
+- `unchecked` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unchecked" | size }}** entries across all tables)
 
 To use packages or classes together with the tagging code it is (nearly) always necessary to enable tagging with  `\DocumentMetadata{tagging=on}`. However, if a package or class requires other settings there is an explicit remark in the comments column. If **package** is mentioned at this point it means that the package itself provides the necessary tagging support and not one of the modules in `latex-lab`. If known, **package** will link to the repository used by the package maintainer for tagging support.
 
@@ -54,14 +54,14 @@ If you encounter a problem with a package or class for which there is no issue i
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
 {% assign xpn = xpackages | where: "status", "no-support" %}
-{% assign xpu = xpackages | where: "status", "unknown" %}
+{% assign xpu = xpackages | where: "status", "unchecked" %}
 
 Statistics: The table currently holds **{{xpackages | size }}** packages out of which
 **{{xpc| size }}**  are fully `compatible`,
 **{{xpp | size }}** `partially-compatible`,
 **{{xpi | size }}** `currently-incompatible`, and
 **{{xpn | size }}** have  `no-support`.
-The status for the remaining **{{xpu | size }}** packages is `unknown`.
+The status for the remaining **{{xpu | size }}** packages is `unchecked`.
 
 {% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 
@@ -76,14 +76,14 @@ The status for the remaining **{{xpu | size }}** packages is `unknown`.
 {% assign xpp = xpackages | where: "status", "partially-compatible" %}
 {% assign xpi = xpackages | where: "status", "currently-incompatible" %}
 {% assign xpn = xpackages | where: "status", "no-support" %}
-{% assign xpu = xpackages | where: "status", "unknown" %}
+{% assign xpu = xpackages | where: "status", "unchecked" %}
 
 Statistics: The table currently holds **{{xpackages | size }}** classes out of which
 **{{xpc| size }}**  are fully `compatible`,
 **{{xpp | size }}** `partially-compatible`,
 **{{xpi | size }}** `currently-incompatible`, and
 **{{xpn | size }}** have  `no-support`.
-The status for the remaining **{{xpu | size }}** classes is `unknown`.
+The status for the remaining **{{xpu | size }}** classes is `unchecked`.
 
 {% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 

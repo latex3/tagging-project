@@ -33,7 +33,7 @@ A test file should contain at least the following lines:
 
 Store this test file in a subdirectory of your working directory 
 where you store the document class or package file (the `.cls` or `.sty` file) 
-with the path `testfiles-unknown/<class or package name>/<class or package name>-01.tex`. 
+with the path `testfiles-unchecked/<class or package name>/<class or package name>-01.tex`. 
 You can create more than one test files with appropriate numbering of the names.
 
 Compile the test file and check the output using software such as PAC or VeraPDF to ensure that the tagging structure is correct. 
@@ -47,11 +47,11 @@ Apart from properly used tags, the proper structure and nesting of the tags is e
 Run
 
 ```
-l3build save -c config-unknown <class or package name>-01
+l3build save -c config-unchecked <class or package name>-01
 ```
 and
 ```
-l3build save -c config-unknown -e pdftex <class or package name>-01
+l3build save -c config-unchecked -e pdftex <class or package name>-01
 ```
 (for multiple test files, just concatenate the names) in your working directory 
 to create an XML file named `<class or package name>-01.struct.xml` in the `testfiles/<class or package name>/` subdirectory. 
