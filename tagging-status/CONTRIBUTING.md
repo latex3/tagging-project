@@ -1,5 +1,8 @@
 # Adding the tagging status of your LaTeX class or package to this repository
 
+## DRAFT
+
+
 If you want to contribute to this repository by adding the tagging status of your LaTeX class or package, please follow the steps below.
 
 ## Test your document class or package locally
@@ -21,7 +24,7 @@ A test file should contain at least the following lines:
     tagging=on,
   }
 \documentclass{article}
-\usepackage{rpgicons}
+\usepackage{<test package>}
 \title{<class or package> tagging test}
 \begin{document}
 ...
@@ -30,21 +33,33 @@ A test file should contain at least the following lines:
 
 Store this test file in a subdirectory of your working directory 
 where you store the document class or package file (the `.cls` or `.sty` file) 
-with the path `testfiles/<class or package name>/<class or package name>-01.tex`. 
+with the path `testfiles-unknown/<class or package name>/<class or package name>-01.tex`. 
 You can create more than one test files with appropriate numbering of the names.
 
 Compile the test file and check the output using software such as PAC or VeraPDF to ensure that the tagging structure is correct. 
-Use a screen reader such as NVDA to ensure that the alternative representation of the contents is as intended and semantically correct. 
+Use a screen reader such as NVDA to ensure that the alternative representation of the contents is as intended and semantically correct.
 Make sure that no relevant information is omitted in the alternative representation of the contents. 
 Tags should be correct for parts and sectioning headers, lists and enumerations, captions, references, links, footnotes, tabular material and forms.
 Figures and formulas should have a suitable alternative representation. 
 Graphics can be treated as figures or as inline spans with alternative description or just as decorative element (artifact). 
 Apart from properly used tags, the proper structure and nesting of the tags is equally important.
 
-Run `l3build save <class or package name>-01` and `l3build save -e pdftex <class or package name>-01` 
+Run
+
+```
+l3build save -c config-unknown <class or package name>-01
+```
+and
+```
+l3build save -c config-unknown -e pdftex <class or package name>-01
+```
 (for multiple test files, just concatenate the names) in your working directory 
 to create an XML file named `<class or package name>-01.struct.xml` in the `testfiles/<class or package name>/` subdirectory. 
-Check the contents of this file as well. 
+Check the contents of this file as well.
+
+This may be validated with the schema `latex-document-swictch.rnc` The file must be valid
+if the package is to be given a status `compatible` If the file is invalid then the test file should be renamed to end with `-BAD`.
+
 This file shows a combination of tagging, structure and alternative representations 
 which can also help you to check the tagging support of your class or package. 
 This file will also serve as test file against which the tagging status of your class or package is later checked against. 
@@ -81,7 +96,8 @@ Change `status` to `compatible` or `partially-compatible` if your package is com
 If your package is compatible and does not require testfiles, set `tests: false`, otherwise, set `tests: true`.
 Change `updated` to the current date.
 
-If your package is only to be used wirh LuaTeX, add `luatex-only: true` to the settings.
+If your package is only to be used with LuaTeX, add `luatex-only: true` to the settings
+and place the tests in an approriate test area ending `-luatex` such as `testfiles-compatible-luatex`
 
 Finally, push your changes and wait for the Team to inspect your test file and the accompanied XML file. 
 You may be asked about specific implementation details and may need to explain your implementation decisions. 
