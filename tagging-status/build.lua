@@ -7,8 +7,11 @@ checkconfigs = {
   'config-compatible',
   'config-compatible-luatex',
   'config-partial',
+  'config-partial-luatex',
   'config-incompatible',
-  'config-unknown'
+  'config-incompatible-luatex',
+  'config-unchecked',
+  'config-unchecked-luatex'
 }
 checkruns = 3
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
