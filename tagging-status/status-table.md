@@ -67,12 +67,33 @@ Other:
 <a href="{{u}}">{{ltext | slice: -2}}/{{ltext | slice: -1}}</a>
 {% endfor %}
 {% endif %}
-{% if p.tests == "okay" %}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles/{{p.name}}/">test(s)</a>
-{% elsif p.tests == "partially-broken" %}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles-broken/{{p.name}}/">test(s)</a>
-{% elsif p.tests %}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles-{{p.tests}}/{{p.name}}/">test(s)</a>
+{% if p.tests %}
+{%  if p.luatex-only -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
+{%-     assign dir = "-compatible-luatex" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial-luatex" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-incompatible" -%}
+{%-   else -%}
+{%-     assign dir = "-unchecked" -%}
+{%-   endif -%}
+{%- else -%}
+{%-   if p.tests == "excluded" -%}
+{%-     assign dir = "-excluded" -%}
+{%-   elsif p.status == "compatible" -%}
+{%-     assign dir = "-compatible" -%}
+{%-   elsif p.status == "partially-compatible" -%}
+{%-     assign dir = "-partial" -%}
+{%-   elsif  p.status == "currently-incompatible" -%}
+{%-     assign dir = "-incompatible" -%}
+{%-   else -%}
+{%-     assign dir = "-unchecked" -%}
+{%-   endif -%}
+{%- endif -%}
+<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>
 {% endif %}
 </td>
 <td>
