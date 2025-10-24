@@ -104,7 +104,7 @@ function tagging_save(names)
       local testengine = engine == stdengine and "" or ("." .. engine)
       local out_file = name .. testengine .. test_type.reference
       local gen_file = name .. "." .. engine .. test_type.generated
-      local outfile_subdir=name:gsub("-%d.*","")
+      local outfile_subdir=name:gsub("-%d.*",""):gsub("-bibtex",""):gsub("-biber","")
       print("Creating and copying " .. out_file)
       runtest(name, engine, false, test_type.test, test_type)
       ren(testdir, gen_file, out_file)
