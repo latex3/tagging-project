@@ -133,7 +133,7 @@ function find_tasks(name)
     task = line:match"^%% *tasks: (.*)$"
     if task then
       if task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") then
-        runcmd(task:gsub("%%","chapterbib-tasks-01").."",testdir)
+        runcmd(task:gsub("%%",name).."",testdir)
       else
         error("Unsafe task detected: " .. task)
       end
