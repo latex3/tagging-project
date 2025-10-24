@@ -14,7 +14,7 @@ checkconfigs = {
   'config-unchecked-luatex'
 }
 checkruns = 4
-installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
+installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods","*.bib"}
 
 
 local pdf_structure do
