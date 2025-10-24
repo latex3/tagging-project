@@ -30,7 +30,7 @@ runlatex.packageregex = [
 
 
 # Using LaTeX to produce accessible PDF
-## (2025-11-01)
+## (LaTeX2e 2025-11-01)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
