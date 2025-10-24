@@ -13,46 +13,46 @@
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some text [
+     <?MarkedContent page="1" ?>[
      <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.007"
        >
-      <?MarkedContent page="1" ?>
-      <Link xmlns="http://iso.org/pdf2/ssn"
-         id="ID.008"
-        >
-       <?MarkedContent page="1" ?>Knuth(1973)
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
-      <?MarkedContent page="1" ?>
+       <?References objects="1" ?>
+      <?MarkedContent page="1" ?>1
      </Reference>
      <?MarkedContent page="1" ?>]
     </text>
    </text-unit>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.009"
+      id="ID.008"
       rolemaps-to="Part"
      >
     <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.010"
+       id="ID.009"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>[
      <Reference xmlns="http://iso.org/pdf/ssn"
+        id="ID.010"
+       >
+       <?References objects="2" ?>
+      <?MarkedContent page="1" ?>2
+     </Reference>
+     <?MarkedContent page="1" ?>,
+     <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.011"
        >
       <?MarkedContent page="1" ?>
-      <Link xmlns="http://iso.org/pdf2/ssn"
-         id="ID.012"
-        >
-       <?MarkedContent page="1" ?>Manmaker(1986)
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
+     </Reference>
+     <?MarkedContent page="1" ?>,
+     <Reference xmlns="http://iso.org/pdf/ssn"
+        id="ID.012"
+       >
       <?MarkedContent page="1" ?>
      </Reference>
-     <?MarkedContent page="1" ?>]
+     <?MarkedContent page="1" ?>1
     </text>
    </text-unit>
    <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -64,7 +64,7 @@
        Layout:TextAlign="Justify"
        rolemaps-to="H1"
       >
-     <?MarkedContent page="1" ?>References
+     <?MarkedContent page="1" ?>1
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.015"
@@ -78,11 +78,12 @@
        >
       <LI xmlns="http://iso.org/pdf2/ssn"
          id="ID.017"
+         referenced-as="1"
         >
        <Lbl xmlns="http://iso.org/pdf2/ssn"
           id="ID.018"
          >
-        <?MarkedContent page="1" ?>[Knuth(1973)]
+        <?MarkedContent page="1" ?>1
        </Lbl>
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.019"
@@ -97,57 +98,60 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="1" ?>D. E. Knuth,
-          <Em xmlns="http://iso.org/pdf2/ssn"
-             id="ID.022"
-            >
-           <?MarkedContent page="1" ?>Fundamental Algorithms
-          </Em>
-          <?MarkedContent page="1" ?>(Addison-Wesley, Read-ing, Massachusetts, 1973), vol. 1 of
-          <Em xmlns="http://iso.org/pdf2/ssn"
-             id="ID.023"
-            >
-           <?MarkedContent page="1" ?>
-          </Em>
-          <?MarkedContent page="1" ?>
-          <Em xmlns="http://iso.org/pdf2/ssn"
-             id="ID.024"
-            >
-           <?MarkedContent page="1" ?>
-          </Em>
-          <?MarkedContent page="1" ?>
+          <?MarkedContent page="1" ?>1
          </text>
         </text-unit>
        </LBody>
       </LI>
       <LI xmlns="http://iso.org/pdf2/ssn"
-         id="ID.025"
+         id="ID.022"
+         referenced-as="2"
         >
        <Lbl xmlns="http://iso.org/pdf2/ssn"
-          id="ID.026"
+          id="ID.023"
          >
-        <?MarkedContent page="1" ?>
+        <?MarkedContent page="1" ?>1
        </Lbl>
        <LBody xmlns="http://iso.org/pdf2/ssn"
-          id="ID.027"
+          id="ID.024"
          >
         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.028"
+           id="ID.025"
            rolemaps-to="Part"
           >
          <text xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.029"
+            id="ID.026"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="1" ?>
-          <Em xmlns="http://iso.org/pdf2/ssn"
-             id="ID.030"
-            >
-           <?MarkedContent page="1" ?>
-          </Em>
-          <?MarkedContent page="1" ?>
+          <?MarkedContent page="1" ?>1
+         </text>
+        </text-unit>
+        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.027"
+           rolemaps-to="Part"
+          >
+         <text xmlns="https://www.latex-project.org/ns/dflt"
+            id="ID.028"
+            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+            Layout:TextAlign="Justify"
+            rolemaps-to="P"
+           >
+          <?MarkedContent page="1" ?>1
+         </text>
+        </text-unit>
+        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.029"
+           rolemaps-to="Part"
+          >
+         <text xmlns="https://www.latex-project.org/ns/dflt"
+            id="ID.030"
+            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+            Layout:TextAlign="Justify"
+            rolemaps-to="P"
+           >
+          <?MarkedContent page="1" ?>1
          </text>
         </text-unit>
        </LBody>

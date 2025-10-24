@@ -41,8 +41,79 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="1" ?>[?]
+      <?MarkedContent page="1" ?>[
+      <Reference xmlns="http://iso.org/pdf/ssn"
+         id="ID.012"
+        >
+        <?References objects="1" ?>
+       <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.013"
+         >
+        <?MarkedContent page="1" ?>Knu73
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+       <?MarkedContent page="1" ?>
+      </Reference>
+      <?MarkedContent page="1" ?>]
      </text>
+    </text-unit>
+   </Sect>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.014"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.015"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="H1"
+      >
+     <?MarkedContent page="1" ?>References
+    </section>
+    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.016"
+       rolemaps-to="Part"
+      >
+     <list xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.017"
+        xmlns:List="http://iso.org/pdf/ssn/List"
+        List:ListNumbering="Ordered"
+        rolemaps-to="L"
+       >
+      <LI xmlns="http://iso.org/pdf2/ssn"
+         id="ID.018"
+         referenced-as="1"
+        >
+       <Lbl xmlns="http://iso.org/pdf2/ssn"
+          id="ID.019"
+         >
+        <?MarkedContent page="1" ?>Some section
+       </Lbl>
+       <LBody xmlns="http://iso.org/pdf2/ssn"
+          id="ID.020"
+         >
+        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.021"
+           rolemaps-to="Part"
+          >
+         <text xmlns="https://www.latex-project.org/ns/dflt"
+            id="ID.022"
+            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+            Layout:TextAlign="Justify"
+            rolemaps-to="P"
+           >
+          <?MarkedContent page="1" ?>Some section
+          <Em xmlns="http://iso.org/pdf2/ssn"
+             id="ID.023"
+            >
+           <?MarkedContent page="1" ?>Some section
+          </Em>
+          <?MarkedContent page="1" ?>Some section
+         </text>
+        </text-unit>
+       </LBody>
+      </LI>
+     </list>
     </text-unit>
    </Sect>
   </Document>
