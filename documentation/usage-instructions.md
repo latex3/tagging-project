@@ -82,8 +82,9 @@ have been added to the `\includegraphics` command:
 ```latex
 \includegraphics[height=4cm,alt={Portrait of Shakespeare}]{william-shakespeare.jpg}
 \includegraphics[height=4cm,artifact]{crinklepaper}\makebox[0pt][r]{Some text }
-\includegraphics[height=\baselineskip,actualtext=A]{A.jpg}
+\includegraphics[height=\baselineskip,actualtext=A]{example-image-a.jpg}
 ```
+
 
 These keys can also be used with the `\tikz` command and the `tikzpicture` and `picture` environment.
 
