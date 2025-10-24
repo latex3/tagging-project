@@ -13,7 +13,7 @@ checkconfigs = {
   'config-unchecked',
   'config-unchecked-luatex'
 }
-checkruns = 3
+checkruns = 4
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
 
 
@@ -104,7 +104,7 @@ function tagging_save(names)
       local testengine = engine == stdengine and "" or ("." .. engine)
       local out_file = name .. testengine .. test_type.reference
       local gen_file = name .. "." .. engine .. test_type.generated
-      local outfile_subdir=name:gsub("-%d.*",""):gsub("-bibtex",""):gsub("-biber","")
+      local outfile_subdir=name:gsub("-%d.*",""):gsub("-bibtex",""):gsub("-biber",""):gsub("-tasks","")
       print("Creating and copying " .. out_file)
       runtest(name, engine, false, test_type.test, test_type)
       ren(testdir, gen_file, out_file)
@@ -126,14 +126,33 @@ end
 -- associate with the commandline l3build save option
 target_list.save.func=tagging_save
 
--- run biber ir bibtex after the first run for suitably named tests
+-- magic comments with tasks
+function find_tasks(name)
+  local f = io.open(testdir .. "/" .. name .. ".tex", "r")
+  for line in f:lines() do
+    task = line:match"^%% *tasks: (.*)$"
+    if task then
+      if task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") then
+        runcmd(task:gsub("%%","chapterbib-tasks-01").."",testdir)
+      else
+        error("Unsafe task detected: " .. task)
+      end
+    end
+  end
+end
+
+-- run biber or bibtex after the first run for suitably named tests
 function runtest_tasks(name,run)
   if run == 1 then
-   if name:match("biber") then
-     runcmd(biberexe .. " " .. name,testdir)
-   end
-   if name:match("bibtex") then
-     runcmd(bibtexexe .. " " .. name,testdir)
+   if name:match("-tasks") then
+     find_tasks(name)
+   else
+     if name:match("-biber") then
+       runcmd(biberexe .. " " .. name,testdir)
+     end
+     if name:match("-bibtex") then
+       runcmd(bibtexexe .. " " .. name,testdir)
+     end
    end
  end
  return ""
