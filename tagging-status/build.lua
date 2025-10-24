@@ -125,3 +125,18 @@ end
 
 -- associate with the commandline l3build save option
 target_list.save.func=tagging_save
+
+-- run biber ir bibtex after the first run for suitably named tests
+function runtest_tasks(name,run)
+  if run == 1 then
+   if name:match("biber") then
+     runcmd(biberexe .. " " .. name,testdir)
+   end
+   if name:match("bibtex") then
+     runcmd(bibtexexe .. " " .. name,testdir)
+   end
+ end
+ return ""
+end
+
+auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
