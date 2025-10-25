@@ -132,7 +132,11 @@ function find_tasks(name)
   for line in f:lines() do
     task = line:match"^%% *tasks: (.*)$"
     if task then
-      if task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") then
+      if
+        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex"))
+        and
+        not(task:match("[;&<>]"))
+      then
         runcmd(task:gsub("%%",name).."",testdir)
       else
         error("Unsafe task detected: " .. task)
