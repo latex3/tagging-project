@@ -1,3 +1,5 @@
+%tasks: mpost tt1
+%tasks: mpost tt2
 \DocumentMetadata
   {
     lang=en-US,
@@ -6,7 +8,8 @@
     tagging=on
   }
 \documentclass{article}
-\usepackage{feynmf}
+\usepackage{feynmp} % or feynmf
+\DeclareGraphicsRule{*}{mps}{*}{}
 
 \title{feynmf/feynmp tagging test}
 
