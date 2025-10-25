@@ -15,7 +15,9 @@ checkconfigs = {
 }
 checkruns = 4
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
-                                            "*.eps","*eps-converted-to.pdf","*svg-tex.pdf","*.pdf_tex","*.ods","*.png","*.svg"}
+                                            "*.eps","*eps-converted-to.pdf",
+                                            "*svg-tex.pdf","*.pdf_tex","*.ods",
+                                            "*.png","*.svg","*.mf"}
 
 
 local pdf_structure do

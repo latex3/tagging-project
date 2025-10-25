@@ -787,7 +787,8 @@
   priority: 7
   issues: [511]
   tests: true
-  updated: 2024-08-06
+  comments: "Requires luatex85 with lualatex."
+  updated: 2025-10-25
 
 - name: attachfile2
   type: package
@@ -2330,9 +2331,9 @@
   included-in: [arxiv1]
   priority: 5
   issues: [645]
-  tests: true
-  comments: "Requires latex->dvips->ps2pdf."
-  updated: 2024-08-22
+  tests: excluded
+  comments: "Requires latex->dvips->ps2pdf. For this reason, tests are excluded."
+  updated: 2025-10-25
 
 - name: breqn
   type: package
