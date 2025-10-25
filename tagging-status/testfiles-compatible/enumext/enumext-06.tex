@@ -8,7 +8,8 @@
   }
 \documentclass{article}
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
-\usepackage{unicode-math,graphicx,hyperref,enumext}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+\usepackage{graphicx,hyperref,enumext}
 \hypersetup
   {
     colorlinks = true,
