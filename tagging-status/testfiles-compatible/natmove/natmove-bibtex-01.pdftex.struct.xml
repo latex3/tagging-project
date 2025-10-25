@@ -1,34 +1,119 @@
 <PDF>
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
-     id="ID.02"
+     id="ID.002"
     >
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.05"
+      id="ID.005"
       rolemaps-to="Part"
      >
     <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.06"
+       id="ID.006"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some text?some more text.
+     <?MarkedContent page="1" ?>Some text
+     <Reference xmlns="http://iso.org/pdf/ssn"
+        id="ID.007"
+       >
+       <?References objects="1" ?>
+      <?MarkedContent page="1" ?>
+      <Link xmlns="http://iso.org/pdf2/ssn"
+         id="ID.008"
+        >
+       <?MarkedContent page="1" ?>1
+       <?ReferencedObject type="Annot" page="1" ?>
+      </Link>
+      <?MarkedContent page="1" ?>
+     </Reference>
+     <?MarkedContent page="1" ?>some more text.
     </text>
    </text-unit>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.07"
+      id="ID.009"
       rolemaps-to="Part"
      >
     <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.08"
+       id="ID.010"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some text ending a sentence.?
+     <?MarkedContent page="1" ?>Some text ending a sentence.
+     <Reference xmlns="http://iso.org/pdf/ssn"
+        id="ID.011"
+       >
+       <?References objects="1" ?>
+      <?MarkedContent page="1" ?>
+      <Link xmlns="http://iso.org/pdf2/ssn"
+         id="ID.012"
+        >
+       <?MarkedContent page="1" ?>1
+       <?ReferencedObject type="Annot" page="1" ?>
+      </Link>
+      <?MarkedContent page="1" ?>
+     </Reference>
+     <?MarkedContent page="1" ?>
     </text>
    </text-unit>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.013"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.014"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="H1"
+      >
+     <?MarkedContent page="1" ?>References
+    </section>
+    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.015"
+       rolemaps-to="Part"
+      >
+     <list xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.016"
+        xmlns:List="http://iso.org/pdf/ssn/List"
+        List:ListNumbering="Unordered"
+        rolemaps-to="L"
+       >
+      <LI xmlns="http://iso.org/pdf2/ssn"
+         id="ID.017"
+         referenced-as="1"
+        >
+       <Lbl xmlns="http://iso.org/pdf2/ssn"
+          id="ID.018"
+         >
+        <?MarkedContent page="1" ?>[1]
+       </Lbl>
+       <LBody xmlns="http://iso.org/pdf2/ssn"
+          id="ID.019"
+         >
+        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.020"
+           rolemaps-to="Part"
+          >
+         <text xmlns="https://www.latex-project.org/ns/dflt"
+            id="ID.021"
+            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+            Layout:TextAlign="Justify"
+            rolemaps-to="P"
+           >
+          <?MarkedContent page="1" ?>Albert Einstein. Zur Elektrodynamik bewegter Körper. (German) [On theelectrodynamics of moving bodies].
+          <Em xmlns="http://iso.org/pdf2/ssn"
+             id="ID.022"
+            >
+           <?MarkedContent page="1" ?>Annalen der Physik
+          </Em>
+          <?MarkedContent page="1" ?>, 322(10):891–921,1905. doi: http://dx.doi.org/10.1002/andp.19053221004.
+         </text>
+        </text-unit>
+       </LBody>
+      </LI>
+     </list>
+    </text-unit>
+   </Sect>
   </Document>
  </StructTreeRoot>
 </PDF>
