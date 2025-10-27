@@ -7,11 +7,18 @@ checkconfigs = {
   'config-compatible',
   'config-compatible-luatex',
   'config-partial',
+  'config-partial-luatex',
   'config-incompatible',
-  'config-unknown'
+  'config-incompatible-luatex',
+  'config-unchecked',
+  'config-unchecked-luatex'
 }
-checkruns = 3
-installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.eps","*eps-converted-to.pdf","*.ods"}
+checkruns = 4
+
+installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
+                                            "*.eps","*eps-converted-to.pdf",
+                                            "*svg-tex.pdf","*.pdf_tex","*.ods",
+                                            "*.png","*.svg","*.mf"}
 
 
 local pdf_structure do
@@ -101,7 +108,7 @@ function tagging_save(names)
       local testengine = engine == stdengine and "" or ("." .. engine)
       local out_file = name .. testengine .. test_type.reference
       local gen_file = name .. "." .. engine .. test_type.generated
-      local outfile_subdir=name:gsub("-%d.*","")
+      local outfile_subdir=name:gsub("-%d.*",""):gsub("-bibtex",""):gsub("-biber",""):gsub("-tasks","")
       print("Creating and copying " .. out_file)
       runtest(name, engine, false, test_type.test, test_type)
       ren(testdir, gen_file, out_file)
@@ -122,3 +129,41 @@ end
 
 -- associate with the commandline l3build save option
 target_list.save.func=tagging_save
+
+-- magic comments with tasks
+function find_tasks(name)
+  local f = io.open(testdir .. "/" .. name .. ".tex", "r")
+  for line in f:lines() do
+    task = line:match"^%% *tasks: (.*)$"
+    if task then
+      if
+        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") or task:match("^mf") or task:match("^mpost"))
+        and
+        not(task:match("[;&<>]"))
+      then
+        runcmd(task:gsub("%%",name).."",testdir)
+      else
+        error("Unsafe task detected: " .. task)
+      end
+    end
+  end
+end
+
+-- run biber or bibtex after the first run for suitably named tests
+function runtest_tasks(name,run)
+  if run == 1 then
+   if name:match("-tasks") then
+     find_tasks(name)
+   else
+     if name:match("-biber") then
+       runcmd(biberexe .. " " .. name,testdir)
+     end
+     if name:match("-bibtex") then
+       runcmd(bibtexexe .. " " .. name,testdir)
+     end
+   end
+ end
+ return ""
+end
+
+auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}

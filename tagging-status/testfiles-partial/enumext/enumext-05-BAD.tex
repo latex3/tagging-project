@@ -1,0 +1,98 @@
+\DocumentMetadata{
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    %uncompress,
+  }
+\documentclass{article}
+\usepackage[top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+\usepackage{graphicx,hyperref,enumext}
+\hypersetup
+  {
+    colorlinks = true,
+    pdftitle   = {Test tagged PDF for enumext package},
+  }
+\setenumext[print,1]{columns=2, columns-sep=1cm, font=\bfseries}
+\setenumext[print*]{columns=2, columns-sep=1cm,first=\bfseries}
+\setenumext[enumext,1]{columns=2,nosep,save-ref=true,save-sep={ },wrap-opt=\fbox{##1}, show-ans=true}
+\setenumext[keyans]{columns=2,noitemsep}
+\setenumext[keyans*]{columns=2,noitemsep}
+\setenumextmeta[enumext,2]{myroman}{no-store, label=\Roman*., noitemsep}
+\setenumextmeta[enumext,2]{myarabic}{no-store,list-offset=0.5cm,label=(\arabic*),noitemsep}
+\begin{document}
+\section{The enumext package in action}
+
+\begin{enumext}[save-ans=mytest]
+\item First type of questions
+  \begin{keyans*}
+    \item value
+    \item*[$x=5$] correct
+    \item value
+    \item value
+  \end{keyans*}
+\item Second type of questions
+  \begin{enumext}[myroman]
+    \item $2\alpha+2\delta=90^{\circ}$
+    \item $\alpha=\delta$
+    \item $\angle EDF=45^{\circ}$
+  \end{enumext}
+  \begin{keyans}
+    \item I only
+    \item II only
+    \item I and II only
+    \item* I and III only
+    \item I, II, and III
+  \end{keyans}
+\item* Third type of questions
+  \begin{enumext}[myarabic]
+    \item $2\alpha+2\delta=90^{\circ}$
+    \item $\angle EDF=45^{\circ}$
+  \end{enumext}
+  \begin{keyans}
+    \item value
+    \item value
+    \item*[some note $y$] value
+    \item value
+    \item value
+  \end{keyans}
+\item Question with image and label above:
+  \begin{keyanspic}[label-pos=above, layout-sty={3,2}]
+    \anspic*[La letra A]{\includegraphics[scale=0.15, alt={Una letra mayuscula A}]{example-image-a}}
+    \anspic{\includegraphics[scale=0.15, alt={Una letra mayuscula B}]{example-image-b}}
+    \anspic{\includegraphics[scale=0.30, alt={Un pato de color amarillo}]{example-image-duck}}
+    \anspic{\includegraphics[scale=0.15, alt={Una letra mayuscula C}]{example-image-c}}
+    \anspic{\includegraphics[scale=0.15, alt={La palabra Image}]{example-image}}
+  \end{keyanspic}
+\item A question
+  \begin{keyans}[mini-env=0.5\linewidth, columns=1]
+    \item value
+    \item value
+    \item value
+    \item*[other note] correct
+    \item value
+    \miniright
+    \includegraphics[scale=0.15,alt={Una letra mayuscula B}]{example-image-b}
+  \end{keyans}
+\item Question with image on left side: \anskey[item-star]{Mucak}
+\end{enumext}
+
+Some text here
+\section{printkeyans}
+Some text here
+
+\printkeyans{mytest}
+
+\section{printkeyans*}
+Some text here
+
+\printkeyans*{mytest}
+
+\section{foreachkeyans}
+Some text here
+
+\foreachkeyans[sep={\par}]{mytest}
+
+Some text here
+\end{document}

@@ -1,0 +1,36 @@
+%tasks: mpost tt1
+%tasks: mpost tt2
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{feynmp} % or feynmf
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\title{feynmf/feynmp tagging test}
+
+\begin{document}
+
+\begin{fmffile}{tt1} % math in label disappears with math tagging code
+\begin{fmfgraph*}(40,30) \fmfpen{thick}
+\fmfleft{i1,i2} \fmfright{o1,o2}
+\fmf{fermion}{i1,v1,o1} \fmf{fermion}{i2,v2,o2}
+\fmf{photon,label=p$q$}{v1,v2} \fmfdot{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+
+\bigskip
+
+\begin{fmffile}{tt2} % unstarred env does not support labels
+\begin{fmfgraph}(40,30) \fmfpen{thick}
+\fmfleft{i1,i2} \fmfright{o1,o2}
+\fmf{fermion}{i1,v1,o1} \fmf{fermion}{i2,v2,o2}
+\fmf{photon,label=p$q$}{v1,v2} \fmfdot{v1,v2}
+\end{fmfgraph}
+\end{fmffile}
+
+\end{document}

@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}\let\mathbfcal\relax\let\mathbffrak\relax}
+\usepackage[cal=boondoxo,calscaled=1.15,
+  bb=fourier,bbscaled=.96,
+  frak=euler]
+  {mathalpha}
+
+\title{mathalpha tagging test}
+ 
+\begin{document}
+
+$ABC\mathcal{ABC}$
+
+$ABC\mathbfcal{ABC}$
+
+$ABC\mathbb{ABC}$
+
+$ABC\mathfrak{ABC}$
+
+\end{document}

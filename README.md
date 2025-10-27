@@ -15,13 +15,13 @@ transferred there – whatever is more appropriate.
 
 ## Example documents conforming to both Well-Tagged PDF (WTPDF) and PDF/UA-2 standard produced by the LaTeX Project
 
-Under "[Discussions](https://github.com/latex3/tagging-project/discussions)" there is a page with [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72) that have been produced March 2024 using the then current prototype code. Check them out.
+Under "[Discussions](https://github.com/latex3/tagging-project/discussions)" there is a page with [WTPDF / PDF/UA-2 example documents](https://github.com/latex3/tagging-project/discussions/72) that were originally produced in March 2024 using the then current prototype code, and have been updated periodically as the code has developed. Check them out.
 
 PDF 1.7 versions of the documents (also generated automatically by altering the `\DocumentMetadata` declaration) are now also available, see the page [PDF/UA-1 Examples by the LaTeX Project](https://github.com/latex3/tagging-project/discussions/82) for details.
 
-## Using the LaTeX prototype for accessible PDF
+## Guidelines for using LaTeX to generate accessible PDF
 
-We have written a few [guidelines explaining how to use the prototype for generating accessible PDFs](https://latex3.github.io/tagging-project/documentation/prototype-usage-instructions). The documentation will be updated whenever we alter the still temporary interfaces.
+We have written a few [guidelines explaining how to use LaTeX to generate accessible PDFs](https://latex3.github.io/tagging-project/documentation/usage-instructions). The documentation will be updated as new features become available.
 
 ## Other documentation
 

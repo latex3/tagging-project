@@ -110,6 +110,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   comments: "Text not correctly mapped to unicode."
   tests: true
   updated: 2025-07-16
@@ -786,7 +787,8 @@
   priority: 7
   issues: [511]
   tests: true
-  updated: 2024-08-06
+  comments: "Requires luatex85 with lualatex."
+  updated: 2025-10-25
 
 - name: attachfile2
   type: package
@@ -2329,9 +2331,9 @@
   included-in: [arxiv1]
   priority: 5
   issues: [645]
-  tests: true
-  comments: "Requires latex->dvips->ps2pdf."
-  updated: 2024-08-22
+  tests: excluded
+  comments: "Requires latex->dvips->ps2pdf. For this reason, tests are excluded."
+  updated: 2025-10-25
 
 - name: breqn
   type: package
@@ -2390,6 +2392,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [673]
+  luatex-only: true
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
              with classes ctexart, ctexbook, and ctexrep."
@@ -3742,7 +3745,7 @@
 
 - name: eepic
   type: package
-  status: compatible
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
   issues:
@@ -3928,7 +3931,7 @@
 
 - name: enumext
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   supported-through: [latest,package]
@@ -3995,8 +3998,9 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues: [455]
+  comments: "Requires a blank line after `\\epigraph` command."
   tests: true
-  updated: 2024-11-18
+  updated: 2025-10-25
 
 - name: epsf
   type: package
@@ -5541,7 +5545,7 @@
 
 - name: grmath
   ctan-pkg: babel-greek
-  type: library
+  type: package
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
@@ -9275,12 +9279,11 @@
 
 - name: postnotes
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   supported-through: [latest,package]
   package-repository: "https://github.com/gusbrs/postnotes"
-  comments: "Also works for phase-II with listenv=none"
   issues:
   tests: true
   updated: 2024-10-28
@@ -11619,6 +11622,7 @@
   included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: true
   comments: "Symbols need Alt/ActualText."
   updated: 2024-08-06
@@ -12674,6 +12678,7 @@
   included-in:
   priority: 9
   issues: [719]
+  luatex-only: true
   tests: true
   updated: 2024-10-18
 
