@@ -10,10 +10,13 @@
     <Formula xmlns="http://iso.org/pdf2/ssn"
        id="ID.006"
        title="equation*"
-       af="tag-AFfile1.tex"
+       af="mathml-1.xml tag-AFfile1.tex"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:Placement="Block"
       >
+      <AssociatedFile name="mathml-1.xml" xmlns="">
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝐴</mi> <munderover> <mo lspace="0.278em" movablelimits="false" rspace="0.278em"> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="true" scriptlevel="0"> <mo lspace="0" rspace="0" stretchy="false">⇐</mo> <mspace width="-0.389em"/> <mspace width="-0.389em"/> <mo lspace="0" rspace="0">=</mo> </mstyle> </math> </mo> <mrow> <mspace width="3.318pt"/> <mi>𝑢</mi> <mi>𝑛</mi> <mi>𝑑</mi> <mi>𝑒</mi> <mi>𝑟</mi> </mrow> <mrow> <mspace width="3.318pt"/> <mi>𝑜</mi> <mi>𝑣</mi> <mi>𝑒</mi> <mi>𝑟</mi> </mrow> </munderover> <mi>𝐵</mi> </math>
+      </AssociatedFile>
       <AssociatedFile name="tag-AFfile1.tex" xmlns="">
       \begin {equation*}A \xLeftarrow [under]{over} B\end {equation*}
       </AssociatedFile>
@@ -34,10 +37,13 @@
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.009"
         title="math"
-        af="tag-AFfile2.tex"
+        af="mathml-2.xml tag-AFfile2.tex"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:Placement="Inline"
        >
+       <AssociatedFile name="mathml-2.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <munder> <munder> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo>⎵</mo> </munder> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </munder> </math>
+       </AssociatedFile>
        <AssociatedFile name="tag-AFfile2.tex" xmlns="">
        $\underbracket {foo\ bar}_{baz}$
        </AssociatedFile>
@@ -60,10 +66,13 @@
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.012"
         title="math"
-        af="tag-AFfile3.tex"
+        af="mathml-3.xml tag-AFfile3.tex"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:Placement="Inline"
        >
+       <AssociatedFile name="mathml-3.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mover> <mover> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo>⎴</mo> </mover> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </mover> </math>
+       </AssociatedFile>
        <AssociatedFile name="tag-AFfile3.tex" xmlns="">
        $\overbracket {foo\ bar}^{baz}$
        </AssociatedFile>
