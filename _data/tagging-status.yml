@@ -6905,15 +6905,15 @@
 
 - name: luamathalign
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in:
   priority: 9
   supported-through: [phase-III,math]
-  comments: "No luamml support."
+  comments: "No luamml support. `\\SetAlignmentPoint` errors."
   issues:
   luatex-only: true
   tests: true
-  updated: 2025-05-29
+  updated: 2025-10-28
 
 - name: luamesh
   type: package
@@ -7157,13 +7157,13 @@
 
 - name: marginalia
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in:
   priority: 9
   issues: [874]
   luatex-only: true
   tests: true
-  updated: 2025-06-05
+  updated: 2025-10-28
 
 - name: marginfit
   type: package
