@@ -2,6 +2,7 @@ module = "tagging-project-examples"
 
 test_order = {'structure_test'}
 includetests = {'*'}
+testfiledir=""
 checkengines = {'luatex', 'pdftex'}
 checkconfigs = {
   'config-compatible',
