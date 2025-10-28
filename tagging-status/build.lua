@@ -130,7 +130,8 @@ end
 -- associate with the commandline l3build save option
 target_list.save.func=tagging_save
 
--- magic comments with tasks
+-- Execute allowed commands as specified in `% tasks: ` comments.
+-- shell command separator and redirects are not allowed
 function find_tasks(name)
   local f = io.open(testdir .. "/" .. name .. ".tex", "r")
   for line in f:lines() do
@@ -149,7 +150,11 @@ function find_tasks(name)
   end
 end
 
--- run biber or bibtex after the first run for suitably named tests
+-- Extra processing after the first run
+-- run biber if test name includes -biber
+-- run bibtex if test name includes -bibtex
+-- run (sanitised) commands from `% task:` comments if test name includes -tasks
+-- run lualatex if the test is listed in the mathtests table
 function runtest_tasks(name,run)
   if run == 1 then
    if mathtests[name] then
@@ -169,8 +174,10 @@ function runtest_tasks(name,run)
  return ""
 end
 
+-- list of extensions to keep between runs (should check if all these are still needed)
 auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
 
+-- list of tests including math and requiring a lualatex run to generate MathML.
 mathtests = {
 ["aligned-overset-01"]=true,
 ["bigints-01"]=true,
