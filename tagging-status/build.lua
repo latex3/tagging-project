@@ -181,6 +181,7 @@ auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
 mathtests = {
 ["acro-01"]=true,
 ["acro-02"]=true,
+["algorithmic-01"]=true,
 ["aligned-overset-01"]=true,
 ["bigints-01"]=true,
 ["bracealign-01"]=true,
