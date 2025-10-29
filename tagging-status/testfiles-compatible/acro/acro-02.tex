@@ -7,7 +7,11 @@
     tagging=on
   }
 \documentclass{article}
-\usepackage[T1]{fontenc}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+  \usepackage[T1]{fontenc}
+\fi
 \usepackage[ngerman]{babel}
 \usepackage{acro}
 

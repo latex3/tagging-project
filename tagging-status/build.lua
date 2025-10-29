@@ -180,6 +180,7 @@ auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
 -- list of tests including math and requiring a lualatex run to generate MathML.
 mathtests = {
 ["acro-01"]=true,
+["acro-02"]=true,
 ["aligned-overset-01"]=true,
 ["bigints-01"]=true,
 ["bracealign-01"]=true,
