@@ -184,6 +184,7 @@ mathtests = {
 ["algorithmic-01"]=true,
 ["aligned-overset-01"]=true,
 ["amsrefs-04"]=true,
+["amstext-01"]=true,
 ["bigints-01"]=true,
 ["bigints-01"]=true,
 ["blowup-01"]=true,
