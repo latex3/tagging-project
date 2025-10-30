@@ -196,6 +196,7 @@ mathtests = {
 ["leftindex-01"]=true,
 ["mitthesis-01"]=true,
 ["mleftright-01"]=true,
+["newtxsf-01"]=true,
 ["noitcrul-01"]=true,
 ["numerica-01"]=true,
 ["relsize-01"]=true,
