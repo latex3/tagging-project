@@ -113,6 +113,7 @@
    </Div>
    <Title xmlns="http://iso.org/pdf2/ssn"
       id="ID.0023"
+      title="Title"
      >
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0024"
@@ -441,7 +442,7 @@
        >
       <?MarkedContent page="1" ?>
       <?MarkedContent page="1" ?>
-      <?MarkedContent page="1" ?>Documentation forasmeconf.cls: Version 1.40, May 20, 2016.
+      <?MarkedContent page="1" ?>Documentation forasmeconf.cls: Version 1.43, May 20, 2016.
       <?MarkedContent page="1" ?>
      </text>
     </text-unit>
@@ -1189,7 +1190,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>Put author names into the\SetAuthors{name, name,...}command in the desired order; follow the syntax illustratedasmeconf-template.tex file. Put each distinct addresssequentially into a separate\SetAffiliation{n}{address},where
+       <?MarkedContent page="1" ?>Put author names into the\SetAuthors{name, name,...}command in the desired order; follow the syntax illustratedasmeconf-template.tex file. Put each distinct address sequen-tially into a separate \SetAffiliation{n}{address}, where
        <Formula xmlns="http://iso.org/pdf2/ssn"
           id="ID.0178"
           title="math"
@@ -1200,7 +1201,7 @@
          <AssociatedFile name="tag-AFfile21.tex" xmlns="">
          $n = 1,2,\ldots $
          </AssociatedFile>
-        <?MarkedContent page="1" ?>𝑛= 1, 2,...
+        <?MarkedContent page="1" ?>𝑛 = 1, 2,...
        </Formula>
        <?MarkedContent page="1" ?>Tag each author with an affiliation by putting\affil{n} after that author’s name inside the\SetAuthors{..command.
       </text>
@@ -1255,7 +1256,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="2" ?>The abstract text must be placed into\begin{abstract}. . .\end{abstract}. The abstract will automatically be ital-icized. Keywords may be included using the \keywords{..}command. The keyword command must be issued before theabstract environment.
+       <?MarkedContent page="2" ?>The abstract text must be placed into \begin{abstract}. . .\end{abstract}. The abstract will automatically be ital-icized. Keywords may be included using the \keywords{..}command. The keyword command must be issued before theabstract environment.
       </text>
      </text-unit>
     </Sect>
@@ -1413,8 +1414,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>ASME requires that section headings and captions be set inan uppercase, sans serif font. The class will do this automati-cally. You can place\cite{..},\ref{..},\label{..}, andmathematics into headings and captions directly, as you would inthe main text. Do not enclose them braces, e.g.{\cite{..}},
-      <?MarkedContent page="2" ?>which will cause errors. You can place \footnote{..} intoheadings, but not into captions.
+      <?MarkedContent page="2" ?>ASME requires that section headings and captions be set inan uppercase, sans serif font. The class will do this automatically.You can place\cite{..},\ref{..},\label{..}, and math-ematics into headings and captions directly, as you would in themain text. Do not enclose them braces, e.g.{\cite{..}}, which
+      <?MarkedContent page="2" ?>will cause errors. You can place\footnote{..} into headings,but not into captions.
       <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0221"
          rolemaps-to="Lbl"
@@ -1637,7 +1638,7 @@
        <?MarkedContent page="2" ?>2
        <?ReferencedObject type="Annot" page="2" ?>
       </Link>
-      <?MarkedContent page="2" ?>), and the arrayanddcolumn packages which provide extended capabilities forcolumns in thetabular environment (see Table
+      <?MarkedContent page="2" ?>), and the arrayand dcolumn packages which provide extended capabilities forcolumns in thetabular environment (see Table
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0422"
         >
@@ -1684,7 +1685,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-pagesize by putting\usepackage[figuresright]{rotating} inyour.tex file’s preamble and using thesidewaystable* andsidewaysfigure* environments [? ].
+      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-pagesize by putting \usepackage[figuresright]{rotating} inyour .tex file’s preamble and using the sidewaystable* andsidewaysfigure* environments [? ].
      </text>
     </text-unit>
    </Sect>
@@ -2042,7 +2043,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="3" ?>An alternative solution may be to set large equations intotwo-column-wide tables or figures. An experimental package forsetting equations that span two columns, asmewide.sty, canbe loaded as well, but that code may require hand-fitting aroundfigures, tables, and page breaks. See the examples in [? ].
+      <?MarkedContent page="3" ?>An alternative solution may be to set large equations intotwo-column-wide tables or figures. An experimental package forsetting equations that span two columns,asmewide.sty, can beloaded as well, but that code may require hand-fitting aroundfigures, tables, and page breaks. See the examples in [? ].
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2120,7 +2121,7 @@
         </AssociatedFile>
        <?MarkedContent page="3" ?>α,β,γ,δ...
       </Formula>
-      <?MarkedContent page="3" ?>), in case they are needed (but note that thenewtxmath options frenchmath and slantedGreek also af-fect how Greek letters are presented).
+      <?MarkedContent page="3" ?>), in case they are needed (but note that thenewtxmath optionsfrenchmath andslantedGreek also affecthow Greek letters are presented).
      </text>
     </text-unit>
     <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -2148,7 +2149,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?>Thenewtxmath package [? ], loaded by default, includesmany options for mathematics, most of which can be called asoptions to \documentclass. For example, the upint optionselects upright integral signs (rather than slanted integral signs):
+       <?MarkedContent page="3" ?>The newtxmath package [? ], loaded by default, includesmany options for mathematics, most of which can be called asoptions to \documentclass. For example, the upint optionselects upright integral signs (rather than slanted integral signs):
       </text>
       <quote xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0518"
@@ -2174,7 +2175,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The option subscriptcorrection improves the spacing ofmath subscripts. These math options are discussed further intheasmeconf-template.tex file.
+       <?MarkedContent page="4" ?>The optionsubscriptcorrection improves the spacing of mathsubscripts. These math options are discussed further in theasmeconf-template.tex file.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2203,7 +2204,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>which selects a Boondox font for \mathcal, as in
+       <?MarkedContent page="4" ?>which selects a Boondox font for\mathcal, as in
        <Formula xmlns="http://iso.org/pdf2/ssn"
           id="ID.0526"
           title="math"
@@ -2214,9 +2215,9 @@
          <AssociatedFile name="tag-AFfile41.tex" xmlns="">
          $A \in \mathcal {P}(A)$
          </AssociatedFile>
-        <?MarkedContent page="4" ?>𝐴∈ P(𝐴)
+        <?MarkedContent page="4" ?>𝐴∈P(𝐴)
        </Formula>
-       <?MarkedContent page="4" ?>.To find all the font options, refer to themathalfa package docu-mentation [? ].
+       <?MarkedContent page="4" ?>. Tofind all the font options, refer to themathalfa package documen-tation [? ].
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2437,7 +2438,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The option[nofoot] will omit the ASME copyright fromthe page footer. The option [govt] will produce a copyrightnotice for authors who are employees of the U. S. Government.The option[contractor] will produce a copyright notice forauthors who are employed by a U. S. Government contractor. Theoption[somegovt] gives a copyright notice for the case whenonly some authors are employees of the U. S. Government.
+       <?MarkedContent page="4" ?>The option[nofoot] will omit the ASME copyright fromthe page footer. The option [govt] will produce a copyrightnotice for authors who are employees of the U. S. Government.The option [contractor] will produce a copyright notice forauthors who are employed by a U. S. Government contractor.The option [somegovt] gives a copyright notice for the casewhen only some authors are employees of the U. S. Government.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2487,7 +2488,7 @@
          >
         <?MarkedContent page="5" ?>LATEX
        </Span>
-       <?MarkedContent page="5" ?>3 team added support for PDF/A to the
+       <?MarkedContent page="5" ?>3 team added support for PDF/A tothe
        <Span xmlns="http://iso.org/pdf2/ssn"
           id="ID.0572"
           actualtext="LaTeX"
@@ -2495,7 +2496,7 @@
          >
         <?MarkedContent page="5" ?>LATEX
        </Span>
-       <?MarkedContent page="5" ?>kernel, using the command \DocumentMetadata{..}.This approach works with both pdfLATEX and LuaLATEX. Notethat accessible conformance (a) is still under development by the
+       <?MarkedContent page="5" ?>kernel, using the command\DocumentMetadata{..}.This approach works with both pdfLATEX and LuaLATEX. Notethat accessible conformance (a) is still under development by the
        <Span xmlns="http://iso.org/pdf2/ssn"
           id="ID.0573"
           actualtext="LaTeX"
@@ -2655,12 +2656,11 @@
        id="ID.0598"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
         id="ID.0599"
-        rolemaps-to="Span"
        >
       <?MarkedContent page="5" ?>APPENDIX A.
-     </section-number>
+     </Lbl>
      <?MarkedContent page="5" ?>THE VECTOR PRODUCT
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.0600"
@@ -2746,12 +2746,11 @@
        id="ID.0610"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
         id="ID.0611"
-        rolemaps-to="Span"
        >
       <?MarkedContent page="5" ?>APPENDIX B.
-     </section-number>
+     </Lbl>
      <?MarkedContent page="5" ?>USE WITH LuaLATEX
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -3010,12 +3009,11 @@
        id="ID.0652"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
         id="ID.0653"
-        rolemaps-to="Span"
        >
       <?MarkedContent page="5" ?>APPENDIX C.
-     </section-number>
+     </Lbl>
      <?MarkedContent page="5" ?>MULTILINGUAL SUPPORT
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -3041,7 +3039,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="5" ?>When more than one language option is included in\documentclass[..]{asmeconf}, English will be set as thedocument’s main language. (To choose a different main language,set[main=..]). If no language options are given, the packagedefaults to English. As examples, a passage in German is shownin Anhang
+      <?MarkedContent page="5" ?>When more than one language option is included in\documentclass[..]{asmeconf}, English will be set as thedocument’s main language. (To choose a different main lan-guage, set [main=..]). If no language options are given, thepackage defaults to English. As examples, a passage in Germanis shown in Anhang
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0658"
         >
@@ -3119,13 +3117,12 @@
        id="ID.0668"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <Lbl xmlns="http://iso.org/pdf2/ssn"
         id="ID.0669"
-        rolemaps-to="Span"
        >
       <?MarkedContent page="5" ?>ANHANG D.
-     </section-number>
-     <?MarkedContent page="5" ?>WÄRMEAUSTAUSCH UNDREIBUNGSWIDERSTAND (von E.POHLHAUSEN)
+     </Lbl>
+     <?MarkedContent page="5" ?>WÄRMEAUSTAUSCH UNDREIBUNGSWIDERSTAND (von E. POHLHAUSEN)
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0670"
@@ -3163,7 +3160,7 @@
           Layout:TextAlign="Center"
           rolemaps-to="P"
          >
-        <?MarkedContent page="2" ?>FIGURE 1: CAPTION WITH MATH, EQN. (
+        <?MarkedContent page="2" ?>FIGURE 1: Caption with math, eqn. (
         <Link xmlns="http://iso.org/pdf2/ssn"
            id="ID.0213"
           >
@@ -3183,7 +3180,7 @@
           </AssociatedFile>
          <?MarkedContent page="2" ?>∆T/Tm
         </Formula>
-        <?MarkedContent page="2" ?>VS.
+        <?MarkedContent page="2" ?>vs.
         <Formula xmlns="http://iso.org/pdf2/ssn"
            id="ID.0215"
            title="math"
@@ -3240,7 +3237,7 @@
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
-        <?MarkedContent page="4" ?>FIGURE 2: A FIGURE WITH TWO SUBFIGURES [? ]
+        <?MarkedContent page="4" ?>FIGURE 2: A figure with two subfigures [? ]
        </text>
       </text-unit>
      </Caption>
@@ -3378,7 +3375,7 @@
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
-        <?MarkedContent page="2" ?>TABLE 1: A SIMPLE TABLE
+        <?MarkedContent page="2" ?>TABLE 1: A simple table
        </text>
       </text-unit>
      </Caption>
@@ -3506,7 +3503,7 @@
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
-        <?MarkedContent page="2" ?>TABLE 2: TABLE WITH MORE COMPLICATED COLUMNS
+        <?MarkedContent page="2" ?>TABLE 2: Table with more complicated columns
        </text>
       </text-unit>
      </Caption>
@@ -3697,7 +3694,7 @@
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
-        <?MarkedContent page="3" ?>TABLE 3: A TABLE SPANNING TWO COLUMNS
+        <?MarkedContent page="3" ?>TABLE 3: A table spanning two columns
        </text>
       </text-unit>
      </Caption>
