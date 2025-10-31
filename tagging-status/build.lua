@@ -203,6 +203,7 @@ mathtests = {
 ["newtxsf-01"]=true,
 ["noitcrul-01"]=true,
 ["numerica-01"]=true,
+["pgfplotstable-01"]=true,
 ["relsize-01"]=true,
 ["scalerel-01"]=true,
 ["stackrel-01"]=true,
