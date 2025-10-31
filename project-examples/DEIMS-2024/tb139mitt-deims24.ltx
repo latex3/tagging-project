@@ -9,15 +9,17 @@
    pdfversion=2.0,
    pdfstandard=a-4,
    pdfstandard=ua-2,
-   tagging-setup={math/mathml/luamml/load=false}
+   tagging=on%tagging-setup={math/mathml/luamml/load=false}
  }
 
 \fi
 
 \documentclass[final]{ltugboat}
+\usepackage{unicode-math}
 \let\chapter\undefined
 \providecommand\email[1]{\href{mailto:#1}{{\ttfamily #1}}}
 
+\usepackage[nopatch=footnote]{microtype}%?
 \usepackage{microtype,csquotes,graphicx}
 \usepackage[hidelinks]{hyperref}
 
