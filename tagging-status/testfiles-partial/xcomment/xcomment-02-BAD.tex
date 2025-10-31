@@ -1,0 +1,40 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{xcomment}
+
+\nofloat{figure} % parent-child warnings
+
+\title{xcomment tagging test}
+
+\begin{document}
+
+text
+
+\newxcomment{mycomment}
+\begin{xcomment}{figure,mycomment}
+This is stuff that is not included.
+\begin{figure}
+This figure is included.
+\caption{Included!}
+\end{figure}
+More stuff that is not included.
+\begin{mycomment}
+Out and back into comment mode
+\begin{figure}
+Ignored by mycomment envir.
+This figure is NOT included.
+\caption{Not included}
+\end{figure}
+Also ignored by mycomment envir.
+\end{mycomment}
+In and back out of comment mode.
+More stuff that is not included.
+\end{xcomment}
+
+\end{document}
