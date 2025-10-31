@@ -6,5 +6,6 @@
    pdfstandard=a-4f,
    tagging-setup={math/setup=mathml-SE}
 }
-
+\renewcommand\DocumentMetadata[1]{}
+\AddToHook{begindocument/before}{\usepackage{unicode-math}}
 \input{PHY-exam}

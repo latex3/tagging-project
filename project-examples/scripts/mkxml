@@ -7,5 +7,5 @@
 for i in *.pdf
  do
  echo "--map $i"
- texlua ../../../pdf-structure/show-pdf-tags/show-pdf_tags.lua --xml  --map "$i" > "${i/.pdf/map.xml}" 2> "${i/.pdf/mapxml.log}"
+ texlua ../../../pdf_structure/show-pdf-tags/show-pdf-tags.lua --xml  --map "$i" > "${i/.pdf/map.xml}" 2> "${i/.pdf/mapxml.log}"
 done
