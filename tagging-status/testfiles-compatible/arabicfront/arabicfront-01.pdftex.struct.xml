@@ -44,33 +44,29 @@
        title="\contentsname \@mkboth {\MakeUppercase \contentsname }{\MakeUppercase \contentsname }"
        rolemaps-to="H1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
+     <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.012"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.013"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="3" ?>Contents
-      </Span>
-     </NonStruct>
+      <?MarkedContent page="3" ?>Contents
+     </Span>
     </chapter>
     <TOC xmlns="http://iso.org/pdf/ssn"
-       id="ID.014"
+       id="ID.013"
        title="toc"
       >
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.015"
+        id="ID.014"
         title="Some chapter"
        >
        <?References objects="1" ?>
       <Reference xmlns="http://iso.org/pdf/ssn"
-         id="ID.016"
+         id="ID.015"
         >
        <?MarkedContent page="3" ?>
        <Lbl xmlns="http://iso.org/pdf2/ssn"
-          id="ID.017"
+          id="ID.016"
          >
         <?MarkedContent page="3" ?>1
        </Lbl>
@@ -79,12 +75,12 @@
       </Reference>
      </TOCI>
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.018"
+        id="ID.017"
         title="Some end chapter"
        >
        <?References objects="2" ?>
       <Reference xmlns="http://iso.org/pdf/ssn"
-         id="ID.019"
+         id="ID.018"
         >
        <?MarkedContent page="3" ?>Some end chapter
        <?MarkedContent page="3" ?>7
@@ -93,43 +89,35 @@
     </TOC>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.020"
+      id="ID.019"
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
-       id="ID.021"
+       id="ID.020"
        title="Some chapter"
        rolemaps-to="H1"
        referenced-as="1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.021"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
+       >
+      <?MarkedContent page="5" ?>Chapter 1
+     </Span>
+     <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.022"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.023"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="5" ?>Chapter 1
-      </Span>
-     </NonStruct>
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
-        id="ID.024"
-       >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.025"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="5" ?>Some chapter
-      </Span>
-     </NonStruct>
+      <?MarkedContent page="5" ?>Some chapter
+     </Span>
     </chapter>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.026"
+       id="ID.023"
        rolemaps-to="Part"
       >
      <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.027"
+        id="ID.024"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -139,25 +127,21 @@
     </text-unit>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.028"
+      id="ID.025"
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
-       id="ID.029"
+       id="ID.026"
        title="Some end chapter"
        rolemaps-to="H1"
        referenced-as="2"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
-        id="ID.030"
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.027"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.031"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="7" ?>Some end chapter
-      </Span>
-     </NonStruct>
+      <?MarkedContent page="7" ?>Some end chapter
+     </Span>
     </chapter>
    </Sect>
   </Document>
