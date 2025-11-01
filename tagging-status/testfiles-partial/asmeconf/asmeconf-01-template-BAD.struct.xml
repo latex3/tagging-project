@@ -372,6 +372,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
+       <?MarkedContent page="1" ?>
        <?MarkedContent page="1" ?>Joint first authors
       </text>
      </text-unit>
@@ -396,6 +397,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
+       <?MarkedContent page="1" ?>
        <?MarkedContent page="1" ?>Corresponding author: lienhard@mit.edu, kate@thepalace.gov
       </text>
      </text-unit>
@@ -430,8 +432,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0068"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Start"
+       title="\abstractname "
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>ABSTRACT
@@ -518,8 +519,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0079"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Start"
+       title="\nomname "
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>NOMENCLATURE
@@ -1067,6 +1067,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0157"
+       title="Introduction"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1166,6 +1167,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0172"
+        title="Essential Initial Commands"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1278,6 +1280,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0188"
+       title="Referring to Citations, Figures, and Equations"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1409,6 +1412,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0217"
+       title="Section Headings and Captions"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1466,6 +1470,7 @@
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
+         <?MarkedContent page="2" ?>
          <?MarkedContent page="2" ?>See tex-stackexchange for various approaches to footnotes in captions, if they seem necessary. For footnotes in tables, use the tablefootnote package.
         </text>
        </text-unit>
@@ -1506,6 +1511,7 @@
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
+         <?MarkedContent page="2" ?>
          <?MarkedContent page="2" ?>Sequential footnotes are automatically separated by a comma.
         </text>
        </text-unit>
@@ -1569,6 +1575,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0242"
+        title="Subsection and Sub-subsection Headings"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1599,6 +1606,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0415"
+       title="Tables and Figures"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1696,6 +1704,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0430"
+       title="Reference Formatting with \NoCaseChange {\texttt {asmeconf.bst}}\footnote {To prevent capitalization of text in a section heading or caption, such as an SI unit, enclose it in a \texttt {\textbackslash NoCaseChange} command. As of the July 2022 release of \LaTeX , commands used in a heading or caption may be protected globally by putting this in the preamble: \texttt {\textbackslash AddToNoCaseChangeList\{\textbackslash MyCommand\}}.}"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1740,6 +1749,7 @@
           Layout:TextAlign="Start"
           rolemaps-to="P"
          >
+        <?MarkedContent page="3" ?>
         <?MarkedContent page="3" ?>To prevent capitalization of text in a section heading or caption, such as an SI unit, enclose it in a \NoCaseChange command. As of the July 2022 release of 
         <Span xmlns="http://iso.org/pdf2/ssn"
            id="ID.0438"
@@ -1812,6 +1822,7 @@
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
+         <?MarkedContent page="3" ?>
          <?MarkedContent page="3" ?>asmeconf.bst is intended as a replacement for the old asmems4.bst, which does not follow ASME’s current reference formats or support DOI and URL.
         </text>
        </text-unit>
@@ -1822,20 +1833,22 @@
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.0448"
       >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0449"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="H3"
+       >
+      <?MarkedContent page="3" ?>DOI, URL, and eprint
+     </subsubsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0450"
         rolemaps-to="Part"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0450"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
-        >
-       <?MarkedContent page="3" ?>DOI, URL, and eprint.
-      </subsubsection>
       <text xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0451"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> Include DOI numbers when they are available. URL’s may alternatively be given. ASME requests that URLs point to a document’s abstract.
@@ -1858,20 +1871,22 @@
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.0454"
       >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0455"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="H3"
+       >
+      <?MarkedContent page="3" ?>Online Sources
+     </subsubsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0456"
         rolemaps-to="Part"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0456"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
-        >
-       <?MarkedContent page="3" ?>Online Sources.
-      </subsubsection>
       <text xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0457"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> A bibliography entry @online{.. is in­cluded for citation of online sources, such as web pages. A urlor eprint with archive must be included. See the examples of use in the asmeconf-sample.bib file.
@@ -1881,20 +1896,22 @@
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.0458"
       >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0459"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="H3"
+       >
+      <?MarkedContent page="3" ?>Date Accessed
+     </subsubsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0460"
         rolemaps-to="Part"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0460"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
-        >
-       <?MarkedContent page="3" ?>Date Accessed.
-      </subsubsection>
       <text xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0461"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> The urldate={..} field may be used to provide the date on which a given url was accessed. By default, the text printed will be Accessed `date',. The word “Accessed” may be changed using the urltype={..} field.
@@ -1904,20 +1921,22 @@
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.0462"
       >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0463"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="H3"
+       >
+      <?MarkedContent page="3" ?>Conference Location and Date.
+     </subsubsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0464"
         rolemaps-to="Part"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0464"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
-        >
-       <?MarkedContent page="3" ?>Conference Location and Date..
-      </subsubsection>
       <text xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0465"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> To specify the city and date of a conference, you can use venue={..} and eventdate={..} with the entries @inproceeedings{.. and @proceeedings{...
@@ -1927,20 +1946,22 @@
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.0466"
       >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0467"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="H3"
+       >
+      <?MarkedContent page="3" ?>Capitalization of Titles
+     </subsubsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0468"
         rolemaps-to="Part"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0468"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
-        >
-       <?MarkedContent page="3" ?>Capitalization of Titles.
-      </subsubsection>
       <text xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0469"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> ASME’s bibliography style re­quires that document titles be in title case. The first letters of principal words are capitalized. Do this in the .bib file.
@@ -1953,6 +1974,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0493"
+       title="More on math: u\cdot \omega =0"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2135,6 +2157,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0514"
+        title="The \texttt {newtxmath} and \texttt {mathalpha} Packages~\cite {sharpe1,sharpe2}"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2249,6 +2272,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0530"
+       title="Additional Options for \NoCaseChange {\texttt {asmeconf.cls}}"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2277,6 +2301,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0535"
+        title="Colored Hyperlinks"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2306,6 +2331,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0540"
+        title="Final Column Balancing"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2335,6 +2361,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0545"
+        title="Line Numbers"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2385,6 +2412,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0553"
+        title="Grid-Style Author Block"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2427,6 +2455,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0560"
+        title="Changing the Copyright Footer"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2469,6 +2498,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0567"
+        title="Archivability:~PDF/A"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2543,6 +2573,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0578"
+        title="Typewriter Font Options"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2572,6 +2603,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0583"
+        title="Support for Other Languages"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2609,6 +2641,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0589"
+       title="Conclusion"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -2638,8 +2671,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0594"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Start"
+       title="Acknowledgments"
        rolemaps-to="H1"
       >
      <?MarkedContent page="5" ?>ACKNOWLEDGMENTS
@@ -2663,13 +2695,15 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0598"
+       title="The Vector Product A\times B"
        rolemaps-to="H1"
       >
-     <Lbl xmlns="http://iso.org/pdf2/ssn"
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0599"
+        rolemaps-to="Span"
        >
-      <?MarkedContent page="5" ?>APPENDIX A. 
-     </Lbl>
+      <?MarkedContent page="5" ?>Appendix A. 
+     </section-number>
      <?MarkedContent page="5" ?>THE VECTOR PRODUCT 
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.0600"
@@ -2764,13 +2798,15 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0610"
+       title="Use with LuaLaTeX"
        rolemaps-to="H1"
       >
-     <Lbl xmlns="http://iso.org/pdf2/ssn"
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0611"
+        rolemaps-to="Span"
        >
-      <?MarkedContent page="5" ?>APPENDIX B. 
-     </Lbl>
+      <?MarkedContent page="5" ?>Appendix B. 
+     </section-number>
      <?MarkedContent page="5" ?>USE WITH LuaLATEX
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2887,6 +2923,7 @@
                Layout:TextAlign="Justify"
                rolemaps-to="P"
               >
+             <?MarkedContent page="5" ?>
              <?MarkedContent page="5" ?>For English, you must have these fonts installed:
             </text>
            </text-unit>
@@ -3020,13 +3057,15 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0652"
+       title="Multilingual Support"
        rolemaps-to="H1"
       >
-     <Lbl xmlns="http://iso.org/pdf2/ssn"
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0653"
+        rolemaps-to="Span"
        >
-      <?MarkedContent page="5" ?>APPENDIX C. 
-     </Lbl>
+      <?MarkedContent page="5" ?>Appendix C. 
+     </section-number>
      <?MarkedContent page="5" ?>MULTILINGUAL SUPPORT
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -3128,13 +3167,15 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0668"
+       title="Wärmeaustausch und Reibungswiderstand (\NoCaseChange {von} E. Pohlhausen)"
        rolemaps-to="H1"
       >
-     <Lbl xmlns="http://iso.org/pdf2/ssn"
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0669"
+        rolemaps-to="Span"
        >
-      <?MarkedContent page="5" ?>ANHANG D. 
-     </Lbl>
+      <?MarkedContent page="5" ?>Anhang D. 
+     </section-number>
      <?MarkedContent page="5" ?>WÄRMEAUSTAUSCH UND REIBUNGSWIDERSTAND (von E. POHLHAUSEN)
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -3418,10 +3459,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0256"
             title="math"
-            af="tag-AFfile25.tex"
+            af="mathml-25.xml tag-AFfile25.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-25.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑢</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile25.tex" xmlns="">
            $u$
            </AssociatedFile>
@@ -3435,10 +3479,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0258"
             title="math"
-            af="tag-AFfile26.tex"
+            af="mathml-26.xml tag-AFfile26.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-26.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑇</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile26.tex" xmlns="">
            $T$
            </AssociatedFile>
@@ -3553,10 +3600,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0280"
             title="math"
-            af="tag-AFfile27.tex"
+            af="mathml-25.xml tag-AFfile27.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-25.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑢</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile27.tex" xmlns="">
            $u$
            </AssociatedFile>
@@ -3570,10 +3620,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0282"
             title="math"
-            af="tag-AFfile28.tex"
+            af="mathml-26.xml tag-AFfile28.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-26.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑇</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile28.tex" xmlns="">
            $T$
            </AssociatedFile>
@@ -3724,10 +3777,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0311"
             title="math"
-            af="tag-AFfile29.tex"
+            af="mathml-29.xml tag-AFfile29.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-29.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑥</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile29.tex" xmlns="">
            $x$
            </AssociatedFile>
@@ -3741,10 +3797,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0313"
             title="math"
-            af="tag-AFfile30.tex"
+            af="mathml-30.xml tag-AFfile30.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-30.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext> erf </mtext> <mo lspace="0" rspace="0" stretchy="false">(</mo> <mi>𝑥</mi> <mo lspace="0" rspace="0" stretchy="false">)</mo> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile30.tex" xmlns="">
            $\textrm {erf}(x)$
            </AssociatedFile>
@@ -3757,10 +3816,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0315"
             title="math"
-            af="tag-AFfile31.tex"
+            af="mathml-31.xml tag-AFfile31.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-31.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext> erfc </mtext> <mo lspace="0" rspace="0" stretchy="false">(</mo> <mi>𝑥</mi> <mo lspace="0" rspace="0" stretchy="false">)</mo> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile31.tex" xmlns="">
            $\textrm {erfc}(x)$
            </AssociatedFile>
@@ -3773,10 +3835,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0317"
             title="math"
-            af="tag-AFfile32.tex"
+            af="mathml-29.xml tag-AFfile32.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-29.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑥</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile32.tex" xmlns="">
            $x$
            </AssociatedFile>
@@ -3789,10 +3854,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0319"
             title="math"
-            af="tag-AFfile33.tex"
+            af="mathml-30.xml tag-AFfile33.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-30.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext> erf </mtext> <mo lspace="0" rspace="0" stretchy="false">(</mo> <mi>𝑥</mi> <mo lspace="0" rspace="0" stretchy="false">)</mo> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile33.tex" xmlns="">
            $\textrm {erf}(x)$
            </AssociatedFile>
@@ -3805,10 +3873,13 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.0321"
             title="math"
-            af="tag-AFfile34.tex"
+            af="mathml-31.xml tag-AFfile34.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-31.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext> erfc </mtext> <mo lspace="0" rspace="0" stretchy="false">(</mo> <mi>𝑥</mi> <mo lspace="0" rspace="0" stretchy="false">)</mo> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile34.tex" xmlns="">
            $\textrm {erfc}(x)$
            </AssociatedFile>
