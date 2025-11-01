@@ -264,5 +264,6 @@ mathtests = {
 ["underoverlap-01"]=true,
 ["xfrac-01"]=true,
 ["youngtab-01"]=true,
+["yhmath-01"]=true,
 ["libertinus-otf-01-BAD"]=true,
 }
