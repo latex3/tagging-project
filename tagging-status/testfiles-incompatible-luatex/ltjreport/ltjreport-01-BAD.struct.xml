@@ -11,52 +11,44 @@
        title="\contentsname \@mkboth {\contentsname }{\contentsname }"
        rolemaps-to="H1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
+     <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.007"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
        >
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.008"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Start"
         >
-       <NonStruct xmlns="http://iso.org/pdf2/ssn"
-          id="ID.009"
-         >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.010"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Start"
-          >
-         <?MarkedContent page="1" ?>目 次
-        </Span>
-       </NonStruct>
+       <?MarkedContent page="1" ?>目 次
       </Span>
-     </NonStruct>
+     </Span>
     </chapter>
     <TOC xmlns="http://iso.org/pdf/ssn"
-       id="ID.011"
+       id="ID.009"
        title="toc"
       >
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.012"
+        id="ID.010"
         title="Chapter"
        >
        <?References objects="1" ?>
      </TOCI>
      <TOC xmlns="http://iso.org/pdf/ssn"
-        id="ID.013"
+        id="ID.011"
        >
       <TOCI xmlns="http://iso.org/pdf/ssn"
-         id="ID.014"
+         id="ID.012"
          title="Section"
         >
         <?References objects="2" ?>
       </TOCI>
       <TOC xmlns="http://iso.org/pdf/ssn"
-         id="ID.015"
+         id="ID.013"
         >
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.016"
+          id="ID.014"
           title="Subsection"
          >
          <?References objects="3" ?>
@@ -66,46 +58,39 @@
     </TOC>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.017"
+      id="ID.015"
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
-       id="ID.018"
+       id="ID.016"
        title="Chapter"
        rolemaps-to="H1"
        referenced-as="1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
-        id="ID.019"
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.017"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
        >
+      <?MarkedContent page="2" ?>第 1 章 
       <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.020"
+         id="ID.018"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Start"
         >
-       <?MarkedContent page="2" ?>第 1 章 
-       <NonStruct xmlns="http://iso.org/pdf2/ssn"
-          id="ID.021"
-         >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.022"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Start"
-          >
-         <?MarkedContent page="2" ?>Chapter
-        </Span>
-       </NonStruct>
+       <?MarkedContent page="2" ?>Chapter
       </Span>
-     </NonStruct>
+     </Span>
     </chapter>
     <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.023"
+       id="ID.019"
       >
      <section xmlns="https://www.latex-project.org/ns/book"
-        id="ID.024"
+        id="ID.020"
+        title="Section"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.025"
+         id="ID.021"
          rolemaps-to="Span"
          referenced-as="2"
         >
@@ -114,14 +99,15 @@
       <?MarkedContent page="2" ?>Section
      </section>
      <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.026"
+        id="ID.022"
        >
       <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.027"
+         id="ID.023"
+         title="Subsection"
          rolemaps-to="H3"
         >
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.028"
+          id="ID.024"
           rolemaps-to="Span"
           referenced-as="3"
          >
@@ -130,11 +116,11 @@
        <?MarkedContent page="2" ?>Subsection
       </subsection>
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.029"
+         id="ID.025"
          rolemaps-to="Part"
         >
        <text xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.030"
+          id="ID.026"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
