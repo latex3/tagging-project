@@ -114,14 +114,14 @@
   % #1 Title
   \par
   % as chapter resets the paratag we reset it in bookchapter:
-  \tagpdfsetup{paratag=verse}
-  \tagtool{unittag=Chapter}
+  \AssignStructureRole{para/textblock}{verse}
+  \AssignStructureRole{para/semantic}{Chapter}
   % Separate chapters with a bit of space
   \vspace{2ex plus 2ex minus .2ex}
 
   % Fancy chapter numbers
   \begingroup
-   \tagpdfsetup{paratag=Chapter-Title}
+   \AssignStructureRole{para/textblock}{Chapter-Title} 
    \noindent
    \refstepcounter{bookchapter}
    \smash{\scalebox{1.8}[2]{\arabic{bookchapter}}}
@@ -310,45 +310,16 @@
 
 \makeatother
 %% nicer tags
-\ExplSyntaxOn
-\tl_new:N\l_tag_chapter_tag_tl
-\tl_set:Nn\l_tag_chapter_tag_tl{Frontmatter}
 
-\AddToHook{cmd/mainmatter/before}{\tl_set:Nn\l_tag_chapter_tag_tl{Book}}
+\AssignStructureRole{sec/0}{Frontmatter}
+\AssignStructureRole{sec/0/title}{Frontmatter-title}
 
-\keys_define:nn { tag / tool} 
-  {
-    ,sec-start-part .code:n = 
-      {
-        \bool_if:NT\l__tag_sec_Sect_bool
-          {
-            \__tag_sec_end:n   {-1} 
-            \__tag_sec_begin:nn{-1}{tag=Testament}
-          }  
-         \tag_struct_begin:n{tag=Testament-Title,title=#1}
-         \tagtool{para-flattened}
-         \tl_set:Nn\l__tag_para_main_tag_tl {NonStruct}
-         \tl_set:Nn\l__tag_para_tag_tl {Span}
-      }
-    ,sec-stop-part .code:n = {\__tag_sec_end_display: \tagtool{para-flattened=false}}  
-    ,sec-start-chapter .code:n =
-     {
-       \bool_if:NT\l__tag_sec_Sect_bool
-         {
-           \__tag_sec_end:n   {0} 
-           \__tag_sec_begin:nn{0}{tag=\l_tag_chapter_tag_tl}
-         }  
-        \tl_set:Ne\l_tmpa_tl{\text_purify:n{#1}}          
-        \tag_struct_begin:n{tag=\l_tag_chapter_tag_tl-Title,title-o=\l_tmpa_tl}
-        \tagtool{para-flattened}
-        \tl_set:Nn\l__tag_para_tag_tl {Span}  
-     }
-     
-   }  
-%% For benchmarking, needs tagpdf develop   
-% \RequirePackage{l3benchmark}
-% \tag_check_benchmark_on:
- \ExplSyntaxOff
+\AddToHook{cmd/mainmatter/before}
+ {\AssignStructureRole{sec/0}{Book}
+  \AssignStructureRole{sec/0/title}{Book-title}}
+ \AssignStructureRole{sec/-1}{Testament}
+ \AssignStructureRole{sec/-1/title}{Testament-title}
+
 
 %%% End tagging adaptions.
 \emergencystretch=8pt
