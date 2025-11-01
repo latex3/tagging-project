@@ -157,8 +157,10 @@ end
 -- run lualatex if the test is listed in the mathtests table
 function runtest_tasks(name,run)
   if run == 1 then
+   local lualatexcmd="lualatex"
+   if options.dev then lualatexcmd="lualatex-dev" end
    if mathtests[name] then
-     runcmd("lualatex"  .. " " .. name,testdir) -- generate MathML
+     runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
    end
    if name:match("-tasks") then
      find_tasks(name)
