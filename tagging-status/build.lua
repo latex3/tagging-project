@@ -188,6 +188,7 @@ mathtests = {
 ["algpseudocode-02"]=true,
 ["aligned-overset-01"]=true,
 ["alnumsec-01"]=true,
+["alphabeta-01"]=true,
 ["amsrefs-04"]=true,
 ["amstext-01"]=true,
 ["amsopn-01"]=true,
