@@ -217,6 +217,7 @@ mathtests = {
 ["relsize-01"]=true,
 ["scalerel-01"]=true,
 ["sfmath-01"]=true,
+["spreadtab-01"]=true,
 ["stackrel-01"]=true,
 ["sublabel-01"]=true,
 ["textcase-01"]=true,
