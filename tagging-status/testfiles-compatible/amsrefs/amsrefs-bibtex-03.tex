@@ -6,7 +6,9 @@
     tagging=on,
   }
 \documentclass{article}
-%\usepackage{times}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+
+% \usepackage{times}
 \usepackage[colorlinks,citecolor=red,pagebackref,hypertexnames=false]{hyperref}
 \usepackage[backrefs]{amsrefs}
 
