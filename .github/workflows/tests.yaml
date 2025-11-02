@@ -11,6 +11,17 @@ on:
 # This implies that for every push to a local branch in our repo for which a
 # pull request is open this runs twice. But it's important to ensure that pull
 # requests get tested even if their branch comes from a fork.
+  workflow_dispatch:
+    inputs:
+      dev:
+        description: 'Use development formats'
+        required: true
+        type: choice
+        options:
+        - main
+        - develop
+
+
 
 jobs:
   # Update the TeX Live tree if necessary
