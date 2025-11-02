@@ -60,20 +60,56 @@ jobs:
         include:
           - engine: luatex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: luatex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
           - engine: pdftex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: pdftex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
           - engine: luatex
             config: config-compatible-luatex
           - engine: luatex
             config: config-partial
+            first: ''
+            last:  'keyvaltable-01'
+          - engine: luatex
+            config: config-partial
+            first: 'keyvaltable-02'
+            last:  ''
           - engine: pdftex
             config: config-partial
+            first: ''
+            last:  'keyvaltable-01'
+          - engine: pdftex
+            config: config-partial
+            first: 'keyvaltable-02'
+            last:  ''
           - engine: luatex
             config: config-partial-luatex
           - engine: luatex
             config: config-incompatible
+            first: ''
+            last:  'moreverb-01-BAD'
+          - engine: luatex
+            config: config-incompatible
+            first: 'moreverb-02-BAD'
+            last:  ''
           - engine: pdftex
             config: config-incompatible
+            first: ''
+            last:  'moreverb-01-BAD'
+          - engine: pdftex
+            config: config-incompatible
+            first: 'moreverb-02-BAD'
+            last:  ''
           - engine: luatex
             config: config-incompatible-luatex
           - engine: luatex
