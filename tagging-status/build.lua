@@ -202,6 +202,7 @@ mathtests = {
 ["braket-01"]=true,
 ["derivative-01"]=true,
 ["diffcoeff-01"]=true,
+["duckuments-01"]=true,
 ["enumext-05"]=true,
 ["extarrows-01"]=true,
 ["fouridx-01"]=true,
