@@ -184,6 +184,7 @@ mathtests = {
 ["acro-01"]=true,
 ["acro-02"]=true,
 ["algorithmic-01"]=true,
+["algpseudocode-01"]=true,
 ["aligned-overset-01"]=true,
 ["amsrefs-04"]=true,
 ["amstext-01"]=true,
