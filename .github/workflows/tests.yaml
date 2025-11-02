@@ -60,8 +60,20 @@ jobs:
             config: config-partial-luatex
           - engine: luatex
             config: config-incompatible
+            first: ''
+            last:  'moreverb-01-BAD'
+          - engine: luatex
+            config: config-incompatible
+            first: 'moreverb-02-BAD'
+            last:  ''
           - engine: pdftex
             config: config-incompatible
+            first: ''
+            last:  'moreverb-01-BAD'
+          - engine: pdftex
+            config: config-incompatible
+            first: 'moreverb-02-BAD'
+            last:  ''
           - engine: luatex
             config: config-incompatible-luatex
           - engine: luatex
