@@ -14,12 +14,12 @@ on:
   workflow_dispatch:
     inputs:
       dev:
-        description: 'Use development formats'
+        description: 'Use development formats option'
         required: true
         type: choice
         options:
-        - main
-        - develop
+        - ""
+        - "--dev"
 
 
 
@@ -98,7 +98,7 @@ jobs:
       - run: echo $HOME/texlive/bin/x86_64-linux >> $GITHUB_PATH
       - name: Run l3build
         working-directory: tagging-status
-        run: "l3build check -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
+        run: "l3build check ${{ github.event.inputs.dev }} -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
         # run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
       # Now we create the artifacts for the logs of failed tests
       - name: Archive failed test output
