@@ -217,6 +217,7 @@ mathtests = {
 ["sfmath-01"]=true,
 ["stackrel-01"]=true,
 ["sublabel-01"]=true,
+["textcase-01"]=true,
 ["romannum-01"]=true,
 ["abraces-01-BAD"]=true,
 ["autoaligne-01-BAD"]=true,
