@@ -48,8 +48,20 @@ jobs:
         include:
           - engine: luatex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: luatex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
           - engine: pdftex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: pdftex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
           - engine: luatex
             config: config-compatible-luatex
           - engine: luatex
