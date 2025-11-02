@@ -380,12 +380,13 @@
 
 - name: alnumsec
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1008]
   tests: true
-  updated: 2024-08-20
+  comments: "Should not use mathmatical Greek letters in section numbers."
+  updated: 2025-11-02
 
 - name: alphabeta
   ctan-pkg: greek-fontenc
