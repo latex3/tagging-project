@@ -209,6 +209,7 @@ mathtests = {
 ["interval-01"]=true,
 ["leftidx-01"]=true,
 ["leftindex-01"]=true,
+["linguex-01"]=true,
 ["mitthesis-01"]=true,
 ["mleftright-01"]=true,
 ["newtxsf-01"]=true,
