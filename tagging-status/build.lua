@@ -243,6 +243,7 @@ mathtests = {
 ["amsthm-03"]=true,
 ["centernot-01-BAD"]=true,
 ["chemarr-01"]=true,
+["chemgreek-01"]=true,
 ["cleveref-02"]=true,
 ["cmll-01"]=true,
 ["colonequals-01"]=true,
