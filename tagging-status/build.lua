@@ -205,6 +205,7 @@ mathtests = {
 ["duckuments-01"]=true,
 ["enumext-05"]=true,
 ["extarrows-01"]=true,
+["fancyref-01"]=true,
 ["fouridx-01"]=true,
 ["interval-01"]=true,
 ["leftidx-01"]=true,
