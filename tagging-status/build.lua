@@ -158,10 +158,6 @@ end
 function runtest_tasks(name,run)
   if run == 1 then
    local lualatexcmd="lualatex"
-   if options.dev then lualatexcmd="lualatex-dev" end
-   if mathtests[name] then
-     runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
-   end
    if name:match("-tasks") then
      find_tasks(name)
    else
@@ -171,6 +167,10 @@ function runtest_tasks(name,run)
      if name:match("-bibtex") then
        runcmd(bibtexexe .. " " .. name,testdir)
      end
+   end
+   if options.dev then lualatexcmd="lualatex-dev" end
+   if mathtests[name] then
+     runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
    end
  end
  return ""
