@@ -223,6 +223,7 @@ mathtests = {
 ["spreadtab-01"]=true,
 ["stackrel-01"]=true,
 ["sublabel-01"]=true,
+["subdepth-01"]=true,
 ["tabularcalc-01"]=true,
 ["textcase-01"]=true,
 ["romannum-01"]=true,
