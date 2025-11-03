@@ -75,6 +75,8 @@ jobs:
             last:  ''
           - engine: luatex
             config: config-compatible-mathml
+          - engine: pdftex
+            config: config-compatible-mathml
           - engine: luatex
             config: config-compatible-luatex
           - engine: luatex
@@ -95,6 +97,8 @@ jobs:
             last:  ''
           - engine: luatex
             config: config-partial-mathml
+          - engine: pdftex
+            config: config-partial-mathml
           - engine: luatex
             config: config-partial-luatex
           - engine: luatex
@@ -114,6 +118,8 @@ jobs:
             first: 'moreverb-02-BAD'
             last:  ''
           - engine: luatex
+            config: config-incompatible-mathml
+          - engine: pdftex
             config: config-incompatible-mathml
           - engine: luatex
             config: config-incompatible-luatex
