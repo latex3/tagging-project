@@ -74,6 +74,8 @@ jobs:
             first: 'multicol-02'
             last:  ''
           - engine: luatex
+            config: config-compatible-mathml
+          - engine: luatex
             config: config-compatible-luatex
           - engine: luatex
             config: config-partial
@@ -92,6 +94,8 @@ jobs:
             first: 'keyvaltable-02'
             last:  ''
           - engine: luatex
+            config: config-partial-mathml
+          - engine: luatex
             config: config-partial-luatex
           - engine: luatex
             config: config-incompatible
@@ -109,6 +113,8 @@ jobs:
             config: config-incompatible
             first: 'moreverb-02-BAD'
             last:  ''
+          - engine: luatex
+            config: config-incompatible-mathml
           - engine: luatex
             config: config-incompatible-luatex
           - engine: luatex
