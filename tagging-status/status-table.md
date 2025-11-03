@@ -93,7 +93,7 @@ Other:
 {%-     assign dir = "-unchecked" -%}
 {%-   endif -%}
 {%- endif -%}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>
+<a href="https://github.com/search?q=repo%3Alatex3%2Ftagging-project++path%3A%2Ftestfiles{{dir}}.*%5C%2F{{p.name}}%5C%2F%2F">test(s)</a>
 {% endif %}
 </td>
 <td>
