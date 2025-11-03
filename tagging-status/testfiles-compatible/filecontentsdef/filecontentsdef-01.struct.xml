@@ -186,14 +186,17 @@
         <Formula xmlns="http://iso.org/pdf2/ssn"
            id="ID.037"
            title="equation*"
-           af="tag-AFfile1.tex"
+           af="mathml-1.xml tag-AFfile1.tex"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:Placement="Block"
           >
+          <AssociatedFile name="mathml-1.xml" xmlns="">
+          <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> <msup> <mi>𝑥</mi> <mi>𝑛</mi> </msup> <mo lspace="0.222em" rspace="0.222em">+</mo> <msup> <mi>𝑦</mi> <mi>𝑛</mi> </msup> <mo lspace="0.278em" rspace="0.278em">=</mo> <msup> <mi>𝑧</mi> <mi>𝑛</mi> </msup> </math>
+          </AssociatedFile>
           <AssociatedFile name="tag-AFfile1.tex" xmlns="">
           \begin {equation*}x^n+y^n=z^n\end {equation*}
           </AssociatedFile>
-         <?MarkedContent page="1" ?>xn+yn=zn
+         <?MarkedContent page="1" ?>𝑥𝑛+𝑦𝑛=𝑧𝑛
         </Formula>
         <text xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.038"
@@ -205,23 +208,29 @@
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.039"
             title="math"
-            af="tag-AFfile2.tex"
+            af="mathml-2.xml tag-AFfile2.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-2.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝑛</mi> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile2.tex" xmlns="">
            $n$
            </AssociatedFile>
-          <?MarkedContent page="1" ?>n
+          <?MarkedContent page="1" ?>𝑛
          </Formula>
          <?MarkedContent page="1" ?> is at most 
          <Formula xmlns="http://iso.org/pdf2/ssn"
             id="ID.040"
             title="math"
-            af="tag-AFfile3.tex"
+            af="mathml-3.xml tag-AFfile3.tex"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:Placement="Inline"
            >
+           <AssociatedFile name="mathml-3.xml" xmlns="">
+           <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0.222em">−</mo> <mn>3</mn> </math>
+           </AssociatedFile>
            <AssociatedFile name="tag-AFfile3.tex" xmlns="">
            $-3$
            </AssociatedFile>

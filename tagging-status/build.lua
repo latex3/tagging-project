@@ -255,6 +255,7 @@ mathtests = {
 ["eqnlines-01-se"]=true,
 ["esint-01"]=true,
 ["extpfeil-01"]=true,
+["filecontentsdef-01"]=true,
 ["fge-01"]=true,
 ["gensymb-01"]=true,
 ["hvlogos-01"]=true,
