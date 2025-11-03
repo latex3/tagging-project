@@ -228,6 +228,7 @@ mathtests = {
 ["textcase-01"]=true,
 ["underscore-01"]=true,
 ["romannum-01"]=true,
+["scontents-02"]=true,
 ["xfakebold-01"]=true,
 ["zref-clever-04"]=true,
 ["zref-clever-05"]=true,
