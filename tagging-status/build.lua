@@ -275,6 +275,7 @@ mathtests = {
 ["mathtools-12-BAD"]=true,
 ["mattens-01"]=true,
 ["old-arrows-01"]=true,
+["refstyle-01"]=true,
 ["slashed-01"]=true,
 ["spalign-01"]=true,
 ["tensind-01"]=true,
