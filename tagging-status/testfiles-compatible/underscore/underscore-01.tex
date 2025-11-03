@@ -7,8 +7,13 @@
   }
 \documentclass{article}
 \usepackage{underscore}
-%\usepackage[T1]{fontenc}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+\usepackage[T1]{fontenc}
 % ^ needed with pdflatex
+\fi
 
 \title{underscore tagging test}
 

@@ -226,6 +226,7 @@ mathtests = {
 ["subdepth-01"]=true,
 ["tabularcalc-01"]=true,
 ["textcase-01"]=true,
+["underscore-01"]=true,
 ["romannum-01"]=true,
 ["zref-clever-04"]=true,
 ["zref-clever-05"]=true,
