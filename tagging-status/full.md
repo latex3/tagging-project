@@ -81,17 +81,6 @@ See
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
 {%- endif -%}
-{%- if p.supported-through -%}
-<p>Tagging support:
-{% for t in p.supported-through %}
-{%- if t == "package" and p.package-repository -%}
-<a href="{{p.package-repository}}"><b>{{t}}</b></a>
-{%- else -%}
-<b>{{t}}</b>
-{%- endif -%}
-{%- unless forloop.last -%}, {% endunless -%}
-{%- endfor %}.</p>
-{%- endif -%}
 </td>
 <td>
 {%- if p.issues -%}
