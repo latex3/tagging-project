@@ -6,8 +6,14 @@
     tagging=on
   }
 \documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+  \usepackage[T1]{fontenc} % for pdflatex
+\fi
+
 \usepackage{newunicodechar}
-%\usepackage[T1]{fontenc} % for pdflatex
+
 
 \newunicodechar{♢}{<>}
 \newunicodechar{⧫}{!}
