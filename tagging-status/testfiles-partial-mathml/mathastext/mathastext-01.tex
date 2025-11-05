@@ -8,13 +8,17 @@
   }
 \documentclass{article}
 
-\usepackage[no-math]{fontspec}
-\setmainfont[Ligatures=TeX]{Libertinus Serif}
-\usepackage[defaultmathsizes,LGRgreek]{mathastext}
-\MTgreekfont{LibertinusSerif-TLF}
-\Mathastext
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+  \usepackage{mathastext}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{droidserif}
+  \usepackage[LGRgreek]{mathastext}
+  \let\varepsilon\epsilon
+\fi
 
-\title{mathastext tagging test - luatex/xetex}
+\title{mathastext tagging test - pdftex}
 
 \begin{document}
 
