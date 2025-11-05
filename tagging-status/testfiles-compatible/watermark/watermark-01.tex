@@ -6,16 +6,14 @@
     tagging=on
   }
 \documentclass{article}
-\usepackage{ncccropbox}
+\usepackage{ncccropmark}
+\usepackage{watermark}
+\usepackage{kantlipsum}
 
-\title{ncccropbox tagging test}
+\title{ncccropmark tagging test}
 
 \begin{document}
-\cropbox[30mm][10mm]{Box 1}
-\begin{center}
-\cropbox[30mm][10mm]{Box 1}\cropbox[30mm][10mm]{Box 2}%
-\cropbox[30mm][10mm]{Box 3}\cropbox[30mm][10mm]{Box 4}\\
-\cropbox[30mm][10mm]{Box 5}\cropbox[30mm][10mm]{Box 6}%
-\cropbox[30mm][10mm]{Box 7}\cropbox[30mm][10mm]{Box 8}
-\end{center}
+\watermark{\cropmark[f]{10mm}{10mm}{10mm}{10mm}{5mm}
+\cropmark[f]{10mm}{10mm}{10mm}{10mm}{-5mm}}
+\kant[1-6]
 \end{document}
