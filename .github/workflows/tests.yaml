@@ -11,6 +11,17 @@ on:
 # This implies that for every push to a local branch in our repo for which a
 # pull request is open this runs twice. But it's important to ensure that pull
 # requests get tested even if their branch comes from a fork.
+  workflow_dispatch:
+    inputs:
+      dev:
+        description: 'Use development formats option'
+        required: true
+        type: choice
+        options:
+        - "--dev"
+        - "-S"
+
+
 
 jobs:
   # Update the TeX Live tree if necessary
@@ -48,20 +59,76 @@ jobs:
         include:
           - engine: luatex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: luatex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
           - engine: pdftex
             config: config-compatible
+            first: ''
+            last:  'multicol-01'
+          - engine: pdftex
+            config: config-compatible
+            first: 'multicol-02'
+            last:  ''
+          - engine: luatex
+            config: config-compatible-mathml
+          - engine: pdftex
+            config: config-compatible-mathml
           - engine: luatex
             config: config-compatible-luatex
           - engine: luatex
             config: config-partial
+            first: ''
+            last:  'keyvaltable-01'
+          - engine: luatex
+            config: config-partial
+            first: 'keyvaltable-02'
+            last:  ''
           - engine: pdftex
             config: config-partial
+            first: ''
+            last:  'keyvaltable-01'
+          - engine: pdftex
+            config: config-partial
+            first: 'keyvaltable-02'
+            last:  ''
+          - engine: luatex
+            config: config-partial-mathml
+          - engine: pdftex
+            config: config-partial-mathml
           - engine: luatex
             config: config-partial-luatex
           - engine: luatex
             config: config-incompatible
+            first: ''
+            last:  'framed-01'
+          - engine: luatex
+            config: config-incompatible
+            first: 'framed-02'
+            last:  'reledpar-01-BAD'
+          - engine: luatex
+            config: config-incompatible
+            first: 'reledpar-02'
+            last:  ''
           - engine: pdftex
             config: config-incompatible
+            first: ''
+            last:  'framed-01'
+          - engine: pdftex
+            config: config-incompatible
+            first: 'framed-02'
+            last:  'reledpar-01-BAD'
+          - engine: pdftex
+            config: config-incompatible
+            first: 'reledpar-02'
+            last:  ''
+          - engine: luatex
+            config: config-incompatible-mathml
+          - engine: pdftex
+            config: config-incompatible-mathml
           - engine: luatex
             config: config-incompatible-luatex
           - engine: luatex
@@ -87,7 +154,7 @@ jobs:
       - run: echo $HOME/texlive/bin/x86_64-linux >> $GITHUB_PATH
       - name: Run l3build
         working-directory: tagging-status
-        run: "l3build check -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
+        run: "l3build check ${{ github.event.inputs.dev }} -S -e ${{ matrix.engine }} -c ${{ matrix.config }}${{ matrix.first && format(' --first {0}', matrix.first) || ''}}${{ matrix.last && format(' --last {0}', matrix.last) || ''}}"
         # run: "l3build check -S -q --show-log-on-error -e ${{ matrix.engine }}"
       # Now we create the artifacts for the logs of failed tests
       - name: Archive failed test output

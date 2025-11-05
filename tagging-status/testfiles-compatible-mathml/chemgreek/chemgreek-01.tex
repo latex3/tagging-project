@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{chemgreek}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+\usepackage{textgreek}
+
+\ifdefined\Uchar\setmainfont{Libertinus Serif}\fi
+
+\title{chemgreek tagging test}
+
+\begin{document}
+
+\selectchemgreekmapping{default}
+default mapping: \chemphi\ and \chemPhi, $\phi$ and $\Phi$
+
+\printchemgreekalphabet
+
+\ifdefined\Uchar
+\selectchemgreekmapping{fontspec}
+fontspec mapping: \chemphi\ and \chemPhi, $\phi$ and $\Phi$
+\fi
+
+\printchemgreekalphabet
+
+\selectchemgreekmapping{textgreek}
+textgreek mapping: \chemphi\ and \chemPhi, $\phi$ and $\Phi$
+
+\printchemgreekalphabet
+
+\end{document}

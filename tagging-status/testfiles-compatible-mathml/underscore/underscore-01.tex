@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{underscore}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+\usepackage[T1]{fontenc}
+% ^ needed with pdflatex
+\fi
+
+\title{underscore tagging test}
+
+\begin{document}
+
+activation_energy $E_a$
+
+activation\_energy $E_a$
+
+\end{document}

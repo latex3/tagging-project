@@ -6,10 +6,13 @@ checkengines = {'luatex', 'pdftex'}
 checkconfigs = {
   'config-compatible',
   'config-compatible-luatex',
+  'config-compatible-mathml',
   'config-partial',
   'config-partial-luatex',
+  'config-partial-mathml',
   'config-incompatible',
   'config-incompatible-luatex',
+  'config-incompatible-mathml',
   'config-unchecked',
   'config-unchecked-luatex'
 }
@@ -18,7 +21,7 @@ checkruns = 4
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
                                             "*.eps","*eps-converted-to.pdf",
                                             "*svg-tex.pdf","*.pdf_tex","*.ods",
-                                            "*.png","*.svg","*.mf"}
+                                            "*.png","*.svg","*.mf","*.bbl"}
 
 
 local pdf_structure do
@@ -154,12 +157,10 @@ end
 -- run biber if test name includes -biber
 -- run bibtex if test name includes -bibtex
 -- run (sanitised) commands from `% task:` comments if test name includes -tasks
--- run lualatex if the test is listed in the mathtests table
+-- run lualatex if extra_luatex_run is true
+extra_lualatex_run = extra_lualatex_run or false
 function runtest_tasks(name,run)
   if run == 1 then
-   if mathtests[name] then
-     runcmd("lualatex"  .. " " .. name,testdir) -- generate MathML
-   end
    if name:match("-tasks") then
      find_tasks(name)
    else
@@ -170,6 +171,11 @@ function runtest_tasks(name,run)
        runcmd(bibtexexe .. " " .. name,testdir)
      end
    end
+   local lualatexcmd="lualatex"
+   if options.dev then lualatexcmd="lualatex-dev" end
+   if extra_lualatex_run then
+     runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
+   end
  end
  return ""
 end
@@ -177,79 +183,3 @@ end
 -- list of extensions to keep between runs (should check if all these are still needed)
 auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
 
--- list of tests including math and requiring a lualatex run to generate MathML.
-mathtests = {
-["aligned-overset-01"]=true,
-["bigints-01"]=true,
-["bracealign-01"]=true,
-["braket-01"]=true,
-["derivative-01"]=true,
-["diffcoeff-01"]=true,
-["extarrows-01"]=true,
-["fouridx-01"]=true,
-["interval-01"]=true,
-["leftidx-01"]=true,
-["leftindex-01"]=true,
-["mitthesis-01"]=true,
-["mleftright-01"]=true,
-["noitcrul-01"]=true,
-["numerica-01"]=true,
-["relsize-01"]=true,
-["scalerel-01"]=true,
-["stackrel-01"]=true,
-["abraces-01-BAD"]=true,
-["autoaligne-01-BAD"]=true,
-["autoaligne-02-BAD"]=true,
-["autobreak-01"]=true,
-["cancel-01"]=true,
-["esvect-01"]=true,
-["exam-01-BAD"]=true,
-["nicefrac-01"]=true,
-["oubraces-01"]=true,
-["systeme-01-BAD"]=true,
-["thmtools-01-BAD"]=true,
-["tikz-cd-01"]=true,
-["amsmath-01-tagged"]=true,
-["amsthm-03"]=true,
-["centernot-01-BAD"]=true,
-["chemarr-01"]=true,
-["cleveref-02"]=true,
-["cmll-01"]=true,
-["colonequals-01"]=true,
-["delimset-01"]=true,
-["dotlessi-01"]=true,
-["enumext-05-BAD"]=true,
-["enumext-06"]=true,
-["eqnlines-01-af"]=true,
-["eqnlines-01-se"]=true,
-["esint-01"]=true,
-["extpfeil-01"]=true,
-["fge-01"]=true,
-["gensymb-01"]=true,
-["hvlogos-01"]=true,
-["keytheorems-01"]=true,
-["letterswitharrows-01"]=true,
-["mathalpha-01"]=true,
-["mathbbol-01"]=true,
-["mathdots-01"]=true,
-["mathtools-01"]=true,
-["mathtools-02"]=true,
-["mathtools-03"]=true,
-["mathtools-04-BAD"]=true,
-["mathtools-05"]=true,
-["mathtools-08"]=true,
-["mathtools-09"]=true,
-["mathtools-11-BAD"]=true,
-["mathtools-12-BAD"]=true,
-["mattens-01"]=true,
-["old-arrows-01"]=true,
-["slashed-01"]=true,
-["spalign-01"]=true,
-["tensind-01"]=true,
-["tensor-01"]=true,
-["turnstile-01"]=true,
-["underoverlap-01"]=true,
-["xfrac-01"]=true,
-["youngtab-01"]=true,
-["libertinus-otf-01-BAD"]=true,
-}

@@ -1,0 +1,368 @@
+% !TEX TS-program = LuaLaTeX
+% !BIB TS-program = biber
+% !TEX encoding = UTF-8 Unicode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
+% This TEST FILE should be run with mitthesis.cls version 1.19 (current CTAN release) or a later version.
+%
+% The result validates as PDF 2.0/UA-2 (or A-4F) under verapdf (https://demo.verapdf.org/) and the Arlington model (Arlington PDF 2.0 profile, ver.1.27.96)
+% 		when run with lualatex: LuaHBTeX, Version 1.18.0 (TeX Live 2024), LaTeX2e <2024-11-01> patch level 1, L3 programming layer <2024-12-25>
+%
+% The longtable package is loaded, so not testing with pdftex.
+%
+% The current class file includes patches to address two tagging issues:
+%		* interaction of caption package with lof/lot:     https://github.com/latex3/tagging-project/issues/720#issuecomment-2388327048
+%		* tagging bug with large delimiters in some fonts: https://github.com/latex3/tagging-project/issues/757#issuecomment-2465417867
+%
+% The test files omit the listings package (appendixa), which is incompatible, and the mhchem package, which may not tag correctly.
+% The layout table for signatures on the title page is not tagged as a presentation table at this point.
+%
+% Most of the available font options are not tested.
+%
+% Date: 11 February 2025
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\partokencontext=0 % TEMP FIX for https://github.com/schlcht/microtype/issues/59
+\DocumentMetadata 
+{
+	tagging=on,
+	lang		= en-US,
+	pdfstandard = ua-2,% a-4f,% 
+	pdfversion  = 2.0,
+}
+
+
+
+
+% The rest is the MIT-thesis template file, as in CTAN.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+% This file is MIT-Thesis.tex, a LaTeX template for formatting an MIT thesis with the mitthesis class.
+%
+% Version: 1.19, 2025/01/28
+%
+% Author: John H. Lienhard, copyright 2025. Reuse under the MIT license: https://ctan.org/license/mit 
+
+% Documentation is here: https://ctan.org/pkg/mitthesis
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[fontset=lmodern]{mitthesis}% fontset=newtx, fontset=libertine, fontset=libertinus, fontset=lmodern, 
+%						fontset=newtx-sans-text, fontset=fira-newtxsf, fontset=heros-stix2, fontset=stix2, 
+%						fontset=lmodern,fontset=lucida
+%
+% option [twoside]		gives facing-page behavior for printing; omitting twoside will eliminate even-numbered blank pages.
+% option [lineno]	 	provides line numbers, as for editing
+% option [mydesign] 	loads packages for color, title and list formats, margins, or captions: edit mydesign.tex to change defaults.
+% option [fontset] is a keyvalue which can be:
+%					 	for pdftex or unicode engines:  defaultfonts, libertine, libertinus, lmodern, lucida
+%					 	for pdftex only: 				fira-newtxsf, newtx, newtx-sans-text
+%						for unicode engines (luatex):	heros-stix2, stix2, termes, termes-stix2
+%					 	if no key value is given, fonts default to CMR (pdftex) or LMR (unicode), i.e., "the LaTeX font".
+%					 	You can edit the fontset files or you can write your own, myfonts.tex, and do [fontset=myfonts].
+%						If you are using multiple languages, load the babel package in your fontset file, before the fonts.
+
+%%%%%%%%% Packages used in sample chapters (not otherwise required) %%%%%%%
+
+%% Package for code listing in Appendix A.
+% \usepackage{listings}%   documentation is here https://ctan.org/pkg/listings
+
+%% Set chemical formulas nicely
+% \usepackage[version=4]{mhchem}%   documentation at https://ctan.org/pkg/mhchem
+
+%% Latin filler used in Chapter 1, with a test for package version date (https://ctan.org/pkg/lipsum)
+\usepackage{lipsum}
+\IfPackageAtLeastTF{lipsum}{2021/09/20}{\setlipsum{auto-lang=false}}{}
+
+%% Table related packages  
+
+\usepackage{booktabs}% publication quality tables (https://ctan.org/pkg/booktabs)
+
+\usepackage{array}% Additional options for column formats (https://ctan.org/pkg/array)
+
+\usepackage{dcolumn}% For alignment of numbers on the decimal place (https://ctan.org/pkg/dcolumn) 
+  \newcolumntype{d}[1]{D{.}{.}{#1}}% use with dcolumn package. Note: dcolumns are set in math mode.
+  % syntax: d{x.y} where x is max number of digits before decimal and y is max number after.
+
+% Package for multipage table in Appendix B.
+\usepackage{longtable}% typeset multi-page tables (https://ctan.org/pkg/longtable)
+
+%\usepackage{tabularx}% adjustable-width columns in tabular (https://ctan.org/pkg/tabularx)
+
+
+%% Package for improved typography
+
+\usepackage{microtype}% typographic fine-tuning, used in sample thesis (https://ctan.org/pkg/microtype)
+
+
+%%%%%%%%%  Graphics path (to figure files)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Can set graphicspath to point to specific directories containing figures (the current directory is searched automatically)
+%% For instance, to search a subdirectory of the current directory called "figures" and a parallel directory called "art", set:
+
+% \graphicspath{ {figures/} {../art/} }% For details see: https://latexref.xyz/dev/latex2e.html#g_t_005cgraphicspath
+
+
+%%%%%%%%%  Representative set-up for biblatex  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numerical citations of references
+\usepackage[style=ext-numeric-comp,giveninits=true,maxbibnames=10,sorting=none]{biblatex}
+    \AtEveryBibitem{%
+      \ifentrytype{article}{%
+        \renewbibmacro{in:}{} % Removes "In:" for articles
+      }{}
+    }
+    
+%% IEEE style citations and references
+% \usepackage[style=ieee,maxbibnames=10,sorting=none]{biblatex}% style=ext-numeric-comp,articlein=false,giveninits=true
+%	 \DefineBibliographyStrings{english}{url= \textsc{url} ,  }% replaces the IEEE default "[Online]. Available" by "URL"
+
+%% author-year style citations and references 
+%% use \parencite, not \cite, when you want "(Author, year)"
+%% The sample files are not set up to include parentheses.
+% \usepackage[style=authoryear, maxbibnames=10]{biblatex} 
+
+
+\addbibresource{mitthesis-sample.bib}%% <== change to YOUR bib file <= CHANGE
+
+%% to avoid split urls and stretched white space, you can set the bibliography ragged-right:
+%\appto{\bibsetup}{\raggedright}
+
+%% biblatex is very powerful, and you can customize most aspects the reference list and citations to suit your needs.
+%%   documentation is here: https://ctan.org/pkg/biblatex
+%%   cheat sheet is here:   https://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
+
+%% To ensure citations are set, run Latex --> biblatex/biber --> Latex again
+
+%%%%%%%%%%  Option to use natbib   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\RequirePackage[numbers,sort&compress]{natbib}
+ 
+%%% add bibliography to table of contents
+%\apptocmd{\bibliography}{\addcontentsline{toc}{chapter}{\protect\textbf{\bibname}}}{}{}
+
+%%% You can use this to rename the bibliography section
+%\renewcommand{\bibname}{References}
+
+%%% To adjust space between bibliography items 
+%\setlength\bibsep{4pt plus 1pt minus 1pt}
+%   change 4pt to something else; don't drop last two lengths (they are stretchable "glue")
+
+
+%%%%%%%%%%  Option for "double spacing" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Back in the typewriter era, double spaced lines were convenient for editing with a pencil. 
+%% In typography, the separation between lines is called "leading", and it is usually set in 
+%% proportion to the font size (i.e., when the font is loaded).  If you really feel the need 
+%% to change the line separation, the most attractive results will be obtained by changing the
+%% leading in proportion to the the current font size, rather than just doubling the space.
+
+%% The setspace package provides a tool for changing line separation. Use these two commands here:
+%
+% \usepackage{setspace}%  documentation at https://ctan.org/pkg/setspace
+% \setstretch{1.1}% you can choose some other value for the stretch of space between lines
+%
+%% Use one or more of the these commands *AFTER* the frontmatter
+%
+% \onehalfspacing
+% \doublespacing
+% \singlespacing  % will turn these effects off (you can use these anywhere in the document)
+
+%% The best result is usually to stay with leading selected by the typographer who set up the font.
+
+
+%%%%%%%%%%%  Metadata  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Most of the document metadata is created automatically. 
+% The following items should be adjusted to match your work. <================= !!!!!!!!!!
+
+\hypersetup{%
+	pdfsubject={Template for writing MIT theses with the mitthesis class},
+	% Change this to briefly state topic of your thesis 
+% 
+	pdfkeywords={Massachusetts Institute of Technology, MIT},
+	% Add keywords that will help search engines and libraries to find your work.
+	% Includes the name[s] of the author[s] 
+	% (If you used \DocumentMetadata at line 14, you can just put "\CopyrightAuthor," for the names.)
+%
+	pdfurl={},
+	% If you have a url for the thesis, put it here. Otherwise delete this.
+	% (MIT Libraries will put your thesis in DSPACE with a persistent url after you submit it.)
+%	
+	pdfcontactemail={},
+	% You can put a [permanent] email address into the metadata, if you like.
+	% Otherwise delete this.
+%
+	pdfauthortitle={},
+	% If you have a title, you can include it here.
+}
+
+%%%%%%%%%%%%  Math operators %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These commands declare two math operators, \erf{..} and \erfc{..} using mathtools
+% note: * form produces automatic delimiter scaling; optional argument sets size manually, e.g. [\bigg]
+% See Table 1.1 in Chapter 1
+
+\DeclareMathOperator{\Erf}{erf}
+\DeclareMathOperator{\Erfc}{erfc}
+\DeclarePairedDelimiterXPP\erf[1]{\Erf\mkern1mu}(){}{#1}% increase to 2mu with stix2 font
+\DeclarePairedDelimiterXPP\erfc[1]{\Erfc\mkern1mu}(){}{#1}
+
+
+%%%%%%%%%%%%%%  End preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%% edit the following commands to match your thesis %%%%%%%%%%
+
+\title{The Atomic Theory as Applied To Gases, with Some Experiments on the Viscosity of Air}
+
+% \Author{Author full name}{Author department}[Author's first PREVIOUS degree][Author's second PREVIOUS degree][...
+% Note that third, fourth, fifth, and sixth arguments are optional [] and may be omitted
+
+% note on names: most of the following names are made up; Silas Holman was a physics professor at MIT in the 19th century.
+
+\Author{Silas W. Holman}{Department of Physics}
+% \Author{Luisa Hernández}{Department of Research}[B.S. Mechanical Engineering, UCLA, 2018][M.S. Stellar Interiors, Vulcan Science Academy, 2020]
+% \Author{Thurston Howell III}{Department of Economics}[MBA, Ferengi School of Management, 2022]
+
+% Use once for each degree fulfilled by thesis
+% For two degrees from one department, leave the department argument blank for the second degree {}.
+\Degree{Bachelor of Science in Physics}{Department of Physics}
+%\Degree{Master of Science in Physics}{}
+%\Degree{Bachelor of Science in Mechanical Engineering}{Department of Mechanical Engineering}
+
+% If there is more than one supervisor, use the \Supervisor command for each.
+\Supervisor{Edward C. Pickering}{Professor of Physics}
+% \Supervisor{Edward C. Pickering}{Professor of Physics, and \\ \> Professor of Something Else}
+% \Supervisor{Secunda Castor}{Professor of Research}
+% \Supervisor{Quintus Castor}{Professor of Log Dams}
+
+% Professor who formally accepts theses for your department (e.g., the Graduate Officer, Professor Sméagol,...)
+% If more than one department, use more than once
+\Acceptor{Tertius Castor}{Professor of Log Dams}{Graduate Officer, Department of Research} % \\ \> Third title}
+% \Acceptor{Quarta Castor}{Professor of Lodge Building}{Graduate Officer, Department of Mechanical Engineering}
+%%%  If you need to reduce vertical space, put the acceptor title in the second argument and leave the third blank, {}.
+% \Acceptor{Primus Castor}{Professor and Undergraduate Officer, Department of Physics}{}
+
+% Usage: \DegreeDate{Month}{year}
+% Valid degree months are February, May, June, or September
+\DegreeDate{June}{1876}
+
+% Date that final thesis is submitted to department
+\ThesisDate{May 18, 1876}
+
+
+%%%%%%  Choose whether to have a CREATIVE COMMONS License  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% If you are using a cc license, uncomment the following line and insert details of your cc license here.
+%
+% \CClicense{CC BY-NC-ND 4.0}{https://creativecommons.org/licenses/by-nc-nd/4.0/}
+%
+
+%%%%%%%  Solutions for overflowing titlepage  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If your title page is overflowing (from too many names, degrees, etc.):
+%
+% (a) you can reduce the 12pt and 18pt skips between various blocks to 6pt with this command:
+%
+% \Tighten
+%
+% (b)  you can scale down the Signature block at the bottom with this command:
+%
+% \SignatureBlockSize{\small}  %or this one \SignatureBlockSize{\footnotesize}
+%
+% (c) you can put the acceptor name and title onto two lines, rather than three like this:
+%
+% \Acceptor{Tertius Castor}{Professor and Graduate Officer, Department of Research}{}
+%
+% (d) you can change the font size of the author name[s] with
+%
+%	\AuthorNameSize{\normalsize}
+%
+% (e) and you can omit any previous degrees from the title page, instead mentioning them in the biographical sketch
+
+% Also, if you prefer to keep the text toward the top of the page with most white space at the bottom, you
+% can use this command to squash all of the vertical glue (stretchy space) with this command:
+%
+% \Squash 
+%
+% This command is useful when the text has not already reach the bottom of the page, since the glue gets squashed automatically
+% when the page is too full.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Make titlepage
+\maketitle
+
+%%%%%%%%% Contents that you need to write follows! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \includeonly{acknowledgments,biography,chapter1,chapter2,...,appendixa,...} 
+%   for usage of includeonly, see https://latexref.xyz/_005cinclude-_0026-_005cincludeonly.html
+
+%%% Frontmatter (write this material in the mentioned files)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This page is optional. Edit the file committee_members.tex 
+%\include{committee_members}
+\clearpage\input{committee_members.ltx}\clearpage
+
+% The abstract environment creates all the required headings and footers. 
+% You only need to the text of the abstract in the file abstract.tex
+\begin{abstract}
+	\input{abstract.ltx}% use \input rather than \include because we're inside an environment
+\end{abstract}
+
+%\include{acknowledgments}% acknowledgments.tex (.tex extension is presumed by \include) 
+\clearpage\input{acknowledgments.ltx}\clearpage
+
+%\include{biography}% biography.tex (optional, see https://libraries.mit.edu/distinctive-collections/thesis-specs/#format)
+\clearpage\input{biography.ltx}\clearpage
+
+%%% Table of contents and lists of stuff (delete unused lists, i.e., if no tables or figures) %%%%%
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%% Chapters of thesis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% If you want to use "double spacing", you should start here...
+
+% \include{chapter1}% .tex extension is presumed
+\clearpage\input{chapter1.ltx}\clearpage
+% \include{chapter2}
+% \include{chapter3}
+% \include{chapter4}
+
+
+%%% Appendicies of thesis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+%\include{appendixa}% listings example
+%\include{appendixb}% longtable example
+\clearpage\input{appendixb.ltx}\clearpage
+
+%%% Bibliography (biblatex)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defbibheading{bibintoc}{\chapter*{#1}\addcontentsline{toc}{backmatter}{\refname}} 
+% this sets the title of contents name for bibliography to \refname (= References)
+% change "backmatter" to "chapter" if you prefer a bold face entry in the table of contents
+
+\printbibliography[title={\refname},heading=bibintoc]
+
+% biblatex also supports chapter-by-chapter bibliography, https://tex.stackexchange.com/a/296502/119566
+% see the biblatex manual, section 3.14.3
+
+
+%%%% Option for natbib %%%%%%%%%%%%%
+
+%%   use an appropriate style (.bst) and your own .bib file[s]
+
+%\bibliographystyle{plainnat}
+%\bibliography{mitthesis-sample.bib}
+
+\end{document} 
+ 

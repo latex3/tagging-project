@@ -65,13 +65,13 @@ It is very difficult to find all issues with this document if you are looking at
 
  - Link announcements duplicate the link text, e.g., _"Link 1 Introduction 1 Introduction 1"_
 
-- The TOC is read with a lot of  _"dot dot dot ..."_ and with page number and next heading number without any pause inbetween. (In the June 2025 release of NVDA there are now configuration possibilities to _finally_  improve on this "dots" situation. However, these configuration options have possibly unwanted side effects (as they also suppress dots in other places) and are not enabled by default)
+- The TOC is read with a lot of  _"dot dot dot ..."_ and with page number and next heading number without any pause in between. (In the June 2025 release of NVDA there are now configuration possibilities to _finally_  improve on this "dots" situation. However, these configuration options have possibly unwanted side effects (as they also suppress dots in other places) and are not enabled by default)
  - "link" announcement for footnote appears in a random place in the previous line and the footnote number is read as normal text
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a Foxit/NVDA issue which we expect to be resolved soon)
  - The heading _"2 Document structures"_ is interpreted as a list with one item
  - Subheadings are read as _"Two One Mathematics"_ not as "2.1 Mathematics"
- - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuation and other symbols are not read
  - The four equations are read without pause, so it is impossible to deduce which part of the readout belongs to which formula
  - The second pair of math equations (labeled 2.2) and the following text "Matrices" are interpreted as a single table and a list with one item producing an incomprehensible reading
  - Equation labels are read as numbers so difficult to understand
@@ -92,7 +92,7 @@ It is very difficult to find all issues with this document if you are looking at
  - The display of verbatim code is read without the parentheses and curly brackets
  - The readout of the paragraph in section 3 has the word _"database"_ added several times in place of the citations `[1]` and `[2]`
  - In the bibliography the page number 312 is read as _"three twelve"_ but 313 is read correctly
- - Important punctuations to correctly identify the bibliography items are dropped
+ - Important punctuation to correctly identify the bibliography items are dropped
 
 #### Summary
 
@@ -109,10 +109,10 @@ The untagged PDF is basically incomprehensible.
 #### Observations
 
  - The reading of the TOC lines are better in this case. Instead of multiple dots we get something like  _"2 POINT 1 LINK Mathematics DOT 1"_ which is somewhat confusing, but less horrible to listen to.
- - The links in the TOC are inconsistenly provided: usually just for the heading title but we also hear _"LINK LINK 2.2 LINK Lists 1"_  (so no DOT this time but two extra LINKs)
+ - The links in the TOC are inconsistently provided: usually just for the heading title but we also hear _"LINK LINK 2.2 LINK Lists 1"_  (so no DOT this time but two extra LINKs)
  - The paragraph "Apart from ..." is read strangely: many words are suddenly read letter by letter
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
- - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuation and other symbols are not read
  - Mathematics and text are read without a pause even if a new paragraph starts 
  - The matrices are read top down, e.g., _"thirteen twenty four"_ without any indication that these are matrices
  - The lists are not announced as lists and their nesting is not made clear
@@ -174,7 +174,7 @@ The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting 
  - The last line of the TOC is misinterpreted as a heading level 5 (different heuristic result compared to the MacOS version)
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - The footnote text is not correctly identified and read as part of the main paragraph in the middle of the hyphenated word _"docu- ment"_ (does not happen with the MacOS auto-tagged version)
- - Reading of math is garbled as sub- and superscripts are not announced and punctuations and other symbols are not read
+ - Reading of math is garbled as sub- and superscripts are not announced and punctuation and other symbols are not read
  - Mathematics and text are read without a pause even if a new paragraph starts 
  - The separate equations (on a single line) are joined and read without any pause despite the space in the source
  - Equation labels are read as numbers so difficult to understand
@@ -226,7 +226,7 @@ The sample document shown in the video was compiled with the above configuration
  - The footnote is correctly identified and the footnote text is read in a suitable place 
  - All mathematics are read correctly and can be understood
  - Graphics are not dropped; instead their Alt text is read
- - Punctuations, symbols, and newlines are announced in verbatim text
+ - Punctuation, symbols, and newlines are announced in verbatim text
 
 #### Remaining issues
 

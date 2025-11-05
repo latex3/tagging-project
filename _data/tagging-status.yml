@@ -19,7 +19,7 @@
 #  luatex-only        optional   boolean         true if package only works with lualatex
 #  tests              optional   string          true|false|excluded Are there tests in testfiles-<status>/<name> ?
 #  tasks              optional   markdown-string Free text markdown action items for team or volunteers
-#  supported-through  optional   string-list     List of either "package" or a tagging project module such as "phase-III" or "math", etc. from `latex-lab`.
+#  supported-through  optional   string-list     List of either "package" or additional require tagging project module
 #  package-repository optional   string          URL to repository for tagging support of package, use if "package" is in the supported-through list.
 #  updated            optional   date            yyyy-mm-dd date when the entry was updated.
 #
@@ -120,7 +120,6 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -160,7 +159,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "amsmath must be loaded before accents.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -354,7 +352,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -380,12 +377,13 @@
 
 - name: alnumsec
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1008]
   tests: true
-  updated: 2024-08-20
+  comments: "Should not use mathematical Greek letters in section numbers."
+  updated: 2025-11-02
 
 - name: alphabeta
   ctan-pkg: greek-fontenc
@@ -421,7 +419,6 @@
   status: partially-compatible
   included-in: [arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "pmb produces extra tags from typesetting argument three times"
   issues:
   tests: true
@@ -432,7 +429,6 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Breaks with unicode-math. No luamml support."
   issues:
   external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
@@ -444,7 +440,6 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "See status of amscd."
   issues:
   tests: true
@@ -455,7 +450,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -476,7 +470,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   references: [1,2]
   issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
@@ -499,7 +492,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -521,7 +513,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -532,7 +523,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   external-issues: ["https://github.com/latex3/luamml/issues/5"]
@@ -544,7 +534,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,firstaid]
   issues: [83,733,736,759,790,792,835,944]
   tests: true
   updated: 2025-09-12
@@ -555,7 +544,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "`\\accentedsymbol` not supported by luamml."
   issues:
   tests: true
@@ -700,7 +688,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,table]
   issues:
   updated: 2024-07-06
 
@@ -864,7 +851,6 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Tags each character as a separate formula.
              No luamml support."
   issues: [881]
@@ -1904,7 +1890,6 @@
   status: partially-compatible
   included-in: [arxiv5]
   priority: 4
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -1915,7 +1900,6 @@
   status: partially-compatible
   included-in: [arxiv1]
   priority: 5
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -1926,7 +1910,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -2145,7 +2128,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -2193,7 +2175,6 @@
   status: compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,firstaid]
   updated: 2024-07-07
 
 - name: blkarray
@@ -2219,7 +2200,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -2287,7 +2267,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,firstaid,table]
   comments: "Requires the firstaid module which contains a fix."
   issues: [69]
   tests: true
@@ -2308,7 +2287,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   issues:
   comments:
   tests: true
@@ -2319,7 +2297,6 @@
   status: compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -2493,7 +2470,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -2504,7 +2480,6 @@
   status: currently-incompatible
   included-in: [arxiv1]
   priority: 5
-  supported-through: [phase-III,math]
   comments: "No luamml support. Text mode commands are tagged incorrectly."
   issues: [880]
   tests: true
@@ -2638,7 +2613,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,table]
   issues:
   package-repository: "https://github.com/JosselinNoirel/cellspace"
   external-issues: "https://github.com/JosselinNoirel/cellspace/issues/9"
@@ -2651,7 +2625,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -2742,7 +2715,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -2933,7 +2905,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,firstaid]
   comments: "Must be loaded after amsmath."
   issues: [2]
   tests: true
@@ -2964,7 +2935,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -3003,7 +2973,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,table]
   package-repository: "https://github.com/MartinScharrer/collcell"
   issues:
   tests: true
@@ -3034,7 +3003,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -3073,7 +3041,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,table]
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
   issues: [90,379,749]
   tasks: needs tests
@@ -3111,7 +3078,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -3204,7 +3170,6 @@
   priority: 2
   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
             currently incompatible."
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-20
@@ -3445,7 +3410,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math,table]
   comments: "No luamml support."
   issues: [861]
   tests: true
@@ -3456,7 +3420,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "luamml support is not ideal."
   issues:
   tests: true
@@ -3467,7 +3430,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "luamml support of `\\odif` etc. is not ideal."
   issues:
   tests: true
@@ -3496,7 +3458,6 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -3555,7 +3516,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "With unicode-math, wrong symbol in `\\mathrm`."
   issues:
   tests: true
@@ -3635,7 +3595,6 @@
   status: partially-compatible
   included-in: [arxiv1]
   priority: 5
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -3646,7 +3605,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -3666,7 +3624,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -3718,7 +3675,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -3931,14 +3887,13 @@
 
 - name: enumext
   type: package
-  status: partially-compatible
+  status: compatible
   included-in:
   priority: 9
-  supported-through: [latest,package]
   package-repository: "https://github.com/pablgonz/enumext"
   issues:
   tests: true
-  updated: 2024-11-03
+  updated: 2025-11-02
 
 - name: enumitem
   type: package
@@ -4054,10 +4009,9 @@
   type: package
   status: partially-compatible
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Works with minor deficiencies.
              Uses adaption of latex-lab-math.ltx internal macro
-             \\math_register_halign_env:nn to grab math contents.
+             `\\math_register_halign_env:nn` to grab math contents.
              Adjustments towards final tagging interfaces likely necessary."
   issues:
   tests: true
@@ -4086,7 +4040,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "amsmath must be loaded before esint.
              Symbols overwritten by unicode-math."
   issues:
@@ -4108,7 +4061,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4119,7 +4071,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4130,7 +4081,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4141,7 +4091,6 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues: [836]
   tests: true
@@ -4199,7 +4148,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4211,7 +4159,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4222,7 +4169,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -4233,7 +4179,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -4245,7 +4190,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   issues:
   tests: false
   comments: "Incompatible with unicode-math. No luamml support."
@@ -4257,7 +4201,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   updated: 2025-05-29
@@ -4294,7 +4237,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -4314,7 +4256,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incomplete luamml support. Must be loaded before unicode-math."
   issues:
   tests: true
@@ -4366,7 +4307,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -4413,7 +4353,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,firstaid]
   issues: [741]
   references: [1]
   tests: true
@@ -4451,7 +4390,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -4511,7 +4449,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -4549,9 +4486,8 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  comments: tests excluded as modification times not reproducible
   issues:
-  tests: excluded
+  tests: true
   updated: 2024-08-02
 
 - name: firamath-otf
@@ -4559,7 +4495,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -4664,7 +4599,7 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  comments: "Redefines \\@xfloat."
+  comments: "Redefines `\\@xfloat`."
   issues: [209]
   tests: true
   updated: 2024-07-19
@@ -4948,7 +4883,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -4981,7 +4915,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -5201,7 +5134,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   issues:
   tests: true
   comments: "Incompatible with unicode-math. No luamml support."
@@ -5334,7 +5266,6 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   issues:
   tests: false
   updated: 2024-07-14
@@ -5549,7 +5480,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "amsmath must be loaded before grmath.
              Not compatible with luatex, hence no luamml support."
   issues:
@@ -5651,7 +5581,6 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   comments: breaks with errors
-  supported-through: [phase-III,table]
   tasks: needs further tests
   issues: [66]
   tests: true
@@ -5710,7 +5639,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [latest,package]
   package-repository: "https://github.com/ho-tex/hypcap"
   comments: "The tagging code already moves anchors to the top of floats
              so this package is unnecessary. package updated"
@@ -5762,7 +5690,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [latest,package]
   references: [2]
   issues: [892]
   comments: "Forms not supported; use l3pdffield-testphase for forms."
@@ -6097,7 +6024,6 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -6135,7 +6061,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -6272,7 +6197,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,firstaid]
   issues:
   tests: true
   comments: tcolorbox theorems disabled when tagging is loaded.
@@ -6323,7 +6247,6 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Loads kpfonts-otf with unicode engine, required for producing mathml."
   issues:
   tests: false
@@ -6334,7 +6257,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   issues:
   luatex-only: true
   tests: false
@@ -6503,7 +6425,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -6514,7 +6435,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -6525,7 +6445,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: false
@@ -6546,7 +6465,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -6604,7 +6522,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: false
@@ -6768,7 +6685,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,table]
   issues: [22]
   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
   related-issues: [38]
@@ -6896,7 +6812,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -6908,9 +6823,8 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "No luamml support. `\\SetAlignmentPoint` errors."
-  issues:
+  issues: [1029]
   luatex-only: true
   tests: true
   updated: 2025-10-28
@@ -6931,7 +6845,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [latest,package]
   package-repository: "https://github.com/lualatex/luamplib"
   comments: "An old issue has been fixed. Offers several keys for figures
              including `alt` and `artifact`."
@@ -6956,7 +6869,6 @@
   status: unchecked
   included-in:
   priority: 9
-  supported-through: [latest,package]
   package-repository: "https://github.com/dohyunkim/luatexko"
   comments: "Package provides tagging support for `\\ruby`, `\\dotemph`, `\\uline`, and other underline-type commands."
   issues:
@@ -7000,7 +6912,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support. Use lucida-otf
              with lualatex for full compatibility."
   issues:
@@ -7012,7 +6923,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   issues:
   tests: false
   updated: 2025-06-03
@@ -7072,7 +6982,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -7219,7 +7128,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "Must be loaded after amsmath. Math symbols are not sensibly mapped to unicode.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -7231,7 +7139,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -7242,7 +7149,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -7253,7 +7159,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -7275,7 +7180,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "luamml support is suboptimal."
   issues:
   tests: true
@@ -7286,7 +7190,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
   issues: [837]
@@ -7331,7 +7234,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -7342,7 +7244,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
@@ -7355,7 +7256,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -7402,7 +7302,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -7615,7 +7514,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -8205,7 +8103,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -8374,7 +8271,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -8462,7 +8358,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table]
   issues:
   luatex-only: true
   tests: true
@@ -8473,7 +8368,6 @@
   status: partially-compatible
   included-in:
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -8531,7 +8425,6 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -8870,7 +8763,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [latest,package]
   package-repository: "https://github.com/ho-tex/pdflscape"
   issues:
   tests: true
@@ -9065,7 +8957,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,table]
   comments: "Table tagging is correct but any interaction with pgfplots
              is not yet supported."
   tests: true
@@ -9282,7 +9173,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [latest,package]
   package-repository: "https://github.com/gusbrs/postnotes"
   issues:
   tests: true
@@ -9506,7 +9396,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [latest,package]
   package-repository: "https://gitlab.com/TeXhackse/ragged2e"
   external-issues: "https://gitlab.com/TeXhackse/ragged2e/-/issues/9"
   issues:
@@ -9614,7 +9503,6 @@
   status: compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   issues:
   tests: true
   updated: 2025-05-28
@@ -9786,7 +9674,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -9796,7 +9683,6 @@
   type: package
   status: partially-compatible
   included-in:
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   priority: 9
   issues:
@@ -9807,7 +9693,6 @@
   type: package
   status: partially-compatible
   included-in:
-  supported-through: [phase-III,math]
   priority: 9
   issues:
   comments: "Symbols in math mode are not mapped correctly to unicode.
@@ -9839,7 +9724,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -10042,7 +9926,6 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -10196,7 +10079,6 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [latest,package]
   package-repository: "https://github.com/cereda/sillypage"
   comments:
   issues:
@@ -10247,7 +10129,6 @@
   status: partially-compatible
   included-in: [arxiv1]
   priority: 5
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -10342,7 +10223,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table,math]
   issues:
   comments: "No luamml support for `\\spalignsys`. Otherwise appears compatible."
   tests: true
@@ -10383,7 +10263,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-16
@@ -10421,7 +10300,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -10451,7 +10329,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   issues:
   comments: "Picture used to draw symbol should be Artifact.
              No luamml support."
@@ -10551,7 +10428,6 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   issues:
   tests: true
@@ -10715,7 +10591,6 @@
   status: compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-16
@@ -10773,7 +10648,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-16
@@ -10783,7 +10657,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-16
@@ -10793,7 +10666,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-16
@@ -10814,7 +10686,6 @@
   status: compatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  supported-through: [phase-III,table]
   comments: An old issue has been fixed.
   issues: [42]
   tasks: needs tests
@@ -10825,7 +10696,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,table]
   issues:
   tests: true
   updated: 2024-07-12
@@ -10854,7 +10724,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [latest,package]
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Not yet fully supported, but some suggestions in the listed issues"
   issues: [73,88]
@@ -10866,7 +10735,6 @@
   type: package
   status: compatible
   included-in:
-  supported-through: [latest,package]
   package-repository: "https://github.com/ho-tex/telprint"
   priority: 9
   comments: "Package updated"
@@ -10888,7 +10756,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "Incompatible with unicode-math."
   issues:
   tests: true
@@ -10899,7 +10766,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "luamml support is suboptimal."
   issues:
   tests: true
@@ -11163,7 +11029,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [phase-III,tikz]
   comments: tikz testphase module defines `alt`, `actualtext`, and `artifact` tikz keys.
   issues:
   references: [1]
@@ -11354,7 +11219,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  comments: Packages attempts to redefine `\@starttoc`and fails.
+  comments: "Package attempts to redefine `\\@starttoc`and fails."
   issues: [74]
   tests: true
   updated: 2024-07-12
@@ -11529,7 +11394,6 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -11644,7 +11508,6 @@
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "No luamml support."
   issues:
   tests: true
@@ -11673,7 +11536,6 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  supported-through: [phase-III,math]
   comments:
   luatex-only: true
   issues: [847]
@@ -11722,7 +11584,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments: "Most commands overwritten by unicode-math. No luamml support."
   issues:
   tests: true
@@ -11858,7 +11719,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,firstaid]
   comments: firstaid is required for the fix of issue 49
   issues: [49]
   tasks: needs tests
@@ -12031,7 +11891,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [phase-III,math]
   comments:
   issues:
   luatex-only: true
@@ -12197,7 +12056,6 @@
   status: compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  supported-through: [phase-III,table]
   issues: [170]
   comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used."
   tests: true
@@ -12348,7 +12206,6 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  supported-through: [phase-III,math]
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
              unicode-math must be loaded after xy."
@@ -12382,7 +12239,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
   tests: true
@@ -12393,7 +12249,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [phase-III,math]
   comments: "No luamml support. Diagrams in text mode need Alt text and for rules to be tagged as Artifacts."
   issues:
   tests: true
@@ -12497,7 +12352,6 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
   issues: [443,737,970]
   tests: false
@@ -12510,7 +12364,6 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   issues: [443,737,970]
-  supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: false
   tasks: needs further tests
@@ -12533,7 +12386,6 @@
   status: partially-compatible
   included-in: [arxiv01]
   priority: 6
-  supported-through: [latest]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   issues: [443,737,970]
   tests: false
@@ -12545,7 +12397,6 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  supported-through: [latest]
   updated: 2024-07-05
 
 - name: asmeconf
@@ -12553,7 +12404,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [latest]
   comments: "PDF 2.0/A-4F validation is possible using pdftex with the class option [captionpatch] and 
              omitting the [spanish] option. PDF 2.0/UA-2 validation fails due to external issues related 
              to the caption package and tagging of rules."
@@ -12581,7 +12431,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [latest]
   updated: 2024-07-05
 
 #------------------------ CCC ----------------------------
@@ -12730,7 +12579,6 @@
   status: partially-compatible
   included-in:
   priority: 9
-  supported-through: [latest]
   issues:
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
@@ -12754,7 +12602,6 @@
   comments: "A new class developed from scratch for tagging; intended as a
              substitute for the popular beamer class for presentations"
   priority: 2
-  supported-through: [latest]
   updated: 2025-06-11
 
 #------------------------ MMM ----------------------------
@@ -12783,9 +12630,9 @@
 - name: mitthesis
   type: class
   status: compatible
+  luatex-only: true
   included-in:
   priority: 9
-  supported-through: [latest]
   comments: "Class loads patches for [#757](https://github.com/latex3/tagging-project/issues/757#issuecomment-2465417867) 
              and [#84](https://github.com/latex3/tagging-project/issues/720#issuecomment-2388327048). Use lualatex."
   issues:
@@ -12825,7 +12672,6 @@
   status: compatible
   included-in:
   priority: 9
-  supported-through: [latest]
   issues:
   comments: "Based on article class."
   tests: true
@@ -12838,7 +12684,6 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
-  supported-through: [phase-III,title]
   updated: 2024-07-05
 
 - name: revtex4-1

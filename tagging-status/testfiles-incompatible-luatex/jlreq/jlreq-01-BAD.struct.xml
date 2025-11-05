@@ -11,52 +11,44 @@
        title="\contentsname "
        rolemaps-to="H1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
+     <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.007"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
        >
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.008"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
         >
-       <NonStruct xmlns="http://iso.org/pdf2/ssn"
-          id="ID.009"
-         >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.010"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Justify"
-          >
-         <?MarkedContent page="1" ?>目次
-        </Span>
-       </NonStruct>
+       <?MarkedContent page="1" ?>目次
       </Span>
-     </NonStruct>
+     </Span>
     </chapter>
     <TOC xmlns="http://iso.org/pdf/ssn"
-       id="ID.011"
+       id="ID.009"
        title="toc"
       >
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.012"
+        id="ID.010"
         title="Chapter"
        >
        <?References objects="1" ?>
      </TOCI>
      <TOC xmlns="http://iso.org/pdf/ssn"
-        id="ID.013"
+        id="ID.011"
        >
       <TOCI xmlns="http://iso.org/pdf/ssn"
-         id="ID.014"
+         id="ID.012"
          title="Section"
         >
         <?References objects="2" ?>
       </TOCI>
       <TOC xmlns="http://iso.org/pdf/ssn"
-         id="ID.015"
+         id="ID.013"
         >
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.016"
+          id="ID.014"
           title="Subsection"
          >
          <?References objects="2" ?>
@@ -66,38 +58,56 @@
     </TOC>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.017"
+      id="ID.015"
       referenced-as="2"
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
-       id="ID.018"
+       id="ID.016"
        title="Chapter"
        rolemaps-to="H1"
        referenced-as="1"
       >
-     <NonStruct xmlns="http://iso.org/pdf2/ssn"
-        id="ID.019"
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.017"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
        >
       <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.020"
+         id="ID.018"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
         >
-       <NonStruct xmlns="http://iso.org/pdf2/ssn"
-          id="ID.021"
-         >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.022"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Justify"
-          >
-         <?MarkedContent page="2" ?>第 1 章
-         <?MarkedContent page="2" ?> Chapter
-        </Span>
-       </NonStruct>
+       <?MarkedContent page="2" ?>第 1 章
+       <?MarkedContent page="2" ?> Chapter
       </Span>
-     </NonStruct>
+     </Span>
     </chapter>
+    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.019"
+       rolemaps-to="Part"
+      >
+     <text xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.020"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Justify"
+        rolemaps-to="P"
+       >
+      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.021"
+         rolemaps-to="Part"
+        >
+       <text xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.022"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextAlign="Justify"
+          rolemaps-to="P"
+         >
+        <?MarkedContent page="2" ?>1.1
+        <?MarkedContent page="2" ?> Section
+       </text>
+      </text-unit>
+     </text>
+    </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.023"
        rolemaps-to="Part"
@@ -118,8 +128,8 @@
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
-        <?MarkedContent page="2" ?>1.1
-        <?MarkedContent page="2" ?> Section
+        <?MarkedContent page="2" ?>1.1.1
+        <?MarkedContent page="2" ?> Subsection
        </text>
       </text-unit>
      </text>
@@ -130,32 +140,6 @@
       >
      <text xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.028"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Justify"
-        rolemaps-to="P"
-       >
-      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.029"
-         rolemaps-to="Part"
-        >
-       <text xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.030"
-          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-          Layout:TextAlign="Justify"
-          rolemaps-to="P"
-         >
-        <?MarkedContent page="2" ?>1.1.1
-        <?MarkedContent page="2" ?> Subsection
-       </text>
-      </text-unit>
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.031"
-       rolemaps-to="Part"
-      >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.032"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"

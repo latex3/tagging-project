@@ -1,0 +1,69 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+
+\usepackage{varioref}
+\usepackage{refstyle}
+\usepackage{hyperref}
+
+\title{refstyle tagging test}
+
+\begin{document}
+
+\begin{align}
+&\mathrm{e}^z = \mathrm{e}^x \left(\cos y + \mathrm{i} \sin y \right) \eqlabel{e1}\\
+&z^\alpha = \mathrm{e}^{\alpha \ln z} \eqlabel{e2}\\
+\intertext{\Eqref{e1,e2} lead to the  following interesting results:}
+&\mathrm{e}^{\mathrm{i} \pi} + 1 = 0 \eqlabel{e3}\\
+&\mathrm{i}^\mathrm{i} = \mathrm{e}^{-\pi/2}\tag{\textasteriskcentered} \eqlabel{e4}
+\end{align}
+
+\eqkey
+
+in eq.~\ref{\eqkey e1}
+
+on page \pageref{\eqkey e1}
+
+\vpageref*{\eqkey e1} ...
+
+in \eqref{e1}
+
+in \eqref[s]{e1}--\eqref*{e4}
+
+in \eqref[name=eq.~]{e2}
+
+in \eqref{e1,e2}
+
+in \eqref{e1,e2,e3}
+
+in \eqref[lsttxt={, and~}]{e1,e2,e3}
+
+in \eqref[vref]{e1}
+
+in \eqref[vref=far]{e1}
+
+\Eqref{e1}
+
+\Eqref{e1,e2}
+
+\Eqref[lsttxt={\ or~}]{e1,e2,e3}
+
+in \eqrangeref{e1}{e4}
+
+... and \eqrangeref*{e1}{e4}
+
+\Eqrangeref{e1}{e4}
+
+\Eqrangeref[vref,rngtxt=--]{e1}{e4}
+
+it is on page \eqpageref{e1}
+
+it is \eqpageref[vref]{e1}
+
+\end{document}

@@ -81,17 +81,6 @@ See
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
 {%- endif -%}
-{%- if p.supported-through -%}
-<p>Tagging support:
-{% for t in p.supported-through %}
-{%- if t == "package" and p.package-repository -%}
-<a href="{{p.package-repository}}"><b>{{t}}</b></a>
-{%- else -%}
-<b>{{t}}</b>
-{%- endif -%}
-{%- unless forloop.last -%}, {% endunless -%}
-{%- endfor %}.</p>
-{%- endif -%}
 </td>
 <td>
 {%- if p.issues -%}
@@ -140,7 +129,7 @@ Other:
 {%-     assign dir = "-unchecked" -%}
 {%-   endif -%}
 {%- endif -%}
-<a href="{{ site.github.repository_url }}/tree/main/tagging-status/testfiles{{dir}}/{{p.name}}">test(s)</a>
+<a href="https://github.com/search?q=repo%3Alatex3%2Ftagging-project++path%3A%2Ftestfiles{{dir}}.*%5C%2F{{p.name}}%5C%2F%2F">test(s)</a>
 {% endif %}
 </td>
 <td>

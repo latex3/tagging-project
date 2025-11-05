@@ -1,0 +1,51 @@
+% sample taken from mathastext.dtx
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+  \usepackage{mathastext}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{droidserif}
+  \usepackage[LGRgreek]{mathastext}
+  \let\varepsilon\epsilon
+\fi
+
+\title{mathastext tagging test - pdftex}
+
+\begin{document}
+
+Let $(X,Y)$ be two functions of a variable $a$. If they obey  the differential
+system  $(VI_{\nu,n})$: 
+\begin{align*}
+a\frac{d}{da} X &= \nu
+X - (1 - X^2)\frac{2n a}{1 - a^2}\frac{aX+Y}{1+a XY} \\  
+a\frac{d}{da} Y &= -(\nu+1) Y
++ (1 - Y^2)\frac{2n a}{1 - a^2}\frac{X+aY}{1+a XY} 
+\end{align*}
+then the quantity $q = a \frac{aX+Y}{X+aY}$
+satisfies as function of $b= a^2$  the $P_{VI}$ differential equation:
+\begin{equation*}
+\begin{split}
+\frac{d^2 q}{db^2} = \frac12\left\{\frac1q+\frac1{q-1}
++\frac1{q-b}\right\}\left(\frac{dq}{db}\right)^2 - \left\{\frac1b+\frac1{b-1}
++\frac1{q-b}\right\}\frac{dq}{db}\\+\frac{q(q-1)(q-b)}{b^2(b-1)^2}\left\{\alpha+\frac{\beta
+b}{q^2} + \frac{\gamma (b-1)}{(q-1)^2}+\frac{\delta
+b(b-1)}{(q-b)^2}\right\}
+\end{split}
+\end{equation*}
+with
+parameters
+$(\alpha,\beta,\gamma,\delta) = (\frac{(\nu+n)^2}2,
+\frac{-(\nu+n+1)^2}2, \frac{n^2}2, \frac{1 - n^2}2)$.
+
+Test of uppercase Greek in math: $\Alpha\Beta\Gamma\Delta\Xi\Omega$.
+
+\end{document}

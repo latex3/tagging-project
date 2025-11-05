@@ -1,0 +1,47 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{algpseudocode}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+
+\title{algpseudocode tagging test - 2}
+
+\begin{document}
+
+\begin{algorithmic}[1]
+\Procedure {BellmanKalaba}{$G$, $u$, $l$, $p$}
+\ForAll {$v \in V(G)$}
+\State $l(v) \leftarrow \infty$
+\EndFor
+\State $l(u) \leftarrow 0$
+\Repeat
+\For {$i \leftarrow 1, n$}
+\State $min \leftarrow l(v_i)$
+\For {$j \leftarrow 1, n$}
+\If {$min > e(v_i, v_j) + l(v_j)$}
+\State $min \leftarrow e(v_i, v_j) + l(v_j)$
+\State \Comment For some reason we need to break here!
+\algstore{bkbreak}
+\end{algorithmic}
+
+Some intermediate text
+
+\begin{algorithmic}[1]
+\algrestore{bkbreak}
+\State $p(i) \leftarrow v_j$
+\EndIf
+\EndFor
+\State $l'(i) \leftarrow min$
+\EndFor
+\State $changed \leftarrow l \not= l'$
+\State $l \leftarrow l'$
+\Until{$\neg changed$}
+\EndProcedure
+\end{algorithmic}
+
+\end{document}
