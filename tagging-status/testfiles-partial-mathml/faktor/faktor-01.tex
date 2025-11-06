@@ -6,8 +6,13 @@
     tagging=on,
   }
 \documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+ \usepackage{amssymb}
+\fi
 
-\usepackage{amssymb,faktor}
+\usepackage{faktor}
 
 \title{faktor tagging test}
 
