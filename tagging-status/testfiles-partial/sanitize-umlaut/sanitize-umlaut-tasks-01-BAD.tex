@@ -1,6 +1,4 @@
-% arara: pdflatex
-% arara: makeindex: { style: german.ist, german: true }
-% arara: pdflatex
+%tasks: makeindex -s german.ist -g %
 \DocumentMetadata
   {
     lang=en-US,
@@ -14,7 +12,11 @@ quote '!' % as replacement for "
 level '>' % as replacement for ! 
 \end{filecontents}
 \documentclass[a4paper,12pt]{article}
-\usepackage[T1]{fontenc}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\else
+  \usepackage[T1]{fontenc}
+\fi
 \usepackage[ngerman]{babel}
 \usepackage{makeidx}
 \usepackage{sanitize-umlaut}

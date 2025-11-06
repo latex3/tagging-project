@@ -21,7 +21,7 @@ checkruns = 4
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
                                             "*.eps","*eps-converted-to.pdf",
                                             "*svg-tex.pdf","*.pdf_tex","*.ods",
-                                            "*.png","*.svg","*.mf","*.bbl"}
+                                            "*.png","*.svg","*.mf","*.bbl","*.bst"}
 
 
 local pdf_structure do
@@ -141,7 +141,9 @@ function find_tasks(name)
     task = line:match"^%% *tasks: (.*)$"
     if task then
       if
-        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") or task:match("^mf") or task:match("^mpost"))
+        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex")
+          or task:match("^mf") or task:match("^mpost")) or task:match("^splitindex")
+          or task:match("^xindex")
         and
         not(task:match("[;&<>]"))
       then

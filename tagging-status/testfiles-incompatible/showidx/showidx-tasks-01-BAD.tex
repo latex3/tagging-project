@@ -1,3 +1,4 @@
+%tasks: makeindex %
 \DocumentMetadata
   {
     lang=en-US,
@@ -6,15 +7,14 @@
     tagging=on
   }
 \documentclass{article}
+\usepackage{showidx}
 \usepackage{makeidx}
 
-\title{makeidx tagging test}
+\title{showidx tagging test}
 
 \makeindex
 
 \begin{document}
-Test1\index{bla1}
-
-Test2\index{bla2}
+Test\index{bla}
 \printindex
 \end{document}
