@@ -1,0 +1,35 @@
+%tasks: xindex -l fr %
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{makeidx}
+\makeindex
+\usepackage{xindex}
+\usepackage{hyperref}
+
+\title{xindex tagging test}
+
+\begin{document}
+
+\section{Escaping characters}
+\begin{itemize}
+\item Exclamation mark ! \index{Exclamation ("!)}\index{"!}
+\item Vertical bar | \index{Vertical bar ("|)}\index{"|}
+\item Doublequote \verb|"| \index{""}
+\item Double doublequote \verb|""| \index{""""}
+\item At character @ \index{At ("@)}\index{"@}
+\item Left parenthesis \{ \index{\braceLeft}
+\item Right parenthesis \} \index{\braceRight}
+\end{itemize}
+run \texttt{xindex -l fr <file.idx>}\index{file.idx@\texttt{<file.idx>}|textit}\index{123}
+\index{Etage} \index{Ètagé}
+
+\printindex
+
+\end{document}

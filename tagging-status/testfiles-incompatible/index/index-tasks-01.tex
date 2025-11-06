@@ -1,0 +1,26 @@
+%tasks: makeindex -o %.and %.adx
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{book}
+\usepackage{index}
+
+\makeindex
+
+\newindex{aut}{adx}{and}{Name Index}
+
+\title{index tagging test - 1}
+
+\begin{document}
+
+%\chapter{Chapter header\index{chapter}} % this is okay
+\chapter{Chapter header\index[aut]{chapter}} % this is wrong
+\section{Section header\index[aut]{section}} % this is okay
+
+\printindex[aut]
+
+\end{document}

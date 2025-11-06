@@ -1,0 +1,43 @@
+%tasks: makeindex %
+%tasks: makeindex name
+% adapted from 2-indexing.tex
+% does not error
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[nonewpage]{indextools}
+
+\usepackage[series={A},noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage{hyperref}
+\makeindex
+\makeindex[title=Index Nominum,name=name]
+
+\title{reledmac tagging test - 11}
+
+\begin{document}
+
+\beginnumbering
+\pstart
+Imperator\edindex[name]{Nero} purus, dictum a semper eu, \edindex{long passage|(}fermentum a augue. Nam enim sapien, consequat sit amet fermentum et, convallis non orci. Aliquam erat volutpat. Sed laoreet vitae enim eget posuere. Integer auctor aliquet sagittis. Curabitur odio felis, tempus sit amet porttitor sed, mattis a sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus posuere adipiscing erat, et porta augue semper nec.
+\pend
+\pstart
+Phasellus pretium euismod urna ac congue. Integer interdum\edindex{long passage|)} dapibus aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum placerat volutpat est, porta adipiscing lectus commodo vel. Vestibulum libero magna, vulputate eget tellus ornare, posuere lobortis velit. Suspendisse non diam at est auctor luctus in nec elit. Cras sed aliquam tellus. Suspendisse non odio sit amet nunc consequat malesuada. Curabitur eget lacus lectus. Vivamus elementum risus eget nisi venenatis, in volutpat elit placerat. Maecenas congue nunc id est luctus accumsan. Fusce id nisl enim.
+\pend
+\pstart
+Pellentesque non orci dui. Donec a libero\edindex{libero|textbf} eu nisl sollicitudin lobortis eget nec lacus. \edtext{Nulla pellentesque, neque ut tincidunt vestibulum, ante mi varius purus, nec cursus neque orci ut orci}{\lemma{Nulla\ldots orci}\Afootnote{Some comment\edindex{nulla}.}}. Donec bibendum ligula bibendum nisl aliquet auctor. Nam luctus lorem mauris, ac venenatis felis posuere non. Quisque ultricies ante magna, facilisis pellentesque nibh placerat at. Aliquam sit amet ante varius, vestibulum augue condimentum, scelerisque turpis. Proin at nibh vulputate, tincidunt tellus vel, vehicula libero. Praesent venenatis, turpis nec feugiat sodales, risus sapien tempus odio, at vehicula ipsum nisl a nisl. Nunc pretium elit tellus, ultrices facilisis odio interdum non. Donec et condimentum quam, id ullamcorper nisl.
+\pend
+\endnumbering
+
+\newpage
+\printindex
+
+\printindex[name]
+
+\end{document}
