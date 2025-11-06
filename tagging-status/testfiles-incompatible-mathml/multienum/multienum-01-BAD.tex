@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\usepackage{multienum}
+
+\title{multienum tagging test}
+
+\begin{document}
+
+\begin{multienumerate}
+\mitemxxxx{Not}{Linear}{Not}{Quadratic}
+\mitemxxxo{Not}{Linear}{Not}
+\mitemxx{$(x_1,x_2)=(2+\frac{1}{3}t,t)$ or
+$(s,3s-6)$}{$(x_1,x_2,x_3)=(2+\frac{5}{2}s-3t,s,t)$}
+\mitemx{$(x_1,x_2,x_3,x_4)=
+(\frac{1}{4}+\frac{5}{4}s+\frac{3}{4}t-u,s,t,u)$
+or $(s,t,u,\frac{1}{4}-s+\frac{5}{4}t+\frac{3}{4}u)$}
+\mitemxxxx{$(2,-1,3)$}{None}{$(2,1,0,1)$}{$(0,0,0,0)$}
+\end{multienumerate}
+
+\end{document}
