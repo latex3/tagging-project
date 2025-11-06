@@ -7,13 +7,22 @@
   }
 \documentclass{article}
 
-\usepackage{chemfig}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
 
-\title{chemfig tagging test}
+\usepackage{decorule}
+
+\title{decorule tagging test}
 
 \begin{document}
 
-\chemfig{A1BC2-[:30]DxEyFGz-H3I}
-\chemmove{\draw[blue](n1-3)to[out=75,in=90](n2-4);}
+text\decorule text
+
+text
+
+\decorule
+
+text
 
 \end{document}

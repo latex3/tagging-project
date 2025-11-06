@@ -6,6 +6,11 @@
     tagging=on
   }
 \documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
 \usepackage{bytefield}
 
 \title{bytefield tagging test}
