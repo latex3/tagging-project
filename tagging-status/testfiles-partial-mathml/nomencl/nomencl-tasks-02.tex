@@ -1,3 +1,4 @@
+%tasks: makeindex %.nlo -s nomencl.ist -o %.nls
 \DocumentMetadata
   {
     lang=en-US,
@@ -6,10 +7,10 @@
     tagging=on
   }
 \documentclass{article}
-\usepackage[nomentbl]{nomencl}
+\usepackage[stdsubgroups,nocfg]{nomencl}
 \makenomenclature
 
-\title{nomencl tagging test - 3}
+\title{nomencl tagging test - 2}
 
 \begin{document}
 \section*{Main equations}
@@ -17,9 +18,7 @@ Here an equation
 \begin{equation}\label{eq:heatflux}
     \dot{Q} = k \cdot A \cdot \Delta T
 \end{equation}%
-\nomenclature[aQ]{$\dot{Q}$}{heat flux}{W}{}%
-\nomenclature[ak]{$k$}{overall heat transfer
-  coefficient}{\watt\per(\square\meter\kelvin)}{see
-  eq.}%
+\nomenclature[aQ]{$\dot{Q}$}{heat flux}%
+\nomenclature[ak]{$k$}{overall heat transfer coefficient}%
 \printnomenclature
 \end{document}
