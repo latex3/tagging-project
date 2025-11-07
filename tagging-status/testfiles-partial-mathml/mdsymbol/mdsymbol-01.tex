@@ -6,7 +6,20 @@
     tagging=on,
   }
 \documentclass{article}
-\usepackage{mdsymbol}
+
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{mdsymbol}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    % just enough to process math
+    \def\circledR{Ⓡ}
+    \def\circledS{Ⓢ}
+    \def\yen{¥}
+  \else
+    \usepackage{mdsymbol}
+  \fi}
+
+
 
 \title{mdsymbol tagging test}
 
