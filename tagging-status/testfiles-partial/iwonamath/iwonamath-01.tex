@@ -6,12 +6,16 @@
     tagging=on,
   }
 \documentclass{article}
+\iffalse %mathml generation
+  \usepackage{unicode-math}\let\bm\symbf\let\eth\relax\def\mathversion#1{}
+\else
 \usepackage[default]{lato}
 \usepackage{amsmath,amssymb,bm}
 \usepackage[scale=1.15]{iwonamath}
 \DefineIwonaMathVersion{name=iwonacondensed, condensed}
 \DefineIwonaMathVersion{name=iwonalight, light}
 \DefineIwonaMathVersion{name=iwonalightcondensed, light, condensed}
+\fi
 \newcommand\ibinom[2]{\genfrac\lbrace\rbrace{0pt}{}{#1}{#2}} 
 \long\def\sample{%
   First some large operators both in text:
