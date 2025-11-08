@@ -7,8 +7,15 @@
   }
 \documentclass{article}
 
-%\usepackage{unicode-math}
-\usepackage{upgreek}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{upgreek}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    \def\Uplambda{\muplambda}
+  \else
+    \usepackage{upgreek}
+  \fi}
+
 
 \title{upgreek tagging test}
 
