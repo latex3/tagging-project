@@ -7,7 +7,15 @@
   }
 \documentclass{article}
 
-\usepackage{sansmath}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{sansmath}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    \let\sansmath\empty
+  \else
+    \usepackage{sansmath}
+  \fi}
+
 
 \title{sansmath tagging test}
 
