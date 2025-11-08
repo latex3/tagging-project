@@ -6,6 +6,17 @@
     tagging=on,
   }
 \documentclass{article}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{MnSymbol}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    % just enough to process math
+    \def\circledR{Ⓡ}
+    \def\circledS{Ⓢ}
+    \def\yen{¥}
+  \else
+    \usepackage{MnSymbol}
+  \fi}
 \usepackage{MnSymbol}
 
 \title{MnSymbol tagging test}
