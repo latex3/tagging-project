@@ -34,6 +34,8 @@ jobs:
       # Boilerplate
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name libglut3
+        run: sudo apt-get install -y freeglut3
       - name: Install TeX Live
         id: texlive
         uses: zauguin/install-texlive@v4
