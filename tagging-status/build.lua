@@ -178,6 +178,8 @@ function runtest_tasks(name,run)
    if options.dev then lualatexcmd="lualatex-dev" end
    if extra_lualatex_run then
      runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
+     rm(testdir,name .. ".toc")
+     rm(testdir,name .. ".aux")
    end
  end
  return ""
