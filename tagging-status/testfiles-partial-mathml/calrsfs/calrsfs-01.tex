@@ -6,7 +6,14 @@
     tagging=on,
   }
 \documentclass{article}
-\usepackage{calrsfs}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{calrsfs}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+  \else
+    \usepackage{calrsfs}
+  \fi}
+
 
 \title{calrsfs tagging test}
 
