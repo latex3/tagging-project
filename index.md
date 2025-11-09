@@ -6,18 +6,18 @@ This [tagging-project repository](https://github.com/latex3/tagging-project/) is
 project. The code for this project is split over several other repositories 
 ([latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to  keep any more general topics or issues that cut across the different repositories in a single place. 
 
-## Documentation for the LaTeX Tagged PDF project
+### Documentation for the LaTeX Tagged PDF project
 
 The [documentation](documentation) page has links to extensive documentation about producing tagged PDF with LaTeX.
 
 
-## Guidelines for using LaTeX to generate accessible PDF
+### Guidelines for using LaTeX to generate accessible PDF
 
 We have written [guidelines explaining how to use LaTeX to
 generate accessible PDFs](usage-instructions). The documentation will
 be updated as new features become available.
 
-## Status of Contributed LaTeX Classes and Packages
+### Status of Contributed LaTeX Classes and Packages
 
 The [Tagging Status](../tagging-status/) pages document the current
 status of over 1000 Contributed packages. This status with respect to
@@ -26,7 +26,7 @@ in the CI system associated to this site.
 
 
 
-## Reporting Issues
+### Reporting Issues
 
 In the [Issues area](https://github.com/latex3/tagging-project/issues)
 users can open issues with any part of the tagging project without worrying
@@ -36,7 +36,7 @@ Issues are also used to document package incompatibilites with examples .
 
 
 
-## Discussing Ideas and Concepts
+### Discussing Ideas and Concepts
 
 In the  "[Discussions area](https://github.com/latex3/tagging-project/discussions)" there are pages that allow contributed comments and discussions that can be more general or long-term than the issues.
 
