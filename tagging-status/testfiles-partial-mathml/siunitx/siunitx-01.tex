@@ -7,7 +7,11 @@ uncompress
 }
 
 \documentclass{article}
-\ifdefined\Uchar\usepackage{unicode-math}\fi
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+  % generate mathml for pdftex version
+  \IfFileExists{\jobname-luamml-mathml.html}{}{\AtEndDocument{$\mathrm {\TextOrMath {°}{{}^{\circ }}}$}}
+\fi
 
 \usepackage{siunitx,comment}
 \sisetup{table-auto-round=true, separate-uncertainty=true}
