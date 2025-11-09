@@ -29,7 +29,7 @@ in the CI system associated to this site.
 ### Reporting Issues
 
 In the [Issues area](https://github.com/latex3/tagging-project/issues)
-users can open issues with any part of the tagging project without worrying
+users can open issues for any part of the tagging project without worrying
 about which code repository holds the code which needs to be fixed.
 Wwe can move issues to opther repositories when appropiate.
 Issues are also used to document package incompatibilites with examples .
