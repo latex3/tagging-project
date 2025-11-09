@@ -30,7 +30,7 @@ transferred there – whatever is more appropriate.
 
 ## Discussions
 
-Under "[Discussions](https://github.com/latex3/tagging-project/discussions)" there is a pages that allow contributed comments and discussions that can be more general or long-term than the issues,
+Under "[Discussions](https://github.com/latex3/tagging-project/discussions)" there are pages that allow contributed comments and discussions that can be more general or long-term than the issues.
 
 Some notable pages include
 
@@ -38,7 +38,7 @@ Some notable pages include
 
  * [PDF/UA-1 Examples by the LaTeX Project](https://github.com/latex3/tagging-project/discussions/82) PDF 1.7 versions of the documents (also generated automatically by altering the `\DocumentMetadata` declaration).
 
-* [Interpreting a PDF Structure Tree as XML](https://github.com/latex3/tagging-project/discussions/789) A page describing the interaction between PDF Structure element tagging and PDF. This is sadly missing from the PDF specifications but is needed to define the use of MathML for tagging mathematics, and is also used extensively in the project test suite which uses XML RelaxNG schema to validate the resulting tagging in each document.
+* [Interpreting a PDF Structure Tree as XML](https://github.com/latex3/tagging-project/discussions/789) A page describing the interaction between PDF Structure element tagging and XML. This is sadly missing from the PDF specifications but is needed to define the use of MathML for tagging mathematics, and is also used extensively in the project test suite which uses XML RelaxNG schema to validate the resulting tagging in each document.
 
 ## Documentation for the LaTeX Tagged PDF project
 
