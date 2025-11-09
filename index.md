@@ -11,13 +11,13 @@ project. The code for this project is split over several other repositories
 The [documentation](documentation) page has links to extensive documentation about producing tagged PDF with LaTeX.
 
 
-### Guidelines for using LaTeX to generate accessible PDF
+#### Guidelines for using LaTeX to generate accessible PDF
 
 We have written [guidelines explaining how to use LaTeX to
 generate accessible PDFs](usage-instructions). The documentation will
 be updated as new features become available.
 
-### Status of Contributed LaTeX Classes and Packages
+#### Status of Contributed LaTeX Classes and Packages
 
 The [Tagging Status](../tagging-status/) pages document the current
 status of over 1000 Contributed packages. This status with respect to
