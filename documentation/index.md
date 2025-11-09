@@ -1,4 +1,45 @@
-## Overview about documentation for tagging documents
+# Documentation for the Tagging Project
+
+These pages document the current multi-year project to enable
+LaTeX to produce accessible (tagged) PDF files.
+
+While the LaTeX core now produces accessible PDF/UA-2-conforming
+documents. Current focus is on enabling package authors to make
+documents using their packages similarly accessible.
+
+
+
+
+## Documentation at latex-project.org
+See <https://www.latex-project.org/publications/indexbytopic/pdf/> for articles and other material about the "LaTeX Tagged PDF" project.
+
+## Documentation available on this tagging-project site.
+
+### Guidelines for using LaTeX to generate accessible PDF
+
+We have written [guidelines explaining how to use LaTeX to
+generate accessible PDFs](usage-instructions). The documentation will
+be updated as new features become available.
+
+## Well Tagged PDF Examples
+
+In conjunction with the PDF Association we have developed [examples of
+generating well tagged PDF with LaTeX](wtpdf). One small example, and a larger
+worked example showing a typical two column STEM-subject article.
+This second example is accompanied by videos demonstrating how the
+document is read by screen readers in its original untagged form,
+tagged via various "auto-tagging" systems, or using tagging derived by
+LaTeX.
+
+## Status of Contributed LaTeX Classes and Packages
+
+The [Tagging Status](../tagging-status/) pages document the current
+status of over 1000 Contributed packages. This status with respect to
+tagging is maintained with the help of a test suite run automatically
+in the CI system associated to this site.
+
+
+## Overview about documentation for packages related to tagging
 
 In  general one can use the command `texdoc <package-name>` on the command line to get documentation about a specific package. Instead of using `texdoc` on your machine you can also use the online version at [https://texdoc.org](https://texdoc.org/index.html).
 
