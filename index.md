@@ -8,18 +8,18 @@ project. The code for this project is split over several other repositories
 
 ### Documentation for the LaTeX Tagged PDF project
 
-The [documentation](documentation) page has links to extensive documentation about producing tagged PDF with LaTeX.
+The [Documentation](documentation) page has links to extensive documentation about producing tagged PDF with LaTeX.
 
 
 #### Guidelines for using LaTeX to generate accessible PDF
 
 We have written [guidelines explaining how to use LaTeX to
-generate accessible PDFs](usage-instructions). The documentation will
+generate accessible PDFs](documentation/usage-instructions). The documentation will
 be updated as new features become available.
 
 #### Status of Contributed LaTeX Classes and Packages
 
-The [Tagging Status](../tagging-status/) pages document the current
+The [Tagging Status](tagging-status/) pages document the current
 status of over 1000 Contributed packages. This status with respect to
 tagging is maintained with the help of a test suite run automatically
 in the CI system associated to this site.
