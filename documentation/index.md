@@ -17,7 +17,7 @@ See <https://www.latex-project.org/publications/indexbytopic/pdf/> for articles 
 
 ### Guidelines for using LaTeX to generate accessible PDF
 
-We have written a few [guidelines explaining how to use LaTeX to
+We have written [guidelines explaining how to use LaTeX to
 generate accessible PDFs](usage-instructions). The documentation will
 be updated as new features become available.
 
@@ -34,7 +34,7 @@ LaTeX.
 ## Status of Contributed LaTeX Classes and Packages
 
 The [Tagging Status](../tagging-status/) pages document the current
-state of over 1000 Contributed packages. This status with respect to
+status of over 1000 Contributed packages. This status with respect to
 tagging is maintained with the help of a test suite run automatically
 in the CI system associated to this site.
 
