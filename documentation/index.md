@@ -1,7 +1,7 @@
 # Documentation for the Tagging Project
 
 These pages document the current multi-year project to enable
-LaTeX to produce accessible )tagged) PDF files.
+LaTeX to produce accessible (tagged) PDF files.
 
 While the LaTeX core now produces accessible PDF/UA-2-conforming
 documents. Current focus is on enabling package authors to make
@@ -26,7 +26,7 @@ be updated as new features become available.
 In conjunction with the PDF Association we have developed [examples of
 generating well tagged PDF with LaTeX](wtpdf). One small example, and a larger
 worked example showing a typical two column STEM-subject article.
-This second example is accompanied videoos demonstrating how the
+This second example is accompanied by videos demonstrating how the
 document is read by screen readers in its original untagged form,
 tagged via various "auto-tagging" systems, or using tagging derived by
 LaTeX.
