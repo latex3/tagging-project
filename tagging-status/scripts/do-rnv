@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+rnv ${PWD%latex3*}/latex3/pdf_structure/RelaxNG/latex-test.rnc $(find testfiles* -name \*.xml) 2>&1 | grep -v schemas.xml | tee rnv.log
+
+grep ' error:' rnv.log  | sed -e 's/:.*//' | sort | uniq | grep -E -v 'BAD|incompatible|excluded|no-support' > rnv2.log
