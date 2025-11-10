@@ -1,0 +1,24 @@
+namespace latexSEamse = "https://www.latex-project.org/ns/local/asmeconf"
+include "../../../../pdf_structure/RelaxNG/latex-document.rnc"
+
+Div |= element latexSEamse:Conference_information {
+  showtags-attributes,
+  attribute rolemaps-to {"Div"},
+  attribute id {text}?,
+  text-unit*
+  }
+
+Div |= element latexSEamse:Author_Affiliation {
+  showtags-attributes,
+  attribute rolemaps-to {"Div"},
+  attribute id {text}?,
+  text-unit*
+  }
+
+Div|= element latexSEamse:Affiliation {
+  showtags-attributes,
+  attribute rolemaps-to {"Div"},
+  attribute id {text}?,
+  text-unit*
+  }
+

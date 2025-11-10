@@ -12404,13 +12404,13 @@
 
 - name: asmeconf
   type: class
-  status: partially-compatible
+  status: compatible
+  luatex-only: true
   included-in:
   priority: 9
-  comments: "PDF 2.0/A-4F validation is possible using pdftex with the class option [captionpatch] and 
-             omitting the [spanish] option. PDF 2.0/UA-2 validation fails due to external issues related 
+  comments: "PDF 2.0/A-4F validation PDF 2.0/UA-2 validation fails due to external issues related 
              to the caption package and tagging of rules."
-  issues:
+  issues: [1054]
   tests: true
   updated: 2025-02-12
 

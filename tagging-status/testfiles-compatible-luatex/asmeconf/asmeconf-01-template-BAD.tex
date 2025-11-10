@@ -146,7 +146,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\tagpdfsetup{role/user-NS=asmeconf}
 \begin{document}
 
 % Change these fields to the right content for your conference.
@@ -204,7 +204,7 @@
 %%% This command MUST COME BEFORE the end of the abstract.
 %%% If you don't want keywords, leave the argument of \keywords{} empty (or use the abstract* environment)
 
-\keywords{ASME conference paper, \LaTeX\ Template, \hologo{BibTeX}}
+\keywords{ASME conference paper, \LaTeX\ Template, Bib\TeX{}}
 
 %%%%%  End of fields to be completed. Now write your paper. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -213,7 +213,7 @@
 %% Abstract should be 200 words or less
 \begin{abstract}
 
-This paper is an example of and a  {\upshape\LaTeX} template for typesetting ASME conference papers using the {\upshape\texttt{asmeconf}} class. This  {\upshape\LaTeX} template follows ASME guidelines for margins, fonts, headings, captions, and reference formats as of 2025. The class is intended to be used with the {\upshape\texttt{asmeconf.bst} \hologo{BibTeX}} style for reference formatting, which is part of this distribution. The template produces pdfs that contain hyperlinks, bookmarks, and metadata; and references can include the DOI and URL fields. Links may be colored, for online use, or black, for publication. The class enables inline author names, following ASME's current style, but can also produce the traditional grid style. Options include line numbering, final column balancing, various math options, government copyright, and archivability (PDF/A). In addition, section headers may contain mathematics, references, citations, and footnotes. The class is compatible with {\upshape\hologo{pdfLaTeX}} or {\upshape\hologo{LuaLaTeX}}.
+This paper is an example of and a  {\upshape\LaTeX} template for typesetting ASME conference papers using the {\upshape\texttt{asmeconf}} class. This  {\upshape\LaTeX} template follows ASME guidelines for margins, fonts, headings, captions, and reference formats as of 2025. The class is intended to be used with the {\upshape\texttt{asmeconf.bst} Bib\TeX{}} style for reference formatting, which is part of this distribution. The template produces pdfs that contain hyperlinks, bookmarks, and metadata; and references can include the DOI and URL fields. Links may be colored, for online use, or black, for publication. The class enables inline author names, following ASME's current style, but can also produce the traditional grid style. Options include line numbering, final column balancing, various math options, government copyright, and archivability (PDF/A). In addition, section headers may contain mathematics, references, citations, and footnotes. The class is compatible with {\upshape\hologo{pdfLaTeX}} or {\upshape\hologo{LuaLaTeX}}.
 \end{abstract}
 
 %%%%%%%%%  NOMENCLATURE (OPTIONAL) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -403,7 +403,7 @@ Landscape figures and tables may be produced at full-page size by putting \verb|
 
 \section{Reference Formatting with \NoCaseChange{\texttt{asmeconf.bst}}\footnote{To prevent capitalization of text in a section heading or caption, such as an SI unit, enclose it in a \texttt{\textbackslash NoCaseChange} command. As of the July 2022 release of \LaTeX, commands used in a heading or caption may be protected globally by putting this in the preamble: \texttt{\textbackslash AddToNoCaseChangeList\{\textbackslash MyCommand\}}.}}\label{sec:references}
 
-The {\upshape\texttt{asmeconf.bst}} \hologo{BibTeX}  style follows the reference styles shown on ASME's conference web site in  2022.\footnote{\texttt{asmeconf.bst} is intended as a replacement for the old \texttt{asmems4.bst}, which does not follow ASME's current reference formats or support DOI and URL.}
+The {\upshape\texttt{asmeconf.bst}} Bib\TeX{}  style follows the reference styles shown on ASME's conference web site in  2022.\footnote{\texttt{asmeconf.bst} is intended as a replacement for the old \texttt{asmems4.bst}, which does not follow ASME's current reference formats or support DOI and URL.}
 Examples for these and many other cases are given in the \texttt{asmeconf-sample.bib} file, which is part of this distribution. Citations and references are managed by the standard \texttt{natbib} package.  Nevertheless, a few comments are necessary. 
 
 %% sub-subsections should *not* be numbered according to ASME's style
@@ -608,7 +608,7 @@ The input encoding can be utf-8, as for these glyphs:
 
 Fonts similar to Times/Helvetica are used when Greek, Vietnamese, or selected cyrillic-alphabet languages are called as options under {\upshape\hologo{pdfLaTeX}}. Using {\upshape\hologo{LuaLaTeX}}, which loads the fontspec package, many additional scripts are available; see the supplemental notes for such usage~\cite{lienhard2021}. Possibilities include Arabic, Bengali, Chinese, Devanagari (e.g., for Hindi), Hangul (for Korean), Kana (for Japanese), and Tamil. (Note: some fonts are not PDF/A compliant.) \textit{These options require a \LaTeX\ installation dated October 2020 or later.}
 
-The bibliography style, \texttt{asmeconf.bst}, is designed in English and aimed at \hologo{BibTeX}.  
+The bibliography style, \texttt{asmeconf.bst}, is designed in English and aimed at Bib\TeX{}.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
