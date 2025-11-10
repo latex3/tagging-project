@@ -85,21 +85,21 @@
      <?MarkedContent page="1" ?>, postfix]
     </text>
    </text-unit>
-   <Reference xmlns="http://iso.org/pdf/ssn"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.017"
+      rolemaps-to="Part"
      >
-     <?References objects="5" ?>
-    <?MarkedContent page="1" ?>5,6,2
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <text xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.018"
-       rolemaps-to="Part"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <?MarkedContent page="1" ?>
+     <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.019"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Justify"
-        rolemaps-to="P"
        >
+       <?References objects="5" ?>
       <?MarkedContent page="1" ?>
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.020"
@@ -108,7 +108,8 @@
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
       <?MarkedContent page="1" ?>
-     </text>
+     </Reference>
+     <?MarkedContent page="1" ?>,
      <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.021"
        >
@@ -122,6 +123,7 @@
       </Link>
       <?MarkedContent page="1" ?>
      </Reference>
+     <?MarkedContent page="1" ?>,
      <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.023"
        >
@@ -135,8 +137,9 @@
       </Link>
       <?MarkedContent page="1" ?>
      </Reference>
-    </text-unit>
-   </Reference>
+     <?MarkedContent page="1" ?>
+    </text>
+   </text-unit>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.025"
      >
