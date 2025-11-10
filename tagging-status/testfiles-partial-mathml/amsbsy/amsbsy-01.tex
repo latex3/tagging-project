@@ -5,6 +5,10 @@
   tagging=on
   }
 \documentclass{article}
+\ifdefined\Uchar
+  % generate mathml for pdftex version
+  \IfFileExists{\jobname-luamml-mathml.html}{}{\usepackage{unicode-math}\def\pmb##1{##1}}
+\fi
 \usepackage{amsbsy}
 
 \title{amsbsy tagging test}
