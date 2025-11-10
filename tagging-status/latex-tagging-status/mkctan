@@ -7,7 +7,7 @@ chmod a-x latex-tagging-status.ltx
 cp ../../README.md .
 
 sed -i -e "s/{{ site.time | date: \"%Y-%m-%d\" }}/`date -I`/" README.md
-sed -i -e "s/\[[0-9---]*\]/[`date -I`]/" latex-tagging-status.ltx
+sed -i -e "s/\[[0-9-]*\]/[`date -I`]/" latex-tagging-status.ltx
 
 cd ..
 zip -q latex-tagging-status.zip latex-tagging-status/latex-tagging-status.ltx latex-tagging-status/README.md
