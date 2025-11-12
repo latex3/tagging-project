@@ -5,7 +5,7 @@
   tagging=on,
   uncompress
   }
-\begin{filecontents}{nrloop.lisp}
+\begin{filecontents}[noheader]{nrloop.lisp}
 (defun nrsqrt (x delta)
   (loop :for y = 1.0 :then (/ (+ y (/ x y)) 2.0)
 	:until (<= (abs (- x (* y y))) delta)
