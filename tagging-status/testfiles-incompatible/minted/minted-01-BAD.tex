@@ -5,17 +5,20 @@
   tagging=on,
   uncompress
   }
+\begin{filecontents}{nrloop.lisp}
+(defun nrsqrt (x delta)
+  (loop :for y = 1.0 :then (/ (+ y (/ x y)) 2.0)
+	:until (<= (abs (- x (* y y))) delta)
+	:finally (return y)))
+\end{filecontents}
 \documentclass{article}
 
-\usepackage{shellesc}
-\usepackage[kpsewhich=true]{minted}
+\usepackage{minted}
 \setminted{escapeinside=||,autogobble}
 \newmintedfile[mintedclfile]{cl}{}
 \newcommand*\clfile[2][]{\mintedclfile[#1]{#2.lisp}}
 
-
 \title{minted tagging test}
-
 
 \begin{document}
 
@@ -31,8 +34,3 @@
 \clfile{nrloop}
 
 \end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
