@@ -1,0 +1,50 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{MnSymbol}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    % just enough to process math
+    \def\circledR{Ⓡ}
+    \def\circledS{Ⓢ}
+    \def\yen{¥}
+  \else
+    \usepackage{MnSymbol}
+  \fi}
+\usepackage{MnSymbol}
+
+\title{MnSymbol tagging test}
+
+\begin{document}
+
+\circledR
+
+\circledS
+
+\yen
+
+\dagger
+
+\ddagger
+
+\mathparagraph
+
+\mathsection
+
+\mathdollar
+
+\mathsterling
+
+$\doublebarwedge$
+
+$\dashedsearrow$
+
+$\int_i^j f(x)$
+
+\end{document}

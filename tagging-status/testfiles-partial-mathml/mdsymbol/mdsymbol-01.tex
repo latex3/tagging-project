@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{mdsymbol}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    % just enough to process math
+    \def\circledR{Ⓡ}
+    \def\circledS{Ⓢ}
+    \def\yen{¥}
+  \else
+    \usepackage{mdsymbol}
+  \fi}
+
+
+
+\title{mdsymbol tagging test}
+
+\begin{document}
+
+\circledR
+
+\circledS
+
+\yen
+
+\dagger
+
+\ddagger
+
+\mathparagraph
+
+\mathsection
+
+\mathdollar
+
+\mathsterling
+
+$\doublebarwedge$
+
+$\approxeq$
+
+$\int_i^j f(x)$
+
+\end{document}

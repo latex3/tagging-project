@@ -1,0 +1,24 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{calrsfs}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+  \else
+    \usepackage{calrsfs}
+  \fi}
+
+
+\title{calrsfs tagging test}
+
+\begin{document}
+
+$ABC\mathcal{ABC}$
+
+\end{document}

@@ -689,6 +689,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: arsenal
@@ -904,6 +905,7 @@
   comments: Loads tagpdf but it is not compatible with the current version. Its patches
             clash with the math module. `phase-III,math` should be used instead which
             provides broader tagging support without the need to load an additional package.
+  tests: false
   updated: 2024-07-14
 
 - name: axodraw2
@@ -1961,6 +1963,7 @@
   priority: 9
   comments: "Empty compatibility package, can be removed from the preamble"
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: bibentry
@@ -1981,6 +1984,7 @@
   references: [2]
   issues: [18,902]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
+  tests: false
   tasks: needs tests
   updated: 2024-07-07
 
@@ -1992,6 +1996,7 @@
   comments: See biblatex.
   tasks: Package should be changed to use sockets in its footnote adaption; needs tests
   issues: [62]
+  tests: false
   updated: 2024-07-15
 
 - name: biblatex-dw
@@ -2090,8 +2095,9 @@
   included-in: [tlc3]
   priority: 2
   issues: [686]
-  tests: true
-  updated: 2024-08-28
+  tests: excluded
+  comments: "Requires xetex so tests are excluded."
+  updated: 2025-11-06
 
 - name: bigdelim
   type: package
@@ -2175,6 +2181,7 @@
   status: compatible
   included-in: [tlc3, arxiv1]
   priority: 2
+  tests: false
   updated: 2024-07-07
 
 - name: blkarray
@@ -2453,6 +2460,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: calligra
@@ -2858,9 +2866,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  issues: [487]
+  issues: [487,1058]
   tests: true
-  updated: 2024-08-06
+  updated: 2025-11-10
 
 - name: citeall
   type: package
@@ -3014,6 +3022,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: colorframed
@@ -3043,6 +3052,7 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
   issues: [90,379,749]
+  tests: false
   tasks: needs tests
   updated: 2024-10-29
 
@@ -3159,9 +3169,9 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   comments: "`blockquote` produces duplicate tags."
-  issues: [3]
+  issues: [3,1041]
   tests: true
-  updated: 2025-06-05
+  updated: 2025-11-05
 
 - name: csvsimple
   type: package
@@ -3488,6 +3498,7 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   issues: [44]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -3907,6 +3918,7 @@
   references: [1]
   issues: [61]
   related-issues: [4]
+  tests: false
   updated: 2024-07-06
 
 - name: environ
@@ -3974,6 +3986,7 @@
   priority: 4
   comments: "Obsolete, small wrapper around graphicx"
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: epstopdf
@@ -4140,6 +4153,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-12
 
 - name: eucal
@@ -4203,6 +4217,7 @@
   priority: 2
   comments: "No luamml support."
   issues:
+  tests: false
   updated: 2025-05-29
 
 - name: expex
@@ -4230,6 +4245,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: extarrows
@@ -4526,6 +4542,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: fixfoot
@@ -4544,6 +4561,7 @@
   priority: 2
   comments: This is an obsolete package which should not be needed
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: fixme
@@ -4562,6 +4580,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: flexisym
@@ -4639,6 +4658,7 @@
   included-in: [tlc3]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: flushend
@@ -4766,6 +4786,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: fontsetup
@@ -4805,6 +4826,7 @@
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
   issues: [12,958]
+  tests: false
   updated: 2025-09-12
 
 - name: footnote
@@ -5026,10 +5048,10 @@
   included-in: [tlc3, arxiv001]
   priority: 2
   comments: "See fancyvrb."
-  issues:
+  issues: [1060]
   tests: false
   tasks: needs tests
-  updated: 2024-07-24
+  updated: 2025-11-11
 
 - name: fwlw
   type: package
@@ -5184,6 +5206,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: tagging of rules (showframe, crop marks) untested
+  tests: false
   tasks: needs further tests
   updated: 2024-07-06
 
@@ -5368,6 +5391,7 @@
   comments: An old issue appears to be fixed.
   tasks: needs tests
   issues: [48]
+  tests: false
   updated: 2024-07-06
 
 - name: glossaries-extra
@@ -5427,6 +5451,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: See `graphicx` package
+  tests: false
   updated: 2024-07-06
 
 - name: graphicx
@@ -5444,6 +5469,7 @@
   references: [1]
   issues: [16]
   related-issues: [64]
+  tests: false
   updated: 2024-07-06
 
 - name: graphpap
@@ -5692,6 +5718,7 @@
   priority: 2
   references: [2]
   issues: [892]
+  tests: false
   comments: "Forms not supported; use l3pdffield-testphase for forms."
   updated: 2025-06-07
 
@@ -5703,6 +5730,7 @@
   comments: "Incompatible with PDF management, loading is suppressed. XMP-metadata are
              handled by the kernel code."
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: hypgotoe
@@ -5882,6 +5910,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: ifvtex
@@ -5963,6 +5992,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: index
@@ -5999,6 +6029,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: intcalc
@@ -6208,6 +6239,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: keyvaltable
@@ -6343,6 +6375,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-12
 
 - name: latex2pydata
@@ -6362,6 +6395,7 @@
   priority: 2
   comments: Rolling the LaTeX format too far back will result in the loss of necessary support code for tagging, rolling forward should work.
   issues:
+  tests: false
   tasks: determine how far back is possible
   updated: 2024-07-06
 
@@ -6372,6 +6406,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: lato
@@ -6688,6 +6723,7 @@
   issues: [22]
   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
   related-issues: [38]
+  tests: false
   tasks: needs tests
   updated: 2025-03-02
 
@@ -7295,6 +7331,7 @@
   priority: 2
   comments: "Recommended alternative: tcolorbox."
   issues: [73]
+  tests: false
   updated: 2024-07-06
 
 - name: mdsymbol
@@ -7441,6 +7478,7 @@
   priority: 2
   comments: Footnote patching doesn’t work but otherwise supported.
   issues: [67]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -7656,6 +7694,7 @@
   included-in: [arxiv001]
   priority: 7
   issues:
+  comments: "List is not tagged correctly."
   tests: true
   updated: 2024-08-20
 
@@ -7799,6 +7838,9 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
+  issues:
+  tests: false
+  tasks: Needs tests
   updated: 2024-07-06
 
 - name: nath
@@ -8119,12 +8161,13 @@
 
 - name: nomencl
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv01]
   priority: 6
   issues: [363]
   tests: true
-  updated: 2024-07-30
+  comments: "`nomentbl` option produces poor tagging."
+  updated: 2025-11-06
 
 - name: nonfloat
   type: package
@@ -8805,8 +8848,9 @@
   priority: 2
   comments: "Creates duplicated structures as graphics are processed more than once in trial
             typesetting. Correct tagging of multipage includes unclear."
-  tasks: needs tests
   issues: [86]
+  tests: false
+  tasks: needs tests
   updated: 2024-07-06
 
 - name: pdfrender
@@ -8836,6 +8880,7 @@
   comments: "Incompatible with PDF-management, loading is suppressed.
              Standards should be set with `\\DocumentMetadata` keys."
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: perltex
@@ -9339,8 +9384,8 @@
   priority: 9
   issues:
   tests: true
-  comments: Verbatim environments error. See fvextra.
-  updated: 2024-08-07
+  comments: "Verbatim environments not tagged correctly. See fvextra."
+  updated: 2025-11-06
 
 #------------------------ QQQ ----------------------------
 
@@ -9665,9 +9710,9 @@
   status: compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1044]
   tests: true
-  updated: 2024-08-13
+  updated: 2025-11-06
 
 - name: sansmath
   type: package
@@ -9803,6 +9848,8 @@
   included-in:
   priority: 9
   related-issues: [88]
+  tests: false
+  tasks: needs tests
   updated: 2024-07-10
 
 - name: scrlayer-scrpage
@@ -9966,6 +10013,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: shorttoc
@@ -10420,6 +10468,7 @@
   priority: 2
   comments: Issue when hyperref and both listoffigures are used.
   issues: [85]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -10688,6 +10737,7 @@
   priority: 2
   comments: An old issue has been fixed.
   issues: [42]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -10727,6 +10777,7 @@
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Not yet fully supported, but some suggestions in the listed issues"
   issues: [73,88]
+  tests: false
   tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283"]
   updated: 2024-08-27
@@ -10848,6 +10899,7 @@
   priority: 2
   comments: "Package no longer needed as definitions have been moved into the kernel"
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: textgreek
@@ -11156,6 +11208,7 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [24]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -11166,6 +11219,7 @@
   priority: 2
   comments: Mentioned in issue.
   issues: [24]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -11294,6 +11348,7 @@
   included-in: [tlc3]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: tracefnt
@@ -11303,6 +11358,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: tracklang
@@ -11348,6 +11404,7 @@
   included-in:
   priority: 9
   issues:
+  tests: false
   updated: 2024-07-06
 
 - name: trimclip
@@ -11624,6 +11681,7 @@
   priority: 2
   comments: An old issue has been fixed.
   issues: [5]
+  tests: false
   updated: 2024-07-06
 
 - name: usebib
@@ -11721,6 +11779,7 @@
   priority: 9
   comments: firstaid is required for the fix of issue 49
   issues: [49]
+  tests: false
   tasks: needs tests
   updated: 2024-07-06
 
@@ -11913,6 +11972,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   issues:
+  tests: false
   updated: 2024-07-07
 
 - name: xcoffins
@@ -12105,6 +12165,7 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues: [959]
+  tests: false
   updated: 2025-09-16
 
 - name: xr-hyper
@@ -12114,6 +12175,7 @@
   priority: 2
   comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
   issues:
+  tests: false
   updated: 2024-07-10
 
 - name: xsavebox
@@ -12397,17 +12459,18 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
+  tests: false
   updated: 2024-07-05
 
 - name: asmeconf
   type: class
-  status: partially-compatible
+  status: compatible
+  luatex-only: true
   included-in:
   priority: 9
-  comments: "PDF 2.0/A-4F validation is possible using pdftex with the class option [captionpatch] and 
-             omitting the [spanish] option. PDF 2.0/UA-2 validation fails due to external issues related 
+  comments: "PDF 2.0/A-4F validation PDF 2.0/UA-2 validation fails due to external issues related 
              to the caption package and tagging of rules."
-  issues:
+  issues: [1054]
   tests: true
   updated: 2025-02-12
 
@@ -12431,6 +12494,7 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
+  tests: false
   updated: 2024-07-05
 
 #------------------------ CCC ----------------------------
@@ -12452,10 +12516,10 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [979,980,1050]
   tests: true
   tasks: needs more tests
-  updated: 2025-09-12
+  updated: 2025-11-10
 
 - name: extarticle
   type: class
@@ -12573,6 +12637,114 @@
   comments: "`\\maketitle` errors. Loads several incompatible packages."
   updated: 2024-08-04
 
+- name: ltjarticle
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjreport.
+  updated: 2025-11-05
+
+- name: ltjbook
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjreport.
+  updated: 2025-11-05
+
+- name: ltjreport
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: true
+  comments: "Breaks TOC tagging and `\\chapter` errors."
+  updated: 2025-11-05
+
+- name: ltjsarticle
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2025-11-05
+
+- name: ltjsbook
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2025-11-05
+
+- name: ltjsreport
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: true
+  comments: "Breaks TOC and section heading tagging."
+  updated: 2025-11-05
+
+- name: ltjtarticle
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjreport.
+  updated: 2025-11-05
+
+- name: ltjtbook
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjreport.
+  updated: 2025-11-05
+
+- name: ltjtreport
+  ctan-pkg: luatexja
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  included-in:
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjreport.
+  updated: 2025-11-05
+
 - name: ltugboat
   ctan-pkg: tugboat
   type: class
@@ -12594,14 +12766,13 @@
   tasks: needs tests
   updated: 2024-07-17
 
-#------------------------ ltx- ----------------------------
-
 - name: ltx-talk
   type: class
   status: compatible
   comments: "A new class developed from scratch for tagging; intended as a
              substitute for the popular beamer class for presentations"
   priority: 2
+  tests: false
   updated: 2025-06-11
 
 #------------------------ MMM ----------------------------
@@ -12613,9 +12784,9 @@
   priority: 2
   comments: "Some code showing the needed adjustments can be found in the
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
-  issues: [910]
+  issues: [910,1040]
   tests: false
-  updated: 2025-06-11
+  updated: 2025-11-10
 
 - name: minimal
   type: class
@@ -12684,6 +12855,7 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 2
+  tests: false
   updated: 2024-07-05
 
 - name: revtex4-1

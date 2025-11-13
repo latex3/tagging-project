@@ -1,0 +1,29 @@
+%tasks: splitindex %
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{splitidx}
+\makeindex
+\newindex[General Index]{idx}
+\newindex[Index of Animals]{ani}
+\newindex[Index of Fruits]{fru}
+\newindex[Index of Vegetables]{veg}
+
+\title{splitidx tagging test}
+
+\begin{document}
+Apples\sindex[fru]{apple}
+and oranges\sindex[fru]{orange}
+are fruits\sindex{fruits}.
+Tomatoes\sindex[veg]{tomato}
+are
+vegetables\index{vegetables}.
+Cats\sindex[ani]{cat}
+are animals\sindex[idx]{animals}.
+\printindex*
+\end{document}

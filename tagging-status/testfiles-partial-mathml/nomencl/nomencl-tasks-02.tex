@@ -1,0 +1,29 @@
+%tasks: makeindex %.nlo -s nomencl.ist -o %.nls
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\usepackage[stdsubgroups,nocfg]{nomencl}
+\makenomenclature
+
+\title{nomencl tagging test - 2}
+
+\begin{document}
+\section*{Main equations}
+Here an equation
+\begin{equation}\label{eq:heatflux}
+    \dot{Q} = k \cdot A \cdot \Delta T
+\end{equation}%
+\nomenclature[aQ]{$\dot{Q}$}{heat flux}%
+\nomenclature[ak]{$k$}{overall heat transfer coefficient}%
+\printnomenclature
+\end{document}

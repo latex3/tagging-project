@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\IfFileExists{\jobname-luamml-mathml.html}
+{\usepackage{sansmath}}
+{\ifdefined\Uchar
+    \usepackage{unicode-math}
+    \let\sansmath\empty
+  \else
+    \usepackage{sansmath}
+  \fi}
+
+
+\title{sansmath tagging test}
+
+\begin{document}
+
+text
+
+$\sum_{i=1}^j\alpha_i$
+
+\[a+b=c\]
+
+\begin{sansmath}
+text
+
+$\sum_{i=1}^j\alpha_i$
+
+\[a+b=c\]
+\end{sansmath}
+
+\end{document}

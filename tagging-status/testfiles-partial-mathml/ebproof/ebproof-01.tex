@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+
+\usepackage{ebproof}
+\usepackage{xcolor}
+
+\title{ebproof tagging test}
+
+\begin{document}
+
+\begin{prooftree}
+\hypo{ \Gamma, A &\vdash B }
+\infer1[abs]{ \Gamma &\vdash A\to B }
+\hypo{ \Gamma \vdash A }
+\infer2[app]{ \Gamma \vdash B }
+\end{prooftree}
+
+\bigskip
+
+\begin{prooftree}
+\hypo{ \Gamma &\vdash A }
+\ellipsis{foo}{ \Gamma &\vdash A, B }
+\end{prooftree}
+
+\bigskip
+
+\begin{prooftree}
+\hypo{ \Gamma, A &\vdash B }
+\infer1[abs]{ \Gamma &\vdash A\to B }
+\rewrite{\color{red}\box\treebox}
+\hypo{ \Gamma \vdash A }
+\infer2[app]{ \Gamma \vdash B }
+\end{prooftree}
+
+\bigskip
+
+\begin{prooftree}
+\hypo{ A_1 \vee \cdots \vee A_n }
+\hypo{ [A_i] }
+\ellipsis{}{ B }
+\delims{ \left( }{ \right)_{1\leq i\leq n} }
+\infer2{ B }
+\end{prooftree}
+
+\end{document}

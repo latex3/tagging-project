@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\usepackage{bussproofs}
+
+\title{bussproofs tagging test}
+
+\begin{document}
+
+\begin{prooftree}
+\AxiomC{A}
+\AxiomC{B}
+\AxiomC{C}
+\TrinaryInfC{D}
+\end{prooftree}
+
+\begin{prooftree}
+\Axiom$A, B, C, D,\fCenter\ E, F$
+\UnaryInf$A, B,\fCenter\ C, D, E, F$
+\end{prooftree}
+
+\begin{prooftree}
+\AxiomC{$\Gamma, A \vdash B$}
+\LeftLabel{Conditional Proof:}
+\UnaryInfC{$\Gamma \vdash A \rightarrow B$}
+\end{prooftree}
+
+\end{document}

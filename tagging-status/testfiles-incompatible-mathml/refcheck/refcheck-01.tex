@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
+\usepackage{refcheck}
+
+\title{refcheck tagging test}
+
+\begin{document}
+
+\begin{equation} \label{eq1}
+a=b
+\end{equation}
+\begin{equation} \label{eq2}
+c=d
+\end{equation}
+\eqref{eq1}, \eqref{eq2}.
+
+\cite{book1}, \cite{book3}
+
+\begin{thebibliography}{9}
+\bibitem{book1}A book.
+\bibitem{book2}Another book.
+\bibitem{book3}Third book.
+\end{thebibliography}
+
+\end{document}

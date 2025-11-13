@@ -21,7 +21,8 @@ checkruns = 4
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
                                             "*.eps","*eps-converted-to.pdf",
                                             "*svg-tex.pdf","*.pdf_tex","*.ods",
-                                            "*.png","*.svg","*.mf","*.bbl"}
+                                            "*.png","*.svg","*.mf","*.bbl","*.bst",
+					    "*mathml.html"}
 
 
 local pdf_structure do
@@ -141,7 +142,9 @@ function find_tasks(name)
     task = line:match"^%% *tasks: (.*)$"
     if task then
       if
-        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex") or task:match("^mf") or task:match("^mpost"))
+        (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex")
+          or task:match("^mf") or task:match("^mpost")) or task:match("^pythontex")
+          or task:match("^splitindex") or task:match("^xindex") or task:match("^asy")
         and
         not(task:match("[;&<>]"))
       then
@@ -175,6 +178,8 @@ function runtest_tasks(name,run)
    if options.dev then lualatexcmd="lualatex-dev" end
    if extra_lualatex_run then
      runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
+     rm(testdir,name .. ".toc")
+     rm(testdir,name .. ".aux")
    end
  end
  return ""
