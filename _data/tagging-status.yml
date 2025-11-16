@@ -5205,10 +5205,11 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  comments: tagging of rules (showframe, crop marks) untested
+  issues: [1064]
+  comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
   tests: false
-  tasks: needs further tests
-  updated: 2024-07-06
+  tasks: needs a crop mark test
+  updated: 2025-11-15
 
 - name: gettitlestring
   type: package
@@ -10491,7 +10492,7 @@
   included-in:
   priority: 9
   issues:
-  comments: "Incompatible with amsmath which is loaded by `testphase=math`."
+  comments: "Incompatible with amsmath which is loaded by the tagging code."
   tests: true
   updated: 2024-08-06
 
