@@ -1,0 +1,78 @@
+\DocumentMetadata
+  {
+    lang=ko,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{unicode-math}
+\usepackage{luatexko}
+
+%\defaultfontfeatures+{Renderer=HarfBuzz}
+%
+%% https://fonts.google.com/noto/specimen/Noto+Serif+KR
+%\setmainhangulfont{Noto Serif KR}[
+%  Script=Hangul,
+%  Language=Korean,
+%  ]
+%% https://fonts.google.com/noto/specimen/Noto+Sans+KR
+%\setmathhangulfont{Noto Sans KR}[
+%  Script=Hangul,
+%  Language=Korean,
+%  ]
+%\newhangulfontfamily\verticalhangulfont{Noto Sans KR}[
+%  Renderer=Node,
+%  Script=Hangul,
+%  Language=Korean,
+%  UprightFont=* Light,
+%  BoldFont=* Bold,
+%  InterLatinCJK=.125em,
+%  Vertical=Alternates,
+%  RawFeature=vertical,
+%  CompressPunctuations,
+%  InterCharStretch=1pt,
+%  CharRaise=1pt,
+%  CharacterWidth=Full,
+%]
+
+\title{luatexko tagging test}
+
+\begin{document}
+
+\dotemph{dotemph text}
+
+\ruby{abc}{def}
+
+\xxruby{abc}{def}
+
+\uline{underlined text}
+
+\sout{struck out text}
+
+\uuline{doubly underlined text}
+
+\xout{x'ed out text}
+
+\uwave{underwave text}
+
+\dashuline{dashed underlined text}
+
+\dotuline{dotted underlined text}
+
+\hellipsis
+
+\begin{vertical}{20em}
+Some vertical text
+\end{vertical}
+
+\begin{verticaltypesetting}
+More vertical text
+\begin{horizontal}{20em}
+Horizontal text
+\end{horizontal}
+And more vertical text
+\end{verticaltypesetting}
+
+\end{document}
