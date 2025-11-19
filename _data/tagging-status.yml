@@ -9446,10 +9446,9 @@
   priority: 2
   package-repository: "https://gitlab.com/TeXhackse/ragged2e"
   external-issues: "https://gitlab.com/TeXhackse/ragged2e/-/issues/9"
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  issues: [1070]
+  tests: true
+  updated: 2025-11-19
 
 - name: raleway
   type: package
@@ -9487,9 +9486,9 @@
   included-in: [tlc3]
   priority: 2
   issues: [457]
-  tests: false
-  tasks: needs tests
-  updated: 2024-11-18
+  tests: true
+  luatex-only: true
+  updated: 2025-11-19
 
 - name: refcheck
   type: package
@@ -9566,13 +9565,12 @@
 
 - name: repltext
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1071]
+  tests: true
+  updated: 2025-11-19
 
 - name: rerunfilecheck
   type: package
@@ -9914,13 +9912,13 @@
 
 - name: selinput
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   issues:
+  comments: "Only works with pdftex. Should not be necessary in new documents."
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-19
 
 - name: selnolig
   type: package
