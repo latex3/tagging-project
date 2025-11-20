@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{witharrows}
+
+\title{witharrows tagging test}
+
+\begin{document}
+
+$\begin{WithArrows}
+A & = (a+1)^2 \Arrow{we expand} \\
+& = a^2 + 2a + 1
+\end{WithArrows}$
+
+\end{document}
