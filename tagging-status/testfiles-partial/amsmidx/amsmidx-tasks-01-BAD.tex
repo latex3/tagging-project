@@ -1,0 +1,26 @@
+%tasks: makeindex books
+%tasks: makeindex author
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{amsbook}
+
+\usepackage{amsmidx}
+\makeindex{books}
+\makeindex{authors}
+
+\title{amsmidx tagging test}
+
+\begin{document}
+Text\index{books}{b1}, text\index{authors}{a1}.
+
+Text\index{books}{b2}\index{authors}{a2}. End of text.
+
+\indexcomment{A comment before the books index}
+\Printindex{books}{The Books index}
+\Printindex{authors}{The Authors index}
+\end{document}
