@@ -353,9 +353,10 @@
   included-in: [arxiv001]
   priority: 7
   comments:
-  issues:
+  issues: [1069]
+  comments: "Produces warnings with mathml-SE."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-11-20
 
 - name: alltt
   type: package
@@ -5526,13 +5527,12 @@
 
 - name: halloweenmath
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-14
+  issues: [1077]
+  tests: true
+  updated: 2025-11-20
 
 - name: hanging
   type: package
@@ -6382,13 +6382,12 @@
 
 - name: latex2pydata
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-20
 
 - name: latexrelease
   type: package
@@ -6655,7 +6654,7 @@
   priority: 2
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
-  issues: [70]
+  issues: [70,1074]
   related-issues: [41]
   tests: true
   updated: 2024-07-12
@@ -11886,13 +11885,12 @@
 
 - name: witharrows
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1076]
+  tests: true
+  updated: 2025-11-20
 
 - name: wordcloud
   type: package
@@ -12763,10 +12761,10 @@
   status: unchecked
   included-in:
   priority: 9
-  issues:
+  issues: [1075]
   tests: false
   tasks: needs tests
-  updated: 2024-07-17
+  updated: 2025-11-20
 
 - name: ltx-talk
   type: class
