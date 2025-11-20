@@ -10837,13 +10837,12 @@
 
 - name: tex-locale
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-19
 
 - name: tex4ebook
   type: package
@@ -11101,13 +11100,13 @@
 
 - name: tikzducks
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  tests: true
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2025-11-19
 
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
@@ -11131,13 +11130,14 @@
 
 - name: tikzlings
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3]
   priority: 2
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`.
+             See also tikzducks."
+  updated: 2025-11-19
 
 - name: times
   type: package
@@ -12829,13 +12829,14 @@
 - name: oblivoir
   ctan-pkg: kotex-oblivoir
   type: class
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: "Extension of the incompatible memoir class."
+  updated: 2025-11-19
 
 #------------------------ PPP ----------------------------
 
