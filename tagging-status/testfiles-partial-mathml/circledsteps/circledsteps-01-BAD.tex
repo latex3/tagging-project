@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{circledsteps}
+
+\title{circledsteps tagging test}
+
+\begin{document}
+
+This is normal text: \Circled{1} is on the
+baseline, \CircledTop{2} is on top.
+
+This is more evident if you have descenders,
+like p: \Circled{p} and \CircledTop{p}.
+
+You can set options as optional arguments,
+like \Circled[inner color=red]{R} or
+\CircledTop[outer color=green]{g}.
+
+Math mode is detected too: \Circled{A}
+and $\Circled{A}^{\Circled{A}}$.
+
+\end{document}

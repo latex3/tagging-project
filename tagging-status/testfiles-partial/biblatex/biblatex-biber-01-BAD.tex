@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage[
+  style=reading,
+  backend=biber]{biblatex}
+\usepackage{hyperref}
+
+\addbibresource{biblatex-examples.bib}
+
+\title{biblatex tagging test -- 01}
+
+\begin{document}
+
+\cite{knuth:ct}
+
+\cite{companion}
+
+\printbibliography
+\end{document}

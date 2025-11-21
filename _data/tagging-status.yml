@@ -406,13 +406,13 @@
 
 - name: amsaddr
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  tests: true
+  comments: "`\\maketitle` tagging is not correct."
+  updated: 2025-11-20
 
 - name: amsbsy
   type: package
@@ -479,13 +479,13 @@
 
 - name: amsmidx
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: 
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  issues: [1079]
+  tests: true
+  comments: "Meant for use with amsbook which is currently incompatible."
+  updated: 2025-11-20
 
 - name: amsopn
   type: package
@@ -637,13 +637,14 @@
 
 - name: arabi
   type: package
-  status: unchecked
+  status: no-support
   included-in: [tlc3]
   priority: 2
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-13
+  comments: "Obsolete. Use luatex with arabluatex or babel; see the babel
+             [guide](https://latex3.github.io/babel/guides/locale-arabic.html)."
+  updated: 2025-11-20
 
 - name: arabicfront
   type: package
@@ -1984,9 +1985,9 @@
   references: [2]
   issues: [18,902]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-07
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-20
 
 - name: biblatex-chicago
   type: package
@@ -2824,23 +2825,23 @@
 
 - name: circledsteps
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Missing TextDecoration attributes. No luamml support in math mode."
+  updated: 2025-11-20
 
 - name: circledtext
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Missing TextDecoration attributes."
+  updated: 2025-11-20
 
 - name: cistercian
   type: package
@@ -2959,13 +2960,12 @@
 
 - name: codehigh
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1080]
+  tests: true
+  updated: 2025-11-20
 
 - name: coelacanth
   type: package
