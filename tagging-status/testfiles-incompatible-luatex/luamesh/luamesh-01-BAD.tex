@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{luamesh}
+
+\title{luamesh tagging test}
+
+\begin{document}
+
+\buildMeshBW{(0.3,0.3);(1.5,1);(4,0);(4.5,2.5);(1.81,2.14);(2.5,0.5);(2.8,1.5)}
+
+\meshPolygon[step=points,scale=2cm]{(0,0);(1,0);(1,0.5);(0,0.5);(-0.20,0.35);(-0.25,0.25);(-0.20,0.15)}
+
+\drawPointsMeshinc[
+tikz,
+color = blue!50,
+print = points,
+meshpoint = x,
+scale=0.8cm,
+]{(0.3,0.3);(1.5,1);(4,0);(4.5,2.5);(1.81,2.14);(2.5,0.5);(2.8,1.5)}%
+{% code before
+}%
+{% code after
+\node[color = blue!50] at (0,2) {Mesh} ;
+}
+
+\end{document}
