@@ -4919,13 +4919,13 @@
 
 - name: forest
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1087]
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-22
 
 - name: forum
   type: package
@@ -9029,7 +9029,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  comments: "Relies on tikz so compatibility but also needs its own adjustments."
+  comments: "Compatibility depends on tikz but also needs its own adjustments."
   issues: [924]
   tests: false
   updated: 2025-06-23
@@ -9290,13 +9290,13 @@
 
 - name: prftree
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "No luamml support."
+  updated: 2025-11-22
 
 - name: printlen
   type: package
@@ -9309,13 +9309,14 @@
 
 - name: prooftrees
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: "Relies on incompatible forest package."
+  updated: 2025-11-22
 
 - name: psfrag
   type: package
@@ -10594,13 +10595,12 @@
 
 - name: superiors
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  updated: 2025-11-22
 
 - name: supertabular
   type: package
@@ -10781,9 +10781,8 @@
   priority: 2
   comments: An old issue has been fixed.
   issues: [42]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  tests: true
+  updated: 2025-11-22
 
 - name: tabulary
   type: package
