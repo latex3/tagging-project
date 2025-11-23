@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{prftree}
+
+\begin{document}
+
+\begin{displaymath}
+\prftree[r]{$\scriptstyle\supset\mathrm{I}$}
+{\prftree[r]{$\scriptstyle\supset\mathrm{I}$}
+{\prftree[r]{$\scriptstyle\supset\mathrm{E}$}
+{\prfboundedassumption{A}}
+{\prfboundedassumption{\neg A}}
+{\bot}}
+{\neg\neg A}}
+{A \supset \neg\neg A}
+\end{displaymath}
+
+\end{document}
