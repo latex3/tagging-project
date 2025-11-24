@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+%    tagging-setup={math/setup=mathml-SE},
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{bigdelim}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\title{bigdelim tagging test}
+
+\begin{document}
+
+\begin{equation}
+\begin{array}{ccccccc}
+\ldelim({4}{4mm} & x & x & x & x & \rdelim){4}{4mm} \\
+& x & x & x & x & & i \\
+& x & x & x & x & & j \\
+& x & x & x & x & \\
+& & u & v & &
+\end{array}
+\end{equation}
+
+\begin{tabular}{p{2em}l}
+\ldelim\{{3}{*}[type] & dvi \\
+& ps \\
+& pdf \\
+\end{tabular}
+
+\newcolumntype{z}{@{}>{\columncolor{white}[0pt][\tabcolsep]}}
+\rowcolors{2}{green!25}{green!75}
+\begin{tabular}{ c zc c c }
+& 1 & 2 & 3 \\
+& 4 & 5 & 6 \\
+\ldelim\{{-3}{*} & 7 & 8 & 9 \\
+\end{tabular}
+
+\end{document}

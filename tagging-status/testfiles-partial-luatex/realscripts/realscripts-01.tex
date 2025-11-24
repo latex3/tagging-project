@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\usepackage{realscripts}
+
+\title{realscripts tagging test}
+
+\begin{document}
+
+Text\textsuperscript{12345678910abcdef}
+
+Text\textsubscript{12345678910abcdef}
+
+% original behavior
+Text\textsuperscript*{12345678910abcdef}
+
+Text\textsubscript*{12345678910abcdef}
+
+\end{document}

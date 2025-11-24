@@ -1,0 +1,47 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\begin{filecontents}{sample.tex}
+\cs_new_protected:Npn \__codehigh_typeset_demo:
+  {
+    \__codehigh_build_code:
+    \__codehigh_build_demo:
+    \dim_set:Nn \l_tmpa_dim { \box_wd:N \g__codehigh_code_box }
+    \dim_set:Nn \l_tmpb_dim { \box_wd:N \g__codehigh_demo_box }
+    \par\addvspace{0.5em}\noindent
+    % more code
+  }
+\end{filecontents}
+\documentclass{article}
+
+\usepackage{codehigh}
+
+\title{codehigh tagging test -- 01}
+
+\begin{document}
+
+\begin{codehigh}
+% -*- coding: utf-8 -*-
+\documentclass{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{codehigh}
+\usepackage{hyperref}
+\newcommand*{\myversion}{2021C}
+\newcommand*{\mydate}{Version \myversion\ (\the\year-\mylpad\month-\mylpad\day)}
+\newcommand*{\mylpad}[1]{\ifnum#1<10 0\the#1\else\the#1\fi}
+\setlength{\abc}{1}
+\begin{document}
+% some comment
+\section{Section Name}
+\subsection*{Subsection Name}
+Math $a+b$.
+\end{document}
+\end{codehigh}
+
+\dochighinput[language=latex/latex3]{sample.tex}
+
+\end{document}

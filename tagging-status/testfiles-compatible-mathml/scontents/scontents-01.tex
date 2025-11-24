@@ -1,30 +1,70 @@
-\DocumentMetadata
-  {
-    lang=en-US,
-    pdfversion=2.0,
-    pdfstandard=ua-2,
-    tagging=on
-  }
+\DocumentMetadata{tagging=on, lang=en-US, pdfversion=2.0, pdfstandard=ua-2}
 \documentclass{article}
-\usepackage[store-cmd=solutions]{scontents}
-\newtheorem{ex}{Exercise}
+\usepackage{scontents,hyperref}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+\hypersetup{pdftitle = {Test scontents package},}
 \setlength{\parindent}{0pt}
-\pagestyle{empty}
-
-\title{scontents tagging test - 1}
-
 \begin{document}
-\section{Problems}
-\begin{ex}
-First exercise
-\Scontents{First solution.}
-\end{ex}
+\section{Basic usage save+get}
+% not starred \Scontents
+\Scontents[store-cmd=defexercise]{
+Prove that \[x^n+y^n=z^n\] is not solvable in positive integers if $n$ is at
+most $-3$.\par
+}
+% starred \Scontents* whith verb and math
+\Scontents*[store-cmd=defexercise]+Refute the existence of black holes in less than $140$ \verb|characters|.+
 
-\begin{ex}
-Second exercise
-\Scontents{Second solution.}
-\end{ex}
+% write environment to \jobname.txt
+\begin{scontents}[store-env=defexercise,write-env=\jobname.txt]
+\def\NSA{NSA}%
+Prove that factorization is easily done via probabilistic algorithms and
+advance evidence from knowledge of the names of its employees in the
+seventies that the \NSA\ has known that for 40 years.\par
+\end{scontents}
 
-\section{Solutions}
-\foreachsc[sep={\\[10pt]}]{solutions}
+% see all stored \foreachsc
+\begin{itemize}
+\foreachsc[before={\item }]{defexercise}
+\end{itemize}
+
+% \getstored
+\getstored[2]{defexercise}
+
+\section{Play with verbatim}
+
+Some text here using \verb|\begin{scontents}[print-env=true]|.
+
+\begin{scontents}[print-env=true]
+First code \verb|\foo|
+
+And more code \verb|\bar|.
+\end{scontents}
+
+More text here using \verb|\begin{scontents}[print-env=false]|.
+\begin{scontents}[print-env=false]
+    Second code \verb|\foo|
+
+And more code \verb|\bar|.
+\end{scontents}
+
+More Text after \verb|\end{scontents}|. Now using \verb|\Scontents*|:
+
+\Scontents*{code \verb|\baz|}
+
+Now using \verb|\typestored|:
+\typestored[1]{contents}
+
+Now using  \verb|\mergesc[typestored]|
+
+% \mergesc[typestored] print all stored in verbatim style
+\mergesc[typestored]{ {contents}[1-end] }
+
+Now using  \verb|\mergesc[meaningsc]|
+
+% \mergesc[meaningsc] print all stored in meaningsc style
+\mergesc[meaningsc]{ {contents}[1-end] }
+
+Now using  \verb|\getstored[2]{contents}|
+
+\getstored[2]{contents}
 \end{document}

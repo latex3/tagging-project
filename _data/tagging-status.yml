@@ -352,10 +352,10 @@
   status: compatible
   included-in: [arxiv001]
   priority: 7
-  comments:
-  issues:
+  issues: [1069]
+  comments: "Produces warnings with mathml-SE."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-11-20
 
 - name: alltt
   type: package
@@ -406,13 +406,13 @@
 
 - name: amsaddr
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  tests: true
+  comments: "`\\maketitle` tagging is not correct."
+  updated: 2025-11-20
 
 - name: amsbsy
   type: package
@@ -479,13 +479,13 @@
 
 - name: amsmidx
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: 
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  issues: [1079]
+  tests: true
+  comments: "Meant for use with amsbook which is currently incompatible."
+  updated: 2025-11-20
 
 - name: amsopn
   type: package
@@ -534,7 +534,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944]
+  issues: [83,733,736,759,790,792,835,944,1083]
   tests: true
   updated: 2025-09-12
 
@@ -637,13 +637,14 @@
 
 - name: arabi
   type: package
-  status: unchecked
+  status: no-support
   included-in: [tlc3]
   priority: 2
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-13
+  comments: "Obsolete. Use luatex with arabluatex or babel; see the babel
+             [guide](https://latex3.github.io/babel/guides/locale-arabic.html)."
+  updated: 2025-11-20
 
 - name: arabicfront
   type: package
@@ -659,11 +660,11 @@
   status: unchecked
   included-in: [tlc3]
   priority: 2
-  issues:
+  issues: [1085]
   luatex-only: true
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-13
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-22
 
 - name: arev
   type: package
@@ -700,6 +701,15 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: arsenal-math
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-11-21
 
 - name: arydshln
   type: package
@@ -1984,9 +1994,9 @@
   references: [2]
   issues: [18,902]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-07
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-20
 
 - name: biblatex-chicago
   type: package
@@ -2105,10 +2115,9 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   issues:
-  comments: "Relies on incompatible multirow."
-  tests: false
-  tasks: needs tests
-  updated: 2025-06-09
+  comments: "Relies on incompatible multirow. No luamml support in math mode."
+  tests: true
+  updated: 2025-11-22
 
 - name: bigfoot
   type: package
@@ -2824,23 +2833,23 @@
 
 - name: circledsteps
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Missing TextDecoration attributes. No luamml support in math mode."
+  updated: 2025-11-20
 
 - name: circledtext
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Missing TextDecoration attributes."
+  updated: 2025-11-20
 
 - name: cistercian
   type: package
@@ -2889,6 +2898,15 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-18
+
+- name: clara
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-11-21
 
 - name: classico
   type: package
@@ -2959,13 +2977,12 @@
 
 - name: codehigh
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1080]
+  tests: true
+  updated: 2025-11-20
 
 - name: coelacanth
   type: package
@@ -3052,9 +3069,9 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
   issues: [90,379,749]
-  tests: false
-  tasks: needs tests
-  updated: 2024-10-29
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-22
 
 - name: comfortaa
   type: package
@@ -3133,6 +3150,15 @@
   issues:
   tests: false
   updated: 2024-07-14
+
+- name: courierten
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-11-21
 
 - name: covington
   type: package
@@ -3522,6 +3548,15 @@
   tests: true
   updated: 2024-07-21
 
+- name: domitian
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-11-21
+
 - name: dotlessi
   type: package
   status: partially-compatible
@@ -3693,13 +3728,13 @@
 
 - name: ebproof
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
   issues: [568,985]
   tests: true
-  comments: "Tagging of `prooftree` is not ideal."
-  updated: 2024-08-17
+  comments: "Tagging and mathml of `prooftree` is not correct."
+  updated: 2025-11-16
 
 - name: econlipsum
   type: package
@@ -4883,13 +4918,13 @@
 
 - name: forest
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv01]
   priority: 6
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1087]
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-22
 
 - name: forum
   type: package
@@ -5049,9 +5084,9 @@
   priority: 2
   comments: "See fancyvrb."
   issues: [1060]
-  tests: false
-  tasks: needs tests
-  updated: 2025-11-11
+  tests: true
+  tasks: needs more tests
+  updated: 2025-11-22
 
 - name: fwlw
   type: package
@@ -5205,10 +5240,11 @@
   status: compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  comments: tagging of rules (showframe, crop marks) untested
+  issues: [1064]
+  comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
   tests: false
-  tasks: needs further tests
-  updated: 2024-07-06
+  tasks: needs a crop mark test
+  updated: 2025-11-15
 
 - name: gettitlestring
   type: package
@@ -5525,13 +5561,12 @@
 
 - name: halloweenmath
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-14
+  issues: [1077]
+  tests: true
+  updated: 2025-11-20
 
 - name: hanging
   type: package
@@ -5614,13 +5649,14 @@
 
 - name: hologo
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [arxiv001]
   priority: 7
   issues:
-  comments: Some logos need ActualText.
+  package-repository: "https://github.com/ho-tex/hologo"
+  comments: "Logos have proper ActualText."
   tests: true
-  updated: 2024-07-29
+  updated: 2025-11-14
 
 - name: hvfloat
   type: package
@@ -6380,13 +6416,12 @@
 
 - name: latex2pydata
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-20
 
 - name: latexrelease
   type: package
@@ -6616,7 +6651,7 @@
   issues: [162,210]
   tests: true
   comments: "loses linenumbers and doesn't tag line numbers"
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-19
 
 - name: linguex
@@ -6653,7 +6688,7 @@
   priority: 2
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
-  issues: [70]
+  issues: [70,1074]
   related-issues: [41]
   tests: true
   updated: 2024-07-12
@@ -6867,14 +6902,14 @@
 
 - name: luamesh
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Missing way to add Alt text to underlying mplibcode or tikz environments."
+  updated: 2025-11-22
 
 - name: luamplib
   type: package
@@ -6902,7 +6937,7 @@
 
 - name: luatexko
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   package-repository: "https://github.com/dohyunkim/luatexko"
@@ -6910,8 +6945,7 @@
   issues:
   luatex-only: true
   tests: true
-  tasks: Tests need to be checked.
-  updated: 2025-06-08
+  updated: 2025-11-17
 
 - name: luatodonotes
   type: package
@@ -6977,7 +7011,7 @@
   status: unchecked
   included-in: [tlc3]
   priority: 2
-  issues:
+  issues: [1084]
   tests: false
   tasks: needs tests
   updated: 2024-07-15
@@ -7525,8 +7559,10 @@
   status: currently-incompatible
   included-in: [arxiv01]
   priority: 4
-  comments: Structural warnings and automatic begin / end mismatch errors.
-  updated: 2024-07-18
+  issues:
+  tests: true
+  comments: "Listings not tagged properly. See fvextra and fancyvrb."
+  updated: 2025-11-11
 
 - name: mintspirit
   type: package
@@ -8992,7 +9028,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
-  comments: "Relies on tikz so compatibility but also needs its own adjustments."
+  comments: "Compatibility depends on tikz but also needs its own adjustments."
   issues: [924]
   tests: false
   updated: 2025-06-23
@@ -9253,13 +9289,13 @@
 
 - name: prftree
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "No luamml support."
+  updated: 2025-11-22
 
 - name: printlen
   type: package
@@ -9272,13 +9308,14 @@
 
 - name: prooftrees
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: "Relies on incompatible forest package."
+  updated: 2025-11-22
 
 - name: psfrag
   type: package
@@ -9443,10 +9480,9 @@
   priority: 2
   package-repository: "https://gitlab.com/TeXhackse/ragged2e"
   external-issues: "https://gitlab.com/TeXhackse/ragged2e/-/issues/9"
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  issues: [1070]
+  tests: true
+  updated: 2025-11-19
 
 - name: raleway
   type: package
@@ -9484,9 +9520,9 @@
   included-in: [tlc3]
   priority: 2
   issues: [457]
-  tests: false
-  tasks: needs tests
-  updated: 2024-11-18
+  tests: true
+  luatex-only: true
+  updated: 2025-11-19
 
 - name: refcheck
   type: package
@@ -9563,13 +9599,12 @@
 
 - name: repltext
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1071]
+  tests: true
+  updated: 2025-11-19
 
 - name: rerunfilecheck
   type: package
@@ -9911,13 +9946,13 @@
 
 - name: selinput
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   issues:
+  comments: "Only works with pdftex. Should not be necessary in new documents."
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-19
 
 - name: selnolig
   type: package
@@ -10296,6 +10331,15 @@
   tests: false
   updated: 2024-07-21
 
+- name: splentinex
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-11-21
+
 - name: splitidx
   ctan-pkg: splitindex
   type: package
@@ -10488,7 +10532,7 @@
   included-in:
   priority: 9
   issues:
-  comments: "Incompatible with amsmath which is loaded by `testphase=math`."
+  comments: "Incompatible with amsmath which is loaded by the tagging code."
   tests: true
   updated: 2024-08-06
 
@@ -10550,13 +10594,12 @@
 
 - name: superiors
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  updated: 2025-11-22
 
 - name: supertabular
   type: package
@@ -10737,9 +10780,8 @@
   priority: 2
   comments: An old issue has been fixed.
   issues: [42]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  tests: true
+  updated: 2025-11-22
 
 - name: tabulary
   type: package
@@ -10771,16 +10813,16 @@
 
 - name: tcolorbox
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Not yet fully supported, but some suggestions in the listed issues"
-  issues: [73,88]
-  tests: false
+  issues: [73,88,1066]
+  tests: true
   tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283"]
-  updated: 2024-08-27
+  updated: 2025-11-16
 
 - name: telprint
   type: package
@@ -10834,20 +10876,19 @@
 
 - name: tex-locale
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-11-19
 
 - name: tex4ebook
   type: package
   status: unchecked
   included-in:
   priority: 9
-  issues:
+  issues: [1084]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -10857,7 +10898,7 @@
   status: unchecked
   included-in: [tlc3]
   priority: 2
-  issues:
+  issues: [1084]
   tests: false
   tasks: needs tests
   updated: 2024-07-15
@@ -11081,11 +11122,11 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10]
   priority: 2
-  comments: tikz testphase module defines `alt`, `actualtext`, and `artifact` tikz keys.
+  comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
   issues:
   references: [1]
   tests: true
-  updated: 2025-09-12
+  updated: 2025-11-16
 
 - name: tikz-cd
   type: package
@@ -11098,13 +11139,13 @@
 
 - name: tikzducks
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3]
   priority: 2
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  tests: true
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2025-11-19
 
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
@@ -11128,13 +11169,14 @@
 
 - name: tikzlings
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3]
   priority: 2
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`.
+             See also tikzducks."
+  updated: 2025-11-19
 
 - name: times
   type: package
@@ -11281,12 +11323,12 @@
 - name: tocstyle
   type: package
   status: no-support
-  included-in: [tlc3]
-  priority: 2
+  included-in:
+  priority: 9
   issues: [700]
   tests: false
   comments: Obsolete
-  updated: 2024-09-10
+  updated: 2025-11-20
 
 - name: tocvsec2
   type: package
@@ -11883,24 +11925,23 @@
 
 - name: witharrows
   type: package
-  status: unchecked
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
-
-- name: wordcloud
-  type: package
   status: currently-incompatible
   included-in:
   priority: 9
+  issues: [1076]
+  tests: true
+  updated: 2025-11-20
+
+- name: wordcloud
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
   issues:
+  package-repository: "https://github.com/chupinmaxime/wordcloud"
   luatex-only: true
-  comments: "Generates empty tags; should probably be tagged as Figure. tests excluded as randomised cloud not reproducible"
-  tests: excluded
-  updated: 2024-07-26
+  tests: true
+  updated: 2025-11-19
 
 - name: wrapfig
   type: package
@@ -12468,11 +12509,10 @@
   luatex-only: true
   included-in:
   priority: 9
-  comments: "PDF 2.0/A-4F validation PDF 2.0/UA-2 validation fails due to external issues related 
-             to the caption package and tagging of rules."
+  comments: "Validates under luatex (don't use subcaptions)."
   issues: [1054]
   tests: true
-  updated: 2025-02-12
+  updated: 2025-11-12
 
 #------------------------ BBB ----------------------------
 
@@ -12761,10 +12801,10 @@
   status: unchecked
   included-in:
   priority: 9
-  issues:
+  issues: [1075]
   tests: false
   tasks: needs tests
-  updated: 2024-07-17
+  updated: 2025-11-20
 
 - name: ltx-talk
   type: class
@@ -12804,11 +12844,10 @@
   luatex-only: true
   included-in:
   priority: 9
-  comments: "Class loads patches for [#757](https://github.com/latex3/tagging-project/issues/757#issuecomment-2465417867) 
-             and [#84](https://github.com/latex3/tagging-project/issues/720#issuecomment-2388327048). Use lualatex."
+  comments: "Validates under luatex (don't use subcaptions)."
   issues:
   tests: true
-  updated: 2025-02-11
+  updated: 2025-11-12
 
 #------------------------ NNN ----------------------------
 
@@ -12828,13 +12867,14 @@
 - name: oblivoir
   ctan-pkg: kotex-oblivoir
   type: class
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: "Extension of the incompatible memoir class."
+  updated: 2025-11-19
 
 #------------------------ PPP ----------------------------
 
