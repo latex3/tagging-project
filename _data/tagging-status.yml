@@ -838,24 +838,26 @@
 
 - name: auto-pst-pdf
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: See pstricks.
+  updated: 2025-11-24
 
 - name: auto-pst-pdf-lua
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: See pstricks.
+  updated: 2025-11-24
 
 - name: autoaligne
   type: package
@@ -9329,13 +9331,14 @@
 
 - name: pst-pdf
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: See pstricks.
+  updated: 2025-11-24
 
 - name: pstool
   type: package
@@ -9349,7 +9352,7 @@
 
 - name: pstricks
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [tlc3, arxiv1]
   priority: 2
   comments: "Compatibility is only with lualatex; dvips cannot properly support PDF/UA.
@@ -9358,7 +9361,7 @@
   issues: [913]
   luatex-only: true
   tests: true
-  updated: 2025-06-13
+  updated: 2025-11-24
 
 - name: px-ds
   ctan-pkg: pxtxalfa
