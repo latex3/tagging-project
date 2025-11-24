@@ -7008,13 +7008,13 @@
 
 - name: lwarp
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [tlc3]
   priority: 2
   issues: [1084]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  tests: true
+  comments: "Package errors if `\\DocumentMetadata` detected."
+  updated: 2025-11-24
 
 - name: lxfonts
   type: package
@@ -10885,23 +10885,23 @@
 
 - name: tex4ebook
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
   issues: [1084]
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  comments: See tex4ht.
+  updated: 2025-11-24
 
 - name: tex4ht
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [tlc3]
   priority: 2
   issues: [1084]
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  comments: "Simple files with `\\DocumentMetadata` error when run with `tex4ht`."
+  updated: 2025-11-24
 
 - name: texosquery
   type: package
