@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -49,5 +48,3 @@ jobs:
         uses: zauguin/custom-pages@trunk
         with:
           server: https://deploy.latex-project.org
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
