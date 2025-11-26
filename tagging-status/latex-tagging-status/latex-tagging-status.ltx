@@ -24,7 +24,8 @@ layout: null
 %% 0   unchecked              Status is not known
 %%
 
-
+\UseName{count@}\catcode`\@
+\makeatletter
 \def\@kernel@tagging@status#1#2#3{\expandafter\chardef\csname t@status@#1.#2\endcsname#3\relax}
 
 {%  assign t-s = site.data.tagging-status %}
@@ -58,3 +59,5 @@ layout: null
     {%-  if p.status == "unchecked" -%}0{%- endif -%}
 }
 {% endfor %}
+
+\catcode`\@=\count@
