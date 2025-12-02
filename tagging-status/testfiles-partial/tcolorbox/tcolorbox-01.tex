@@ -8,11 +8,16 @@
 \documentclass{article}
 
 \usepackage{tcolorbox}
+\tagpdfsetup{role/user-NS=tcolorbox}% stable User NS
 
 \begin{document}
 
 \begin{tcolorbox}
 Some text
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=A title]
+A tcolorbox with a title.
 \end{tcolorbox}
 
 \end{document}
