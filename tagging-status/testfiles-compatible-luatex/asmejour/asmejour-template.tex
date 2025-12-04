@@ -1,0 +1,692 @@
+% !TEX TS-program = LuaLaTeX
+% !TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
+%%  This file is asmejour-template.tex, a template to format papers in the style of ASME journal papers. 
+%%
+%%  This file is version 1.27 dated 2025/11/30
+%%
+%%  Author: John H. Lienhard V
+%%          Department of Mechanical Engineering
+%%          Massachusetts Institute of Technology
+%%          Cambridge, MA 02139-4307 USA
+%%
+%%  Class options include:
+%%
+%%          * Option to color the vertical bar in the title block [barcolor = colorname] 
+%%          *    where colorname is any name def'd by xcolor package; omit barcolor option to get black
+%%
+%%          * Option to omit the list of figures and list of tables at the end [nolists]
+%%
+%%          * Option to include line numbers [lineno]. You must run *twice* for proper placement of the 
+%%          *    line numbers. The lineno package does not number tables, footnotes, or captions.  
+%%          *    This option will disable balancing of the column heights on final page.
+%%
+%%			* Option to balance column heights on final page [balance]. This option sometimes
+%%			*    misbehaves, so use it with an awareness that it can create unexpected problems.
+%%			*	 This option is not compatible with line numbering.
+%%
+%%          * Options for copyright notices:
+%%			* 	 Omit the ASME copyright from the footer [nocopyright]
+%%			*	 Copyright footnote if all authors are government employees  [govt]
+%%			*	 Copyright footnote if some authors are government employees [govtsome]
+%%			*	 Copyright footnote for government contractors [contractor]
+%%
+%%          * Option to omit all ASME text fields from the footer [nofoot].
+%%
+%%			* Option for single column formatting [singlecolumn].
+%%
+%%			* Option for upright integrals [upint]
+%%
+%%          * Additional math options from M. Sharpe's newtxmath package (pdfTeX only):
+%%          *    [varvw] for v and w that are better distinguished from Greek nu; fine 
+%%			* 	 adjustments to subscripts [subscriptcorrection]; and various other options
+%%          *    such as [smallerops, varg, slantedGreek, frenchmath, varbb, cmbraces]. 
+%%			
+%%			* Support for the unicode-math package and its math options (LuaLaTeX only)
+%%
+%%          * Options for the typewriter font: 
+%%			*	 [var0] replace default slashed zero by an unslashed zero
+%%			*	 [mono] force interword separation to be monospaced
+%%          *    [hyphenate] allow hyphenation (pdfTeX only). Typewriter fonts usually are not hyphenated.
+%%
+%%          * Options for the babel package to support passages in other languages (such as a translated 
+%%          *    abstract in an appendix), e.g. [german].  The main language will default to English 
+%%          *    unless a different main language is selected, e.g. [main=spanish]. See Appendix B for details.
+%%
+%%			* PDF/A accessibility and archivability. Since 2022, LaTeX has included integrated support for 
+%%			*	PDF/A, through the \DocumentMetadata{..} command.  This works with both pdfTeX and luaLaTeX.  
+%%			*	The legacy PDF/A class options have been dropped as of mid-2025. As of the November 2025 release 
+%%			*   of LaTeX, asmejour class can produce fully tagged, accessible PDF/A-UA2.  See Appendix D for details.
+%%
+%%  For details of the newtx package, refer to its documentation (available at CTAN: http://ctan.org/pkg/newtx).
+%%
+%%  The use of commands defined or modified by the asmejour class is illustrated below. In particular, some care
+%%  is needed when using complicated math and macros in section headings, also illustrated below.
+%%
+%%		==> LaTeX distributions older than Oct. 2020 are * not * supported. 
+%%
+ %========================================================================
+%% 
+%% LICENSE: 
+%%
+%% Copyright (c) 2025 John H. Lienhard
+%%
+%% Offered under the MIT license: https://ctan.org/license/mit 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% PDF management code.
+%% This addition the LaTeX kernel was made by the LaTeX Project team in June 2022.
+%% 		see https://www.latex-project.org/news/latex2e-news/ltnews35.pdf
+%% If you have problems with these lines, your LaTeX format may be out of date.
+
+\DocumentMetadata{%
+	lang=en-US,
+%	pdfstandard	= A-3u,% A-2b, A-2u, A-3b, or A-3u
+%	pdfversion	= 1.7,
+%	pdfversion  = 2.0, % default	
+	pdfstandard = { ua-2 , a-4f }, % use these setting with tagging on
+    tagging 	= on, % requires lualatex with pdfversion = 2.0 and LaTeX 2025/11/01 or later
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Class options are described above. Use only the options you need. 
+%% Note: the [mathalfa=ccc=ddd] option was dropped in v1.25; load mathalpha in your preamble instead
+
+\documentclass[balance,nocopyright,upint,varvw,hyphenate,barcolor=Goldenrod3,german]{asmejour}% 
+
+
+\allowdisplaybreaks % from amsmath package, allows multiline equations to break across pages (delete if not wanted)
+					% using \\* instead of \\ will prevent specific lines from being pagebreaks.
+
+% logos used in this document
+\newcommand*\pdfTeX{pdf\TeX}    
+\newcommand*\LuaLaTeX{Lua\LaTeX}
+\newcommand*\BibTeX{Bib\TeX}
+
+%%%%  pdf metadata  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{%
+	pdfauthor={John H. Lienhard},                       		   	% <=== change to YOUR name[s]!
+	pdftitle={ASME Journal Paper LaTeX Template},                  	% <=== change to YOUR pdf file title
+	pdfkeywords={ASME journal paper, LaTeX template, BibTeX style, asmejour class},% <=== change to YOUR pdf keywords
+	pdfsubject = {Describes the asmejour LaTeX template},			% <=== change to YOUR subject
+%	pdfurl={https://ctan.org/pkg/asmejour},% may delete
+%	pdflicenseurl={https://ctan.org/pkg/asmejour},% may delete
+}
+% If an author name or the title include a comma, enclosed it in braces, e.g., pdfauthor{{John Forbes Nash, Jr.}}
+
+%%%%  Journal name and optional copyright year %%%%%%%%%%%%%%
+
+%% Omit "Journal of". If Journal Name is quite long, use \\ to insert a line break
+\JourName{Heat and Mass Transfer}%<=== change to the name of your journal
+
+%% The default copyright year is the current year
+%% \PaperYear{2023} sets 2023; and \PaperYear{} omits the year entirely.
+                   
+%%%%  end of preamble  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Change to your author name[s] and addresses, in the desired order of authors.
+% First name, middle initial, last name
+% Use title case (upper and lower case letters)
+% Note usage below for corresponding author.
+
+\SetAuthorBlock{John H.\ Lienhard\CorrespondingAuthor}{%
+	Fellow ASME\\
+	Rohsenow Kendall Heat Transfer Laboratory,\\
+	Department of Mechanical Engineering,\\
+	Massachusetts Institute of Technology,\\
+	Cambridge, MA 02139 USA\\
+	email: lienhard@mit.edu
+}
+
+% To label one or more corresponding authors put "Name\CorrespondingAuthor". No space after "Name".
+% An optional argument can be added if email is not in address block as
+%      "Name\CorrespondingAuthor{write@to.me}"
+% Can also include multiple emails and use the command more than once for multiple corresponding authors,
+%      "Name\CorrespondingAuthor{write@to.him, write@to.her}"
+
+\SetAuthorBlock{Author Name[s]}{Department of Mechanical Engineering,\\
+   Institution or Company Name,\\
+   Street address,\\
+   City, State, Country\\
+   email: xxx@yyy.zzz
+} 
+
+%%% Change to your paper title. Can insert line breaks if you wish, as \\ (otherwise breaks are selected automatically).
+\title{Preprint Template for ASME Journal Papers:  asmejour.cls}
+
+
+%%% Change these to your keywords.  Keywords are automatically printed at the end of the abstract.
+%%% This command must come BEFORE the end of the abstract.
+%%% If you don't want keywords, omit the \keyword{..} command.
+\keywords{ASME, Paper, Template, {\upshape\LaTeX}, {\upshape\BibTeX}, {\upshape\pdfTeX},  {\upshape\LuaLaTeX} }
+
+% Abstract should be no more than 250 words
+\begin{abstract}
+This paper is an example and  a {\upshape\LaTeX} template for the {\upshape\texttt{asmejour}} class. Papers typeset in this class will follow ASME journal style for margins, fonts, headings, captions, and reference formats. The class will also lay out the author, title, and abstract in ASME style. The pdf file produced will include internal and external hyperlinks, bookmarks, and pdf metadata. The class is intended to be used with the {\upshape\texttt{asmejour.bst} \BibTeX} style, which is part of this distribution. This style produces modern reference formats, including hyperlinked DOI and URL fields, and following current ASME practice. Options to the class include line numbering, final column balancing, various math options, government copyright notices, and archivability (PDF/A). In addition, section headers may contain mathematics, references, citations, and footnotes. The class is compatible with {\upshape\pdfTeX} or {\upshape\LuaLaTeX}.
+\end{abstract}
+
+\date{Version \versionno, \today}%% You can modify this information as desired. 
+							%% Putting \date{} will suppress any date.  
+							%% If this command is omitted, date defaults to \today
+							%% This command must come somewhere before \maketitle
+
+\maketitle %% This command creates the author/title/abstract block. Essential!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%  End of fields to be completed. Now write! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+The \texttt{asmejour} class typesets papers with margins, fonts, headings, captions, and reference formats that follow those used in journals published by the American Society of Mechanical Engineers (ASME). Internal and external hyperlinks will be set automatically, and the pdf file will contain bookmarks and metadata. Many other useful features are supported. 
+
+This class is not a publication of ASME, but the author has published in ASME journals since 1984. The intended use of this package is to enable authors to format their papers in ASME style prior to submission to an ASME journal for peer review.
+
+The \texttt{.tex} file may be written using standard \LaTeX\ commands, although some specific initial commands are needed to format the block containing the author[s], title, and abstract. The class calls a number of packages, all of which are contained in up-to-date versions of \TeX~Live, Mac\TeX, and similar platforms. If you find that you are missing a package, you may obtain it at no cost from CTAN (\href{http://ctan.org}{ctan.org}). 
+
+Both \pdfTeX\ and \LuaLaTeX\ will load fonts that should be in your \LaTeX\ installation (all are in TeX Live).  If fonts are missing from your installation, you can get them in CTAN (\href{http://ctan.org}{ctan.org}).  For best results, use an up-to-date \LaTeX\ installation.
+
+\subsection{Essential Initial Commands}
+To begin, fill in the fields to be completed at top of the \texttt{asmejour-template.tex} file. The first are pdf metadata in the preamble that will tag the pdf file itself. Next is the \verb|\JourName{..}| command, which should be changed as appropriate (omit ``Journal of'').
+
+For each author, put author names and affiliation (with line breaks) into a separate \verb|\SetAuthorBlock{name}{affiliation}| command; follow the syntax illustrated \texttt{asmejour-template.tex} file.  One author (or more) may be designated as the corresponding author  by placing the command \verb|\CorrespondingAuthor| at the end of that name.  
+
+The title should be placed into \verb|\title{..}|, and line breaks may be specified if desired. Keywords may optionally be including using the \verb|\keywords{..}| command; this command \emph{must} be issued before the abstract. To omit keywords, just omit this command. Next, the abstract text must be placed into \verb|\begin{abstract}|\ldots\verb|\end{abstract}|. The abstract will automatically be italicized. 
+
+The date is automatically given as an unnumbered footnote, which defaults to \verb|\today|. Different text may be given using \verb|\date{..}|. Putting \verb|\date{}| will suppress the date footnote.
+
+After setting up the authors, title, and abstract, issue the \verb|\maketitle| command. The introduction section comes next. 
+
+\subsection{Option to Color the Title Bar}
+The vertical bar in the title block is black in all ASME journals. Since the \texttt{asmejour} class is only for preprints, we include the [fun] option to have the bar in color. Any color \texttt{name} recognized by the \texttt{xcolor} package~\cite{kern} may be invoked by including the option \texttt{[barcolor=name]} in the \verb|\documentclass[..]{asmejour}| command. The color for this example is \texttt{Goldenrod3}. To have a black bar, either omit \texttt{barcolor} entirely or use the name \texttt{black}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{References to Figures, Equations, and Citations}
+
+For ASME papers, the labels Figure and Equation should be abbreviated when they do not start a sentence, as in Fig.~\ref{fig:1} and Eq.~\eqref{eqn:1}. Figure~\ref{fig:1} is spelled out when it starts a sentence. Equation~\eqref{eqn:1} is spelled out when it starts a sentence. 
+
+Citations will be numbered automatically \cite{DKE1969}. They should be inserted at the appropriate point using a \verb|\cite{ref}| command~\cite{toohey2007,gibson2008}. The citations will be automatically sorted and compressed, as well, if they are given in a set \cite{stevens1999, DKE1969, wions2006, oligaria2011, mollen2014, smith2014, apple2019}. If naming a reference explicitly, put ``Ref.''\ in front of the number, as in Ref.~\cite{smith2014}. Reference~\cite{smith2014} is appropriate at the beginning of a sentence.
+See the \texttt{asmeconf-sample.bib} file for examples of how to enter your references.
+
+Equations are typeset in the usual way.  The class file loads the \texttt{amsmath} and \texttt{mathtools} packages, which provide many macros to support sophisticated mathematics.
+\begin{equation}\label{eqn:1}
+\mathbf{q} = -k\nabla T
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section Headings and Captions}
+
+ASME sets section headings and captions in bold face. In addition, the captions are in sans-serif type. The \texttt{asmejour} class chose appropriate fonts automatically.  You can place \verb|\cite{..}|, \verb|\ref{..}|, \verb|\label{..}|, and into headings and captions directly, as you would in the main text.  You can place \verb|\footnote{..}| into headings, but not into captions.\footnote{See \texttt{tex-stackexchange} for various approaches to footnotes in captions, if they seem necessary. For footnotes in tables, use the \texttt{tablefootnote} package.}
+
+Sections may be numbered or left unnumbered. ASME publishes papers in either style. 
+
+Single-sentence captions should not end with a period. Multi-sentence captions do include periods.
+
+Math can be used in captions or section headings, and an appropriate math font will be selected automatically.\footnote{In \LuaLaTeX, the caption's math font digits differ slightly from the text font. If you want a perfect match, do your math digits this way: \texttt{\textbackslash textbf\{\textbackslash textsf\{0123\ldots\}\}}.} For a section heading that includes complicated math (and macros), you may use the optional argument of \verb|\section[..]{..}| to create a pdf bookmark without losing characters or producing warnings or errors. See the \texttt{asmejour-template.tex} source file for examples of this technique. These bookmarks should usually be text expressions, although some math is supported.  
+
+If you wish to override the default math format in a heading or caption, put \verb|\mathversion{normal}| in the heading or caption. 
+
+\subsection{More About Headings}
+Section, subsection, and subsubsection headings should be in title case (first letter of primary words capitalized). ASME does not use \verb|\paragraph|, so the class file equates this command to \verb|\subsubsection|.
+
+
+%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% captions go below figures
+\begin{figure}
+\centering\includegraphics[width=\linewidth,alt={Linearization errors}]{sample-figure-1.pdf}
+% best practice is to change \eqref to (\ref* ) in optional argument of caption, but it's usually not important
+\caption[Caption with math, eqn.~(\ref*{eqn:1}): $\Delta T/T_m$ vs.\ $\Delta T/T_1$~\cite{lienhard2019}]{Caption with math, eqn.~\eqref{eqn:1}: $\Delta T/T_m$ vs.\ $\Delta T/T_1$~\cite{lienhard2019}\label{fig:1}}
+\end{figure}
+ 
+%%%%%%%%%%%%% end figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables and Figures}
+
+Table \ref{tab:1} is an example of a simple table. Table captions should be placed above tables.
+The class loads the \texttt{array} and \texttt{dcolumn} packages which provide extended capabilities for columns in the \texttt{tabular} environment (used in Tables \ref{tab:2} and \ref{tab:3}). Table~\ref{tab:3} is coded to have exactly the width of a text column. 
+
+The \texttt{booktabs} package \cite{fear} is loaded (and customized) to provide versions of \verb|\toprule|, \verb|\midrule|, and \verb|\bottomrule| appropriate to ASME-style tables.
+
+Table~\ref{tab:4} spans both text columns using the \texttt{table*} environment. Figure~\ref{fig:2} spans both columns using the \texttt{figure*} environment. Two column tables and figures will always float to the top of a later page. Subcaptions in figures, such as Fig.~\ref{fig:isothermal-wall}, may be labeled and referenced individually.
+
+Text in the figures should be checked for legibility at either single-column width (about 83~mm) or full-column width (about 170~mm).  Figure captions should be placed below figures. Images in figures are handled by the standard \texttt{graphicx} package.
+
+Landscape figures and tables may be produced at full-page size by putting \verb|\usepackage[figuresright]{rotating}| in your \texttt{.tex} file's preamble and using the \texttt{sidewaystable*} and \texttt{sidewaysfigure*} environments~\cite{fairbairns}.
+
+
+%%%%%%%%%%%%%%%%%  begin two column figure  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}[t]
+\begin{subfigure}[t]{0.5\textwidth} % Result is similar to \begin{minipage}[t]{0.5\textwidth}
+\centering{
+	\includegraphics[width=0.9\linewidth,alt={Nusselt number data for isothermal wall}]{sample-figure-2a.pdf}
+	\label{fig:isothermal-wall}
+}%
+\end{subfigure}%
+%%%%%%%% don't leave a break here
+\begin{subfigure}[t]{0.5\textwidth} % Result is similar to \begin{minipage}[t]{0.5\textwidth}
+\centering{
+	\includegraphics[width=0.927\linewidth,alt={Nusselt number data for constant heat flux wall}]{sample-figure-2b.pdf}
+	\label{fig:uniform-flux-wall}
+}\end{subfigure}%
+\caption{A figure with two subfigures: (\emph{a}) uniform wall temperature; and (\emph{b}) uniform wall heat flux, unheated starting length \cite{lienhard2020}\label{fig:2}}
+\end{figure*}
+
+%%%%%%%%%%%%%%%  end two column figure  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Reference Formatting with \texttt{asmejour.bst}}
+
+The {\upshape\texttt{asmejour.bst}} \BibTeX\ style follows the reference styles observed in ASME journals in 2025.\footnote{\texttt{asmejour.bst} is intended as a replacement for the older style \texttt{asmems4.bst}, which does not follow ASME's current reference formats or support DOI and URL.} The vast majority of published references are to journal papers and books. Examples for these and many other entry types are given in the \texttt{asmejour-sample.bib} file, which is part of this distribution. Citations and references are managed by the \texttt{natbib} package.
+Nevertheless, a few comments are necessary. 
+
+\subsection{Capitalization of Titles} ASME's bibliography style requires that titles be in title case. The first letters of principal words are capitalized. This must be done when writing the \texttt{.bib} file.
+ASME capitalizes ``With'', but not other prepositions.
+
+\subsection{Hyperlinked Titles or Paper Numbers} When the entries \verb|@article{..|, \verb|@book{..|, \verb|@inbook{..|, \verb|@incollection{..|, \verb|@proceedings{..|, or \verb|@techreport{..| include \verb|doi={..}|, the document title, paper number, or report number will be hyperlinked to that doi number, and the doi number will not be printed. If no doi is included, but a url or eprint is included, then the title will be hyperlinked to that url or eprint. To display the doi (or the url or eprint when no doi is given), put it into the \verb|note={..}| field (using \verb|\doi{..}| or \verb|\url{..}| ) like this:
+\begin{quote}
+\verb|note = {\doi{10.1115/1.4042912}}|
+\end{quote}
+Include doi numbers in references whenever possible.
+
+%%%%%%%%%%%%%%% begin simple table %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%% captions go above tables
+
+\begin{table}[t]
+\caption{A simple table}\label{tab:1}
+\centering{%
+\tagpdfsetup{table/header-rows={1}}%
+\begin{tabular}{l l r}
+\toprule
+Experiment & $u$ [m/s] & $T$ [\textdegree C] \\
+\midrule
+Run 11 & 12.5 & 103.4 \\
+Run 12 & 24   & 68.3 \\
+\bottomrule
+\end{tabular}
+}%
+\end{table}
+
+%% Note: location of tables and figures can be adjusted with the options [!tbhp] 
+%% 		 see: https://latexref.xyz/dev/latex2e.html#Floats
+
+%%%%%%%%%%%%%%%%%  end table  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%% begin more complicated table %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[t]
+\caption{Table with more complicated columns}\label{tab:2}%
+\centering{%
+\tagpdfsetup{table/header-rows={1}}%
+\begin{tabular}{!{\hspace*{0.5cm}} >{\raggedright\hangindent=1em} p{3cm} d{3} @{\hspace*{1cm}} d{3} !{\hspace*{0.5cm}}}
+\toprule
+Experiment & \multicolumn{1}{c@{\hspace*{1cm}}}{$u$ [m/s]} & \multicolumn{1}{c!{\hspace*{0.5cm}}}{$T$ [\textdegree C]} \\
+\midrule
+The first experiment we ran this morning   & 124.3     &   68.3  \\
+The second experiment we ran this morning  &  82.50    &  103.46 \\
+Our competitor's data                      &  72.321   &  141.384\\
+\bottomrule
+\end{tabular}
+}%
+\end{table}
+
+%%%%%%%%%%%%%%%% end table  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\subsection{eprint Support} Elementary support for \texttt{eprint} numbers is included, either hyperlinking or generating a url at the end of the citation. The \texttt{archive} type may be specified using the macros \texttt{arxiv, googlebooks, hndl, jstore, oclc}, or \texttt{pubmed} (e.g., \texttt{archive=hndl},  \emph{without} braces). Both \texttt{eprint} and \texttt{archive} fields \emph{must} be given. Other root urls may be invoked using \verb|archive = {http://another.url.org/}|.
+
+\subsection{Online Sources} A bibliography field \verb|@online{..| is included for citation of online sources, such as web pages. A \texttt{url}, \texttt{doi}, or \texttt{eprint} with \texttt{archive} should be included. See the examples of use in the \texttt{asmejour-sample.bib} file.
+
+\subsection{Date Accessed} The \verb|urldate={..}| field may be used to provide the date on which a given url was accessed. By default, the text printed will be \texttt{accessed `date',}. The word ``accessed'' may be changed using the \verb|urltype={..}| field.
+
+\subsection{Conference Location and Date} For the entry types \verb|@inproceeedings{..| and \verb|@proceeedings{..|, you may include \verb|venue={..}| and \verb|eventdate={..}| to specify the city and the date of a conference. Omit \verb|address={..}| if \verb|venue={..}| is used.
+
+\subsection{Version Number\footnote{Footnotes can appear in \texttt{\string\section} commands.\label{ftnt:3}}} 
+The \verb|version={..}| field may be used with \verb|@book|, \verb|@online|, and \verb|@manual|. By default, the text will read \texttt{Version `number'} as in Refs.~\cite{sharpe1,sharpe2},  but different wording may be selected using the \verb|versiontype={..}| field, e.g., to say ``Revision''  or something similar, as in Ref.~\cite{GSL}. ASME often puts the version in the title, as in Refs.~\cite{dlmf, texshop}, so I've left the final decision for discussion between the authors and the copy editor.
+
+\subsection{Articles in Collections} In addition to the standard entry, \verb|@incollection{..|, an entry  \verb|@inserialcollection{..| is defined for serials in which each volume has a different title. See the \texttt{asmejour-sample.bib} file for discussion and compare Ref.~\cite{clauser56} to Ref.~\cite{DKE70}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{More on Math}
+
+In most cases, long equations can be kept below the column width by using one of the multiline equation environments defined by \texttt{amsmath}, 
+such as \texttt{align}, \texttt{split}, or \texttt{multline}~\cite{amsmath}. The following equation is set with the \texttt{multline} environment:
+\begin{multline}
+\frac{\partial}{\partial t}\left[\rho\Bigl(e + \lVert\mathbf{u}\rVert^2\mspace{-3mu}\big/2\Bigr)\right]  + \nabla\cdot\left[\rho\Bigl(h + \lVert\mathbf{u}\rVert^2\mspace{-3mu}\big/2 \Bigr)\mathbf{u}\right]\\
+ ={}-\nabla \cdot \mathbf{q} +  \rho \mathbf{u}\cdot\mathbf{g}+ \frac{\partial}{\partial x_j}\bigl(d_{ji}u_i\bigr) + \dot{Q}_v\label{eqn:energy}
+\end{multline}
+An example using \texttt{align} appears in Appendix~\ref{app:zetafunction}. 
+
+For equations that seem impossible to break over several lines, two options are available.  First,
+an experimental package for setting equations that span two columns, \texttt{asmewide.sty}, can be loaded, although that code may require hand-fitting around floats and page breaks (see the examples in~\cite{lienhard2025}). Second, a new page can be started in one-column mode, then returning to two-column mode: 
+
+\begin{quote}\raggedright
+\verb|\twocolumn[A passage of single column text.|
+\verb|\[ F = \textrm{wide and unbreakable expression} \]|
+\verb|]|
+\end{quote}
+That approach also involves finding a break point, to avoid leaving a lot of white space on the previous pages.
+
+Math italics are used for Roman and lower-case Greek letters by default.  If you want an upright letter in math, you can use the relevant math alphabet, e.g., \verb|\mathrm, \mathbf, \mathsf|:
+\begin{equation}\label{eqn:newton2}
+\vec{F} = m \vec{a} \quad\textrm{or}\quad \vec{\mathrm{F}} = m \vec{\mathrm{a}} \quad\textrm{or}\quad \mathbf{F} = m \mathbf{a} \quad\textrm{or}\quad \vec{\mathsf{F}} = m \vec{\mathsf{a}}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The next passage needs to run with either lualatex or pdftex, which call bold-italic math differently. So we define the following to work with either:
+\newcommand*\MyMathbfit[1]{\ifpdftex\bm{#1}\else\symbfit{#1}\fi}
+
+
+ASME typesets vectors in upright bold, like the third instance in Eq.~\eqref{eqn:newton2}, and sets matrices in bold italic. In the next equation, $\mathbf{w}$~is a vector and  $\MyMathbfit{J}_1$ is a matrix:
+\begin{equation}\label{eqn:dw}
+d\mathbf{w} =
+   \begin{pmatrix}
+ 	du \\ dv
+   \end{pmatrix} = 
+   \underbrace{\begin{pmatrix}
+	 \partial u/\partial x &  \partial u/\partial y \\
+	 \partial v/\partial x &  \partial v/\partial y
+   \end{pmatrix}}_{=\,\MyMathbfit{J}_1}  \begin{pmatrix} %% see 12 lines above for \MyMathbfit !
+ 	dx \\ dy
+   \end{pmatrix} 
+\end{equation}
+Note that selecting bold-face italic depends on the engine: with \pdfTeX, do \verb|\bm{..}|; with \LuaLaTeX, do \verb|\symbfit{..}|.  But for both engines, you can get upright letters, as used in the text font, using \verb|\mathbf{..}| or with \verb|\textbf{..}|
+\begin{equation}
+\mathbf{u}_r = u_r\,\hat{\textbf{\i}}+v_r\,\hat{\textbf{\j}}+w_r\,\hat{\textbf{k}}
+\end{equation}
+or, \emph{very} rarely (perhaps never?), \verb|\mathversion{bold}| for an entire equation\footnote{For sans-serif math expressions, \texttt{asmejour.cls} provides \texttt{\string\mathversion \{sans\}} and \texttt{\string\mathversion \{sansbold\}}. These fonts can act as engineering gothic for figures.}: 
+\mathversion{bold}\begin{equation}
+S = k \ln w = k \ln \biggl(\frac{N!}{\prod_i N_i!}\biggr)
+\end{equation}
+\mathversion{normal}% avoiding an extra line break with % 
+Note that the math version must be changed \emph{before} starting math mode. To end bold, do \verb|\mathversion{normal}|.
+
+Slanted lower-case greek letters are available in the usual way, e.g., \verb|\alpha|. The class file also provides \emph{upright} sans-serif Greek letters with \verb|\sfalpha| and similar expressions: $\sfalpha, \sfbeta, \sfgamma, \sfdelta,$ etc. Bold upright sans-serif greek can be obtained in \pdfTeX\ as \verb|\bm{\sfalpha}| or in \LuaLaTeX\ as \verb|\sfbfalpha|. 
+
+Also note that \texttt{newtxmath} (\pdfTeX) provides upright, serif Greek letters as, e.g., \verb|\upomega| (vs.\ \verb|\omega|).
+
+\subsection{The \texttt{newtxmath} and \texttt{unicode-math} Packages~\cite{sharpe1,robertson2023}} The \texttt{newtxmath} package, loaded by default with \pdfTeX, includes many options for mathematics, most of which can be called as options to \verb|\documentclass|. For example, the \texttt{upint} option selects upright integral signs (rather than slanted integral signs):
+\begin{quote}
+\verb|\documentclass[upint]{asmeconf}|. 
+\end{quote}  
+The option \verb|subscriptcorrection| improves the spacing of math subscripts. Math options are discussed further in the \texttt{asmeconf-template.tex} file. 
+
+If using \LuaLaTeX, the math features of \texttt{unicode-math} are available.  These include commands to select a boldface, upright symbol, \verb|\symbfup{..}| or \verb|\mathbfup{..}|, to select boldface fraktur symbol, \verb|\symbffrak{..}| or \verb|\mathbffrak{..}|, and so on.  See the documentation of \texttt{unicode-math} for details~\cite{robertson2023}.
+
+The \texttt{[upint]} option also works under \LuaLaTeX.
+
+
+\subsection{Controlling Calligraphic, Script, Fraktur, or BB Fonts}
+With \pdfTeX, the \texttt{[mathalpha]} package may be loaded in the preamble~\cite{sharpe2}.\footnote{As of v1.25, the \texttt{[mathalfa=ccc=ddd]} class option has been dropped.} This package supports variety of font for calligraphic, fraktur, script, and blackboard bold fonts. For example,
+\begin{center}
+\verb|\usepackage[cal=euler,frak=boondox]{mathalpha}| 
+\end{center}
+selects the Euler font for \verb|\mathcal| and the Boondox font for \verb|\mathfrak|. See the \texttt{mathalpha} documentation for details~\cite{sharpe2}.
+
+Under \LuaLaTeX, the \texttt{unicode-math} \texttt{range} function can be used to select such fonts~\cite{robertson2023}. For example, the following command in the preamble would select the Euler Math font for calligraphic, script, fraktur, and blackboard bold fonts:
+\begin{quote}\raggedright
+\verb|\setmathfont{Euler-Math}[|
+\verb| range={cal,scr,frak,bb},|
+\verb| Extension=.otf,Scale=MatchUppercase]|
+\end{quote}
+
+
+%% Dealing with complicated math in a section heading: optional argument of \section provides the pdf bookmark
+%%    without losing characters or producing warnings/errors. Note that bookmark can include simple math.
+%%	  The command \mathbf{U} takes the U the character from the bold text font 
+\subsection[Math in a Section Heading: \omega\cdot U=0]{Math in a Section Heading: $\dot{\omega}\cdot\mathbf{U}=0$}
+
+To include complicated math in a section heading without producing bookmark-related errors, use the optional argument of \verb|\section| to create the pdf bookmark. The heading above was set with the following command:
+\begin{quote}\raggedright
+\verb|\subsection[Math in a Section Heading:| 
+\hspace*{1em}\verb|\omega\cdot U=0]{Math in a Section Heading:|
+\hspace*{1em}\verb|$\dot{\omega}\cdot\mathbf{U}}=0$}|
+\end{quote}
+Note that bookmarks can include simple math. 
+
+\subsection{Units and Nomenclature} ASME requires SI units. U.~S.\ style units may follow in parentheses. Be sure to put your symbols into the nomenclature list, including the SI units.
+
+
+%%%%%%%%%%%%%%%%%%%  begin linewidth table  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[b]
+\caption{Table at full column width with columns in math mode\label{tab:3}}
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type, from array package
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}CCCC@{\extracolsep{\fill}}}
+\toprule
+X_{z} & X_{c} & X_{c,m} & X_{c,2}\rule{0pt}{8pt}\\
+ 3.92069  & 5.70943 & 6.32429 & 7.08757\\[2pt]
+\varepsilon (T_{1})  & \varepsilon^{i} (T_{1}) & \varepsilon^{i} (T_{m}) & \alpha (T_{1}, T_{2})\\
+0.7258 & 0.6237 & 0.6807 & 0.7964 \\[2pt]
+q_{\textrm{gray}}  & q_{\textrm{int},T_1} & q_{\textrm{int},T_m} & q_{\textrm{exact}}\\
+400.2 & 462.1 & 371.0 & 371.8 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%  end linewidth table %%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Options for \texttt{asmejour.cls}}
+
+\subsection{Lists of Figures and Tables} A list of figures and a list of tables are generated automatically as the last page.  To omit these lists, use the option \texttt{[nolists]}.
+
+\subsection{Final Column Balancing} The option \texttt{[balance]} invokes the the \texttt{flushend} package~\cite{tolusis}.
+This package will attempt to give equal height to the two columns on the last page. The performance of this package is sometimes inconsistent (with odd page layout or, very rarely, errors), so use this option with caution.
+
+\subsection{Line Numbers} The option \texttt{[lineno]} invokes the the \texttt{lineno} package~\cite{bottcher}, which produces line numbers in the margins. You must run \LaTeX\ \emph{twice} for proper placement of the numbers. The \texttt{lineno} package is not compatible with the \texttt{flushend} package that makes final short columns the same height. Balancing is disabled when this option is called. See the documentation of the \texttt{lineno} package for further commands to control line numbering. The abstract, tables, captions, and footnotes will not be numbered.
+
+\subsection{Changing the Footer Text}\label{sec:footer} The option \texttt{[nofoot]} will omit everything other than a page number from the page footer.  The option \texttt{nocopyright} will omit the ASME copyright from the first page footer. The command \verb|\PreprintString{..}| replaces the words \textsf{PREPRINT FOR REVIEW}. The left and right preprint strings can be changed separately using an optional argument: \verb|\PreprintString{..}[L]| and \verb|\PreprintString{..}[R]|.
+The final paper number may be added to the page number using \verb|\PaperNumber{..}|.
+
+The footers are generated with the \texttt{fancyhdr} package~\cite{oostrum}.
+
+\subsection{Vertical Space on Title Page} The space between the author/title/abstract block and the main text defaults to 12.5~mm. Infrequently, a different value may be desirable.  The space can be changed using \verb|\AbstractSep{..}|, where the argument is a \LaTeX\ dimension with units (e.g., 5mm).
+
+\subsection{Federal Copyright Notices} Several types of copyright statement can be placed in an unnumbered footnote on the first page. Use the option \texttt{[govt]} when all authors are federal employees, \texttt{[govtsome]} when some authors are federal employees, and \texttt{[contractor]} when the authors are federal contractors.
+
+
+\subsection{Accessibility and Archivability} PDF/A standards for accessibility and archivability are supported through the command \verb|\DocumentMetadata{..}| at the beginning of the document.  The settings for accessibility (e.g., \texttt{UA-2} or ``well-tagged PDF'') are described in Appendix~\ref{app:wtpdf}.
+
+As of \texttt{asmejour} v1.25, the legacy PDF/A options \texttt{[pdf-a]}, \texttt{[pdfapart=]}, and \texttt{[pdfaconformance=]} have been dropped.
+
+
+\subsection{Typewriter Font Options} This font is the sans-serif, monospaced font \texttt{inconsolata}. By default, the word spacing is variable, but option \texttt{[mono]} ends this behavior. A slashed zero is the default; option \texttt{[var0]} removes the slash. Option \texttt{[hyphenate]} enables hyphenation of the typewriter font when running \pdfTeX.
+
+\subsection{Single column layout}  The class option \texttt{[singlecolumn]} switches from two-column to one-column layout.
+
+%%%%%%%%%%%%%%% begin two column table %%%%%%%%%%%%%%%%%% 
+%
+% note: the fourth column could be a dcolumn instead of using \makebox, with d{1.4} replacing c column.
+%
+\begin{table*}[t]
+\caption{A table spanning two columns}\label{tab:4}%
+\centering{%
+\tagpdfsetup{table/header-rows={1}}%
+\begin{tabular*}{0.8\textwidth}{@{\hspace*{1.5em}}@{\extracolsep{\fill}}ccc!{\hspace*{3.em}}ccc@{\hspace*{1.5em}}}
+\toprule
+\multicolumn{1}{@{\hspace*{1.5em}}c}{$x$\rule{0pt}{8pt}} &
+\multicolumn{1}{c}{$\textrm{erf}(x)$} &
+\multicolumn{1}{c!{\hspace*{3.em}}}{$\textrm{erfc}(x)$} &
+\multicolumn{1}{c}{$x$} &
+\multicolumn{1}{c}{$\textrm{erf}(x)$} &
+\multicolumn{1}{c@{\hspace*{1.5em}}}{$\textrm{erfc}(x)$} \\ 
+\midrule
+0.00 & 0.00000 & 1.00000 & 1.10 & 0.88021 & 0.11980 \\
+0.05 & 0.05637 & 0.94363 & 1.20 & 0.91031 & 0.08969 \\
+0.10 & 0.11246 & 0.88754 & 1.30 & 0.93401 & 0.06599 \\
+0.15 & 0.16800 & 0.83200 & 1.40 & 0.95229 & 0.04771 \\
+0.20 & 0.22270 & 0.77730 & 1.50 & 0.96611 & 0.03389 \\
+0.30 & 0.32863 & 0.67137 & 1.60 & 0.97635 & 0.02365 \\
+0.40 & 0.42839 & 0.57161 & 1.70 & 0.98379 & 0.01621 \\
+0.50 & 0.52050 & 0.47950 & 1.80 & 0.98909 & 0.01091 \\
+0.60 & 0.60386 & 0.39614 & 1.82\makebox[0pt][l]{14} & 0.99000 & 0.01000 \\
+0.70 & 0.67780 & 0.32220 & 1.90 & 0.99279 & 0.00721 \\
+0.80 & 0.74210 & 0.25790 & 2.00 & 0.99532 & 0.00468 \\
+0.90 & 0.79691 & 0.20309 & 2.50 & 0.99959 & 0.00041 \\
+1.00 & 0.84270 & 0.15730 & 3.00 & 0.99998 & 0.00002 \\
+\bottomrule
+\end{tabular*}
+}%
+\end{table*}
+%%%%%%%%%%%%%%%% end two column table %%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+The class \texttt{asmejour} and associated files are for typesetting preprints in the style of ASME journals.
+Documentation is provided in this file and by comments in the \texttt{.tex} source code. Examples of references are shown in the \texttt{asmejour-sample.bib} file.  The \texttt{asemjour.bst} file produces references following ASME's current formats.  The code is compatible with both {\pdfTeX} and \LuaLaTeX. This package is not a publication of ASME and is offered at no cost under the terms of the \hrefurl{https://ctan.org/license/mit}{MIT license}. 
+
+\begin{enumerate}
+\item First conclusion
+\item Second conclusion
+\item Third conclusion 
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgment} %% ASME requests this exact spelling, singular.
+
+Acknowledge individuals, institutions, or companies that supported the authors in preparing the work. Those mentioned might have provided technical support, insightful comments or conversations, materials used in the work, or access to facilities.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Funding Data}
+
+\begin{itemize}
+\item U.S.\ Department of Heat Transfer, Office of Important Ideas (DOHT-OII Award No.\ 3.14159265)
+\end{itemize}
+
+
+%%%%%%%%%  NOMENCLATURE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% The width of labels is set after two latex runs. If you don't like the result, an optional
+%% argument to the environment can be given with the desired width, e.g., [20pt].
+%% The name "nomenclature" can be changed using an optional second argument to the environment.
+%%		e.g., \begin{nomenclature}[40pt][List of Symbols]
+%%
+%% Entries may be given as shown below:
+%%
+%% 		\EntryHeading{Greek Letters}
+%%		\entry{symbol}{definition}
+%%
+\begin{nomenclature}
+% capital letter comes first, lower case second
+% don't capitalize first word of the definition
+
+\entry{$\overline{h}$}{average heat transfer coefficient (W m$\cramped{^{-2}}$ K$\cramped{^{-1}}$)}% \cramped{} lowers superscripts; see documentation of mathtools package!
+\entry{$k$}{thermal conductivity (W m$^{-1}$ K$^{-1}$)}
+\entry{$\mathbf{q}$}{heat flux vector (W m$^{-2}$)}
+
+\EntryHeading{Greek Letters}
+\entry{$\alpha$}{thermal diffusivity (m$^2$ s$^{-1}$)}
+\entry{$\nu$}{kinematic viscosity (m$^2$ s$^{-1}$)}
+
+\EntryHeading{Dimensionless Groups}
+\entry{Pr}{Prandtl number, $\nu/\alpha$}
+\entry{Sc}{Schmidt number, $\nu/\mathcal{D}_{1,2}$}
+
+\EntryHeading{Superscripts and Subscripts}
+\entry{b}{bulk value}
+\entry{$\infty$}{free stream value}
+
+\end{nomenclature}    
+
+
+%%%%%%%%%%%%%%%  APPENDICES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Note that appendices will be "numbered" A, B, C, ... etc. Use \section, not \section*
+%% The equation counter is automatically reset for each appendix
+%% Figures will be numbered consecutively with the paper.
+
+\appendix % starts appendices
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Incomplete Zeta Function~\cite{lienhard2019}\label{app:zetafunction}}
+
+This text is just for illustration. The radiation fractional function may be written in terms of the incomplete zeta function for convenience:
+\begin{align}
+f(\lambda T)  &=  \frac{1}{\sigma T^4} \int_0^\lambda\frac{2\pi h c_o^2}{\lambda^5 \left[ \exp (h c_o/k_B T \lambda) - 1\right] } \, d\lambda \\
+              &=  \frac{1}{\sigma T^4}\frac{2\pi k_B^4 T^4}{h^3c_o^2}\int^\infty_{c_2/\lambda T}\frac{t^3}{e^t -1}\, dt\label{eqn:zeta}
+\end{align}
+When $\lambda T \rightarrow \infty$, $f = 1$ and the last equation yields the well-known result
+\begin{equation}
+\sigma T^4 =\frac{2\pi k_B^4 T^4}{h^3c_o^2} \underbrace{\int_0^\infty \frac{t^3}{e^t - 1} \, dt}_{\equiv\mspace{2mu} \zeta(4)\Gamma(4)} 
+\end{equation}
+where the Gamma function $\Gamma(4) = 3!$ and the Riemann zeta function, $\zeta(4)$, has the indicated integral representation \cite[\S13.12]{ww1927}.  A classical result due to Euler \cite{euler1740} gives $\zeta(4) = \pi^4/90$ (see also \cite[\S167]{euler1748}), from which we recover the usual definition of the  Stefan-Boltzmann constant, $\sigma$. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Language Support\label{app:language}}
+
+ASME publishes in English, but the \texttt{babel} package is loaded for users who may wish to include other languages. 
+For example, an author might wish to include an appendix that provides the abstract in another language. As an example, 
+a passage in German is shown in \selectlanguage{german}\appendixname~\ref{app:pohlhausen}\selectlanguage{english}.
+
+When more than one language option is included in \verb|\documentclass[..]{asmejour}|, English will be 
+assumed to be the main language of the document. (To choose a different main language, set the class option \texttt{[main=..]}).
+
+The standard caption and section names will follow \texttt{babel}'s dictionary for primary languages other than English.  Users may additionally change ``Keywords'', ``Nomenclature'', and  ``Corresponding author'' by renewing the commands \verb|\keywordname|, \verb|\nomname|, and \verb|\CAwords|. Changes to the page footer were described in Sec.~\ref{sec:footer}.
+
+The font encoding is set to T1 (\pdfTeX) or TU (\LuaLaTeX), and utf-8 input is supported:
+%% If you have trouble with the next line, your file may not be saved in utf-8 format. You can delete these lines to resolve the issue.
+\typeout{If you have trouble with the next line, your file may not be saved in utf-8 format. You can delete that line to resolve the issue.}
+\ifluatex\typeout{Under LuaLaTeX, some of these accents must be obtained as escaped characters, with \=a, \c{e}, \l, \.o, \oe, \v{z}, \'z, etc.}\fi
+àáâäæãåā  èéęëêēė  îïíīįì ôöòóœøōõ ûüùúū çćč ł ñń ßśš ÿ žźż.
+
+Note that some languages make characters ``active.'' For example, the \texttt{[spanish]} option of \texttt{babel} makes the period character active.  This change conflicts with the default behavior of \texttt{dcolumn} in this class, which aligns table columns of type \verb|d{m.n}| on the decimal point (see comments in the \texttt{.cls} file).
+
+No effort has been made to support customization of language-specific fonts.\footnote{For English, you \emph{must} have these OpenType fonts (\texttt{.otf}) installed (all are in TeX Live and will be present if your installation is complete and up-to-date): TeX Gyre Termes, TeX Gyre Termes Math, TeX Gyre Heros, Inconsolatazi4, XITSMath-Bold, LeteSansMath, LeteSansMath-Bold, and STIX Two Math.} Such fonts can be implemented using \texttt{babel} commands with \texttt{fontspec} under \LuaLaTeX. The bibliography style, \texttt{asmejour.bst}, is designed in English and aimed at \texttt{BibTeX}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\selectlanguage{german}
+\section{Der Wärmeaustausch zwischen festen Körpern und Flüssigkeiten mit kleiner reibung und kleiner Wärmeleitung (von E. Pohlhausen)\label{app:pohlhausen}}
+
+In einer strömenden Flussigkeit sind Wärmeleitung und Wärmekonvektion Vorgänge, die mit der inneren Reibung (oder Impulsleitung) und mit der Impulskonvektion große Aehnlichkeit besitzen. Mathematisch findet dies seinen Ausdruck in dem gleichartigen Bau der Differentialgleichungen, die einerseits für die Temperatur und anderseits für den Geschwindigkeitsvektor in der Flüssigkeit bestehen. Man kann daraus auf eine Beziehung
+zwischen dem Wärmeaustanch und dem Reibungswiderstand schließen, die eine strömende Flüssigkeit an einem festen Körper hervorrufen. Dies ist zuerst von Prandtl ausgesprochen und durchgeführt worden, und zwar für turbulente Vorgänge, unter der vereinfachenden Annahme von Wärmequellen und -senken im Innern der Flüssigkeit~\cite{pohlhausen1921}.
+\selectlanguage{english}% don't forget to return to your main language
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Accessibility and Well-tagged PDF}\label{app:wtpdf}
+As of the November 2025 release of \LaTeX, the \texttt{asmejour} class can produce accessible PDF files that validate under 
+the PDF/A UA-2 and A-4F standards and which meet the WTPDF 1.0 accessibility and reuse standards. For this, run \LuaLaTeX{} and choose the following settings: 
+ \begin{quote}
+	\verb|\DocumentMetadata{ | \newline
+	\verb| pdfversion = 2.0, % default setting | \newline
+	\verb| pdfstandard = { ua-2 , a-4f },| \newline
+	\verb| tagging = on }|
+\end{quote}
+Figure files must be compatible with the standard (e.g., provided as PDF/A-3u or jpg). N.B.: not all language options are compatible with tagging.
+
+Tagged PDF files can render accurately as HTML files (see \hrefurl{https://ngpdf.com}{ngpdf.com}). Version 1.27 of \texttt{asmejour} added a CSS style sheet to control web appearance, \texttt{asmejour-style.css}. 
+
+%%%%%%%%%%%%%  BIBLIOGRAPHY  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nocite{*} %% <=== Delete this line - unless you wish to typeset the entire contents of your .bib file.
+
+\bibliographystyle{asmejour}   %% .bst file that follows ASME journal format. Do not change.
+
+\bibliography{asmejour-sample} %% <=== change this to name of your bib file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% To omit final list of figures and tables, use the class option [nolists]
+
+\end{document}
