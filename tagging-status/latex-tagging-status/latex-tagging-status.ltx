@@ -62,7 +62,7 @@ layout: null
 }
 {% if p.subpackages -%}
   {%- for sp in p.subpackages -%}
-\@kernel@tagging@status{{%- if true -%}{{sp}}{%- endif -%}}{100}
+\@kernel@tagging@status{ {%- if true -%} {{sp}} {%- endif -%}} {100}
 {% endfor -%}
 {%- endif -%}    
 {% endfor %}
