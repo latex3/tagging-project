@@ -5488,6 +5488,7 @@
 - name: graphics
   type: package
   status: compatible
+  subpackages: [epstopdf-base]
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: See `graphicx` package
@@ -8954,6 +8955,7 @@
 - name: pgf
   type: package
   status: unchecked
+  subpackages: [pgfcore,pgfsys,pgfcomp-version-0-65,pgfcomp-version-1-18]  
   included-in: [arxiv10]
   priority: 3
   issues:

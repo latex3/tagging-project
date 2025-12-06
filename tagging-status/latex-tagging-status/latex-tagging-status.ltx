@@ -58,6 +58,11 @@ layout: null
     {%-  if p.status == "no-support" -%}1{%- endif -%}
     {%-  if p.status == "unchecked" -%}0{%- endif -%}
 }
+{%- if p.subpackages -%}
+  {%- for sp in p.subpackages -%}
+\@kernel@tagging@status{{sp}}{100}
+{% endfor -%}
+{%- endif -%}    
 {% endfor %}
 
 \catcode`\@=\count@
