@@ -56,7 +56,7 @@ l3build save -c config-unchecked -e pdftex <class or package name>-01
 to create an XML file named `<class or package name>-01.struct.xml` in the `testfiles/<class or package name>/` subdirectory. 
 Check the contents of this file as well.
 
-This may be validated with the schema `latex-document-swictch.rnc` The file must be valid
+This may be validated with the schema `latex-document-switch.rnc` The file must be valid
 if the package is to be given a status `compatible` If the file is invalid then the test file should be renamed to end with `-BAD`.
 
 This file shows a combination of tagging, structure and alternative representations 
