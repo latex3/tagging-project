@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{splitbib}
+
+\begin{category}{Articles}
+\SBentries{article-full,article-minimal}
+\end{category}
+\begin{category}{Books}
+\SBentries{book-full,book-minimal}
+\end{category}
+
+\title{splitbib tagging test}
+
+\begin{document}
+
+\cite{article-full}
+
+\cite{book-minimal}
+
+\bibliographystyle{plain}
+\bibliography{xampl}
+
+\end{document}

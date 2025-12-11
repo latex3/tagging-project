@@ -7324,9 +7324,9 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922]
+  issues: [139,922,1119]
   tests: true
-  updated: 2025-06-29
+  updated: 2025-12-11
 
 - name: mattens
   type: package
@@ -9339,11 +9339,11 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues:
+  issues: [1117]
   tests: false
   tasks: needs tests
   comments: "Relies on incompatible forest package."
-  updated: 2025-11-22
+  updated: 2025-12-11
 
 - name: psfrag
   type: package
@@ -10368,6 +10368,15 @@
   issues:
   tests: false
   updated: 2025-11-21
+
+- name: splitbib
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1125]
+  tests: true
+  updated: 2025-12-11
 
 - name: splitidx
   ctan-pkg: splitindex
@@ -12964,36 +12973,40 @@
   status: currently-incompatible
   included-in: [tlc3,arxiv01]
   priority: 2
+  issues: [1118]
   related-issues: [88]
   tests: false
-  updated: 2024-07-10
+  updated: 2025-12-11
 
 - name: scrbook
   type: class
   status: currently-incompatible
   included-in: [tlc3, arxiv001]
   priority: 2
+  issues: [1118]
   related-issues: [88]
   tests: false
-  updated: 2024-07-10
+  updated: 2025-12-11
 
 - name: scrlttr2
   type: class
   status: unchecked
   included-in:
   priority: 9
+  issues: [1118]
   related-issues: [88]
   tests: false
-  updated: 2024-07-10
+  updated: 2025-12-11
 
 - name: scrreport
   type: class
   status: currently-incompatible
   included-in: [tlc3, arxiv001]
   priority: 2
+  issues: [1118]
   related-issues: [88]
   tests: false
-  updated: 2024-07-10
+  updated: 2025-12-11
 
 - name: standalone
   type: class
