@@ -96,7 +96,7 @@ If your package is compatible and does not require test files, set `tests: false
 Change `updated` to the current date.
 
 If your package is only to be used with LuaTeX, add `luatex-only: true` to the settings
-and place the tests in an approriate test area ending `-luatex` such as `testfiles-compatible-luatex`
+and place the tests in an appropriate test area ending `-luatex` such as `testfiles-compatible-luatex`
 
 Finally, push your changes and wait for the Team to inspect your test file and the accompanied XML file. 
 You may be asked about specific implementation details and may need to explain your implementation decisions. 
