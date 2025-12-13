@@ -26,4 +26,5 @@ Code Status                 Meaning
 2   currently-incompatible Currently incompatible with the tagging code, may be updated eventually  
 1   no-support             Incompatible with the tagging code, not expected to be supported  
 0   unknown                Status is not known
+100 unlisted               Subpackage entry
 ```
