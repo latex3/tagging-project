@@ -3848,13 +3848,14 @@
 
 - name: emo
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Symbols disappear in tags with lualatex. Inserts images that need
+             actualtext or ToUnicode values with pdflatex."
+  updated: 2025-12-15
 
 - name: emoji
   type: package
