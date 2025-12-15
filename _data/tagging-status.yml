@@ -200,10 +200,10 @@
   status: partially-compatible
   included-in:
   priority: 9
-  comments: "the toUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
-  issues:
+  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
+  issues: [1131]
   tests: true
-  updated: 2025-12-13
+  updated: 2025-12-15
 
 - name: adfbullets
   ctan-pkg: adfsymbols
@@ -211,10 +211,11 @@
   status: partially-compatible
   included-in:
   priority: 9
-  comments: "the toUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
+  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
   issues:
+  related-issues: [1131]
   tests: true
-  updated: 2025-12-13
+  updated: 2025-12-15
 
 - name: adforn
   type: package
@@ -4260,13 +4261,12 @@
 
 - name: expex
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1128]
+  tests: true
+  updated: 2025-12-15
 
 - name: expl3
   type: package
@@ -7944,6 +7944,16 @@
   tests: true
   updated: 2024-08-23
 
+- name: nccfloats
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1129]
+  tests: true
+  comments:
+  updated: 2025-12-15
+
 - name: nccfoots
   type: package
   status: compatible
@@ -9144,10 +9154,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv5]
   priority: 2
-  comments: "Missing ToUnicode for text symbols. Labels disappear in `dingautolist`."
-  issues:
+  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
+  issues: [1132]
   tests: true
-  updated: 2024-07-25
+  updated: 2025-12-15
 
 - name: pigpen
   type: package
@@ -11875,13 +11885,12 @@
 
 - name: versonotes
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1127]
+  tests: true
+  updated: 2025-12-15
 
 - name: vertbars
   type: package
