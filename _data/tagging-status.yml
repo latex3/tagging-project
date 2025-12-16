@@ -3859,13 +3859,15 @@
 
 - name: emoji
   type: package
-  status: compatible
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
   tests: true
-  updated: 2025-12-15
+  comments: "Compatible with some emoji fonts, however default Noto Color fonts
+             are not supported at the PDF tagging level."
+  updated: 2025-12-16
 
 - name: empheq
   type: package
