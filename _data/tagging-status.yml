@@ -2353,6 +2353,16 @@
   comments: "Tagged as normal text instead of figure with Alt text."
   updated: 2025-09-12
 
+- name: bxcoloremoji
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Relies on partially-compatible twemojis package."
+  tests: true
+  updated: 2025-12-15
+
 - name: bxeepic
   type: package
   status: compatible
@@ -3849,24 +3859,26 @@
 
 - name: emo
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Symbols disappear in tags with lualatex. Inserts images that need
+             actualtext or ToUnicode values with pdflatex."
+  updated: 2025-12-15
 
 - name: emoji
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Compatible with some emoji fonts, however default Noto Color fonts
+             are not supported at the PDF tagging level."
+  updated: 2025-12-16
 
 - name: empheq
   type: package
