@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{newfile}
+\newoutputstream{figs}
+\openoutputfile{figures.myext}{figs}
+\begin{document}
+Some text
+\begin{writeverbatim}{figs}
+\begin{figure}
+A figure
+\caption{The first figure}
+\end{figure}
+\end{writeverbatim}
+Some more text
+\begin{writeverbatim}{figs}
+\begin{figure}
+Another figure
+\caption{The second figure}
+\end{figure}
+\end{writeverbatim}
+\closeoutputstream{figs}
+\input{figures.myext}
+\end{document}
