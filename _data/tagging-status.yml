@@ -2234,6 +2234,15 @@
   tests: false
   updated: 2024-08-26
 
+- name: bnumexpr
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-12-16
+
 - name: boldline
   type: package
   status: currently-incompatible
@@ -3046,6 +3055,16 @@
   issues:
   tests: true
   updated: 2025-05-29
+
+- name: colophon
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  comments: "Colophon title is not tagged."
+  issues:
+  tests: true
+  updated: 2025-12-16
 
 - name: color
   type: package
@@ -5873,6 +5892,15 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: icomma
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: true
+  updated: 2025-12-16
 
 - name: ifetex
   type: package
@@ -9100,6 +9128,16 @@
   tests: true
   updated: 2024-08-16
 
+- name: pgfparser
+  ctan-pkg: pgf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-12-16
+
 - name: pgfplots
   type: package
   status: currently-incompatible
@@ -9297,6 +9335,16 @@
   issues:
   tests: true
   updated: 2024-08-21
+
+- name: polexpr
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  comments:
+  issues: [1142]
+  tests: true
+  updated: 2025-12-16
 
 - name: polyglossia
   type: package
@@ -12202,12 +12250,13 @@
 - name: xint
   type: package
   status: unchecked
+  subpackages: [xintbinhex,xintcfrac,xintcore,xintexpr,xintfrac,xintgcd,xintkernel,xintlog,xintseries,xinttools,xinttrig]
   included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  updated: 2025-12-16
 
 - name: xistercian
   type: package
@@ -12462,6 +12511,15 @@
   updated: 2024-07-29
 
 #------------------------ ZZZ ----------------------------
+
+- name: zeckendorf
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2025-12-16
 
 - name: zhnumber
   type: package
