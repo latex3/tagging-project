@@ -3938,13 +3938,14 @@
 
 - name: endnotesj
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
+  luatex-only: true
+  updated: 2025-12-17
 
 - name: engord
   type: package
@@ -5223,13 +5224,13 @@
 
 - name: gb4e
   type: package
-  status: unchecked
+  subpackages: [cgloss4e]
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  issues: [1147]
+  tests: true
+  updated: 2025-12-17
 
 - name: gelasio
   type: package
