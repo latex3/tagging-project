@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{gb4e}
+
+\title{gb4e tagging test -- 2}
+
+\begin{document}
+
+\begin{exe} % sets up the top-level example environment
+\ex\label{here} Here is one. % example with running number
+\ex[*]{Here another is.} % judged ex. with running number
+\ex Here are some with judgements.
+\begin{xlist} % first embedding (alphabetical numbering)
+\ex[]{A grammatical sentence am I.}
+\ex[*]{An ungrammatical sentence is you.}
+\ex[??]{A dubious sentence is she.}
+\ex % just the number
+\begin{xlist} % second embedding (roman numbering)
+\ex[**]{Need one a second embedding?}
+\ex[\%]{sometime.}
+\end{xlist} % end second embedding
+\ex Dare to judge me!
+\end{xlist} % end first embedding
+\ex This concludes our demonstration.
+\end{exe}
+
+ldots a sentiment already expressed in (\ref{here})
+on page \pageref{here}, repeated here:
+\begin{exe}
+\exr{here} Here is one.
+\end{exe}
+
+\ldots which contrasts sharply with
+ this errors
+\begin{exe}
+\exp{here}[??]{Here is two.}
+\end{exe}
+
+\end{document}
