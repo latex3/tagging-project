@@ -1,0 +1,31 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{titletoc}
+\usepackage{hyperref}
+
+\titlecontents{section}
+[3.8em] % ie, 1.5em (chapter) + 2.3em
+{}
+{\contentslabel{2.3em}}
+{\hspace*{-2.3em}}
+{\titlerule*[1pc]{.}\contentspage}
+
+\title{titletoc tagging test -- 2}
+
+\begin{document}
+
+\tableofcontents
+\section{Some section}
+\section{Another section}
+\subsection{Some subsection}
+\section{Yet another section}
+\subsection{Another subsection}
+Normal text
+
+\end{document}
