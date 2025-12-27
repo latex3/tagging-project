@@ -2701,6 +2701,15 @@
   comments: "Needs luatex85 loaded with lualatex."
   updated: 2024-08-07
 
+- name: changelog
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: true
+  updated: 2025-12-26
+
 - name: changepage
   type: package
   status: partially-compatible
@@ -11414,9 +11423,9 @@
   included-in: [tlc3, arxiv1]
   priority: 2
   issues: [24]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  tests: true
+  tasks: needs more tests
+  updated: 2025-12-24
 
 - name: titletoc
   type: package
@@ -11424,10 +11433,9 @@
   included-in: [tlc3, arxiv01]
   priority: 2
   comments: Mentioned in issue.
-  issues: [24]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  issues: [24,1157]
+  tests: true
+  updated: 2025-12-26
 
 - name: titling
   type: package
@@ -12030,13 +12038,12 @@
 
 - name: wallpaper
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-23
+  issues: [1158]
+  tests: true
+  updated: 2025-12-26
 
 - name: warpcol
   type: package
