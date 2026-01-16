@@ -25,6 +25,7 @@ extrahead: youtube-head
   * [Configuration possibilities](#latex-configs)
   * [MathML AF with Foxit/NVDA](#foxit-af)
   * [MathML SE with Acrobat/NVDA](#acrobat-se)
+  * [MathML AF with FireFox/NVDA](#firefox-af)
 * [ChatGPT's interpretation](#chatgpt)
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
@@ -266,6 +267,20 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 
 The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
 
+### Firefox/NVDA reading PDF with MathML AF {#firefox-af}
+- FireFox 149 (Windows 11)
+- NVDA 2025.3.2 using Windows OneCore voice "Zira"
+- NVDA add-on MathCAT 0.7.4
+
+{% include youtube.html id="GvICkXGMCHU" width="medium" comment="t8af firefox"%}
+
+#### Observations
+
+....
+
+#### Summary
+
+....
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
