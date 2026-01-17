@@ -276,7 +276,7 @@ The use of structure elements instead of AF files give identical results for mat
 
 #### Observations
 
- - Firefox has issues handling `/Phoneme` settings e.g., `[ˈlaːtɛx]` on the word LaTeX (as many other readers have) so it comes out as _L A Teks._
+ - Firefox has issues handling `/AltText`. It possibly ignores this attribute completely. This is noticable here as the LaTeX logo is passed to AT as L A TEX so it comes out as _L A Tek_s, despite the `AltText` property specifying `LaTeX`, which, as noted below, is in the speech dictionary and would be read as `lay-tech`. It also ignores the `/Phoneme` setting on the element, i.e., `[ˈlaːtɛx]`, which would be another way to get to a correct reading.
  - Hyphenated words are not correctly reconstructed, so you hear _foll low_ or the infamous _mathema I C S_
  - Links are read several times, e.g., _LINK 2.1 LINK LINK same page LINK 2.1 Mathematics LINK Mathematics_. This is the case for all links in the document, not just in TOC but to figures, to bib entries, etc.
  - The footnote is read in a reasonable way at the correct point, except that again there is one extra link reading  _same page link 1_ but this time it comes just above the line with the footnote marker, so in a different place (probably due to the footnote marker being raised, thus above the text in the line).
