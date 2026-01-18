@@ -288,7 +288,7 @@ The use of structure elements instead of AF files give identical results for mat
 #### Summary
 
 As the new kid on the block, Firefox is already doing fairly well with the sample document. The existing issues are annoying but do not really make the reading of the documents incomprehensible. However, we hope that they get soon resolved, after which Firefox would be a great choice to read a STEM PDF directly in the browser.
-....
+
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
