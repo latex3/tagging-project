@@ -281,7 +281,6 @@ The use of structure elements instead of AF files give identical results for mat
  - Links are read several times, e.g., _LINK 2.1 LINK LINK same page LINK 2.1 Mathematics LINK Mathematics_. This is the case for all links in the document, not just in TOC but to figures, to bib entries, etc.
  - The footnote is read in a reasonable way at the correct point, except that again there is one extra link reading  _same page link 1_ but this time it comes just above the line with the footnote marker, so in a different place (probably due to the footnote marker being raised, thus above the text in the line).
  - The mathematics are read correctly.
- - However, in the set of equations the equation numbers are read again after the reading of the formula has finished, so one gets a spurious _2.1 2.2_  after it.
  - The rest of the document is read well including the the list, the inline graphic, the table, the side note, the theorem,  and the verbatim text.
  - The bibliography is not marked up specially (other than being a list) so the entries are not read as well as they could. But this is a failure of the document not having very detailed tagging there, i.e., not firefox's fault.
 
