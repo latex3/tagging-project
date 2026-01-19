@@ -9470,14 +9470,14 @@
 
 - name: prooftrees
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in:
   priority: 9
   issues: [1117]
-  tests: false
+  tests: true
   tasks: needs tests
-  comments: "Relies on incompatible forest package."
-  updated: 2025-12-11
+  comments: "Depends on forest-ext. Note tableaux are syntactic not semantic."
+  updated: 2026-01-19
 
 - name: psfrag
   type: package
