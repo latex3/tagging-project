@@ -289,6 +289,19 @@ The use of structure elements instead of AF files give identical results for mat
 
 As the new kid on the block, Firefox is already doing fairly well with the sample document. The existing issues are annoying but do not really make the reading of the documents incomprehensible. However, we hope that they get soon resolved, after which Firefox would be a great choice to read a STEM PDF directly in the browser.
 
+### Firefox/JAWS reading PDF with MathML AF {#firefox-af-jaws}
+- FireFox 149 (Windows 11)
+- JAWS 2025.2505.43 (40 min trial mode)
+
+{% include youtube.html id="bH8Ls4xUH4s" width="medium" comment="af firefox JAWS"%}
+
+#### Observations
+
+...
+
+#### Summary
+
+...
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
