@@ -305,7 +305,7 @@ As the new kid on the block, Firefox is already doing fairly well with the sampl
 
 #### Observations
 
- - Based on Firefox, some aspects are shared with the reading using NVDA, Notably the lack of support for `ActualTeX`
+ - Based on Firefox, some aspects are shared with the reading using NVDA, Notably the lack of support for `Actualtext`
    and inconsistent behaviour at hyphenations.
  - Some linebreaks are lost causing words to be joined for example `to \\ be` is read as "tobe" (rhyming with lobe).
    Some hyphenated words are reconstituted eg `mathemat-ics` read as mathematics but it is not clear if hyphenation
@@ -325,6 +325,9 @@ accessibile PDF with JAWS.  Even now (while the firefox implementation
 is still in beta and probably not tested with JAWS at all) it provides
 a usable reading and for JAWS users is likely to be much more
 convenient than switching to NVDA to read PDF files.
+
+Note that this reading is based on default JAWS settings with almost no customisation
+as we have little experience in using JAWS compared to NVDA.
 
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
