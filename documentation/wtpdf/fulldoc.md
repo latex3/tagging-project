@@ -22,7 +22,7 @@ extrahead: youtube-head
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF generated from LaTeX](#latex-tag)
-  * [Configuration possibilities](#latex-configs)
+  * [LaTeX Generated PDF files](#latex-configs)
   * [MathML AF with Foxit/NVDA](#foxit-af)
   * [MathML SE with Acrobat/NVDA](#acrobat-se)
   * [MathML AF with FireFox/NVDA](#firefox-af)
@@ -208,10 +208,17 @@ Both are valid approaches in PDF 2.0, but unfortunately, as of today, PDF consum
 
 LaTeX can automatically produce the necessary MathML for either method if the LuaTeX engine is used. If pdfTeX is used only the AF method is supported and the data for the AF files have to be prepared in a separate step, as is explained elsewhere.
 
-### Configuration possibilities {#latex-configs}
+### LaTeX Generated Tagged PDF files {#latex-configs}
 
 As shown in [the example page](larger-example) LaTeX may be configured to use
 Associated files or Structure Elements to provide MathML tagging for mathematics.
+
+The tagged files used in the following videos are available here
+
+* [Document with MathML Associated Files](stem-article-2col-af.pdf)
+* [Document with MathML Structure Elements](stem-article-2col-se.pdf)
+
+Alternatively in the linked [the example page](larger-example) an online editor is provided to let you modify the LaTeX source, and generate new PDF with an up to date LaTeX system.
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
