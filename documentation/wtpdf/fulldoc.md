@@ -305,11 +305,30 @@ As the new kid on the block, Firefox is already doing fairly well with the sampl
 
 #### Observations
 
-...
+ - Based on Firefox, some aspects are shared with the reading using NVDA, Notably the lack of support for `Actualtext`
+   and inconsistent behaviour at hyphenations.
+ - Some linebreaks are lost causing words to be joined for example `to \\ be` is read as "tobe" (rhyming with lobe).
+   Some hyphenated words are reconstituted eg `mathemat-ics` read as mathematics but it is not clear if hyphenation
+   is being handled or if this is a symptom of line ends generally being dropped.
+ - The link to the footnote in the first column is (as with Firefox_NVDA) announced at the start of that line, not where it occurs in the line.
+ - Exiting math is always announced (it may be possible to configure JAWS not to do this) but it disturbs the reading, especially in the verbatim section where math is used around single characters to force symbols to be read.
+ - The video is recorded with the visual marker (red rectangle) of the text being read. This is usually far from the expected place and jumps around the page. (Possibly due to the internal translation from pdf to html in pdf.js). This also causes some issues selecting start points to be read with the mouse rather than keyboard navigation as clicking on the page does not move the reading point to that position.
+ - While the math is correctly located and passed to MathCAT, the resulting text is not read as well as NVDA, n-th power is read as n-t-h not "enth" and pauses are lost, making the matrix expression particularly hard to follow.
+- The table is announced with correct number of rows and columns, although the columns are not announced as the table is read (JAWS does have some options controlling verbosity of table readings, this is the default setting).
 
 #### Summary
 
-...
+While there are several issues as noted above, Firefox, using web
+platform API rather than the PDF-specific API to expose the
+accessibility tree has for the first time provided a route to reading
+accessibile PDF with JAWS.  Even now (while the firefox implementation
+is still in beta and probably not tested with JAWS at all) it provides
+a usable reading and for JAWS users is likely to be much more
+convenient than switching to NVDA to read PDF files.
+
+Note that this reading is based on default JAWS settings with almost no customisation
+as we have little experience in using JAWS compared to NVDA.
+
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}
 
