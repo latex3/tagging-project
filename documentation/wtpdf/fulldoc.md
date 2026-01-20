@@ -218,7 +218,7 @@ The tagged files used in the following videos are available here
 * [Document with MathML Associated Files](stem-article-2col-af.pdf)
 * [Document with MathML Structure Elements](stem-article-2col-se.pdf)
 
-Alternatively in the linked [the example page](larger-example) an online editor is provided to let you modify the LaTeX source, and generate new PDF with an up to date LaTeX system.
+Alternatively, [a page with an online editor](larger-example) is provided to let you modify the LaTeX source, and generate new PDF with an up to date LaTeX system.
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
