@@ -26,6 +26,7 @@ extrahead: youtube-head
   * [MathML AF with Foxit/NVDA](#foxit-af)
   * [MathML SE with Acrobat/NVDA](#acrobat-se)
   * [MathML AF with FireFox/NVDA](#firefox-af)
+  * [MathML AF with FireFox/JAWS](#firefox-af-jaws)
 * [ChatGPT's interpretation](#chatgpt)
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
