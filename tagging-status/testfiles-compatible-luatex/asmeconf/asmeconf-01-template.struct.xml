@@ -68,23 +68,23 @@
      </text>
     </text-unit>
    </Conference_information>
-   <Div xmlns="http://iso.org/pdf2/ssn"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0016"
-      title="Paper number"
+      rolemaps-to="Part"
      >
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <text xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0017"
-       rolemaps-to="Part"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0018"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Justify"
-        rolemaps-to="P"
-       >
-     </text>
-     <Div xmlns="http://iso.org/pdf2/ssn"
+    </text>
+    <Div xmlns="http://iso.org/pdf2/ssn"
+       id="ID.0018"
+      >
+     <Paper_number xmlns="https://www.latex-project.org/ns/local/asmeconf"
         id="ID.0019"
+        rolemaps-to="Div"
        >
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0020"
@@ -99,14 +99,14 @@
         <?MarkedContent page="1" ?>IMECE2025-XXXX
        </text>
       </text-unit>
-     </Div>
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0022"
-        rolemaps-to="P"
-       >
-     </text>
-    </text-unit>
-   </Div>
+     </Paper_number>
+    </Div>
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0022"
+       rolemaps-to="P"
+      >
+    </text>
+   </text-unit>
    <Title xmlns="http://iso.org/pdf2/ssn"
       id="ID.0023"
       title="Title"
@@ -1201,7 +1201,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>To begin, fill in the fields to be completed at top of theasmeconf-template.tex file. These fields include the headers for your conference and your paper number. Specified metadata will be placed into the pdf file itself. The title should be placed into \title{..}.
+       <?MarkedContent page="1" ?>To begin, fill in the fields to be completed at top of the asmeconf-template.tex file. These fields include the headers for your conference and your paper number. Specified metadata will be placed into the pdf file itself. The title should be placed into \title{..}.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -1214,7 +1214,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>Put author names into the \SetAuthors{name, name,...} command in the desired order; follow the syntax illustratedasmeconf-template.tex file. Put each distinct address sequen­tially into a separate \SetAffiliation{n}{address}, where 
+       <?MarkedContent page="1" ?>Put author names into the \SetAuthors{name, name,...} command in the desired order; follow the syntax illustrated asmeconf-template.tex file. Put each distinct address sequen­tially into a separate \SetAffiliation{n}{address}, where 
        <Formula xmlns="http://iso.org/pdf2/ssn"
           id="ID.0182"
           title="math"
@@ -1447,7 +1447,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Equations are typeset in the usual way and will be automati­cally numbered. The class file loads the amsmath and mathtoolspackages. Further, the newtxmath package used for the math fonts includes many additional features (see Sect. 
+      <?MarkedContent page="2" ?>Equations are typeset in the usual way and will be automati­cally numbered. The class file loads the amsmath and mathtools packages. Further, the newtxmath package used for the math fonts includes many additional features (see Sect. 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0217"
         >
@@ -1639,7 +1639,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Simple mathematical expressions can be used in either cap­tions or section headings. For a section heading that includes more complicated math (and macros), you may use the optional argument of \section[..]{..} to create a pdf bookmark with­out losing characters or producing warnings or errors. See theasmeconf-template.tex source file for examples of this pro­cedure. These bookmarks should usually be text expressions, although some math is supported.
+      <?MarkedContent page="2" ?>Simple mathematical expressions can be used in either cap­tions or section headings. For a section heading that includes more complicated math (and macros), you may use the optional argument of \section[..]{..} to create a pdf bookmark with­out losing characters or producing warnings or errors. See the asmeconf-template.tex source file for examples of this pro­cedure. These bookmarks should usually be text expressions, although some math is supported.
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -1733,7 +1733,7 @@
        <?MarkedContent page="2" ?>2
        <?ReferencedObject type="Annot" page="2" ?>
       </Link>
-      <?MarkedContent page="2" ?>), and the arrayand dcolumn packages which provide extended capabilities for columns in the tabular environment (see Table 
+      <?MarkedContent page="2" ?>), and the array and dcolumn packages which provide extended capabilities for columns in the tabular environment (see Table 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0440"
         >
@@ -1780,7 +1780,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* andsidewaysfigure* environments [
+      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* and sidewaysfigure* environments [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0447"
         >
@@ -1955,7 +1955,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?>Basic support for eprint numbers is also included, generat­ing a url at the end of the citation. The archive type may be spec­ified using the macros arxiv, googlebooks, hdl, jstore, oclc, or pubmed (e.g., archive=hdl, without braces). Botheprint and archive fields must be given. Other root urls may be invoked using archive = {https://another.url.org/}.
+       <?MarkedContent page="3" ?>Basic support for eprint numbers is also included, generat­ing a url at the end of the citation. The archive type may be spec­ified using the macros arxiv, googlebooks, hdl, jstore, oclc, or pubmed (e.g., archive=hdl, without braces). Both eprint and archive fields must be given. Other root urls may be invoked using archive = {https://another.url.org/}.
       </text>
      </text-unit>
     </Sect>
@@ -1980,7 +1980,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?> A bibliography entry @online{.. is in­cluded for citation of online sources, such as web pages. A urlor eprint with archive must be included. See the examples of use in the asmeconf-sample.bib file.
+       <?MarkedContent page="3" ?> A bibliography entry @online{.. is in­cluded for citation of online sources, such as web pages. A url or eprint with archive must be included. See the examples of use in the asmeconf-sample.bib file.
       </text>
      </text-unit>
     </Sect>
@@ -2101,7 +2101,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="3" ?>In most cases, the need for a wide equation can be eliminated by using one of the multiline equation environments defined byamsmath, such as align, split, or multline [
+      <?MarkedContent page="3" ?>In most cases, the need for a wide equation can be eliminated by using one of the multiline equation environments defined by amsmath, such as align, split, or multline [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0520"
         >
@@ -2355,7 +2355,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The option subscriptcorrection improves the spacing of math subscripts. These math options are discussed further in theasmeconf-template.tex file.
+       <?MarkedContent page="4" ?>The option subscriptcorrection improves the spacing of math subscripts. These math options are discussed further in the asmeconf-template.tex file.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2425,7 +2425,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The asmeconf class is designed to be used with newtxmathand does not support the unicode-math package.
+       <?MarkedContent page="4" ?>The asmeconf class is designed to be used with newtxmath and does not support the unicode-math package.
       </text>
      </text-unit>
     </Sect>
@@ -2590,7 +2590,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The lineno package is not compatible with the flushendpackage that makes final short columns the same height. Balanc­ing is automatically disabled when this option is called.
+       <?MarkedContent page="4" ?>The lineno package is not compatible with the flushend package that makes final short columns the same height. Balanc­ing is automatically disabled when this option is called.
       </text>
      </text-unit>
     </Sect>
@@ -2784,7 +2784,7 @@
          >
         <?MarkedContent page="5" ?>pdfLATEX 
        </Span>
-       <?MarkedContent page="5" ?>. The default setting is PDF/A-3u with sRGB OutputIntent (sRGB.icc). If levels 1b, 2b, 2u, or 3b are desired, use the options [pdfapart=1 or 2 or 3] and[pdfaconformance=b or u]. Accessible conformance (a) is not possible with this method.
+       <?MarkedContent page="5" ?>. The default setting is PDF/A-3u with sRGB OutputIntent (sRGB.icc). If levels 1b, 2b, 2u, or 3b are desired, use the options [pdfapart=1 or 2 or 3] and [pdfaconformance=b or u]. Accessible conformance (a) is not possible with this method.
       </text>
      </text-unit>
     </Sect>
@@ -3745,7 +3745,7 @@
             >
            <?MarkedContent page="6" ?>LuaLATEX
           </Span>
-          <?MarkedContent page="6" ?> withasmeconf.cls for ODE integration.”  Version 1.01.  Com­prehensive 
+          <?MarkedContent page="6" ?> with asmeconf.cls for ODE integration.”  Version 1.01.  Com­prehensive 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0786"
              actualtext="TeX"
@@ -4147,7 +4147,7 @@
         id="ID.0856"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix A. 
+      <?MarkedContent page="6" ?>APPENDIX A. 
      </section-number>
      <?MarkedContent page="6" ?>THE VECTOR PRODUCT 
      <Formula xmlns="http://iso.org/pdf2/ssn"
@@ -4251,7 +4251,7 @@
         id="ID.0868"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix B. 
+      <?MarkedContent page="6" ?>APPENDIX B. 
      </section-number>
      <?MarkedContent page="6" ?>USE WITH 
      <Span xmlns="http://iso.org/pdf2/ssn"
@@ -4365,14 +4365,14 @@
             >
            <?MarkedContent page="6" ?>pdfLATEX 
           </Span>
-          <?MarkedContent page="6" ?>, the asmeconfpackage supports Latin alphabets, as well as Cyrillic, Greek, and Vietnamese. If you need scripts such as Ara­bic, Chinese, or Japanese, 
+          <?MarkedContent page="6" ?>, the asmeconf package supports Latin alphabets, as well as Cyrillic, Greek, and Vietnamese. If you need scripts such as Ara­bic, Chinese, or Japanese, 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0889"
              actualtext="LuaLaTeX"
             >
            <?MarkedContent page="6" ?>LuaLATEX
           </Span>
-          <?MarkedContent page="6" ?> with the fontspecpackage can use fonts installed in your computer operating system.
+          <?MarkedContent page="6" ?> with the fontspec package can use fonts installed in your computer operating system.
           <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0890"
              rolemaps-to="Lbl"
@@ -4524,7 +4524,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="6" ?>For clarity, fontspec is automatically loaded whenasmeconf is run under 
+      <?MarkedContent page="6" ?>For clarity, fontspec is automatically loaded when asmeconf is run under 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0913"
          actualtext="LuaLaTeX"
@@ -4582,7 +4582,7 @@
         id="ID.0921"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix C. 
+      <?MarkedContent page="6" ?>APPENDIX C. 
      </section-number>
      <?MarkedContent page="6" ?>MULTILINGUAL SUPPORT
     </section>
@@ -4712,7 +4712,7 @@
         id="ID.0941"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="7" ?>Anhang D. 
+      <?MarkedContent page="7" ?>ANHANG D. 
      </section-number>
      <?MarkedContent page="7" ?>WÄRMEAUSTAUSCH UND REIBUNGSWIDERSTAND (von E. POHLHAUSEN)
     </section>
