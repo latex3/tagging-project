@@ -577,7 +577,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>For each author, put author names and affiliation (with line breaks) into a separate \SetAuthorBlock{name}{affiliation} command; follow the syntax illustrated asmejour-template.texfile. One author (or more) may be designated as the correspond­ing author by placing the command \CorrespondingAuthor at the end of that name.
+       <?MarkedContent page="1" ?>For each author, put author names and affiliation (with line breaks) into a separate \SetAuthorBlock{name}{affiliation} command; follow the syntax illustrated asmejour-template.tex file. One author (or more) may be designated as the correspond­ing author by placing the command \CorrespondingAuthor at the end of that name.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -594,7 +594,7 @@
        <Em xmlns="http://iso.org/pdf2/ssn"
           id="ID.00097"
          >
-        <?MarkedContent page="1" ?>must
+        <?MarkedContent page="1" ?>must 
        </Em>
        <?MarkedContent page="1" ?>be issued before the abstract. To omit keywords, just omit this command. Next, the abstract text must be placed into \begin{abstract}…\end{abstract}. The abstract will auto­matically be italicized.
       </text>
@@ -655,7 +655,7 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?> The vertical bar in the 
-       <?MarkedContent page="1" ?>title block is black in all ASME journals. Since the asmejourclass is only for preprints, we include the [fun] option to have the bar in color. Any color name recognized by the xcolor package [
+       <?MarkedContent page="1" ?>title block is black in all ASME journals. Since the asmejour class is only for preprints, we include the [fun] option to have the bar in color. Any color name recognized by the xcolor package [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.00107"
          >
@@ -667,7 +667,7 @@
          <?ReferencedObject type="Annot" page="1" ?>
         </Link>
        </Reference>
-       <?MarkedContent page="1" ?>] may be invoked by including the option [barcolor=name] in the \documentclass[..]{asmejour} command. The color for this example is Goldenrod3. To have a black bar, either omit barcolorentirely or use the name black.
+       <?MarkedContent page="1" ?>] may be invoked by including the option [barcolor=name] in the \documentclass[..]{asmejour} command. The color for this example is Goldenrod3. To have a black bar, either omit barcolor entirely or use the name black.
       </text>
      </text-unit>
     </Sect>
@@ -848,7 +848,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="1" ?>Equations are typeset in the usual way. The class file loads theamsmath and mathtools packages, which provide many macros to support sophisticated mathematics.
+      <?MarkedContent page="1" ?>Equations are typeset in the usual way. The class file loads the amsmath and mathtools packages, which provide many macros to support sophisticated mathematics.
      </text>
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.00138"
@@ -1111,7 +1111,7 @@
        <?MarkedContent page="2" ?>1
        <?ReferencedObject type="Annot" page="2" ?>
       </Link>
-      <?MarkedContent page="2" ?> is an example of a simple table. Table captions should be placed above tables. The class loads the array and dcolumnpackages which provide extended capabilities for columns in thetabular environment (used in Tables 
+      <?MarkedContent page="2" ?> is an example of a simple table. Table captions should be placed above tables. The class loads the array and dcolumn packages which provide extended capabilities for columns in the tabular environment (used in Tables 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.00189"
         >
@@ -1223,7 +1223,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* andsidewaysfigure* environments [
+      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* and sidewaysfigure* environments [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.00206"
         >
@@ -1439,13 +1439,13 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?> Elementary support for eprint num­
-       <?MarkedContent page="2" ?>bers is included, either hyperlinking or generating a url at the end of the citation. The archive type may be specified using the macros arxiv, googlebooks, hndl, jstore, oclc, orpubmed (e.g., archive=hndl, 
+       <?MarkedContent page="2" ?>bers is included, either hyperlinking or generating a url at the end of the citation. The archive type may be specified using the macros arxiv, googlebooks, hndl, jstore, oclc, or pubmed (e.g., archive=hndl, 
        <Em xmlns="http://iso.org/pdf2/ssn"
           id="ID.00321"
          >
         <?MarkedContent page="2" ?>without
        </Em>
-       <?MarkedContent page="2" ?> braces). Both eprint andarchive fields 
+       <?MarkedContent page="2" ?> braces). Both eprint and archive fields 
        <Em xmlns="http://iso.org/pdf2/ssn"
           id="ID.00322"
          >
@@ -1484,7 +1484,7 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?> A bibliography field @online{.. is in­
-       <?MarkedContent page="2" ?>cluded for citation of online sources, such as web pages. A url,doi, or eprint with archive should be included. See the exam­ples of use in the asmejour-sample.bib file.
+       <?MarkedContent page="2" ?>cluded for citation of online sources, such as web pages. A url, doi, or eprint with archive should be included. See the exam­ples of use in the asmejour-sample.bib file.
       </text>
      </text-unit>
     </Sect>
@@ -1717,7 +1717,7 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="3" ?> In addition to the standard entry, 
-       <?MarkedContent page="3" ?>@incollection{.., an entry @inserialcollection{.. is de­fined for serials in which each volume has a different title. See theasmejour-sample.bib file for discussion and compare Ref. [
+       <?MarkedContent page="3" ?>@incollection{.., an entry @inserialcollection{.. is de­fined for serials in which each volume has a different title. See the asmejour-sample.bib file for discussion and compare Ref. [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.00364"
          >
@@ -2079,7 +2079,7 @@
            rolemaps-to="P"
           >
          <?MarkedContent page="3" ?>
-         <?MarkedContent page="3" ?>For sans-serif math expressions, asmejour.cls provides \mathversion{sans}and \mathversion{sansbold}. These fonts can act as engineering gothic for figures.
+         <?MarkedContent page="3" ?>For sans-serif math expressions, asmejour.cls provides \mathversion{sans} and \mathversion{sansbold}. These fonts can act as engineering gothic for figures.
         </text>
        </text-unit>
       </footnote>
@@ -2739,7 +2739,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?> The option [lineno] invokes the the
+       <?MarkedContent page="4" ?> The option [lineno] invokes the the 
        <?MarkedContent page="4" ?>lineno package [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.00570"
@@ -2766,7 +2766,7 @@
          >
         <?MarkedContent page="4" ?>twice
        </Em>
-       <?MarkedContent page="4" ?> for proper placement of the numbers. The lineno package is not compatible with the flushend pack­age that makes final short columns the same height. Balancing is disabled when this option is called. See the documentation of thelineno package for further commands to control line numbering. The abstract, tables, captions, and footnotes will not be numbered.
+       <?MarkedContent page="4" ?> for proper placement of the numbers. The lineno package is not compatible with the flushend pack­age that makes final short columns the same height. Balancing is disabled when this option is called. See the documentation of the lineno package for further commands to control line numbering. The abstract, tables, captions, and footnotes will not be numbered.
       </text>
      </text-unit>
     </Sect>
@@ -2898,7 +2898,7 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="4" ?> Several types of copyright 
-       <?MarkedContent page="4" ?>statement can be placed in an unnumbered footnote on the first page. Use the option [govt] when all authors are federal employ­ees, [govtsome] when some authors are federal employees, and[contractor] when the authors are federal contractors.
+       <?MarkedContent page="4" ?>statement can be placed in an unnumbered footnote on the first page. Use the option [govt] when all authors are federal employ­ees, [govtsome] when some authors are federal employees, and [contractor] when the authors are federal contractors.
       </text>
      </text-unit>
     </Sect>
@@ -2951,7 +2951,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>As of asmejour v1.25, the legacy PDF/A options [pdf-a],[pdfapart=], and [pdfaconformance=] have been dropped.
+       <?MarkedContent page="4" ?>As of asmejour v1.25, the legacy PDF/A options [pdf-a], [pdfapart=], and [pdfaconformance=] have been dropped.
       </text>
      </text-unit>
     </Sect>
@@ -2984,7 +2984,7 @@
          rolemaps-to="P"
         >
        <?MarkedContent page="4" ?> This font is the sans-serif, 
-       <?MarkedContent page="4" ?>monospaced font inconsolata. By default, the word spacing is variable, but option [mono] ends this behavior. A slashed zero is the default; option [var0] removes the slash. Option [hyphenate]enables hyphenation of the typewriter font when running pdf
+       <?MarkedContent page="4" ?>monospaced font inconsolata. By default, the word spacing is variable, but option [mono] ends this behavior. A slashed zero is the default; option [var0] removes the slash. Option [hyphenate] enables hyphenation of the typewriter font when running pdf
        <Span xmlns="http://iso.org/pdf2/ssn"
           id="ID.00607"
           actualtext="TeX"
@@ -3023,7 +3023,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?> The class option [singlecolumn]
+       <?MarkedContent page="4" ?> The class option [singlecolumn] 
        <?MarkedContent page="4" ?>switches from two-column to one-column layout.
       </text>
      </text-unit>
@@ -4339,7 +4339,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="5" ?>Note that some languages make characters “active.” For exam­ple, the [spanish] option of babel makes the period character active. This change conflicts with the default behavior of dcolumnin this class, which aligns table columns of type d{m.n} on the decimal point (see comments in the .cls file).
+      <?MarkedContent page="5" ?>Note that some languages make characters “active.” For exam­ple, the [spanish] option of babel makes the period character active. This change conflicts with the default behavior of dcolumn in this class, which aligns table columns of type d{m.n} on the decimal point (see comments in the .cls file).
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -4407,7 +4407,7 @@
         >
        <?MarkedContent page="5" ?>LATEX
       </Span>
-      <?MarkedContent page="5" ?>. The bibliography style,asmejour.bst, is designed in English and aimed at BibTeX.
+      <?MarkedContent page="5" ?>. The bibliography style, asmejour.bst, is designed in English and aimed at BibTeX.
      </text>
     </text-unit>
    </Sect>
@@ -5448,7 +5448,7 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>Robertson, W., 2023, “Experimental Unicode mathematical typesetting: Theunicode-math package,” Version 0.8r, Comprehensive 
+          <?MarkedContent page="6" ?>Robertson, W., 2023, “Experimental Unicode mathematical typesetting: The unicode-math package,” Version 0.8r, Comprehensive 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.01090"
              actualtext="TeX"
