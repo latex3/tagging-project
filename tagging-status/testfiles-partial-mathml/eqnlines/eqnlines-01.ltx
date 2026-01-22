@@ -13,7 +13,7 @@
 
 \title{eqnlines test}
 \author{Niklas Beisert}
-\date{April 2025}
+\date{v0.13}
 
 \begin{document}
 
@@ -35,7 +35,7 @@ x = y
 \]
 
 gather
-\begin{equations}~
+\begin{equations}=
 x=y\\
 \donumber
 y=\sin z
@@ -49,14 +49,14 @@ y&=\sin z
 \end{equations}
 
 gather with numbering options
-\begin{equations}~*
+\begin{equations}=*
 x=y\\
 \donumber
 y=\sin z
 \end{equations}
 
 symbolic gather
-\<~
+\<=
 x=y\\
 y=\sin z
 \>
@@ -110,7 +110,7 @@ x=y
 
 multi-column alignment (not correctly reproduced in mathml)
 \[
-\begin{equationsbox}~
+\begin{equationsbox}=
 xxxxxxxx&xxxxxxxxx\\
 \shoveleft left&\shoveright right\\
 \shoveright right&\shoveleft left\\
@@ -129,7 +129,7 @@ y&=\sin z
 \end{equationsbox}$
 
 multline with shoves
-\begin{equations}~[shape=steps,n=a]
+\begin{equations}=[shape=steps,n=a]
 \mbox{first}\\
 \mbox{middle}\\
 \mbox{middlemiddlemiddle}\\
@@ -355,10 +355,10 @@ Two groups in \texttt{amsalign}
 \end{amsalign}
 
 Two groups in \texttt{alignat}
-\begin{alignat}{2}
+\begin{amsalignat}{2}
   aaa&=bbb &ccc&=ddd\\
     a&=b   &  c&=d
-\end{alignat}
+\end{amsalignat}
 
 Two groups in \texttt{amsflalign}
 \begin{amsflalign}
@@ -366,12 +366,12 @@ Two groups in \texttt{amsflalign}
     a&=b   &  c&=d
 \end{amsflalign}
 
-\texttt{alignat*} with no intercolumn space
-\begin{alignat*}{-1}
+\texttt{amsalignat*} with no intercolumn space
+\begin{amsalignat*}{-1}
   3&x^3&&+{}& 4&x^2&&+{}&10&x&&+{}&5&=0\\
  -2&x^3&&+{}&12&x^2&&+{}& 6&x&&+{}&20&=0\\
  10&x^3&&-{}& 5&x^2&&+{}&  &x&&+{}&5&=0
-\end{alignat*}
+\end{amsalignat*}
 
 
 \end{document}
