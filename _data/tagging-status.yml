@@ -62,7 +62,7 @@
 - name: Alegreya
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -72,7 +72,7 @@
   ctan-pkg: alegreya
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -129,7 +129,7 @@
 - name: abstract
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [653]
   tests: true
@@ -139,7 +139,7 @@
 - name: academicons
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   comments: "Symbols need ToUnicode values or Alt text."
@@ -158,7 +158,7 @@
 - name: accents
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "amsmath must be loaded before accents.
              Incompatible with unicode-math. No luamml support."
@@ -169,7 +169,7 @@
 - name: accsupp
   type: package
   status: unchecked
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -179,7 +179,7 @@
 - name: acro
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [698]
   tests: true
@@ -220,7 +220,7 @@
 - name: adforn
   type: package
   status: partially-compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   comments: "Missing ToUnicode for text symbols."
   issues:
@@ -249,7 +249,7 @@
 - name: adjustbox
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "`varwidth` and `stack` keys rely on currently-incompatible varwidth package.
             Does not register `alt`, `artifact`, or `actualtext` keys for `\\adjincludegraphics`.
@@ -264,7 +264,7 @@
 - name: afterpage
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: true
@@ -292,7 +292,7 @@
 - name: algorithm2e
   type: package
   status: currently-incompatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol5]
   priority: 2
   issues: [564]
   tests: true
@@ -302,7 +302,7 @@
   ctan-pkg: algorithms
   type: package
   status: currently-incompatible
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol10]
   priority: 4
   issues:
   tests: true
@@ -313,7 +313,7 @@
   ctan-pkg: algorithms
   type: package
   status: compatible
-  included-in: [tlc3,arxiv5]
+  included-in: [tlc3,arxiv5, ol10]
   priority: 4
   issues:
   tests: true
@@ -322,7 +322,7 @@
 - name: algorithmicx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol1]
   priority: 2
   issues:
   tests: false
@@ -332,7 +332,7 @@
   ctan-pkg: algorithmicx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues:
   tests: true
@@ -341,7 +341,7 @@
 - name: aliascnt
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [229]
   comments: "Actual function is not affected but one of its main uses, creating
@@ -352,7 +352,7 @@
 - name: aligned-overset
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [1069]
   comments: "Produces warnings with mathml-SE."
@@ -362,7 +362,7 @@
 - name: alltt
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [131]
   tests: true
@@ -391,7 +391,7 @@
   ctan-pkg: greek-fontenc
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -400,7 +400,7 @@
 - name: alphalph
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -409,7 +409,7 @@
 - name: amsaddr
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -419,7 +419,7 @@
 - name: amsbsy
   type: package
   status: partially-compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
   issues:
@@ -429,7 +429,7 @@
 - name: amscd
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol1]
   priority: 2
   comments: "Breaks with unicode-math. No luamml support."
   issues:
@@ -450,7 +450,7 @@
 - name: amsfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
@@ -461,7 +461,7 @@
   ctan-pkg: latex-amsmath
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 4
   issues:
   tests: false
@@ -470,7 +470,7 @@
 - name: amsmath
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments:
   references: [1,2]
@@ -492,7 +492,7 @@
 - name: amsopn
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
   comments:
   issues:
@@ -502,7 +502,7 @@
 - name: amsrefs
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -513,7 +513,7 @@
   ctan-pkg: amsfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
@@ -523,7 +523,7 @@
 - name: amstext
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   comments:
   issues:
@@ -534,7 +534,7 @@
 - name: amsthm
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [83,733,736,759,790,792,835,944,1083,1162,1166]
   tests: true
@@ -544,7 +544,7 @@
   ctan-pkg: latex-amsmath
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: "`\\accentedsymbol` not supported by luamml."
   issues:
@@ -563,7 +563,7 @@
 - name: animate
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -582,7 +582,7 @@
 - name: answers
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -611,7 +611,7 @@
 - name: apacite
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [677]
   tests: true
@@ -622,7 +622,7 @@
   ctan-pkg: bibtex
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -631,7 +631,7 @@
 - name: apptools
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -689,7 +689,7 @@
 - name: array
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -716,7 +716,7 @@
 - name: arydshln
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [193]
   tests: true
@@ -765,7 +765,7 @@
 - name: asymptote
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [679]
   tests: true
@@ -783,7 +783,7 @@
 - name: attachfile
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [511]
   tests: true
@@ -793,7 +793,7 @@
 - name: attachfile2
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [511]
   tests: true
@@ -812,7 +812,7 @@
 - name: aurical
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -822,7 +822,7 @@
 - name: authblk
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [654]
   tests: true
@@ -841,7 +841,7 @@
 - name: auto-pst-pdf
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -875,7 +875,7 @@
 - name: autobreak
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   comments: "Does not error but the package functionality is disabled with tagging."
   issues: [877]
@@ -885,7 +885,7 @@
 - name: autonum
   type: package
   status: no-support
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [619]
   tests: true
@@ -904,7 +904,7 @@
   ctan-pkg: psnfss
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments: Obsolete package; suggested replacement `tgadvantor`.
   issues:
@@ -914,7 +914,7 @@
 - name: axessibility
   type: package
   status: no-support
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: Loads tagpdf but it is not compatible with the current version. Its patches
             clash with the math module. `phase-III,math` should be used instead which
@@ -997,7 +997,7 @@
 - name: babel
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now. For individual languages and dialects see the entries babel-xxx [in the full list](full#babel).
   issues:
@@ -1847,7 +1847,7 @@
 - name: babelbib
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -1857,7 +1857,7 @@
 - name: backref
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -1866,7 +1866,7 @@
 - name: balance
   type: package
   status: compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   issues:
   tests: true
@@ -1894,7 +1894,7 @@
 - name: bbding
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   comments: "Missing ToUnicode for text symbols."
   issues:
@@ -1904,7 +1904,7 @@
 - name: bbm
   type: package
   status: partially-compatible
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol5]
   priority: 4
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
@@ -1914,7 +1914,7 @@
 - name: bbold
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
@@ -1934,7 +1934,7 @@
 - name: bclogo
   type: package
   status: no-support
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -1983,7 +1983,7 @@
 - name: bibentry
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: true
@@ -1992,7 +1992,7 @@
 - name: biblatex
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "Requires hyperref."
   references: [2]
@@ -2005,7 +2005,7 @@
 - name: biblatex-chicago
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 2
   comments: See biblatex.
   tasks: Package should be changed to use sockets in its footnote adaption; needs tests
@@ -2085,7 +2085,7 @@
 - name: bibunits
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -2095,7 +2095,7 @@
 - name: bicaption
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   comments: "Relies on currently incompatible caption package."
   issues:
@@ -2116,7 +2116,7 @@
 - name: bigdelim
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   comments: "Relies on incompatible multirow. No luamml support in math mode."
@@ -2126,7 +2126,7 @@
 - name: bigfoot
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [410]
   comments: To be supported or not?
@@ -2145,7 +2145,7 @@
 - name: bigints
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments:
   issues:
@@ -2155,7 +2155,7 @@
 - name: bigstrut
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -2165,7 +2165,7 @@
   ctan-pkg: libertine
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -2192,7 +2192,7 @@
 - name: blindtext
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   tests: false
   updated: 2024-07-07
@@ -2200,7 +2200,7 @@
 - name: blkarray
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 4
   issues: [181]
   tests: true
@@ -2218,7 +2218,7 @@
 - name: bm
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -2228,7 +2228,7 @@
 - name: bmpsize
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: false
@@ -2246,7 +2246,7 @@
 - name: boldline
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [604]
   tests: true
@@ -2275,7 +2275,7 @@
   ctan-pkg: psnfss
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments: Obsolete package; suggested replacement `tgbonum`.
   issues:
@@ -2285,7 +2285,7 @@
 - name: bookmark
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: true
@@ -2294,7 +2294,7 @@
 - name: booktabs
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Requires the firstaid module which contains a fix."
   issues: [69]
@@ -2304,7 +2304,7 @@
 - name: boxedminipage
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "drawn box is tagged as Path instead of artifact"
   issues:
@@ -2324,7 +2324,7 @@
 - name: braket
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments:
   issues:
@@ -2334,7 +2334,7 @@
 - name: breakurl
   type: package
   status: currently-incompatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol0.1]
   priority: 5
   issues: [645]
   tests: excluded
@@ -2344,7 +2344,7 @@
 - name: breqn
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [145]
   tests: true
@@ -2355,7 +2355,7 @@
 - name: bussproofs
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues: [985]
   tests: true
@@ -2384,7 +2384,7 @@
 - name: bytefield
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [565]
   tests: true
@@ -2395,7 +2395,7 @@
 - name: CJK
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -2405,7 +2405,7 @@
 - name: ctex
   type: package
   status: currently-incompatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol1]
   priority: 2
   issues: [673]
   luatex-only: true
@@ -2435,7 +2435,7 @@
 - name: ClearSans
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -2453,7 +2453,7 @@
 - name: CormorantGaramond
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -2471,7 +2471,7 @@
 - name: cabin
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -2480,7 +2480,7 @@
 - name: caladea
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -2489,7 +2489,7 @@
 - name: calc
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   issues:
   tests: false
@@ -2499,7 +2499,7 @@
   ctan-pkg: fundus-calligra
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -2508,7 +2508,7 @@
 - name: calrsfs
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "No luamml support."
   issues:
@@ -2518,7 +2518,7 @@
 - name: cancel
   type: package
   status: currently-incompatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   comments: "No luamml support. Text mode commands are tagged incorrectly."
   issues: [880]
@@ -2537,7 +2537,7 @@
 - name: capt-of
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Incorrect reading order of captions."
   issues: [882]
@@ -2566,7 +2566,7 @@
 - name: caption
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "the configurations from the package are overwritten by the
             tagging code. Issue when hyperref and both listoffigures are used."
@@ -2577,7 +2577,7 @@
 - name: carlito
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -2605,7 +2605,7 @@
 - name: cases
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [347]
   tests: true
@@ -2614,7 +2614,7 @@
 - name: catchfile
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: false
@@ -2623,7 +2623,7 @@
 - name: ccaption
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [562]
   tests: true
@@ -2641,7 +2641,7 @@
 - name: ccicons
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   comments: "Symbols need Alt/ActualText."
@@ -2651,7 +2651,7 @@
 - name: cellspace
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   package-repository: "https://github.com/JosselinNoirel/cellspace"
@@ -2663,7 +2663,7 @@
 - name: centernot
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "No luamml support."
   issues:
@@ -2673,7 +2673,7 @@
 - name: cfr-lm
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -2693,7 +2693,7 @@
 - name: changebar
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -2713,7 +2713,7 @@
 - name: changepage
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol5]
   priority: 6
   issues: [566]
   tests: true
@@ -2723,7 +2723,7 @@
 - name: changes
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -2742,7 +2742,7 @@
 - name: chapterbib
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [486]
   tests: true
@@ -2752,7 +2752,7 @@
   ctan-pkg: psnfss
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: Obsolete package; suggested replacement `XCharter`.
   issues:
@@ -2772,7 +2772,7 @@
 - name: chemfig
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -2782,7 +2782,7 @@
 - name: chemformula
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [521]
   tests: true
@@ -2800,7 +2800,7 @@
 - name: chemmacros
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -2846,7 +2846,7 @@
 - name: chngcntr
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: false
@@ -2865,7 +2865,7 @@
 - name: circledsteps
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -2904,7 +2904,7 @@
 - name: cite
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [487,1058]
   tests: true
@@ -2960,7 +2960,7 @@
 - name: cleveref
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
   issues: [2,1166]
@@ -2980,7 +2980,7 @@
 - name: cmbright
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   comments: "Math symbols overwritten by unicode-math."
@@ -3000,7 +3000,7 @@
 - name: cochineal
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -3009,7 +3009,7 @@
 - name: codehigh
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [1080]
   tests: true
@@ -3027,7 +3027,7 @@
 - name: collcell
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   package-repository: "https://github.com/MartinScharrer/collcell"
   issues:
@@ -3057,7 +3057,7 @@
 - name: colonequals
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   comments: "No luamml support."
   issues:
@@ -3077,7 +3077,7 @@
 - name: color
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -3106,7 +3106,7 @@
 - name: colortbl
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
   issues: [90,379,749]
@@ -3135,7 +3135,7 @@
 - name: comment
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues:
   tests: true
@@ -3165,7 +3165,7 @@
 - name: contour
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Typesets the content many times which produces incorrect tags."
   issues: [884]
@@ -3185,7 +3185,7 @@
 - name: courier
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: Obsolete package; suggested replacement `tgcursor`.
   issues:
@@ -3214,7 +3214,7 @@
 - name: cprotect
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.1]
   priority: 5
   comments: "Breaks TOC and errors in math mode."
   issues: [885]
@@ -3224,7 +3224,7 @@
 - name: crop
   type: package
   status: currently-incompatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues: [341]
   tests: true
@@ -3242,7 +3242,7 @@
 - name: csquotes
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "`blockquote` produces duplicate tags."
   issues: [3,1041]
@@ -3252,7 +3252,7 @@
 - name: csvsimple
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
             currently incompatible."
@@ -3263,7 +3263,7 @@
 - name: ctable
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [494]
   tests: true
@@ -3281,7 +3281,7 @@
 - name: currfile
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -3309,7 +3309,7 @@
 - name: cuted
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [563]
   tests: true
@@ -3359,7 +3359,7 @@
   ctan-pkg: dejavu
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -3388,7 +3388,7 @@
 - name: dashbox
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [650]
   tests: true
@@ -3397,7 +3397,7 @@
 - name: dashrule
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -3417,7 +3417,7 @@
 - name: datatool
   type: package
   status: unchecked
-  included-in: [tlc3,arxiv01]
+  included-in: [tlc3,arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -3427,7 +3427,7 @@
 - name: datetime2
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -3436,7 +3436,7 @@
 - name: dblfloatfix
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -3455,7 +3455,7 @@
 - name: dcolumn
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   comments: "`d` columns are set as text not math, which is arguably correct, but needs some further evaluation."
   issues: [896]
@@ -3475,7 +3475,7 @@
 - name: dejavu
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -3494,7 +3494,7 @@
 - name: delarray
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   comments: "No luamml support."
   issues: [861]
@@ -3514,7 +3514,7 @@
 - name: derivative
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "luamml support of `\\odif` etc. is not ideal."
   issues:
@@ -3524,7 +3524,7 @@
 - name: diagbox
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [453]
   tests: true
@@ -3552,7 +3552,7 @@
 - name: diffcoeff
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments:
   issues:
@@ -3562,7 +3562,7 @@
 - name: dingbat
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   comments: "Missing ToUnicode for text symbols."
   issues:
@@ -3572,7 +3572,7 @@
 - name: dirtree
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [613]
   tests: true
@@ -3581,7 +3581,7 @@
 - name: doc
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [44]
   tests: false
@@ -3591,7 +3591,7 @@
 - name: doclicense
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -3602,7 +3602,7 @@
 - name: doi
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -3650,7 +3650,7 @@
 - name: draftwatermark
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -3669,7 +3669,7 @@
   ctan-pkg: droid
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -3699,7 +3699,7 @@
   ctan-pkg: doublestroke
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -3719,7 +3719,7 @@
 - name: duckuments
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -3728,7 +3728,7 @@
 - name: dutchcal
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -3761,7 +3761,7 @@
 - name: easylist
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [536]
   tests: true
@@ -3770,7 +3770,7 @@
 - name: ebgaramond
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -3808,7 +3808,7 @@
 - name: eepic
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -3858,7 +3858,7 @@
 - name: ellipsis
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -3907,7 +3907,7 @@
 - name: emoji
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   luatex-only: true
@@ -3919,7 +3919,7 @@
 - name: empheq
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [138]
   tests: true
@@ -3928,7 +3928,7 @@
 - name: endfloat
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -3937,7 +3937,7 @@
 - name: endnotes
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
   issues: [135]
@@ -3958,7 +3958,7 @@
 - name: engord
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -3967,7 +3967,7 @@
 - name: enotez
   type: package
   status: partially-compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -3987,7 +3987,7 @@
 - name: enumerate
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol5]
   priority: 2
   references: [1]
   issues: [889]
@@ -4007,7 +4007,7 @@
 - name: enumitem
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments: "The package itself can't be loaded right now. However, the tagging code
              supports (most of) the document-level  syntax of `enumitem`, so that one
@@ -4022,7 +4022,7 @@
 - name: environ
   type: package
   status: compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol5]
   priority: 5
   issues:
   tests: false
@@ -4050,7 +4050,7 @@
 - name: epic
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: "Works with pdflatex but not lualatex."
   issues: [159]
@@ -4060,7 +4060,7 @@
 - name: epigraph
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [455]
   comments: "Requires a blank line after `\\epigraph` command."
@@ -4070,7 +4070,7 @@
 - name: epsf
   type: package
   status: currently-incompatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 4
   comments: "Obsolete. Images not tagged as Figure. No way to add Alt or ActualText."
   issues:
@@ -4080,7 +4080,7 @@
 - name: epsfig
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol5]
   priority: 4
   comments: "Obsolete, small wrapper around graphicx"
   issues:
@@ -4091,7 +4091,7 @@
   ctan-pkg: epstopdf-pkg
   type: package
   status: compatible
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol5]
   priority: 4
   issues:
   tests: true
@@ -4110,7 +4110,7 @@
 - name: eqnarray
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues: [577]
   tests: true
@@ -4131,7 +4131,7 @@
 - name: eqparbox
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [633]
   tests: true
@@ -4140,7 +4140,7 @@
 - name: erewhon
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -4149,7 +4149,7 @@
 - name: esint
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "amsmath must be loaded before esint.
              Symbols overwritten by unicode-math."
@@ -4160,7 +4160,7 @@
 - name: eso-pic
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   issues: [898]
   tests: true
@@ -4200,7 +4200,7 @@
 - name: esvect
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "No luamml support."
   issues: [836]
@@ -4210,7 +4210,7 @@
 - name: etaremune
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -4220,7 +4220,7 @@
   ctan-pkg: etex-pkg
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 4
   comments: "Obsolete"
   issues:
@@ -4239,7 +4239,7 @@
 - name: etoc
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [598]
   tests: true
@@ -4248,7 +4248,7 @@
 - name: etoolbox
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -4258,7 +4258,7 @@
   ctan-pkg: amsfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -4269,7 +4269,7 @@
   ctan-pkg: amsfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -4279,7 +4279,7 @@
 - name: euler
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -4300,7 +4300,7 @@
 - name: eulervm
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -4311,7 +4311,7 @@
   ctan-pkg: amsfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: "No luamml support."
   issues:
@@ -4321,7 +4321,7 @@
 - name: expex
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [1128]
   tests: true
@@ -4330,7 +4330,7 @@
 - name: expl3
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   issues:
   tests: false
@@ -4339,7 +4339,7 @@
 - name: exscale
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [1154]
   tests: true
@@ -4348,7 +4348,7 @@
 - name: extarrows
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments:
   issues:
@@ -4358,7 +4358,7 @@
 - name: extdash
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -4367,7 +4367,7 @@
 - name: extpfeil
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   comments: "Incomplete luamml support. Must be loaded before unicode-math."
   issues:
@@ -4378,7 +4378,7 @@
   ctan-pkg: fancyhdr
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -4399,7 +4399,7 @@
   ctan-pkg: fira
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -4409,7 +4409,7 @@
   ctan-pkg: fira
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -4418,7 +4418,7 @@
 - name: faktor
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -4428,7 +4428,7 @@
 - name: fancybox
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [402]
   tests: true
@@ -4437,7 +4437,7 @@
 - name: fancyhdr
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues:
   tests: true
@@ -4455,7 +4455,7 @@
 - name: fancyref
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -4464,7 +4464,7 @@
 - name: fancyvrb
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [741]
   references: [1]
@@ -4474,7 +4474,7 @@
 - name: fbb
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -4483,7 +4483,7 @@
 - name: fbox
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [683]
   tests: true
@@ -4501,7 +4501,7 @@
 - name: fdsymbol
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
              Incompatible with unicode-math. No luamml support."
@@ -4530,7 +4530,7 @@
 - name: feynmf
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues: [659]
   tests: true
@@ -4540,7 +4540,7 @@
   ctan-pkg: feynmf
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues: [659]
   tests: true
@@ -4549,7 +4549,7 @@
 - name: feynmp-auto
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -4635,7 +4635,7 @@
 - name: fix-cm
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: false
@@ -4653,7 +4653,7 @@
 - name: fixltx2e
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: This is an obsolete package which should not be needed
   issues:
@@ -4663,7 +4663,7 @@
 - name: fixme
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -4673,7 +4673,7 @@
   ctan-pkg: latex-base
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -4682,7 +4682,7 @@
 - name: flexisym
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -4701,7 +4701,7 @@
 - name: float
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "[H] floats are not yet automatically tagged."
   references: [1]
@@ -4712,7 +4712,7 @@
 - name: floatpag
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Redefines `\\@xfloat`."
   issues: [209]
@@ -4722,7 +4722,7 @@
 - name: floatflt
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [496]
   tests: true
@@ -4731,7 +4731,7 @@
 - name: floatrow
   type: package
   status: no-support
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [497]
   tests: false
@@ -4760,7 +4760,7 @@
 - name: flushend
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -4770,7 +4770,7 @@
 - name: fmtcount
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -4788,7 +4788,7 @@
 - name: fncychap
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [570]
   tests: true
@@ -4817,7 +4817,7 @@
 - name: fnpct
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   comments:
@@ -4827,7 +4827,7 @@
 - name: fnpos
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [888]
   comments: "Redefines `\\@makecol`."
@@ -4848,7 +4848,7 @@
 - name: fontawesome5
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol5]
   priority: 2
   issues:
   tests: true
@@ -4879,7 +4879,7 @@
 - name: fontenc
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -4898,7 +4898,7 @@
 - name: fontspec
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol5]
   priority: 2
   issues:
   luatex-only: true
@@ -4917,7 +4917,7 @@
 - name: footmisc
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
@@ -4928,7 +4928,7 @@
 - name: footnote
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 4
   tests: true
   comments: To be supported or not?
@@ -4938,7 +4938,7 @@
 - name: footnotebackref
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [588]
   tests: true
@@ -4948,7 +4948,7 @@
 - name: footnotehyper
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -4980,7 +4980,7 @@
 - name: forest
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [1087]
   package-repository: "https://github.com/sasozivanovic/forest"
@@ -5011,7 +5011,7 @@
 - name: fourier
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -5022,7 +5022,7 @@
   ctan-pkg: fourier
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   comments: Symbols missing ToUnicode/ActualText.
@@ -5033,7 +5033,7 @@
   ctan-pkg: erewhon-math
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   comments:
   issues:
@@ -5044,7 +5044,7 @@
 - name: fouriernc
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -5054,7 +5054,7 @@
 - name: fp
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -5063,7 +5063,7 @@
 - name: framed
   type: package
   status: currently-incompatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol5]
   priority: 5
   comments: "Title in `titled-frame` environment is lost. Content after page
              break is lost with pdftex and xetex."
@@ -5074,7 +5074,7 @@
 - name: frcursive
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -5085,7 +5085,7 @@
   ctan-pkg: e-french
   type: package
   status: unchecked
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -5116,7 +5116,7 @@
 - name: ftnright
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues: [110]
   tests: true
@@ -5134,7 +5134,7 @@
 - name: fullpage
   type: package
   status: compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol5]
   priority: 5
   issues:
   tests: true
@@ -5143,7 +5143,7 @@
 - name: fvextra
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   comments: "See fancyvrb."
   issues: [1060]
@@ -5234,7 +5234,7 @@
   type: package
   subpackages: [cgloss4e]
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [1147]
   tests: true
@@ -5262,7 +5262,7 @@
 - name: gensymb
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   issues:
   comments: "Errors if loaded after unicode-math. No luamml support."
@@ -5301,7 +5301,7 @@
 - name: geometry
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [1064]
   comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
@@ -5367,7 +5367,7 @@
 - name: gfsdidot
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -5485,7 +5485,7 @@
 - name: glossaries
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 4
   comments: An old issue appears to be fixed.
   tasks: needs tests
@@ -5496,7 +5496,7 @@
 - name: glossaries-extra
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -5517,7 +5517,7 @@
 - name: gnuplottex
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -5537,7 +5537,7 @@
 - name: graphbox
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -5548,7 +5548,7 @@
   type: package
   status: compatible
   subpackages: [epstopdf-base]
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   comments: See `graphicx` package
   tests: false
@@ -5557,7 +5557,7 @@
 - name: graphicx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: >
     Rather than
@@ -5575,7 +5575,7 @@
 - name: graphpap
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 4
   comments: tagging passes validation but is sub-optimal
   issues:
@@ -5626,7 +5626,7 @@
 - name: halloweenmath
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [1077]
   tests: true
@@ -5635,7 +5635,7 @@
 - name: hanging
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -5644,7 +5644,7 @@
 - name: har2nat
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -5662,7 +5662,7 @@
 - name: harvard
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -5672,7 +5672,7 @@
 - name: helvet
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: Obsolete package; suggested replacement `tgheros`.
   issues:
@@ -5712,7 +5712,7 @@
 - name: hhline
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: breaks with errors
   tasks: needs further tests
@@ -5723,7 +5723,7 @@
 - name: hologo
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   package-repository: "https://github.com/ho-tex/hologo"
@@ -5734,7 +5734,7 @@
 - name: hvfloat
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [490]
   tests: true
@@ -5772,7 +5772,7 @@
 - name: hypcap
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   package-repository: "https://github.com/ho-tex/hypcap"
   comments: "The tagging code already moves anchors to the top of floats
@@ -5794,7 +5794,7 @@
 - name: hypdoc
   type: package
   status: unchecked
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -5823,7 +5823,7 @@
 - name: hyperref
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [2]
   issues: [892]
@@ -5834,7 +5834,7 @@
 - name: hyperxmp
   type: package
   status: no-support
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol1]
   priority: 5
   comments: "Incompatible with PDF management, loading is suppressed. XMP-metadata are
              handled by the kernel code."
@@ -5855,7 +5855,7 @@
 - name: hyphenat
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -5864,7 +5864,7 @@
 - name: hyphsubst
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -5875,7 +5875,7 @@
 - name: IEEEtrantools
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues: [350]
   tests: true
@@ -5914,7 +5914,7 @@
 - name: icomma
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: true
@@ -5933,7 +5933,7 @@
 - name: ifdraft
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -5942,7 +5942,7 @@
 - name: iflang
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -5951,7 +5951,7 @@
 - name: ifluatex
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: false
@@ -5960,7 +5960,7 @@
 - name: ifmtarg
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -5969,7 +5969,7 @@
 - name: ifoddpage
   type: package
   status: compatible
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol0.02]
   priority: 4
   issues:
   tests: true
@@ -5978,7 +5978,7 @@
 - name: ifpdf
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 4
   comments: "Obsolete wrapper for iftex"
   issues:
@@ -5988,7 +5988,7 @@
 - name: ifplatform
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: false
@@ -6006,7 +6006,7 @@
 - name: ifsym
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -6016,7 +6016,7 @@
 - name: iftex
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   issues:
   tests: false
@@ -6025,7 +6025,7 @@
 - name: ifthen
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -6043,7 +6043,7 @@
 - name: ifxetex
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   issues:
   tests: false
@@ -6052,7 +6052,7 @@
 - name: imakeidx
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -6070,7 +6070,7 @@
 - name: import
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: false
@@ -6089,7 +6089,7 @@
 - name: inconsolata
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: false
@@ -6107,7 +6107,7 @@
 - name: indentfirst
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: false
@@ -6116,7 +6116,7 @@
 - name: index
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues: [367]
   tests: true
@@ -6144,7 +6144,7 @@
 - name: inputenc
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -6153,7 +6153,7 @@
 - name: intcalc
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.02]
   priority: 3
   issues:
   tests: false
@@ -6162,7 +6162,7 @@
 - name: inter
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -6171,7 +6171,7 @@
 - name: interval
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments:
   issues:
@@ -6306,7 +6306,7 @@
 - name: kantlipsum
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -6315,7 +6315,7 @@
 - name: kbordermatrix
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [878]
   comments: "No luamml support. Not included in texlive, so tests excluded"
@@ -6354,7 +6354,7 @@
 - name: keyval
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   issues:
   tests: false
@@ -6374,7 +6374,7 @@
   ctan-pkg: cjk-ko
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -6395,7 +6395,7 @@
 - name: kpfonts
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   comments: "Loads kpfonts-otf with unicode engine, required for producing mathml."
   issues:
@@ -6424,7 +6424,7 @@
 - name: kvdefinekeys
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -6433,7 +6433,7 @@
 - name: kvoptions
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   issues:
   tests: false
@@ -6442,7 +6442,7 @@
 - name: kvsetkeys
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -6490,7 +6490,7 @@
 - name: lastpage
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   issues:
   tests: false
@@ -6520,7 +6520,7 @@
   ctan-pkg: latex-base
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   issues:
   tests: false
@@ -6529,7 +6529,7 @@
 - name: lato
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -6538,7 +6538,7 @@
 - name: layout
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [111]
   tests: true
@@ -6547,7 +6547,7 @@
 - name: layouts
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -6557,7 +6557,7 @@
 - name: lcg
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -6566,7 +6566,7 @@
 - name: leading
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -6575,7 +6575,7 @@
 - name: leftidx
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   comments:
   issues:
@@ -6585,7 +6585,7 @@
 - name: leftindex
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   comments:
   issues:
@@ -6625,7 +6625,7 @@
 - name: lettrine
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [481,1108]
   tests: true
@@ -6644,7 +6644,7 @@
 - name: libertine
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: false
@@ -6653,7 +6653,7 @@
 - name: libertinus
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -6673,7 +6673,7 @@
 - name: libertinust1math
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -6729,7 +6729,7 @@
 - name: lineno
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol5]
   priority: 2
   issues: [162,210]
   tests: true
@@ -6740,7 +6740,7 @@
 - name: linguex
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -6758,7 +6758,7 @@
 - name: lipsum
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues:
   tests: false
@@ -6767,7 +6767,7 @@
 - name: listings
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
@@ -6799,7 +6799,7 @@
 - name: listofitems
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -6818,7 +6818,7 @@
 - name: lmodern
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   issues:
   tests: false
@@ -6846,7 +6846,7 @@
 - name: longtable
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [22]
   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
@@ -6868,7 +6868,7 @@
 - name: lscape
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: true
@@ -6877,7 +6877,7 @@
 - name: ltablex
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [163]
   tests: true
@@ -6895,7 +6895,7 @@
 - name: ltxcmds
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 4
   issues:
   tests: false
@@ -6914,7 +6914,7 @@
 - name: ltxtable
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [164]
   tests: true
@@ -6964,7 +6964,7 @@
 - name: luacode
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   luatex-only: true
@@ -7020,7 +7020,7 @@
 - name: luatexja
   type: package
   status: currently-incompatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
   issues: [713]
@@ -7143,7 +7143,7 @@
 - name: MnSymbol
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "`\\circledR` and `\\circledS` need ToUnicode values.
              Incompatible with unicode-math. No luamml support."
@@ -7173,7 +7173,7 @@
 - name: makebox
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -7182,7 +7182,7 @@
 - name: makecell
   type: package
   status: unchecked
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol10]
   priority: 5
   issues:
   tests: false
@@ -7192,7 +7192,7 @@
 - name: makeidx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol1]
   priority: 2
   issues:
   tests: true
@@ -7201,7 +7201,7 @@
 - name: manfnt
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   comments: "Text symbols missing ToUnicode/Alt/ActualText."
@@ -7211,7 +7211,7 @@
 - name: manyfoot
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol5]
   priority: 2
   issues: [289]
   tests: true
@@ -7250,7 +7250,7 @@
 - name: marginfix
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues: [547]
   tests: true
@@ -7259,7 +7259,7 @@
 - name: marginnote
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [165]
   tests: true
@@ -7268,7 +7268,7 @@
 - name: markdown
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -7278,7 +7278,7 @@
 - name: marvosym
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol5]
   priority: 4
   comments: "Missing ToUnicode for text symbols."
   issues: [272]
@@ -7289,7 +7289,7 @@
 - name: mathabx
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Must be loaded after amsmath. Math symbols are not sensibly mapped to unicode.
              Incompatible with unicode-math. No luamml support."
@@ -7300,7 +7300,7 @@
 - name: mathalpha
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -7310,7 +7310,7 @@
 - name: mathastext
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -7320,7 +7320,7 @@
 - name: mathbbol
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "No luamml support."
   issues:
@@ -7330,7 +7330,7 @@
 - name: mathdesign
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -7341,7 +7341,7 @@
 - name: mathdots
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "luamml support is suboptimal."
   issues:
@@ -7351,7 +7351,7 @@
 - name: mathpazo
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
@@ -7373,7 +7373,7 @@
 - name: mathptm
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   comments: "Obsolete package; suggested replacement `newtxmath`.
              Incompatible with unicode-math. No luamml support."
@@ -7384,7 +7384,7 @@
 - name: mathptmx
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: "Obsolete package; suggested replacement `newtxmath`.
              Incompatible with unicode-math. No luamml support."
@@ -7395,7 +7395,7 @@
 - name: mathrsfs
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   comments: "No luamml support."
   issues:
@@ -7405,7 +7405,7 @@
 - name: mathtools
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
@@ -7445,7 +7445,7 @@
 - name: mciteplus
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -7454,7 +7454,7 @@
 - name: mdframed
   type: package
   status: no-support
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: "Recommended alternative: tcolorbox."
   issues: [73]
@@ -7475,7 +7475,7 @@
 - name: media9
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [868]
   tests: false
@@ -7505,7 +7505,7 @@
 - name: menukeys
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [907]
   comments: "None of the formatting is represented at the tag level; spaces between
@@ -7525,7 +7525,7 @@
 - name: metalogo
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   comments: Logos need ActualText.
@@ -7563,7 +7563,7 @@
 - name: mfirstuc
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -7582,7 +7582,7 @@
 - name: mhchem
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [793]
   tests: false
@@ -7601,7 +7601,7 @@
 - name: microtype
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments: Footnote patching doesn’t work but otherwise supported.
   issues: [67]
@@ -7631,7 +7631,7 @@
 - name: minibox
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [905]
   comments: "Tags `\\minibox`es as tables."
@@ -7641,7 +7641,7 @@
 - name: minitoc
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [649]
   tests: true
@@ -7650,7 +7650,7 @@
 - name: minted
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 4
   issues:
   tests: true
@@ -7679,7 +7679,7 @@
 - name: mleftright
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments:
   issues:
@@ -7698,7 +7698,7 @@
 - name: mlmodern
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -7728,7 +7728,7 @@
 - name: montserrat
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -7746,7 +7746,7 @@
 - name: morefloats
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -7755,7 +7755,7 @@
 - name: moreverb
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [361]
   tests: true
@@ -7764,7 +7764,7 @@
 - name: morewrites
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -7773,7 +7773,7 @@
 - name: mparhack
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 4
   comments: "Errors with `debug` option."
   issues: [906]
@@ -7792,7 +7792,7 @@
 - name: multibib
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -7810,7 +7810,7 @@
 - name: multicol
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues: [705]
   tasks:
@@ -7820,7 +7820,7 @@
 - name: multicolrule
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -7829,7 +7829,7 @@
 - name: multido
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -7869,7 +7869,7 @@
   ctan-pkg: beamer
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -7890,7 +7890,7 @@
 - name: multirow
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [894]
   tests: true
@@ -7926,7 +7926,7 @@
 - name: mwe
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -7975,7 +7975,7 @@
 - name: nameref
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -7993,7 +7993,7 @@
 - name: natbib
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -8013,7 +8013,7 @@
 - name: natmove
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -8070,7 +8070,7 @@
 - name: nccmath
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [540]
   tests: true
@@ -8079,7 +8079,7 @@
 - name: needspace
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
@@ -8101,7 +8101,7 @@
   ctan-pkg: psnfss
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments: Obsolete package; suggested replacement `tgschola`.
   issues:
@@ -8120,7 +8120,7 @@
 - name: newfloat
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [450]
   tests: true
@@ -8150,7 +8150,7 @@
   ctan-pkg: newpx
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -8170,7 +8170,7 @@
   ctan-pkg: newpx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -8179,7 +8179,7 @@
 - name: newtx
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 2
   issues:
   tests: false
@@ -8189,7 +8189,7 @@
   ctan-pkg: newtx
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: true
@@ -8200,7 +8200,7 @@
   ctan-pkg: newtx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: true
@@ -8209,7 +8209,7 @@
 - name: newtxsf
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -8218,7 +8218,7 @@
 - name: newtxtt
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -8227,7 +8227,7 @@
 - name: newunicodechar
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [417]
   tests: true
@@ -8237,7 +8237,7 @@
 - name: newverbs
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -8264,7 +8264,7 @@
 - name: nicefrac
   type: package
   status: currently-incompatible
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol1]
   priority: 4
   issues: [897]
   comments: "Text-mode fractions are implemented as a sequence of formulas."
@@ -8283,7 +8283,7 @@
 - name: nicematrix
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 2
   issues: [179]
   tests: true
@@ -8329,7 +8329,7 @@
 - name: nomencl
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [363]
   tests: true
@@ -8357,7 +8357,7 @@
 - name: nopageno
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -8384,7 +8384,7 @@
 - name: noto
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -8423,7 +8423,7 @@
 - name: notoccite
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues: [458]
   tests: true
@@ -8461,7 +8461,7 @@
 - name: nth
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: false
@@ -8470,7 +8470,7 @@
 - name: ntheorem
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [688]
   tests: true
@@ -8508,7 +8508,7 @@
 - name: numprint
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -8556,7 +8556,7 @@
 - name: ocgx2
   type: package
   status: unchecked
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -8576,7 +8576,7 @@
 - name: old-arrows
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -8595,7 +8595,7 @@
 - name: opensans
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -8613,7 +8613,7 @@
 - name: orcidlink
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -8643,7 +8643,7 @@
 - name: outlines
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -8661,7 +8661,7 @@
 - name: overpic
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -8763,7 +8763,7 @@
 - name: pagecolor
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -8811,7 +8811,7 @@
 - name: pageslts
   type: package
   status: unchecked
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -8821,7 +8821,7 @@
 - name: palatino
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: Obsolete package; suggested replacement `tgpagella`.
   issues:
@@ -8831,7 +8831,7 @@
 - name: paracol
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol1]
   priority: 2
   issues: [227]
   tests: true
@@ -8840,7 +8840,7 @@
 - name: paralist
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [273]
   tests: true
@@ -8849,7 +8849,7 @@
 - name: parallel
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [471]
   tests: true
@@ -8858,7 +8858,7 @@
 - name: parcolumns
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [281]
   tests: true
@@ -8877,7 +8877,7 @@
 - name: parskip
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol5]
   priority: 2
   issues:
   tests: true
@@ -8895,7 +8895,7 @@
 - name: pbalance
   type: package
   status: unchecked
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -8905,7 +8905,7 @@
 - name: pbox
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [628]
   tests: true
@@ -8953,7 +8953,7 @@
 - name: pdfcomment
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [465]
   tests: true
@@ -8971,7 +8971,7 @@
 - name: pdflscape
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   package-repository: "https://github.com/ho-tex/pdflscape"
   issues:
@@ -9011,7 +9011,7 @@
 - name: pdfpages
   type: package
   status: currently-incompatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol5]
   priority: 2
   comments: "Creates duplicated structures as graphics are processed more than once in trial
             typesetting. Correct tagging of multipage includes unclear."
@@ -9023,7 +9023,7 @@
 - name: pdfrender
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   comments: Only works with luatex and pdftex.
@@ -9033,7 +9033,7 @@
 - name: pdftexcmds
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 3
   issues:
   tests: false
@@ -9042,7 +9042,7 @@
 - name: pdfx
   type: package
   status: no-support
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   comments: "Incompatible with PDF-management, loading is suppressed.
              Standards should be set with `\\DocumentMetadata` keys."
@@ -9073,7 +9073,7 @@
 - name: perpage
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -9092,7 +9092,7 @@
   type: package
   status: unchecked
   subpackages: [pgfcore,pgfsys,pgfcomp-version-0-65,pgfcomp-version-1-18]  
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 3
   issues:
   tests: false
@@ -9101,7 +9101,7 @@
 - name: pgfcalendar
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -9111,7 +9111,7 @@
   ctan-pkg: pgf
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 3
   issues:
   tests: false
@@ -9120,7 +9120,7 @@
 - name: pgfkeys
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 3
   issues:
   tests: false
@@ -9130,7 +9130,7 @@
   ctan-pkg: pgf
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol0.1]
   priority: 3
   issues:
   tests: false
@@ -9149,7 +9149,7 @@
 - name: pgfopts
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -9159,7 +9159,7 @@
   ctan-pkg: pgf
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [590]
   tests: true
@@ -9178,7 +9178,7 @@
 - name: pgfplots
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "Compatibility depends on tikz but also needs its own adjustments."
   issues: [924]
@@ -9188,7 +9188,7 @@
 - name: pgfplotstable
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   comments: "Table tagging is correct but any interaction with pgfplots
              is not yet supported."
@@ -9228,7 +9228,7 @@
 - name: picinpar
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [904]
   tests: true
@@ -9237,7 +9237,7 @@
 - name: picins
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -9248,7 +9248,7 @@
 - name: pict2e
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -9257,7 +9257,7 @@
 - name: picture
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -9266,7 +9266,7 @@
 - name: pifont
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol5]
   priority: 2
   comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
   issues: [1132]
@@ -9307,7 +9307,7 @@
 - name: placeins
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   issues:
   tests: true
@@ -9337,7 +9337,7 @@
   ctan-pkg: plex
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -9356,7 +9356,7 @@
 - name: pmboxdraw
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Symbols are not correctly mapped to Unicode."
   issues:
@@ -9386,7 +9386,7 @@
 - name: polyglossia
   type: package
   status: unchecked
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -9396,7 +9396,7 @@
 - name: polynom
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [612]
   tests: true
@@ -9433,7 +9433,7 @@
 - name: prettyref
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: true
@@ -9442,7 +9442,7 @@
 - name: preview
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: false
@@ -9462,7 +9462,7 @@
 - name: printlen
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -9482,7 +9482,7 @@
 - name: psfrag
   type: package
   status: unchecked
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol0.1]
   priority: 5
   issues:
   tests: false
@@ -9503,7 +9503,7 @@
 - name: pstool
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -9513,7 +9513,7 @@
 - name: pstricks
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: "Possible compatibility is only with lualatex; dvips cannot properly support PDF/UA.
             Offers `alt`, `actualtext`, `artifact`, and `correct-BBox` keys,
@@ -9580,7 +9580,7 @@
 - name: pythontex
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -9592,7 +9592,7 @@
 - name: qrcode
   type: package
   status: currently-incompatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues: [328]
   tests: true
@@ -9610,7 +9610,7 @@
 - name: quotchap
   type: package
   status: currently-incompatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues: [329]
   tests: true
@@ -9619,7 +9619,7 @@
 - name: quoting
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [507]
   tests: true
@@ -9639,7 +9639,7 @@
 - name: ragged2e
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol5]
   priority: 2
   package-repository: "https://gitlab.com/TeXhackse/ragged2e"
   external-issues: "https://gitlab.com/TeXhackse/ragged2e/-/issues/9"
@@ -9650,7 +9650,7 @@
 - name: raleway
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -9668,7 +9668,7 @@
 - name: realboxes
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   package-repository: "https://github.com/MartinScharrer/realboxes"
   comments: "Depends on partially-compatible collectbox. `\\Parbox` produces parent-child
@@ -9690,7 +9690,7 @@
 - name: refcheck
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [330]
   tests: true
@@ -9699,7 +9699,7 @@
 - name: refcount
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol1]
   priority: 3
   issues:
   tests: true
@@ -9708,7 +9708,7 @@
 - name: refstyle
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -9717,7 +9717,7 @@
 - name: regexpatch
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: false
@@ -9745,7 +9745,7 @@
 - name: relsize
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   tests: true
@@ -9781,7 +9781,7 @@
 - name: resizegather
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [352]
   tests: true
@@ -9800,7 +9800,7 @@
 - name: roboto
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -9839,7 +9839,7 @@
 - name: romannum
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -9848,7 +9848,7 @@
 - name: rotating
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues: [112,751]
   tests: true
@@ -9866,7 +9866,7 @@
 - name: rotfloat
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -9915,7 +9915,7 @@
 - name: sansmath
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -9925,7 +9925,7 @@
 - name: sansmathaccent
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   comments: "Incompatible with unicode-math. No luamml support."
   priority: 9
   issues:
@@ -9935,7 +9935,7 @@
 - name: sansmathfonts
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   comments: "Symbols in math mode are not mapped correctly to unicode.
@@ -9946,7 +9946,7 @@
 - name: savetrees
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -9956,7 +9956,7 @@
 - name: scalefnt
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -9965,7 +9965,7 @@
 - name: scalerel
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments:
   issues:
@@ -9994,7 +9994,7 @@
 - name: scontents
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -10003,7 +10003,7 @@
 - name: scrextend
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: false
@@ -10013,7 +10013,7 @@
 - name: scrlayer
   type: package
   status: unchecked
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -10053,7 +10053,7 @@
 - name: scrlayer-scrpage
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -10072,7 +10072,7 @@
 - name: secdot
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -10091,7 +10091,7 @@
 - name: sectsty
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   comments: "`\\sectionrule` produces errors."
@@ -10110,7 +10110,7 @@
 - name: selinput
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   comments: "Only works with pdftex. Should not be necessary in new documents."
@@ -10150,7 +10150,7 @@
 - name: setspace
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues:
   tests: true
@@ -10159,7 +10159,7 @@
 - name: settobox
   type: package
   status: unchecked
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -10169,7 +10169,7 @@
 - name: sfmath
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -10189,7 +10189,7 @@
 - name: shadow
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [336]
   tests: true
@@ -10208,7 +10208,7 @@
 - name: shellesc
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -10226,7 +10226,7 @@
 - name: shortvrb
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol1]
   priority: 2
   issues:
   tests: true
@@ -10246,7 +10246,7 @@
 - name: showframe
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: true
@@ -10275,7 +10275,7 @@
 - name: showlabels
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [593]
   tests: true
@@ -10285,7 +10285,7 @@
 - name: showkeys
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "Rules drawn around labels display as Path in tags and the label in the margin is either not tagged
              at all (pdflatex) or as artifact (lualatex). Unproblematic for a draft, but not UA compatible."
@@ -10305,7 +10305,7 @@
 - name: sidecap
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [290]
   tests: true
@@ -10314,7 +10314,7 @@
 - name: sidenotes
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [555]
   tests: true
@@ -10334,7 +10334,7 @@
 - name: simpleicons
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   comments: "Symbols need Alt/ActualText."
@@ -10344,7 +10344,7 @@
 - name: siunitx
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues: [197]
   comments: "does not complain, but produces separately formulas for numbers and units"
@@ -10364,7 +10364,7 @@
 - name: slantsc
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -10373,7 +10373,7 @@
 - name: slashed
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol0.1]
   priority: 5
   comments: "No luamml support."
   issues:
@@ -10411,7 +10411,7 @@
 - name: soul
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues: [167]
   tests: true
@@ -10430,7 +10430,7 @@
 - name: soulutf8
   type: package
   status: no-support
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   comments: "This package is obsolete. Use the soul package directly."
   issues:
@@ -10440,7 +10440,7 @@
 - name: sourcecodepro
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -10449,7 +10449,7 @@
 - name: sourcesanspro
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -10458,7 +10458,7 @@
 - name: sourceserifpro
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -10525,7 +10525,7 @@
 - name: spreadtab
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -10534,7 +10534,7 @@
 - name: spverbatim
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [168]
   tests: true
@@ -10552,7 +10552,7 @@
 - name: stackengine
   type: package
   status: unchecked
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: false
@@ -10562,7 +10562,7 @@
 - name: stackrel
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments:
   issues:
@@ -10591,7 +10591,7 @@
 - name: steinmetz
   type: package
   status: partially-compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   comments: "Picture used to draw symbol should be Artifact.
@@ -10611,7 +10611,7 @@
 - name: stfloats
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [900]
   tests: true
@@ -10631,7 +10631,7 @@
   ctan-pkg: stix2-type1
   type: package
   status: partially-compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -10641,7 +10641,7 @@
 - name: stmaryrd
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: "Incompatible with unicode-math. No luamml support."
   issues:
@@ -10680,7 +10680,7 @@
 - name: subcaption
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments: Issue when hyperref and both listoffigures are used.
   issues: [85]
@@ -10691,7 +10691,7 @@
 - name: subdepth
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   comments:
   issues:
@@ -10711,7 +10711,7 @@
 - name: subeqnarray
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [503]
   tests: true
@@ -10720,7 +10720,7 @@
 - name: subfig
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol5]
   priority: 2
   issues: [702]
   tests: true
@@ -10729,7 +10729,7 @@
 - name: subfigure
   type: package
   status: unchecked
-  included-in: [arxiv5]
+  included-in: [arxiv5, ol5]
   priority: 4
   issues:
   tests: false
@@ -10740,7 +10740,7 @@
 - name: subfiles
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -10749,7 +10749,7 @@
 - name: subfloat
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -10776,7 +10776,7 @@
 - name: supertabular
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [169]
   tests: true
@@ -10785,7 +10785,7 @@
 - name: svg
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -10814,7 +10814,7 @@
 - name: systeme
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [358]
   comments: "No luamml support."
@@ -10853,7 +10853,7 @@
 - name: tablefootnote
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -10871,7 +10871,7 @@
 - name: tabls
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [171]
   tests: true
@@ -10880,7 +10880,7 @@
 - name: tabstackengine
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -10890,7 +10890,7 @@
 - name: tabto
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [903]
   tests: true
@@ -10900,7 +10900,7 @@
 - name: tabu
   type: package
   status: no-support
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: In theory a nice package but it is **broken** and **not maintained**. It is not compatible with current LaTeX, let alone with the tagging extensions. Do not use it for anything, unless it gets a new maintainer that brings it up to speed.
   issues:
@@ -10937,7 +10937,7 @@
 - name: tabularray
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   package-repository: "https://github.com/lvjr/tabularray"
   issues: [177]
@@ -10948,7 +10948,7 @@
 - name: tabularx
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments: An old issue has been fixed.
   issues: [42]
@@ -10958,7 +10958,7 @@
 - name: tabulary
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -10967,7 +10967,7 @@
 - name: tagging
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   comments: This package allows conditional typesetting, i.e., tagging here means that the LaTeX source has labeled regions that you can include or exclude.
   issues:
@@ -10977,7 +10977,7 @@
 - name: tasks
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues: [370]
   tests: true
@@ -10986,7 +10986,7 @@
 - name: tcolorbox
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Simple boxes are now tagged correctly.
@@ -11030,7 +11030,7 @@
 - name: tensor
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "luamml support is suboptimal."
   issues:
@@ -11090,7 +11090,7 @@
   ctan-pkg: greek-fontenc
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -11099,7 +11099,7 @@
 - name: textcase
   type: package
   status: compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues:
   comments: "This package is obsolete. Use the kernel `\\MakeUppercase` and `\\MakeLowercase`."
@@ -11109,7 +11109,7 @@
 - name: textcomp
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Package no longer needed as definitions have been moved into the kernel"
   issues:
@@ -11119,7 +11119,7 @@
 - name: textgreek
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   tests: true
@@ -11128,7 +11128,7 @@
 - name: textpos
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues: [501]
   tests: true
@@ -11138,7 +11138,7 @@
   ctan-pkg: tex-gyre-adventor
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -11148,7 +11148,7 @@
   ctan-pkg: tex-gyre-bonum
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -11168,7 +11168,7 @@
   type: package
   ctan-pkg: tex-gyre-cursor
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -11178,7 +11178,7 @@
   ctan-pkg: tex-gyre-heros
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11188,7 +11188,7 @@
   ctan-pkg: tex-gyre-pagella
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11198,7 +11198,7 @@
   ctan-pkg: tex-gyre-schola
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -11208,7 +11208,7 @@
   ctan-pkg: tex-gyre-termes
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11217,7 +11217,7 @@
 - name: theorem
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11244,7 +11244,7 @@
 - name: thmtools
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [229]
   tests: true
@@ -11254,7 +11254,7 @@
 - name: threeparttable
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   issues: [173]
   tests: true
@@ -11263,7 +11263,7 @@
 - name: threeparttablex
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11273,7 +11273,7 @@
 - name: thumbpdf
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -11293,7 +11293,7 @@
 - name: tikz
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
   issues: [1160]
@@ -11304,7 +11304,7 @@
 - name: tikz-cd
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   issues: [30]
   tests: true
@@ -11313,7 +11313,7 @@
 - name: tikzducks
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -11354,7 +11354,7 @@
 - name: times
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: Obsolete package; suggested replacement `tgtermes`.
   issues:
@@ -11373,7 +11373,7 @@
 - name: tipa
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11383,7 +11383,7 @@
 - name: titlecaps
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   tests: true
@@ -11401,7 +11401,7 @@
 - name: titleps
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 2
   issues:
   tests: true
@@ -11420,7 +11420,7 @@
 - name: titlesec
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues: [24]
   tests: true
@@ -11430,7 +11430,7 @@
 - name: titletoc
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: Mentioned in issue.
   issues: [24,1157]
@@ -11440,7 +11440,7 @@
 - name: titling
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [687]
   tests: true
@@ -11449,7 +11449,7 @@
 - name: tocbasic
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [701]
   tests: true
@@ -11458,7 +11458,7 @@
 - name: tocbibind
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues:
   tests: true
@@ -11485,7 +11485,7 @@
 - name: tocloft
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   comments: "Package attempts to redefine `\\@starttoc`and fails."
   issues: [74]
@@ -11505,7 +11505,7 @@
 - name: tocvsec2
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -11514,7 +11514,7 @@
 - name: todonotes
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol5]
   priority: 2
   issues: [424]
   tests: true
@@ -11541,7 +11541,7 @@
 - name: totalcount
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -11550,7 +11550,7 @@
 - name: totpages
   type: package
   status: compatible
-  included-in:
+  included-in: [ol1]
   priority: 9
   issues:
   tests: true
@@ -11569,7 +11569,7 @@
   ctan-pkg: latex-base
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11578,7 +11578,7 @@
 - name: tracklang
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: false
@@ -11587,7 +11587,7 @@
 - name: translations
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -11596,7 +11596,7 @@
 - name: translator
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   issues:
   tests: true
@@ -11605,7 +11605,7 @@
 - name: transparent
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues:
   comments: Transparency across page breaks only works with luatex and pdftex.
@@ -11625,7 +11625,7 @@
   ctan-pkg: adjustbox
   type: package
   status: partially-compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol0.1]
   priority: 5
   comments: "Depends on partially-compatible collectbox. `\\clipbox` adds empty tags."
   issues:
@@ -11635,7 +11635,7 @@
 - name: trimspaces
   type: package
   status: compatible
-  included-in: [arxiv1]
+  included-in: [arxiv1, ol0.02]
   priority: 5
   issues:
   tests: false
@@ -11654,7 +11654,7 @@
 - name: truncate
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues: [374]
   tests: true
@@ -11682,7 +11682,7 @@
 - name: twemojis
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   comments: Symbols missing ToUnicode/Alt text.
@@ -11692,7 +11692,7 @@
 - name: txfonts
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol0.1]
   priority: 2
   comments: "Obsolete package; suggested replacement `newtxmath`.
              Incompatible with unicode-math. No luamml support."
@@ -11735,7 +11735,7 @@
 - name: typearea
   type: package
   status: unchecked
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11767,7 +11767,7 @@
 - name: ulem
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   comments: "Missing TextDecoration attributes."
   issues:
@@ -11787,7 +11787,7 @@
 - name: underscore
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11805,7 +11805,7 @@
 - name: unicode-math
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol1]
   priority: 2
   comments:
   luatex-only: true
@@ -11853,7 +11853,7 @@
 - name: upgreek
   type: package
   status: partially-compatible
-  included-in:
+  included-in: [ol1]
   priority: 9
   comments: "Most commands overwritten by unicode-math. No luamml support."
   issues:
@@ -11863,7 +11863,7 @@
 - name: upquote
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11872,7 +11872,7 @@
 - name: upref
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -11891,7 +11891,7 @@
 - name: url
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: An old issue has been fixed.
   issues: [5]
@@ -11910,7 +11910,7 @@
 - name: utopia
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -11921,7 +11921,7 @@
 - name: varioref
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: true
@@ -11930,7 +11930,7 @@
 - name: varwidth
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
   comments: Tagging structure looks ok, but the formatting is wrong when the tagging code is used.
   issues: [71]
@@ -11941,7 +11941,7 @@
 - name: vcell
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [575]
   tests: true
@@ -11960,7 +11960,7 @@
 - name: verbatim
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments: "verbatim environment from package overwritten by tagging code;
             content input with `\\verbatiminput` is tagged as normal text, not Code."
@@ -11971,7 +11971,7 @@
 - name: verbatimbox
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [571]
   tests: true
@@ -11989,7 +11989,7 @@
 - name: verse
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   comments: firstaid is required for the fix of issue 49
   issues: [49]
@@ -12000,7 +12000,7 @@
 - name: version
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   issues:
   tests: true
@@ -12028,7 +12028,7 @@
 - name: vwcol
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [315]
   tests: true
@@ -12039,7 +12039,7 @@
 - name: wallpaper
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [1158]
   tests: true
@@ -12058,7 +12058,7 @@
 - name: wasysym
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 4
   comments: "Missing ToUnicode for text symbols. amsmath must be loaded before wasysym."
   issues: [272,1140]
@@ -12068,7 +12068,7 @@
 - name: watermark
   type: package
   status: compatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: true
@@ -12115,7 +12115,7 @@
 - name: wrapfig
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: Generated tagging structure is incorrect.
   issues: [40]
@@ -12148,7 +12148,7 @@
 - name: XCharter
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -12169,7 +12169,7 @@
 - name: xcite
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -12179,7 +12179,7 @@
 - name: xcolor
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
   tests: false
@@ -12188,7 +12188,7 @@
 - name: xcoffins
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues: [345,684]
   tests: true
@@ -12207,7 +12207,7 @@
 - name: xecjk
   type: package
   status: unchecked
-  included-in:
+  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -12246,7 +12246,7 @@
 - name: xfrac
   type: package
   status: partially-compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [879]
   comments: "luamml support is suboptimal."
@@ -12266,7 +12266,7 @@
 - name: xhfill
   type: package
   status: currently-incompatible
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.1]
   priority: 7
   issues:
   comments: "Drawn rules should be tagged as Artifacts."
@@ -12306,7 +12306,7 @@
 - name: xkeyval
   type: package
   status: compatible
-  included-in: [arxiv10]
+  included-in: [arxiv10, ol5]
   priority: 3
   issues:
   tests: false
@@ -12315,7 +12315,7 @@
 - name: xlop
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   comments: "Does not produce sensible tagging."
@@ -12325,7 +12325,7 @@
 - name: xltabular
   type: package
   status: compatible
-  included-in: [tlc3, arxiv001]
+  included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   issues: [170]
   comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used."
@@ -12335,7 +12335,7 @@
 - name: xparse
   type: package
   status: compatible
-  included-in: [tlc3, arxiv5]
+  included-in: [tlc3, arxiv5, ol1]
   priority: 2
   issues:
   tests: false
@@ -12344,7 +12344,7 @@
 - name: xpatch
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: false
@@ -12373,7 +12373,7 @@
 - name: xr
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [959]
   tests: false
@@ -12382,7 +12382,7 @@
 - name: xr-hyper
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: Package now identical to xr, thus not necessary any longer when hyperref is used.
   issues:
@@ -12420,7 +12420,7 @@
 - name: xspace
   type: package
   status: compatible
-  included-in: [tlc3, arxiv10]
+  included-in: [tlc3, arxiv10, ol5]
   priority: 2
   issues:
   tests: true
@@ -12429,7 +12429,7 @@
 - name: xstring
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol5]
   priority: 6
   issues:
   tests: false
@@ -12438,7 +12438,7 @@
 - name: xtab
   type: package
   status: currently-incompatible
-  included-in:
+  included-in: [ol0.02]
   priority: 2
   issues: [183]
   tests: true
@@ -12456,7 +12456,7 @@
 - name: xurl
   type: package
   status: compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol1]
   priority: 6
   issues:
   tests: true
@@ -12476,7 +12476,7 @@
   ctan-pkg: xypic
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1]
+  included-in: [tlc3, arxiv1, ol1]
   priority: 2
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
@@ -12490,7 +12490,7 @@
 - name: yfonts
   type: package
   status: compatible
-  included-in: [tlc3, arxiv01]
+  included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues:
   tests: false
@@ -12509,7 +12509,7 @@
 - name: yhmath
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   comments: "Not compatible with unicode-math. No luamml support."
   issues:
@@ -12519,7 +12519,7 @@
 - name: youngtab
   type: package
   status: partially-compatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.02]
   priority: 6
   comments: "No luamml support. Diagrams in text mode need Alt text and for rules to be tagged as Artifacts."
   issues:
@@ -12529,7 +12529,7 @@
 - name: ytableau
   type: package
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [499]
   tests: true
@@ -12558,7 +12558,7 @@
 - name: zhnumber
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -12567,7 +12567,7 @@
 - name: zlmtt
   type: package
   status: compatible
-  included-in: [tlc3]
+  included-in: [tlc3, ol0.02]
   priority: 2
   issues:
   tests: false
@@ -12576,7 +12576,7 @@
 - name: zref
   type: package
   status: unchecked
-  included-in: [arxiv001]
+  included-in: [arxiv001, ol0.02]
   priority: 7
   issues:
   tests: false
@@ -12596,7 +12596,7 @@
 - name: zref-clever
   type: package
   status: compatible
-  included-in:
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: true
@@ -13146,7 +13146,7 @@
 - name: standalone
   type: class
   status: currently-incompatible
-  included-in: [arxiv01]
+  included-in: [arxiv01, ol0.1]
   priority: 6
   package-repository: "https://github.com/MartinScharrer/standalone"
   issues:
@@ -13177,4 +13177,4162 @@
   tests: false
   comments:
   updated: 2024-08-13
+
+
+- name: appendix
+  type: package
+  status: unchecked
+  included-in: [ol5]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: cmap
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: physics
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zref-user
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zref-savepos
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: fontawesome
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: eurosym
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: silence
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: forloop
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: vruler
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xifthen
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: datetime
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: acronym
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: anyfontsize
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: icml2026
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: appendixnumberbeamer
+  type: package
+  status: unchecked
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zi4
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pdfwidgets
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: circuitikz
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfgantt
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: acl
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: dirtytalk
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: rvdtx
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: CJKutf8
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-3dplot
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: thm-restate
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: seqsplit
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: cas-common
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jabbrv
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: grffile
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: units
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: filecontents
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: attrib
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: moresize
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: background
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pslatex
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xargs
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: here
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: totcount
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: commath
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: emptypage
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathalfa
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-euclide
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: a4wide
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: cvpr
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: letltxmacro
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: vmargin
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ae
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ijcai26
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xltxtra
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: isodate
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: optidef
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: nowidow
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: suffix
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aaai2026
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: matlab-prettifier
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: icml2025
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: polski
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: type1cm
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: chngpage
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scrhack
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: smartdiagram
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: twoopt
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-tab
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: vietnam
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: beamerposter
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-plot
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tweaklist
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: settings
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgf-pie
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mdwlist
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xunicode
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-feynman
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikzsymbols
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: anysize
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jheppub
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-qtree
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: breakcites
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scrlfile
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: trackchanges
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: algcompatible
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aecompl
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikzpagenodes
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: moderncvstyleclassic
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: nag
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: arxiv
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: atbegshi
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: beramono
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ascmac
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: abntex2cite
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-node
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: generic
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pstricks-add
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ltxutil
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: algpseudocodex
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pythonhighlight
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: qtree
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: spconf
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mdwmath
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: hf-tikz
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mdwtab
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bold-extra
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: esdiff
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: slashbox
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: usenix
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: colorprofiles
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: qcircuit
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: caption2
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: listingsutf8
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: boites
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ucs
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xfp
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: SIunits
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-all
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: srcltx
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-graph
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: t1enc
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: quantikz
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: fontsize
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathcomp
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: lettersp
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikzscale
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: everypage
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: stix
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: preamble
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tmlr
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tfrupee
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: program
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: color-edits
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: sbc-template
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: l3keys2e
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xeCJKfntef
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: luainputenc
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: quiver
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfornament
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scrbase
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pxjahyper
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: macros
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: classicthesis
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: otf
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: imsart
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: easyReview
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: PRIMEarxiv
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: gbt7714
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pxfonts
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mslapa
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aaai25
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: lstpatch
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: censor
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: remreset
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: titlepic
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: utfsym
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pdfsync
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pxrubrica
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: berasans
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: proof
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: complexity
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scrtime
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: hypernat
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: stringstrings
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: packages
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jmlr2e
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mcode
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: authoraftertitle
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-tree
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: TLCresume
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: beamerthemesplit
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: a4
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scicite
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-func
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-network
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathspec
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-text
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: memhfixc
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: annotate-equations
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: fixmath
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ijcai25
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: newlfont
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-math
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jcappub
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: oldgerm
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bxghost
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jlreq-deluxe
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: arabtex
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: linenoaa
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: eqndefns-left
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bxjalipsum
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: currvita
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: abntex2abrev
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xmpmulti
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jmlrutils
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jsen
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-fct
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: lstautogobble
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathpartir
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-grad
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xypic
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfarrows
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: sgame
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ngerman
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfnodes
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: rotate
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: style
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: iccv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: isomath
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: venndiagram
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: fancyheadings
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: advdate
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: filehook
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tmi
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: utf8
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: usenix-2020-09
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: easytable
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aistats2026
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: rsfso
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bxcjkjatype
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: progressbar
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: chronology
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: awesomebox
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikzpeople
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: movie15
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: chronosys
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pxchfon
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: eccvabbrv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: eccv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathtext
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: SCITEPRESS
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: luatex85
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: wacv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: clipboard
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: CJKnumb
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xwatermark
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-dependency
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: savesym
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: overcite
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: simplecv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: calculator
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: simplehipstercv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfautomata
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: nsfc
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: concrete
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-barcode
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfheaps
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pb-diagram
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-base
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: istgame
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: multibbl
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zhlipsum
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: colordvi
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: icml2024
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: listing
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: moderncvcollection
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: theoremref
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tablists
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: curves
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: luatexja-fontspec
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ecrc
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: thesis
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: sintefcolor
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: layaureo
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: upmath
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: german
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: docmute
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfshade
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: texnames
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jvlisting
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: leipzig
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: worldflags
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-eucl
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: achemso
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: hwsymb
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: hwlst
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: isotope
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: keycommand
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: simplewick
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zref-abspage
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tkz-berge
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: glossary-mcols
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: inputenx
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-xkey
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: couriers
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: syntax
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bchart
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: substr
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: paper
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: fleqn
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aeguill
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: exsheets
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgfcore
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: apxproof
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: textcmds
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: catchfilebetweentags
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: datenumber
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: collection
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: sistyle
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: cryptocode
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: schemabloc
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ACL2023
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: simpler-wick
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: shuffle
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: rawfonts
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: custom
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: forarray
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jlisting
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: psvectorian
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: commands
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: trfsigns
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: jinstpub
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: subscript
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: captionhack
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zxjatype
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: exercise
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: linegoal
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: acm-ec-25
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: physics2
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bibgerm
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: schemata
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: dfadobe
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: afterpackage
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: longfbox
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: subfigmat
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: scrpage2
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ProfCollege
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: idxlayout
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: epsdice
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: shadowtext
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: nohyperref
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: egweblnk
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikzit
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: myresume
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pgf-umlcd
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: simplekv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-uml
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: easy-todo
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mystyle
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: ar
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: arcs
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathenv
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bera
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: aaai24
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xintexpr
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: bibspacing
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: exam-randomizechoices
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: frontespizio
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: newfile
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: karnaugh-map
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: luacolor
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-dimline
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xinttools
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: xfor
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pdfbase
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: glossary-superragged
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: iopams
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: extract
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: dtx-style
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: zref-totpages
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: plautopatch
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: widetext
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: foreign
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: atbeginend
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: versions
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: arevmath
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tzplot
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tacl2021v1
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: citesort
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: classicthesis-arsclassica
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: doc-settings
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: tikz-qtree-compat
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: mathscinet
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: libertineRoman
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pst-3d
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: hwcmd
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: johd
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: lrec2026
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: chemarrow
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: collect
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: vector
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+
+- name: pseudocode
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
 
