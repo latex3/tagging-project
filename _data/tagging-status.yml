@@ -164,7 +164,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `a4paper` class option or the geometry package."
+  updated: 2026-01-27
 
 - name: Arvo
   type: package
@@ -176,6 +177,7 @@
   updated: 2024-07-21
 
 - name: abntex2abrev
+  ctan-pkg: abntex2
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -186,6 +188,7 @@
   updated: 2026-01-23
 
 - name: abntex2cite
+  ctan-pkg: abntex2
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -389,7 +392,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the package hooks provided by the kernel."
+  updated: 2026-01-27
 
 - name: afterpage
   type: package
@@ -411,6 +415,7 @@
   updated: 2024-07-21
 
 - name: algcompatible
+  ctan-pkg: algorithmicx
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -1030,7 +1035,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the shipout hooks provided by the kernel."
+  updated: 2026-01-27
 
 - name: atkinson
   type: package
@@ -2262,16 +2268,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: beamerthemesplit
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: bera
   type: package
   status: unchecked
@@ -3070,6 +3066,7 @@
   updated: 2024-07-21
 
 - name: cas-common
+  ctan-pkg: els-cas-templates
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -3407,6 +3404,7 @@
   issues:
   tests: false
   tasks: needs tests
+  comments: "Obsolete. Use changepage package instead."
   updated: 2026-01-23
 
 - name: cinzel
@@ -4813,7 +4811,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the hooks provided by the kernel."
+  updated: 2026-01-27
 
 - name: everyshi
   type: package
@@ -5309,6 +5308,7 @@
   issues:
   tests: false
   tasks: needs tests
+  comments: "Obsolete. Use the fancyhdr package instead."
   updated: 2026-01-23
 
 - name: fancypar
@@ -5460,7 +5460,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. The `filecontents` environment is now provided by the kernel."
+  updated: 2026-01-27
 
 - name: filecontentsdef
   type: package
@@ -5479,7 +5480,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the file hooks provided by the kernel."
+  updated: 2026-01-27
 
 - name: filemod
   type: package
@@ -5578,6 +5580,7 @@
   updated: 2024-07-07
 
 - name: fleqn
+  ctan-pkg: latex-base
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -5585,7 +5588,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `fleqn` class option."
+  updated: 2026-01-27
 
 - name: flexisym
   type: package
@@ -6295,7 +6299,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `german` option of babel."
+  updated: 2026-01-27
 
 - name: gettitlestring
   type: package
@@ -7238,7 +7243,8 @@
   priority: 2
   issues:
   tests: false
-  updated: 2024-07-06
+  comments: "Should not be needed with new documents."
+  updated: 2026-01-27
 
 - name: inputenx
   type: package
@@ -7248,7 +7254,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Should not be needed with new documents."
+  updated: 2026-01-27
 
 - name: intcalc
   type: package
@@ -7357,6 +7364,7 @@
   updated: 2024-07-31
 
 - name: jmlrutils
+  ctan-pkg: jmlr
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -7609,16 +7617,6 @@
 
 #------------------------ LLL ----------------------------
 
-- name: leipzig
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: LibreBodoni
   type: package
   status: compatible
@@ -7655,7 +7653,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the option handling commands provided by the kernel."
+  updated: 2026-01-27
 
 - name: labelschanged
   type: package
@@ -7809,7 +7808,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Superseded by `\\NewCommandCopy` etc. provided by the kernel."
+  updated: 2026-01-27
 
 - name: letterspace
   ctan-pkg: microtype
@@ -8125,6 +8125,7 @@
   updated: 2024-08-04
 
 - name: lstautogobble
+  ctan-pkg: lstaddons
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -8270,6 +8271,7 @@
   issues:
   tests: false
   tasks: needs tests
+  comments: "Should not be needed with new documents."
   updated: 2026-01-23
 
 - name: lualatex-math
@@ -9215,7 +9217,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the media9 package instead."
+  updated: 2026-01-27
 
 - name: mparhack
   type: package
@@ -9614,6 +9617,7 @@
   updated: 2024-08-04
 
 - name: newlfont
+  ctan-pkg: latex-base
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -9621,7 +9625,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete."
+  updated: 2026-01-27
 
 - name: newpax
   type: package
@@ -9766,7 +9771,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `ngerman` option of babel."
+  updated: 2026-01-27
 
 - name: nicefrac
   type: package
@@ -10112,6 +10118,7 @@
   updated: 2025-05-29
 
 - name: oldgerm
+  ctan-pkg: mfnfss
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -10179,6 +10186,7 @@
   updated: 2024-07-15
 
 - name: otf
+  ctan-pkg: japanese-otf
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -10510,6 +10518,7 @@
   updated: 2024-11-18
 
 - name: pdfbase
+  ctan-pkg: media9
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -10735,7 +10744,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfautomata
   ctan-pkg: pgf
@@ -10746,7 +10756,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfcalendar
   type: package
@@ -10796,7 +10807,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfkeys
   type: package
@@ -10836,7 +10848,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfopts
   type: package
@@ -10917,7 +10930,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgf-umlcd
   type: package
@@ -11711,7 +11725,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Should not be used in new documents."
+  updated: 2026-01-27
 
 - name: rccol
   type: package
@@ -11816,7 +11831,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Functionality now in the kernel."
+  updated: 2026-01-27
 
 - name: repeatindex
   type: package
@@ -11920,7 +11936,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the rotating package."
+  updated: 2026-01-27
 
 - name: rotating
   type: package
@@ -11979,6 +11996,17 @@
   updated: 2026-01-23
 
 #------------------------ SSS ----------------------------
+
+- name: SIunits
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  comments: "Obsolete. Use siunitx instead."
+  updated: 2026-01-27
 
 - name: sagetex
   type: package
@@ -12225,7 +12253,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use scrlayer-scrpage instead."
+  updated: 2026-01-27
 
 - name: scrtime
   type: package
@@ -12598,16 +12627,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: simplewick
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: sistyle
   type: package
   status: unchecked
@@ -12616,7 +12635,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use siunitx instead."
+  updated: 2026-01-27
 
 - name: siunitx
   type: package
@@ -13099,7 +13119,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. The `\\textsubscript` command is now provided by the kernel."
+  updated: 2026-01-27
 
 - name: superiors
   type: package
@@ -13171,16 +13192,6 @@
 
 - name: systeme
   type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: systeme
-  type: package
   status: currently-incompatible
   included-in: [arxiv001, ol0.1]
   priority: 7
@@ -13226,7 +13237,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete."
+  updated: 2026-01-27
 
 - name: tablefootnote
   type: package
@@ -13472,6 +13484,7 @@
   issues:
   tests: false
   tasks: needs tests
+  comments: "Obsolete. Use hologo or hvlogos."
   updated: 2026-01-23
 
 - name: texosquery
@@ -13662,6 +13675,7 @@
   updated: 2024-07-25
 
 - name: thm-restate
+  ctan-pkg: thmtools
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -13669,7 +13683,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Just loads the thmtools package."
+  updated: 2026-01-27
 
 - name: thmbox
   type: package
@@ -13784,16 +13799,6 @@
   status: unchecked
   included-in: [ol0.1]
   subpackages: [tikz-qtree-compat]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: tikz-qtree-compat
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -14320,6 +14325,7 @@
   updated: 2024-07-30
 
 - name: tweaklist
+  ctan-pkg: moderncv
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -14608,6 +14614,7 @@
   updated: 2024-08-20
 
 - name: utf8
+  ctan-pkg: arabtex
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -14615,7 +14622,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-01-27
 
 - name: utfsym
   type: package
@@ -14776,6 +14784,7 @@
   updated: 2024-08-04
 
 - name: vietnam
+  ctan-pkg: vntex
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -14880,16 +14889,6 @@
   issues: [1076]
   tests: true
   updated: 2025-11-20
-
-- name: worldflags
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: wordcloud
   type: package
@@ -15025,6 +15024,7 @@
   updated: 2024-07-18
 
 - name: xeCJKfntef
+  ctan-pkg: xecjk
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -15071,7 +15071,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Functionality built in to the kernel."
+  updated: 2026-01-27
 
 - name: xfor
   type: package
@@ -15534,6 +15535,7 @@
   updated: 2024-08-20
 
 - name: zref-savepos
+  ctan-pkg: zref
   type: package
   status: unchecked
   included-in: [ol1]
@@ -15555,6 +15557,7 @@
   updated: 2026-01-23
 
 - name: zref-user
+  ctan-pkg: zref
   type: package
   status: unchecked
   included-in: [ol1]
@@ -16085,16 +16088,6 @@
   updated: 2025-12-04
 
 #------------------------ SSS ----------------------------
-
-- name: SIunits
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: scrartcl
   type: class
