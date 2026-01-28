@@ -903,6 +903,16 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: arabxetex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: arev
   type: package
   status: compatible
@@ -2462,13 +2472,57 @@
 
 - name: bidi
   type: package
-  status: currently-incompatible
+  status: no-support
+  subpackages: [bidi2in1,bidicode,bidiftnxtra,bidi-media9,bidimoderncv,bidi-perpage,
+                bidipoem,biditools,biditufte-book,bidituftefloat,bidituftegeneralstructure,
+                biditufte-handout,bidituftehyperref,bidituftesidenote,bidituftetitle,
+                bidituftetoc,cvthemebidicasual,cvthemebidiclassic]
   included-in: [tlc3]
   priority: 8
   issues: [686]
   tests: excluded
   comments: "Requires xetex so tests are excluded."
   updated: 2026-01-25
+
+- name: bidicontour
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidihl
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidipagegrid
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidishadowtext
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: bigdelim
   type: package
@@ -5523,6 +5577,16 @@
   tests: true
   updated: 2024-07-22
 
+- name: fixjfm
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
+
 - name: fixltx2e
   type: package
   status: compatible
@@ -6647,6 +6711,16 @@
   tests: true
   updated: 2024-08-07
 
+- name: hanzibox
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: har2nat
   type: package
   status: compatible
@@ -7044,6 +7118,7 @@
 - name: ifptex
   type: package
   status: compatible
+  subpackages: [ifuptex]
   included-in: [tlc3]
   priority: 8
   issues:
@@ -7255,6 +7330,16 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: interchar
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: interval
   type: package
@@ -7559,6 +7644,16 @@
   luatex-only: true
   tests: false
   updated: 2024-07-15
+
+- name: kurdishlipsum
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: kurier
   type: package
@@ -11461,10 +11556,41 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: ptext
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: pxbase
+  type: package
+  status: no-support
+  subpackages: [pxbabel,upkcat]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
+
 - name: pxchfon
   type: package
   status: no-support
   included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
+
+- name: pxcjkcat
+  type: package
+  status: no-support
+  included-in:
   priority: 9
   issues:
   tests: false
@@ -11503,6 +11629,26 @@
   comments: "Requires the unsupported ptex or uptex engines."
   updated: 2026-01-28
 
+- name: pxjodel
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
+
+- name: pxpgfmark
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
+
 - name: pxpic
   type: package
   status: partially-compatible
@@ -11522,6 +11668,16 @@
   tests: false
   luatex-only: true
   tasks: needs tests
+  updated: 2026-01-28
+
+- name: pxtatescale
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
   updated: 2026-01-28
 
 - name: pxtx-cal
@@ -11545,6 +11701,17 @@
   tests: false
   comments: "No luamml support."
   updated: 2025-06-13
+
+- name: pxufont
+  type: package
+  status: no-support
+  subpackages: [pxufont-ruby]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the unsupported ptex or uptex engines."
+  updated: 2026-01-28
 
 - name: pyluatex
   type: package
@@ -13607,6 +13774,16 @@
   tests: false
   updated: 2024-07-15
 
+- name: thaispec
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: theorem
   type: package
   status: currently-incompatible
@@ -14408,6 +14585,16 @@
 
 #------------------------ UUU ----------------------------
 
+- name: ucharclasses
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: ucs
   type: package
   status: unchecked
@@ -14455,6 +14642,16 @@
   issues:
   tests: true
   updated: 2024-08-04
+
+- name: unicode-bidi
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: unicode-math
   type: package
@@ -14970,26 +15167,107 @@
   comments: "`\\nofloat` produces parent-child warnings."
   updated: 2024-08-04
 
-- name: xecjk
+- name: xechangebar
   type: package
   status: no-support
-  included-in: [ol0.1]
+  included-in:
   priority: 9
   issues:
   tests: false
   comments: "Requires the incompatible xetex engine."
   updated: 2026-01-28
 
-- name: xeCJKfntef
-  ctan-pkg: xecjk
+- name: xecjk
   type: package
   status: no-support
   included-in: [ol0.1]
+  subpackages: [xeCJKfntef,xeCJK-listings]
   priority: 9
   issues:
   tests: false
   comments: "Requires the incompatible xetex engine."
-  updated: 2026-01-23
+  updated: 2026-01-28
+
+- name: xecolor
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xecyr
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xecyrmongolian
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xeindex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian
+  type: package
+  status: no-support
+  included-in:
+  subpackages: [unicode-persiancal,unicode-persianmath,xepersian-magazine,xepersian-multiplechoice]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian-hm
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xesearch
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xespotcolor
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xetexko
   type: package
@@ -15281,13 +15559,13 @@
 
 - name: xunicode
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xurl
   type: package
@@ -15440,6 +15718,16 @@
   tests: false
   updated: 2026-01-28
 
+- name: zitie
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: zlmtt
   type: package
   status: compatible
@@ -15530,6 +15818,26 @@
   issues:
   tests: true
   updated: 2024-08-20
+
+- name: zxjafbfont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: zxjafont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: zxjatype
   type: package
