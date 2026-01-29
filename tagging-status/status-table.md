@@ -35,10 +35,13 @@ Click on the column headings to sort the table by the chosen column.
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
-See 
+See
 {% for r in p.references %}
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
+{%- endif -%}
+{%- if p.ptex-only %}
+Requires the use of (u)ptex.
 {%- endif -%}
 </td>
 <td>
