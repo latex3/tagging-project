@@ -904,6 +904,16 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: arabxetex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: arev
   type: package
   status: compatible
@@ -2463,13 +2473,57 @@
 
 - name: bidi
   type: package
-  status: currently-incompatible
+  status: no-support
+  subpackages: [bidi2in1,bidicode,bidiftnxtra,bidi-media9,bidimoderncv,bidi-perpage,
+                bidipoem,biditools,biditufte-book,bidituftefloat,bidituftegeneralstructure,
+                biditufte-handout,bidituftehyperref,bidituftesidenote,bidituftetitle,
+                bidituftetoc,cvthemebidicasual,cvthemebidiclassic]
   included-in: [tlc3]
   priority: 8
   issues: [686]
   tests: excluded
   comments: "Requires xetex so tests are excluded."
   updated: 2026-01-25
+
+- name: bidicontour
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidihl
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidipagegrid
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidishadowtext
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: bigdelim
   type: package
@@ -5527,6 +5581,16 @@
   tests: true
   updated: 2024-07-22
 
+- name: fixjfm
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: fixltx2e
   type: package
   status: compatible
@@ -6652,6 +6716,16 @@
   tests: true
   updated: 2024-08-07
 
+- name: hanzibox
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: har2nat
   type: package
   status: compatible
@@ -7049,6 +7123,7 @@
 - name: ifptex
   type: package
   status: compatible
+  subpackages: [ifuptex]
   included-in: [tlc3]
   priority: 8
   issues:
@@ -7261,6 +7336,16 @@
   tests: false
   updated: 2024-07-21
 
+- name: interchar
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: interval
   type: package
   status: compatible
@@ -7369,6 +7454,17 @@
   tests: false
   updated: 2024-07-18
 
+- name: jslogo
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: jsonparse
   type: package
   status: compatible
@@ -7377,6 +7473,17 @@
   issues:
   tests: false
   updated: 2025-10-12
+
+- name: jsverb
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: juliamono
   type: package
@@ -7564,6 +7671,16 @@
   luatex-only: true
   tests: false
   updated: 2024-07-15
+
+- name: kurdishlipsum
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: kurier
   type: package
@@ -8744,13 +8861,13 @@
 
 - name: mathspec
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: mathtext
   ctan-pkg: t2
@@ -9041,6 +9158,17 @@
   tests: true
   updated: 2025-06-10
 
+- name: minijs
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: minitoc
   type: package
   status: currently-incompatible
@@ -9182,6 +9310,16 @@
   issues:
   tests: false
   updated: 2024-07-15
+
+- name: morisawa
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: movie15
   type: package
@@ -10068,6 +10206,28 @@
   tests: true
   updated: 2024-08-15
 
+- name: okumacro
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: okuverb
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: old-arrows
   type: package
   status: partially-compatible
@@ -10149,12 +10309,12 @@
 - name: otf
   ctan-pkg: japanese-otf
   type: package
-  status: no-support
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  comments: "Requires the unsupported ptex or uptex engines."
+  ptex-only: true
   updated: 2026-01-28
 
 - name: oubraces
@@ -11036,12 +11196,12 @@
 
 - name: plautopatch
   type: package
-  status: no-support
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  comments: "Requires the unsupported ptex or uptex engines."
+  ptex-only: true
   updated: 2026-01-28
 
 - name: plex-mono
@@ -11471,14 +11631,45 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: pxchfon
+- name: ptext
   type: package
   status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: pxbase
+  type: package
+  status: currently-incompatible
+  subpackages: [pxbabel,upkcat]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxchfon
+  type: package
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  comments: "Requires the unsupported ptex or uptex engines."
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxcjkcat
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
   updated: 2026-01-28
 
 - name: px-ds
@@ -11505,12 +11696,32 @@
 
 - name: pxjahyper
   type: package
-  status: no-support
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  comments: "Requires the unsupported ptex or uptex engines."
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxjodel
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxpgfmark
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
   updated: 2026-01-28
 
 - name: pxpic
@@ -11534,6 +11745,16 @@
   tasks: needs tests
   updated: 2026-01-28
 
+- name: pxtatescale
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: pxtx-cal
   ctan-pkg: pxtxalfa
   type: package
@@ -11555,6 +11776,17 @@
   tests: false
   comments: "No luamml support."
   updated: 2025-06-13
+
+- name: pxufont
+  type: package
+  status: currently-incompatible
+  subpackages: [pxufont-ruby]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: pyluatex
   type: package
@@ -13618,6 +13850,16 @@
   tests: false
   updated: 2024-07-15
 
+- name: thaispec
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: theorem
   type: package
   status: currently-incompatible
@@ -14419,6 +14661,16 @@
 
 #------------------------ UUU ----------------------------
 
+- name: ucharclasses
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: ucs
   type: package
   status: unchecked
@@ -14466,6 +14718,16 @@
   issues:
   tests: true
   updated: 2024-08-04
+
+- name: unicode-bidi
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: unicode-math
   type: package
@@ -14981,26 +15243,107 @@
   comments: "`\\nofloat` produces parent-child warnings."
   updated: 2024-08-04
 
-- name: xecjk
+- name: xechangebar
   type: package
   status: no-support
-  included-in: [ol0.1]
+  included-in:
   priority: 9
   issues:
   tests: false
   comments: "Requires the incompatible xetex engine."
   updated: 2026-01-28
 
-- name: xeCJKfntef
-  ctan-pkg: xecjk
+- name: xecjk
   type: package
   status: no-support
   included-in: [ol0.1]
+  subpackages: [xeCJKfntef,xeCJK-listings]
   priority: 9
   issues:
   tests: false
   comments: "Requires the incompatible xetex engine."
-  updated: 2026-01-23
+  updated: 2026-01-28
+
+- name: xecolor
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xecyr
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xecyrmongolian
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xeindex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian
+  type: package
+  status: no-support
+  included-in:
+  subpackages: [unicode-persiancal,unicode-persianmath,xepersian-magazine,xepersian-multiplechoice]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian-hm
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xesearch
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xespotcolor
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xetexko
   type: package
@@ -15293,13 +15636,13 @@
 
 - name: xunicode
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xurl
   type: package
@@ -15452,6 +15795,16 @@
   tests: false
   updated: 2026-01-28
 
+- name: zitie
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: zlmtt
   type: package
   status: compatible
@@ -15542,6 +15895,26 @@
   issues:
   tests: true
   updated: 2024-08-20
+
+- name: zxjafbfont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: zxjafont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: zxjatype
   type: package
@@ -15754,6 +16127,28 @@
 
 #------------------------ JJJ ----------------------------
 
+- name: jarticle
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jbook
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: jlreq
   type: class
   status: currently-incompatible
@@ -15764,7 +16159,84 @@
   tests: true
   updated: 2024-10-18
 
+- name: jltxdoc
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jreport
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsarticle
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsbook
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jspf
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsreport
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 #------------------------ KKK ----------------------------
+
+- name: kiyou
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 #------------------------ LLL ----------------------------
 
@@ -16124,6 +16596,39 @@
 
 #------------------------ TTT ----------------------------
 
+- name: tarticle
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: tbook
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: treport
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: tufte-book
   ctan-pkg: tufte-latex
   type: class
@@ -16146,3 +16651,70 @@
   comments:
   updated: 2024-08-13
 
+#------------------------ UUU ----------------------------
+
+- name: ujarticle
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: ujbook
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: ujreport
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utarticle
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utbook
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utreport
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
