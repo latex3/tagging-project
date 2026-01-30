@@ -1,0 +1,18 @@
+\DocumentMetadata{%
+  lang=en-GB,
+  pdfstandard=UA-2,
+  pdfversion=2.0,
+  tagging=on,
+}
+\begin{filecontents}{\jobname-1.tex}
+\documentclass{standalone}
+\begin{document}
+another test
+\end{document}
+\end{filecontents}
+\documentclass{article}
+\usepackage{standalone}
+\begin{document}
+text
+\input{\jobname-1}
+\end{document}
