@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\usepackage{mathpartir}
+
+\title{mathpartir tagging test - 1}
+
+\begin{document}
+
+\[ \infer{a \\ b}{c} \]
+
+\[ \inferrule*[Right={label}]{a \\\\ b}{c \\ d} \]
+
+\end{document}

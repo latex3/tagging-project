@@ -1,0 +1,48 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{longtable}
+
+\title{longtable tagging test - 1}
+
+\begin{document}
+
+\begin{longtable}{|||c|ccc|ccc|ccc|||}
+\hline\hline\hline
+   Bi    & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$\rule{0pt}{10pt} \\  
+\hline  
+\endfirsthead
+\hline\hline\hline
+  Bi     & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$ \\ 
+\hline
+\endhead
+\hline\hline\hline
+\endfoot
+\hline\hline\hline
+\endlastfoot 
+0.01   & 0.09983  & 1.0017  & 1.0000  & 0.14124   & 1.0025  & 1.0000  & 0.17303  & 1.0030  & 1.0000\rule{0pt}{10pt} \\ 
+0.02   & 0.14095  & 1.0033  & 1.0000  & 0.19950   & 1.0050  & 1.0000  & 0.24446  & 1.0060  & 1.0000 \\ 
+0.03   & 0.17234  & 1.0049  & 1.0000  & 0.24403   & 1.0075  & 1.0000  & 0.29910  & 1.0090  & 1.0000 \\ 
+0.04   & 0.19868  & 1.0066  & 1.0000  & 0.28143   & 1.0099  & 1.0000  & 0.34503  & 1.0120  & 1.0000 \\  
+0.05   & 0.22176  & 1.0082  & 0.9999  & 0.31426   & 1.0124  & 0.9999  & 0.38537  & 1.0150  & 1.0000 \\  
+\end{longtable}
+
+\begin{table}[b]
+\tagpdfsetup{table/header-rows={1}}%
+\begin{tabular}{|c|ccc|ccc|ccc|}
+\hline
+   Bi  & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$ & $\lambda_1$ & $A_1$ & $D_1$\rule{0pt}{10pt}  \\
+\hline
+0.01   & 0.09983  & 1.0017  & 1.0000  & 0.14124   & 1.0025  & 1.0000  & 0.17303  & 1.0030  & 1.0000\rule{0pt}{10pt} \\ 
+\hline
+\end{tabular}
+\end{table}
+\end{document}
