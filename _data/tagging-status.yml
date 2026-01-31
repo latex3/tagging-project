@@ -10230,11 +10230,33 @@
   tests: false
   updated: 2024-07-21
 
+- name: ocg
+  ctan-pkg: asymptote
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-31
+
+- name: ocg-p
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-31
+
 - name: ocgx2
   type: package
   status: unchecked
   included-in: [tlc3, ol0.02]
   priority: 2
+  subpackages: [ocgbase]
   issues:
   tests: false
   tasks: needs tests
