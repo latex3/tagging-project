@@ -5883,6 +5883,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol5]
   priority: 2
+  subpackages: [fontspec-luatex,fontspec-xetex]
   issues:
   luatex-only: true
   tests: false
@@ -6864,6 +6865,15 @@
   comments: Some logos need ActualText.
   tests: true
   updated: 2024-07-29
+
+- name: hycolor
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-30
 
 - name: hypbmsec
   type: package
@@ -8326,6 +8336,16 @@
   tests: true
   updated: 2024-07-25
 
+- name: lua-unicode-math
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  updated: 2026-01-30
+
 - name: lua-widow-control
   type: package
   status: compatible
@@ -8398,6 +8418,19 @@
   tests: true
   comments: "Missing way to add Alt text to underlying mplibcode or tikz environments."
   updated: 2025-11-22
+
+- name: luamml
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  subpackage: [luamml-patches-amsmath,luamml-patches-kernel,luamml-pdf]
+  tests: false
+  luatex-only: true
+  comments: "Should not need to be loaded directly. Loaded with `tagging=on`
+             when luatex is detected."
+  updated: 2026-01-30
 
 - name: luamplib
   type: package
@@ -8784,6 +8817,16 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: mathfont
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-29
 
 - name: mathpartir
   type: package
@@ -14432,6 +14475,15 @@
   tests: false
   updated: 2024-08-06
 
+- name: trajan
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-29
+
 - name: translations
   type: package
   status: compatible
@@ -14736,6 +14788,7 @@
   included-in: [tlc3, ol1]
   priority: 2
   comments:
+  subpackages: [unicode-math-luatex,unicode-math-xetex]
   luatex-only: true
   issues: [847]
   tests: false
