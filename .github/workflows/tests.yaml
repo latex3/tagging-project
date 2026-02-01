@@ -35,6 +35,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: libglut3
+        run: sudo apt update
         run: sudo apt-get install -y freeglut3-dev
       - name: Install TeX Live
         id: texlive
