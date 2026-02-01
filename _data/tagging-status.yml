@@ -71,15 +71,25 @@
 
 #------------------------ AAA ----------------------------
 
+- name: a4
+  type: package
+  status: compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the `a4paper` class option or the geometry package."
+  updated: 2026-01-30
+
 - name: a4wide
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the geometry package instead."
+  updated: 2026-01-30
 
 - name: ae
   type: package
@@ -159,16 +169,6 @@
   tests: false
   updated: 2024-07-21
 
-- name: a4
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: arcs
   type: package
   status: unchecked
@@ -177,7 +177,7 @@
   issues:
   tests: false
   tasks: needs tests
-  comments: "Obsolete. Use the `a4paper` class option or the geometry package."
+  comments:
   updated: 2026-01-27
 
 - name: Arvo
@@ -389,13 +389,12 @@
 
 - name: advdate
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-30
 
 - name: afterpackage
   type: package
@@ -797,13 +796,13 @@
 
 - name: anysize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the typearea or geometry packages."
+  updated: 2026-01-30
 
 - name: apacite
   type: package
@@ -837,13 +836,13 @@
 
 - name: appendixnumberbeamer
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "beamer is not a supported class."
+  updated: 2026-01-30
 
 - name: apptools
   type: package
@@ -2281,13 +2280,13 @@
 
 - name: beamerposter
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "beamer is not a supported class."
+  updated: 2026-01-30
 
 - name: bera
   type: package
@@ -3090,13 +3089,13 @@
 
 - name: caption2
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Obsolete. Use the caption package instead."
+  updated: 2026-01-30
 
 - name: carlito
   type: package
@@ -3605,13 +3604,12 @@
 
 - name: cmap
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-30
 
 - name: cmbright
   type: package
@@ -6944,7 +6942,7 @@
   subpackages: [nohyperref]
   references: [2]
   issues: [892]
-  tests: false
+  tests: true
   comments: "Forms not supported; use l3pdffield-testphase for forms."
   updated: 2025-06-07
 
@@ -8205,9 +8203,9 @@
   issues: [22,1192]
   comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
   related-issues: [38]
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-28
+  tests: true
+  tasks: needs more tests
+  updated: 2026-01-30
 
 - name: lpic
   type: package
@@ -8787,13 +8785,13 @@
 
 - name: mathpartir
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues: [1189]
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-28
+  tests: true
+  comments: "No luamml support. `mathpar` environment errors."
+  updated: 2026-01-30
 
 - name: mathpazo
   type: package
@@ -9246,6 +9244,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-26
+
+- name: mmap
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-30
 
 - name: monaspace-otf
   type: package
@@ -13872,13 +13879,12 @@
 
 - name: theoremref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-01-30
 
 - name: thepdfnumber
   type: package
@@ -13950,13 +13956,13 @@
 
 - name: thumbs
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues: [1173]
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-19
+  tests: true
+  comments: "Thumb overviews produce destination warnings."
+  updated: 2026-01-30
 
 - name: tikz
   type: package
@@ -16586,14 +16592,15 @@
 
 - name: standalone
   type: class
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
   package-repository: "https://github.com/MartinScharrer/standalone"
   issues: [1177]
   tests: true
-  comments: "Content is lost at pdf level due to being boxed."
-  updated: 2026-01-28
+  comments: "With the standalone class, content is lost at pdf level due to being boxed.
+             Using the standalone package to input standlone files is compatible."
+  updated: 2026-01-30
 
 #------------------------ TTT ----------------------------
 
