@@ -3452,6 +3452,15 @@
   tests: false
   updated: 2026-01-26
 
+- name: chkfloat
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1214]
+  tests: true
+  updated: 2026-02-03
+
 - name: chngcntr
   type: package
   status: compatible
@@ -5306,6 +5315,7 @@
   priority: 2
   issues:
   tests: false
+  comments: "Legacy package. Now built into the kernel."
   updated: 2024-07-14
 
 - name: exscale
@@ -6761,6 +6771,16 @@
   tests: false
   comments: "Text not correctly mapped to Unicode."
   updated: 2026-02-01
+
+- name: gregoriotex
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
 
 - name: grfext
   type: package
@@ -8439,6 +8459,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: longnamefilelist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
+
 - name: longtable
   type: package
   status: compatible
@@ -8687,6 +8716,17 @@
   tests: false
   updated: 2026-01-28
 
+- name: luatexbase
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Legacy package. Functionality built into the kernel."
+  luatex-only: true
+  updated: 2026-02-03
+
 - name: luatexja
   type: package
   status: currently-incompatible
@@ -8720,6 +8760,17 @@
   luatex-only: true
   tests: true
   updated: 2025-11-17
+
+- name: luatextra
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Legacy package."
+  luatex-only: true
+  updated: 2026-02-03
 
 - name: luatodonotes
   type: package
@@ -9818,6 +9869,15 @@
   tests: false
   updated: 2024-07-15
 
+- name: myfilist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
+
 #------------------------ NNN ----------------------------
 
 - name: nabatean
@@ -10189,6 +10249,15 @@
   tasks: needs tests
   comments: "Obsolete. Use the `ngerman` option of babel."
   updated: 2026-01-27
+
+- name: nicefilelist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
 
 - name: nicefrac
   type: package
@@ -12434,7 +12503,7 @@
   priority: 9
   issues:
   tests: false
-  updated: 2024-08-06
+  updated: 2026-02-03
 
 - name: realboxes
   type: package
@@ -15884,13 +15953,15 @@
 
 - name: xecyrmongolian
   type: package
-  status: no-support
+  status: unchecked
   included-in:
   priority: 9
   issues:
   tests: false
-  comments: "Requires the incompatible xetex engine."
-  updated: 2026-01-28
+  tasks: needs tests
+  comments: "Also works with lualatex."
+  luatex-only: true
+  updated: 2026-02-03
 
 - name: xeindex
   type: package
