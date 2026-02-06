@@ -9747,12 +9747,13 @@
 
 - name: multicolrule
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, ol0.02]
   priority: 2
   issues: [1209]
   tests: true
-  updated: 2024-08-04
+  comments: "`custom-line` key produces parent-child warnings."
+  updated: 2026-02-06
 
 - name: multido
   type: package
@@ -14684,6 +14685,17 @@
   issues: [945]
   tests: true
   updated: 2025-09-12
+
+- name: tikzlibrary-fadings
+  ctan-pkg: tikz
+  type: library
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues: [1208]
+  tests: true
+  comments: "`\\tikzfading` must be declared in the preamble."
+  updated: 2026-02-06
 
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
