@@ -705,7 +705,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,1202,1203,1207,1218]
+  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,1202,1203,1207,1216,1218,1221]
   tests: true
   updated: 2026-01-19
 
@@ -789,13 +789,12 @@
 
 - name: anyfontsize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: anysize
   type: package
@@ -829,13 +828,12 @@
 
 - name: appendix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol5]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1222]
+  tests: true
+  updated: 2026-02-09
 
 - name: appendixnumberbeamer
   type: package
@@ -899,13 +897,13 @@
 
 - name: arabtex
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
-  issues:
+  issues: [1223]
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Use lualatex and babel with OpenType fonts instead."
+  updated: 2026-02-09
 
 - name: arabxetex
   type: package
@@ -929,23 +927,34 @@
 
 - name: arev
   type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Loads the partially-compatible arevmath."
+  tests: false
+  updated: 2026-02-09
+
+- name: arevmath
+  ctan-pkg: arev
+  type: package
+  status: partially-compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Incompatible with unicode-math."
+  updated: 2026-02-09
+
+- name: arevtext
+  ctan-pkg: arev
+  type: package
   status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  updated: 2024-07-21
-
-- name: arevmath
-  ctan-pkg: arev
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: arimo
   type: package
@@ -3724,13 +3733,12 @@
 
 - name: collect
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-02-09
 
 - name: collectbox
   type: package
@@ -4245,13 +4253,12 @@
 
 - name: datenumber
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: dblfloatfix
   type: package
@@ -4450,13 +4457,12 @@
 
 - name: docmute
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: doi
   type: package
@@ -4825,13 +4831,12 @@
 
 - name: emptypage
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: endfloat
   type: package
@@ -15523,14 +15528,13 @@
 - name: utf8
   ctan-pkg: arabtex
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete. Do not use in new documents."
-  updated: 2026-01-27
+  updated: 2026-02-09
 
 - name: utfsym
   type: package
