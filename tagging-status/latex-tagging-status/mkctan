@@ -1,6 +1,12 @@
 mkdir -p build/latex-tagging-status
 cd build/latex-tagging-status
 
+
+if ! latex-tagging-status-lint-x86_64-unknown-linux-musl ../../../../_data/tagging-status.yml ; then
+  echo "Bad or missing  YAML"
+  exit
+fi
+
 curl -s -o latex-tagging-status.ltx https://latex3.github.io/tagging-project/tagging-status/latex-tagging-status/latex-tagging-status.ltx
 chmod a-x latex-tagging-status.ltx
 
