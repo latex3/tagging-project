@@ -11178,13 +11178,13 @@
 
 - name: pdfmsym
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [298]
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  comments: "No luamml support."
+  updated: 2026-02-10
 
 - name: pdfoverlay
   type: package
@@ -11746,13 +11746,12 @@
 
 - name: polski
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: polyglossia
   type: package
@@ -12482,14 +12481,13 @@
 
 - name: rawfonts
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Should not be used in new documents."
-  updated: 2026-01-27
+  updated: 2026-02-10
 
 - name: rccol
   type: package
@@ -12767,13 +12765,13 @@
 
 - name: rsfso
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "No luamml support."
+  updated: 2026-02-10
 
 - name: runic
   type: package
@@ -12869,13 +12867,12 @@
 
 - name: savesym
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: savetrees
   type: package
@@ -13046,16 +13043,6 @@
   tasks: needs tests
   updated: 2024-07-10
 
-- name: srcltx
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: scrpage2
   type: package
   status: unchecked
@@ -13069,13 +13056,12 @@
 
 - name: scrtime
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: scrwfile
   type: package
@@ -13233,13 +13219,12 @@
 
 - name: shadowtext
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1226]
+  tests: true
+  updated: 2026-02-10
 
 - name: shapepar
   type: package
@@ -13350,13 +13335,13 @@
 
 - name: shuffle
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support. `\\shuffle` command overwritten by unicode-math."
+  updated: 2026-02-10
 
 - name: sidecap
   type: package
@@ -13664,6 +13649,16 @@
   tests: false
   updated: 2026-02-01
 
+- name: srcltx
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
 - name: stabular
   type: package
   status: currently-incompatible
@@ -13753,13 +13748,13 @@
 
 - name: stix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete, see stix2. Incompatible with unicode-math. No luamml support."
+  updated: 2026-02-10
 
 - name: stix2
   ctan-pkg: stix2-type1
