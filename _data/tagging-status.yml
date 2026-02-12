@@ -705,7 +705,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,1202,1203,1207,1218]
+  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,1202,1203,1207,1216,1218,1221]
   tests: true
   updated: 2026-01-19
 
@@ -789,13 +789,12 @@
 
 - name: anyfontsize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: anysize
   type: package
@@ -829,13 +828,12 @@
 
 - name: appendix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol5]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1222]
+  tests: true
+  updated: 2026-02-09
 
 - name: appendixnumberbeamer
   type: package
@@ -899,13 +897,13 @@
 
 - name: arabtex
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
-  issues:
+  issues: [1223]
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Use lualatex and babel with OpenType fonts instead."
+  updated: 2026-02-09
 
 - name: arabxetex
   type: package
@@ -929,23 +927,34 @@
 
 - name: arev
   type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Loads the partially-compatible arevmath."
+  tests: false
+  updated: 2026-02-09
+
+- name: arevmath
+  ctan-pkg: arev
+  type: package
+  status: partially-compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Incompatible with unicode-math."
+  updated: 2026-02-09
+
+- name: arevtext
+  ctan-pkg: arev
+  type: package
   status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  updated: 2024-07-21
-
-- name: arevmath
-  ctan-pkg: arev
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: arimo
   type: package
@@ -3724,13 +3733,12 @@
 
 - name: collect
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-02-09
 
 - name: collectbox
   type: package
@@ -4245,13 +4253,12 @@
 
 - name: datenumber
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: dblfloatfix
   type: package
@@ -4450,13 +4457,12 @@
 
 - name: docmute
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: doi
   type: package
@@ -4825,13 +4831,12 @@
 
 - name: emptypage
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: endfloat
   type: package
@@ -11171,16 +11176,6 @@
   tests: true
   updated: 2024-08-16
 
-- name: pdfmsym
-  type: package
-  status: unchecked
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
-
 - name: pdfoverlay
   type: package
   status: partially-compatible
@@ -11741,13 +11736,12 @@
 
 - name: polski
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: polyglossia
   type: package
@@ -12477,14 +12471,13 @@
 
 - name: rawfonts
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Should not be used in new documents."
-  updated: 2026-01-27
+  updated: 2026-02-10
 
 - name: rccol
   type: package
@@ -12762,13 +12755,13 @@
 
 - name: rsfso
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "No luamml support."
+  updated: 2026-02-10
 
 - name: runic
   type: package
@@ -12864,13 +12857,12 @@
 
 - name: savesym
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: savetrees
   type: package
@@ -13041,16 +13033,6 @@
   tasks: needs tests
   updated: 2024-07-10
 
-- name: srcltx
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: scrpage2
   type: package
   status: unchecked
@@ -13064,13 +13046,12 @@
 
 - name: scrtime
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: scrwfile
   type: package
@@ -13228,13 +13209,12 @@
 
 - name: shadowtext
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1226]
+  tests: true
+  updated: 2026-02-10
 
 - name: shapepar
   type: package
@@ -13345,13 +13325,13 @@
 
 - name: shuffle
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support. `\\shuffle` command overwritten by unicode-math."
+  updated: 2026-02-10
 
 - name: sidecap
   type: package
@@ -13659,6 +13639,16 @@
   tests: false
   updated: 2026-02-01
 
+- name: srcltx
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
 - name: stabular
   type: package
   status: currently-incompatible
@@ -13748,13 +13738,13 @@
 
 - name: stix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete, see stix2. Incompatible with unicode-math. No luamml support."
+  updated: 2026-02-10
 
 - name: stix2
   ctan-pkg: stix2-type1
@@ -15523,14 +15513,13 @@
 - name: utf8
   ctan-pkg: arabtex
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete. Do not use in new documents."
-  updated: 2026-01-27
+  updated: 2026-02-09
 
 - name: utfsym
   type: package

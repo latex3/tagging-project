@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{report}
+
+\usepackage{collect}
+
+\title{collect tagging test - 1}
+
+\begin{document}
+
+\definecollection{tst}
+
+\begin{collect*}{tst}{Before\par}{\par After}{Before file\par}{\par After file}
+This is a test
+\end{collect*}
+
+\includecollection{tst}
+
+\begin{collectinmacro}{\collectedtext}{Before\par}{\par After}
+This is a test
+\end{collectinmacro}
+
+\collectedtext
+
+\end{document}
