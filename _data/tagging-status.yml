@@ -71,6 +71,52 @@
 
 #------------------------ AAA ----------------------------
 
+- name: Alegreya
+  type: package
+  status: compatible
+  included-in: [tlc3, ol0.02]
+  priority: 2
+  issues:
+  tests: false
+  updated: 2024-07-13
+
+- name: AlegreyaSans
+  ctan-pkg: alegreya
+  type: package
+  status: compatible
+  included-in: [tlc3, ol0.02]
+  priority: 2
+  issues:
+  tests: false
+  updated: 2024-07-13
+
+- name: AnonymousPro
+  type: package
+  status: compatible
+  included-in: [tlc3]
+  priority: 2
+  issues:
+  tests: false
+  updated: 2024-07-13
+
+- name: Archivo
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2024-07-21
+
+- name: Arvo
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2024-07-21
+
 - name: a4
   type: package
   status: compatible
@@ -122,34 +168,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: Alegreya
-  type: package
-  status: compatible
-  included-in: [tlc3, ol0.02]
-  priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-13
-
-- name: AlegreyaSans
-  ctan-pkg: alegreya
-  type: package
-  status: compatible
-  included-in: [tlc3, ol0.02]
-  priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-13
-
-- name: AnonymousPro
-  type: package
-  status: compatible
-  included-in: [tlc3]
-  priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-13
-
 - name: ar
   type: package
   status: unchecked
@@ -159,15 +177,6 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
-
-- name: Archivo
-  type: package
-  status: compatible
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  updated: 2024-07-21
 
 - name: arcs
   type: package
@@ -179,15 +188,6 @@
   tasks: needs tests
   comments:
   updated: 2026-01-27
-
-- name: Arvo
-  type: package
-  status: compatible
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  updated: 2024-07-21
 
 - name: abntex2abrev
   ctan-pkg: abntex2
@@ -1079,6 +1079,16 @@
   tests: false
   comments: "Obsolete. Use the shipout hooks provided by the kernel."
   updated: 2026-01-28
+
+- name: atenddvi
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the kernel hooks."
+  updated: 2026-02-12
 
 - name: atkinson
   type: package
@@ -2930,18 +2940,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: ctex
-  type: package
-  status: currently-incompatible
-  included-in: [tlc3, ol1]
-  priority: 6
-  issues: [673]
-  luatex-only: true
-  tests: true
-  comments: "Option `heading=true` breaks section heading tagging. Same problem
-             with classes ctexart, ctexbook, and ctexrep."
-  updated: 2026-01-25
-
 - name: CharisSIL
   type: package
   status: compatible
@@ -3367,6 +3365,15 @@
   tests: false
   updated: 2026-01-25
 
+- name: checkend
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: chemarr
   type: package
   status: partially-compatible
@@ -3683,6 +3690,15 @@
   comments: "Math symbols overwritten by unicode-math."
   tests: false
   updated: 2025-05-29
+
+- name: cmdtrack
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
 
 - name: cmll
   type: package
@@ -4046,6 +4062,28 @@
   issues: [494]
   tests: true
   updated: 2024-08-06
+
+- name: ctablestack
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
+- name: ctex
+  type: package
+  status: currently-incompatible
+  included-in: [tlc3, ol1]
+  priority: 6
+  issues: [673]
+  luatex-only: true
+  tests: true
+  comments: "Option `heading=true` breaks section heading tagging. Same problem
+             with classes ctexart, ctexbook, and ctexrep."
+  updated: 2026-01-25
 
 - name: cuprum
   type: package
@@ -5173,6 +5211,15 @@
   tests: false
   updated: 2024-08-28
 
+- name: etexcmds
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: ethiop
   type: package
   status: currently-incompatible
@@ -5737,6 +5784,16 @@
   issues:
   tests: false
   updated: 2024-07-07
+
+- name: flags
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. See the bitset package."
+  updated: 2026-02-12
 
 - name: fleqn
   ctan-pkg: latex-base
@@ -7495,6 +7552,16 @@
   comments: "Should not be needed with new documents."
   updated: 2026-01-27
 
+- name: inputnormalization
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
 - name: inslrmaj
   type: package
   status: compatible
@@ -7997,7 +8064,7 @@
   priority: 2
   issues:
   tests: false
-  updated: 2026-12-02
+  updated: 2026-02-12
 
 - name: latexrelease
   type: package
@@ -8495,6 +8562,16 @@
   tasks: needs more tests
   updated: 2026-01-30
 
+- name: lparse
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
 - name: lpic
   type: package
   status: unchecked
@@ -8652,6 +8729,16 @@
   luatex-only: true
   updated: 2026-01-28
 
+- name: luahyphenrules
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
 - name: luainputenc
   type: package
   status: compatible
@@ -8661,6 +8748,16 @@
   tests: false
   comments: "Should not be needed with new documents."
   updated: 2026-01-28
+
+- name: luakeys
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: lualatex-math
   type: package
@@ -8720,6 +8817,26 @@
   luatex-only: true
   tests: true
   updated: 2024-11-12
+
+- name: luaoptions
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
+- name: luarandom
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: luatex85
   type: package
@@ -8805,6 +8922,16 @@
   luatex-only: true
   tests: true
   updated: 2024-08-07
+
+- name: luaxml
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: lucida-otf
   type: package
@@ -8952,6 +9079,16 @@
   issues:
   tests: true
   updated: 2024-07-11
+
+- name: makerobust
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. The kernel provide `\\MakeRobust`."
+  updated: 2026-02-12
 
 - name: manfnt
   type: package
@@ -10778,13 +10915,13 @@
 
 - name: overcite
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Just loads cite package with the `superscript` option."
+  updated: 2026-02-12
 
 - name: overlock
   type: package
@@ -10808,6 +10945,26 @@
 
 #------------------------ PPP ----------------------------
 
+- name: Play
+  ctan-pkg: play-font
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2024-07-21
+
+- name: PlayfairDisplay
+  ctan-pkg: playfair
+  type: package
+  status: compatible
+  included-in: [tlc3]
+  priority: 2
+  issues:
+  tests: false
+  updated: 2024-07-13
+
 - name: PoiretOne
   type: package
   status: compatible
@@ -10816,6 +10973,16 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: ProfCollege
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
 
 - name: PTMono
   ctan-pkg: paratype
@@ -10876,36 +11043,6 @@
   issues:
   tests: false
   updated: 2024-07-13
-
-- name: Play
-  ctan-pkg: play-font
-  type: package
-  status: compatible
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  updated: 2024-07-21
-
-- name: PlayfairDisplay
-  ctan-pkg: playfair
-  type: package
-  status: compatible
-  included-in: [tlc3]
-  priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-13
-
-- name: ProfCollege
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: pacioli
   type: package
@@ -11059,6 +11196,15 @@
   issues:
   tests: true
   updated: 2024-07-25
+
+- name: patchcmd
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
 
 - name: path
   type: package
@@ -11888,6 +12034,15 @@
              Tagging via TeX syntax added to Alt on surrounding Figure."
   updated: 2026-01-19
 
+- name: protecteddef
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: protosem
   type: package
   status: partially-compatible
@@ -12563,6 +12718,15 @@
   issues:
   tests: false
   updated: 2024-07-25
+
+- name: regstats
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
 
 - name: reledmac
   type: package
@@ -13262,6 +13426,24 @@
   tests: true
   updated: 2024-07-08
 
+- name: show2e
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
+- name: showdim
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: showexpl
   type: package
   status: currently-incompatible
@@ -13506,6 +13688,15 @@
   issues: [408]
   tests: true
   updated: 2024-08-01
+
+- name: somedefs
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
 
 - name: soul
   type: package
@@ -13996,6 +14187,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: syntonly
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
 
 - name: systeme
   type: package
@@ -15328,13 +15528,13 @@
 
 - name: ucs
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents. Ignored entirely with Unicode engines."
+  updated: 2026-02-12
 
 - name: ugarite
   type: package
@@ -15424,6 +15624,16 @@
   luatex-only: true
   tests: true
   updated: 2024-07-17
+
+- name: uninormalize
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: uniquecounter
   type: package
