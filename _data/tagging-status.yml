@@ -705,7 +705,8 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,1202,1203,1207,1216,1218,1221]
+  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,
+           1202,1203,1207,1216,1218,1221,1224,1225,1232]
   tests: true
   updated: 2026-01-19
 
@@ -2711,13 +2712,12 @@
 
 - name: bold-extra
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: boldline
   type: package
@@ -2809,13 +2809,12 @@
 
 - name: breakcites
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: breakurl
   type: package
@@ -3655,13 +3654,12 @@
 
 - name: clipboard
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: clrstrip
   type: package
@@ -3807,13 +3805,13 @@
 
 - name: colordvi
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Requires unsupported latex+dvips+ps2pdf workflow."
+  updated: 2026-02-13
 
 - name: color-edits
   type: package
@@ -6034,13 +6032,21 @@
 
 - name: fontsize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
+
+- name: fontsmpl
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
 
 - name: fontspec
   type: package
@@ -6128,23 +6134,21 @@
 
 - name: forarray
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: foreign
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: forest
   type: package
@@ -6855,13 +6859,13 @@
 
 - name: grffile
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Just loads graphicx."
+  updated: 2026-02-13
 
 - name: gridset
   type: package
@@ -7147,6 +7151,7 @@
   priority: 9
   issues: [680]
   tests: false
+  comments: "Requires unsupported latex+dvips+ps2pdf workflow."
   updated: 2024-08-28
 
 - name: hyperbar
@@ -7366,13 +7371,12 @@
 
 - name: isodate
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: isomath
   type: package
@@ -7846,13 +7850,12 @@
 
 - name: keycommand
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: keyfloat
   type: package
@@ -8062,7 +8065,7 @@
   status: compatible
   included-in:
   priority: 2
-  issues:
+  issues: [1229]
   tests: false
   updated: 2026-02-12
 
@@ -9782,13 +9785,12 @@
 
 - name: moresize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: moreverb
   type: package
@@ -10247,14 +10249,13 @@
 - name: newlfont
   ctan-pkg: latex-base
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete."
-  updated: 2026-01-27
+  updated: 2026-02-13
 
 - name: newpax
   type: package
@@ -14238,14 +14239,13 @@
 
 - name: t1enc
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete."
-  updated: 2026-01-27
+  updated: 2026-02-13
 
 - name: tablefootnote
   type: package
@@ -14788,7 +14788,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
-  issues: [1160,1208]
+  issues: [1160,1208,1228]
   references: [1]
   tests: true
   updated: 2026-01-19
@@ -15466,13 +15466,13 @@
 
 - name: type1cm
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tasks: "Obsolete. Use fix-cm instead."
+  updated: 2026-02-13
 
 - name: typearea
   type: package
@@ -16705,34 +16705,43 @@
 
 - name: zref
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
+  subpackages: [zref-base]
   issues:
   tests: false
-  tasks: needs tests
+  comments: "Most of the zref-* packages are compatible. Some still need to be checked."
   updated: 2024-07-17
 
 - name: zref-abspage
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
-- name: zref-check
+- name: zref-abspos
+  ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-02-13
+
+- name: zref-check
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
 
 - name: zref-clever
   type: package
@@ -16743,38 +16752,169 @@
   tests: true
   updated: 2024-08-20
 
-- name: zref-savepos
+- name: zref-counter
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-dotfill
   ctan-pkg: zref
   type: package
   status: unchecked
-  included-in: [ol1]
+  included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
+
+- name: zref-env
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-hyperref
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
+
+- name: zref-lastpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-marks
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
+
+- name: zref-nextpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-pageattr
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-pagelayout
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-perpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-runs
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-savepos
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-thepage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-titleref
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
 
 - name: zref-totpages
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: zref-user
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: zref-vario
   type: package
@@ -16784,6 +16924,17 @@
   issues:
   tests: true
   updated: 2024-08-20
+
+- name: zref-xr
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
 
 - name: zxjafbfont
   type: package
