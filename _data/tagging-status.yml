@@ -9057,13 +9057,14 @@
 
 - name: makecell
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv1, ol10]
   priority: 5
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  tests: true
+  comments: "Interaction with incompatible multirow package not yet supported.
+             `\\diaghead` command uses `picture` environment that is tagged as a figure."
+  updated: 2025-02-14
 
 - name: makecmds
   type: package
