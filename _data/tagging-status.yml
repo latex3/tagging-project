@@ -303,13 +303,14 @@
 
 - name: acronym
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "List of acronyms is tagged as list rather than TOC and dotfill
+             should be tagged as artifact."
+  updated: 2026-02-15
 
 - name: addlines
   type: package
@@ -5310,13 +5311,13 @@
 
 - name: eurosym
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol1]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1235]
+  tests: true
+  comments: "`\\euro` not correctly mapped to Unicode symbol."
+  updated: 2026-02-15
 
 - name: euscript
   ctan-pkg: amsfonts
@@ -15921,13 +15922,12 @@
 
 - name: vruler
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-02-15
 
 - name: vwcol
   type: package
