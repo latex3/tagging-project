@@ -1,0 +1,36 @@
+\DocumentMetadata{lang=en-US,tagging=on}
+\documentclass[twoside]{article}
+\usepackage{vruler}
+       \setlength{\textwidth}{2.5in}
+       \setlength{\oddsidemargin}{3cm}
+       \setlength{\evensidemargin}{6cm}
+       \overfullrule=0pt \parindent=0pt
+
+\title{vruler tagging test}
+
+\begin{document}
+\advance\textwidth 3cm %2cm is better for plain TeX
+\setvruler [][][][][][\textwidth]
+         This is a simple example, in which we have
+         placed vertical rulers on the left for
+         odd numbered pages and on the right for
+         even numbered pages. \newpage
+
+         This is the second page and is thus an even
+         numbered page. Please see that the vertical
+         ruler is now on the right, and is approximately
+         of the same distance from the text margin as
+         the vertical ruler on the first page from
+         the left margin there. \newpage
+\unsetvruler
+         The following pages, in fact only this page, will
+         not be appended with the vertical rulers.\newpage
+\setvruler[][\rulercount]
+         This page will be added with the vertical ruler again.
+         Here the numbering marking of the vertical ruler picks
+         up where it was left. Nevertheless, we may start with
+         any new number. \newpage
+
+         This is another page. Please see that both this and
+         the previous pages have vruler on the left side.
+\end{document}
