@@ -1,0 +1,96 @@
+\DocumentMetadata{lang=en-US,tagging=on}
+\documentclass{article}
+\usepackage{makecell}
+\usepackage{rotating}
+\usepackage{tabularx}
+
+\title{makecell tagging test}
+
+\begin{document}
+\begin{tabular}{|c|c|}
+\hline
+Cell text & 28--31\\
+\hline
+\makecell{Multilined \\ cell text} & 28--31\\
+\hline
+\makecell[l]{Left aligned \\ cell text} & 37--43\\
+\hline
+\makecell*[r]{Right aligned \\ cell text} & 37--43\\
+\hline
+\makecell[b]{Bottom aligned \\ cell text} & 52--58\\
+\hline
+\makecell*[{{p{3cm}}}]{Cell long text with predefined width} & 52--58\\
+\hline
+\makecell[{{>{\parindent1em}p{3cm}}}]{Cell long...} & 52--58\\
+\hline
+\end{tabular}
+
+\bigskip
+
+%\renewcommand\theadset{\def\arraystretch{.85}}%
+\begin{tabular}{|l|c|}
+\hline
+\thead{First column head}&
+\thead{Second \\multlined \\ column head}\\
+\hline
+Left column text & 28--31\\
+\hline
+\end{tabular}
+
+\bigskip
+
+\settowidth\rotheadsize{\theadfont Second multilined}
+\begin{tabular}{|l|c|}
+\hline
+\thead{First column head}&
+\rothead{Second multilined \\ column head}\\
+\hline
+Left column text & 28--31\\
+\hline
+\end{tabular}
+
+\bigskip
+
+\setcellgapes{5pt}
+\makegapedcells
+\begin{tabular}{|c|c|}
+\hline
+Cell text & 28--31\\
+\hline
+\makecell{Multilined \\ cell text} & 28--31\\
+\hline
+\makecell[l]{Left aligned \\ cell text} & 37--43\\
+\hline
+\makecell*[r]{Right aligned \\ cell text} & 37--43\\
+\hline
+\makecell[b]{Bottom aligned \\ cell text} & 52--58\\
+\hline
+\makecell*[{{p{3cm}}}]{Cell long text with predefined width} & 52--58\\
+\hline
+\makecell[{{>{\parindent1em}p{3cm}}}]{Cell long  text with
+predefined width} & 52--58\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|*{12}{c|}}
+\hline
+\eline{6} \\ \hline
+\nline{6} \\ \hline
+\eline{3} & \nline[1][4]{3} \\ \hline
+\nline[(a)]{6} \\ \hline
+\nline[column I]{6} \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|c|c|}\hline
+\diaghead{\theadfont Diag ColumnmnHead II}%
+{Diag Column \\Head I}{Diag\\Column Head II}&
+\thead{Second\\column}&\thead{Third\\column}
+\end{tabular}
+
+\begin{tabularx}{.62\hsize}{|X|c|c|}\hline
+\diaghead(-4,1){\hskip\hsize}%
+{Diag \\Column Head I}{Diag Column \\Head II}&
+\thead{Second\\column}&\thead{Third\\column}
+\end{tabularx}
+
+\end{document}
