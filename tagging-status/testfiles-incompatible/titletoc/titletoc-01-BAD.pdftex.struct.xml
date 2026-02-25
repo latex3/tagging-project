@@ -1,0 +1,165 @@
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.002"
+    >
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.005"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.006"
+       title="\contentsname \@mkboth {\MakeUppercase \contentsname }{\MakeUppercase \contentsname }"
+       rolemaps-to="H1"
+      >
+     <?MarkedContent page="1" ?>Contents
+    </section>
+    <TOC xmlns="http://iso.org/pdf/ssn"
+       id="ID.007"
+       title="toc"
+      >
+     <TOCI xmlns="http://iso.org/pdf/ssn"
+        id="ID.008"
+        title="Some section"
+       >
+       <?References objects="1" ?>
+     </TOCI>
+     <TOCI xmlns="http://iso.org/pdf/ssn"
+        id="ID.009"
+        title="Another section"
+       >
+       <?References objects="2" ?>
+     </TOCI>
+     <TOC xmlns="http://iso.org/pdf/ssn"
+        id="ID.010"
+       >
+      <TOCI xmlns="http://iso.org/pdf/ssn"
+         id="ID.011"
+         title="Some subsection"
+        >
+        <?References objects="3" ?>
+      </TOCI>
+     </TOC>
+     <TOCI xmlns="http://iso.org/pdf/ssn"
+        id="ID.012"
+        title="Yet another section"
+       >
+       <?References objects="4" ?>
+     </TOCI>
+     <TOC xmlns="http://iso.org/pdf/ssn"
+        id="ID.013"
+       >
+      <TOCI xmlns="http://iso.org/pdf/ssn"
+         id="ID.014"
+         title="Another subsection"
+        >
+        <?References objects="5" ?>
+      </TOCI>
+     </TOC>
+    </TOC>
+   </Sect>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.015"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.016"
+       title="Some section"
+       rolemaps-to="H1"
+      >
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.017"
+        rolemaps-to="Span"
+       >
+      <?MarkedContent page="1" ?>1
+     </section-number>
+     <?MarkedContent page="1" ?>Some section
+    </section>
+   </Sect>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.018"
+      referenced-as="1"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.019"
+       title="Another section"
+       rolemaps-to="H1"
+      >
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.020"
+        rolemaps-to="Span"
+       >
+      <?MarkedContent page="1" ?>2
+     </section-number>
+     <?MarkedContent page="1" ?>Another section
+    </section>
+    <Sect xmlns="http://iso.org/pdf2/ssn"
+       id="ID.021"
+       referenced-as="2"
+      >
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.022"
+        title="Some subsection"
+        rolemaps-to="H2"
+       >
+      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.023"
+         rolemaps-to="Span"
+        >
+       <?MarkedContent page="1" ?>2.1
+      </section-number>
+      <?MarkedContent page="1" ?>Some subsection
+     </subsection>
+    </Sect>
+   </Sect>
+   <Sect xmlns="http://iso.org/pdf2/ssn"
+      id="ID.024"
+      referenced-as="3"
+     >
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.025"
+       title="Yet another section"
+       rolemaps-to="H1"
+      >
+     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.026"
+        rolemaps-to="Span"
+       >
+      <?MarkedContent page="1" ?>3
+     </section-number>
+     <?MarkedContent page="1" ?>Yet another section
+    </section>
+    <Sect xmlns="http://iso.org/pdf2/ssn"
+       id="ID.027"
+       referenced-as="4"
+      >
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.028"
+        title="Another subsection"
+        rolemaps-to="H2"
+       >
+      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.029"
+         rolemaps-to="Span"
+         referenced-as="5"
+        >
+       <?MarkedContent page="1" ?>3.1
+      </section-number>
+      <?MarkedContent page="1" ?>Another subsection
+     </subsection>
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.030"
+        rolemaps-to="Part"
+       >
+      <text xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.031"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
+         rolemaps-to="P"
+        >
+       <?MarkedContent page="1" ?>Normal text
+      </text>
+     </text-unit>
+    </Sect>
+   </Sect>
+  </Document>
+ </StructTreeRoot>
+</PDF>

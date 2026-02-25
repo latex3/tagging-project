@@ -5,5 +5,8 @@
   pdfstandard   = A-4f,
   tagging-setup = {math/setup=mathml-AF, extra-modules={verbatim-af}}
 }
-
+\AtBeginDocument{
+\AssignTaggingSocketPlug{math/display/tag/begin}{noop}
+\AssignTaggingSocketPlug{math/display/tag/end}{noop}
+}
 \input{stem-article-2col}

@@ -45,7 +45,6 @@ Graphics can be treated as figures or as inline spans with alternative descripti
 Apart from properly used tags, the proper structure and nesting of the tags is equally important.
 
 Run
-
 ```
 l3build save -c config-unchecked <class or package name>-01
 ```
@@ -57,7 +56,7 @@ l3build save -c config-unchecked -e pdftex <class or package name>-01
 to create an XML file named `<class or package name>-01.struct.xml` in the `testfiles/<class or package name>/` subdirectory. 
 Check the contents of this file as well.
 
-This may be validated with the schema `latex-document-swictch.rnc` The file must be valid
+This may be validated with the schema `latex-document-switch.rnc` The file must be valid
 if the package is to be given a status `compatible` If the file is invalid then the test file should be renamed to end with `-BAD`.
 
 This file shows a combination of tagging, structure and alternative representations 
@@ -71,14 +70,14 @@ These comments appear as there are no Unicode mappings for bitmap fonts which mi
 ## Add your test files to this repository
 
 If you are confident that the tagging structure of your document class or package is fine, 
-you can create a Pull Request to this repository and upload your testfiles together with the relevant `.struct.xml` files 
+you can create a Pull Request to this repository and upload your test files together with the relevant `.struct.xml` files 
 to the relevant `tagging-status/testfiles-...` directory of this repository (see the following paragraph). 
 To this end, you can fork this repository.
 
-Testfiles for packages that are compatible should be moved into the directory `testfiles-compatible`, 
+Test files for packages that are compatible should be moved into the directory `testfiles-compatible`, 
 those for partially compatible packages into the directory `testfiles-partial`. 
-If your package only works with LuaTeX and testfiles for PDFTeX are hence not relevant, 
-the testfiles should be placed into the directory `testfiles-compatible-luatex`.
+If your package only works with LuaTeX and test files for PDFTeX are hence not relevant, 
+the test files should be placed into the directory `testfiles-compatible-luatex`.
 
 Also, add a relevant entry to the YAML file at `_data/tagging-status.yml` by following the instructions given in the header of this file.
  An entry should more or less adhere to the following template:
@@ -93,11 +92,11 @@ Also, add a relevant entry to the YAML file at `_data/tagging-status.yml` by fol
 
 In this YAML template, change `name` to the name of the class or package and `type` to `class` or `package`.  
 Change `status` to `compatible` or `partially-compatible` if your package is completely or at least partially compatible with tagging. 
-If your package is compatible and does not require testfiles, set `tests: false`, otherwise, set `tests: true`.
+If your package is compatible and does not require test files, set `tests: false`, otherwise, set `tests: true`.
 Change `updated` to the current date.
 
 If your package is only to be used with LuaTeX, add `luatex-only: true` to the settings
-and place the tests in an approriate test area ending `-luatex` such as `testfiles-compatible-luatex`
+and place the tests in an appropriate test area ending `-luatex` such as `testfiles-compatible-luatex`
 
 Finally, push your changes and wait for the Team to inspect your test file and the accompanied XML file. 
 You may be asked about specific implementation details and may need to explain your implementation decisions. 
@@ -109,4 +108,15 @@ If all issues have been resolved (if any), your upload will eventually be accept
 ## Keep track of changes
 
 Please ensure that updates of your class or package that affect the output of the test files are reflected in the uploaded test files and the relevant XML files. 
-You can do this by yourself by calling ` l3build check --show-saves <class or package name>-01` in your working directory to check the testfiles against the relevant XML files.
+
+To check the test files against the relevant XML files run
+```
+l3build check -c config-compatible --show-saves <class or package name>-01
+```
+and
+```
+l3build check -c config-compatible -e pdftex --show-saves <class or package name>-01
+```
+in your working directory (assuming that the test files are in the directory `testfiles-compatible`).
+
+Update the test files if necessary and push your changes as pull request to this repository.

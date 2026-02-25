@@ -20,19 +20,28 @@ Click on the column headings to sort the table by the chosen column.
 {%- for p in packages -%}
 <tr id="{{p.name}}">
 <!-- <td>{{p.type}}</td> -->
-<td class="{{p.status}}"><a href="https://ctan.org/pkg/
+<td class="{{p.status}}">
+{%- if p.ctan-pkg == "none" -%}
+{{p.name}}
+{%- else -%}
+<a href="https://ctan.org/pkg/
 {%- if p.ctan-pkg -%}{{p.ctan-pkg}}{%- else -%}{{p.name}}{%- endif -%}
-">{{p.name}}</a></td>
+">{{p.name}}</a>
+{%- endif -%}
+</td>
 <td class="{{p.status}}"  sorttable_customkey="
 {%- if p.status == "partially-compatible" %}compatible-partial{% else %}{{p.status}}{% endif -%}
 ">{{p.status}}</td>
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
-See 
+See
 {% for r in p.references %}
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
+{%- endif -%}
+{%- if p.ptex-only %}
+Requires the use of (u)ptex.
 {%- endif -%}
 </td>
 <td>

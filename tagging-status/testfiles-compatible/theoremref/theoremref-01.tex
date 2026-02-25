@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{theoremref}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\title{theoremref tagging test - 1}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\begin{theorem}\thlabel{foo}
+Some theorem
+\end{theorem}
+\begin{lemma}\thlabel{baz}
+Some lemma
+\end{lemma}
+
+\ref{foo}
+
+\thref{foo,baz}
+
+\thnameref{foo}
+
+\end{document}

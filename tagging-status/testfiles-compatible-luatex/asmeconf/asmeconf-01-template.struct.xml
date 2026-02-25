@@ -68,23 +68,23 @@
      </text>
     </text-unit>
    </Conference_information>
-   <Div xmlns="http://iso.org/pdf2/ssn"
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0016"
-      title="Paper number"
+      rolemaps-to="Part"
      >
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <text xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0017"
-       rolemaps-to="Part"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0018"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Justify"
-        rolemaps-to="P"
-       >
-     </text>
-     <Div xmlns="http://iso.org/pdf2/ssn"
+    </text>
+    <Div xmlns="http://iso.org/pdf2/ssn"
+       id="ID.0018"
+      >
+     <Paper_number xmlns="https://www.latex-project.org/ns/local/asmeconf"
         id="ID.0019"
+        rolemaps-to="Div"
        >
       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0020"
@@ -99,14 +99,14 @@
         <?MarkedContent page="1" ?>IMECE2025-XXXX
        </text>
       </text-unit>
-     </Div>
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0022"
-        rolemaps-to="P"
-       >
-     </text>
-    </text-unit>
-   </Div>
+     </Paper_number>
+    </Div>
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0022"
+       rolemaps-to="P"
+      >
+    </text>
+   </text-unit>
    <Title xmlns="http://iso.org/pdf2/ssn"
       id="ID.0023"
       title="Title"
@@ -443,7 +443,8 @@
         >
        <?MarkedContent page="1" ?>LATEX
       </Span>
-      <?MarkedContent page="1" ?> template for type­setting ASME conference papers using the asmeconf class. This 
+      <?MarkedContent page="1" ?> template for type
+      <?MarkedContent page="1" ?>setting ASME conference papers using the asmeconf class. This 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0069"
          actualtext="LaTeX"
@@ -451,14 +452,16 @@
         >
        <?MarkedContent page="1" ?>LATEX
       </Span>
-      <?MarkedContent page="1" ?> template follows ASME guidelines for margins, fonts, head­ings, captions, and reference formats as of 2025. The class is intended to be used with the asmeconf.bst Bib
+      <?MarkedContent page="1" ?> template follows ASME guidelines for margins, fonts, head
+      <?MarkedContent page="1" ?>ings, captions, and reference formats as of 2025. The class is intended to be used with the asmeconf.bst Bib
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0070"
          actualtext="TeX"
         >
        <?MarkedContent page="1" ?>TEX
       </Span>
-      <?MarkedContent page="1" ?> style for ref­erence formatting, which is part of this distribution. The template produces pdfs that contain hyperlinks, bookmarks, and metadata; and references can include the DOI and URL fields. Links may be colored, for online use, or black, for publication. The class enables inline author names, following ASME’s current style, but can also produce the traditional grid style. Options include line numbering, final column balancing, various math options, government copyright, and archivability (PDF/A). In addition, section headers may contain mathematics, references, citations, and footnotes. The class is compatible with 
+      <?MarkedContent page="1" ?> style for ref
+      <?MarkedContent page="1" ?>erence formatting, which is part of this distribution. The template produces pdfs that contain hyperlinks, bookmarks, and metadata; and references can include the DOI and URL fields. Links may be colored, for online use, or black, for publication. The class enables inline author names, following ASME’s current style, but can also produce the traditional grid style. Options include line numbering, final column balancing, various math options, government copyright, and archivability (PDF/A). In addition, section headers may contain mathematics, references, citations, and footnotes. The class is compatible with 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0071"
          actualtext="pdfLaTeX"
@@ -1108,7 +1111,9 @@
        <?MarkedContent page="1" ?>asmeconf
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
-      <?MarkedContent page="1" ?> class typesets papers with margins, fonts, headings, captions, and reference formats that follow the speci­fications for conference papers of the American Society of Me­chanical Engineers (ASME). In contrast to older ASME 
+      <?MarkedContent page="1" ?> class typesets papers with margins, fonts, headings, captions, and reference formats that follow the speci
+      <?MarkedContent page="1" ?>fications for conference papers of the American Society of Me
+      <?MarkedContent page="1" ?>chanical Engineers (ASME). In contrast to older ASME 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0166"
          actualtext="LaTeX"
@@ -1137,7 +1142,9 @@
         >
        <?MarkedContent page="1" ?>LATEX
       </Span>
-      <?MarkedContent page="1" ?> com­mands, although some specific initial commands are needed to format the blocks containing the author[s], title, and abstract. This class loads a number of other packages, all of which are con­tained in up-to-date versions of 
+      <?MarkedContent page="1" ?> com
+      <?MarkedContent page="1" ?>mands, although some specific initial commands are needed to format the blocks containing the author[s], title, and abstract. This class loads a number of other packages, all of which are con
+      <?MarkedContent page="1" ?>tained in up-to-date versions of 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0170"
         >
@@ -1201,7 +1208,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>To begin, fill in the fields to be completed at top of theasmeconf-template.tex file. These fields include the headers for your conference and your paper number. Specified metadata will be placed into the pdf file itself. The title should be placed into \title{..}.
+       <?MarkedContent page="1" ?>To begin, fill in the fields to be completed at top of the asmeconf-template.tex file. These fields include the headers for your conference and your paper number. Specified metadata will be placed into the pdf file itself. The title should be placed into \title{..}.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -1214,7 +1221,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>Put author names into the \SetAuthors{name, name,...} command in the desired order; follow the syntax illustratedasmeconf-template.tex file. Put each distinct address sequen­tially into a separate \SetAffiliation{n}{address}, where 
+       <?MarkedContent page="1" ?>Put author names into the \SetAuthors{name, name,...} command in the desired order; follow the syntax illustrated asmeconf-template.tex file. Put each distinct address sequen
+       <?MarkedContent page="1" ?>tially into a separate \SetAffiliation{n}{address}, where 
        <Formula xmlns="http://iso.org/pdf2/ssn"
           id="ID.0182"
           title="math"
@@ -1256,7 +1264,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>One author (or more) may be designated as the correspond­ing author by placing \CorrespondingAuthor{email} after 
+       <?MarkedContent page="1" ?>One author (or more) may be designated as the correspond
+       <?MarkedContent page="1" ?>ing author by placing \CorrespondingAuthor{email} after 
        <?MarkedContent page="2" ?>\affil{n}. Two or more authors may be joint first authors by putting \JointFirstAuthor after \affil{n}.
       </text>
      </text-unit>
@@ -1283,7 +1292,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="2" ?>The abstract text must be placed into \begin{abstract} …\end{abstract}. The abstract will automatically be itali­cized. Keywords may be included using the \keywords{..} command. The keyword command must be issued before the abstract environment.
+       <?MarkedContent page="2" ?>The abstract text must be placed into \begin{abstract} …\end{abstract}. The abstract will automatically be itali
+       <?MarkedContent page="2" ?>cized. Keywords may be included using the \keywords{..} command. The keyword command must be issued before the abstract environment.
       </text>
      </text-unit>
     </Sect>
@@ -1447,7 +1457,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Equations are typeset in the usual way and will be automati­cally numbered. The class file loads the amsmath and mathtoolspackages. Further, the newtxmath package used for the math fonts includes many additional features (see Sect. 
+      <?MarkedContent page="2" ?>Equations are typeset in the usual way and will be automati
+      <?MarkedContent page="2" ?>cally numbered. The class file loads the amsmath and mathtools packages. Further, the newtxmath package used for the math fonts includes many additional features (see Sect. 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0217"
         >
@@ -1518,7 +1529,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>ASME requires that section headings and captions be set in an uppercase, sans serif font. The class will do this automatically. You can place \cite{..}, \ref{..}, \label{..}, and math­ematics into headings and captions directly, as you would in the main text. Do not enclose them braces, e.g. {\cite{..}}, which 
+      <?MarkedContent page="2" ?>ASME requires that section headings and captions be set in an uppercase, sans serif font. The class will do this automatically. You can place \cite{..}, \ref{..}, \label{..}, and math
+      <?MarkedContent page="2" ?>ematics into headings and captions directly, as you would in the main text. Do not enclose them braces, e.g. {\cite{..}}, which 
       <?MarkedContent page="2" ?>will cause errors. You can place \footnote{..} into headings, but not into captions.
       <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0239"
@@ -1639,7 +1651,10 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Simple mathematical expressions can be used in either cap­tions or section headings. For a section heading that includes more complicated math (and macros), you may use the optional argument of \section[..]{..} to create a pdf bookmark with­out losing characters or producing warnings or errors. See theasmeconf-template.tex source file for examples of this pro­cedure. These bookmarks should usually be text expressions, although some math is supported.
+      <?MarkedContent page="2" ?>Simple mathematical expressions can be used in either cap
+      <?MarkedContent page="2" ?>tions or section headings. For a section heading that includes more complicated math (and macros), you may use the optional argument of \section[..]{..} to create a pdf bookmark with
+      <?MarkedContent page="2" ?>out losing characters or producing warnings or errors. See the asmeconf-template.tex source file for examples of this pro
+      <?MarkedContent page="2" ?>cedure. These bookmarks should usually be text expressions, although some math is supported.
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -1733,7 +1748,7 @@
        <?MarkedContent page="2" ?>2
        <?ReferencedObject type="Annot" page="2" ?>
       </Link>
-      <?MarkedContent page="2" ?>), and the arrayand dcolumn packages which provide extended capabilities for columns in the tabular environment (see Table 
+      <?MarkedContent page="2" ?>), and the array and dcolumn packages which provide extended capabilities for columns in the tabular environment (see Table 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0440"
         >
@@ -1780,7 +1795,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* andsidewaysfigure* environments [
+      <?MarkedContent page="2" ?>Landscape figures and tables may be produced at full-page size by putting \usepackage[figuresright]{rotating} in your .tex file’s preamble and using the sidewaystable* and sidewaysfigure* environments [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0447"
         >
@@ -1955,7 +1970,9 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?>Basic support for eprint numbers is also included, generat­ing a url at the end of the citation. The archive type may be spec­ified using the macros arxiv, googlebooks, hdl, jstore, oclc, or pubmed (e.g., archive=hdl, without braces). Botheprint and archive fields must be given. Other root urls may be invoked using archive = {https://another.url.org/}.
+       <?MarkedContent page="3" ?>Basic support for eprint numbers is also included, generat
+       <?MarkedContent page="3" ?>ing a url at the end of the citation. The archive type may be spec
+       <?MarkedContent page="3" ?>ified using the macros arxiv, googlebooks, hdl, jstore, oclc, or pubmed (e.g., archive=hdl, without braces). Both eprint and archive fields must be given. Other root urls may be invoked using archive = {https://another.url.org/}.
       </text>
      </text-unit>
     </Sect>
@@ -1980,7 +1997,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?> A bibliography entry @online{.. is in­cluded for citation of online sources, such as web pages. A urlor eprint with archive must be included. See the examples of use in the asmeconf-sample.bib file.
+       <?MarkedContent page="3" ?> A bibliography entry @online{.. is in
+       <?MarkedContent page="3" ?>cluded for citation of online sources, such as web pages. A url or eprint with archive must be included. See the examples of use in the asmeconf-sample.bib file.
       </text>
      </text-unit>
     </Sect>
@@ -2055,7 +2073,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="3" ?> ASME’s bibliography style re­quires that document titles be in title case. The first letters of principal words are capitalized. Do this in the .bib file.
+       <?MarkedContent page="3" ?> ASME’s bibliography style re
+       <?MarkedContent page="3" ?>quires that document titles be in title case. The first letters of principal words are capitalized. Do this in the .bib file.
       </text>
      </text-unit>
     </Sect>
@@ -2101,7 +2120,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="3" ?>In most cases, the need for a wide equation can be eliminated by using one of the multiline equation environments defined byamsmath, such as align, split, or multline [
+      <?MarkedContent page="3" ?>In most cases, the need for a wide equation can be eliminated by using one of the multiline equation environments defined by amsmath, such as align, split, or multline [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0520"
         >
@@ -2113,7 +2132,8 @@
         <?ReferencedObject type="Annot" page="3" ?>
        </Link>
       </Reference>
-      <?MarkedContent page="3" ?>]. The follow­ing equation is set with the multline environment:
+      <?MarkedContent page="3" ?>]. The follow
+      <?MarkedContent page="3" ?>ing equation is set with the multline environment:
      </text>
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.0522"
@@ -2232,7 +2252,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="3" ?>The class file also provides upright sans-serif Greek let­ters with \sfalpha and similar expressions (e.g., 
+      <?MarkedContent page="3" ?>The class file also provides upright sans-serif Greek let
+      <?MarkedContent page="3" ?>ters with \sfalpha and similar expressions (e.g., 
       <Formula xmlns="http://iso.org/pdf2/ssn"
          id="ID.0537"
          title="math"
@@ -2355,7 +2376,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The option subscriptcorrection improves the spacing of math subscripts. These math options are discussed further in theasmeconf-template.tex file.
+       <?MarkedContent page="4" ?>The option subscriptcorrection improves the spacing of math subscripts. These math options are discussed further in the asmeconf-template.tex file.
       </text>
      </text-unit>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -2400,7 +2421,8 @@
          </AssociatedFile>
         <?MarkedContent page="4" ?>𝐴∈𝒫(𝐴)
        </Formula>
-       <?MarkedContent page="4" ?>. To find all the font options, refer to the mathalfa package docu­mentation [
+       <?MarkedContent page="4" ?>. To find all the font options, refer to the mathalfa package docu
+       <?MarkedContent page="4" ?>mentation [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.0559"
          >
@@ -2425,7 +2447,7 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The asmeconf class is designed to be used with newtxmathand does not support the unicode-math package.
+       <?MarkedContent page="4" ?>The asmeconf class is designed to be used with newtxmath and does not support the unicode-math package.
       </text>
      </text-unit>
     </Sect>
@@ -2515,7 +2537,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The option [balance] invokes the the flushend pack­age [
+       <?MarkedContent page="4" ?>The option [balance] invokes the the flushend pack
+       <?MarkedContent page="4" ?>age [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.0578"
          >
@@ -2590,7 +2613,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="4" ?>The lineno package is not compatible with the flushendpackage that makes final short columns the same height. Balanc­ing is automatically disabled when this option is called.
+       <?MarkedContent page="4" ?>The lineno package is not compatible with the flushend package that makes final short columns the same height. Balanc
+       <?MarkedContent page="4" ?>ing is automatically disabled when this option is called.
       </text>
      </text-unit>
     </Sect>
@@ -2777,14 +2801,15 @@
          >
         <?MarkedContent page="5" ?>LATEX
        </Span>
-       <?MarkedContent page="5" ?> formats, compliance with PDF/A stan­dards can be enabled using the legacy option [pdf-a] when running with 
+       <?MarkedContent page="5" ?> formats, compliance with PDF/A stan
+       <?MarkedContent page="5" ?>dards can be enabled using the legacy option [pdf-a] when running with 
        <Span xmlns="http://iso.org/pdf2/ssn"
           id="ID.0619"
           actualtext="pdfLaTeX"
          >
         <?MarkedContent page="5" ?>pdfLATEX 
        </Span>
-       <?MarkedContent page="5" ?>. The default setting is PDF/A-3u with sRGB OutputIntent (sRGB.icc). If levels 1b, 2b, 2u, or 3b are desired, use the options [pdfapart=1 or 2 or 3] and[pdfaconformance=b or u]. Accessible conformance (a) is not possible with this method.
+       <?MarkedContent page="5" ?>. The default setting is PDF/A-3u with sRGB OutputIntent (sRGB.icc). If levels 1b, 2b, 2u, or 3b are desired, use the options [pdfapart=1 or 2 or 3] and [pdfaconformance=b or u]. Accessible conformance (a) is not possible with this method.
       </text>
      </text-unit>
     </Sect>
@@ -2959,7 +2984,9 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Ning, Xiang and Lovell, Mary Rose.  “On the Sliding Fric­tion Characteristics of Unidirectional Continuous FRP De­posits.”  ASME Journal of Tribology Vol. 48 No. 5 (2002): pp. 2000–2008.  DOI 
+          <?MarkedContent page="5" ?>Ning, Xiang and Lovell, Mary Rose.  “On the Sliding Fric
+          <?MarkedContent page="5" ?>tion Characteristics of Unidirectional Continuous FRP De
+          <?MarkedContent page="5" ?>posits.”  ASME Journal of Tribology Vol. 48 No. 5 (2002): pp. 2000–2008.  DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0650"
             >
@@ -3046,7 +3073,9 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Wions, Thomas and Mills, Christopher D.  “Struc­tural Dynamics in Parallel Manipulation.”  Proceed­ings of the ASME IDETC/CIE. DETC2005-99532: pp. 777–798. New Orleans, LA, September 10–13, 2005. DOI 
+          <?MarkedContent page="5" ?>Wions, Thomas and Mills, Christopher D.  “Struc
+          <?MarkedContent page="5" ?>tural Dynamics in Parallel Manipulation.”  Proceed
+          <?MarkedContent page="5" ?>ings of the ASME IDETC/CIE. DETC2005-99532: pp. 777–798. New Orleans, LA, September 10–13, 2005. DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0666"
             >
@@ -3087,7 +3116,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Smith, Robert.  “Conformal Lubricated Contact of Cylin­drical Surfaces Involved in a Non-Steady Motion.”  Ph.D. Thesis, Rochester Institute of Technology, Rochester, NY. 2002.  DOI 
+          <?MarkedContent page="5" ?>Smith, Robert.  “Conformal Lubricated Contact of Cylin
+          <?MarkedContent page="5" ?>drical Surfaces Involved in a Non-Steady Motion.”  Ph.D. Thesis, Rochester Institute of Technology, Rochester, NY. 2002.  DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0673"
             >
@@ -3129,7 +3159,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Watson, David.  “Evaporative Heat Transfer in the Con­tact Line of a Mixture.”  Technical Report No. HTL-26, CFD-4.  Iowa State University, Ames, IA.  1982. DOI 
+          <?MarkedContent page="5" ?>Watson, David.  “Evaporative Heat Transfer in the Con
+          <?MarkedContent page="5" ?>tact Line of a Mixture.”  Technical Report No. HTL-26, CFD-4.  Iowa State University, Ames, IA.  1982. DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0680"
             >
@@ -3254,7 +3285,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Lienhard, John H.  “Heat Transfer in Flat-Plate Boundary Layers: A Correlation for Laminar, Transitional, and Turbu­lent Flow.”  ASME J. Heat Transfer Vol. 142 No. 6 (2020): 061805.  DOI 
+          <?MarkedContent page="5" ?>Lienhard, John H.  “Heat Transfer in Flat-Plate Boundary Layers: A Correlation for Laminar, Transitional, and Turbu
+          <?MarkedContent page="5" ?>lent Flow.”  ASME J. Heat Transfer Vol. 142 No. 6 (2020): 061805.  DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0701"
             >
@@ -3510,7 +3542,8 @@
             >
            <?MarkedContent page="5" ?>TEX
           </Span>
-          <?MarkedContent page="5" ?> Archive Network (2005).  Ac­cessed August 17, 2019, URL 
+          <?MarkedContent page="5" ?> Archive Network (2005).  Ac
+          <?MarkedContent page="5" ?>cessed August 17, 2019, URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0744"
             >
@@ -3545,14 +3578,16 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>van Oostrum, Piet.  “The fancyhdr and extramarks Pack­ages.”  Version 3.10.  Comprehensive 
+          <?MarkedContent page="5" ?>van Oostrum, Piet.  “The fancyhdr and extramarks Pack
+          <?MarkedContent page="5" ?>ages.”  Version 3.10.  Comprehensive 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0750"
              actualtext="TeX"
             >
            <?MarkedContent page="5" ?>TEX
           </Span>
-          <?MarkedContent page="5" ?> Archive Net­work (2019).  Accessed August 17, 2019, URL 
+          <?MarkedContent page="5" ?> Archive Net
+          <?MarkedContent page="5" ?>work (2019).  Accessed August 17, 2019, URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0751"
             >
@@ -3586,7 +3621,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Smith, Robert.  “Conformal Lubricated Contact of Cylindri­cal Surfaces Involved in a Steady Motion.”  Master’s Thesis, Rochester Institute of Technology, Rochester, NY.  1998.
+          <?MarkedContent page="5" ?>Smith, Robert.  “Conformal Lubricated Contact of Cylindri
+          <?MarkedContent page="5" ?>cal Surfaces Involved in a Steady Motion.”  Master’s Thesis, Rochester Institute of Technology, Rochester, NY.  1998.
          </text>
         </text-unit>
        </LBody>
@@ -3638,7 +3674,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Reynolds, William C., Kays, William M. and Kline, Stephen J.  “Heat Transfer in the Incompressible Turbulent Boundary Layer. I–Constant Wall Temperature.”  Memo­randum 12-1-58W.  NASA, Washington, DC.  1958.  URL 
+          <?MarkedContent page="5" ?>Reynolds, William C., Kays, William M. and Kline, Stephen J.  “Heat Transfer in the Incompressible Turbulent Boundary Layer. I–Constant Wall Temperature.”  Memo
+          <?MarkedContent page="5" ?>randum 12-1-58W.  NASA, Washington, DC.  1958.  URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0767"
             >
@@ -3671,7 +3708,9 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="5" ?>Edwards, Donald K.  “Thermal Radiation Measurements.” Eckert, Ernst R. G. and Goldstein, Richard J. (eds.). Mea­surement Techniques in Heat Transfer.  Vol. 130 of AGAR­Dograph. Technivision Services, Slough, England (1970): Chap. 9, pp. 353–396.  Published by the Advisory Group for Aerospace Research and Development of NATO.
+          <?MarkedContent page="5" ?>Edwards, Donald K.  “Thermal Radiation Measurements.” Eckert, Ernst R. G. and Goldstein, Richard J. (eds.). Mea
+          <?MarkedContent page="5" ?>surement Techniques in Heat Transfer.  Vol. 130 of AGAR
+          <?MarkedContent page="5" ?>Dograph. Technivision Services, Slough, England (1970): Chap. 9, pp. 353–396.  Published by the Advisory Group for Aerospace Research and Development of NATO.
          </text>
         </text-unit>
        </LBody>
@@ -3697,7 +3736,9 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>Braams, Johannes L. and Bezos, Javier.  “babel: Local­ization and internationalization.”  Version 3.52.  Compre­hensive 
+          <?MarkedContent page="6" ?>Braams, Johannes L. and Bezos, Javier.  “babel: Local
+          <?MarkedContent page="6" ?>ization and internationalization.”  Version 3.52.  Compre
+          <?MarkedContent page="6" ?>hensive 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0778"
              actualtext="TeX"
@@ -3745,7 +3786,8 @@
             >
            <?MarkedContent page="6" ?>LuaLATEX
           </Span>
-          <?MarkedContent page="6" ?> withasmeconf.cls for ODE integration.”  Version 1.01.  Com­prehensive 
+          <?MarkedContent page="6" ?> with asmeconf.cls for ODE integration.”  Version 1.01.  Com
+          <?MarkedContent page="6" ?>prehensive 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0786"
              actualtext="TeX"
@@ -3800,7 +3842,8 @@
             >
            <?MarkedContent page="6" ?>TEX
           </Span>
-          <?MarkedContent page="6" ?> Archive Network (2021).  Ac­cessed January 18, 2021, URL 
+          <?MarkedContent page="6" ?> Archive Network (2021).  Ac
+          <?MarkedContent page="6" ?>cessed January 18, 2021, URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0795"
             >
@@ -3835,7 +3878,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>Pohlhausen, E.  “Der Wärmeaustausch zwischen festen Kör­pern und Flüssigkeiten mit kleiner reibung und kleiner Wärmeleitung.”  Zeitschrift für Angewandte Mathematik und Mechanik Vol. 1 No. 2 (1921): pp. 115–121.  DOI 
+          <?MarkedContent page="6" ?>Pohlhausen, E.  “Der Wärmeaustausch zwischen festen Kör
+          <?MarkedContent page="6" ?>pern und Flüssigkeiten mit kleiner reibung und kleiner Wärmeleitung.”  Zeitschrift für Angewandte Mathematik und Mechanik Vol. 1 No. 2 (1921): pp. 115–121.  DOI 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0801"
             >
@@ -3927,7 +3971,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>Yankovich, Al and Stern, Howard (eds.).  The Title of the Proceedings, Vol. 15.  Boston, MA, April 27–28.  Organi­zation (2015).  URL 
+          <?MarkedContent page="6" ?>Yankovich, Al and Stern, Howard (eds.).  The Title of the Proceedings, Vol. 15.  Boston, MA, April 27–28.  Organi
+          <?MarkedContent page="6" ?>zation (2015).  URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0818"
             >
@@ -3960,7 +4005,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>Govindan, Prakash Narayan, Lam, Steven and St. John, Maximus G.  “Systems Including a Condensing Appara­tus Such As a Bubble Column Condenser.”  US Patent #9700811 (2017).  URL 
+          <?MarkedContent page="6" ?>Govindan, Prakash Narayan, Lam, Steven and St. John, Maximus G.  “Systems Including a Condensing Appara
+          <?MarkedContent page="6" ?>tus Such As a Bubble Column Condenser.”  US Patent #9700811 (2017).  URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0824"
             >
@@ -4061,7 +4107,8 @@
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
-          <?MarkedContent page="6" ?>van der Walt, Stéfan and Smith, Nathaniel.  “mpl col­ormaps.”  GitHub, San Francisco, CA (2015).  Accessed August 26, 2018, URL 
+          <?MarkedContent page="6" ?>van der Walt, Stéfan and Smith, Nathaniel.  “mpl col
+          <?MarkedContent page="6" ?>ormaps.”  GitHub, San Francisco, CA (2015).  Accessed August 26, 2018, URL 
           <Link xmlns="http://iso.org/pdf2/ssn"
              id="ID.0842"
             >
@@ -4147,7 +4194,7 @@
         id="ID.0856"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix A. 
+      <?MarkedContent page="6" ?>APPENDIX A. 
      </section-number>
      <?MarkedContent page="6" ?>THE VECTOR PRODUCT 
      <Formula xmlns="http://iso.org/pdf2/ssn"
@@ -4176,7 +4223,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="6" ?>This brief illustration of an appendix shows the numbering of the appendix and equations. Equations are numbered consec­
+      <?MarkedContent page="6" ?>This brief illustration of an appendix shows the numbering of the appendix and equations. Equations are numbered consec
+      <?MarkedContent page="6" ?>
       <?MarkedContent page="6" ?>utively, following those in the paper. Consider 
       <Formula xmlns="http://iso.org/pdf2/ssn"
          id="ID.0860"
@@ -4251,7 +4299,7 @@
         id="ID.0868"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix B. 
+      <?MarkedContent page="6" ?>APPENDIX B. 
      </section-number>
      <?MarkedContent page="6" ?>USE WITH 
      <Span xmlns="http://iso.org/pdf2/ssn"
@@ -4278,7 +4326,8 @@
         >
        <?MarkedContent page="6" ?>LuaLATEX
       </Span>
-      <?MarkedContent page="6" ?> engine is useful with asmeconf in two situa­tions:
+      <?MarkedContent page="6" ?> engine is useful with asmeconf in two situa
+      <?MarkedContent page="6" ?>tions:
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -4320,7 +4369,8 @@
             >
            <?MarkedContent page="6" ?>LATEX
           </Span>
-          <?MarkedContent page="6" ?> file. With lua code, complicated functions can be plotted or numerical integration can be executed. An example file in the distri­bution demonstrates this capability [
+          <?MarkedContent page="6" ?> file. With lua code, complicated functions can be plotted or numerical integration can be executed. An example file in the distri
+          <?MarkedContent page="6" ?>bution demonstrates this capability [
           <Reference xmlns="http://iso.org/pdf/ssn"
              id="ID.0881"
             >
@@ -4365,14 +4415,15 @@
             >
            <?MarkedContent page="6" ?>pdfLATEX 
           </Span>
-          <?MarkedContent page="6" ?>, the asmeconfpackage supports Latin alphabets, as well as Cyrillic, Greek, and Vietnamese. If you need scripts such as Ara­bic, Chinese, or Japanese, 
+          <?MarkedContent page="6" ?>, the asmeconf package supports Latin alphabets, as well as Cyrillic, Greek, and Vietnamese. If you need scripts such as Ara
+          <?MarkedContent page="6" ?>bic, Chinese, or Japanese, 
           <Span xmlns="http://iso.org/pdf2/ssn"
              id="ID.0889"
              actualtext="LuaLaTeX"
             >
            <?MarkedContent page="6" ?>LuaLATEX
           </Span>
-          <?MarkedContent page="6" ?> with the fontspecpackage can use fonts installed in your computer operating system.
+          <?MarkedContent page="6" ?> with the fontspec package can use fonts installed in your computer operating system.
           <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0890"
              rolemaps-to="Lbl"
@@ -4524,7 +4575,7 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="6" ?>For clarity, fontspec is automatically loaded whenasmeconf is run under 
+      <?MarkedContent page="6" ?>For clarity, fontspec is automatically loaded when asmeconf is run under 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0913"
          actualtext="LuaLaTeX"
@@ -4582,7 +4633,7 @@
         id="ID.0921"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="6" ?>Appendix C. 
+      <?MarkedContent page="6" ?>APPENDIX C. 
      </section-number>
      <?MarkedContent page="6" ?>MULTILINGUAL SUPPORT
     </section>
@@ -4609,7 +4660,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="6" ?>When more than one language option is included in \documentclass[..]{asmeconf}, English will be set as the document’s main language. (To choose a different main lan­guage, set [main=..]). If no language options are given, the package defaults to English. As examples, a passage in German is shown in Anhang 
+      <?MarkedContent page="6" ?>When more than one language option is included in \documentclass[..]{asmeconf}, English will be set as the document’s main language. (To choose a different main lan
+      <?MarkedContent page="6" ?>guage, set [main=..]). If no language options are given, the package defaults to English. As examples, a passage in German is shown in Anhang 
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.0926"
         >
@@ -4629,7 +4681,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="6" ?>The input encoding can be utf-8, as for these glyphs: àáâ­äæãåā èéęëêēė ìíïǐĩıįî ôöòóœøōõ ûüùúū çćč ł ñń ßśš ÿ žźż.
+      <?MarkedContent page="6" ?>The input encoding can be utf-8, as for these glyphs: àáâ
+      <?MarkedContent page="6" ?>äæãåā èéęëêēė ìíïǐĩıįî ôöòóœøōõ ûüùúū çćč ł ñń ßśš ÿ žźż.
      </text>
     </text-unit>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
@@ -4642,7 +4695,9 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="7" ?>Fonts similar to Times/Helvetica are used when Greek, Viet­namese, or selected cyrillic-alphabet languages are called as op­tions under 
+      <?MarkedContent page="7" ?>Fonts similar to Times/Helvetica are used when Greek, Viet
+      <?MarkedContent page="7" ?>namese, or selected cyrillic-alphabet languages are called as op
+      <?MarkedContent page="7" ?>tions under 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0931"
          actualtext="pdfLaTeX"
@@ -4656,7 +4711,8 @@
         >
        <?MarkedContent page="7" ?>LuaLATEX 
       </Span>
-      <?MarkedContent page="7" ?>, which loads the fontspec package, many additional scripts are available; see the supple­mental notes for such usage [
+      <?MarkedContent page="7" ?>, which loads the fontspec package, many additional scripts are available; see the supple
+      <?MarkedContent page="7" ?>mental notes for such usage [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0933"
         >
@@ -4668,7 +4724,8 @@
         <?ReferencedObject type="Annot" page="7" ?>
        </Link>
       </Reference>
-      <?MarkedContent page="7" ?>]. Possibilities include Arabic, Bengali, Chinese, Devanagari (e.g., for Hindi), Hangul (for Ko­rean), Kana (for Japanese), and Tamil. (Note: some fonts are not PDF/A compliant.) These options require a 
+      <?MarkedContent page="7" ?>]. Possibilities include Arabic, Bengali, Chinese, Devanagari (e.g., for Hindi), Hangul (for Ko
+      <?MarkedContent page="7" ?>rean), Kana (for Japanese), and Tamil. (Note: some fonts are not PDF/A compliant.) These options require a 
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0935"
          actualtext="LaTeX"
@@ -4689,7 +4746,8 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="7" ?>The bibliography style, asmeconf.bst, is designed in Eng­lish and aimed at Bib
+      <?MarkedContent page="7" ?>The bibliography style, asmeconf.bst, is designed in Eng
+      <?MarkedContent page="7" ?>lish and aimed at Bib
       <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.0938"
          actualtext="TeX"
@@ -4712,7 +4770,7 @@
         id="ID.0941"
         rolemaps-to="Span"
        >
-      <?MarkedContent page="7" ?>Anhang D. 
+      <?MarkedContent page="7" ?>ANHANG D. 
      </section-number>
      <?MarkedContent page="7" ?>WÄRMEAUSTAUSCH UND REIBUNGSWIDERSTAND (von E. POHLHAUSEN)
     </section>
@@ -4726,7 +4784,12 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="7" ?>In einer strömenden Flussigkeit sind Wärmeleitung und Wär­mekonvektion Vorgänge, die mit der inneren Reibung (oder Impulsleitung) und mit der Impulskonvektion große Aehnlich­keit besitzen. Mathematisch findet dies seinen Ausdruck in dem gleichartigen Bau der Differentialgleichungen, die einerseits für die Temperatur und anderseits für den Geschwindigkeitsvektor in der Flüssigkeit bestehen. Man kann daraus auf eine Bezie­hung zwischen dem Wärmeaustanch und dem Reibungswider­stand schließen, die eine strömende Flüssigkeit an einem festen Körper hervorrufen. Dies ist zuerst von Prandtl ausgesprochen und durchgeführt worden, und zwar für turbulente Vorgänge, un­ter der vereinfachenden Annahme von Wärmequellen und -senken im Innern der Flüssigkeit [
+      <?MarkedContent page="7" ?>In einer strömenden Flussigkeit sind Wärmeleitung und Wär
+      <?MarkedContent page="7" ?>mekonvektion Vorgänge, die mit der inneren Reibung (oder Impulsleitung) und mit der Impulskonvektion große Aehnlich
+      <?MarkedContent page="7" ?>keit besitzen. Mathematisch findet dies seinen Ausdruck in dem gleichartigen Bau der Differentialgleichungen, die einerseits für die Temperatur und anderseits für den Geschwindigkeitsvektor in der Flüssigkeit bestehen. Man kann daraus auf eine Bezie
+      <?MarkedContent page="7" ?>hung zwischen dem Wärmeaustanch und dem Reibungswider
+      <?MarkedContent page="7" ?>stand schließen, die eine strömende Flüssigkeit an einem festen Körper hervorrufen. Dies ist zuerst von Prandtl ausgesprochen und durchgeführt worden, und zwar für turbulente Vorgänge, un
+      <?MarkedContent page="7" ?>ter der vereinfachenden Annahme von Wärmequellen und -senken im Innern der Flüssigkeit [
       <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.0944"
         >

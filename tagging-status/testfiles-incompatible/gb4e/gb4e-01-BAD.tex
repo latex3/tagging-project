@@ -1,0 +1,59 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{gb4e}
+
+\title{gb4e tagging test -- 1}
+
+\begin{document}
+
+\ldots here we have an example
+\begin{exe}
+\sn[\%]{Colourless green ideas sleep furiously.}
+\end{exe}
+of a sentence too famous to be numbered\ldots
+
+\begin{exe}
+\ex
+\gll Wenn jemand in die W\"uste zieht ... \\
+If someone in the desert draws and lives ... \\
+\trans `if one retreats to the desert and ... '
+\end{exe}
+
+% this example causes pdflatex to hang
+%\begin{exe}
+%\ex
+%\gll Den Fritz_1 habe ich \_\_{}_1 zum Essen eingeladen.\\
+%the fred have I {} {to the} eating invited.\\
+%\glt I invited Fred for dinner.
+%\end{exe}
+
+\begin{exe}
+\ex
+\gll * Dit is een voorboeldje.\\
+{} This is an example.\\
+\trans `Here's where the translation would be'
+
+\ex[*]{
+\gll Dit is een voorboeld.\\
+This is an example.\\
+\trans `and this would be the translation line'}
+\end{exe}
+
+\begin{exe}
+\ex\atcenter{
+\arrowalign{\fillright\pd&\link3&\fillleft{\vrule\hfil}\cr
+Did&\ &John&\ &t_{Agr}&\ appear &t&\ to be likely
+&t&\ to win.\cr
+&&\fillright\pu&\link3&\centr{\vrule\spacer\pu}&\lf
+&\fillleft\vrule\cr}
+}
+\end{exe}
+
+\end{document}

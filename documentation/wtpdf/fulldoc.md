@@ -22,9 +22,11 @@ extrahead: youtube-head
   * [Autotagged Acrobat/MacOS](#auto-macos)
   * [Autotagged Acrobat/Windows](#auto-windows)
 * [Tagged PDF generated from LaTeX](#latex-tag)
-  * [Configuration possibilities](#latex-configs)
+  * [LaTeX Generated PDF files](#latex-configs)
   * [MathML AF with Foxit/NVDA](#foxit-af)
   * [MathML SE with Acrobat/NVDA](#acrobat-se)
+  * [MathML AF with FireFox/NVDA](#firefox-af)
+  * [MathML AF with FireFox/JAWS](#firefox-af-jaws)
 * [ChatGPT's interpretation](#chatgpt)
   * [ChatGPT3 Markdown](#chatgpt3)
   * [ChatGPT4 HTML](#chatgpt4html)
@@ -42,7 +44,7 @@ Accurate reading is critical; even small mistakes in reading STEM content can re
 
 There are many ways to try to make PDF documents accessible. To highlight the importance of accuracy in representing the author’s intent we recorded and analyzed a screen-reader reading the results from various attempts by software to understand a “realistic” demonstration PDF.
 
-The recordings were made on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and version 0.6.8-rc.9 of the MathCat plugin. Testing included two PDF viewers, Foxit and Adobe Acrobat.
+The recordings were made on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and version 0.6.8-rc.9 of the MathCat plugin. Testing included three PDF viewers, Foxit, Adobe Acrobat and Firefox/PDF.js.
 
 For the recording of a [tagged PDF generated from LaTeX](#latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree. 
 
@@ -206,10 +208,17 @@ Both are valid approaches in PDF 2.0, but unfortunately, as of today, PDF consum
 
 LaTeX can automatically produce the necessary MathML for either method if the LuaTeX engine is used. If pdfTeX is used only the AF method is supported and the data for the AF files have to be prepared in a separate step, as is explained elsewhere.
 
-### Configuration possibilities {#latex-configs}
+### LaTeX Generated Tagged PDF files {#latex-configs}
 
 As shown in [the example page](larger-example) LaTeX may be configured to use
 Associated files or Structure Elements to provide MathML tagging for mathematics.
+
+The tagged files used in the following videos are available here
+
+* [Document with MathML Associated Files](stem-article-2col-af.pdf)
+* [Document with MathML Structure Elements](stem-article-2col-se.pdf)
+
+Alternatively, [a page with an online editor](larger-example) is provided to let you modify the LaTeX source, and generate new PDF with an up to date LaTeX system.
 
 ### Foxit/NVDA reading PDF with MathML AF {#foxit-af}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
@@ -265,6 +274,60 @@ The example shows that the accessibility of STEM documents produced by LaTeX is 
 The example shows that the accessibility of STEM documents produced by LaTeX is very high and there are no problems with complex material.
 
 The use of structure elements instead of AF files give identical results for math. The reading of the rest of the document is similar, with slight differences due to the use of different PDF consumer applications. Some are due to bugs, others are due to different decisions on what is or should be passed on to the speech generator (e.g., handling of tables, announcing links or graphics), some of this is configurable in the consumer application.
+
+### Firefox/NVDA reading PDF with MathML AF {#firefox-af}
+- FireFox 149 (Windows 11)
+- NVDA 2025.3.2 using Windows OneCore voice "Zira"
+- NVDA add-on MathCAT 0.7.4
+
+{% include youtube.html id="Zm2zL1BPk8M" width="medium" comment="af firefox 2"%}
+
+#### Observations
+
+ - Firefox has issues handling `/ActualText`. It possibly ignores this attribute completely. This is noticable here as the LaTeX logo is passed to AT as L A TEX so it comes out as _L A Teks_, despite the `ActualText` property specifying `LaTeX`, which, as noted below, is in the speech dictionary and would be read as `lay-tech`. It also ignores the `/Phoneme` setting on the element, i.e., `[ˈlaːtɛx]`, which would be another way to get to a correct reading.
+ - Hyphenated words are not correctly reconstructed, so you hear _foll low_ or the infamous _mathemat I C S_
+ - Links are read several times, e.g., _LINK 2.1 LINK LINK same page LINK 2.1 Mathematics LINK Mathematics_. This is the case for all links in the document, not just in TOC but to figures, to bib entries, etc.
+ - The footnote is read in a reasonable way at the correct point, except that again there is one extra link reading  _same page link 1_ but this time it comes just above the line with the footnote marker, so in a different place (probably due to the footnote marker being raised, thus above the text in the line).
+ - The mathematics examples are read correctly.
+ - The rest of the document is read well including the the list, the inline graphic, the table, the side note, the theorem,  and the verbatim text.
+ - The bibliography is not marked up specially (other than being a list) so the entries are not read as well as they could. But this is a failure of the document not having very detailed tagging there, i.e., not firefox's fault.
+
+
+#### Summary
+
+As the new kid on the block, Firefox is already doing fairly well with the sample document. The existing issues are annoying but do not really make the reading of the documents incomprehensible. However, we hope that they get soon resolved, after which Firefox would be a great choice to read a STEM PDF directly in the browser.
+
+### Firefox/JAWS reading PDF with MathML AF {#firefox-af-jaws}
+- FireFox 149 (Windows 11)
+- JAWS 2025.2505.43 (40 min trial mode)
+
+{% include youtube.html id="bH8Ls4xUH4s" width="medium" comment="af firefox JAWS"%}
+
+#### Observations
+
+ - Based on Firefox, some aspects are shared with the reading using NVDA, Notably the lack of support for `Actualtext`
+   and inconsistent behaviour at hyphenations.
+ - Some linebreaks are lost causing words to be joined for example `to \\ be` is read as "tobe" (rhyming with lobe).
+   Some hyphenated words are reconstituted eg `mathemat-ics` read as mathematics but it is not clear if hyphenation
+   is being handled or if this is a symptom of line ends generally being dropped.
+ - The link to the footnote in the first column is (as with Firefox_NVDA) announced at the start of that line, not where it occurs in the line.
+ - Exiting math is always announced (it may be possible to configure JAWS not to do this) but it disturbs the reading, especially in the verbatim section where math is used around single characters to force symbols to be read.
+ - The video is recorded with the visual marker (red rectangle) of the text being read. This is usually far from the expected place and jumps around the page. (Possibly due to the internal translation from pdf to html in pdf.js). This also causes some issues selecting start points to be read with the mouse rather than keyboard navigation as clicking on the page does not move the reading point to that position.
+ - While the math is correctly located and passed to MathCAT, the resulting text is not read as well as NVDA, n-th power is read as n-t-h not "enth" and pauses are lost, making the matrix expression particularly hard to follow.
+- The table is announced with correct number of rows and columns, although the columns are not announced as the table is read (JAWS does have some options controlling verbosity of table readings, this is the default setting).
+
+#### Summary
+
+While there are several issues as noted above, Firefox, using web
+platform API rather than the PDF-specific API to expose the
+accessibility tree has for the first time provided a route to reading
+accessibile PDF with JAWS.  Even now (while the firefox implementation
+is still in beta and probably not tested with JAWS at all) it provides
+a usable reading and for JAWS users is likely to be much more
+convenient than switching to NVDA to read PDF files.
+
+Note that this reading is based on default JAWS settings with almost no customisation
+as we have little experience in using JAWS compared to NVDA.
 
 
 ## Listening to ChatGPT's interpretation of the untagged document {#chatgpt}

@@ -1,6 +1,12 @@
 mkdir -p build/latex-tagging-status
 cd build/latex-tagging-status
 
+
+if ! latex-tagging-status-lint lint --latex-tagging-status-file ../../../../_data/tagging-status.yml ; then
+  echo "Bad or missing  YAML"
+  exit
+fi
+
 curl -s -o latex-tagging-status.ltx https://latex3.github.io/tagging-project/tagging-status/latex-tagging-status/latex-tagging-status.ltx
 chmod a-x latex-tagging-status.ltx
 
@@ -8,6 +14,9 @@ cp ../../README.md .
 
 sed -i -e "s/{{ site.time | date: \"%Y-%m-%d\" }}/`date -I`/" README.md
 sed -i -e "s/\[[0-9-]*\]/[`date -I`]/" latex-tagging-status.ltx
+
+echo "Changes to the tagging status of"
+diff `kpsewhich --all latex-tagging-status.ltx` | grep kernel@ | sed -e 's/.*status{\([^{}]*\)}.*/\1/' | sort | uniq
 
 cd ..
 zip -q latex-tagging-status.zip latex-tagging-status/latex-tagging-status.ltx latex-tagging-status/README.md

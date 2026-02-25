@@ -1,0 +1,40 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{changelog}
+
+\title{changelog tagging test}
+
+\begin{document}
+
+\begin{changelog}[author=Rebecca
+Turner, sectioncmd=\section*]
+\begin{version}[v=1.0.0,
+date=2018-12-28]
+\added
+\item Cool features
+\fixed
+\item Bug fixes
+\end{version}
+\shortversion{v=0.1.0,
+date=2018-10-25,
+changes=Initial beta}
+\end{changelog}
+
+\newchangelogsection
+  {\critical}{Critical}
+\begin{changelog}[section=false]
+\begin{version}[v=1.0.0,
+date=2023-02-16]
+\critical
+\item Features!
+\end{version}
+\end{changelog}
+
+\end{document}

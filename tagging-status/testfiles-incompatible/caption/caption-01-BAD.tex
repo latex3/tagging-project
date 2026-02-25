@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{hyperref} 
+% including hyperref and \listoffigures leads to:
+% Package tagpdf Warning: Destination figure.caption.2 has no related structure.
+
+\usepackage{caption}
+\usepackage{graphicx}
+
+\title{caption tagging test}
+
+\begin{document}
+
+\listoffigures
+
+\section{Intro}
+\subsection{Subintro}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[alt={sample image},width=0.49\textwidth]{example-image-c}%
+  \caption{Figure with caption}
+\end{figure}
+
+\end{document}

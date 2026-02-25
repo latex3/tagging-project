@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% derived from \ProvidesFileSVN{$Id: prooftrees-tag-t1.lvt 11509 2026-01-18 01:43:16Z cfrees $}[\revinfo][\filebase: tag support test]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DocumentMetadata{
+ tagging=on,
+ lang=en-GB,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ uncompress,
+}
+\documentclass{article}
+\usepackage[tableaux]{prooftrees}
+\usepackage{amsmath}
+\ifdefined\directlua
+  \usepackage{lua-unicode-math}
+\else
+  \usepackage[T1]{fontenc}
+\fi
+\title{prooftrees 01}
+\begin{document}
+\begin{tableau}{%
+    to prove=\vdash p\vee\lnot p,
+  }
+  [\lnot(p\vee\lnot p),just=$\lnot$ conc
+    [\lnot p,just=$\vee$E:!u,
+      [\lnot\lnot p,just=$\vee$E:!uu,close={:!u,!c},]
+    ]
+  ]
+\end{tableau}%
+\end{document}
+

@@ -7,10 +7,8 @@ layout: null
 
 %% The data below is an internal representation of the tagging status from
 %% https://latex3.github.io/tagging-project/tagging-status/full
-%% The TeX commands and their arguments are internal to code in latex-lab
-%% and are likely to change.
-%% So it is not possible to use them directly.
-%% Instead latex-lab will provide higher level interfaces to the data!
+%% A report of the status of packages used in a document will be generated
+%% if the key check-tagging-status is used in \DocumentMetadata
 
 %% LaTeX Project
 %% Licence LPPL
@@ -23,8 +21,11 @@ layout: null
 %% 1   no-support             Incompatible with the tagging code, not expected to be supported
 %% 0   unchecked              Status is not known
 %%
+%% 100 unlisted               Subpackage entry
+%%
 
-
+\UseName{count@}\catcode`\@
+\makeatletter
 \def\@kernel@tagging@status#1#2#3{\expandafter\chardef\csname t@status@#1.#2\endcsname#3\relax}
 
 {%  assign t-s = site.data.tagging-status %}
@@ -57,4 +58,11 @@ layout: null
     {%-  if p.status == "no-support" -%}1{%- endif -%}
     {%-  if p.status == "unchecked" -%}0{%- endif -%}
 }
+{% if p.subpackages -%}
+  {%- for sp in p.subpackages -%}
+\@kernel@tagging@status{ {%- if true -%} {{sp}} {%- endif -%} }{sty}{100}
+{% endfor -%}
+{%- endif -%}    
 {% endfor %}
+
+\catcode`\@=\count@

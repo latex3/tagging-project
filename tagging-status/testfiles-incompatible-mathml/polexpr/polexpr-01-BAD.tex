@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{polexpr}
+
+\title{polexpr tagging test}
+
+\begin{document}
+
+\poldef f(x) := x^7 - x^6 - 2x + 1;
+
+\PolTypeset{f}
+
+\end{document}
