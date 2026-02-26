@@ -1,0 +1,62 @@
+\DocumentMetadata{
+ tagging=on,
+ lang=en-GB,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ uncompress,
+}
+\tagpdfsetup{
+  math/mathml/structelem,
+}
+\documentclass{article}
+\ifcsname directlua\endcsname
+  \relax
+\else
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[ext.tagging,linguistics]{forest}
+\useforestlibrary{ext.multi,ext.ling}
+\title{forest-ext 01}
+\begin{document}
+\begin{forest}
+  % This is example is from Jasper Habicht.
+  [VP
+    [DP[John]]
+    [V', alt text=V prime,
+      [V[sent]]
+      [DP[Mary]]
+      [DP[D[a]][NP[letter]]]
+    ]
+  ]
+\end{forest}
+
+{\forestapplylibrarydefaults{ext.multi}%
+  \begin{forest}
+    [A
+      [D, multi={B,C}, ]
+      [E, parent anchor=children,
+        [J, multi={F,G,H,I}, ]
+      ]
+      [K
+        [N, multi={L,M}, child anchor=parent, 
+        ]
+      ]
+    ]
+  \end{forest}%
+}
+
+\forestapplylibrarydefaults{ext.ling}
+\begin{forest}
+  for tree={pretty nice empty nodes},
+  % This is example is from Jasper Habicht.
+  [VP
+    [DP[John]]
+    [V', alt text=V prime,
+      [V[sent]]
+      [DP[Mary]]
+      [DP[D[a]][NP[letter]]]
+    ]
+  ]
+\end{forest}
+\end{document}
+

@@ -6153,15 +6153,27 @@
 
 - name: forest
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
+  comments: "Tagging requires third-party library ext.tagging."
   issues: [1087]
   package-repository: "https://github.com/sasozivanovic/forest"
   external-issues: ["https://github.com/sasozivanovic/forest/issues/15"]
   tests: true
   tasks: needs more tests
-  updated: 2025-12-04
+  updated: 2026-02-26
+
+- name: forest-ext
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues: [1007, 1171]
+  comments: "ext.tagging tags forest trees via Alt added on surrounding Figure."
+  package-repository: "https://codeberg.org/cfr/prooftrees"
+  tests: true
+  updated: 2026-02-26
 
 - name: forloop
   type: package
