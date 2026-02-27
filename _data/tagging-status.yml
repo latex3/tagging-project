@@ -324,37 +324,35 @@
 - name: adfarrows
   ctan-pkg: adfsymbols
   type: package
-  status: partially-compatible
+  status: compatible
   included-in:
   priority: 9
-  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed
-             in test releases of tl2026 binaries."
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues: [1131]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-02-26
 
 - name: adfbullets
   ctan-pkg: adfsymbols
   type: package
-  status: partially-compatible
+  status: compatible
   included-in:
   priority: 9
-  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed
-             in test releases of tl2026 binaries."
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues:
   related-issues: [1131]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-02-26
 
 - name: adforn
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, ol0.02]
   priority: 2
-  comments: "Missing ToUnicode for text symbols."
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues:
   tests: true
-  updated: 2024-07-25
+  updated: 2026-02-26
 
 - name: adjcalc
   ctan-pkg: adjustbox
