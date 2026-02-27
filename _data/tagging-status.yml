@@ -6151,15 +6151,28 @@
 
 - name: forest
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
+  comments: "Tagging requires third-party library ext.tagging."
   issues: [1087]
   package-repository: "https://github.com/sasozivanovic/forest"
   external-issues: ["https://github.com/sasozivanovic/forest/issues/15"]
   tests: true
   tasks: needs more tests
-  updated: 2025-12-04
+  updated: 2026-02-26
+
+- name: ext.tagging
+  ctan-pkg: forest-ext
+  type: library
+  status: compatible
+  included-in:
+  priority: 9
+  issues: [1007, 1171]
+  comments: "Tags forest trees via Alt added on surrounding Figure."
+  package-repository: "https://codeberg.org/cfr/prooftrees"
+  tests: true
+  updated: 2026-02-26
 
 - name: forloop
   type: package
@@ -12032,8 +12045,9 @@
   issues: [1117]
   tests: true
   comments: "Depends on forest-ext. Note tableaux are syntactic not semantic.
-             Tagging via TeX syntax added to Alt on surrounding Figure."
-  updated: 2026-01-19
+             Tagging generated from content added to Alt on surrounding Figure."
+  package-repository: "https://codeberg.org/cfr/prooftrees"
+  updated: 2026-02-26
 
 - name: protecteddef
   type: package
