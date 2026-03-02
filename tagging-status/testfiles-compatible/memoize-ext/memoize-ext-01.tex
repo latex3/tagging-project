@@ -1,0 +1,24 @@
+\DocumentMetadata{%
+  tagging=on,
+  lang=en-GB,
+  pdfversion=2.0,
+  pdfstandard=UA-2,
+  uncompress,
+}
+\documentclass{article}
+\usepackage{memoize}
+\usepackage{memoize-ext}	
+\usepackage{tikz}
+\title{memoize-ext: 01}
+\begin{document}
+\begin{tikzpicture}[alt=Square]
+  \draw (0,0) rectangle (1,1);
+\end{tikzpicture}%
+\begin{tikzpicture}[actualtext=oircle]
+  \draw circle (10pt);
+\end{tikzpicture}%
+\begin{tikzpicture}[artifact]
+  \draw (0,0) .. controls +(1,-1) and +(1,1) .. (5,5);
+\end{tikzpicture}%
+\end{document}
+% vim: ts=2:sw=2:et:
