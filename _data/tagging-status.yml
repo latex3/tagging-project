@@ -589,7 +589,7 @@
   included-in: [arxiv10, ol1]
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
-  issues:
+  issues: [1240]
   tests: true
   updated: 2024-07-09
 
@@ -7034,6 +7034,15 @@
   tests: false
   comments: "Text not correctly mapped to Unicode."
   updated: 2026-02-01
+
+- name: hlist
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1253]
+  tests: true
+  updated: 2026-03-03
 
 - name: hologo
   type: package
