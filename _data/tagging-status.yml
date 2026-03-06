@@ -5116,13 +5116,12 @@
 
 - name: esdiff
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-03-06
 
 - name: esint
   type: package
@@ -5497,14 +5496,13 @@
 - name: fancyheadings
   ctan-pkg: fancyhdr
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete. Use the fancyhdr package instead."
-  updated: 2026-01-23
+  updated: 2026-03-06
 
 - name: fancypar
   type: package
@@ -5755,13 +5753,12 @@
 
 - name: fixmath
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-03-06
 
 - name: fixme
   type: package
@@ -5971,13 +5968,13 @@
 
 - name: fontawesome
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Symbols missing ToUnicode."
+  updated: 2026-03-06
 
 - name: fontawesome5
   type: package
@@ -6507,9 +6504,9 @@
   priority: 2
   issues: [1064]
   comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
-  tests: false
-  tasks: needs a crop mark test
-  updated: 2025-11-15
+  package-repository: "https://github.com/LaTeX-Package-Repositories/geometry"
+  tests: true
+  updated: 2026-03-06
 
 - name: german
   type: package
@@ -6677,14 +6674,13 @@
 
 - name: gitinfo-lua
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-03-06
 
 - name: gitinfo2
   type: package
@@ -6966,12 +6962,12 @@
 
 - name: here
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
+  comments: "Obsolete. Just loads the float package."
   updated: 2026-01-23
 
 - name: heros-otf
@@ -7872,7 +7868,7 @@
   priority: 2
   issues: [344]
   tests: true
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-29
 
 - name: keystroke
