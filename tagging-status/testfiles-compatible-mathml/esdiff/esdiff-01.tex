@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{esdiff}
+
+\title{esdiff tagging test}
+
+\begin{document}
+
+$\frac{df}{dx} \quad \diff{f}{x}$
+
+$\diff*{f}{x}{x_0}$
+
+$\diffp{f}{x}$
+
+$\diffp*{p}{V}{T}$
+
+\end{document}
