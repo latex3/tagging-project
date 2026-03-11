@@ -1,0 +1,32 @@
+\DocumentMetadata{
+ tagging=on,
+ lang=en-GB,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ uncompress,
+}
+\tagpdfsetup{
+  math/mathml/structelem,
+}
+\documentclass{article}
+\ifcsname directlua\endcsname
+  \relax
+\else
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[ext.tagging,linguistics]{forest}
+\title{ext.tagging (forest-ext) 01}
+\begin{document}
+\begin{forest}
+  % This is example is from Jasper Habicht.
+  [VP
+    [DP[John]]
+    [V', alt text=V prime,
+      [V[sent]]
+      [DP[Mary]]
+      [DP[D[a]][NP[letter]]]
+    ]
+  ]
+\end{forest}
+\end{document}
+
