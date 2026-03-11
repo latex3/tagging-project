@@ -7,8 +7,11 @@
   }
 \documentclass{article}
 \usepackage{chemgreek}
-\ifdefined\Uchar\usepackage{lua-unicode-math}
-  \tagpdfsetup{math/mathml/luamml/load}\fi
+\ifdefined\Uchar
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
+  \usepackage{fontspec}
+  \fi
 \usepackage{textgreek}
 
 \ifdefined\Uchar\setmainfont{Libertinus Serif}\fi

@@ -7,8 +7,10 @@
   }
 \documentclass{article}
 \usepackage{algpseudocode}
-\ifdefined\Uchar\usepackage{lua-unicode-math}
-  \tagpdfsetup{math/mathml/luamml/load}\fi
+\ifdefined\Uchar
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
+  \fi
 
 \title{algpseudocode tagging test - 1}
 
