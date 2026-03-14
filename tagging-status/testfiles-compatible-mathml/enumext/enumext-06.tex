@@ -8,7 +8,8 @@
   }
 \documentclass{article}
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
-\ifdefined\Uchar\usepackage{unicode-math}\fi
+\ifdefined\Uchar\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}\fi
 \usepackage{graphicx,hyperref,enumext}
 \hypersetup
   {

@@ -13,7 +13,8 @@ level '>' % as replacement for !
 \end{filecontents}
 \documentclass[a4paper,12pt]{article}
 \ifdefined\Uchar
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
 \else
   \usepackage[T1]{fontenc}
 \fi
