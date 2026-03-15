@@ -44,7 +44,8 @@ It is _strongly_ recommended that you use a current LaTeX Release.
 The tagging code is under active development and not all of the features
 or syntax described here are available in older releases.
 
-On OverLeaf, LaTeX 2025-11-01 is available if you use the "Rolling TeXLive"
+On OverLeaf, LaTeX 2025-11-01 is available if you use the
+"[Rolling TeXLive](https://docs.overleaf.com/troubleshooting-and-support/tex-live#labs-rolling-tex-live-experiment)"
 option for the TeXLive Release (in the Compiler settings).
 
 If it is not possible to use the current release, instructions for
