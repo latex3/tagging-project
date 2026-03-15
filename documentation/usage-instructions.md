@@ -36,7 +36,7 @@ The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
 documents.
 
-<div style="border-solid thin black; padding=1em;">
+<div style="border: solid thin black; padding=1em;" markdown=1>
 
 ## Guidelines for LaTeX2e 2025-02-01 and 2024-06-01
 
