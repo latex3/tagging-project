@@ -36,6 +36,22 @@ The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
 documents.
 
+## Older Releases
+
+It is _strongly_ recommended that you use a current LaTeX Release.
+The tagging code is under active development and not all of the features
+or syntax described here are available in older releases.
+
+On OverLeaf, LaTeX 2025-11-01 is available if you use the "Rolling TeXLive"
+option for the TeXLive Release (in the Compiler settings).
+
+If it is not possible to use the current release, instructions for
+[LaTeX 2025-02-01](prototype-usage-instructions-2025-02-01)
+and
+[LaTeX 2025-02-01](prototype-usage-instructions-2025-02-01)
+are available.
+Note in particular, that the `tagging=on` key was not available in older releases.
+
 ## Basic setup
 
 To enable tagging in supported documents it is enough to add at the
