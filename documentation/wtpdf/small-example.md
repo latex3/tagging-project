@@ -86,7 +86,7 @@ c=\sqrt{a^2+b^2}
 
 ## About the output
 
-Your demonstration PDF will, by default, be generated via a standard TeXLive 2025 `lualatex-dev`.
+Your demonstration PDF will, by default, be generated via a standard TeXLive 2026 `lualatex-dev`.
 
 As provided, the options used in the demonstration code will result in
 MathML tags in the output PDF’s tag tree. If you remove the
