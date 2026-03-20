@@ -589,7 +589,7 @@
   included-in: [arxiv10, ol1]
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
-  issues:
+  issues: [1240]
   tests: true
   updated: 2024-07-09
 
@@ -641,10 +641,9 @@
   priority: 2
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
+  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981,1033]
   tests: true
-  tasks: also needs more tests
-  updated: 2025-10-20
+  updated: 2026-03-14
 
 - name: amsmidx
   type: package
@@ -5027,13 +5026,13 @@
 
 - name: epsdice
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Missing Alt text for dice graphics."
+  updated: 2026-03-06
 
 - name: epsf
   type: package
@@ -5116,13 +5115,12 @@
 
 - name: esdiff
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-03-06
 
 - name: esint
   type: package
@@ -5388,13 +5386,13 @@
 
 - name: extarrows
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  comments:
-  issues:
+  comments: "Produces warnings with mathml-SE."
+  issues: [919]
   tests: true
-  updated: 2024-07-29
+  updated: 2026-02-28
 
 - name: extdash
   type: package
@@ -5497,14 +5495,13 @@
 - name: fancyheadings
   ctan-pkg: fancyhdr
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
   comments: "Obsolete. Use the fancyhdr package instead."
-  updated: 2026-01-23
+  updated: 2026-03-06
 
 - name: fancypar
   type: package
@@ -5755,13 +5752,12 @@
 
 - name: fixmath
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-03-06
 
 - name: fixme
   type: package
@@ -5971,13 +5967,13 @@
 
 - name: fontawesome
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Symbols missing ToUnicode."
+  updated: 2026-03-06
 
 - name: fontawesome5
   type: package
@@ -6506,10 +6502,10 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [1064]
-  comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
-  tests: false
-  tasks: needs a crop mark test
-  updated: 2025-11-15
+  comments:
+  package-repository: "https://github.com/LaTeX-Package-Repositories/geometry"
+  tests: true
+  updated: 2026-03-09
 
 - name: german
   type: package
@@ -6677,14 +6673,13 @@
 
 - name: gitinfo-lua
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-03-06
 
 - name: gitinfo2
   type: package
@@ -6966,12 +6961,12 @@
 
 - name: here
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
+  comments: "Obsolete. Just loads the float package."
   updated: 2026-01-23
 
 - name: heros-otf
@@ -7034,6 +7029,15 @@
   tests: false
   comments: "Text not correctly mapped to Unicode."
   updated: 2026-02-01
+
+- name: hlist
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1253]
+  tests: true
+  updated: 2026-03-03
 
 - name: hologo
   type: package
@@ -7863,7 +7867,7 @@
   priority: 2
   issues: [344]
   tests: true
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-29
 
 - name: keystroke
@@ -9626,11 +9630,10 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: Footnote patching doesn’t work but otherwise supported.
+  comments:
   issues: [67]
   tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  updated: 2026-02-28
 
 - name: midfloat
   ctan-pkg: sttools
@@ -11774,14 +11777,14 @@
 
 - name: pifont
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv5, ol5]
   priority: 2
   comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed
-             in test releases of tl2026 binaries."
+             in tl2026."
   issues: [1132]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-03-06
 
 - name: pigpen
   type: package
@@ -12763,12 +12766,13 @@
 
 - name: relsize
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol1]
   priority: 2
-  issues:
+  issues: [1244]
   tests: true
-  updated: 2025-05-28
+  comments: "Warnings with `\\mathlarger` and mathml-SE."
+  updated: 2026-02-27
 
 - name: remreset
   type: package
@@ -13750,23 +13754,25 @@
   tests: false
   updated: 2024-07-15
 
-- name: sourcesanspro
+- name: sourcesans
   type: package
   status: compatible
   included-in: [tlc3, ol0.1]
   priority: 2
+  subpackages: [sourcesanspro]
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2026-03-06
 
-- name: sourceserifpro
+- name: sourceserif
   type: package
   status: compatible
   included-in: [tlc3, ol0.02]
   priority: 2
+  subpackages: [sourceserifpro]
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2026-03-06
 
 - name: spalign
   type: package
@@ -17109,7 +17115,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues: [979,980,1050]
+  issues: [979,980,1050,1241]
   tests: true
   tasks: needs more tests
   updated: 2025-11-10

@@ -24,8 +24,7 @@ list.
 
 The first four keys in the document metadata declaration below set
 necessary document metadata, including main  document language, PDF version and the
-ISO-standardized subset(s) of PDF to which the document should comply with.
-The final `testphase`key is temporarily needed while the tagging support is still under development.
+ISO-standardized subset(s) of PDF to which the document should comply.
 
 ## Demonstration
 
@@ -48,16 +47,15 @@ display, a bibliography, a generated cross reference and citations,
   lang          = en,
   pdfversion    = 2.0,  % or 1.7 if desired pdfstandard = UA-1
   pdfstandard   = UA-2, % or UA-1 if pdfversion = 1.7
-  pdfstandard   = A-4,  % or A-4f (see below)
+  pdfstandard   = A-4f, % 4f allows embedd CSS files.
   tagging-setup = {math/setup=mathml-SE} % Or mathml-AF (see below)
 }
 
 % The above declaration results in a tagged PDF with MathML included via structure elements (tags).
 % Remove the `tagging-setup` line, or change to `mathml-AF` to generate a tagged PDF with
-% MathML Associated Files, as the use  of this feature requires the PDF file to
-% declare conformance with PDF/A-4f rather than PDF/A-4.
-% LaTeX will automatically switch to declare PDF/A-4f if Associated Files are used when the
-% document declares pdfstandard = A-4.
+% MathML Associated Files. MathML files may be embedded while conforming to
+% PDF/A-4, however as LaTeX embeds additional CSS PDF/A-4f is required,
+
 
 
 \documentclass{article}
@@ -88,7 +86,7 @@ c=\sqrt{a^2+b^2}
 
 ## About the output
 
-Your demonstration PDF will, by default, be generated via a standard TeXLive 2025 `lualatex-dev`.
+Your demonstration PDF will, by default, be generated via a standard TeXLive 2026 `lualatex-dev`.
 
 As provided, the options used in the demonstration code will result in
 MathML tags in the output PDF’s tag tree. If you remove the
