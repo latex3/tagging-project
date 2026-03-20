@@ -8,7 +8,9 @@
 \documentclass{article}
 
 \ifdefined\Uchar
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
+  \usepackage{fontspec}
   \usepackage[supsotf=Cochineal-Roman.otf]{superiors}
 \else
   \usepackage[supsfam=Cochineal-Sup]{superiors}

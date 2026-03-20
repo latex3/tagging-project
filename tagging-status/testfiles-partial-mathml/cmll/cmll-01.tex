@@ -7,7 +7,11 @@
   }
 \documentclass{article}
 
-\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
+\UseName{sys_if_engine_opentype:T}{
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
+  \let\multimapinv\relax
+  }
 \usepackage{cmll}
 
 \title{cmll tagging test}

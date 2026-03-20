@@ -17,7 +17,8 @@
 \title{Newtheorem and theoremstyle test}
 \author{Michael Downes\\updated by Barbara Beeton}
 
-\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
+\UseName{sys_if_engine_opentype:T}{\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}}
 \usepackage[exercise]{amsthm}
 
 \newtheorem{thm}{Theorem}[section]

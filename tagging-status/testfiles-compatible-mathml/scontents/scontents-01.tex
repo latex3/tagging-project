@@ -1,7 +1,8 @@
 \DocumentMetadata{tagging=on, lang=en-US, pdfversion=2.0, pdfstandard=ua-2}
 \documentclass{article}
 \usepackage{scontents,hyperref}
-\ifdefined\Uchar\usepackage{unicode-math}\fi
+\ifdefined\Uchar\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}\fi
 \hypersetup{pdftitle = {Test scontents package},}
 \setlength{\parindent}{0pt}
 \begin{document}
