@@ -297,7 +297,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [698]
+  closed-issues: [698]
   tests: true
   updated: 2024-09-06
 
@@ -590,6 +590,7 @@
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
   issues: [1240]
+  closed-issues: [842]
   tests: true
   updated: 2024-07-09
 
@@ -641,7 +642,8 @@
   priority: 2
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981,1033]
+  issues: [712,803,851,857,919,981,1033]
+  closed-issues: [28,77,811,846,848,850,852,859,875]
   tests: true
   updated: 2026-03-14
 
@@ -703,8 +705,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,
+  issues: [83,759,790,792,944,1083,1162,1166,1196,1199,1200,1201,
            1202,1203,1207,1216,1218,1221,1224,1225,1232]
+  closed-issues: [733,736,835]
   tests: true
   updated: 2026-01-19
 
@@ -1026,7 +1029,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues: [357]
+  closed-issues: [357]
   tests: true
   comments:
   updated: 2025-07-16
@@ -1610,7 +1613,8 @@
   included-in: [tlc3]
   priority: 2
   comments: active character issues
-  issues: [414,694,932]
+  issues: [694,932]
+  closed-issues: [414]
   tests: false
   tasks: needs tests
   updated: 2025-07-02
@@ -2407,7 +2411,8 @@
   priority: 2
   comments: "Requires hyperref."
   references: [2]
-  issues: [18,902]
+  issues: [902]
+  closed-issues: [18]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
   tasks: needs more tests
@@ -2420,7 +2425,7 @@
   priority: 2
   comments: See biblatex.
   tasks: Package should be changed to use sockets in its footnote adaption; needs tests
-  issues: [62]
+  closed-issues: [62]
   tests: false
   updated: 2024-07-15
 
@@ -2771,7 +2776,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Requires the firstaid module which contains a fix."
-  issues: [69]
+  closed-issues: [69]
   tests: true
   updated: 2025-06-13
 
@@ -3645,7 +3650,8 @@
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
-  issues: [2,1166]
+  issues: [1166]
+  closed-issues: [2]
   tests: true
   tasks: More tests needed
   updated: 2026-01-19
@@ -3858,7 +3864,8 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  issues: [90,379,749]
+  issues: [379]
+  closed-issues: [80,90,749]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -5006,13 +5013,13 @@
 
 - name: epic
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
-  comments: "Works with pdflatex but not lualatex."
-  issues: [159]
+  comments:
+  closed-issues: [159]
   tests: true
-  updated: 2024-07-17
+  updated: 2026-03-22
 
 - name: epigraph
   type: package
@@ -5220,7 +5227,7 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  issues: [656]
+  closed-issues: [656]
   tests: true
   updated: 2024-08-23
 
@@ -5853,7 +5860,7 @@
   status: no-support
   included-in: [arxiv01, ol1]
   priority: 6
-  issues: [497]
+  closed-issues: [497]
   tests: false
   updated: 2024-08-20
 
@@ -6070,7 +6077,8 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [12,958]
+  issues: [958]
+  closed-issues: [12]
   tests: false
   updated: 2025-09-12
 
@@ -6501,7 +6509,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1064]
+  closed-issues: [1064]
   comments:
   package-repository: "https://github.com/LaTeX-Package-Repositories/geometry"
   tests: true
@@ -6697,7 +6705,7 @@
   priority: 4
   comments: An old issue appears to be fixed.
   tasks: needs tests
-  issues: [48]
+  closed-issues: [48]
   tests: false
   updated: 2024-07-06
 
@@ -6798,7 +6806,7 @@
     An old issue with height appears to be fixed.
   references: [1]
   issues: [16]
-  related-issues: [64]
+  closed-issues: [64]
   tests: false
   updated: 2024-07-06
 
@@ -6866,7 +6874,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [559]
+  closed-issues: [559]
   tests: true
   updated: 2024-08-19
 
@@ -7132,7 +7140,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [525]
+  closed-issues: [525]
   tests: false
   comments: "Ignored if `\\DocumentMetadata` is detected."
   updated: 2024-08-13
@@ -7152,7 +7160,7 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [680]
+  closed-issues: [680]
   tests: false
   comments: "Requires unsupported latex+dvips+ps2pdf workflow."
   updated: 2024-08-28
@@ -8257,7 +8265,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [481,1108]
+  closed-issues: [481,1108]
   tests: true
   comments: "Provides `actualtext` key for use with `image` key."
   updated: 2025-12-09
@@ -8454,7 +8462,7 @@
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
   issues: [70,1074]
-  related-issues: [41]
+  closed-issues: [41]
   tests: true
   updated: 2024-07-12
 
@@ -8560,10 +8568,10 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [22,1192]
+  issues: [1192]
+  closed-issues: [22,38,554,714]
   comments: "A longtable with page breaks works with pdftex only if at least
              latex-dev from February 2025 is used."
-  related-issues: [38]
   tests: true
   tasks: needs more tests
   updated: 2026-01-30
@@ -8701,6 +8709,7 @@
   included-in:
   priority: 9
   issues:
+  closed-issues: [1137]
   luatex-only: true
   tests: false
   updated: 2026-01-30
@@ -8817,9 +8826,8 @@
   included-in:
   priority: 9
   package-repository: "https://github.com/lualatex/luamplib"
-  comments: "An old issue has been fixed. Offers several keys for figures
-             including `alt` and `artifact`."
-  issues: [8,252]
+  comments: "Offers several keys for figures including `alt` and `artifact`."
+  closed-issues: [8,252]
   luatex-only: true
   tests: true
   updated: 2024-11-12
@@ -8871,6 +8879,7 @@
   priority: 8
   comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
   issues: [713]
+  closed-issues: [87]
   luatex-only: true
   tests: true
   updated: 2026-01-26
@@ -9296,7 +9305,7 @@
   priority: 2
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
-  issues: [837]
+  closed-issues: [837]
   tests: true
   updated: 2025-05-29
 
@@ -9384,6 +9393,7 @@
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
   issues: [139,922,1119]
+  closed-issues: [734]
   tests: true
   updated: 2025-12-11
 
@@ -9440,7 +9450,7 @@
   included-in: [tlc3, arxiv01, ol1]
   priority: 8
   comments: "Recommended alternative: tcolorbox."
-  issues: [73]
+  closed-issues: [73]
   tests: false
   updated: 2026-01-26
 
@@ -9491,7 +9501,7 @@
   included-in: [arxiv001, ol0.1]
   subpackages: [pdfbase]
   priority: 7
-  issues: [868]
+  closed-issues: [868]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -9618,7 +9628,7 @@
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments:
-  issues: [67]
+  closed-issues: [67]
   tests: false
   updated: 2026-02-28
 
@@ -9896,7 +9906,7 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [705]
+  closed-issues: [705]
   tasks:
   comments:
   updated: 2025-06-09
@@ -11244,7 +11254,7 @@
   status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues: [628]
+  closed-issues: [628]
   tests: true
   updated: 2024-11-18
 
@@ -11353,7 +11363,7 @@
   priority: 2
   comments: "Creates duplicated structures as graphics are processed more than once in trial
             typesetting. Correct tagging of multipage includes unclear."
-  issues: [86]
+  closed-issues: [86]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -11629,7 +11639,7 @@
   included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "Compatibility depends on tikz but also needs its own adjustments."
-  issues: [924]
+  closed-issues: [924,946]
   tests: false
   updated: 2025-06-23
 
@@ -12032,7 +12042,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [1117]
+  closed-issues: [1117]
   tests: true
   comments: "Depends on forest-ext. Note tableaux are syntactic not semantic.
              Tagging via TeX syntax added to Alt on surrounding Figure."
@@ -12881,7 +12891,7 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [112,751]
+  closed-issues: [112,751]
   tests: true
   updated: 2025-06-09
 
@@ -13236,7 +13246,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [696]
+  closed-issues: [696]
   tests: true
   updated: 2024-09-13
 
@@ -13474,7 +13484,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues:
+  closed-issues: [435]
   luatex-only: true
   tests: true
   updated: 2024-08-02
@@ -14366,8 +14376,8 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: An old issue has been fixed.
-  issues: [42]
+  comments:
+  closed-issues: [42]
   tests: true
   updated: 2025-11-22
 
@@ -14408,7 +14418,8 @@
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Simple boxes are now tagged correctly.
              Not yet fully supported, but some suggestions in the listed issues"
-  issues: [73,88,1066,1101,1103,1104,1105,1106,1107,1110,1114]
+  issues: [73,88,1101,1103,1104,1105,1106,1107,1110,1114]
+  closed-issues: [1066]
   tests: true
   tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283","https://github.com/T-F-S/tcolorbox/issues/358"]
@@ -14795,6 +14806,7 @@
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
   issues: [1160,1208,1228]
+  closed-issues: [1156]
   references: [1]
   tests: true
   updated: 2026-01-19
@@ -15177,7 +15189,7 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [700]
+  closed-issues: [700]
   tests: false
   comments: Obsolete
   updated: 2025-11-20
@@ -15861,7 +15873,7 @@
   included-in: [ol0.02]
   priority: 9
   comments: firstaid is required for the fix of issue 49
-  issues: [49]
+  closed-issues: [49]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -16110,6 +16122,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
+  closed-issues: [972]
   tests: false
   updated: 2024-07-07
 
@@ -16389,7 +16402,7 @@
   status: compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
-  issues: [170]
+  closed-issues: [170,1056]
   comments: "An xltabular with page breaks works with pdftex only if at least
              latex-dev from February 2025 is used."
   tests: true
@@ -17047,7 +17060,7 @@
   included-in:
   priority: 9
   comments: "Validates under luatex (don't use subcaptions)."
-  issues: [1054]
+  closed-issues: [1054]
   tests: true
   updated: 2025-12-03
 
@@ -17471,7 +17484,8 @@
   subpackages: [memhfixc]
   comments: "Some code showing the needed adjustments can be found in the
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
-  issues: [910,1040]
+  issues: [910]
+  closed-issues: [1040]
   tests: false
   updated: 2025-11-10
 
