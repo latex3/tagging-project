@@ -40,7 +40,7 @@ The values in the *Status* column have the following meaning:
 
 **Enter search keywords** (space separated) to filter the table.
 
-<input size="40" type="text" id="inp" onkeyup="filterRows()" placeholder="Seach terms">
+<input size="40" type="text" id="inp" onkeyup="filterRows()" placeholder="Search terms">
 
 **Click on a column heading** to sort the table by the chosen column.
 
