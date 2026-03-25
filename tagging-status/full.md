@@ -36,9 +36,14 @@ The values in the *Status* column have the following meaning:
 - `unchecked` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unchecked" | size }}** entries)
 
 
-Click on the column headings to sort the table by the chosen column.
+----
 
-<input type="text" id="inp" onkeyup="filterrows()" placeholder="Seach terms">
+**Enter search keywords** (space separated) to filter the table.
+
+<input size="40" type="text" id="inp" onkeyup="filterrows()" placeholder="Seach terms">
+
+**Click on a column heading** to sort the table by the chosen column.
+
 
 <table id="tbl" class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
