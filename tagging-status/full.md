@@ -44,6 +44,7 @@ The values in the *Status* column have the following meaning:
 
 **Click on a column heading** to sort the table by the chosen column.
 
+----
 
 <table id="tbl" class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
