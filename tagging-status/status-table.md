@@ -3,7 +3,7 @@
 
 **Enter search keywords** (space separated) to filter the table.
 
-<input size="40" type="text" id="inp" onkeyup="filterRows({{bdyid}})" placeholder="Search terms">
+<input size="40" type="text" id="inp" onkeyup="filterRows('{{bdyid}}')" placeholder="Search terms">
 
 **Click on a column heading** to sort the table by the chosen column.
 
