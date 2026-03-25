@@ -193,7 +193,7 @@ function filterRows() {
     d="none";
    }
   }
-  tr[i].style.display = d;
+  trs[i].style.display = d;
   }
 }
 </script>
