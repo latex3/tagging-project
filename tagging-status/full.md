@@ -56,7 +56,7 @@ Click on the column headings to sort the table by the chosen column.
 <th>Last updated</th>
 </tr>
 </thead>
-<tbody>
+<tbody id="tblbdy">
 {%- for p in t-s -%}
 <tr id="{{p.name}}">
 <td>{{p.type}}</td>
@@ -175,7 +175,7 @@ Other:
 function filterrows() {
   const input = document.getElementById("inp");
   const filter = input.value.toUpperCase().split(' ');
-  const table = document.getElementById("tbl");
+  const table = document.getElementById("tblbdy");
   const tr = table.getElementsByTagName("tr");
 
   // Loop through all table rows, and hide those who don't match all terms the search query
