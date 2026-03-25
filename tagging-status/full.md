@@ -38,6 +38,7 @@ The values in the *Status* column have the following meaning:
 
 Click on the column headings to sort the table by the chosen column.
 
+<input type="text" id="inp" onkeyup="filterrows()" placeholder="Seach terms">
 
 <table class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
@@ -170,3 +171,23 @@ Other:
 <p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
 {% endfor %}
 
+<script>
+function filterrows() {
+  const input = document.getElementById("inp");
+  const filter = input.value.toUpperCase().split(' ');
+  const table = document.getElementById("tbl");
+  const tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match all terms the search query
+  for (let i = 0; i != tr.length; i++) {
+  txtValue = tr[i].textContent.toUpperCase();
+  let d="";
+    for (let j=0;j!=filter.length;j++){
+    if (txtValue.indexOf(filter[j]) == -1) {
+    d="none";
+    }
+    }
+	tr[i].style.display = d;
+	}
+  }
+</script>
