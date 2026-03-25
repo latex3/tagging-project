@@ -182,7 +182,7 @@ function filterRows() {
  const input = document.getElementById("inp");
  const keywds = input.value.toUpperCase().split(' ');
  const tbdy= document.getElementById("tblbdy");
- const tr = tbdy.getElementsByTagName("tr");
+ const trs = tbdy.getElementsByTagName("tr");
  
  // Loop through rows, and hide those who don't match all terms in the query
  for (let i = 0; i != trs.length; i++) {
