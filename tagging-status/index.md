@@ -106,7 +106,7 @@ The status for the remaining **{{xpu | size }}** classes is `unchecked`.
 
 <script>
 function filterRows(bi) {
- const input = document.getElementById("inp");
+ const input = document.getElementById("inp" + bi);
  const keywds = input.value.toUpperCase().split(' ');
  const tbdy= document.getElementById(bi);
  const trs = tbdy.getElementsByTagName("tr");
