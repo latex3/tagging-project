@@ -40,7 +40,7 @@ Click on the column headings to sort the table by the chosen column.
 
 <input type="text" id="inp" onkeyup="filterrows()" placeholder="Seach terms">
 
-<table class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
+<table id="tbl" class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
 <tr>
 <th>Type</th>
