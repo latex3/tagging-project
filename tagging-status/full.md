@@ -40,7 +40,7 @@ The values in the *Status* column have the following meaning:
 
 **Enter search keywords** (space separated) to filter the table.
 
-<input size="40" type="text" id="inp" onkeyup="filterrows()" placeholder="Seach terms">
+<input size="40" type="text" id="inp" onkeyup="filterRows()" placeholder="Seach terms">
 
 **Click on a column heading** to sort the table by the chosen column.
 
@@ -178,22 +178,22 @@ Other:
 {% endfor %}
 
 <script>
-function filterrows() {
-  const input = document.getElementById("inp");
-  const filter = input.value.toUpperCase().split(' ');
-  const table = document.getElementById("tblbdy");
-  const tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match all terms the search query
-  for (let i = 0; i != tr.length; i++) {
-  txtValue = tr[i].textContent.toUpperCase();
+function filterRows() {
+ const input = document.getElementById("inp");
+ const keywds = input.value.toUpperCase().split(' ');
+ const tbdy= document.getElementById("tblbdy");
+ const tr = tbdy.getElementsByTagName("tr");
+ 
+ // Loop through rows, and hide those who don't match all terms in the query
+ for (let i = 0; i != trs.length; i++) {
+  const rowtxt = trs[i].textContent.toUpperCase();
   let d="";
-    for (let j=0;j!=filter.length;j++){
-    if (txtValue.indexOf(filter[j]) == -1) {
+  for (let j=0;j!=keywds.length;j++){
+   if (rowtxt.indexOf(keywds[j]) == -1) {
     d="none";
-    }
-    }
-	tr[i].style.display = d;
-	}
+   }
   }
+  tr[i].style.display = d;
+  }
+}
 </script>
