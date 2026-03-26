@@ -11,6 +11,7 @@ td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
 .markdown-body table p { margin-bottom: 0pt;}
+a.closed {text-decoration: line-through}
 </style>
 <script src="sorttable.js"></script>
 
@@ -112,15 +113,22 @@ Requires the use of (u)ptex.
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {%- endif -%}
-{% if p.related-issues %}
+{% if p.closed-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
+Closed:
+{% for i in p.related-issues %}
+<a class="closed" href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
+{% endfor %}
+{% endif %}
+{% if p.related-issues %}
+{%- if p.issues or p.closed-issues -%}<br/>{%- endif -%}
 Related:
 {% for i in p.related-issues %}
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
 {% if p.external-issues %}
-{%- if p.issues or p.related-issues -%}<br/>{%- endif -%}
+{%- if p.issues or p.closed-issues or p.related-issues -%}<br/>{%- endif -%}
 Other:
 {% for u in p.external-issues %}
 {%- assign ltext = u | replace: "issues/", "" | replace: "-/","" | split: "/" -%}
