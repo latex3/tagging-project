@@ -116,7 +116,7 @@ Requires the use of (u)ptex.
 {% if p.closed-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
 Closed:
-{% for i in p.related-issues %}
+{% for i in p.closed-issues %}
 <a class="closed" href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
