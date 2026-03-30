@@ -26,7 +26,7 @@ td.date {white-space: nowrap;font-size:90%;}
 {% endfor %}
 
 This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
-with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
+with respect to PDF tagging.
 
 The values in the *Status* column have the following meaning:
 
