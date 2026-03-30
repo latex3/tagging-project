@@ -10130,10 +10130,10 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues:
+  issues: [1282]
   tests: false
   tasks: Needs tests
-  updated: 2024-07-06
+  updated: 2026-03-30
 
 - name: nath
   type: package
@@ -15746,7 +15746,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: An old issue has been fixed.
-  issues: [5]
+  closed-issues: [5]
   tests: false
   updated: 2024-07-06
 
@@ -16601,7 +16601,7 @@
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
              unicode-math must be loaded after xy."
-  issues: [899]
+  issues: [899,1275]
   tests: true
   updated: 2025-06-09
 
@@ -17096,7 +17096,7 @@
              with any form of tagging support. The ltx-talk class is being
              developed as an alternative, and is recommended for new tagged
              presentations."
-  issues: [710]
+  closed-issues: [710]
   tests: false
   updated: 2025-06-11
 
@@ -17127,7 +17127,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues: [979,980,1050,1241]
+  issues: [979,980,1050,1241,1281]
   tests: true
   tasks: needs more tests
   updated: 2025-11-10
@@ -17462,7 +17462,7 @@
   status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
