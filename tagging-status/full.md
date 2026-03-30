@@ -23,7 +23,7 @@ a.closed {text-decoration: line-through}
 {% assign t-s = site.data.tagging-status %}
 
 This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
-with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
+with respect to PDF tagging.
 
 This is the full list of data in the [YAML file](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
 Revert to the [display of main properties](./).
