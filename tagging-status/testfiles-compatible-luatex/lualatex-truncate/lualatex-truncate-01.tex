@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{lualatex-truncate} % good
+%\usepackage[hyphenate]{lualatex-truncate} % good
+%\usepackage[breakwords]{lualatex-truncate} % good
+%\usepackage[breakall]{lualatex-truncate} % good
+
+\title{lualatex-truncate tagging test}
+
+\begin{document}
+
+\truncate{122pt}{This text has been truncated}
+
+\truncate{122pt}{This text has been~truncated}
+
+\end{document}

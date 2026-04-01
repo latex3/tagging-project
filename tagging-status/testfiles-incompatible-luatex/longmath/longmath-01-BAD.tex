@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{unicode-math}
+\usepackage{longmath}
+\usepackage{multido}
+
+\title{longmath tagging test}
+
+\begin{document}
+text
+\[S^\top = k · \lleft[ A + \lleft( B_C
++ D^{E^2} \rright) ^ { \lleft( 3+κ^2 \rright)^2 }
++ F \rright] \]
+
+$\vec R = \lleft( \sum_{k=1}^{n} m_k \, \vec r_k
+\mmbin / \sum_{k=1}^{n} m_k \rright) .$
+
+\[\lleft[ \ignorelimits \sum_{A_X^3}^{A_Y^3} F(Z)
++ \includelimits \sum_a^c f(x) \rright]\]
+
+\[\mleft( A + \sum B \mright)
+\mleft( C + \int D \mright)\]
+
+\newcommand\harm[2]{ \frac{1}{#1} \mmultido{\n=#1+1}{#2}{ + \frac{1}{\n} } }
+\[Q = \begin{longmath}[t]{70mm}
+1 + \harm{2}{21} + \cdots
+\end{longmath}\]
+
+\[\lleft\{ \begin{longmath*}[c]{0.8+0.1}
+\lleft( 1 + \frac{1}{2} \rright) + \lleft( \harm{3}{1} \rright) + \lleft( \harm{5}{3} \rright) +
+\lleft( \harm{9}{7} \rright) + \lleft( \harm{17}{15} \rright) + \lleft( \harm{33}{3}
++ \cdots \rright. \end{longmath*} \rright\}\]
+
+\delimitershortfall -2pt
+\autodelimiters{ < \lceil \lfloor [ \{ ( * ) \} ] \rfloor \rceil > }
+
+\[\lleft* 5 + \lleft* 4 + \lleft* 3
++ \lleft* 2 + \lleft* 1 + A \rright* + B \rright*
++ C \rright* + D \rright* + E \rright*\]
+\end{document}
