@@ -1,0 +1,79 @@
+\DocumentMetadata{lang=en-US,tagging=on}
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage[colorlinks]{hyperref}
+\usepackage[printonlyused,withpage]{acronym}
+
+\title{acronym tagging test}
+
+\begin{document}
+
+\section{Intro}
+In the early nineties, \acs{GSM} was deployed in many European
+countries. \ac{GSM} offered for the first time international
+roaming for mobile subscribers. The \acs{GSM}'s use of \ac{TDMA} as
+its communication standard was debated at length. And every now
+and then there are big discussion whether \ac{CDMA} should have
+been chosen over \ac{TDMA}.
+
+\section{Furthermore}
+\acresetall
+The reader could have forgotten all the nice acronyms, so we repeat the
+meaning again.
+
+If you want to know more about \acf{GSM}, \acf{TDMA}, \acf{CDMA}
+and other acronyms, just read a book about mobile communication. Just
+to mention it: There is another \ac{UA}, just for testing purposes!
+
+\begin{figure}[h]
+Figure
+\caption{A float also admits references like \ac{GSM} or \acf{CDMA}.}
+\end{figure}
+
+\subsection{Some chemistry and physics}
+\label{Chem}
+\ac{NAD+} is a major electron acceptor in the oxidation
+of fuel molecules. The reactive part of \ac{NAD+} is its nictinamide
+ring, a pyridine derivate.
+
+One mol consists of \acs{NA} atoms or molecules. There is a relation
+between the constant of Boltzmann and the \acl{NA}:
+\begin{equation}
+  k = R/\acs{NA}\label{my:eq}
+\end{equation}
+
+\acl{lox}/\acl{lh2} (\acsu{lox}/\acsu{lh2})
+
+\Acp{LFVP} are processes in which the lepton number of the initial
+and final states are different. An example for \iac{LFVP} is
+neutrinoless double beta decay.
+
+\subsection{Some testing \acp{IC} fundamentals}
+When testing \acp{IC}, one typically wants to identify functional
+blocks to be tested separately. The latter are commonly indicated as
+\acp{BUT}. To test a \ac{BUT} requires defining a testing strategy\dots{}
+\Iac{IC} popped up unexpectedly.
+
+\section{Acronyms}
+\begin{acronym}[TDMA]
+ \acro{CDMA}{Code Division Multiple Access}
+ \acro{GSM}{Global System for Mobile communication}
+ \acro{NA}[\ensuremath{N_{\mathrm A}}]
+      {Number of Avogadro}
+ \acro{NAD+}[NAD\textsuperscript{+}]{Nicotinamide Adenine Dinucleotide}
+ \acro{LFVP}{lepton flavor violating process}
+ \acroindefinite{LFVP}{an}{a}
+ \acro{NUA}{Not Used Acronym}
+ \acro{TDMA}{Time Division Multiple Access}
+ \acro{UA}{Used Acronym}
+ \acro{lox}[\ensuremath{LOX}]{Liquid Oxygen}%
+ \acro{lh2}[\ensuremath{LH_2}]{Liquid Hydrogen}%
+ \acro{IC}{Integrated Circuit}%
+ \acro{BUT}{Block Under Test}%
+ \acrodefplural{BUT}{Blocks Under Test}%
+ \acroindefinite{IC}{an}{an}
+\end{acronym}
+
+\end{document}

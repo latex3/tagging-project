@@ -11,6 +11,7 @@ td.date {white-space: nowrap;font-size:90%;}
 .markdown-body table tr { vertical-align: baseline;}
 .markdown-body table thead tr { border-bottom: solid thick black;}
 .markdown-body table p { margin-bottom: 0pt;}
+a.closed {text-decoration: line-through}
 </style>
 <script src="sorttable.js"></script>
 
@@ -22,7 +23,8 @@ td.date {white-space: nowrap;font-size:90%;}
 {% assign t-s = site.data.tagging-status %}
 
 This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
-with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
+with respect to PDF tagging. Compatibility assumes tagging is enabled, i.e.,
+`tagging=on` is given in `\DocumentMetadata`.
 
 This is the full list of data in the [YAML file](https://github.com/latex3/tagging-project/blob/main/_data/tagging-status.yml).
 Revert to the [display of main properties](./).
@@ -36,10 +38,17 @@ The values in the *Status* column have the following meaning:
 - `unchecked` The status of this package or class is not known, because there aren't reliable tests yet. Help with testing to determine the real status is very much appreciated. (**{{t-s | where: "status", "unchecked" | size }}** entries)
 
 
-Click on the column headings to sort the table by the chosen column.
+----
 
+**Enter search keywords** (space separated) to filter the table.
 
-<table class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
+<input size="40" type="text" id="inp" onkeyup="filterRows()" placeholder="Search terms">
+
+**Click on a column heading** to sort the table by the chosen column.
+
+----
+
+<table id="tbl" class="sortable" style="display:table   ;width:100%;position:absolute; left:0">
 <thead>
 <tr>
 <th>Type</th>
@@ -55,7 +64,7 @@ Click on the column headings to sort the table by the chosen column.
 <th>Last updated</th>
 </tr>
 </thead>
-<tbody>
+<tbody id="tblbdy">
 {%- for p in t-s -%}
 <tr id="{{p.name}}">
 <td>{{p.type}}</td>
@@ -90,10 +99,13 @@ Click on the column headings to sort the table by the chosen column.
 <td>
 {{p.comments | markdownify}}
 {%- if p.references %}
-See 
+See
 {% for r in p.references %}
 <a href="#ref{{r}}">[{{r}}]</a>
 {% endfor %}
+{%- endif -%}
+{%- if p.ptex-only %}
+Requires the use of (u)ptex.
 {%- endif -%}
 </td>
 <td>
@@ -102,15 +114,22 @@ See
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {%- endif -%}
-{% if p.related-issues %}
+{% if p.closed-issues %}
 {%- if p.issues -%}<br/>{%- endif -%}
+Closed:
+{% for i in p.closed-issues %}
+<a class="closed" href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
+{% endfor %}
+{% endif %}
+{% if p.related-issues %}
+{%- if p.issues or p.closed-issues -%}<br/>{%- endif -%}
 Related:
 {% for i in p.related-issues %}
 <a href="https://github.com/latex3/tagging-project/issues/{{i}}">#{{i}}</a>
 {% endfor %}
 {% endif %}
 {% if p.external-issues %}
-{%- if p.issues or p.related-issues -%}<br/>{%- endif -%}
+{%- if p.issues or p.closed-issues or p.related-issues -%}<br/>{%- endif -%}
 Other:
 {% for u in p.external-issues %}
 {%- assign ltext = u | replace: "issues/", "" | replace: "-/","" | split: "/" -%}
@@ -167,3 +186,23 @@ Other:
 <p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
 {% endfor %}
 
+<script>
+function filterRows() {
+ const input = document.getElementById("inp");
+ const keywds = input.value.toUpperCase().split(' ');
+ const tbdy= document.getElementById("tblbdy");
+ const trs = tbdy.getElementsByTagName("tr");
+ 
+ // Loop through rows, and hide those who don't match all terms in the query
+ for (let i = 0; i != trs.length; i++) {
+  const rowtxt = trs[i].textContent.toUpperCase();
+  let d="";
+  for (let j=0;j!=keywds.length;j++){
+   if (rowtxt.indexOf(keywds[j]) == -1) {
+    d="none";
+   }
+  }
+  trs[i].style.display = d;
+  }
+}
+</script>

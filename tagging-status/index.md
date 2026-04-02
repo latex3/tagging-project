@@ -26,7 +26,7 @@ td.date {white-space: nowrap;font-size:90%;}
 {% endfor %}
 
 This file shows the status of **{{t-s | size }}** LaTeX [Packages](#packages) and [Classes](#classes)
-with respect to PDF tagging. `phase-III` is generally needed and not explicitly shown.
+with respect to PDF tagging.
 
 The values in the *Status* column have the following meaning:
 
@@ -65,6 +65,8 @@ The status for the remaining **{{xpu | size }}** packages is `unchecked`.
 
 {% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 
+{% assign bdyid ="pkgtbl" %}
+
 {% include_relative status-table.md %}
 
 
@@ -87,6 +89,8 @@ The status for the remaining **{{xpu | size }}** classes is `unchecked`.
 
 {% assign packages = xpc | concat: xpp | concat: xpi | concat: xpn | concat: xpu %}
 
+{% assign bdyid ="clstbl" %}
+
 {% include_relative status-table.md %}
 
 
@@ -99,3 +103,24 @@ The status for the remaining **{{xpu | size }}** classes is `unchecked`.
 <p id="ref{{r.number}}"><span>{{r.number}}. </span> <a href="{{r.url}}"><span>{{r.authors}}.</span> <span>{{r.title}}</span></a></p>
 {% endfor %}
 
+
+<script>
+function filterRows(bi) {
+ const input = document.getElementById("inp" + bi);
+ const keywds = input.value.toUpperCase().split(' ');
+ const tbdy= document.getElementById(bi);
+ const trs = tbdy.getElementsByTagName("tr");
+ 
+ // Loop through rows, and hide those who don't match all terms in the query
+ for (let i = 0; i != trs.length; i++) {
+  const rowtxt = trs[i].textContent.toUpperCase();
+  let d="";
+  for (let j=0;j!=keywds.length;j++){
+   if (rowtxt.indexOf(keywds[j]) == -1) {
+    d="none";
+   }
+  }
+  trs[i].style.display = d;
+  }
+}
+</script>

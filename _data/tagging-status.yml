@@ -14,9 +14,11 @@
 #  comments           optional   markdown-string Free text markdown comments
 #  references         optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues             optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
+#  closed-issues      optional   integer-list    List of integers referencing closed issues at latex3/tagging-project
 #  related-issues     optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
 #  external-issues    optional   string-list     List of urls referencing related issues at other trackers
 #  luatex-only        optional   boolean         true if package only works with lualatex
+#  ptex-only          optional   boolean         true if package only works with ptex, uptex
 #  tests              optional   string          true|false|excluded Are there tests in testfiles-<status>/<name> ?
 #  tasks              optional   markdown-string Free text markdown action items for team or volunteers
 #  supported-through  optional   string-list     List of either "package" or additional require tagging project module
@@ -42,8 +44,8 @@
 # with the tagging project based on a number of considerations. They do not necessarily reflect what is going to
 # happen in the future. Two values are special:
 #
-# prioity 9		Assigned to newly added packages that are not in either TLC3 nor in arXiv ranges
-# prioity 8		Assigned to packages mentioned in TLC3 but without any specific recommendation, e.g, either just mentioned in passing, or explicitly mentioned as problematic for one or the other reason.
+# priority 9		Assigned to newly added packages that are not in either TLC3 nor in arXiv ranges
+# priority 8		Assigned to packages mentioned in TLC3 but without any specific recommendation, e.g, either just mentioned in passing, or explicitly mentioned as problematic for one or the other reason.
 #
 # --------------------------------------
 #
@@ -69,46 +71,6 @@
 #-------------------------------- package files (class files below) -----------------------
 
 #------------------------ AAA ----------------------------
-
-- name: a4wide
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: ae
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: aecompl
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: aeguill
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: Alegreya
   type: package
@@ -138,16 +100,6 @@
   tests: false
   updated: 2024-07-13
 
-- name: ar
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: Archivo
   type: package
   status: compatible
@@ -157,7 +109,67 @@
   tests: false
   updated: 2024-07-21
 
+- name: Arvo
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2024-07-21
+
 - name: a4
+  type: package
+  status: compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the `a4paper` class option or the geometry package."
+  updated: 2026-01-30
+
+- name: a4wide
+  type: package
+  status: compatible
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the geometry package instead."
+  updated: 2026-01-30
+
+- name: ae
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+- name: aecompl
+  ctan-pkg: ae
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+- name: aeguill
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+- name: ar
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -175,18 +187,11 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
-
-- name: Arvo
-  type: package
-  status: compatible
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  updated: 2024-07-21
+  comments:
+  updated: 2026-01-27
 
 - name: abntex2abrev
+  ctan-pkg: abntex2
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -197,6 +202,7 @@
   updated: 2026-01-23
 
 - name: abntex2cite
+  ctan-pkg: abntex2
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -292,19 +298,20 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [698]
+  closed-issues: [698]
   tests: true
   updated: 2024-09-06
 
 - name: acronym
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "List of acronyms is tagged as list rather than TOC and dotfill
+             should be tagged as artifact."
+  updated: 2026-02-15
 
 - name: addlines
   type: package
@@ -318,35 +325,35 @@
 - name: adfarrows
   ctan-pkg: adfsymbols
   type: package
-  status: partially-compatible
+  status: compatible
   included-in:
   priority: 9
-  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
-  issues: [1131]
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
+  closed-issues: [1131]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-02-26
 
 - name: adfbullets
   ctan-pkg: adfsymbols
   type: package
-  status: partially-compatible
+  status: compatible
   included-in:
   priority: 9
-  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues:
-  related-issues: [1131]
+  closed-issues: [1131]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-02-26
 
 - name: adforn
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, ol0.02]
   priority: 2
-  comments: "Missing ToUnicode for text symbols."
+  comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues:
   tests: true
-  updated: 2024-07-25
+  updated: 2026-02-26
 
 - name: adjcalc
   ctan-pkg: adjustbox
@@ -384,23 +391,22 @@
 
 - name: advdate
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-30
 
 - name: afterpackage
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the package hooks provided by the kernel."
+  updated: 2026-01-28
 
 - name: afterpage
   type: package
@@ -422,6 +428,7 @@
   updated: 2024-07-21
 
 - name: algcompatible
+  ctan-pkg: algorithmicx
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -583,7 +590,8 @@
   included-in: [arxiv10, ol1]
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
-  issues:
+  issues: [1240]
+  closed-issues: [842]
   tests: true
   updated: 2024-07-09
 
@@ -635,10 +643,10 @@
   priority: 2
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
+  issues: [712,803,851,857,919,981,1033]
+  closed-issues: [28,77,811,846,848,850,852,859,875]
   tests: true
-  tasks: also needs more tests
-  updated: 2025-10-20
+  updated: 2026-03-14
 
 - name: amsmidx
   type: package
@@ -665,6 +673,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
+  subpackages: [amsbst,ifoption,pcatcode,rkeyval]
   issues:
   tests: true
   tasks: "review after final decision on tagging for bibliography lists"
@@ -697,7 +706,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166]
+  issues: [759,790,792,944,1083,1162,1166,1196,1199,1200,1201,
+           1202,1203,1207,1216,1218,1221,1224,1225,1232]
+  closed-issues: [83,733,736,835]
   tests: true
   updated: 2026-01-19
 
@@ -726,10 +737,10 @@
   status: unchecked
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues:
+  issues: [1191]
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-01-28
 
 - name: annotate-equations
   type: package
@@ -781,23 +792,22 @@
 
 - name: anyfontsize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: anysize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the typearea or geometry packages."
+  updated: 2026-01-30
 
 - name: apacite
   type: package
@@ -821,23 +831,22 @@
 
 - name: appendix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol5]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1222]
+  tests: true
+  updated: 2026-02-09
 
 - name: appendixnumberbeamer
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "beamer is not a supported class."
+  updated: 2026-01-30
 
 - name: apptools
   type: package
@@ -891,33 +900,64 @@
 
 - name: arabtex
   type: package
-  status: unchecked
+  status: no-support
+  included-in: [ol0.02]
+  priority: 9
+  issues: [1223]
+  tests: false
+  comments: "Use lualatex and babel with OpenType fonts instead."
+  updated: 2026-02-09
+
+- name: arabxetex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: aramaic
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Aramaic text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: arev
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  comments: "Loads the partially-compatible arevmath."
+  tests: false
+  updated: 2026-02-09
+
+- name: arevmath
+  ctan-pkg: arev
+  type: package
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Incompatible with unicode-math."
+  updated: 2026-02-09
 
-- name: arev
+- name: arevtext
+  ctan-pkg: arev
   type: package
   status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  updated: 2024-07-21
-
-- name: arevmath
-  ctan-pkg: arev
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: arimo
   type: package
@@ -990,7 +1030,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues: [357]
+  closed-issues: [357]
   tests: true
   comments:
   updated: 2025-07-16
@@ -1035,13 +1075,23 @@
 
 - name: atbegshi
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the shipout hooks provided by the kernel."
+  updated: 2026-01-28
+
+- name: atenddvi
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the kernel hooks."
+  updated: 2026-02-12
 
 - name: atkinson
   type: package
@@ -1219,8 +1269,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   comments: Loads tagpdf but it is not compatible with the current version. Its patches
-            clash with the math module. `phase-III,math` should be used instead which
-            provides broader tagging support without the need to load an additional package.
+            clash with the math module.
   tests: false
   updated: 2024-07-14
 
@@ -1553,7 +1602,8 @@
   included-in: [tlc3]
   priority: 2
   comments: active character issues
-  issues: [414,694,932]
+  issues: [694,932]
+  closed-issues: [414]
   tests: false
   tasks: needs tests
   updated: 2025-07-02
@@ -2265,55 +2315,23 @@
 
 - name: beamerposter
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: beamerthemesplit
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "beamer is not a supported class."
+  updated: 2026-01-30
 
 - name: bera
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
+  subpackages: [beramono,berasans]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: beramono
-  ctan-pkg: bera
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: berasans
-  ctan-pkg: bera
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: berenis
   ctan-pkg: berenisadf
@@ -2339,6 +2357,7 @@
   status: compatible
   included-in:
   priority: 9
+  subpackages: [multiply]
   issues:
   tests: true
   updated: 2024-08-28
@@ -2381,7 +2400,8 @@
   priority: 2
   comments: "Requires hyperref."
   references: [2]
-  issues: [18,902]
+  issues: [902]
+  closed-issues: [18]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
   tasks: needs more tests
@@ -2394,7 +2414,7 @@
   priority: 2
   comments: See biblatex.
   tasks: Package should be changed to use sockets in its footnote adaption; needs tests
-  issues: [62]
+  closed-issues: [62]
   tests: false
   updated: 2024-07-15
 
@@ -2490,13 +2510,57 @@
 
 - name: bidi
   type: package
-  status: currently-incompatible
+  status: no-support
+  subpackages: [bidi2in1,bidicode,bidiftnxtra,bidi-media9,bidimoderncv,bidi-perpage,
+                bidipoem,biditools,biditufte-book,bidituftefloat,bidituftegeneralstructure,
+                biditufte-handout,bidituftehyperref,bidituftesidenote,bidituftetitle,
+                bidituftetoc,cvthemebidicasual,cvthemebidiclassic]
   included-in: [tlc3]
   priority: 8
   issues: [686]
   tests: excluded
   comments: "Requires xetex so tests are excluded."
   updated: 2026-01-25
+
+- name: bidicontour
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidihl
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidipagegrid
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: bidishadowtext
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: bigdelim
   type: package
@@ -2640,13 +2704,12 @@
 
 - name: bold-extra
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: boldline
   type: package
@@ -2702,7 +2765,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Requires the firstaid module which contains a fix."
-  issues: [69]
+  closed-issues: [69]
   tests: true
   updated: 2025-06-13
 
@@ -2738,13 +2801,12 @@
 
 - name: breakcites
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: breakurl
   type: package
@@ -2974,13 +3036,12 @@
 
 - name: calculator
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: calligra
   ctan-pkg: fundus-calligra
@@ -3031,6 +3092,15 @@
   tests: true
   updated: 2024-07-22
 
+- name: captcont
+  type: package
+  status: compatible
+  included-in: [tlc3, arxiv001]
+  priority: 2
+  issues:
+  tests: true
+  updated: 2024-08-05
+
 - name: captdef
   type: package
   priority: 9
@@ -3041,20 +3111,12 @@
   tests: true
   updated: 2024-07-22
 
-- name: captcont
-  type: package
-  status: compatible
-  included-in: [tlc3, arxiv001]
-  priority: 2
-  issues:
-  tests: true
-  updated: 2024-08-05
-
 - name: caption
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
+  subpackages: [caption3]
   comments: "the configurations from the package are overwritten by the
             tagging code. Issue when hyperref and both listoffigures are used."
   issues: [84,720]
@@ -3063,13 +3125,13 @@
 
 - name: caption2
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Obsolete. Use the caption package instead."
+  updated: 2026-01-30
 
 - name: carlito
   type: package
@@ -3080,7 +3142,18 @@
   tests: false
   updated: 2024-07-21
 
+- name: carolmin
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments:
+  updated: 2026-02-01
+
 - name: cas-common
+  ctan-pkg: els-cas-templates
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -3172,7 +3245,7 @@
   priority: 2
   issues:
   package-repository: "https://github.com/JosselinNoirel/cellspace"
-  external-issues: "https://github.com/JosselinNoirel/cellspace/issues/9"
+  external-issues: ["https://github.com/JosselinNoirel/cellspace/issues/9"]
   tests: true
   comments: "Package is broken with p-type columns with current LaTeX. --- Fixed in 2026"
   updated: 2026-01-25
@@ -3186,6 +3259,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: centeredline
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1212]
+  tests: true
+  updated: 2026-02-03
 
 - name: centernot
   type: package
@@ -3286,6 +3368,15 @@
   tests: false
   updated: 2026-01-25
 
+- name: checkend
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: chemarr
   type: package
   status: partially-compatible
@@ -3380,6 +3471,15 @@
   tests: false
   updated: 2026-01-26
 
+- name: chkfloat
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1214]
+  tests: true
+  updated: 2026-02-03
+
 - name: chngcntr
   type: package
   status: compatible
@@ -3412,13 +3512,14 @@
 
 - name: chngpage
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use changepage package instead."
+  updated: 2026-02-01
 
 - name: cinzel
   type: package
@@ -3550,20 +3651,20 @@
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
-  issues: [2,1166]
+  issues: [1166]
+  closed-issues: [2]
   tests: true
   tasks: More tests needed
   updated: 2026-01-19
 
 - name: clipboard
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: clrstrip
   type: package
@@ -3576,13 +3677,12 @@
 
 - name: cmap
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-30
 
 - name: cmbright
   type: package
@@ -3594,6 +3694,15 @@
   tests: false
   updated: 2025-05-29
 
+- name: cmdtrack
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: cmll
   type: package
   status: partially-compatible
@@ -3603,6 +3712,15 @@
   issues:
   tests: true
   updated: 2025-05-29
+
+- name: cmsd
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: cochineal
   type: package
@@ -3643,13 +3761,12 @@
 
 - name: collect
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-02-09
 
 - name: collectbox
   type: package
@@ -3696,19 +3813,19 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues:
+  issues: [1185]
   tests: false
-  updated: 2024-07-06
+  updated: 2026-01-28
 
 - name: colordvi
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Requires unsupported latex+dvips+ps2pdf workflow."
+  updated: 2026-02-13
 
 - name: color-edits
   type: package
@@ -3755,8 +3872,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
-  comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed at the last release. #749 fixed in newest colortbl version"
-  issues: [90,379,749]
+  comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
+             at the last release. #749 fixed in newest colortbl version."
+  issues: [379]
+  closed-issues: [80,90,749]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -3821,13 +3940,14 @@
 
 - name: concrete
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Simply loads the beton and euler packages. The latter is incompatible
+             with unicode-math."
+  updated: 2026-01-28
 
 - name: continue
   type: package
@@ -3872,13 +3992,12 @@
 - name: couriers
   ctan-pkg: courier-scaled
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: courierten
   type: package
@@ -3957,6 +4076,28 @@
   tests: true
   updated: 2024-08-06
 
+- name: ctablestack
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
+- name: ctex
+  type: package
+  status: currently-incompatible
+  included-in: [tlc3, ol1]
+  priority: 6
+  issues: [673]
+  luatex-only: true
+  tests: true
+  comments: "Option `heading=true` breaks section heading tagging. Same problem
+             with classes ctexart, ctexbook, and ctexrep."
+  updated: 2026-01-25
+
 - name: cuprum
   type: package
   status: compatible
@@ -4032,6 +4173,17 @@
   tests: true
   updated: 2024-08-14
 
+- name: cwpuzzle
+  ctan-pkg: crossword
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1291]
+  tests: true
+  comments:
+  updated: 2026-04-01
+
 - name: cyklop
   type: package
   status: compatible
@@ -4040,6 +4192,16 @@
   issues:
   tests: false
   updated: 2024-07-14
+
+- name: cypriot
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 #------------------------ DDD ----------------------------
 
@@ -4153,13 +4315,12 @@
 
 - name: datenumber
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: dblfloatfix
   type: package
@@ -4277,6 +4438,15 @@
   comments: "Missing ToUnicode values for symbols."
   updated: 2025-12-15
 
+- name: didec
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
+
 - name: diffcoeff
   type: package
   status: compatible
@@ -4286,6 +4456,15 @@
   issues:
   tests: true
   updated: 2026-01-25
+
+- name: dijkstra
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: dingbat
   type: package
@@ -4337,15 +4516,24 @@
              code disables."
   updated: 2024-08-23
 
-- name: docmute
+- name: docmfp
   type: package
   status: unchecked
-  included-in: [ol0.02]
+  included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-01
+
+- name: docmute
+  type: package
+  status: compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-09
 
 - name: doi
   type: package
@@ -4494,6 +4682,16 @@
   tests: false
   updated: 2024-07-21
 
+- name: easy-todo
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
 - name: easyfig
   type: package
   status: currently-incompatible
@@ -4526,16 +4724,6 @@
   updated: 2026-01-23
 
 - name: easytable
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: easy-todo
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -4612,6 +4800,15 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-18
+
+- name: egothic
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 - name: ekdosis
   type: package
@@ -4705,13 +4902,12 @@
 
 - name: emptypage
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-09
 
 - name: endfloat
   type: package
@@ -4818,13 +5014,13 @@
 
 - name: everypage
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the hooks provided by the kernel."
+  updated: 2026-01-28
 
 - name: everyshi
   type: package
@@ -4847,13 +5043,13 @@
 
 - name: epic
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
-  comments: "Works with pdflatex but not lualatex."
-  issues: [159]
+  comments:
+  closed-issues: [159]
   tests: true
-  updated: 2024-07-17
+  updated: 2026-03-22
 
 - name: epigraph
   type: package
@@ -4867,13 +5063,13 @@
 
 - name: epsdice
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Missing Alt text for dice graphics."
+  updated: 2026-03-06
 
 - name: epsf
   type: package
@@ -4934,7 +5130,7 @@
              Adjustments towards final tagging interfaces likely necessary."
   issues:
   tests: true
-  updated: 2026-01-14
+  updated: 2026-02-15
 
 - name: eqparbox
   type: package
@@ -4956,13 +5152,12 @@
 
 - name: esdiff
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-03-06
 
 - name: esint
   type: package
@@ -4986,6 +5181,7 @@
   updated: 2025-06-09
 
 - name: esstixbb
+  ctan-pkg: esstix
   type: package
   status: partially-compatible
   included-in:
@@ -4996,6 +5192,7 @@
   updated: 2025-05-29
 
 - name: esstixcal
+  ctan-pkg: esstix
   type: package
   status: partially-compatible
   included-in:
@@ -5006,6 +5203,7 @@
   updated: 2025-05-29
 
 - name: esstixfrak
+  ctan-pkg: esstix
   type: package
   status: partially-compatible
   included-in:
@@ -5045,12 +5243,21 @@
   tests: false
   updated: 2024-08-28
 
+- name: etexcmds
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: ethiop
   type: package
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  issues: [656]
+  closed-issues: [656]
   tests: true
   updated: 2024-08-23
 
@@ -5071,6 +5278,16 @@
   issues:
   tests: false
   updated: 2024-07-12
+
+- name: etruscan
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: eucal
   ctan-pkg: amsfonts
@@ -5127,13 +5344,13 @@
 
 - name: eurosym
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol1]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1235]
+  tests: true
+  comments: "`\\euro` not correctly mapped to Unicode symbol."
+  updated: 2026-02-15
 
 - name: euscript
   ctan-pkg: amsfonts
@@ -5182,6 +5399,7 @@
   priority: 2
   issues:
   tests: false
+  comments: "Legacy package. Now built into the kernel."
   updated: 2024-07-14
 
 - name: exscale
@@ -5205,13 +5423,13 @@
 
 - name: extarrows
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  comments:
-  issues:
+  comments: "Produces warnings with mathml-SE."
+  issues: [919]
   tests: true
-  updated: 2024-07-29
+  updated: 2026-02-28
 
 - name: extdash
   type: package
@@ -5314,13 +5532,13 @@
 - name: fancyheadings
   ctan-pkg: fancyhdr
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the fancyhdr package instead."
+  updated: 2026-03-06
 
 - name: fancypar
   type: package
@@ -5465,13 +5683,13 @@
 
 - name: filecontents
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. The `filecontents` environment is now provided by the kernel."
+  updated: 2026-01-28
 
 - name: filecontentsdef
   type: package
@@ -5484,13 +5702,13 @@
 
 - name: filehook
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the file hooks provided by the kernel."
+  updated: 2026-01-28
 
 - name: filemod
   type: package
@@ -5540,6 +5758,15 @@
   tests: false
   updated: 2024-07-06
 
+- name: fixcmex
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: fixfoot
   type: package
   status: compatible
@@ -5548,6 +5775,16 @@
   issues:
   tests: true
   updated: 2024-07-22
+
+- name: fixjfm
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: fixltx2e
   type: package
@@ -5561,13 +5798,12 @@
 
 - name: fixmath
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-03-06
 
 - name: fixme
   type: package
@@ -5588,15 +5824,26 @@
   tests: false
   updated: 2024-07-07
 
-- name: fleqn
+- name: flags
   type: package
-  status: unchecked
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. See the bitset package."
+  updated: 2026-02-12
+
+- name: fleqn
+  ctan-pkg: latex-base
+  type: package
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `fleqn` class option."
+  updated: 2026-01-28
 
 - name: flexisym
   type: package
@@ -5652,7 +5899,7 @@
   status: no-support
   included-in: [arxiv01, ol1]
   priority: 6
-  issues: [497]
+  closed-issues: [497]
   tests: false
   updated: 2024-08-20
 
@@ -5766,13 +6013,13 @@
 
 - name: fontawesome
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Symbols missing ToUnicode."
+  updated: 2026-03-06
 
 - name: fontawesome5
   type: package
@@ -5826,19 +6073,28 @@
 
 - name: fontsize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
+
+- name: fontsmpl
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
 
 - name: fontspec
   type: package
   status: compatible
   included-in: [tlc3, arxiv01, ol5]
   priority: 2
+  subpackages: [fontspec-luatex,fontspec-xetex]
   issues:
   luatex-only: true
   tests: false
@@ -5860,7 +6116,8 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [12,958]
+  issues: [958]
+  closed-issues: [12]
   tests: false
   updated: 2025-09-12
 
@@ -5911,30 +6168,29 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`. Tests excluded as loops after error."
+  comments: "Footnote tagging is correct but breaks footnotes in `\\maketitle`.
+             Tests excluded as loops after error."
   issues: [908]
   tests: excluded
   updated: 2025-06-10
 
 - name: forarray
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: foreign
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: forest
   type: package
@@ -5950,13 +6206,12 @@
 
 - name: forloop
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: forum
   type: package
@@ -6259,6 +6514,7 @@
   updated: 2025-05-29
 
 - name: gentium
+  ctan-pkg: gentium-tug
   type: package
   status: compatible
   included-in: [tlc3]
@@ -6292,11 +6548,11 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1064]
-  comments: "Compatible except that crop marks with `showcrop` are incorrectly tagged as figures."
-  tests: false
-  tasks: needs a crop mark test
-  updated: 2025-11-15
+  closed-issues: [1064]
+  comments:
+  package-repository: "https://github.com/LaTeX-Package-Repositories/geometry"
+  tests: true
+  updated: 2026-03-09
 
 - name: german
   type: package
@@ -6306,7 +6562,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `german` option of babel."
+  updated: 2026-01-27
 
 - name: gettitlestring
   type: package
@@ -6463,14 +6720,13 @@
 
 - name: gitinfo-lua
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-03-06
 
 - name: gitinfo2
   type: package
@@ -6488,7 +6744,7 @@
   priority: 4
   comments: An old issue appears to be fixed.
   tasks: needs tests
-  issues: [48]
+  closed-issues: [48]
   tests: false
   updated: 2024-07-06
 
@@ -6588,8 +6844,7 @@
     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
     An old issue with height appears to be fixed.
   references: [1]
-  issues: [16]
-  related-issues: [64]
+  closed-issues: [16,64]
   tests: false
   updated: 2024-07-06
 
@@ -6603,6 +6858,36 @@
   tests: true
   updated: 2024-07-08
 
+- name: greek4cbc
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: greek6cbc
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: gregoriotex
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
+
 - name: grfext
   type: package
   status: compatible
@@ -6614,20 +6899,20 @@
 
 - name: grffile
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Just loads graphicx."
+  updated: 2026-02-13
 
 - name: gridset
   type: package
   status: compatible
   included-in:
   priority: 9
-  issues: [559]
+  closed-issues: [559]
   tests: true
   updated: 2024-08-19
 
@@ -6672,6 +6957,16 @@
   tests: true
   updated: 2024-08-07
 
+- name: hanzibox
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: har2nat
   type: package
   status: compatible
@@ -6712,12 +7007,12 @@
 
 - name: here
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
+  comments: "Obsolete. Just loads the float package."
   updated: 2026-01-23
 
 - name: heros-otf
@@ -6771,6 +7066,25 @@
   tests: true
   updated: 2024-07-10
 
+- name: hieroglf
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: hlist
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1253]
+  tests: true
+  updated: 2026-03-03
+
 - name: hologo
   type: package
   status: compatible
@@ -6781,6 +7095,24 @@
   comments: "Logos have proper ActualText."
   tests: true
   updated: 2025-11-14
+
+- name: humanist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
+
+- name: huncial
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 - name: hvfloat
   type: package
@@ -6810,6 +7142,15 @@
   tests: true
   updated: 2024-07-29
 
+- name: hycolor
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-30
+
 - name: hypbmsec
   type: package
   status: compatible
@@ -6837,7 +7178,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [525]
+  closed-issues: [525]
   tests: false
   comments: "Ignored if `\\DocumentMetadata` is detected."
   updated: 2024-08-13
@@ -6857,8 +7198,9 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [680]
+  closed-issues: [680]
   tests: false
+  comments: "Requires unsupported latex+dvips+ps2pdf workflow."
   updated: 2024-08-28
 
 - name: hyperbar
@@ -6886,9 +7228,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
+  subpackages: [nohyperref]
   references: [2]
-  issues: [892]
-  tests: false
+  issues: [892,1197]
+  tests: true
   comments: "Forms not supported; use l3pdffield-testphase for forms."
   updated: 2025-06-07
 
@@ -6932,16 +7275,6 @@
   updated: 2024-08-06
 
 #------------------------ III ----------------------------
-
-- name: idxlayout
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: IEEEtrantools
   type: package
@@ -6990,6 +7323,16 @@
   issues:
   tests: true
   updated: 2025-12-16
+
+- name: idxlayout
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
 
 - name: ifetex
   type: package
@@ -7068,6 +7411,7 @@
 - name: ifptex
   type: package
   status: compatible
+  subpackages: [ifuptex]
   included-in: [tlc3]
   priority: 8
   issues:
@@ -7076,13 +7420,12 @@
 
 - name: isodate
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: isomath
   type: package
@@ -7249,17 +7592,46 @@
   priority: 2
   issues:
   tests: false
-  updated: 2024-07-06
+  comments: "Should not be needed with new documents."
+  updated: 2026-01-27
 
 - name: inputenx
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Should not be needed with new documents."
+  updated: 2026-01-27
+
+- name: inputnormalization
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
+- name: inslrmaj
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
+
+- name: inslrmin
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 - name: intcalc
   type: package
@@ -7278,6 +7650,16 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: interchar
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: interval
   type: package
@@ -7306,6 +7688,16 @@
   issues:
   tests: true
   updated: 2024-08-28
+
+- name: isorot
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-01
 
 - name: istgame
   type: package
@@ -7368,6 +7760,7 @@
   updated: 2024-07-31
 
 - name: jmlrutils
+  ctan-pkg: jmlr
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -7386,6 +7779,17 @@
   tests: false
   updated: 2024-07-18
 
+- name: jslogo
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: jsonparse
   type: package
   status: compatible
@@ -7394,6 +7798,17 @@
   issues:
   tests: false
   updated: 2025-10-12
+
+- name: jsverb
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: juliamono
   type: package
@@ -7484,13 +7899,12 @@
 
 - name: keycommand
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: keyfloat
   type: package
@@ -7499,7 +7913,7 @@
   priority: 2
   issues: [344]
   tests: true
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-29
 
 - name: keystroke
@@ -7582,6 +7996,16 @@
   tests: false
   updated: 2024-07-15
 
+- name: kurdishlipsum
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: kurier
   type: package
   status: compatible
@@ -7620,16 +8044,6 @@
 
 #------------------------ LLL ----------------------------
 
-- name: leipzig
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: LibreBodoni
   type: package
   status: compatible
@@ -7649,6 +8063,16 @@
   tests: false
   updated: 2024-07-21
 
+- name: l3keys2e
+  type: package
+  status: compatible
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. Use the option handling commands provided by the kernel."
+  updated: 2026-01-28
+
 - name: l3sys-query
   type: package
   status: compatible
@@ -7657,16 +8081,6 @@
   issues:
   tests: true
   updated: 2024-07-08
-
-- name: l3keys2e
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: labelschanged
   type: package
@@ -7695,12 +8109,22 @@
   tests: false
   updated: 2025-11-20
 
+- name: latexbug
+  type: package
+  status: compatible
+  included-in:
+  priority: 2
+  issues: [1229]
+  tests: false
+  updated: 2026-02-12
+
 - name: latexrelease
   type: package
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  comments: Rolling the LaTeX format too far back will result in the loss of necessary support code for tagging, rolling forward should work.
+  comments: "Rolling the LaTeX format too far back will result in the loss of
+             necessary support code for tagging, rolling forward should work."
   issues:
   tests: false
   tasks: determine how far back is possible
@@ -7772,6 +8196,38 @@
   tests: true
   updated: 2024-08-28
 
+- name: ledarab
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-01
+
+- name: ledmac
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  comments: "Superseded by reledmac."
+  updated: 2026-02-01
+
+- name: ledpar
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  comments: "Superseded by reledpar."
+  updated: 2026-02-01
+
 - name: leftidx
   type: package
   status: compatible
@@ -7814,13 +8270,13 @@
 
 - name: letltxmacro
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Superseded by `\\NewCommandCopy` etc. provided by the kernel."
+  updated: 2026-01-28
 
 - name: letterspace
   ctan-pkg: microtype
@@ -7847,7 +8303,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [481,1108]
+  closed-issues: [481,1108]
   tests: true
   comments: "Provides `actualtext` key for use with `image` key."
   updated: 2025-12-09
@@ -7860,6 +8316,16 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: lgrmath
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
 
 - name: libertine
   type: package
@@ -7901,6 +8367,16 @@
   tests: false
   updated: 2025-05-29
 
+- name: libgreek
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
+
 - name: librebaskerville
   type: package
   status: compatible
@@ -7936,6 +8412,16 @@
   issues:
   tests: false
   updated: 2024-07-26
+
+- name: linearb
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: linebreaker
   type: package
@@ -8010,10 +8496,11 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
+  subpackages: [lstpatch]
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
   issues: [70,1074]
-  related-issues: [41]
+  closed-issues: [41]
   tests: true
   updated: 2024-07-12
 
@@ -8067,6 +8554,7 @@
   updated: 2024-07-15
 
 - name: lmodern
+  ctan-pkg: lm
   type: package
   status: compatible
   included-in: [tlc3, arxiv1, ol5]
@@ -8104,17 +8592,47 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: longmath
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1289]
+  tests: true
+  luatex-only: true
+  updated: 2026-04-01
+
+- name: longnamefilelist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
+
 - name: longtable
   type: package
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [22]
-  comments: "A longtable with page breaks works with pdftex only if at least latex-dev from february 2025 is used"
-  related-issues: [38]
+  issues: [1192]
+  closed-issues: [22,38,554,714]
+  comments: "A longtable with page breaks works with pdftex only if at least
+             latex-dev from February 2025 is used."
+  tests: true
+  tasks: needs more tests
+  updated: 2026-01-30
+
+- name: lparse
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
   tests: false
-  tasks: needs tests
-  updated: 2025-03-02
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: lpic
   type: package
@@ -8136,20 +8654,10 @@
   updated: 2024-08-04
 
 - name: lstautogobble
+  ctan-pkg: lstaddons
   type: package
   status: unchecked
   included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: lstpatch
-  ctan-pkg: listings
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
@@ -8243,6 +8751,17 @@
   tests: true
   updated: 2024-07-25
 
+- name: lua-unicode-math
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  closed-issues: [1137]
+  luatex-only: true
+  tests: false
+  updated: 2026-01-30
+
 - name: lua-widow-control
   type: package
   status: compatible
@@ -8265,23 +8784,43 @@
 
 - name: luacolor
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  luatex-only: true
+  updated: 2026-01-28
+
+- name: luahyphenrules
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: luainputenc
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Should not be needed with new documents."
+  updated: 2026-01-28
+
+- name: luakeys
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: lualatex-math
   type: package
@@ -8293,6 +8832,17 @@
   luatex-only: true
   tests: true
   updated: 2024-07-25
+
+- name: lualatex-truncate
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  comments:
+  issues:
+  luatex-only: true
+  tests: true
+  updated: 2026-04-01
 
 - name: luamathalign
   type: package
@@ -8316,28 +8866,70 @@
   comments: "Missing way to add Alt text to underlying mplibcode or tikz environments."
   updated: 2025-11-22
 
+- name: luamml
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  subpackages: [luamml-patches-amsmath,luamml-patches-kernel,luamml-pdf]
+  tests: false
+  luatex-only: true
+  comments: "Should not need to be loaded directly. Loaded with `tagging=on`
+             when luatex is detected."
+  updated: 2026-01-30
+
 - name: luamplib
   type: package
   status: compatible
   included-in:
   priority: 9
   package-repository: "https://github.com/lualatex/luamplib"
-  comments: "An old issue has been fixed. Offers several keys for figures
-             including `alt` and `artifact`."
-  issues: [8,252]
+  comments: "Offers several keys for figures including `alt` and `artifact`."
+  closed-issues: [8,252]
   luatex-only: true
   tests: true
   updated: 2024-11-12
 
+- name: luaoptions
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
+- name: luarandom
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
 - name: luatex85
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
+
+- name: luatexbase
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Legacy package. Functionality built into the kernel."
+  luatex-only: true
+  updated: 2026-02-03
 
 - name: luatexja
   type: package
@@ -8346,6 +8938,7 @@
   priority: 8
   comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
   issues: [713]
+  closed-issues: [87]
   luatex-only: true
   tests: true
   updated: 2026-01-26
@@ -8373,6 +8966,17 @@
   tests: true
   updated: 2025-11-17
 
+- name: luatextra
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Legacy package."
+  luatex-only: true
+  updated: 2026-02-03
+
 - name: luatodonotes
   type: package
   status: currently-incompatible
@@ -8392,6 +8996,16 @@
   luatex-only: true
   tests: true
   updated: 2024-08-07
+
+- name: luaxml
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
 
 - name: lucida-otf
   type: package
@@ -8514,13 +9128,23 @@
 
 - name: makecell
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv1, ol10]
   priority: 5
   issues:
+  tests: true
+  comments: "Interaction with incompatible multirow package not yet supported.
+             `\\diaghead` command uses `picture` environment that is tagged as a figure."
+  updated: 2025-02-14
+
+- name: makecmds
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-08-01
+  updated: 2026-02-01
 
 - name: makeidx
   type: package
@@ -8530,6 +9154,16 @@
   issues:
   tests: true
   updated: 2024-07-11
+
+- name: makerobust
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete. The kernel provide `\\MakeRobust`."
+  updated: 2026-02-12
 
 - name: manfnt
   type: package
@@ -8703,15 +9337,25 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: mathpartir
+- name: mathfont
   type: package
   status: unchecked
-  included-in: [ol0.02]
+  included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-29
+
+- name: mathpartir
+  type: package
+  status: partially-compatible
+  included-in: [ol0.02]
+  priority: 9
+  issues: [1189]
+  tests: true
+  comments: "No luamml support. `mathpar` environment errors."
+  updated: 2026-01-30
 
 - name: mathpazo
   type: package
@@ -8720,7 +9364,7 @@
   priority: 2
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
-  issues: [837]
+  closed-issues: [837]
   tests: true
   updated: 2025-05-29
 
@@ -8780,13 +9424,13 @@
 
 - name: mathspec
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: mathtext
   ctan-pkg: t2
@@ -8808,6 +9452,7 @@
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
   issues: [139,922,1119]
+  closed-issues: [734]
   tests: true
   updated: 2025-12-11
 
@@ -8864,7 +9509,7 @@
   included-in: [tlc3, arxiv01, ol1]
   priority: 8
   comments: "Recommended alternative: tcolorbox."
-  issues: [73]
+  closed-issues: [73]
   tests: false
   updated: 2026-01-26
 
@@ -8915,7 +9560,7 @@
   included-in: [arxiv001, ol0.1]
   subpackages: [pdfbase]
   priority: 7
-  issues: [868]
+  closed-issues: [868]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -9027,6 +9672,15 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: mhsetup
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: miama
   type: package
   status: compatible
@@ -9041,13 +9695,13 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: Footnote patching doesn’t work but otherwise supported.
-  issues: [67]
+  comments:
+  closed-issues: [67]
   tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  updated: 2026-02-28
 
 - name: midfloat
+  ctan-pkg: sttools
   type: package
   status: compatible
   included-in:
@@ -9075,6 +9729,17 @@
   comments: "Tags `\\minibox`es as tables."
   tests: true
   updated: 2025-06-10
+
+- name: minijs
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: minitoc
   type: package
@@ -9153,6 +9818,15 @@
   tasks: needs tests
   updated: 2026-01-26
 
+- name: mmap
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-30
+
 - name: monaspace-otf
   type: package
   status: compatible
@@ -9192,13 +9866,12 @@
 
 - name: moresize
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: moreverb
   type: package
@@ -9218,6 +9891,16 @@
   tests: false
   updated: 2024-07-15
 
+- name: morisawa
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: movie15
   type: package
   status: unchecked
@@ -9226,7 +9909,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the media9 package instead."
+  updated: 2026-01-27
 
 - name: mparhack
   type: package
@@ -9290,19 +9974,20 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [705]
+  closed-issues: [705]
   tasks:
   comments:
   updated: 2025-06-09
 
 - name: multicolrule
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, ol0.02]
   priority: 2
-  issues:
+  issues: [1209]
   tests: true
-  updated: 2024-08-04
+  comments: "`custom-line` key produces parent-child warnings."
+  updated: 2026-02-06
 
 - name: multido
   type: package
@@ -9419,17 +10104,35 @@
   tests: false
   updated: 2024-07-15
 
+- name: myfilist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
+
 #------------------------ NNN ----------------------------
+
+- name: nabatean
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: nag
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: nameauth
   type: package
@@ -9483,10 +10186,10 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues:
+  issues: [1282]
   tests: false
   tasks: Needs tests
-  updated: 2024-07-06
+  updated: 2026-03-30
 
 - name: nath
   type: package
@@ -9571,7 +10274,7 @@
   priority: 2
   issues:
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  external-issues: "https://github.com/LaTeX-Package-Repositories/herries-press/issues/54"
+  external-issues: ["https://github.com/LaTeX-Package-Repositories/herries-press/issues/54"]
   tests: true
   updated: 2025-05-12
 
@@ -9625,14 +10328,15 @@
   updated: 2024-08-04
 
 - name: newlfont
+  ctan-pkg: latex-base
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete."
+  updated: 2026-02-13
 
 - name: newpax
   type: package
@@ -9777,7 +10481,17 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the `ngerman` option of babel."
+  updated: 2026-01-27
+
+- name: nicefilelist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
 
 - name: nicefrac
   type: package
@@ -9824,17 +10538,6 @@
   issues: [638]
   tests: true
   updated: 2024-08-22
-
-- name: nohyperref
-  ctan-pkg: hyperref
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: noitcrul
   type: package
@@ -9989,13 +10692,12 @@
 
 - name: nowidow
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: nth
   type: package
@@ -10092,11 +10794,53 @@
   tests: false
   updated: 2024-07-21
 
+- name: oands
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: ocg
+  ctan-pkg: asymptote
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-31
+
+- name: ocg-p
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-31
+
+- name: ocgx
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
+
 - name: ocgx2
   type: package
   status: unchecked
   included-in: [tlc3, ol0.02]
   priority: 2
+  subpackages: [ocgbase]
   issues:
   tests: false
   tasks: needs tests
@@ -10112,6 +10856,28 @@
   tests: true
   updated: 2024-08-15
 
+- name: okumacro
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: okuverb
+  ctan-pkg: jsclasses
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: old-arrows
   type: package
   status: partially-compatible
@@ -10123,14 +10889,24 @@
   updated: 2025-05-29
 
 - name: oldgerm
+  ctan-pkg: mfnfss
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-01
+
+- name: oldprsn
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: onepagem
   type: package
@@ -10190,14 +10966,15 @@
   updated: 2024-07-15
 
 - name: otf
+  ctan-pkg: japanese-otf
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: oubraces
   type: package
@@ -10220,13 +10997,13 @@
 
 - name: overcite
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Just loads cite package with the `superscript` option."
+  updated: 2026-02-12
 
 - name: overlock
   type: package
@@ -10250,6 +11027,26 @@
 
 #------------------------ PPP ----------------------------
 
+- name: Play
+  ctan-pkg: play-font
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2024-07-21
+
+- name: PlayfairDisplay
+  ctan-pkg: playfair
+  type: package
+  status: compatible
+  included-in: [tlc3]
+  priority: 2
+  issues:
+  tests: false
+  updated: 2024-07-13
+
 - name: PoiretOne
   type: package
   status: compatible
@@ -10258,6 +11055,16 @@
   issues:
   tests: false
   updated: 2024-07-21
+
+- name: ProfCollege
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
 
 - name: PTMono
   ctan-pkg: paratype
@@ -10319,35 +11126,14 @@
   tests: false
   updated: 2024-07-13
 
-- name: Play
-  ctan-pkg: play-font
+- name: pacioli
   type: package
   status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  updated: 2024-07-21
-
-- name: PlayfairDisplay
-  ctan-pkg: playfair
-  type: package
-  status: compatible
-  included-in: [tlc3]
-  priority: 2
-  issues:
-  tests: false
-  updated: 2024-07-13
-
-- name: ProfCollege
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-01
 
 - name: pagecolor
   type: package
@@ -10408,6 +11194,7 @@
   updated: 2024-07-18
 
 - name: palatino
+  ctan-pkg: palatino-nfss
   type: package
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
@@ -10416,6 +11203,16 @@
   issues:
   tests: false
   updated: 2024-07-28
+
+- name: pandora
+  ctan-pkg: mfnfss
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 - name: paper
   type: package
@@ -10426,6 +11223,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: papermas
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: paracol
   type: package
@@ -10482,6 +11288,15 @@
   tests: true
   updated: 2024-07-25
 
+- name: patchcmd
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: path
   type: package
   status: compatible
@@ -10516,11 +11331,12 @@
   status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues: [628]
+  closed-issues: [628]
   tests: true
   updated: 2024-11-18
 
 - name: pdfbase
+  ctan-pkg: media9
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -10606,16 +11422,6 @@
   tests: true
   updated: 2024-08-16
 
-- name: pdfmsym
-  type: package
-  status: unchecked
-  included-in:
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
-
 - name: pdfoverlay
   type: package
   status: partially-compatible
@@ -10634,7 +11440,7 @@
   priority: 2
   comments: "Creates duplicated structures as graphics are processed more than once in trial
             typesetting. Correct tagging of multipage includes unclear."
-  issues: [86]
+  closed-issues: [86]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -10737,6 +11543,16 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: pgf-umlcd
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
 - name: pgfarrows
   ctan-pkg: pgf
   type: package
@@ -10746,7 +11562,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfautomata
   ctan-pkg: pgf
@@ -10757,9 +11574,11 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfcalendar
+  ctan-pkg: pgf
   type: package
   status: compatible
   included-in: [arxiv001, ol0.02]
@@ -10769,6 +11588,7 @@
   updated: 2024-08-02
 
 - name: pgfcore
+  ctan-pkg: pgf
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -10807,7 +11627,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfkeys
   type: package
@@ -10847,7 +11668,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
 - name: pgfopts
   type: package
@@ -10894,7 +11716,7 @@
   included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "Compatibility depends on tikz but also needs its own adjustments."
-  issues: [924]
+  closed-issues: [924,946]
   tests: false
   updated: 2025-06-23
 
@@ -10928,17 +11750,27 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete compatibility package."
+  updated: 2026-01-27
 
-- name: pgf-umlcd
+- name: pgothic
   type: package
-  status: unchecked
-  included-in: [ol0.02]
+  status: compatible
+  included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-01
+
+- name: phoenician
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: phonenumbers
   type: package
@@ -11019,13 +11851,14 @@
 
 - name: pifont
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv5, ol5]
   priority: 2
-  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed in test releases of tl2026 binaries."
+  comments: "The ToUnicode values are incorrect in tl2025 luatex, they are fixed
+             in tl2026."
   issues: [1132]
   tests: true
-  updated: 2025-12-15
+  updated: 2026-03-06
 
 - name: pigpen
   type: package
@@ -11069,13 +11902,13 @@
 
 - name: plautopatch
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: plex-mono
   ctan-pkg: plex
@@ -11149,13 +11982,12 @@
 
 - name: polski
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: polyglossia
   type: package
@@ -11184,6 +12016,15 @@
   issues: [670]
   tests: true
   updated: 2024-08-26
+
+- name: poormanlog
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
 
 - name: postnotes
   type: package
@@ -11278,11 +12119,30 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [1117]
+  closed-issues: [1117]
   tests: true
   comments: "Depends on forest-ext. Note tableaux are syntactic not semantic.
              Tagging via TeX syntax added to Alt on surrounding Figure."
   updated: 2026-01-19
+
+- name: protecteddef
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
+- name: protosem
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: pseudocode
   type: package
@@ -11316,84 +12176,146 @@
 
 - name: pst-3d
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-all
   ctan-pkg: pstricks
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-barcode
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
-- name: pst-func
+- name: pst-calculate
   type: package
-  status: unchecked
-  included-in: [ol0.02]
+  status: partially-compatible
+  included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See siunitx."
+  updated: 2026-02-01
 
-- name: pst-grad
+- name: pst-coil
   type: package
-  status: unchecked
-  included-in: [ol0.02]
+  status: currently-incompatible
+  included-in:
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: pst-eps
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-eucl
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: pst-fill
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: pst-func
+  type: package
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: pst-grad
+  type: package
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-math
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-node
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: pst-ovl
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-pdf
   type: package
@@ -11408,44 +12330,46 @@
 
 - name: pst-plot
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-text
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-tree
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: pst-xkey
   ctan-pkg: xkeyval
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-01
 
 - name: pstool
   type: package
@@ -11472,34 +12396,67 @@
 
 - name: pstricks-add
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
 
 - name: psvectorian
   ctan-pkg: pst-vectorian
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
+  luatex-only: true
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See pstricks."
+  updated: 2026-02-01
+
+- name: ptext
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: pxbase
+  type: package
+  status: currently-incompatible
+  subpackages: [pxbabel,upkcat]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: pxchfon
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxcjkcat
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: px-ds
   ctan-pkg: pxtxalfa
@@ -11514,23 +12471,54 @@
 
 - name: pxfonts
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
+  comments: "Obsolete package; suggested replacement `newpxmath`.
+             Incompatible with unicode-math. No luamml support."
+  updated: 2026-01-28
+
+- name: pxgreeks
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-03
 
 - name: pxjahyper
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxjodel
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pxpgfmark
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: pxpic
   type: package
@@ -11549,8 +12537,19 @@
   priority: 9
   issues:
   tests: false
+  luatex-only: true
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
+
+- name: pxtatescale
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: pxtx-cal
   ctan-pkg: pxtxalfa
@@ -11573,6 +12572,27 @@
   tests: false
   comments: "No luamml support."
   updated: 2025-06-13
+
+- name: pxufont
+  type: package
+  status: currently-incompatible
+  subpackages: [pxufont-ruby]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: pygmentex
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: true
+  comments: "Relies on several incompatible packages."
+  updated: 2026-04-01
 
 - name: pyluatex
   type: package
@@ -11657,13 +12677,13 @@
 
 - name: quiver
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See tikz-cd."
+  updated: 2026-01-28
 
 - name: quotchap
   type: package
@@ -11700,7 +12720,7 @@
   included-in: [tlc3, arxiv01, ol5]
   priority: 2
   package-repository: "https://gitlab.com/TeXhackse/ragged2e"
-  external-issues: "https://gitlab.com/TeXhackse/ragged2e/-/issues/9"
+  external-issues: ["https://gitlab.com/TeXhackse/ragged2e/-/issues/9"]
   issues: [1070]
   tests: true
   updated: 2025-11-19
@@ -11714,15 +12734,24 @@
   tests: false
   updated: 2024-07-15
 
+- name: randomlist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: rawfonts
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Should not be used in new documents."
+  updated: 2026-02-10
 
 - name: rccol
   type: package
@@ -11732,6 +12761,15 @@
   issues:
   tests: true
   updated: 2024-08-12
+
+- name: readprov
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-03
 
 - name: realboxes
   type: package
@@ -11791,6 +12829,15 @@
   tests: false
   updated: 2024-07-25
 
+- name: regstats
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: reledmac
   type: package
   status: currently-incompatible
@@ -11812,22 +12859,23 @@
 
 - name: relsize
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol1]
   priority: 2
-  issues:
+  issues: [1244]
   tests: true
-  updated: 2025-05-28
+  comments: "Warnings with `\\mathlarger` and mathml-SE."
+  updated: 2026-02-27
 
 - name: remreset
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Functionality now in the kernel."
+  updated: 2026-01-28
 
 - name: repeatindex
   type: package
@@ -11931,14 +12979,15 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use the rotating package."
+  updated: 2026-01-27
 
 - name: rotating
   type: package
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [112,751]
+  closed-issues: [112,751]
   tests: true
   updated: 2025-06-09
 
@@ -11970,6 +13019,15 @@
   tests: true
   updated: 2024-08-07
 
+- name: rotunda
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
+
 - name: rpgicons
   type: package
   status: compatible
@@ -11981,15 +13039,45 @@
 
 - name: rsfso
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "No luamml support."
+  updated: 2026-02-10
+
+- name: runic
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
+- name: rustic
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 #------------------------ SSS ----------------------------
+
+- name: SIunits
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  comments: "Obsolete. Use siunitx instead."
+  updated: 2026-01-27
 
 - name: sagetex
   type: package
@@ -12041,15 +13129,24 @@
   tests: true
   updated: 2025-05-28
 
+- name: sarabian
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
+
 - name: savesym
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: savetrees
   type: package
@@ -12132,6 +13229,7 @@
   type: package
   status: unchecked
   included-in: [ol0.1]
+  subpackages: [scrkbase,scrlogo]
   priority: 9
   issues:
   tests: false
@@ -12163,6 +13261,7 @@
   status: unchecked
   included-in: [ol0.1]
   priority: 9
+  subpackages: [scrlfile-hook]
   issues:
   tests: false
   tasks: needs tests
@@ -12198,16 +13297,6 @@
   tasks: needs tests
   updated: 2024-07-17
 
-- name: scrletter
-  type: package
-  status: unchecked
-  included-in:
-  priority: 9
-  related-issues: [88]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-10
-
 - name: scrlayer-scrpage
   type: package
   status: unchecked
@@ -12218,15 +13307,15 @@
   tasks: needs tests
   updated: 2024-07-15
 
-- name: srcltx
+- name: scrletter
   type: package
   status: unchecked
-  included-in: [ol0.1]
+  included-in:
   priority: 9
-  issues:
+  related-issues: [88]
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2024-07-10
 
 - name: scrpage2
   type: package
@@ -12236,24 +13325,24 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use scrlayer-scrpage instead."
+  updated: 2026-01-27
 
 - name: scrtime
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-10
 
 - name: scrwfile
   type: package
   status: compatible
   included-in:
   priority: 9
-  issues: [696]
+  closed-issues: [696]
   tests: true
   updated: 2024-09-13
 
@@ -12327,13 +13416,12 @@
 
 - name: seqsplit
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: setouterhbox
   type: package
@@ -12405,13 +13493,12 @@
 
 - name: shadowtext
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1226]
+  tests: true
+  updated: 2026-02-10
 
 - name: shapepar
   type: package
@@ -12450,6 +13537,24 @@
   tests: true
   updated: 2024-07-08
 
+- name: show2e
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
+- name: showdim
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: showexpl
   type: package
   status: currently-incompatible
@@ -12475,7 +13580,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues:
+  closed-issues: [435]
   luatex-only: true
   tests: true
   updated: 2024-08-02
@@ -12489,6 +13594,16 @@
   issues: [115]
   tests: true
   updated: 2024-07-11
+
+- name: showkerning
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-04-01
 
 - name: showlabels
   type: package
@@ -12522,13 +13637,13 @@
 
 - name: shuffle
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support. `\\shuffle` command overwritten by unicode-math."
+  updated: 2026-02-10
 
 - name: sidecap
   type: package
@@ -12550,13 +13665,12 @@
 
 - name: silence
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: sillypage
   type: package
@@ -12581,13 +13695,12 @@
 
 - name: simplekv
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: simplewick
   type: package
@@ -12609,16 +13722,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: simplewick
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: sistyle
   type: package
   status: unchecked
@@ -12627,7 +13730,8 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Use siunitx instead."
+  updated: 2026-01-27
 
 - name: siunitx
   type: package
@@ -12706,6 +13810,15 @@
   tests: true
   updated: 2024-08-01
 
+- name: somedefs
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-12
+
 - name: soul
   type: package
   status: currently-incompatible
@@ -12744,23 +13857,35 @@
   tests: false
   updated: 2024-07-15
 
-- name: sourcesanspro
+- name: sourcesans
   type: package
   status: compatible
   included-in: [tlc3, ol0.1]
   priority: 2
+  subpackages: [sourcesanspro]
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2026-03-06
 
-- name: sourceserifpro
+- name: sourceserif
   type: package
   status: compatible
   included-in: [tlc3, ol0.02]
   priority: 2
+  subpackages: [sourceserifpro]
   issues:
   tests: false
-  updated: 2024-07-15
+  updated: 2026-03-06
+
+- name: spacekern
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-04-01
 
 - name: spalign
   type: package
@@ -12837,6 +13962,25 @@
   issues: [168]
   tests: true
   updated: 2024-07-17
+
+- name: sqrcaps
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
+
+- name: srcltx
+  type: package
+  status: unchecked
+  included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
 
 - name: stabular
   type: package
@@ -12927,13 +14071,13 @@
 
 - name: stix
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete, see stix2. Incompatible with unicode-math. No luamml support."
+  updated: 2026-02-10
 
 - name: stix2
   ctan-pkg: stix2-type1
@@ -12979,13 +14123,12 @@
 
 - name: stringstrings
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: structuredlog
   type: package
@@ -13094,23 +14237,22 @@
 
 - name: subscript
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. The `\\textsubscript` command is now provided by the kernel."
+  updated: 2026-01-28
 
 - name: substr
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: superiors
   type: package
@@ -13123,13 +14265,12 @@
 
 - name: suffix
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: supertabular
   type: package
@@ -13180,15 +14321,14 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: systeme
+- name: syntonly
   type: package
-  status: unchecked
-  included-in: [ol0.02]
+  status: compatible
+  included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-12
 
 - name: systeme
   type: package
@@ -13201,6 +14341,15 @@
   updated: 2025-05-28
 
 #------------------------ TTT ----------------------------
+
+- name: Tabbing
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1290]
+  tests: true
+  updated: 2026-04-01
 
 - name: TheanoDidot
   type: package
@@ -13231,13 +14380,13 @@
 
 - name: t1enc
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete."
+  updated: 2026-02-13
 
 - name: tablefootnote
   type: package
@@ -13301,7 +14450,10 @@
   status: no-support
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  comments: In theory a nice package but it is **broken** and **not maintained**. It is not compatible with current LaTeX, let alone with the tagging extensions. Do not use it for anything, unless it gets a new maintainer that brings it up to speed.
+  comments: "In theory a nice package but it is **broken** and **not maintained**.
+             It is not compatible with current LaTeX, let alone with the tagging
+             extensions. Do not use it for anything, unless it gets a new maintainer
+             that brings it up to speed."
   issues:
   tests: false
   updated: 2024-07-15
@@ -13349,8 +14501,8 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: An old issue has been fixed.
-  issues: [42]
+  comments:
+  closed-issues: [42]
   tests: true
   updated: 2025-11-22
 
@@ -13368,7 +14520,8 @@
   status: compatible
   included-in: [tlc3, ol0.02]
   priority: 2
-  comments: This package allows conditional typesetting, i.e., tagging here means that the LaTeX source has labeled regions that you can include or exclude.
+  comments: "This package allows conditional typesetting, i.e., tagging here means
+             that the LaTeX source has labeled regions that you can include or exclude."
   issues:
   tests: true
   updated: 2024-08-02
@@ -13390,7 +14543,8 @@
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Simple boxes are now tagged correctly.
              Not yet fully supported, but some suggestions in the listed issues"
-  issues: [73,88,1066,1101,1103,1104,1105,1106,1107,1110,1114]
+  issues: [88,1101,1103,1104,1105,1106,1107,1110,1114]
+  closed-issues: [1066]
   tests: true
   tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283","https://github.com/T-F-S/tcolorbox/issues/358"]
@@ -13475,7 +14629,17 @@
   comments: "Simple files with `\\DocumentMetadata` error when run with `tex4ht`."
   updated: 2025-11-24
 
+- name: texdimens
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-05
+
 - name: texnames
+  ctan-pkg: biblio
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -13483,6 +14647,7 @@
   issues:
   tests: false
   tasks: needs tests
+  comments: "Obsolete. Use hologo or hvlogos."
   updated: 2026-01-23
 
 - name: texosquery
@@ -13535,6 +14700,17 @@
   issues:
   tests: false
   updated: 2024-07-07
+
+- name: textcsc
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues: [1288]
+  tests: true
+  comments: "Works correctly with Harbuzz renderer but not with Node."
+  luatex-only: true
+  updated: 2026-04-01
 
 - name: textgreek
   type: package
@@ -13614,6 +14790,15 @@
   tests: false
   updated: 2024-07-15
 
+- name: tgothic
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
+
 - name: tgpagella
   ctan-pkg: tex-gyre-pagella
   type: package
@@ -13644,6 +14829,16 @@
   tests: false
   updated: 2024-07-15
 
+- name: thaispec
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: theorem
   type: package
   status: currently-incompatible
@@ -13655,13 +14850,12 @@
 
 - name: theoremref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-01-30
 
 - name: thepdfnumber
   type: package
@@ -13673,14 +14867,15 @@
   updated: 2024-07-25
 
 - name: thm-restate
+  ctan-pkg: thmtools
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Just loads the thmtools package."
+  updated: 2026-01-28
 
 - name: thmbox
   type: package
@@ -13732,13 +14927,13 @@
 
 - name: thumbs
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in:
   priority: 9
   issues: [1173]
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-19
+  tests: true
+  comments: "Thumb overviews produce destination warnings."
+  updated: 2026-01-30
 
 - name: tikz
   type: package
@@ -13746,7 +14941,8 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
-  issues: [1160]
+  issues: [1160,1208,1228]
+  closed-issues: [1156]
   references: [1]
   tests: true
   updated: 2026-01-19
@@ -13780,10 +14976,30 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: tikz-dimline
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
 - name: tikz-feynman
   type: package
   status: unchecked
   included-in: [ol0.1]
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-23
+
+- name: tikz-network
+  type: package
+  status: unchecked
+  included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
@@ -13801,16 +15017,6 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: tikz-qtree-compat
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: tikzducks
   type: package
   status: compatible
@@ -13821,16 +15027,6 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2025-11-19
 
-- name: tikzlibrary-matrix
-  ctan-pkg: tikz
-  type: library
-  status: currently-incompatible
-  included-in:
-  priority: 9
-  issues: [30]
-  tests: true
-  updated: 2025-09-12
-
 - name: tikzlibrary-external
   ctan-pkg: tikz
   type: library
@@ -13838,6 +15034,27 @@
   included-in:
   priority: 9
   issues: [945]
+  tests: true
+  updated: 2025-09-12
+
+- name: tikzlibrary-fadings
+  ctan-pkg: tikz
+  type: library
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues: [1208]
+  tests: true
+  comments: "`\\tikzfading` must be declared in the preamble."
+  updated: 2026-02-06
+
+- name: tikzlibrary-matrix
+  ctan-pkg: tikz
+  type: library
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [30]
   tests: true
   updated: 2025-09-12
 
@@ -13851,26 +15068,6 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`.
              See also tikzducks."
   updated: 2025-11-19
-
-- name: tikz-dimline
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: tikz-network
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: tikzpagenodes
   type: package
@@ -14128,7 +15325,7 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [700]
+  closed-issues: [700]
   tests: false
   comments: Obsolete
   updated: 2025-11-20
@@ -14180,13 +15377,12 @@
 
 - name: totcount
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: totpages
   type: package
@@ -14224,6 +15420,15 @@
   issues:
   tests: false
   updated: 2024-08-06
+
+- name: trajan
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-01-29
 
 - name: translations
   type: package
@@ -14311,15 +15516,24 @@
   tests: true
   updated: 2024-07-31
 
+- name: tuple
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: turnstile
   type: package
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   comments: "No luamml support."
-  issues:
+  issues: [1182]
   tests: true
-  updated: 2025-05-28
+  updated: 2026-01-28
 
 - name: turnthepage
   type: package
@@ -14331,6 +15545,7 @@
   updated: 2024-07-30
 
 - name: tweaklist
+  ctan-pkg: moderncv
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -14352,24 +15567,12 @@
 
 - name: twoopt
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
-- name: txfonts
-  type: package
-  status: partially-compatible
-  included-in: [tlc3, arxiv5, ol0.1]
-  priority: 2
-  comments: "Obsolete package; suggested replacement `newtxmath`.
-             Incompatible with unicode-math. No luamml support."
-  issues:
-  tests: false
-  updated: 2025-05-28
+  updated: 2026-01-28
 
 - name: tx-ds
   ctan-pkg: pxtxalfa
@@ -14393,6 +15596,27 @@
   comments: "No luamml support."
   updated: 2025-05-28
 
+- name: txfonts
+  type: package
+  status: partially-compatible
+  included-in: [tlc3, arxiv5, ol0.1]
+  priority: 2
+  comments: "Obsolete package; suggested replacement `newtxmath`.
+             Incompatible with unicode-math. No luamml support."
+  issues:
+  tests: false
+  updated: 2025-05-28
+
+- name: txgreeks
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-03
+
 - name: txuprcal
   type: package
   status: partially-compatible
@@ -14405,13 +15629,13 @@
 
 - name: type1cm
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tasks: "Obsolete. Use fix-cm instead."
+  updated: 2026-02-13
 
 - name: typearea
   type: package
@@ -14455,15 +15679,35 @@
 
 #------------------------ UUU ----------------------------
 
+- name: ucharclasses
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: ucs
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents. Ignored entirely with Unicode engines."
+  updated: 2026-02-12
+
+- name: ugarite
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-02-01
 
 - name: ulem
   type: package
@@ -14474,6 +15718,15 @@
   issues:
   tests: true
   updated: 2024-07-26
+
+- name: uncial
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-01
 
 - name: underoverlap
   type: package
@@ -14503,12 +15756,23 @@
   tests: true
   updated: 2024-08-04
 
+- name: unicode-bidi
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: unicode-math
   type: package
   status: compatible
   included-in: [tlc3, ol1]
   priority: 2
   comments:
+  subpackages: [unicode-math-luatex,unicode-math-xetex]
   luatex-only: true
   issues: [847]
   tests: false
@@ -14524,6 +15788,16 @@
   tests: true
   updated: 2024-07-17
 
+- name: uninormalize
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-02-12
+
 - name: uniquecounter
   type: package
   status: compatible
@@ -14532,6 +15806,15 @@
   issues:
   tests: false
   updated: 2024-07-25
+
+- name: unisc
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: units
   type: package
@@ -14543,7 +15826,7 @@
   tasks: needs tests
   updated: 2026-01-23
 
-- name: universalis<
+- name: universalis
   type: package
   status: compatible
   included-in: [tlc3]
@@ -14605,7 +15888,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: An old issue has been fixed.
-  issues: [5]
+  closed-issues: [5]
   tests: false
   updated: 2024-07-06
 
@@ -14619,14 +15902,15 @@
   updated: 2024-08-20
 
 - name: utf8
+  ctan-pkg: arabtex
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-02-09
 
 - name: utfsym
   type: package
@@ -14743,7 +16027,7 @@
   included-in: [ol0.02]
   priority: 9
   comments: firstaid is required for the fix of issue 49
-  issues: [49]
+  closed-issues: [49]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -14787,6 +16071,7 @@
   updated: 2024-08-04
 
 - name: vietnam
+  ctan-pkg: vntex
   type: package
   status: unchecked
   included-in: [ol0.1]
@@ -14808,13 +16093,12 @@
 
 - name: vruler
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-02-15
 
 - name: vwcol
   type: package
@@ -14892,16 +16176,6 @@
   tests: true
   updated: 2025-11-20
 
-- name: worldflags
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: wordcloud
   type: package
   status: compatible
@@ -14967,13 +16241,12 @@
 
 - name: xargs
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: xcharter-otf
   ctan-pkg: xcharter-math
@@ -15003,6 +16276,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
+  closed-issues: [972]
   tests: false
   updated: 2024-07-07
 
@@ -15025,27 +16299,48 @@
   comments: "`\\nofloat` produces parent-child warnings."
   updated: 2024-08-04
 
+- name: xechangebar
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
 - name: xecjk
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
+  subpackages: [xeCJKfntef,xeCJK-listings]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
-- name: xeCJKfntef
+- name: xecolor
   type: package
-  status: unchecked
-  included-in: [ol0.1]
+  status: no-support
+  included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
-- name: xetexko
+- name: xecyr
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xecyrmongolian
   type: package
   status: unchecked
   included-in:
@@ -15053,7 +16348,71 @@
   issues:
   tests: false
   tasks: needs tests
-  updated: 2024-07-18
+  comments: "Also works with lualatex."
+  luatex-only: true
+  updated: 2026-02-03
+
+- name: xeindex
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian
+  type: package
+  status: no-support
+  included-in:
+  subpackages: [unicode-persiancal,unicode-persianmath,xepersian-magazine,
+                xepersian-multiplechoice]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xepersian-hm
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xesearch
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xespotcolor
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: xetexko
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xevlna
   type: package
@@ -15062,7 +16421,7 @@
   priority: 9
   issues:
   tests: excluded
-  comment: tests excluded as package requires xetex
+  comments: tests excluded as package requires xetex
   updated: 2024-08-07
 
 - name: xfakebold
@@ -15076,23 +16435,22 @@
 
 - name: xfp
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Functionality built in to the kernel."
+  updated: 2026-01-28
 
 - name: xfor
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: xfrac
   type: package
@@ -15126,13 +16484,12 @@
 
 - name: xifthen
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
 
 - name: xindex
   type: package
@@ -15146,7 +16503,8 @@
 - name: xint
   type: package
   status: unchecked
-  subpackages: [xintbinhex,xintcfrac,xintcore,xintexpr,xintfrac,xintgcd,xintkernel,xintlog,xintseries,xinttools,xinttrig,xinttools]
+  subpackages: [xintbinhex,xintcfrac,xintcore,xintexpr,xintfrac,xintgcd,xintkernel,
+                xintlog,xintseries,xinttools,xinttrig,xinttools]
   included-in: [ol0.02]
   priority: 9
   issues:
@@ -15185,25 +16543,27 @@
 
 - name: xltxtra
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xltabular
   type: package
   status: compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
-  issues: [170]
-  comments: "A xltabular with page breaks works with pdftex only if at least latex-dev from February 2025 is used."
+  closed-issues: [170,1056]
+  comments: "An xltabular with page breaks works with pdftex only if at least
+             latex-dev from February 2025 is used."
   tests: true
   updated: 2025-03-02
 
 - name: xmpmulti
+  ctan-pkg: beamer
   type: package
   status: unchecked
   included-in: [ol0.02]
@@ -15332,17 +16692,18 @@
   priority: 2
   issues:
   tests: false
-  updated: 2024-07-15
+  comments: "Legacy package. Templates are now supported in the kernel."
+  updated: 2026-01-28
 
 - name: xunicode
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: xurl
   type: package
@@ -15382,7 +16743,7 @@
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
              unicode-math must be loaded after xy."
-  issues: [899]
+  issues: [899,1275]
   tests: true
   updated: 2025-06-09
 
@@ -15486,14 +16847,24 @@
   updated: 2024-08-07
 
 - name: zi4
+  ctan-pkg: inconsolata
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-01-28
+
+- name: zitie
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 - name: zlmtt
   type: package
@@ -15506,34 +16877,43 @@
 
 - name: zref
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
+  subpackages: [zref-base]
   issues:
   tests: false
-  tasks: needs tests
+  comments: "Most of the zref-* packages are compatible. Some still need to be checked."
   updated: 2024-07-17
 
 - name: zref-abspage
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
-- name: zref-check
+- name: zref-abspos
+  ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  updated: 2026-02-13
+
+- name: zref-check
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
 
 - name: zref-clever
   type: package
@@ -15544,36 +16924,169 @@
   tests: true
   updated: 2024-08-20
 
-- name: zref-savepos
+- name: zref-counter
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-dotfill
+  ctan-pkg: zref
   type: package
   status: unchecked
-  included-in: [ol1]
+  included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
+
+- name: zref-env
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-hyperref
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
+
+- name: zref-lastpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-marks
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
+
+- name: zref-nextpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-pageattr
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-pagelayout
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-perpage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-runs
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-savepos
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in: [ol1]
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-thepage
+  ctan-pkg: zref
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-02-13
+
+- name: zref-titleref
+  ctan-pkg: zref
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: needs tests
+  updated: 2026-02-13
 
 - name: zref-totpages
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: zref-user
+  ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol1]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
 
 - name: zref-vario
   type: package
@@ -15584,15 +17097,46 @@
   tests: true
   updated: 2024-08-20
 
-- name: zxjatype
+- name: zref-xr
+  ctan-pkg: zref
   type: package
   status: unchecked
-  included-in: [ol0.02]
+  included-in:
   priority: 9
   issues:
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-02-13
+
+- name: zxjafbfont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: zxjafont
+  type: package
+  status: no-support
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
+
+- name: zxjatype
+  type: package
+  status: no-support
+  included-in: [ol0.02]
+  priority: 9
+  issues:
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-01-28
 
 #-------------------------------- class files -----------------------
 
@@ -15670,9 +17214,9 @@
   included-in:
   priority: 9
   comments: "Validates under luatex (don't use subcaptions)."
-  issues: [1054]
+  closed-issues: [1054]
   tests: true
-  updated: 2025-12-3
+  updated: 2025-12-03
 
 - name: asmejour
   type: class
@@ -15681,7 +17225,7 @@
   priority: 9
   ctan-pkg: asmejour
   tests: true
-  updated: 2025-12-3
+  updated: 2025-12-03
 
 #------------------------ BBB ----------------------------
 
@@ -15694,7 +17238,7 @@
              with any form of tagging support. The ltx-talk class is being
              developed as an alternative, and is recommended for new tagged
              presentations."
-  issues: [710]
+  closed-issues: [710]
   tests: false
   updated: 2025-06-11
 
@@ -15725,12 +17269,13 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues: [979,980,1050]
+  issues: [979,980,1050,1241,1281]
   tests: true
   tasks: needs more tests
   updated: 2025-11-10
 
 - name: extarticle
+  ctan-pkg: extsizes
   type: class
   status: currently-incompatible
   priority: 9
@@ -15740,6 +17285,7 @@
   updated: 2025-12-22
 
 - name: extbook
+  ctan-pkg: extsizes
   type: class
   status: currently-incompatible
   priority: 9
@@ -15749,6 +17295,7 @@
   updated: 2025-12-22
 
 - name: extletter
+  ctan-pkg: extsizes
   type: class
   status: unchecked
   priority: 9
@@ -15759,6 +17306,7 @@
   updated: 2025-07-07
 
 - name: extproc
+  ctan-pkg: extsizes
   type: class
   status: currently-incompatible
   priority: 9
@@ -15768,6 +17316,7 @@
   updated: 2025-12-22
 
 - name: extreport
+  ctan-pkg: extsizes
   type: class
   status: currently-incompatible
   priority: 9
@@ -15790,6 +17339,28 @@
 
 #------------------------ JJJ ----------------------------
 
+- name: jarticle
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jbook
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 - name: jlreq
   type: class
   status: currently-incompatible
@@ -15800,7 +17371,84 @@
   tests: true
   updated: 2024-10-18
 
+- name: jltxdoc
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jreport
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsarticle
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsbook
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jspf
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: jsreport
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
 #------------------------ KKK ----------------------------
+
+- name: kiyou
+  ctan-pkg: jsclasses
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 #------------------------ LLL ----------------------------
 
@@ -15956,20 +17604,10 @@
   status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
-
-- name: ltxdoc
-  type: class
-  status: unchecked
-  included-in:
-  priority: 9
-  issues: [1075,1150]
-  tests: false
-  tasks: needs tests
-  updated: 2025-11-20
 
 - name: ltx-talk
   type: class
@@ -15979,6 +17617,16 @@
   priority: 2
   tests: false
   updated: 2025-06-11
+
+- name: ltxdoc
+  type: class
+  status: unchecked
+  included-in:
+  priority: 9
+  issues: [1075,1150,1175]
+  tests: false
+  tasks: needs tests
+  updated: 2026-01-28
 
 #------------------------ MMM ----------------------------
 
@@ -15990,7 +17638,8 @@
   subpackages: [memhfixc]
   comments: "Some code showing the needed adjustments can be found in the
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
-  issues: [910,1040]
+  issues: [910]
+  closed-issues: [1040]
   tests: false
   updated: 2025-11-10
 
@@ -16055,6 +17704,21 @@
 
 #------------------------ PPP ----------------------------
 
+- name: powerdot
+  type: class
+  status: no-support
+  included-in:
+  priority: 9
+  subpackages: [powerdot-aggie,powerdot-bframe,powerdot-ciment,powerdot-default,
+                powerdot-elcolors,powerdot-fyma,powerdot-horatio,powerdot-husky,
+                powerdot-ikeda,powerdot-jefka,powerdot-klope,powerdot-paintings,
+                powerdot-pazik,powerdot-sailor,powerdot-simple,powerdot-tycja,
+                powerdot-upen]
+  issues:
+  tests: false
+  comments: "Requires unsupported latex+dvips+ps2pdf workflow."
+  updated: 2026-02-01
+
 - name: proc
   type: class
   status: compatible
@@ -16064,6 +17728,17 @@
   comments: "Based on article class."
   tests: true
   updated: 2024-07-11
+
+- name: prosper
+  type: class
+  status: no-support
+  included-in:
+  priority: 9
+  subpackages: [PPRalcatel,PPRalienglow,PPRautumn,PPRazure,PPRblends,PPRcapsules,PPRcontemporain,PPRcorners,PPRdarkblue,PPRdefault,PPRframes,PPRfyma,PPRgyom,PPRlignesbleues,PPRmancini,PPRnuancegris,PPRprettybox,PPRrico,PPRserpaggi,PPRthomasd,PPRtroispoints,PPRwhitecross,PPRwinter,PPRwj]
+  issues:
+  tests: false
+  comments: "Requires unsupported latex+dvips+ps2pdf workflow."
+  updated: 2026-02-01
 
 #------------------------ RRR ----------------------------
 
@@ -16096,16 +17771,6 @@
   updated: 2025-12-04
 
 #------------------------ SSS ----------------------------
-
-- name: SIunits
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  issues:
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 - name: scrartcl
   type: class
@@ -16147,6 +17812,18 @@
   tests: false
   updated: 2025-12-11
 
+- name: seminar
+  type: class
+  status: no-support
+  included-in:
+  priority: 9
+  subpackages: [npsfont,sem-a4,semcolor,sem-dem,semhelv,seminar,semlayer,semlcmss,
+                sem-page,semrot,slidesec,tvz-code,tvz-hax,tvz-user]
+  issues:
+  tests: false
+  comments: "Requires unsupported latex+dvips+ps2pdf workflow."
+  updated: 2026-02-01
+
 - name: simplecv
   type: class
   status: unchecked
@@ -16159,16 +17836,50 @@
 
 - name: standalone
   type: class
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
   package-repository: "https://github.com/MartinScharrer/standalone"
-  issues:
+  issues: [1177]
   tests: true
-  comments: "Content is lost at pdf level due to being boxed."
-  updated: 2024-08-07
+  comments: "With the standalone class, content is lost at pdf level due to being boxed.
+             Using the standalone package to input standlone files is compatible."
+  updated: 2026-01-30
 
 #------------------------ TTT ----------------------------
+
+- name: tarticle
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: tbook
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+
+- name: treport
+  ctan-pkg: platex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
 
 - name: tufte-book
   ctan-pkg: tufte-latex
@@ -16192,3 +17903,70 @@
   comments:
   updated: 2024-08-13
 
+#------------------------ UUU ----------------------------
+
+- name: ujarticle
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: ujbook
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: ujreport
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utarticle
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utbook
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28
+  
+- name: utreport
+  ctan-pkg: uplatex
+  type: class
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  ptex-only: true
+  updated: 2026-01-28

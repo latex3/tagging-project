@@ -1,0 +1,516 @@
+\DocumentMetadata
+  {
+    lang=en-GB,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+%% This is file `thumbs-example.tex',
+\documentclass[a4paper,twoside,british]{article}[2025/01/22]% v1.4n Standard LaTeX document class
+\usepackage{lipsum}[2021-09-20]%  v2.7 150 paragraphs of Lorem Ipsum dummy text
+%\usepackage{eurosym}[1998/08/06]% v1.1 European currency symbol ''Euro''
+\usepackage[extension=pdf,%
+ pdfpagelayout=TwoPageRight,pdfpagemode=UseThumbs,%
+ plainpages=false,pdfpagelabels=true,%
+ hyperindex=false,%
+ pdflang={en},%
+ pdftitle={thumbs package example},%
+ pdfauthor={H.-Martin Muench},%
+ pdfsubject={Example for the thumbs package},%
+ pdfkeywords={LaTeX, thumbs, thumb marks},%
+ pdfview=Fit,pdfstartview=Fit,%
+ linktoc=all]{hyperref}[2025-07-12]% v7.01o Hypertext links for LaTeX
+\usepackage[a4paper]{geometry}[2020/01/02]% v5.9 Page Geometry
+ % % For testing with package crop,
+ % % you can use a4 paper layout and print on a3 paper;
+ % % for real production probably "frame" would be removed from the crop options:
+ % \usepackage[cross,cam,frame,width=297truemm,height=420truemm,center,axes]{crop}[2017/11/19]% v1.10 Crop marks (MF)
+\IfPackageLoadedTF{crop}{%
+   % In contrast to the "normal" example  the offsets must be regarded for use with the crop package:
+   \PassOptionsToPackage{ignorehoffset=false,ignorevoffset=false}{thumbs}%  crop
+ }{\PassOptionsToPackage{ignorehoffset=true,ignorevoffset=true}{thumbs}% no crop
+  }
+\usepackage[linefill=dots,thumblink=rule,minheight={47pt},height={auto},width={auto},%
+            distance={2mm},topthumbmargin={auto},bottomthumbmargin={auto},%
+            eventxtindent={5pt},oddtxtexdent={5pt},%
+            evenmarkindent={0pt},oddmarkexdent={0pt},evenprintvoffset={0pt},%
+            leftindexruleplus={1em},%
+            % unused options: frame, frameinnercolor
+            txtcentered=false,%
+            nophantomsection=false,plainthumbsoverview=false,%
+            verbose=true,final=true, hidethumbs=false,%
+            % unused, obsolete options:
+            %  pagecolor:  instead the pagecolor package is used.
+            %  evenindent: was replaced by eventxtindent.
+            %  oddexdent:  was replaced by oddtxtexdent.
+            ]{thumbs}[2026-01-18]% v1.1d Thumb marks and overview page(s) (HMM)
+\nopagecolor% use \pagecolor{white} if \nopagecolor does not work
+\IfPackageLoadedF{hyperref}{\usepackage{url}[2013/09/16]% v3.4 Verb mode for urls etc.
+}
+
+\DeclareMathAlphabet{\mathup}{OT1}{\familydefault}{m}{n}
+\DeclareRobustCommand{\unit}[1]{\ensuremath{\mathord{\thinspace\mathup{#1}}}}
+
+\xdef\thetextchangingcolour{red}
+\colorlet{textchangingcolour}{\thetextchangingcolour}
+
+\xdef\themarkchangingcolour{green}
+\colorlet{markchangingcolour}{\themarkchangingcolour}
+
+\DeclareRobustCommand{\thethumbchangingtextE}{\Huge{\textbf{E}}}
+\DeclareRobustCommand{\thethumbchangingtexte}{\Huge{\textbf{e}}}
+\gdef\thumbchangingtext{\thethumbchangingtextE}
+
+\listfiles
+\begin{document}
+\pagenumbering{arabic}
+\label{FirstPage}
+\section*{Example for thumbs}
+\addcontentsline{toc}{section}{Example for thumbs}
+\markboth{Example for thumbs}{Example for thumbs}
+
+This example demonstrates the most common uses of package \textsf{thumbs}, v1.1d as of 2026-01-18.
+The used options were\newline
+\texttt{linefill=dots}, \texttt{thumblink=rule}, \texttt{minheight=\{47pt\}},
+\texttt{height=auto}, \texttt{width={auto}}, \newline
+\texttt{distance=\{2mm\}}, \texttt{topthumbmargin=\{auto\}}, \texttt{bottomthumbmargin=\{auto\}}, \newline
+\texttt{eventxtindent=\{5pt\}}, \texttt{oddtxtexdent=\{5pt\}},
+\texttt{evenmarkindent=\{0pt\}}, \texttt{oddmarkexdent=\{0pt\}}, \newline
+\texttt{evenprintvoffset=\{0pt\}},
+\texttt{leftindexruleplus=\{1em\}},
+\texttt{txtcentered=false}, \newline
+\texttt{nophantomsection=false},
+\texttt{plainthumbsoverview=false},
+\texttt{verbose=true}, \texttt{final=true}, and \newline
+\texttt{hidethumbs=false}. \newline
+
+These are the default options, except
+\texttt{leftindexruleplus=\{1em\}} (default: \texttt{0pt}) and  \newline
+\texttt{verbose=true}.\newline
+
+If package \textsf{crop} was loaded, options
+\texttt{ignorehoffset=true} and \texttt{ignorevoffset=true} were passed to the \textsf{thumbs} package,
+otherwise \texttt{ignorehoffset=false} and \texttt{ignorevoffset=false}. \newline
+
+Options \texttt{frame} and \texttt{frameinnercolor} were not used.\newline
+
+The obsolete options \texttt{pagecolor} (instead the \texttt{pagecolor} package is used),
+\texttt{evenindent} (was replaced by \texttt{eventxtindent}), and
+\texttt{oddexdent} (was replaced by \texttt{oddtxtexdent}) were not used. \newline
+
+For more details please see the documentation!\bigskip
+
+\textbf{Hyperlinks or not:} If the \textsf{hyperref} package is loaded,
+the references in the overview page for the thumb marks are also hyperlinked
+(except when option \texttt{thumblink=none} is used).\bigskip
+
+\noindent\textbf{For testing purpose pages \pageref{greenpage}f. have been completely coloured!}\newline
+\textbf{Better exclude those two pages from printing\ldots}\bigskip
+
+Some thumb mark texts are too large for the thumb mark by intention
+(especially when the paper size and therefore also the thumb mark size
+is decreased). When option \texttt{width=\{autoauto\}} would be used,
+the thumb mark width would be automatically increased.
+Please see page~\pageref{HugeText} for details!\bigskip
+
+For printing this example to another format of paper (e.\,g.~A4) it is necessary to add the according
+option (e.\,g.~\verb|a4paper|) to the document class and recompile it! (In that case the
+thumb marks column change will occur at another point, of course.)
+With paper format equal to document format the document can be printed without adapting the size,
+like e.\,g.~\textquotedblleft shrink to page\textquotedblright . That would add a white border around
+the document and by moving the thumb marks from the edge of the paper they no longer appear
+at the side of the stack of paper. It is also necessary to use a printer capable of printing up to the
+border of the sheet of paper. Alternatively it is possible after the printing to cut the paper to the
+right size. While performing this manually is probably quite cumbersome, printing houses use paper,
+which is slightly larger than the desired format, and afterwards cut it to format.
+\newpage
+
+\addtitlethumb{Frontmatter}{0}{white}{gray}{FirstPage}
+
+At the first page no thumb mark was used, but we want to begin with thumb marks
+at the first page, therefore a
+\begin{verbatim}
+\addtitlethumb{Frontmatter}{0}{white}{gray}{FirstPage}
+\end{verbatim}
+was used at the beginning of this page. This does not place a thumb mark at that page,
+but the pagenumber and link{-}target in the Table of Thumbs point to the first page.
+The label \verb|FirstPage| needs to be placed manually on the first page, of course!
+If manually no label can be placed on the first page, the label \texttt{pagesLTS.0}
+from the \textsf{pageslts} package (needs to be loaded explicitly!) can be used.
+\newpage
+\tableofcontents
+\newpage
+
+To include an overview page for the thumb marks,
+\begin{verbatim}
+\addthumbsoverviewtocontents{section}{Thumb marks overview}%
+\thumbsoverview{Table of Thumbs}%
+\end{verbatim}
+is used, where \verb|\addthumbsoverviewtocontents| adds the thumb marks overview page to the table of contents.
+(\textquotedblleft Edge index\textquotedblright{} would be the correct/{}formal term, see the Introduction in the manual.)
+\smallskip
+
+Generally it is desirable to have a hyperlink from the thumbs overview page to lead to the thumb mark
+and not to some earlier place. Therefore automatically a~\verb|\phantomsection| is placed before each thumb mark.
+But for example when using the thumb mark after a~\verb|\chapter{...}| command, it is probably nicer to have
+the link point at the top of that chapter's title (instead of the line below it). The automatic placing of the
+\verb|\phantomsection| can be disabled either globally by using option \texttt{nophantomsection},
+or locally for the next thumb mark by the command \verb|\thumbsnophantom|. (When disabled globally,
+still manual use of \verb|\phantomsection| is possible.)
+
+\addthumbsoverviewtocontents{section}{Thumb marks overview}%
+\thumbsoverview{Table of Thumbs}%
+
+\noindent Those were the overview pages for the thumb marks.
+\newpage
+
+\section{The first section}
+\addthumb{First section}{%
+\space\Huge{\textbf{$1\textsuperscript{st}$}}}{yellow}{green}
+
+\begin{verbatim}
+\addthumb{First section}{%
+\space\Huge{\textbf{$1\textsuperscript{st}$}}}{yellow}{green}
+\end{verbatim}
+
+A thumb mark is added for this section. The parameters are: title for the thumb mark,
+the text to be displayed in the thumb mark (choose your own format),
+the colour of the text in the thumb mark,
+and the background colour of the thumb mark (parameters in this order).\newline
+
+Now for some pages of \textquotedblleft content\textquotedblright\ldots
+
+\newpage
+\lipsum[1]
+\newpage
+\lipsum[1]
+\newpage
+\lipsum[1]
+\newpage
+
+\section{The second section}
+\addthumb{Second section}{\Huge{\textbf{\arabic{section}}}}{green}{yellow}
+
+For this section, the text to be displayed in the thumb mark was set to
+\begin{verbatim}
+\Huge{\textbf{\arabic{section}}}
+\end{verbatim}
+i.\,e. the number of the section will be displayed (huge \& bold).\newline
+
+Let us change the thumb mark on a page with an even number:
+\newpage
+
+\section{The third section}
+\addthumb{Third section}{\Huge{\textbf{\arabic{section}}}}{blue}{red}
+
+No problem!
+
+And you do not need to have a section to add a thumb:
+\newpage
+
+\addthumb{Still third section}{\Huge{\textbf{\arabic{section}b}}}{red}{blue}
+
+This is still the third section, but there is a new thumb mark.
+
+On the other hand, you can even get rid of the thumb marks for some page(s):
+\newpage
+
+\stopthumb
+
+\noindent The command
+\begin{verbatim}
+\stopthumb
+\end{verbatim}
+was used here. Until another \verb|\addthumb| (with parameters) or
+\begin{verbatim}
+\continuethumb
+\end{verbatim}
+is used, there will be no more thumb marks.
+\newpage
+Still no thumb marks.\newpage
+Still no thumb marks.\newpage
+Still no thumb marks.\newpage
+
+\continuethumb
+
+Thumb mark continued (unchanged).\newpage
+Thumb mark continued (unchanged).\newpage
+
+Time for another thumb,
+
+\addthumb{Another heading}{Small text}{white}{black}
+
+and another.\bigskip
+
+\addthumb{Huge Text paragraph}{\Huge{Huge\newline Text}}{yellow}{green}
+
+\textquotedblleft {\Huge{Huge Text}}\textquotedblright\ is too wide for the thumb mark. When option
+\texttt{width=\{autoauto\}} would be used, the thumb mark width would be automatically increased.
+Now the text is either split over two lines (try \verb|Huge\newline Text| for another format)
+or (in case \verb|Huge~Text| is used) is written over the border of the thumb mark. When the text is
+too wide for the thumb mark and cannot be split, \LaTeX{} might nevertheless place the text into the
+next line. By this the text is placed too low. Adding a
+\hbox{\verb|\protect\vspace*{-| some length \verb|}|} to the text could help, for example\newline
+\verb|\addthumb{Huge Text}{\protect\vspace*{-3pt}\Huge{Huge~Text}}...|.\label{HugeText}\bigskip
+
+\addthumb{Huge Text}{\Huge{Huge~Text}}{red}{blue}
+\addthumb{Huge Bold Text}{\Huge{\textbf{HBT}}}{black}{yellow}
+
+\noindent When there is more than one thumb mark at one page, this is also no problem.\newpage
+Some text\newpage
+Some text\newpage
+Some text\newpage
+
+\section{xcolor}
+\addthumb{xcolor}{\Huge{\textbf{xcolor}}}{magenta}{cyan}
+
+It is probably a good idea to have a look at the \textsf{xcolor} package and use other colours than used
+in this example.\newline
+(About automatically increasing the thumb mark width to the thumb mark text width please see the note
+at page~\pageref{HugeText}.)
+\newpage
+
+\addthumb{A mark}{\Huge{\textbf{A}}}{lime}{darkgray}
+
+I just need to add further thumb marks to get them reaching the bottom of the page.\newline
+Generally the vertical size of the thumb marks is set to the value given in the height option.
+If it is \texttt{auto}, the size of the thumb marks is decreased, so that they fit all on one page.
+But when they get smaller than \texttt{minheight}, instead of decreasing their size further,
+a~new thumbs column is started (which will happen here).
+\newpage
+
+\addthumb{B mark}{\Huge{\textbf{B}}}{brown}{pink}
+
+Another thumb mark.\newpage
+
+\addthumb{C mark}{\Huge{\textbf{C}}}{brown}{pink}
+
+There! A new thumb column was started automatically!
+
+On the one hand you can, of course, keep the colour for more than one thumb mark.
+On the other hand you can change the colour of an existing thumb mark,
+shown at page~\pageref{E mark}f.\newpage
+
+\addthumb{$1/1.\,955\,83$\, EUR}{\Huge{\textbf{D}}}{orange}{violet}
+
+\noindent I am just adding further thumb marks.
+
+\noindent If you are curious why the thumb mark between
+\textquotedblleft C mark\textquotedblright\ and \textquotedblleft E mark\textquotedblright\ has
+not been named \textquotedblleft D mark\textquotedblright\ but
+\textquotedblleft $1/1.\,955\,83$\, EUR\textquotedblright :
+
+$1\unit{DM}=1\unit{D\ Mark}=1\unit{Deutsche\ Mark}%
+=\frac{1}{1.\,955\,83}\,$\euro$\,=1/1.\,955\,83\unit{Euro}=1/1.\,955\,83\unit{EUR}$.
+\newpage
+Just a page.
+\newpage
+
+\xdef\thetextchangingcolour{red}%
+\colorlet{textchangingcolour}{\thetextchangingcolour}%
+
+\xdef\themarkchangingcolour{green}%
+\colorlet{markchangingcolour}{\themarkchangingcolour}%
+
+  %% In the preamble:
+  %%\DeclareRobustCommand{\thethumbchangingtextE}{\Huge{\textbf{E}}}
+  %%\DeclareRobustCommand{\thethumbchangingtexte}{\Huge{\textbf{e}}}
+  %%\gdef\thumbchangingtext{\thethumbchangingtextE}
+
+\gdef\thumbchangingtext{\thethumbchangingtextE}%
+
+\addthumb{E mark}{\protect\thumbchangingtext}{textchangingcolour}{markchangingcolour}
+\label{E mark}
+
+As announced above, it is not only possible to keep the colour for more than one thumb mark,
+but also to change the colour(s) and the text of an existing thumb mark. Here a thumb mark added with
+\begin{verbatim}
+\addthumb{Name}{\protect\thumbchangingtext}{textchangingcolour}{%
+markchangingcolour}
+\end{verbatim}
+appears as red text \textquotedblleft E\textquotedblright{} on green background,
+but really it is not \texttt{red} but \texttt{textchangingcolour} (which was defined as \texttt{red})
+and not \texttt{green} but\newline
+\texttt{markchangingcolour} (which was defined as \texttt{green}). Also the text of a thumb mark
+can be changed. Here \verb|thumbchangingtext| was used as text, which was defined as
+\verb|thethumbchangingtextE|, which was predefined in the preamble:
+\begin{verbatim}
+\DeclareRobustCommand{\thethumbchangingtextE}{\Huge{\textbf{E}}}
+\end{verbatim}
+\newpage
+
+\noindent Some pages(s) later:
+
+\begin{verbatim}
+\xdef\thetextchangingcolour{blue}%
+\colorlet{textchangingcolour}{\thetextchangingcolour}%
+
+\xdef\themarkchangingcolour{yellow}%
+\colorlet{markchangingcolour}{\themarkchangingcolour}%
+
+\gdef\thumbchangingtext{\thethumbchangingtexte}%
+\end{verbatim}
+
+\xdef\thetextchangingcolour{blue}%
+\colorlet{textchangingcolour}{\thetextchangingcolour}%
+
+\xdef\themarkchangingcolour{yellow}%
+\colorlet{markchangingcolour}{\themarkchangingcolour}%
+
+\gdef\thumbchangingtext{\thethumbchangingtexte}%
+
+And here the thumb mark still uses \texttt{textchangingcolour} and\newline
+\texttt{markchangingcolour}, but instead of \texttt{red} and \texttt{green}
+those have been redefined to \texttt{blue} and \texttt{yellow}.
+\verb|\thumbchangingtext| was still used as text, but redefined as \verb|\thethumbchangingtexte|,
+which was predefined in the preamble:
+\begin{verbatim}
+\DeclareRobustCommand{\thethumbchangingtexte}{\Huge{\textbf{e}}}
+\end{verbatim}
+Instead of \verb|\thumbchangingtext| also some variable like \verb|\thepage| can be used.\newline
+For the thumb marks overview page(s) it must be decided which colour(s) and text
+to use and the according definitions have to be made before that page{/}those pages!
+Otherwise inconsistencies or even \textquotedblleft\texttt{undefined}\textquotedblright{-}errors
+would result.
+\newpage
+(This page was intentionally left blank.)
+\newpage
+
+To prevent inconsistencies between the different thumb mark overviews,
+we redefine \texttt{textchangingcolour} to \texttt{red},
+\texttt{markchangingcolour} to \texttt{green}, and
+\verb|\thumbchangingtext| to \verb|\thethumbchangingtextE| again here.
+
+\xdef\thetextchangingcolour{red}%
+\colorlet{textchangingcolour}{\thetextchangingcolour}%
+
+\xdef\themarkchangingcolour{green}%
+\colorlet{markchangingcolour}{\themarkchangingcolour}%
+
+\gdef\thumbchangingtext{\thethumbchangingtextE}%
+
+\newpage
+
+\makeatletter%
+\ifx\thumbs@frame\thumbs@empty\relax%
+  \gdef\thumbs@frame{2pt}%
+  \gdef\th@mbs@fr@meinnercolor{\thepagecolor}% could also be another colour
+  \gdef\thumbs@checkforexample{0}%
+\else% somebody changed the example to use the frame option:
+  \gdef\thumbs@checkforexample{1}%
+  \PackageInfo{thumbs}{The frame option is already used,\MessageBreak%
+                                    not changing here anything!}%
+\fi%
+\makeatother%
+
+\textsc{Bjorn Victor} suggested to use thumb marks consisting only of frames
+instead of filled rectangles. Options \texttt{frame} and \texttt{frameinnercolor} were introduced
+to accomplish this. While these options have not been used in this example, it is possible to trick
+\LaTeX{} into believing that they had been used. (Do not use this for a regular document!)
+This is just for demonstrating how a thumb mark consisting just of a frame with
+$2\unit{pt}$~thick lines would look like\newpage
+\noindent on left and right pages.\newpage
+
+Now let us restore the filled thumb marks again
+
+\makeatletter%
+\ifx\thumbs@checkforexample\thumbs@zero\relax%
+  \gdef\thumbs@frame{\empty}%
+  \gdef\th@mbs@fr@meinnercolor{\thepagecolor}%
+\fi%
+\makeatother%
+
+and then have a look at \verb|\thumbsoverviewverso|:
+
+\addthumbsoverviewtocontents{section}{Table of Thumbs, verso mode}%
+\thumbsoverviewverso{Table of Thumbs, verso mode}
+
+\newpage
+
+And, of course, also at \verb|\thumbsoverviewdouble|:
+
+\addthumbsoverviewtocontents{section}{Table of Thumbs, double mode}%
+\thumbsoverviewdouble{Table of Thumbs, double mode}
+
+\newpage
+
+\addthumb{F mark}{\Huge{\textbf{F}}}{lightgray}{black}
+
+I am just adding further thumb marks.
+\newpage
+
+\addthumb{G mark}{\Huge{\textbf{G}}}{magenta}{black}
+
+Some text.
+
+\newpage
+\thumbnewcolumn
+\addthumb{New thumb marks column}{\Huge{\textit{NC}}}{magenta}{black}
+
+There! A new thumb column was started manually!
+
+\newpage
+Some text.
+\newpage
+
+\addthumb{H mark}{\Huge{\textbf{H}}}{orange}{violet}
+
+I just added another thumb mark.
+\newpage
+The following two pages are completely coloured in green.
+\newpage
+\pagecolor{green}
+
+\IfPackageLoadedT{hyperref}{\phantomsection}
+\label{greenpage}
+
+Some faulty, outdated version of a pdf-viewer sometimes (for the same document!)
+added a white line at the bottom and right side of the document when presenting it. This did
+not change the printed version. To test for this problem, this doublepage has been completely coloured.
+(Probably better exclude these two pages from printing!)\newline
+
+\textsc{Heiko Oberdiek} wrote at Tue, 26 Apr 2011 14:13:29 +0200 in the \newline
+comp.text.tex newsgroup (see e.\,g.\newline
+\url{https://groups.google.com/g/de.comp.text.tex/c/4GAcL6qlTZ8/m/NzccDqakrrMJ}):\newline
+\textquotedblleft Der Ursprung ist 0 0, da gibt es nicht viel zu runden; bei den anderen
+Seiten werden pt als bp in die PDF-Datei geschrieben, d.\,h.~der Balken ist um 72.27/72 zu
+gro\ss{}, das sollte auch Rundungsfehler abdecken.\textquotedblright\newline
+
+(The origin is 0 0, there is not much to be rounded; for the other sides the $\unit{pt}$
+are written as $\unit{bp}$ into the pdf-file, i.\,e.~the rule is too large by $72.27/72$,
+which should cover also rounding errors.)\newline
+
+The thumb marks are also too wide -- on purpose! This has been done to assure,
+that they cover the page up to its (paper) border, therefore they are placed
+a little bit over the paper margin.\newline
+
+Now I red somewhere in the net (should have remembered to note the url),
+that white margins are presented, whenever there is some object outside of the page.
+Thus, it is a feature, not a bug?!
+What I do not understand: The same document sometimes is presented
+with white lines and sometimes without (same viewer, same PC).\newline
+But at least it does not influence the printed version.
+\newpage
+Another green page.
+\newpage
+\pagecolor{white}
+
+It is possible to use the Table of Thumbs more than once (for example at the beginning and
+at the end of the document) and to refer to them via e.\,g.~\verb|\pageref{TableOfThumbs1}|,\linebreak
+\verb|\pageref{TableOfThumbs2}|,\ldots , here: page~\pageref{TableOfThumbs1},
+page~\pageref{TableOfThumbs2}, and via e.\,g.~\verb|\pageref{TableOfThumbs}|
+it is referred to the last used Table of Thumbs (for compatibility with older package versions).
+If there is only one Table of Thumbs, this one is also the last one, of course.
+Here it is at page~\pageref{TableOfThumbs}.\newline
+
+Now let us have a look at \verb|\thumbsoverviewback|:
+
+\addthumbsoverviewtocontents{section}{Table of Thumbs, back mode}%
+\thumbsoverviewback{Table of Thumbs, back mode}%
+\newpage
+
+Text can be placed after any of the Tables of Thumbs, of course.
+\end{document}
+\endinput
+%%
+%% End of file `thumbs-example.tex'.

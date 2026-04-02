@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\usepackage{mathpartir}
+
+\title{mathpartir tagging test - 2}
+
+\begin{document}
+
+\begin{mathpar}
+  x
+\end{mathpar}
+
+\begin{mathparpagebreakable}
+  x \and y
+  \\ z
+\end{mathparpagebreakable}
+
+\begin{mathpar}
+  \infer{x \\ y}{z}
+  \and
+  \infer{a}{b}
+\end{mathpar}
+
+\end{document}
