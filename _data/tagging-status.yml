@@ -1141,6 +1141,16 @@
   tests: false
   updated: 2026-01-25
 
+- name: auncial
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments:
+  updated: 2026-02-01
+
 - name: aurical
   type: package
   status: partially-compatible
@@ -2930,18 +2940,6 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
-
-- name: ctex
-  type: package
-  status: currently-incompatible
-  included-in: [tlc3, ol1]
-  priority: 6
-  issues: [673]
-  luatex-only: true
-  tests: true
-  comments: "Option `heading=true` breaks section heading tagging. Same problem
-             with classes ctexart, ctexbook, and ctexrep."
-  updated: 2026-01-25
 
 - name: CharisSIL
   type: package
@@ -14846,7 +14844,7 @@
   priority: 6
   issues:
   tests: true
-  comments: Obsolete package; suggested replacement Use `amsthm`.
+  comments: Obsolete package; suggested replacement `amsthm`.
   updated: 2026-04-30
 
 - name: theoremref
