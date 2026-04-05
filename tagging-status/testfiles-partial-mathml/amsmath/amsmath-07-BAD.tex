@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE},
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\title{amsmath tagging test - split with mathml-SE}
+
+\begin{document}
+before
+\begin{equation}
+\begin{split}
+ a & =  b\\
+   & +  c
+\end{split} 
+\end{equation}
+after
+\end{document}

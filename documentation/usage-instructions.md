@@ -30,11 +30,32 @@ runlatex.packageregex = [
 
 
 # Using LaTeX to produce accessible PDF
-## (LaTeX2e 2025-11-01)
+## Guidelines for LaTeX2e 2025-11-01
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
 documents.
+
+<div style="border: solid thin black; padding: 0em 1em;" markdown=1>
+
+## Using tagging with older LaTeX releases
+
+It is _strongly_ recommended that you use a current LaTeX Release.
+The tagging code is under active development and not all of the features
+or syntax described here are available in older releases.
+
+On OverLeaf, LaTeX 2025-11-01 is available if you use the
+"[Rolling TeXLive](https://docs.overleaf.com/troubleshooting-and-support/tex-live#labs-rolling-tex-live-experiment)"
+option for the TeXLive Release (in the Compiler settings).
+
+If it is not possible to use the current release, instructions dated
+[2025-02-01](prototype-usage-instructions-2025-02-01)
+and
+[2024-06-01](prototype-usage-instructions-2024-06-01)
+are available.
+Note in particular, that the `tagging=on` key was not available in older releases.
+
+</div>
 
 ## Basic setup
 

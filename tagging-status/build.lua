@@ -145,6 +145,7 @@ function find_tasks(name)
         (task:match("^bibtex") or task:match("^biber") or task:match("^makeindex")
           or task:match("^mf") or task:match("^mpost")) or task:match("^pythontex")
           or task:match("^splitindex") or task:match("^xindex") or task:match("^asy")
+          or task:match("^pygmentex")
         and
         not(task:match("[;&<>]"))
       then

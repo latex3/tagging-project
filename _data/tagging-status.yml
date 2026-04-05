@@ -14,6 +14,7 @@
 #  comments           optional   markdown-string Free text markdown comments
 #  references         optional   integer-list    List of integers referencing the bibliography in references.yml
 #  issues             optional   integer-list    List of integers referencing primary issues at latex3/tagging-project
+#  closed-issues      optional   integer-list    List of integers referencing closed issues at latex3/tagging-project
 #  related-issues     optional   integer-list    List of integers referencing secondary, related issues at latex3/tagging-project
 #  external-issues    optional   string-list     List of urls referencing related issues at other trackers
 #  luatex-only        optional   boolean         true if package only works with lualatex
@@ -297,7 +298,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [698]
+  closed-issues: [698]
   tests: true
   updated: 2024-09-06
 
@@ -328,7 +329,7 @@
   included-in:
   priority: 9
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
-  issues: [1131]
+  closed-issues: [1131]
   tests: true
   updated: 2026-02-26
 
@@ -340,7 +341,7 @@
   priority: 9
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   issues:
-  related-issues: [1131]
+  closed-issues: [1131]
   tests: true
   updated: 2026-02-26
 
@@ -480,7 +481,7 @@
   type: package
   status: compatible
   included-in: [tlc3, arxiv5, ol1]
-  priority: 2
+  priority: 4
   issues:
   tests: false
   updated: 2024-08-06
@@ -490,7 +491,7 @@
   type: package
   status: compatible
   included-in: [tlc3, arxiv1, ol10]
-  priority: 2
+  priority: 4
   issues:
   tests: true
   updated: 2024-08-06
@@ -590,6 +591,7 @@
   priority: 2
   comments: "pmb produces extra tags from typesetting argument three times"
   issues: [1240]
+  closed-issues: [842]
   tests: true
   updated: 2024-07-09
 
@@ -641,10 +643,10 @@
   priority: 2
   comments:
   references: [1,2]
-  issues: [77,712,803,811,846,848,850,851,852,857,859,875,919,981]
+  issues: [712,803,851,857,919,981,1033]
+  closed-issues: [28,77,811,846,848,850,852,859,875]
   tests: true
-  tasks: also needs more tests
-  updated: 2025-10-20
+  updated: 2026-03-14
 
 - name: amsmidx
   type: package
@@ -704,8 +706,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1199,1200,1201,
+  issues: [759,790,792,944,1083,1162,1166,1196,1199,1200,1201,
            1202,1203,1207,1216,1218,1221,1224,1225,1232]
+  closed-issues: [83,733,736,835]
   tests: true
   updated: 2026-01-19
 
@@ -1027,7 +1030,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues: [357]
+  closed-issues: [357]
   tests: true
   comments:
   updated: 2025-07-16
@@ -1133,8 +1136,7 @@
   status: compatible
   included-in: [tlc3, arxiv01]
   priority: 8
-  comments: "This is an obsolete package. The hooks it defines are available
-             directly from the LaTeX kernel when using the `\\AddToHook` interface."
+  comments: "This is an obsolete package. The hooks it defines are available directly from the LaTeX kernel when using the `\\AddToHook` interface."
   issues:
   tests: false
   updated: 2026-01-25
@@ -1277,8 +1279,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   comments: Loads tagpdf but it is not compatible with the current version. Its patches
-            clash with the math module. `phase-III,math` should be used instead which
-            provides broader tagging support without the need to load an additional package.
+            clash with the math module.
   tests: false
   updated: 2024-07-14
 
@@ -1611,7 +1612,8 @@
   included-in: [tlc3]
   priority: 2
   comments: active character issues
-  issues: [414,694,932]
+  issues: [694,932]
+  closed-issues: [414]
   tests: false
   tasks: needs tests
   updated: 2025-07-02
@@ -2408,7 +2410,8 @@
   priority: 2
   comments: "Requires hyperref."
   references: [2]
-  issues: [18,902]
+  issues: [902]
+  closed-issues: [18]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
   tasks: needs more tests
@@ -2421,7 +2424,7 @@
   priority: 2
   comments: See biblatex.
   tasks: Package should be changed to use sockets in its footnote adaption; needs tests
-  issues: [62]
+  closed-issues: [62]
   tests: false
   updated: 2024-07-15
 
@@ -2772,7 +2775,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Requires the firstaid module which contains a fix."
-  issues: [69]
+  closed-issues: [69]
   tests: true
   updated: 2025-06-13
 
@@ -3646,7 +3649,8 @@
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
-  issues: [2,1166]
+  issues: [1166]
+  closed-issues: [2]
   tests: true
   tasks: More tests needed
   updated: 2026-01-19
@@ -3706,6 +3710,15 @@
   issues:
   tests: true
   updated: 2025-05-29
+
+- name: cmsd
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: cochineal
   type: package
@@ -3859,7 +3872,8 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  issues: [90,379,749]
+  issues: [379]
+  closed-issues: [80,90,749]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -4157,6 +4171,17 @@
   tests: true
   updated: 2024-08-14
 
+- name: cwpuzzle
+  ctan-pkg: crossword
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1291]
+  tests: true
+  comments:
+  updated: 2026-04-01
+
 - name: cyklop
   type: package
   status: compatible
@@ -4429,6 +4454,15 @@
   issues:
   tests: true
   updated: 2026-01-25
+
+- name: dijkstra
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: dingbat
   type: package
@@ -5007,13 +5041,13 @@
 
 - name: epic
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
-  comments: "Works with pdflatex but not lualatex."
-  issues: [159]
+  comments:
+  closed-issues: [159]
   tests: true
-  updated: 2024-07-17
+  updated: 2026-03-22
 
 - name: epigraph
   type: package
@@ -5221,7 +5255,7 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  issues: [656]
+  closed-issues: [656]
   tests: true
   updated: 2024-08-23
 
@@ -5722,6 +5756,15 @@
   tests: false
   updated: 2024-07-06
 
+- name: fixcmex
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: fixfoot
   type: package
   status: compatible
@@ -5854,7 +5897,7 @@
   status: no-support
   included-in: [arxiv01, ol1]
   priority: 6
-  issues: [497]
+  closed-issues: [497]
   tests: false
   updated: 2024-08-20
 
@@ -6071,7 +6114,8 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [12,958]
+  issues: [958]
+  closed-issues: [12]
   tests: false
   updated: 2025-09-12
 
@@ -6502,7 +6546,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1064]
+  closed-issues: [1064]
   comments:
   package-repository: "https://github.com/LaTeX-Package-Repositories/geometry"
   tests: true
@@ -6698,7 +6742,7 @@
   priority: 4
   comments: An old issue appears to be fixed.
   tasks: needs tests
-  issues: [48]
+  closed-issues: [48]
   tests: false
   updated: 2024-07-06
 
@@ -6798,8 +6842,7 @@
     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
     An old issue with height appears to be fixed.
   references: [1]
-  issues: [16]
-  related-issues: [64]
+  closed-issues: [16,64]
   tests: false
   updated: 2024-07-06
 
@@ -6867,7 +6910,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [559]
+  closed-issues: [559]
   tests: true
   updated: 2024-08-19
 
@@ -7133,7 +7176,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [525]
+  closed-issues: [525]
   tests: false
   comments: "Ignored if `\\DocumentMetadata` is detected."
   updated: 2024-08-13
@@ -7153,7 +7196,7 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [680]
+  closed-issues: [680]
   tests: false
   comments: "Requires unsupported latex+dvips+ps2pdf workflow."
   updated: 2024-08-28
@@ -8258,7 +8301,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [481,1108]
+  closed-issues: [481,1108]
   tests: true
   comments: "Provides `actualtext` key for use with `image` key."
   updated: 2025-12-09
@@ -8455,7 +8498,7 @@
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
   issues: [70,1074]
-  related-issues: [41]
+  closed-issues: [41]
   tests: true
   updated: 2024-07-12
 
@@ -8547,6 +8590,16 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: longmath
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1289]
+  tests: true
+  luatex-only: true
+  updated: 2026-04-01
+
 - name: longnamefilelist
   type: package
   status: compatible
@@ -8561,10 +8614,10 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [22,1192]
+  issues: [1192]
+  closed-issues: [22,38,554,714]
   comments: "A longtable with page breaks works with pdftex only if at least
              latex-dev from February 2025 is used."
-  related-issues: [38]
   tests: true
   tasks: needs more tests
   updated: 2026-01-30
@@ -8702,6 +8755,7 @@
   included-in:
   priority: 9
   issues:
+  closed-issues: [1137]
   luatex-only: true
   tests: false
   updated: 2026-01-30
@@ -8777,6 +8831,17 @@
   tests: true
   updated: 2024-07-25
 
+- name: lualatex-truncate
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  comments:
+  issues:
+  luatex-only: true
+  tests: true
+  updated: 2026-04-01
+
 - name: luamathalign
   type: package
   status: currently-incompatible
@@ -8818,9 +8883,8 @@
   included-in:
   priority: 9
   package-repository: "https://github.com/lualatex/luamplib"
-  comments: "An old issue has been fixed. Offers several keys for figures
-             including `alt` and `artifact`."
-  issues: [8,252]
+  comments: "Offers several keys for figures including `alt` and `artifact`."
+  closed-issues: [8,252]
   luatex-only: true
   tests: true
   updated: 2024-11-12
@@ -8872,6 +8936,7 @@
   priority: 8
   comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
   issues: [713]
+  closed-issues: [87]
   luatex-only: true
   tests: true
   updated: 2026-01-26
@@ -9297,7 +9362,7 @@
   priority: 2
   comments: "A pdftex engine bug has been fixed.
              Incompatible with unicode-math. No luamml support."
-  issues: [837]
+  closed-issues: [837]
   tests: true
   updated: 2025-05-29
 
@@ -9385,6 +9450,7 @@
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
   issues: [139,922,1119]
+  closed-issues: [734]
   tests: true
   updated: 2025-12-11
 
@@ -9441,7 +9507,7 @@
   included-in: [tlc3, arxiv01, ol1]
   priority: 8
   comments: "Recommended alternative: tcolorbox."
-  issues: [73]
+  closed-issues: [73]
   tests: false
   updated: 2026-01-26
 
@@ -9492,7 +9558,7 @@
   included-in: [arxiv001, ol0.1]
   subpackages: [pdfbase]
   priority: 7
-  issues: [868]
+  closed-issues: [868]
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -9604,6 +9670,15 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: mhsetup
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: miama
   type: package
   status: compatible
@@ -9619,7 +9694,7 @@
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
   comments:
-  issues: [67]
+  closed-issues: [67]
   tests: false
   updated: 2026-02-28
 
@@ -9897,7 +9972,7 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [705]
+  closed-issues: [705]
   tasks:
   comments:
   updated: 2025-06-09
@@ -10071,7 +10146,7 @@
   type: package
   status: compatible
   included-in: [tlc3]
-  priority: 2
+  priority: 8
   issues:
   tests: false
   comments: Not distributed with texlive.
@@ -10109,10 +10184,10 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues:
+  issues: [1282]
   tests: false
   tasks: Needs tests
-  updated: 2024-07-06
+  updated: 2026-03-30
 
 - name: nath
   type: package
@@ -10205,7 +10280,7 @@
   type: package
   status: compatible
   included-in: [tlc3]
-  priority: 2
+  priority: 8
   issues:
   tests: false
   comments: Not distributed with texlive.
@@ -10762,7 +10837,7 @@
   type: package
   status: unchecked
   included-in: [tlc3, ol0.02]
-  priority: 2
+  priority: 4
   subpackages: [ocgbase]
   issues:
   tests: false
@@ -11110,7 +11185,7 @@
   type: package
   status: unchecked
   included-in: [tlc3, ol0.02]
-  priority: 2
+  priority: 4
   issues:
   tests: false
   tasks: needs tests
@@ -11147,6 +11222,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: papermas
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: paracol
   type: package
   status: currently-incompatible
@@ -11159,8 +11243,8 @@
 - name: paralist
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv1, ol1]
-  priority: 2
+  included-in: [arxiv1, ol1]
+  priority: 6
   issues: [273]
   tests: true
   updated: 2024-07-26
@@ -11169,7 +11253,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv001, ol0.02]
-  priority: 2
+  priority: 6
   issues: [471]
   tests: true
   updated: 2024-08-06
@@ -11178,7 +11262,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv001, ol0.02]
-  priority: 2
+  priority: 6
   issues: [281]
   tests: true
   updated: 2024-07-26
@@ -11245,7 +11329,7 @@
   status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues: [628]
+  closed-issues: [628]
   tests: true
   updated: 2024-11-18
 
@@ -11354,7 +11438,7 @@
   priority: 2
   comments: "Creates duplicated structures as graphics are processed more than once in trial
             typesetting. Correct tagging of multipage includes unclear."
-  issues: [86]
+  closed-issues: [86]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -11630,7 +11714,7 @@
   included-in: [tlc3, arxiv1, ol5]
   priority: 2
   comments: "Compatibility depends on tikz but also needs its own adjustments."
-  issues: [924]
+  closed-issues: [924,946]
   tests: false
   updated: 2025-06-23
 
@@ -12033,7 +12117,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [1117]
+  closed-issues: [1117]
   tests: true
   comments: "Depends on forest-ext. Note tableaux are syntactic not semantic.
              Tagging via TeX syntax added to Alt on surrounding Figure."
@@ -12498,6 +12582,16 @@
   ptex-only: true
   updated: 2026-01-28
 
+- name: pygmentex
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues:
+  tests: true
+  comments: "Relies on several incompatible packages."
+  updated: 2026-04-01
+
 - name: pyluatex
   type: package
   status: compatible
@@ -12638,6 +12732,15 @@
   tests: false
   updated: 2024-07-15
 
+- name: randomlist
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: rawfonts
   type: package
   status: compatible
@@ -12737,7 +12840,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3]
-  priority: 2
+  priority: 6
   issues: [689]
   tests: true
   updated: 2024-08-28
@@ -12776,7 +12879,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3]
-  priority: 2
+  priority: 4
   issues: [461]
   tests: true
   updated: 2024-08-05
@@ -12882,7 +12985,7 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  issues: [112,751]
+  closed-issues: [112,751]
   tests: true
   updated: 2025-06-09
 
@@ -13237,7 +13340,7 @@
   status: compatible
   included-in:
   priority: 9
-  issues: [696]
+  closed-issues: [696]
   tests: true
   updated: 2024-09-13
 
@@ -13371,7 +13474,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv001]
-  priority: 2
+  priority: 8
   comments: Obsolete package; tcolorbox recommended.
   issues:
   tests: true
@@ -13475,7 +13578,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues:
+  closed-issues: [435]
   luatex-only: true
   tests: true
   updated: 2024-08-02
@@ -13489,6 +13592,16 @@
   issues: [115]
   tests: true
   updated: 2024-07-11
+
+- name: showkerning
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-04-01
 
 - name: showlabels
   type: package
@@ -13504,7 +13617,7 @@
   type: package
   status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
-  priority: 2
+  priority: 3
   comments: "Rules drawn around labels display as Path in tags and the label in the margin is either not tagged
              at all (pdflatex) or as artifact (lualatex). Unproblematic for a draft, but not UA compatible."
   issues:
@@ -13533,8 +13646,8 @@
 - name: sidecap
   type: package
   status: currently-incompatible
-  included-in: [tlc3, arxiv01, ol1]
-  priority: 2
+  included-in: [arxiv01, ol1]
+  priority: 6
   issues: [290]
   tests: true
   updated: 2024-07-26
@@ -13762,6 +13875,16 @@
   tests: false
   updated: 2026-03-06
 
+- name: spacekern
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  luatex-only: true
+  updated: 2026-04-01
+
 - name: spalign
   type: package
   status: partially-compatible
@@ -13833,7 +13956,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv001, ol0.02]
-  priority: 2
+  priority: 4
   issues: [168]
   tests: true
   updated: 2024-07-17
@@ -13929,7 +14052,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv1, ol1]
-  priority: 2
+  priority: 3
   issues: [900]
   tests: true
   updated: 2025-06-10
@@ -14217,6 +14340,15 @@
 
 #------------------------ TTT ----------------------------
 
+- name: Tabbing
+  type: package
+  status: currently-incompatible
+  included-in:
+  priority: 9
+  issues: [1290]
+  tests: true
+  updated: 2026-04-01
+
 - name: TheanoDidot
   type: package
   status: compatible
@@ -14315,7 +14447,7 @@
   type: package
   status: no-support
   included-in: [tlc3, arxiv01, ol1]
-  priority: 2
+  priority: 8
   comments: "In theory a nice package but it is **broken** and **not maintained**.
              It is not compatible with current LaTeX, let alone with the tagging
              extensions. Do not use it for anything, unless it gets a new maintainer
@@ -14355,7 +14487,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv01, ol1]
-  priority: 2
+  priority: 4
   package-repository: "https://github.com/lvjr/tabularray"
   issues: [177]
   external-issues: ["https://github.com/lvjr/tabularray/issues/27"]
@@ -14367,8 +14499,8 @@
   status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: An old issue has been fixed.
-  issues: [42]
+  comments:
+  closed-issues: [42]
   tests: true
   updated: 2025-11-22
 
@@ -14396,7 +14528,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv001, ol0.1]
-  priority: 2
+  priority: 3
   issues: [370]
   tests: true
   updated: 2024-07-31
@@ -14409,7 +14541,8 @@
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Simple boxes are now tagged correctly.
              Not yet fully supported, but some suggestions in the listed issues"
-  issues: [73,88,1066,1101,1103,1104,1105,1106,1107,1110,1114]
+  issues: [88,1101,1103,1104,1105,1106,1107,1110,1114]
+  closed-issues: [1066]
   tests: true
   tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283","https://github.com/T-F-S/tcolorbox/issues/358"]
@@ -14566,6 +14699,17 @@
   tests: false
   updated: 2024-07-07
 
+- name: textcsc
+  type: package
+  status: partially-compatible
+  included-in:
+  priority: 9
+  issues: [1288]
+  tests: true
+  comments: "Works correctly with Harbuzz renderer but not with Node."
+  luatex-only: true
+  updated: 2026-04-01
+
 - name: textgreek
   type: package
   status: compatible
@@ -14697,10 +14841,11 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv01, ol0.1]
-  priority: 2
+  priority: 6
   issues:
   tests: true
-  updated: 2024-07-10
+  comments: Obsolete package; suggested replacement `amsthm`.
+  updated: 2026-04-30
 
 - name: theoremref
   type: package
@@ -14735,7 +14880,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3]
-  priority: 2
+  priority: 4
   issues: [172]
   tests: true
   updated: 2024-07-17
@@ -14796,6 +14941,7 @@
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
   issues: [1160,1208,1228]
+  closed-issues: [1156]
   references: [1]
   tests: true
   updated: 2026-01-19
@@ -15062,7 +15208,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv01, ol1]
-  priority: 2
+  priority: 4
   issues: [687]
   tests: true
   updated: 2024-08-28
@@ -15178,7 +15324,7 @@
   status: no-support
   included-in:
   priority: 9
-  issues: [700]
+  closed-issues: [700]
   tests: false
   comments: Obsolete
   updated: 2025-11-20
@@ -15369,6 +15515,15 @@
   tests: true
   updated: 2024-07-31
 
+- name: tuple
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
+
 - name: turnstile
   type: package
   status: partially-compatible
@@ -15444,7 +15599,7 @@
   type: package
   status: partially-compatible
   included-in: [tlc3, arxiv5, ol0.1]
-  priority: 2
+  priority: 8
   comments: "Obsolete package; suggested replacement `newtxmath`.
              Incompatible with unicode-math. No luamml support."
   issues:
@@ -15576,7 +15731,7 @@
   type: package
   status: partially-compatible
   included-in: [tlc3]
-  priority: 2
+  priority: 3
   comments: "No luamml support."
   issues:
   tests: true
@@ -15626,7 +15781,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3]
-  priority: 2
+  priority: 4
   issues: [175]
   luatex-only: true
   tests: true
@@ -15650,6 +15805,15 @@
   issues:
   tests: false
   updated: 2024-07-25
+
+- name: unisc
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-01
 
 - name: units
   type: package
@@ -15722,8 +15886,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  comments: An old issue has been fixed.
-  issues: [5]
+  closed-issues: [5]
   tests: false
   updated: 2024-07-06
 
@@ -15862,7 +16025,7 @@
   included-in: [ol0.02]
   priority: 9
   comments: firstaid is required for the fix of issue 49
-  issues: [49]
+  closed-issues: [49]
   tests: false
   tasks: needs tests
   updated: 2024-07-06
@@ -15988,7 +16151,7 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3]
-  priority: 2
+  priority: 3
   issues: [176]
   tests: true
   updated: 2024-07-17
@@ -16111,6 +16274,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues:
+  closed-issues: [972]
   tests: false
   updated: 2024-07-07
 
@@ -16274,7 +16438,7 @@
   priority: 9
   issues:
   tests: false
-  comments: "Obsolete. Functionality built in to the kernel."
+  comments: "Legacy package. Functionality built in to the kernel."
   updated: 2026-01-28
 
 - name: xfor
@@ -16390,11 +16554,11 @@
   status: compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
-  issues: [170]
+  closed-issues: [170,1056]
   comments: "An xltabular with page breaks works with pdftex only if at least
-             latex-dev from February 2025 is used."
+             latex from June 2025 is used."
   tests: true
-  updated: 2025-03-02
+  updated: 2026-04-03
 
 - name: xmpmulti
   ctan-pkg: beamer
@@ -16414,6 +16578,7 @@
   priority: 2
   issues:
   tests: false
+  comments: "Legacy package. Functionality built in to the kernel."
   updated: 2024-07-15
 
 - name: xpatch
@@ -16573,11 +16738,11 @@
   type: package
   status: currently-incompatible
   included-in: [tlc3, arxiv1, ol1]
-  priority: 2
+  priority: 5
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
              unicode-math must be loaded after xy."
-  issues: [899]
+  issues: [899,1275]
   tests: true
   updated: 2025-06-09
 
@@ -17048,7 +17213,7 @@
   included-in:
   priority: 9
   comments: "Validates under luatex (don't use subcaptions)."
-  issues: [1054]
+  closed-issues: [1054]
   tests: true
   updated: 2025-12-03
 
@@ -17072,7 +17237,7 @@
              with any form of tagging support. The ltx-talk class is being
              developed as an alternative, and is recommended for new tagged
              presentations."
-  issues: [710]
+  closed-issues: [710]
   tests: false
   updated: 2025-06-11
 
@@ -17103,7 +17268,7 @@
   status: currently-incompatible
   included-in:
   priority: 9
-  issues: [979,980,1050,1241]
+  issues: [979,980,1050,1241,1281]
   tests: true
   tasks: needs more tests
   updated: 2025-11-10
@@ -17438,7 +17603,7 @@
   status: partially-compatible
   included-in:
   priority: 9
-  issues:
+  issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
@@ -17472,7 +17637,8 @@
   subpackages: [memhfixc]
   comments: "Some code showing the needed adjustments can be found in the
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
-  issues: [910,1040]
+  issues: [910]
+  closed-issues: [1040]
   tests: false
   updated: 2025-11-10
 

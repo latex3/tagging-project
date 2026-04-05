@@ -1,5 +1,13 @@
 
-Click on the column headings to sort the table by the chosen column.
+----
+
+**Enter search keywords** (space separated) to filter the table.
+
+<input size="40" type="text" id="inp{{bdyid}}" onkeyup="filterRows('{{bdyid}}')" placeholder="Search terms">
+
+**Click on a column heading** to sort the table by the chosen column.
+
+----
 
 <table class="sortable" style="display:table   ;width:100%">
 <thead>
@@ -13,7 +21,7 @@ Click on the column headings to sort the table by the chosen column.
 <th>Last updated</th>
 </tr>
 </thead>
-<tbody>
+<tbody id="{{bdyid}}">
 
 
 
