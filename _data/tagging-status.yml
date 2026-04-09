@@ -313,6 +313,15 @@
              should be tagged as artifact."
   updated: 2026-02-15
 
+- name: addliga
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
 - name: addlines
   type: package
   status: compatible
@@ -2849,15 +2858,45 @@
   comments: "Tagged as normal text instead of figure with Alt text."
   updated: 2025-09-12
 
+- name: bxbase
+  type: package
+  status: compatible
+  subpackages: [bxtoolbox,zxbase]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
+- name: bxcalc
+  type: package
+  status: compatible
+  subpackages: [bxcalcize,bxcalcux]
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
 - name: bxcjkjatype
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-04-08
+
+- name: bxcjkvert
+  ctan-pkg: bxcjkjatype
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  tasks: Needs tests
+  updated: 2026-04-08
 
 - name: bxcoloremoji
   type: package
@@ -2868,6 +2907,15 @@
   comments: "Relies on partially-compatible twemojis package."
   tests: true
   updated: 2025-12-15
+
+- name: bxdvidriver
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
 
 - name: bxeepic
   type: package
@@ -2880,23 +2928,76 @@
 
 - name: bxghost
   type: package
-  status: unchecked
+  status: compatible
+  subpackages: [bxghost-lib]
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-04-08
+
+- name: bxjaholiday
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
 
 - name: bxjalipsum
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   issues:
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-04-08
+
+- name: bxjaprnind
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
+- name: bxjatoucs
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
+- name: bxorigcapt
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
+- name: bxpapersize
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
+- name: bxwareki
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
 
 - name: bytefield
   type: package
@@ -3878,6 +3979,15 @@
   tasks: needs more tests
   updated: 2025-11-22
 
+- name: combofont
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
 - name: comfortaa
   type: package
   status: compatible
@@ -4541,6 +4651,17 @@
   issues:
   tests: true
   updated: 2024-07-21
+
+- name: domaincoloring
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Alt text must be specified in the `grfOptions` key of `\\DomainColoring`."
+  luatex-only: true
+  updated: 2026-04-08
 
 - name: domitian
   type: package
@@ -7707,6 +7828,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: itnumpar
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
+
 - name: iwona
   type: package
   status: compatible
@@ -8410,6 +8540,15 @@
   issues:
   tests: false
   updated: 2024-07-26
+
+- name: ligtype
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
 
 - name: linearb
   type: package
@@ -11362,6 +11501,16 @@
   issues: [297]
   tests: true
   updated: 2024-07-26
+
+- name: pdfcolmk
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  comments: "Obsolete."
+  updated: 2026-04-08
 
 - name: pdfcolparallel
   type: package
@@ -15134,8 +15283,17 @@
   priority: 2
   issues:
   tests: true
-  comments: "Symbols not correctly mapped to Unicode."
+  comments: "Symbols not correctly mapped to Unicode. Consider using tipauni instead."
   updated: 2024-08-28
+
+- name: tipauni
+  type: package
+  status: compatible
+  included-in:
+  priority: 9
+  issues:
+  tests: false
+  updated: 2026-04-08
 
 - name: titlecaps
   type: package
