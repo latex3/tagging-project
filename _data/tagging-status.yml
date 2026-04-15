@@ -2096,7 +2096,7 @@
   priority: 2
   comments: "Requires hyperref."
   references: [2]
-  issues: [902]
+  issues: [902,1293]
   closed-issues: [18]
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
@@ -4486,7 +4486,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61]
+  issues: [61,1301]
   related-issues: [4]
   tests: false
   updated: 2024-07-06
@@ -9642,13 +9642,13 @@
 
 - name: ocgx2
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [tlc3, ol0.02]
   priority: 4
   subpackages: [ocgbase]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  issues: [1314]
+  tests: true
+  updated: 2026-04-15
 
 - name: odsfile
   type: package
