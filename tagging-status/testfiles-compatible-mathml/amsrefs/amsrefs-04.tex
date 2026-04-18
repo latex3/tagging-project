@@ -481,7 +481,8 @@ conference={
   }
 \documentclass{article}
 \usepackage{amsrefs}
-\ifdefined\Uchar\usepackage{unicode-math}\fi
+\ifdefined\Uchar\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}\fi
 
 \title{amsrefs tagging test - 4}
 

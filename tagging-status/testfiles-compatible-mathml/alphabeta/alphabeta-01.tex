@@ -8,7 +8,9 @@
 \documentclass{article}
 \usepackage{iftex}
 \ifTUTeX
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
+  \usepackage{fontspec}
   \setmainfont{Libertinus Serif}
   \setsansfont{Libertinus Sans}
 \else

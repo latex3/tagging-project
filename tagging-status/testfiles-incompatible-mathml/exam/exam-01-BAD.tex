@@ -6,7 +6,8 @@
   tagging-setup={math/setup=mathml-SE} 
 }
 \documentclass[addpoints]{exam}
-\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
+\UseName{sys_if_engine_opentype:T}{\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}}
 \tagpdfsetup{table/header-rows={1}}
 \title{Exam Test}
 \author{Sparticus}
