@@ -14430,12 +14430,14 @@
 
 - name: wrapstuff
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   priority: 9
-  comments: "The `width` and `type` keys produce parent-child warnings, so
+  issues: [1316]
+  comments: "Errors outright with pdftex.
+             The `width` and `type` keys produce parent-child warnings, so
              `\\caption` cannot be used in the `wrapstuff` environment."
   tests: true
-  updated: 2024-07-26
+  updated: 2026-04-20
 
 #------------------------ XXX ----------------------------
 
