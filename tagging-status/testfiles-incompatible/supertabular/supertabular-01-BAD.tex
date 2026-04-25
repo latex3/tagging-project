@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{supertabular}
+
+\title{supertabular tagging test}
+
+\begin{document}
+
+\begin{supertabular}{cc}
+A & B \\
+C & D \\
+\end{supertabular} 
+
+\begin{center}
+\tablefirsthead{a & b \\}
+\bottomcaption{This is a table}
+\begin{supertabular}{cc}
+A & B \\
+C & D \\
+\end{supertabular} 
+\end{center}
+
+\vspace{5in}
+
+\begin{supertabular}{cc}
+A & B \\
+C & D \\
+E & F \\
+A & B \\
+C & D \\
+E & F \\
+A & B \\
+C & D \\
+E & F \\
+A & B \\
+C & D \\
+E & F \\
+\end{supertabular}
+
+\end{document}
