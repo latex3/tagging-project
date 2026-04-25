@@ -9,7 +9,8 @@
 \documentclass{article}
 
 \ifdefined\Uchar
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
 \fi
 
 \usepackage[stdsubgroups,nocfg]{nomencl}

@@ -41,12 +41,12 @@
         Layout:Placement="Inline"
        >
        <AssociatedFile name="mathml-2.xml" xmlns="">
-       <math xmlns="http://www.w3.org/1998/Math/MathML"> <munder> <munder> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo>⎵</mo> </munder> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </munder> </math>
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <munder> <munder> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo lspace="0" rspace="0">⎵</mo> </munder> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </munder> </math>
        </AssociatedFile>
        <AssociatedFile name="tag-AFfile2.tex" xmlns="">
        $\underbracket {foo\ bar}_{baz}$
        </AssociatedFile>
-      <?MarkedContent page="1" ?>𝑓𝑜𝑜𝑏𝑎𝑟⎵⎵⎵𝑏𝑎𝑧
+      <?MarkedContent page="1" ?>𝑓𝑜𝑜𝑏𝑎𝑟⎵⎵⎵⎵𝑏𝑎𝑧
      </Formula>
     </text>
    </text-unit>
@@ -68,12 +68,12 @@
         Layout:Placement="Inline"
        >
        <AssociatedFile name="mathml-3.xml" xmlns="">
-       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mover> <mover> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo>⎴</mo> </mover> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </mover> </math>
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mover> <mover> <mrow> <mi>𝑓</mi> <mi>𝑜</mi> <mi>𝑜</mi> <mspace width="3.318pt"/> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑟</mi> </mrow> <mo lspace="0" rspace="0">⎴</mo> </mover> <mrow> <mi>𝑏</mi> <mi>𝑎</mi> <mi>𝑧</mi> </mrow> </mover> </math>
        </AssociatedFile>
        <AssociatedFile name="tag-AFfile3.tex" xmlns="">
        $\overbracket {foo\ bar}^{baz}$
        </AssociatedFile>
-      <?MarkedContent page="1" ?>𝑏𝑎𝑧⎴⎴⎴𝑓𝑜𝑜𝑏𝑎𝑟
+      <?MarkedContent page="1" ?>𝑏𝑎𝑧⎴⎴⎴⎴𝑓𝑜𝑜𝑏𝑎𝑟
      </Formula>
     </text>
    </text-unit>

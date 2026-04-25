@@ -7,7 +7,8 @@
   }
 \documentclass{article}
 
-\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}\let\mathbfcal\relax\let\mathbffrak\relax}
+\UseName{sys_if_engine_opentype:T}{\usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}\let\mathbfcal\relax\let\mathbffrak\relax}
 \usepackage[cal=boondoxo,calscaled=1.15,
   bb=fourier,bbscaled=.96,
   frak=euler]
