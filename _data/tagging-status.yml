@@ -3499,6 +3499,13 @@
   tests: false
   updated: 2024-07-29
 
+- name: comma
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-04-26
+
 - name: commath
   type: package
   status: unchecked
@@ -4103,6 +4110,14 @@
   comments: "With unicode-math, wrong symbol in `\\mathrm`."
   tests: true
   updated: 2025-05-29
+
+- name: dotlessj
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols not correctly mapped to unicode."
+  updated: 2026-04-26
 
 - name: dotseqn
   type: package
@@ -5178,6 +5193,14 @@
   priority: 2
   tests: false
   updated: 2024-07-06
+
+- name: fix2col
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Obsolete. Does nothing with a current LaTeX."
+  updated: 2026-04-26
 
 - name: fixcmex
   type: package
@@ -8237,12 +8260,12 @@
 
 - name: marginfix
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   issues: [547]
   tests: true
-  updated: 2024-08-13
+  updated: 2026-04-26
 
 - name: marginnote
   type: package
@@ -9396,7 +9419,8 @@
   priority: 2
   issues: [179]
   tests: true
-  updated: 2024-07-17
+  comments: "Simple text-mode tabulars are tagged reasonably well. No luamml support."
+  updated: 2026-04-26
 
 - name: nidanfloat
   type: package
@@ -13458,6 +13482,13 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: time
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-04-26
 
 - name: times
   type: package
