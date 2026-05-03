@@ -9,7 +9,8 @@
 \IfFileExists{\jobname-luamml-mathml.html}
 {\usepackage{mathrsfs}}
 {\ifdefined\Uchar
-    \usepackage{unicode-math}
+    \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
   \else
     \usepackage{mathrsfs}
   \fi}

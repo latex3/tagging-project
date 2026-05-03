@@ -7,7 +7,8 @@
   }
 \documentclass{article}
 \iffalse %mathml generation
-  \usepackage{unicode-math}\let\bm\symbf\let\eth\relax\def\mathversion#1{}
+  \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}\let\bm\symbf\let\eth\relax\def\mathversion#1{}
 \else
 \usepackage[default]{lato}
 \usepackage{amsmath,amssymb,bm}

@@ -10,7 +10,8 @@
 \IfFileExists{\jobname-luamml-mathml.html}
 {\usepackage{upgreek}}
 {\ifdefined\Uchar
-    \usepackage{unicode-math}
+    \usepackage{lua-unicode-math}
+  \tagpdfsetup{math/mathml/luamml/load}
     \def\Uplambda{\muplambda}
   \else
     \usepackage{upgreek}
