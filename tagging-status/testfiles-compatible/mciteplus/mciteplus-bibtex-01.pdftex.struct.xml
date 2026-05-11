@@ -17,6 +17,7 @@
      <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.007"
        >
+       <?References objects="1" ?>
       <?MarkedContent page="1" ?>
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.008"
@@ -43,6 +44,7 @@
      <Reference xmlns="http://iso.org/pdf/ssn"
         id="ID.011"
        >
+       <?References objects="2" ?>
       <?MarkedContent page="1" ?>
       <Link xmlns="http://iso.org/pdf2/ssn"
          id="ID.012"
@@ -60,7 +62,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.014"
-       title="\refname "
+       title="References"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>References
@@ -75,16 +77,20 @@
         List:ListNumbering="Ordered"
         rolemaps-to="L"
        >
-      <LI xmlns="http://iso.org/pdf2/ssn"
+      <item xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.017"
+         rolemaps-to="LI"
+         referenced-as="1"
         >
-       <Lbl xmlns="http://iso.org/pdf2/ssn"
+       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.018"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="1" ?>[Knuth(1973)]
-       </Lbl>
-       <LBody xmlns="http://iso.org/pdf2/ssn"
+       </itemlabel>
+       <itembody xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.019"
+          rolemaps-to="LBody"
          >
         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.020"
@@ -117,18 +123,22 @@
           <?MarkedContent page="1" ?>, editedby D. J. Lipcoll, D. H. Lawrie, and A. H. Sameh (Academic Press, NewYork, 1977), no. 23 in Fast Computers, part 3, pp. 179–183, 3rd ed., this isa full INCOLLECTION entry.
          </text>
         </text-unit>
-       </LBody>
-      </LI>
-      <LI xmlns="http://iso.org/pdf2/ssn"
+       </itembody>
+      </item>
+      <item xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.025"
+         rolemaps-to="LI"
+         referenced-as="2"
         >
-       <Lbl xmlns="http://iso.org/pdf2/ssn"
+       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.026"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="1" ?>[Manmaker(1986)]
-       </Lbl>
-       <LBody xmlns="http://iso.org/pdf2/ssn"
+       </itemlabel>
+       <itembody xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.027"
+          rolemaps-to="LBody"
          >
         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.028"
@@ -149,8 +159,8 @@
           <?MarkedContent page="1" ?>, Chips-R-Us, Silicon Valley, silver ed. (1986), this is a full MANUAL entry.
          </text>
         </text-unit>
-       </LBody>
-      </LI>
+       </itembody>
+      </item>
      </list>
     </text-unit>
    </Sect>

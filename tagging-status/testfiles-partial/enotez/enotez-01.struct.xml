@@ -30,35 +30,45 @@
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>This is simple text.
-      <Link xmlns="http://iso.org/pdf2/ssn"
+      <Span xmlns="http://iso.org/pdf2/ssn"
          id="ID.011"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextPosition="Sup"
         >
-       <?MarkedContent page="1" ?>1
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
-      <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.012"
+         >
+        <?MarkedContent page="1" ?>1
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+      </Span>
       <?MarkedContent page="1" ?> Here is a bit more text.
-      <Link xmlns="http://iso.org/pdf2/ssn"
-         id="ID.012"
+      <Span xmlns="http://iso.org/pdf2/ssn"
+         id="ID.013"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextPosition="Sup"
         >
-       <?MarkedContent page="1" ?>2
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
-      <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.014"
+         >
+        <?MarkedContent page="1" ?>2
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+      </Span>
       <?MarkedContent page="1" ?>
      </text>
     </text-unit>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.013"
+      id="ID.015"
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.014"
+       id="ID.016"
        title="Second section"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.015"
+        id="ID.017"
         rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>2 
@@ -66,81 +76,89 @@
      <?MarkedContent page="1" ?>Second section
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.016"
+       id="ID.018"
        rolemaps-to="Part"
       >
      <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.017"
+        id="ID.019"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>Some
-      <Link xmlns="http://iso.org/pdf2/ssn"
-         id="ID.018"
+      <Span xmlns="http://iso.org/pdf2/ssn"
+         id="ID.020"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextPosition="Sup"
         >
-       <?MarkedContent page="1" ?>1
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
-      <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.021"
+         >
+        <?MarkedContent page="1" ?>1
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+      </Span>
       <?MarkedContent page="1" ?> text for this section also with a note.
      </text>
     </text-unit>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.019"
+      id="ID.022"
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.020"
-       title="\l__enotez_list_name_tl "
+       id="ID.023"
+       title="Notes"
        rolemaps-to="H1"
       >
      <?MarkedContent page="2" ?>Notes
     </section>
     <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.021"
+       id="ID.024"
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.022"
+        id="ID.025"
         title="Notes for section 1"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 1
      </subsection>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.023"
+        id="ID.026"
         rolemaps-to="Part"
        >
       <itemize xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.024"
+         id="ID.027"
          xmlns:List="http://iso.org/pdf/ssn/List"
          List:ListNumbering="Unordered"
          rolemaps-to="L"
         >
-       <LI xmlns="http://iso.org/pdf2/ssn"
-          id="ID.025"
+       <item xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.028"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
-           id="ID.026"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.029"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>
          <Link xmlns="http://iso.org/pdf2/ssn"
-            id="ID.027"
+            id="ID.030"
            >
           <?MarkedContent page="2" ?>1
           <?ReferencedObject type="Annot" page="2" ?>
          </Link>
          <?MarkedContent page="2" ?>.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
-           id="ID.028"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.031"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.029"
+            id="ID.032"
             rolemaps-to="Part"
            >
           <text xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.030"
+             id="ID.033"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
@@ -148,32 +166,35 @@
            <?MarkedContent page="2" ?>An endnote.
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
-          id="ID.031"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.034"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
-           id="ID.032"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.035"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>
          <Link xmlns="http://iso.org/pdf2/ssn"
-            id="ID.033"
+            id="ID.036"
            >
           <?MarkedContent page="2" ?>2
           <?ReferencedObject type="Annot" page="2" ?>
          </Link>
          <?MarkedContent page="2" ?>.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
-           id="ID.034"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.037"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.035"
+            id="ID.038"
             rolemaps-to="Part"
            >
           <text xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.036"
+             id="ID.039"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
@@ -181,55 +202,58 @@
            <?MarkedContent page="2" ?>The second endnote with two lines.
           </text>
          </text-unit>
-        </LBody>
-       </LI>
+        </itembody>
+       </item>
       </itemize>
      </text-unit>
     </Sect>
     <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.037"
+       id="ID.040"
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.038"
+        id="ID.041"
         title="Notes for section 2"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 2
      </subsection>
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.039"
+        id="ID.042"
         rolemaps-to="Part"
        >
       <itemize xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.040"
+         id="ID.043"
          xmlns:List="http://iso.org/pdf/ssn/List"
          List:ListNumbering="Unordered"
          rolemaps-to="L"
         >
-       <LI xmlns="http://iso.org/pdf2/ssn"
-          id="ID.041"
+       <item xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.044"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
-           id="ID.042"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.045"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>
          <Link xmlns="http://iso.org/pdf2/ssn"
-            id="ID.043"
+            id="ID.046"
            >
           <?MarkedContent page="2" ?>1
           <?ReferencedObject type="Annot" page="2" ?>
          </Link>
          <?MarkedContent page="2" ?>.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
-           id="ID.044"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.047"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.045"
+            id="ID.048"
             rolemaps-to="Part"
            >
           <text xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.046"
+             id="ID.049"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
@@ -237,8 +261,8 @@
            <?MarkedContent page="2" ?>A third note.
           </text>
          </text-unit>
-        </LBody>
-       </LI>
+        </itembody>
+       </item>
       </itemize>
      </text-unit>
     </Sect>
