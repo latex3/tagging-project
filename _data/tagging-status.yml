@@ -591,7 +591,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,981,1033]
+  issues: [712,803,851,857,919,981,1033,1341]
   closed-issues: [28,77,811,846,848,850,852,859,875]
   tests: true
   updated: 2026-03-14
@@ -10696,7 +10696,9 @@
   type: package
   status: partially-compatible
   priority: 9
-  comments: "Tagging of each line and line number as its own `<Part>` is not ideal."
+  comments: "Tagging of each line and line number as its own `<Part>` is not ideal.
+             `\\titleauthorpoem` errors."
+  issues: [1345]
   tests: true
   updated: 2024-08-21
 
@@ -11927,7 +11929,7 @@
   status: partially-compatible
   included-in: [arxiv01, ol1]
   priority: 6
-  comments: "`\\sectionrule` produces errors."
+  comments: "`\\sectionrule` produces wrong output."
   tests: true
   updated: 2024-07-26
 
@@ -12302,12 +12304,12 @@
 
 - name: smartref
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
+  issues: [1343]
   tests: true
-  comments: "No links with hyperref."
-  updated: 2024-08-19
+  updated: 2026-05-11
 
 - name: snapshot
   type: package
@@ -13558,11 +13560,12 @@
 
 - name: titleref
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   priority: 9
   tests: true
-  comments: "Incompatible with hyperref."
-  updated: 2024-08-15
+  issues: [1346]
+  comments: "Incompatible with hyperref. Main functionality is broken with tagging code."
+  updated: 2026-05-11
 
 - name: titlesec
   type: package
@@ -15708,7 +15711,7 @@
   type: class
   status: partially-compatible
   priority: 9
-  issues: [1274]
+  closed-issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
