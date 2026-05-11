@@ -13,43 +13,66 @@
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some text with a side note.1
-     <?MarkedContent page="1" ?>A lot of additional text here with a note.2
-     <?MarkedContent page="1" ?>1A first.2A second.Even more text and then two side notes.3
-     <?MarkedContent page="1" ?>†
+     <?MarkedContent page="1" ?>Some text with a side note.
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.007"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
+       >
+      <?MarkedContent page="1" ?>1
+     </Span>
+     <?MarkedContent page="1" ?>
+     <?MarkedContent page="1" ?>A lot of additional text here with a note.
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.012"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
+       >
+      <?MarkedContent page="1" ?>2
+     </Span>
+     <?MarkedContent page="1" ?>
+     <?MarkedContent page="1" ?>1A first.2A second.Even more text and then two side notes.
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.017"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
+       >
+      <?MarkedContent page="1" ?>3
+     </Span>
+     <?MarkedContent page="1" ?>
+     <?MarkedContent page="1" ?>
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.022"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
+       >
+      <?MarkedContent page="1" ?>†
+     </Span>
+     <?MarkedContent page="1" ?>
      <?MarkedContent page="1" ?>A lot of additional lines of text here3A third.†A fourth.to fill up the space on the left.
     </text>
     <Aside xmlns="http://iso.org/pdf2/ssn"
-       id="ID.007"
+       id="ID.008"
       >
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.008"
+        id="ID.009"
         rolemaps-to="Part"
        >
       <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.009"
+         id="ID.010"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>1A first.
-      </text>
-     </text-unit>
-    </Aside>
-    <Aside xmlns="http://iso.org/pdf2/ssn"
-       id="ID.010"
-      >
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.011"
-        rolemaps-to="Part"
-       >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.012"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="P"
-        >
-       <?MarkedContent page="1" ?>2A second.
+       <?MarkedContent page="1" ?>
+       <Span xmlns="http://iso.org/pdf2/ssn"
+          id="ID.011"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextPosition="Sup"
+         >
+        <?MarkedContent page="1" ?>1
+       </Span>
+       <?MarkedContent page="1" ?>A first.
       </text>
      </text-unit>
     </Aside>
@@ -66,24 +89,65 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>3A third.
+       <?MarkedContent page="1" ?>
+       <Span xmlns="http://iso.org/pdf2/ssn"
+          id="ID.016"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextPosition="Sup"
+         >
+        <?MarkedContent page="1" ?>2
+       </Span>
+       <?MarkedContent page="1" ?>A second.
       </text>
      </text-unit>
     </Aside>
     <Aside xmlns="http://iso.org/pdf2/ssn"
-       id="ID.016"
+       id="ID.018"
       >
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.017"
+        id="ID.019"
         rolemaps-to="Part"
        >
       <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.018"
+         id="ID.020"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>†A fourth.
+       <?MarkedContent page="1" ?>
+       <Span xmlns="http://iso.org/pdf2/ssn"
+          id="ID.021"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextPosition="Sup"
+         >
+        <?MarkedContent page="1" ?>3
+       </Span>
+       <?MarkedContent page="1" ?>A third.
+      </text>
+     </text-unit>
+    </Aside>
+    <Aside xmlns="http://iso.org/pdf2/ssn"
+       id="ID.023"
+      >
+     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.024"
+        rolemaps-to="Part"
+       >
+      <text xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.025"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
+         rolemaps-to="P"
+        >
+       <?MarkedContent page="1" ?>
+       <Span xmlns="http://iso.org/pdf2/ssn"
+          id="ID.026"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextPosition="Sup"
+         >
+        <?MarkedContent page="1" ?>†
+       </Span>
+       <?MarkedContent page="1" ?>A fourth.
       </text>
      </text-unit>
     </Aside>
