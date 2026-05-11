@@ -3467,16 +3467,15 @@
 
 - name: colortbl
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  issues: [379]
-  closed-issues: [80,90,749]
+  closed-issues: [80,90,379,749]
   tests: true
   tasks: needs more tests
-  updated: 2025-11-22
+  updated: 2026-05-11
 
 - name: combofont
   type: package
