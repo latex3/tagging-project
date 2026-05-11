@@ -8,32 +8,33 @@
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
        id="ID.007"
-       title="\contentsname \@mkboth {\contentsname }{\contentsname }"
+       title="目 次"
        rolemaps-to="H1"
+       referenced-as="1"
       >
      <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.008"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Start"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.009"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="1" ?>目 次
-      </Span>
+      <?MarkedContent page="1" ?>目 次
      </Span>
     </chapter>
     <TOC xmlns="http://iso.org/pdf/ssn"
-       id="ID.010"
+       id="ID.009"
        title="toc"
       >
+     <TOCI xmlns="http://iso.org/pdf/ssn"
+        id="ID.010"
+        title="目 次"
+       >
+       <?References objects="1" ?>
+     </TOCI>
      <TOCI xmlns="http://iso.org/pdf/ssn"
         id="ID.011"
         title="Chapter"
        >
-       <?References objects="1" ?>
+       <?References objects="2" ?>
      </TOCI>
      <TOC xmlns="http://iso.org/pdf/ssn"
         id="ID.012"
@@ -42,7 +43,7 @@
          id="ID.013"
          title="Section"
         >
-        <?References objects="2" ?>
+        <?References objects="3" ?>
       </TOCI>
       <TOC xmlns="http://iso.org/pdf/ssn"
          id="ID.014"
@@ -51,7 +52,7 @@
           id="ID.015"
           title="Subsection"
          >
-         <?References objects="3" ?>
+         <?References objects="4" ?>
        </TOCI>
       </TOC>
      </TOC>
@@ -64,21 +65,21 @@
        id="ID.017"
        title="Chapter"
        rolemaps-to="H1"
-       referenced-as="1"
+       referenced-as="2"
       >
      <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.018"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Start"
        >
-      <?MarkedContent page="2" ?>第 1 章 
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.019"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="2" ?>Chapter
-      </Span>
+      <?MarkedContent page="2" ?>第 1
+     </Span>
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.019"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextAlign="Start"
+       >
+      <?MarkedContent page="2" ?>Chapter
      </Span>
     </chapter>
     <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -92,7 +93,7 @@
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.022"
          rolemaps-to="Span"
-         referenced-as="2"
+         referenced-as="3"
         >
        <?MarkedContent page="2" ?>1.1 
       </section-number>
@@ -109,7 +110,7 @@
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.025"
           rolemaps-to="Span"
-          referenced-as="3"
+          referenced-as="4"
          >
         <?MarkedContent page="2" ?>1.1.1 
        </section-number>

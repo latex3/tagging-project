@@ -13,75 +13,99 @@
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some textcentered text and #$% blubSome more text
+     <?MarkedContent page="1" ?>Some textcentered text and 
+     <Code xmlns="http://iso.org/pdf/ssn"
+        id="ID.008"
+       >
+      <?MarkedContent page="1" ?>#$%
+     </Code>
+     <?MarkedContent page="1" ?> blubSome more text
     </text>
    </text-unit>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.008"
+      id="ID.009"
       rolemaps-to="Part"
      >
     <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.009"
+       id="ID.010"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>Some textcentered text and #$% blubSome more text
+     <?MarkedContent page="1" ?>Some textcentered text and 
+     <Code xmlns="http://iso.org/pdf/ssn"
+        id="ID.011"
+       >
+      <?MarkedContent page="1" ?>#$%
+     </Code>
+     <?MarkedContent page="1" ?> blubSome more text
     </text>
    </text-unit>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.010"
+      id="ID.012"
       rolemaps-to="Part"
      >
     <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.011"
+       id="ID.013"
        xmlns:List="http://iso.org/pdf/ssn/List"
        List:ListNumbering="Ordered"
        rolemaps-to="L"
       >
-     <LI xmlns="http://iso.org/pdf2/ssn"
-        id="ID.012"
+     <item xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.014"
+        rolemaps-to="LI"
        >
-      <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.013"
+      <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.015"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>1.
-      </Lbl>
-      <LBody xmlns="http://iso.org/pdf2/ssn"
-         id="ID.014"
+      </itemlabel>
+      <itembody xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.016"
+         rolemaps-to="LBody"
         >
        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.015"
+          id="ID.017"
           rolemaps-to="Part"
          >
         <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.016"
+           id="ID.018"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
-         <?MarkedContent page="1" ?>Some textcentered text and #$% blubSome more text
+         <?MarkedContent page="1" ?>Some textcentered text and 
+         <Code xmlns="http://iso.org/pdf/ssn"
+            id="ID.019"
+           >
+          <?MarkedContent page="1" ?>#$%
+         </Code>
+         <?MarkedContent page="1" ?> blubSome more text
         </text>
        </text-unit>
-      </LBody>
-     </LI>
-     <LI xmlns="http://iso.org/pdf2/ssn"
-        id="ID.017"
+      </itembody>
+     </item>
+     <item xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.020"
+        rolemaps-to="LI"
        >
-      <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.018"
+      <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.021"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>2.
-      </Lbl>
-      <LBody xmlns="http://iso.org/pdf2/ssn"
-         id="ID.019"
+      </itemlabel>
+      <itembody xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.022"
+         rolemaps-to="LBody"
         >
        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.020"
+          id="ID.023"
           rolemaps-to="Part"
          >
         <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.021"
+           id="ID.024"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
@@ -89,12 +113,17 @@
          <?MarkedContent page="1" ?>Some text
         </text>
        </text-unit>
+       <Code xmlns="http://iso.org/pdf/ssn"
+          id="ID.025"
+         >
+        <?MarkedContent page="1" ?>#$%
+       </Code>
        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.022"
+          id="ID.026"
           rolemaps-to="Part"
          >
         <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.023"
+           id="ID.027"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
@@ -102,8 +131,8 @@
          <?MarkedContent page="1" ?>Some more text
         </text>
        </text-unit>
-      </LBody>
-     </LI>
+      </itembody>
+     </item>
     </enumerate>
    </text-unit>
   </Document>

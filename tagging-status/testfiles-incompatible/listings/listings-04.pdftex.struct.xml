@@ -8,7 +8,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
-       title="Inline \LaTeX \ code"
+       title="Inline LaTeX code"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -37,7 +37,13 @@
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
-      <?MarkedContent page="1" ?>Testing \ lstinline with\lstinline with the code wrapped in pipes.
+      <?MarkedContent page="1" ?>Testing \ lstinline with
+      <Code xmlns="http://iso.org/pdf/ssn"
+         id="ID.011"
+        >
+       <?MarkedContent page="1" ?>\lstinline
+      </Code>
+      <?MarkedContent page="1" ?>with the code wrapped in pipes.
      </text>
     </text-unit>
    </Sect>
