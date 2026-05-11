@@ -9266,11 +9266,12 @@
 
 - name: newproof
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   priority: 9
-  comments: "Implements proofs as lists so tagging is not ideal."
+  comments: "Errors with 2026 format. Implements proofs as lists so tagging is not ideal."
   tests: true
-  updated: 2024-07-30
+  issues: [1347]
+  updated: 2026-05-11
 
 - name: newpxmath
   ctan-pkg: newpx
