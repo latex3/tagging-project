@@ -591,7 +591,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,981,1033]
+  issues: [712,803,851,857,919,981,1033,1341]
   closed-issues: [28,77,811,846,848,850,852,859,875]
   tests: true
   updated: 2026-03-14
@@ -691,10 +691,11 @@
 
 - name: anonchap
   type: package
-  status: compatible
+  status: partially-compatible
   priority: 9
   tests: true
-  updated: 2024-07-21
+  issues: [1334]
+  updated: 2026-05-11
 
 - name: answers
   type: package
@@ -3466,16 +3467,15 @@
 
 - name: colortbl
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  issues: [379]
-  closed-issues: [80,90,749]
+  closed-issues: [80,90,379,749]
   tests: true
   tasks: needs more tests
-  updated: 2025-11-22
+  updated: 2026-05-11
 
 - name: combofont
   type: package
@@ -9266,11 +9266,12 @@
 
 - name: newproof
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   priority: 9
-  comments: "Implements proofs as lists so tagging is not ideal."
+  comments: "Errors with 2026 format. Implements proofs as lists so tagging is not ideal."
   tests: true
-  updated: 2024-07-30
+  issues: [1347]
+  updated: 2026-05-11
 
 - name: newpxmath
   ctan-pkg: newpx
@@ -9609,11 +9610,11 @@
 
 - name: numerica-tables
   type: package
-  status: currently-incompatible
+  status: compatible
   priority: 9
   issues: [627]
   tests: true
-  updated: 2024-08-20
+  updated: 2026-05-11
 
 - name: numprint
   type: package
@@ -10696,7 +10697,9 @@
   type: package
   status: partially-compatible
   priority: 9
-  comments: "Tagging of each line and line number as its own `<Part>` is not ideal."
+  comments: "Tagging of each line and line number as its own `<Part>` is not ideal.
+             `\\titleauthorpoem` errors."
+  issues: [1345]
   tests: true
   updated: 2024-08-21
 
@@ -11907,11 +11910,12 @@
 
 - name: secdot
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
-  updated: 2024-07-26
+  issues: [1335]
+  updated: 2026-05-11
 
 - name: sectionbreak
   type: package
@@ -11926,7 +11930,7 @@
   status: partially-compatible
   included-in: [arxiv01, ol1]
   priority: 6
-  comments: "`\\sectionrule` produces errors."
+  comments: "`\\sectionrule` produces wrong output."
   tests: true
   updated: 2024-07-26
 
@@ -12301,12 +12305,12 @@
 
 - name: smartref
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
+  issues: [1343]
   tests: true
-  comments: "No links with hyperref."
-  updated: 2024-08-19
+  updated: 2026-05-11
 
 - name: snapshot
   type: package
@@ -13243,11 +13247,12 @@
 
 - name: theoremref
   type: package
-  status: compatible
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
+  issues: [1340]
   tests: true
-  updated: 2026-01-30
+  updated: 2026-05-11
 
 - name: thepdfnumber
   type: package
@@ -13556,11 +13561,12 @@
 
 - name: titleref
   type: package
-  status: partially-compatible
+  status: currently-incompatible
   priority: 9
   tests: true
-  comments: "Incompatible with hyperref."
-  updated: 2024-08-15
+  issues: [1346]
+  comments: "Incompatible with hyperref. Main functionality is broken with tagging code."
+  updated: 2026-05-11
 
 - name: titlesec
   type: package
@@ -13656,11 +13662,12 @@
 
 - name: tocbibind
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
+  issues: [1338]
   tests: true
-  updated: 2024-08-06
+  updated: 2026-05-11
 
 - name: tocdata
   type: package
@@ -15705,7 +15712,7 @@
   type: class
   status: partially-compatible
   priority: 9
-  issues: [1274]
+  closed-issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
