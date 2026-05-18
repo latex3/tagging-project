@@ -8015,7 +8015,10 @@
 - name: luatexja
   type: package
   subpackages: [luatexja-core,ltj-base,ltj-latex,lltjfont,lltjdefs,lltjcore,
-                lltjp-atbegshi,lltjp-geometry,luatexja-compat,lltjp-array]
+                lltjp-atbegshi,lltjp-geometry,luatexja-compat,lltjp-array,lltjext
+                lltjp-collcell,lltjp-everyshi,lltjp-fancyvrb,lltjp-fontspec,lltjp-footmisc,
+                lltjp-geometry,lltjp-listings,lltjp-microtype,lltjp-preview,lltjp-siunitx,
+                lltjp-stfloats,lltjp-tascmac,lltjp-unicode-math,lltjp-xunicode]
   status: compatible
   included-in: [tlc3, ol0.02]
   priority: 8
@@ -8024,6 +8027,26 @@
   closed-issues: [87]
   luatex-only: true
   tests: true
+  updated: 2026-05-18
+
+- name: luatexja-adjust
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ajmacros
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
   updated: 2026-05-18
 
 - name: luatexja-fontspec
@@ -8035,6 +8058,46 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: luatexja-otf
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-preset
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ruby
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-zhfonts
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
 
 - name: luatexko
   type: package
