@@ -8014,15 +8014,40 @@
 
 - name: luatexja
   type: package
-  status: currently-incompatible
+  subpackages: [luatexja-core,ltj-base,ltj-latex,lltjfont,lltjdefs,lltjcore,
+                lltjp-atbegshi,lltjp-geometry,luatexja-compat,lltjp-array,lltjext
+                lltjp-collcell,lltjp-everyshi,lltjp-fancyvrb,lltjp-fontspec,lltjp-footmisc,
+                lltjp-geometry,lltjp-listings,lltjp-microtype,lltjp-preview,lltjp-siunitx,
+                lltjp-stfloats,lltjp-tascmac,lltjp-unicode-math,lltjp-xunicode]
+  status: compatible
   included-in: [tlc3, ol0.02]
   priority: 8
-  comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
+  comments: "Some extension packages may not be compatible, e.g. luatexja-ruby."
   issues: [713]
   closed-issues: [87]
   luatex-only: true
   tests: true
-  updated: 2026-01-26
+  updated: 2026-05-18
+
+- name: luatexja-adjust
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ajmacros
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
 
 - name: luatexja-fontspec
   ctan-pkg: luatexja
@@ -8033,6 +8058,46 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: luatexja-otf
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-preset
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ruby
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-zhfonts
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
 
 - name: luatexko
   type: package
@@ -15608,101 +15673,123 @@
 - name: ltjarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: true
-  comments: "Breaks TOC tagging and `\\chapter` errors."
-  updated: 2025-11-05
+  comments:
+  updated: 2026-05-18
 
 - name: ltjsarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjsreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjsbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjsreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
+
+- name: ltjskiyou
+  ctan-pkg: luatexja
+  type: class
+  status: compatible
+  luatex-only: true
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2026-05-18
+
+- name: ltjspf
+  ctan-pkg: luatexja
+  type: class
+  status: compatible
+  luatex-only: true
+  priority: 9
+  issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2026-05-18
 
 - name: ltjsreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: true
-  comments: "Breaks TOC and section heading tagging."
-  updated: 2025-11-05
+  comments:
+  updated: 2026-05-18
 
 - name: ltjtarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjtbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjtreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
   issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltugboat
   ctan-pkg: tugboat
