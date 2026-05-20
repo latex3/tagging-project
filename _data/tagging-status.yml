@@ -828,7 +828,7 @@
   status: no-support
   included-in: [ol0.02]
   priority: 9
-  issues: [1223]
+  closed-issues: [1223]
   tests: false
   comments: "Use lualatex and babel with OpenType fonts instead."
   updated: 2026-02-09
@@ -1435,8 +1435,8 @@
   included-in: [tlc3]
   priority: 2
   comments: active character issues
-  issues: [694,932]
-  closed-issues: [414]
+  issues: [932]
+  closed-issues: [414,694]
   tests: false
   tasks: needs tests
   updated: 2025-07-02
@@ -3472,8 +3472,7 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  issues: [379]
-  closed-issues: [80,90,749]
+  closed-issues: [80,90,379,749,1331]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -6517,7 +6516,8 @@
   priority: 2
   subpackages: [nohyperref]
   references: [2]
-  issues: [892,1197]
+  issues: [892]
+  closed-issues: [1197]
   tests: true
   comments: "Forms not supported; use l3pdffield-testphase for forms."
   updated: 2025-06-07
@@ -7742,8 +7742,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1192]
-  closed-issues: [22,38,554,714]
+  closed-issues: [22,38,554,714,1192]
   comments: "A longtable with page breaks works with pdftex only if at least
              latex-dev from February 2025 is used."
   tests: true
@@ -8023,8 +8022,7 @@
   included-in: [tlc3, ol0.02]
   priority: 8
   comments: "Some extension packages may not be compatible, e.g. luatexja-ruby."
-  issues: [713]
-  closed-issues: [87]
+  closed-issues: [87,713]
   luatex-only: true
   tests: true
   updated: 2026-05-18
@@ -8309,7 +8307,7 @@
   type: package
   status: compatible
   priority: 9
-  issues: [874]
+  closed-issues: [874]
   luatex-only: true
   tests: true
   updated: 2025-10-28
@@ -11752,7 +11750,7 @@
   type: package
   status: compatible
   priority: 9
-  issues: [1044]
+  closed-issues: [1044]
   tests: true
   updated: 2025-11-06
 
@@ -15676,7 +15674,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
   updated: 2026-05-18
@@ -15687,7 +15685,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
   updated: 2026-05-18
@@ -15698,7 +15696,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: true
   comments:
   updated: 2026-05-18
@@ -15709,7 +15707,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
   updated: 2026-05-18
@@ -15720,7 +15718,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
   updated: 2026-05-18
@@ -15731,7 +15729,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
   updated: 2026-05-18
@@ -15742,7 +15740,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
   updated: 2026-05-18
@@ -15753,7 +15751,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: true
   comments:
   updated: 2026-05-18
@@ -15764,7 +15762,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
   updated: 2026-05-18
@@ -15775,7 +15773,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
   updated: 2026-05-18
@@ -15786,7 +15784,7 @@
   status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
   updated: 2026-05-18
@@ -15796,7 +15794,7 @@
   type: class
   status: partially-compatible
   priority: 9
-  issues: [1274]
+  closed-issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   updated: 2025-06-08
