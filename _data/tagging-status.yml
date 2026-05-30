@@ -828,7 +828,7 @@
   status: no-support
   included-in: [ol0.02]
   priority: 9
-  issues: [1223]
+  closed-issues: [1223]
   tests: false
   comments: "Use lualatex and babel with OpenType fonts instead."
   updated: 2026-02-09
@@ -1435,8 +1435,8 @@
   included-in: [tlc3]
   priority: 2
   comments: active character issues
-  issues: [694,932]
-  closed-issues: [414]
+  issues: [932]
+  closed-issues: [414,694]
   tests: false
   tasks: needs tests
   updated: 2025-07-02
@@ -3472,7 +3472,7 @@
   priority: 2
   comments: "Breaks tagging if tables are nested. #90 issue with longtable fixed
              at the last release. #749 fixed in newest colortbl version."
-  closed-issues: [80,90,379,749]
+  closed-issues: [80,90,379,749,1331]
   tests: true
   tasks: needs more tests
   updated: 2026-05-11
@@ -3642,10 +3642,11 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1, ol5]
   priority: 2
-  comments: "`blockquote` produces duplicate tags."
-  issues: [3,1041]
+  comments: "Extra space after opening quote with luatex."
+  issues: [1041]
+  closed-issues: [3]
   tests: true
-  updated: 2025-11-05
+  updated: 2026-05-20
 
 - name: csvsimple
   type: package
@@ -6514,7 +6515,8 @@
   priority: 2
   subpackages: [nohyperref]
   references: [2]
-  issues: [892,1197]
+  issues: [892]
+  closed-issues: [1197]
   tests: true
   comments: "Forms not supported; use l3pdffield-testphase for forms."
   updated: 2025-06-07
@@ -7739,8 +7741,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1192]
-  closed-issues: [22,38,554,714]
+  closed-issues: [22,38,554,714,1192]
   comments: "A longtable with page breaks works with pdftex only if at least
              latex-dev from February 2025 is used."
   tests: true
@@ -8011,15 +8012,39 @@
 
 - name: luatexja
   type: package
-  status: currently-incompatible
+  subpackages: [luatexja-core,ltj-base,ltj-latex,lltjfont,lltjdefs,lltjcore,
+                lltjp-atbegshi,lltjp-geometry,luatexja-compat,lltjp-array,lltjext
+                lltjp-collcell,lltjp-everyshi,lltjp-fancyvrb,lltjp-fontspec,lltjp-footmisc,
+                lltjp-geometry,lltjp-listings,lltjp-microtype,lltjp-preview,lltjp-siunitx,
+                lltjp-stfloats,lltjp-tascmac,lltjp-unicode-math,lltjp-xunicode]
+  status: compatible
   included-in: [tlc3, ol0.02]
   priority: 8
-  comments: "`ltj<name>`, `ltjt<name>`, and `ltjs<name>` classes incompatible."
-  issues: [713]
-  closed-issues: [87]
+  comments: "Some extension packages may not be compatible, e.g. luatexja-ruby."
+  closed-issues: [87,713]
   luatex-only: true
   tests: true
-  updated: 2026-01-26
+  updated: 2026-05-18
+
+- name: luatexja-adjust
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ajmacros
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
 
 - name: luatexja-fontspec
   ctan-pkg: luatexja
@@ -8030,6 +8055,46 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: luatexja-otf
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-preset
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-ruby
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
+
+- name: luatexja-zhfonts
+  ctan-pkg: luatexja
+  type: package
+  status: unchecked
+  included-in:
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-05-18
 
 - name: luatexko
   type: package
@@ -8241,7 +8306,7 @@
   type: package
   status: compatible
   priority: 9
-  issues: [874]
+  closed-issues: [874]
   luatex-only: true
   tests: true
   updated: 2025-10-28
@@ -11687,7 +11752,7 @@
   type: package
   status: compatible
   priority: 9
-  issues: [1044]
+  closed-issues: [1044]
   tests: true
   updated: 2025-11-06
 
@@ -12305,7 +12370,8 @@
 
 - name: smartref
   type: package
-  status: currently-incompatible
+  subpackages: [byname]
+  status: partially-compatible
   included-in: [arxiv001]
   priority: 7
   issues: [1343]
@@ -15611,101 +15677,123 @@
 - name: ltjarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: true
-  comments: "Breaks TOC tagging and `\\chapter` errors."
-  updated: 2025-11-05
+  comments:
+  updated: 2026-05-18
 
 - name: ltjsarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjsbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjsreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
+
+- name: ltjskiyou
+  ctan-pkg: luatexja
+  type: class
+  status: compatible
+  luatex-only: true
+  priority: 9
+  closed-issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2026-05-18
+
+- name: ltjspf
+  ctan-pkg: luatexja
+  type: class
+  status: compatible
+  luatex-only: true
+  priority: 9
+  closed-issues: [713]
+  tests: false
+  comments: See ltjsreport.
+  updated: 2026-05-18
 
 - name: ltjsreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: true
-  comments: "Breaks TOC and section heading tagging."
-  updated: 2025-11-05
+  comments:
+  updated: 2026-05-18
 
 - name: ltjtarticle
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjtbook
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltjtreport
   ctan-pkg: luatexja
   type: class
-  status: currently-incompatible
+  status: compatible
   luatex-only: true
   priority: 9
-  issues: [713]
+  closed-issues: [713]
   tests: false
   comments: See ltjreport.
-  updated: 2025-11-05
+  updated: 2026-05-18
 
 - name: ltugboat
   ctan-pkg: tugboat
@@ -15764,9 +15852,9 @@
   status: compatible
   luatex-only: true
   priority: 9
-  comments: "Validates under luatex (don't use subcaptions)."
+  comments: "Validates under luatex"
   tests: true
-  updated: 2025-11-12
+  updated: 2026-05-20
 
 - name: moderncv
   type: class
