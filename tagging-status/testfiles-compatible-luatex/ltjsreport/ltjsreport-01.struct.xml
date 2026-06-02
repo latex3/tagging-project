@@ -8,7 +8,7 @@
      >
     <chapter xmlns="https://www.latex-project.org/ns/book"
        id="ID.007"
-       title="\contentsname "
+       title="目次"
        rolemaps-to="H1"
       >
      <Span xmlns="http://iso.org/pdf2/ssn"
@@ -89,35 +89,50 @@
     </chapter>
     <Sect xmlns="http://iso.org/pdf2/ssn"
        id="ID.021"
-       referenced-as="2"
       >
      <section xmlns="https://www.latex-project.org/ns/book"
         id="ID.022"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
+        title="Section"
         rolemaps-to="H2"
        >
+      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.023"
+         rolemaps-to="Span"
+         referenced-as="2"
+        >
+       <?MarkedContent page="2" ?>1.1 
+      </section-number>
       <?MarkedContent page="2" ?>Section
      </section>
      <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.023"
+        id="ID.024"
        >
       <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.024"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
+         id="ID.025"
+         title="Subsection"
          rolemaps-to="H3"
         >
+       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.026"
+          rolemaps-to="Span"
+         >
+        <?MarkedContent page="2" ?>1.1.1 
+       </section-number>
        <?MarkedContent page="2" ?>Subsection
       </subsection>
-      <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.025"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="H3"
+      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.027"
+         rolemaps-to="Part"
         >
-       <?MarkedContent page="2" ?>text
-      </subsection>
+       <text xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.028"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextAlign="Justify"
+          rolemaps-to="P"
+         >
+        <?MarkedContent page="2" ?>text
+       </text>
+      </text-unit>
      </Sect>
     </Sect>
    </Sect>

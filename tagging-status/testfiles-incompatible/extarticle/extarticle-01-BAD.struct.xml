@@ -54,7 +54,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0015"
-       title="Contents\@mkboth {\MakeUppercase \contentsname }{\MakeUppercase \contentsname }"
+       title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
@@ -254,7 +254,7 @@
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0052"
-       title="Heading on level\xspace 1 (section)"
+       title="Heading on level1 (section)"
        rolemaps-to="H1"
       >
      <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -284,7 +284,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0057"
-        title="Heading on level\xspace 2 (subsection)"
+        title="Heading on level2 (subsection)"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -306,8 +306,8 @@
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
-       <?MarkedContent page="1" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies 
-       <?MarkedContent page="2" ?>vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
+       <?MarkedContent page="1" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit 
+       <?MarkedContent page="2" ?>amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
       </text>
      </text-unit>
      <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -315,7 +315,7 @@
        >
       <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0062"
-         title="Heading on level\xspace 3 (subsubsection)"
+         title="Heading on level3 (subsubsection)"
          rolemaps-to="H3"
         >
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -393,7 +393,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0074"
-        title="Example for list\xspace (itemize)"
+        title="Example for list(itemize)"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -415,16 +415,19 @@
          List:ListNumbering="Unordered"
          rolemaps-to="L"
         >
-       <LI xmlns="http://iso.org/pdf2/ssn"
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0078"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0079"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>•
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0080"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0081"
@@ -439,18 +442,21 @@
            <?MarkedContent page="2" ?>First itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0083"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0084"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>•
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0085"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0086"
@@ -465,18 +471,21 @@
            <?MarkedContent page="2" ?>Second itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0088"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0089"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>•
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0090"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0091"
@@ -491,18 +500,21 @@
            <?MarkedContent page="2" ?>Last itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0093"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0094"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>•
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0095"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0096"
@@ -517,18 +529,21 @@
            <?MarkedContent page="2" ?>First itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0098"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0099"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="2" ?>•
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0100"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0101"
@@ -543,8 +558,8 @@
            <?MarkedContent page="2" ?>Second itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
+        </itembody>
+       </item>
       </itemize>
      </text-unit>
      <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -552,7 +567,7 @@
        >
       <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0104"
-         title="Example for list\xspace (4*itemize)"
+         title="Example for list(4*itemize)"
          rolemaps-to="H3"
         >
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -574,16 +589,19 @@
           List:ListNumbering="Unordered"
           rolemaps-to="L"
          >
-        <LI xmlns="http://iso.org/pdf2/ssn"
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0108"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0109"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="3" ?>•
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0110"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0111"
@@ -603,16 +621,19 @@
               List:ListNumbering="Unordered"
               rolemaps-to="L"
              >
-            <LI xmlns="http://iso.org/pdf2/ssn"
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0114"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0115"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="3" ?>–
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0116"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0117"
@@ -632,16 +653,19 @@
                   List:ListNumbering="Unordered"
                   rolemaps-to="L"
                  >
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0120"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0121"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="3" ?>∗
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0122"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0123"
@@ -661,16 +685,19 @@
                       List:ListNumbering="Unordered"
                       rolemaps-to="L"
                      >
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0126"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0127"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="3" ?>·
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0128"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0129"
@@ -685,18 +712,21 @@
                         <?MarkedContent page="3" ?>First itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                     </itembody>
+                    </item>
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0131"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0132"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="3" ?>·
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0133"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0134"
@@ -711,22 +741,25 @@
                         <?MarkedContent page="3" ?>Second itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
+                     </itembody>
+                    </item>
                    </itemize>
                   </text-unit>
-                 </LBody>
-                </LI>
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                 </itembody>
+                </item>
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0136"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0137"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="3" ?>∗
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0138"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0139"
@@ -741,22 +774,25 @@
                     <?MarkedContent page="3" ?>Last itemtext
                    </text>
                   </text-unit>
-                 </LBody>
-                </LI>
+                 </itembody>
+                </item>
                </itemize>
               </text-unit>
-             </LBody>
-            </LI>
-            <LI xmlns="http://iso.org/pdf2/ssn"
+             </itembody>
+            </item>
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0141"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0142"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="3" ?>–
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0143"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0144"
@@ -771,22 +807,25 @@
                 <?MarkedContent page="3" ?>First itemtext
                </text>
               </text-unit>
-             </LBody>
-            </LI>
+             </itembody>
+            </item>
            </itemize>
           </text-unit>
-         </LBody>
-        </LI>
-        <LI xmlns="http://iso.org/pdf2/ssn"
+         </itembody>
+        </item>
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0146"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0147"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="3" ?>•
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0148"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0149"
@@ -801,8 +840,8 @@
             <?MarkedContent page="3" ?>Second itemtext
            </text>
           </text-unit>
-         </LBody>
-        </LI>
+         </itembody>
+        </item>
        </itemize>
       </text-unit>
      </Sect>
@@ -812,7 +851,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0152"
-        title="Example for list\xspace (enumerate)"
+        title="Example for list(enumerate)"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -834,16 +873,19 @@
          List:ListNumbering="Ordered"
          rolemaps-to="L"
         >
-       <LI xmlns="http://iso.org/pdf2/ssn"
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0156"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0157"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>1.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0158"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0159"
@@ -858,18 +900,21 @@
            <?MarkedContent page="3" ?>First itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0161"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0162"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>2.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0163"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0164"
@@ -884,18 +929,21 @@
            <?MarkedContent page="3" ?>Second itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0166"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0167"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>3.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0168"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0169"
@@ -910,18 +958,21 @@
            <?MarkedContent page="3" ?>Last itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0171"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0172"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>4.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0173"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0174"
@@ -936,18 +987,21 @@
            <?MarkedContent page="3" ?>First itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0176"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0177"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>5.
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0178"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0179"
@@ -962,8 +1016,8 @@
            <?MarkedContent page="3" ?>Second itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
+        </itembody>
+       </item>
       </enumerate>
      </text-unit>
      <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -971,7 +1025,7 @@
        >
       <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0182"
-         title="Example for list\xspace (4*enumerate)"
+         title="Example for list(4*enumerate)"
          rolemaps-to="H3"
         >
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -993,16 +1047,19 @@
           List:ListNumbering="Ordered"
           rolemaps-to="L"
          >
-        <LI xmlns="http://iso.org/pdf2/ssn"
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0186"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0187"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="3" ?>1.
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0188"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0189"
@@ -1022,16 +1079,19 @@
               List:ListNumbering="Ordered"
               rolemaps-to="L"
              >
-            <LI xmlns="http://iso.org/pdf2/ssn"
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0192"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0193"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="3" ?>(a)
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0194"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0195"
@@ -1051,16 +1111,19 @@
                   List:ListNumbering="Ordered"
                   rolemaps-to="L"
                  >
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0198"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0199"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="3" ?>i.
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0200"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0201"
@@ -1080,16 +1143,19 @@
                       List:ListNumbering="Ordered"
                       rolemaps-to="L"
                      >
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0204"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0205"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="3" ?>A.
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0206"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0207"
@@ -1104,18 +1170,21 @@
                         <?MarkedContent page="3" ?>First itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                     </itembody>
+                    </item>
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0209"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0210"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="3" ?>B.
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0211"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0212"
@@ -1130,22 +1199,25 @@
                         <?MarkedContent page="3" ?>Second itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
+                     </itembody>
+                    </item>
                    </enumerate>
                   </text-unit>
-                 </LBody>
-                </LI>
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                 </itembody>
+                </item>
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0214"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0215"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="3" ?>ii.
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0216"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0217"
@@ -1160,22 +1232,25 @@
                     <?MarkedContent page="3" ?>Last itemtext
                    </text>
                   </text-unit>
-                 </LBody>
-                </LI>
+                 </itembody>
+                </item>
                </enumerate>
               </text-unit>
-             </LBody>
-            </LI>
-            <LI xmlns="http://iso.org/pdf2/ssn"
+             </itembody>
+            </item>
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0219"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0220"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="3" ?>(b)
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0221"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0222"
@@ -1190,22 +1265,25 @@
                 <?MarkedContent page="3" ?>First itemtext
                </text>
               </text-unit>
-             </LBody>
-            </LI>
+             </itembody>
+            </item>
            </enumerate>
           </text-unit>
-         </LBody>
-        </LI>
-        <LI xmlns="http://iso.org/pdf2/ssn"
+         </itembody>
+        </item>
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0224"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0225"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="3" ?>2.
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0226"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0227"
@@ -1220,8 +1298,8 @@
             <?MarkedContent page="3" ?>Second itemtext
            </text>
           </text-unit>
-         </LBody>
-        </LI>
+         </itembody>
+        </item>
        </enumerate>
       </text-unit>
      </Sect>
@@ -1231,7 +1309,7 @@
       >
      <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0230"
-        title="Example for list\xspace (description)"
+        title="Example for list(description)"
         rolemaps-to="H2"
        >
       <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1253,16 +1331,19 @@
          List:ListNumbering="Description"
          rolemaps-to="L"
         >
-       <LI xmlns="http://iso.org/pdf2/ssn"
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0234"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0235"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>First
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0236"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0237"
@@ -1277,18 +1358,21 @@
            <?MarkedContent page="3" ?>itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0239"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0240"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>Second
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0241"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0242"
@@ -1303,18 +1387,21 @@
            <?MarkedContent page="3" ?>itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0244"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0245"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>Last
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0246"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0247"
@@ -1329,18 +1416,21 @@
            <?MarkedContent page="3" ?>itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0249"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0250"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>First
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0251"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0252"
@@ -1355,18 +1445,21 @@
            <?MarkedContent page="3" ?>itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
-       <LI xmlns="http://iso.org/pdf2/ssn"
+        </itembody>
+       </item>
+       <item xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0254"
+          rolemaps-to="LI"
          >
-        <Lbl xmlns="http://iso.org/pdf2/ssn"
+        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0255"
+           rolemaps-to="Lbl"
           >
          <?MarkedContent page="3" ?>Second
-        </Lbl>
-        <LBody xmlns="http://iso.org/pdf2/ssn"
+        </itemlabel>
+        <itembody xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0256"
+           rolemaps-to="LBody"
           >
          <text-unit xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0257"
@@ -1381,8 +1474,8 @@
            <?MarkedContent page="3" ?>itemtext
           </text>
          </text-unit>
-        </LBody>
-       </LI>
+        </itembody>
+       </item>
       </description>
      </text-unit>
      <Sect xmlns="http://iso.org/pdf2/ssn"
@@ -1390,7 +1483,7 @@
        >
       <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0260"
-         title="Example for list\xspace (4*description)"
+         title="Example for list(4*description)"
          rolemaps-to="H3"
         >
        <section-number xmlns="https://www.latex-project.org/ns/dflt"
@@ -1412,16 +1505,19 @@
           List:ListNumbering="Description"
           rolemaps-to="L"
          >
-        <LI xmlns="http://iso.org/pdf2/ssn"
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0264"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0265"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="4" ?>First
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0266"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0267"
@@ -1441,16 +1537,19 @@
               List:ListNumbering="Description"
               rolemaps-to="L"
              >
-            <LI xmlns="http://iso.org/pdf2/ssn"
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0270"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0271"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="4" ?>First
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0272"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0273"
@@ -1470,16 +1569,19 @@
                   List:ListNumbering="Description"
                   rolemaps-to="L"
                  >
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0276"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0277"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="4" ?>First
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0278"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0279"
@@ -1499,16 +1601,19 @@
                       List:ListNumbering="Description"
                       rolemaps-to="L"
                      >
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0282"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0283"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="4" ?>First
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0284"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0285"
@@ -1523,18 +1628,21 @@
                         <?MarkedContent page="4" ?>itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
-                    <LI xmlns="http://iso.org/pdf2/ssn"
+                     </itembody>
+                    </item>
+                    <item xmlns="https://www.latex-project.org/ns/dflt"
                        id="ID.0287"
+                       rolemaps-to="LI"
                       >
-                     <Lbl xmlns="http://iso.org/pdf2/ssn"
+                     <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0288"
+                        rolemaps-to="Lbl"
                        >
                       <?MarkedContent page="4" ?>Second
-                     </Lbl>
-                     <LBody xmlns="http://iso.org/pdf2/ssn"
+                     </itemlabel>
+                     <itembody xmlns="https://www.latex-project.org/ns/dflt"
                         id="ID.0289"
+                        rolemaps-to="LBody"
                        >
                       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                          id="ID.0290"
@@ -1549,22 +1657,25 @@
                         <?MarkedContent page="4" ?>itemtext
                        </text>
                       </text-unit>
-                     </LBody>
-                    </LI>
+                     </itembody>
+                    </item>
                    </description>
                   </text-unit>
-                 </LBody>
-                </LI>
-                <LI xmlns="http://iso.org/pdf2/ssn"
+                 </itembody>
+                </item>
+                <item xmlns="https://www.latex-project.org/ns/dflt"
                    id="ID.0292"
+                   rolemaps-to="LI"
                   >
-                 <Lbl xmlns="http://iso.org/pdf2/ssn"
+                 <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0293"
+                    rolemaps-to="Lbl"
                    >
                   <?MarkedContent page="4" ?>Last
-                 </Lbl>
-                 <LBody xmlns="http://iso.org/pdf2/ssn"
+                 </itemlabel>
+                 <itembody xmlns="https://www.latex-project.org/ns/dflt"
                     id="ID.0294"
+                    rolemaps-to="LBody"
                    >
                   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                      id="ID.0295"
@@ -1579,22 +1690,25 @@
                     <?MarkedContent page="4" ?>itemtext
                    </text>
                   </text-unit>
-                 </LBody>
-                </LI>
+                 </itembody>
+                </item>
                </description>
               </text-unit>
-             </LBody>
-            </LI>
-            <LI xmlns="http://iso.org/pdf2/ssn"
+             </itembody>
+            </item>
+            <item xmlns="https://www.latex-project.org/ns/dflt"
                id="ID.0297"
+               rolemaps-to="LI"
               >
-             <Lbl xmlns="http://iso.org/pdf2/ssn"
+             <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0298"
+                rolemaps-to="Lbl"
                >
               <?MarkedContent page="4" ?>First
-             </Lbl>
-             <LBody xmlns="http://iso.org/pdf2/ssn"
+             </itemlabel>
+             <itembody xmlns="https://www.latex-project.org/ns/dflt"
                 id="ID.0299"
+                rolemaps-to="LBody"
                >
               <text-unit xmlns="https://www.latex-project.org/ns/dflt"
                  id="ID.0300"
@@ -1609,22 +1723,25 @@
                 <?MarkedContent page="4" ?>itemtext
                </text>
               </text-unit>
-             </LBody>
-            </LI>
+             </itembody>
+            </item>
            </description>
           </text-unit>
-         </LBody>
-        </LI>
-        <LI xmlns="http://iso.org/pdf2/ssn"
+         </itembody>
+        </item>
+        <item xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0302"
+           rolemaps-to="LI"
           >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
+         <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0303"
+            rolemaps-to="Lbl"
            >
           <?MarkedContent page="4" ?>Second
-         </Lbl>
-         <LBody xmlns="http://iso.org/pdf2/ssn"
+         </itemlabel>
+         <itembody xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0304"
+            rolemaps-to="LBody"
            >
           <text-unit xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0305"
@@ -1639,8 +1756,8 @@
             <?MarkedContent page="4" ?>itemtext
            </text>
           </text-unit>
-         </LBody>
-        </LI>
+         </itembody>
+        </item>
        </description>
       </text-unit>
      </Sect>

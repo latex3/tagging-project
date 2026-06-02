@@ -14,102 +14,121 @@
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Some text
-     <Reference xmlns="http://iso.org/pdf/ssn"
+     <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.007"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
        >
-       <?References objects="1" ?>
       <?MarkedContent page="1" ?>
-      <Link xmlns="http://iso.org/pdf2/ssn"
+      <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.008"
         >
-       <?MarkedContent page="1" ?>1
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
+        <?References objects="1" ?>
+       <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.009"
+         >
+        <?MarkedContent page="1" ?>1
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+       <?MarkedContent page="1" ?>
+      </Reference>
       <?MarkedContent page="1" ?>
-     </Reference>
+     </Span>
      <?MarkedContent page="1" ?>some more text.
     </text>
    </text-unit>
    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.009"
+      id="ID.010"
       rolemaps-to="Part"
      >
     <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.010"
+       id="ID.011"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Some text ending a sentence.
-     <Reference xmlns="http://iso.org/pdf/ssn"
-        id="ID.011"
+     <Span xmlns="http://iso.org/pdf2/ssn"
+        id="ID.012"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:TextPosition="Sup"
        >
-       <?References objects="1" ?>
       <?MarkedContent page="1" ?>
-      <Link xmlns="http://iso.org/pdf2/ssn"
-         id="ID.012"
+      <Reference xmlns="http://iso.org/pdf/ssn"
+         id="ID.013"
         >
-       <?MarkedContent page="1" ?>1
-       <?ReferencedObject type="Annot" page="1" ?>
-      </Link>
+        <?References objects="1" ?>
+       <?MarkedContent page="1" ?>
+       <Link xmlns="http://iso.org/pdf2/ssn"
+          id="ID.014"
+         >
+        <?MarkedContent page="1" ?>1
+        <?ReferencedObject type="Annot" page="1" ?>
+       </Link>
+       <?MarkedContent page="1" ?>
+      </Reference>
       <?MarkedContent page="1" ?>
-     </Reference>
+     </Span>
      <?MarkedContent page="1" ?>
     </text>
    </text-unit>
    <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.013"
+      id="ID.015"
      >
     <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.014"
-       title="\refname \@mkboth {\MakeUppercase {\refname }}{\MakeUppercase {\refname }}"
+       id="ID.016"
+       title="References"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>References
     </section>
     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.015"
+       id="ID.017"
        rolemaps-to="Part"
       >
      <list xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.016"
+        id="ID.018"
         xmlns:List="http://iso.org/pdf/ssn/List"
         List:ListNumbering="Unordered"
         rolemaps-to="L"
        >
-      <LI xmlns="http://iso.org/pdf2/ssn"
-         id="ID.017"
+      <item xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.019"
+         rolemaps-to="LI"
          referenced-as="1"
         >
-       <Lbl xmlns="http://iso.org/pdf2/ssn"
-          id="ID.018"
+       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.020"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="1" ?>[1]
-       </Lbl>
-       <LBody xmlns="http://iso.org/pdf2/ssn"
-          id="ID.019"
+       </itemlabel>
+       <itembody xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.021"
+          rolemaps-to="LBody"
          >
         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.020"
+           id="ID.022"
            rolemaps-to="Part"
           >
          <text xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.021"
+            id="ID.023"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
           <?MarkedContent page="1" ?>Albert Einstein. Zur Elektrodynamik bewegter Körper. (German) [On theelectrodynamics of moving bodies].
           <Em xmlns="http://iso.org/pdf2/ssn"
-             id="ID.022"
+             id="ID.024"
             >
            <?MarkedContent page="1" ?>Annalen der Physik
           </Em>
           <?MarkedContent page="1" ?>, 322(10):891–921,1905. doi: http://dx.doi.org/10.1002/andp.19053221004.
          </text>
         </text-unit>
-       </LBody>
-      </LI>
+       </itembody>
+      </item>
      </list>
     </text-unit>
    </Sect>
