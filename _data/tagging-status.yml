@@ -591,8 +591,8 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,981,1033,1341]
-  closed-issues: [28,77,811,846,848,850,852,859,875]
+  issues: [712,803,851,857,919,1033,1341]
+  closed-issues: [28,77,811,846,848,850,852,859,875,981]
   tests: true
   updated: 2026-03-14
 
@@ -647,9 +647,9 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [759,790,792,944,1083,1162,1166,1196,1199,1200,1201,
+  issues: [759,790,792,944,1083,1199,1201,
            1202,1203,1207,1216,1218,1221,1224,1225,1232]
-  closed-issues: [83,733,736,835]
+  closed-issues: [83,733,736,835,1162,1166,1196,1200]
   tests: true
   updated: 2026-01-19
 
@@ -4878,9 +4878,9 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [1154]
+  closed-issues: [1154]
   tests: true
-  updated: 2026-05-10
+  updated: 2026-06-02
 
 - name: exsheets
   type: package
@@ -8539,8 +8539,8 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922,1119]
-  closed-issues: [734]
+  issues: [139,922]
+  closed-issues: [734,1119]
   tests: true
   updated: 2025-12-11
 
@@ -9187,9 +9187,10 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   issues: [1282]
+  closed-issues: [1358]
   tests: false
   tasks: Needs tests
-  updated: 2026-03-30
+  updated: 2026-06-02
 
 - name: nath
   type: package
@@ -13399,7 +13400,7 @@
   priority: 2
   comments: "Tagging code defines `alt`, `actualtext`, and `artifact` keys when tikz is loaded."
   issues: [1160,1208,1228]
-  closed-issues: [1156]
+  closed-issues: [1156,1344]
   references: [1]
   tests: true
   updated: 2026-01-19
@@ -15374,21 +15375,23 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737,970]
+  issues: [443,737]
+  closed-issues: [970]
   tests: false
   tasks: needs further tests
-  updated: 2025-09-12
+  updated: 2026-06-02
 
 - name: amsbook
   type: class
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737,970]
+  issues: [443,737]
+  closed-issues: [970]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: false
   tasks: needs further tests
-  updated: 2025-09-12
+  updated: 2026-06-02
 
 - name: amsldoc
   ctan-pkg: amscls
@@ -15407,10 +15410,11 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737,970]
+  issues: [443,737]
+  closed-issues: [970]
   tests: false
   tasks: needs further tests
-  updated: 2025-09-12
+  updated: 2026-06-02
 
 - name: article
   type: class
