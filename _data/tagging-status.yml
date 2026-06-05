@@ -211,6 +211,7 @@
   priority: 2
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/wgrundlingh/abraces"
   updated: 2024-05-28
 
 - name: abstract
@@ -249,6 +250,7 @@
   comments: "amsmath must be loaded before accents.
              Incompatible with unicode-math. No luamml support."
   tests: true
+  package-repository: "https://github.com/jbezos/accents"
   updated: 2025-05-28
 
 - name: accsupp
@@ -258,6 +260,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/accsupp"
   updated: 2024-07-16
 
 - name: achemso
@@ -475,6 +478,7 @@
   issues: [229]
   comments: "Obsolete with June 2026 release."
   tests: true
+  package-repository: "https://github.com/ho-tex/aliascnt"
   updated: 2026-05-10
 
 - name: aligned-overset
@@ -678,6 +682,7 @@
   issues: [1191]
   tests: false
   tasks: needs tests
+  package-repository: "https://gitlab.com/agrahn/animate"
   updated: 2026-01-28
 
 - name: annotate-equations
@@ -794,6 +799,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/PierreSenellart/apxproof"
   updated: 2026-01-23
 
 - name: arabi
@@ -823,6 +829,7 @@
   luatex-only: true
   tests: true
   tasks: needs more tests
+  package-repository: "https://gitlab.com/ralessi/arabluatex/"
   updated: 2026-01-25
 
 - name: arabtex
@@ -977,6 +984,7 @@
   priority: 7
   issues: [679]
   tests: true
+  package-repository: "https://github.com/vectorgraphics/asymptote"
   updated: 2024-08-28
 
 - name: atbegshi
@@ -1020,6 +1028,7 @@
   priority: 9
   issues: [511]
   tests: true
+  package-repository: "https://github.com/ho-tex/attachfile2"
   updated: 2024-08-06
 
 - name: attrib
@@ -1236,6 +1245,7 @@
   comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now. For individual languages and dialects see the entries babel-xxx [in the full list](full#babel).
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/latex3/babel"
   updated: 2024-09-01
 
 - name: babel-afrikaans
@@ -1549,6 +1559,16 @@
   tasks: needs tests
   updated: 2025-04-07
 
+- name: babel-kazakh
+  ctan-pkg: babel-kazakh
+  type: library
+  status: unchecked
+  included-in: [tlc3]
+  priority: 2
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-05
+
 - name: babel-kurmanji
   ctan-pkg: babel-kurmanji
   type: library
@@ -1819,6 +1839,7 @@
   issues: [415]
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/babel-spanish"
   updated: 2024-09-01
 
 - name: babel-swedish
@@ -2101,6 +2122,7 @@
   references: [2]
   issues: [902]
   closed-issues: [18,1293]
+  package-repository: "https://github.com/plk/biblatex"
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
   tasks: needs more tests
@@ -2131,6 +2153,7 @@
   priority: 2
   comments: See biblatex.
   tests: false
+  package-repository: "https://github.com/moewew/biblatex-ext"
   updated: 2024-07-15
 
 - name: biblatex-juradiss
@@ -2156,6 +2179,7 @@
   priority: 2
   issues: [655]
   tests: true
+  package-repository: "https://gitlab.com/Nickkolok/biblatex2bibitem"
   updated: 2024-08-23
 
 - name: biblist
@@ -2249,6 +2273,7 @@
   priority: 2
   comments: "Relies on incompatible multirow. No luamml support in math mode."
   tests: true
+  package-repository: "https://github.com/pietvo/multirow"
   updated: 2025-11-22
 
 - name: bigfoot
@@ -2325,6 +2350,7 @@
   priority: 4
   issues: [181]
   tests: true
+  package-repository: "https://github.com/davidcarlisle/dpctex"
   updated: 2024-07-17
 
 - name: blowup
@@ -2480,6 +2506,7 @@
   tests: true
   tasks: needs more tests
   comments: "Incompatible with unicode-math. No luamml support."
+  package-repository: "https://github.com/wspr/breqn"
   updated: 2026-01-25
 
 - name: bussproofs
@@ -2531,6 +2558,7 @@
   priority: 9
   comments: "Relies on partially-compatible twemojis package."
   tests: true
+  package-repository: "https://github.com/zr-tex8r/BXcoloremoji"
   updated: 2025-12-15
 
 - name: bxdvidriver
@@ -2701,6 +2729,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/arnomi/cryptocode"
   updated: 2026-01-23
 
 - name: cabin
@@ -2778,6 +2807,7 @@
   comments: "Incorrect reading order of captions."
   issues: [882]
   tests: true
+  package-repository: "https://github.com/rf-latex/capt-of"
   updated: 2024-07-22
 
 - name: captcont
@@ -2795,6 +2825,7 @@
   comments: "Incorrect reading order of captions."
   issues: [883]
   tests: true
+  package-repository: "https://github.com/rf-latex/captdef"
   updated: 2024-07-22
 
 - name: caption
@@ -2807,6 +2838,7 @@
             tagging code. Issue when hyperref and both listoffigures are used."
   issues: [84,720]
   tests: true
+  package-repository: "https://gitlab.com/axelsommerfeldt/caption"
   updated: 2024-09-30
 
 - name: caption2
@@ -2909,6 +2941,7 @@
   priority: 7
   comments: "Symbols need Alt/ActualText."
   tests: true
+  package-repository: "https://github.com/ummels/ccicons"
   updated: 2024-07-29
 
 - name: cellspace
@@ -2946,6 +2979,7 @@
   priority: 6
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: cfr-lm
@@ -3001,6 +3035,7 @@
   priority: 2
   tests: true
   comments: See todonotes and ulem.
+  package-repository: "https://gitlab.com/ekleinod/changes/"
   updated: 2024-08-02
 
 - name: chappg
@@ -3044,6 +3079,7 @@
   priority: 7
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: chemarrow
@@ -3071,6 +3107,7 @@
   priority: 6
   issues: [521]
   tests: true
+  package-repository: "https://github.com/cgnieder/chemformula/"
   updated: 2024-08-06
 
 - name: chemgreek
@@ -3088,6 +3125,7 @@
   priority: 7
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/cgnieder/chemmacros/"
   updated: 2024-07-18
 
 - name: chemnum
@@ -3103,6 +3141,7 @@
   priority: 9
   issues: [1149]
   tests: true
+  package-repository: "https://github.com/u-fischer/chessboard"
   updated: 2025-12-22
 
 - name: chessfss
@@ -3182,6 +3221,7 @@
   priority: 7
   tests: true
   comments: "Missing TextDecoration attributes. No luamml support in math mode."
+  package-repository: "https://github.com/Rmano/circledsteps"
   updated: 2025-11-20
 
 - name: circledtext
@@ -3190,6 +3230,7 @@
   priority: 9
   tests: true
   comments: "Missing TextDecoration attributes."
+  package-repository: "https://github.com/registor/circledtext"
   updated: 2025-11-20
 
 - name: circuitikz
@@ -3199,6 +3240,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/circuitikz/circuitikz"
   updated: 2026-01-23
 
 - name: cistercian
@@ -3215,6 +3257,7 @@
   priority: 9
   issues: [421]
   tests: true
+  package-repository: "https://github.com/zepinglee/citeproc-lua"
   updated: 2024-08-03
 
 - name: cite
@@ -3271,6 +3314,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: cleveref
@@ -3299,6 +3343,7 @@
   priority: 9
   issues: [528]
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_clrstrip"
   updated: 2024-08-07
 
 - name: cmap
@@ -3356,6 +3401,7 @@
   priority: 9
   issues: [1080]
   tests: true
+  package-repository: "https://github.com/lvjr/codehigh"
   updated: 2025-11-20
 
 - name: coelacanth
@@ -3400,6 +3446,7 @@
   priority: 7
   issues: [628]
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2024-08-20
 
 - name: colonequals
@@ -3409,6 +3456,7 @@
   priority: 2
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: colophon
@@ -3470,6 +3518,7 @@
   priority: 4
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/colorspace"
   updated: 2026-01-25
 
 - name: colortbl
@@ -3482,6 +3531,7 @@
   closed-issues: [80,90,379,749,1331]
   tests: true
   tasks: needs more tests
+  package-repository: "https://github.com/davidcarlisle/dpctex/"
   updated: 2026-05-11
 
 - name: combofont
@@ -3616,6 +3666,7 @@
   priority: 7
   tests: false
   tasks: needs tests
+  package-repository: "https://codeberg.org/jspitz/covington"
   updated: 2024-07-18
 
 - name: cprotect
@@ -3635,6 +3686,7 @@
   priority: 2
   issues: [341]
   tests: true
+  package-repository: "https://github.com/rrthomas/crop"
   updated: 2024-07-29
 
 - name: crossreftools
@@ -3654,6 +3706,7 @@
   issues: [1041]
   closed-issues: [3]
   tests: true
+  package-repository: "https://github.com/josephwright/csquotes"
   updated: 2026-05-20
 
 - name: csvsimple
@@ -3664,6 +3717,7 @@
   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
             currently incompatible."
   tests: true
+  package-repository: "https://github.com/T-F-S/csvsimple"
   updated: 2024-07-20
 
 - name: ctable
@@ -3686,6 +3740,7 @@
 - name: ctex
   type: package
   status: currently-incompatible
+  subpackages: [ctexcap,ctexheading,ctexhook,ctexpatch,ctexsize]
   included-in: [tlc3, ol1]
   priority: 6
   issues: [673]
@@ -3693,6 +3748,7 @@
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
              with classes ctexart, ctexbook, and ctexrep."
+  package-repository: "https://github.com/CTeX-org/ctex-kit"
   updated: 2026-01-25
 
 - name: cuprum
@@ -3861,6 +3917,7 @@
   issues: [887]
   tests: true
   comments: "Missing TextDecoration attributes."
+  package-repository: "https://github.com/FrankMittelbach/fmitex-dashundergaps"
   updated: 2024-08-01
 
 - name: datatool
@@ -3965,6 +4022,7 @@
   priority: 7
   comments: "luamml support is not ideal."
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2025-05-29
 
 - name: derivative
@@ -3983,6 +4041,7 @@
   priority: 2
   issues: [453]
   tests: true
+  package-repository: "https://github.com/leo-liu/tex-pkg"
   updated: 2024-08-05
 
 - name: dialogue
@@ -4068,6 +4127,7 @@
   tests: true
   comments: "Graphics need Alt text. Metadata is set with hyperxmp which tagging
              code disables."
+  package-repository: "https://github.com/ypid/latex-packages/"
   updated: 2024-08-23
 
 - name: docmfp
@@ -4118,6 +4178,7 @@
   priority: 4
   comments: "With unicode-math, wrong symbol in `\\mathrm`."
   tests: true
+  package-repository: "https://github.com/jbezos/dotlessi"
   updated: 2025-05-29
 
 - name: dotlessj
@@ -4126,6 +4187,7 @@
   priority: 9
   tests: true
   comments: "Symbols not correctly mapped to unicode."
+  package-repository: "https://github.com/davidcarlisle/dpctex"
   updated: 2026-04-26
 
 - name: dotseqn
@@ -4293,6 +4355,7 @@
   priority: 9
   comments: "Incompatible with unicode-math. No luamml support."
   tests: false
+  package-repository: "https://codeberg.org/cfr/ebgaramond-maths"
   updated: 2025-05-29
 
 - name: ebproof
@@ -4303,6 +4366,7 @@
   issues: [568,985]
   tests: true
   comments: "Tagging and mathml of `prooftree` is not correct."
+  package-repository: "https://framagit.org/manu/ebproof"
   updated: 2025-11-16
 
 - name: econlipsum
@@ -4351,6 +4415,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://git.sr.ht/~ralessi/ekdosis"
   updated: 2024-07-18
 
 - name: electrum
@@ -4398,6 +4463,7 @@
   priority: 4
   tests: true
   comments: Inserts and removes unnecessary spaces at pdf level.
+  package-repository: "https://github.com/cgnieder/embrac/"
   updated: 2026-01-25
 
 - name: emo
@@ -4407,6 +4473,7 @@
   tests: true
   comments: "Symbols disappear in tags with lualatex. Inserts images that need
              actualtext or ToUnicode values with pdflatex."
+  package-repository: "https://github.com/apparebit/emo"
   updated: 2025-12-15
 
 - name: emoji
@@ -4418,6 +4485,7 @@
   tests: true
   comments: "Compatible with some emoji fonts, however default Noto Color fonts
              are not supported at the PDF tagging level."
+  package-repository: "https://github.com/stone-zeng/latex-emoji"
   updated: 2025-12-16
 
 - name: empheq
@@ -4427,6 +4495,7 @@
   priority: 2
   issues: [138]
   tests: true
+  package-repository: "https://github.com/latex3/mathtools"
   updated: 2024-07-14
 
 - name: emptypage
@@ -4462,6 +4531,7 @@
   tests: true
   comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
   luatex-only: true
+  package-repository: "https://github.com/aminophen/endnotesj"
   updated: 2025-12-17
 
 - name: engord
@@ -4470,6 +4540,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-30
 
 - name: enotez
@@ -4480,6 +4551,7 @@
   tests: true
   comments: "`\\pagenote`s are not tagged as `<Note>`s. `\\ref` in `\\endnotemark`
              produces parent-child warnings."
+  package-repository: "https://github.com/cgnieder/enotez/"
   updated: 2024-08-01
 
 - name: enparen
@@ -4487,6 +4559,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: enumerate
@@ -4520,6 +4593,7 @@
   issues: [61,1301]
   closed-issues: [4]
   tests: false
+  package-repository: "https://github.com/jbezos/enumitem"
   updated: 2026-06-02
 
 - name: environ
@@ -4553,6 +4627,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: epic
@@ -4638,6 +4713,7 @@
              `\\math_register_halign_env:nn` to grab math contents.
              Adjustments towards final tagging interfaces likely necessary."
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2026-02-15
 
 - name: eqparbox
@@ -5130,6 +5206,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: figcaps
@@ -5275,6 +5352,7 @@
   priority: 9
   tests: false
   comments: "Obsolete. See the bitset package."
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-02-12
 
 - name: fleqn
@@ -6077,6 +6155,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/gindex"
   updated: 2024-07-18
 
 - name: gitinfo-lua
@@ -6168,6 +6247,7 @@
   priority: 6
   tests: true
   comments: "Inserts empty Div after every Figure."
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2024-08-26
 
 - name: graphics
@@ -6463,6 +6543,7 @@
   included-in: [arxiv001]
   priority: 7
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-06-10
 
 - name: hypcap
@@ -6549,6 +6630,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: hyphenat
@@ -6566,6 +6648,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 #------------------------ III ----------------------------
@@ -6637,6 +6720,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: iflang
@@ -6645,6 +6729,7 @@
   included-in: [tlc3, ol0.1]
   priority: 2
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: ifluatex
@@ -6795,6 +6880,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/T-F-S/incgraph"
   updated: 2024-07-18
 
 - name: inconsolata
@@ -8674,6 +8760,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/T-F-S/mercatormap"
   updated: 2024-07-18
 
 - name: menukeys
@@ -10259,6 +10346,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcolparcolumns
@@ -10267,6 +10355,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcomment
@@ -10933,6 +11022,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-02-12
 
 - name: protosem
@@ -11620,6 +11710,7 @@
   priority: 2
   issues: [352]
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-29
 
 - name: returntogrid
@@ -11696,6 +11787,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: rotfloat
@@ -11778,6 +11870,7 @@
   priority: 9
   closed-issues: [1044]
   tests: true
+  package-repository: "https://github.com/T-F-S/sanitize-umlaut"
   updated: 2025-11-06
 
 - name: sansmath
@@ -12072,6 +12165,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: setspace
@@ -12089,6 +12183,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: sfmath
@@ -12442,6 +12537,7 @@
   priority: 9
   tests: true
   comments: See soul.
+  package-repository: "https://github.com/jbezos/soulpos"
   updated: 2024-08-01
 
 - name: soulutf8
@@ -12590,6 +12686,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-29
 
 - name: stampinclude
@@ -12597,6 +12694,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: standardsectioning
@@ -13096,6 +13194,7 @@
   priority: 7
   comments: "Incompatible with unicode-math."
   tests: true
+  package-repository: "https://github.com/jbezos/tensind"
   updated: 2025-05-28
 
 - name: tensor
@@ -13350,6 +13449,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: thm-restate
@@ -13667,6 +13767,7 @@
   issues: [24]
   tests: true
   tasks: needs more tests
+  package-repository: "https://github.com/jbezos/titlesec"
   updated: 2025-12-24
 
 - name: titletoc
@@ -14014,6 +14115,7 @@
   included-in: [ol0.1]
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-01-28
 
 - name: tx-ds
@@ -15506,6 +15608,39 @@
   tasks: needs tests
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-18
+
+- name: ctexart
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
+
+- name: ctexbook
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
+
+- name: ctexrep
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
 
 #------------------------ EEE ----------------------------
 
