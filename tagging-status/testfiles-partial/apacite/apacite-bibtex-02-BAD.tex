@@ -1,0 +1,57 @@
+% !TeX TXS-program:compile = txs:///lualatex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\begin{filecontents}[noheader]{apacite-natbib.bib}
+@book{appleby,
+  author  = {Humphrey Appleby and James Hacker},
+  title   = {On the Importance of the Civil Service},
+  year    = {1980},
+}
+
+@book{latexcompanion,
+    author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+    title     = "The LaTeX Companion",
+    year      = "1993",
+    publisher = "Addison-Wesley",
+    address   = "Reading, Massachusetts"
+}
+
+@misc{knuthwebsite,
+    author    = "Donald Knuth",
+    title     = "Knuth: Computers and Typesetting",
+    url       = "http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html"
+}
+\end{filecontents}
+
+\documentclass{article}
+
+\usepackage[natbibapa]{apacite}
+\usepackage{hyperref}
+
+\title{apacite tagging test - 2}
+
+\begin{document}
+\tableofcontents
+\section{A section}
+
+\citep[p.~11]{appleby,latexcompanion}
+
+\citet[p.~11]{appleby,latexcompanion}
+
+\citeauthorp[p.~11]{appleby,latexcompanion,knuthwebsite}
+
+\citeyear[p.~11]{appleby,latexcompanion}
+
+\maskcitet[p.~11]{appleby,latexcompanion}
+
+\maskCitep[p.~11]{appleby,latexcompanion,knuthwebsite}
+
+\bibliographystyle{apacite}
+\bibliography{apacite-natbib}
+
+\end{document}
