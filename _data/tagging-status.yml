@@ -953,12 +953,13 @@
 
 - name: ascmac
   type: package
-  status: unchecked
+  subpackage: [tascmac]
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: 1375
+  updated: 2026-06-08
 
 - name: askinclude
   type: package
@@ -1033,12 +1034,11 @@
 
 - name: attrib
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-08
 
 - name: atveryend
   type: package
@@ -1076,12 +1076,11 @@
 
 - name: authoraftertitle
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-08
 
 - name: authordate1-4
   ctan-pkg: authordate
@@ -1160,12 +1159,12 @@
 
 - name: awesomebox
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1376]
+  updated: 2026-06-08
 
 - name: axessibility
   type: package
@@ -2386,12 +2385,12 @@
 
 - name: boites
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1377]
+  updated: 2026-06-08
 
 - name: bold-extra
   type: package
@@ -3084,12 +3083,12 @@
 
 - name: chemarrow
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: No luamml support.
+  updated: 2026-06-08
 
 - name: chemfig
   type: package
@@ -3180,12 +3179,12 @@
 
 - name: chronology
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1378]
+  updated: 2026-06-08
 
 - name: chronosys
   type: package
@@ -13859,7 +13858,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [1338]
+  closed-issues: [1338]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-06-04
