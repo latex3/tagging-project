@@ -1,0 +1,95 @@
+% this is a modified testchem.tex
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass[fleqn,12pt,a4paper]{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{amsmath,chemarrow}
+\begin{document}
+
+\newcommand{\aqua}{\ensuremath{\text{H}_{\text{2}}\text{O}}}
+\newcommand{\acid}{\ensuremath{\text{H}_{\text{3}}\text{O}^{\text{+}}}}
+\newcommand{\base}{\ensuremath{\text{OH}^{\text{$-$}}}}
+
+\section{chemarrow}
+
+
+\begin{displaymath}
+\aqua + \aqua\ \chemarrow\ \acid + \base
+\end{displaymath}
+
+
+\section{rarrowfill 2.5em}
+
+
+\begin{displaymath}
+\aqua + \aqua \rarrowfill{2.5em} \acid + \base
+\end{displaymath}
+
+\section{larrowfill 2.5em}
+
+
+\begin{displaymath}
+\aqua + \aqua \larrowfill{2.5em} \acid + \base
+\end{displaymath}
+
+
+\section{rightleftharpoonsfill 2.5em}
+
+
+\begin{displaymath}
+\aqua + \aqua \rightleftharpoonsfill{2.5em} \acid + \base
+\end{displaymath}
+
+
+\section{leftrightharpoonsfill 2.5em}
+
+
+\begin{displaymath}
+\aqua + \aqua \leftrightharpoonsfill{2.5em} \acid + \base
+\end{displaymath}
+
+
+
+\section{autorightleftharpoons}
+
+
+\begin{displaymath}
+\aqua + \aqua \autorightleftharpoons{$k_a$}{$k_b$} \acid + \base
+\end{displaymath}
+
+
+\section{autoleftrightharpoons}
+
+
+\begin{displaymath}
+\aqua + \aqua \autoleftrightharpoons{$k_a$}{$k_b$} \acid + \base
+\end{displaymath}
+
+
+\section{autorightarrow}
+
+
+\begin{displaymath}
+\aqua + \aqua \autorightarrow{$k_a$}{$k_b$} \acid + \base
+\end{displaymath}
+
+
+\section{autoleftarrow}
+
+
+\begin{displaymath}
+\aqua + \aqua \autoleftarrow{$k_a$}{$k_b$} \acid + \base
+\end{displaymath}
+
+
+
+
+\end{document}
