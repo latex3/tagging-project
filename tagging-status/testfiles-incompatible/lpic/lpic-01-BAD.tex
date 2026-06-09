@@ -1,0 +1,34 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{lpic}
+
+\title{lpic tagging test}
+\newcommand\T{\mathrm{T}}
+\newcommand\R{\mathbf{R}}
+\renewcommand\d{\mathrm{d}}
+\renewcommand\o{\mathrm{o}}
+
+\begin{document}
+
+\begin{lpic}[l(10mm),r(5mm),t(5mm),b(10mm)]{example-image(0.7,0.6)}
+\lbl[t]{80,9;$x_0$}
+\lbl[b]{87,11;$\delta x$}
+\lbl[t]{101,7,-7;$x_0+\delta x$}
+\lbl[b]{120,11;$\T_{x_0}X$}
+\lbl[t]{88,59;$\delta x$}
+\lbl[b]{120,61;$\T_{x_0}X$}
+\lbl[tl]{120,3,-10;$X=\R$}
+\lbl[r]{79,74;$\d f(\delta x)$}
+\lbl[r]{79,102;$\T_{f(x_0)}Y$}
+\lbl[lb]{21,115;$\T_{f(x_0)}Y$}
+\lbl[l]{22,74;$\d f(\delta x)$}
+\lbl[r]{16,88;$f(x_0)+\d f(\delta x)$}
+\lbl[r]{19,60;$f(x_0)$}
+\lbl[r]{11,110;$f(x_0+\delta x)$}
+\lbl[l]{42,99;$\o(\delta x)$}
+\lbl[b]{10,121;$Y=\R$}
+\lbl[br]{47,21;Graph of $\d f$}
+\lbl[bl]{26,36,13;Graph of $y=f(x)$}
+\end{lpic}
+
+\end{document}

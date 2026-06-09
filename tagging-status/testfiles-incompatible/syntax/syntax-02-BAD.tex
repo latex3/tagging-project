@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{syntax}
+
+\title{syntax tagging test - 2}
+
+\begin{document}
+\begin{syntdiag}
+<ident> `('
+\begin{rep} \begin{stack} \\
+<type> \begin{stack} \\ <ident> \end{stack}
+\end{stack} \\ `,' \end{rep}
+\begin{stack} \\ `...' \end{stack} `)'
+\end{syntdiag}
+\end{document}
