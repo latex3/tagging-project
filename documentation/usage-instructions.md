@@ -30,7 +30,7 @@ runlatex.packageregex = [
 
 
 # Using LaTeX to produce accessible PDF
-## Guidelines for LaTeX2e 2025-11-01
+## Guidelines for LaTeX2e 2026-06-01 (and 2025-11-01)
 
 The new code can be used with pdfLaTeX or the Unicode engine
 luaLaTeX. The latter is the preferred engine recommended for new
@@ -44,9 +44,27 @@ It is _strongly_ recommended that you use a current LaTeX Release.
 The tagging code is under active development and not all of the features
 or syntax described here are available in older releases.
 
-On OverLeaf, LaTeX 2025-11-01 is available if you use the
+On OverLeaf, only LaTeX 2025-11-01 is available (as of 2026-06-11) and only if you use the
 "[Rolling TeXLive](https://docs.overleaf.com/troubleshooting-and-support/tex-live#labs-rolling-tex-live-experiment)"
-option for the TeXLive Release (in the Compiler settings).
+option for the TeXLive Release (in the Compiler settings). Otherwise you only get the 2025-06-01 release.
+
+We expect that the 2026 release support will be added soon, but we have
+no control over this. What you can do, though, is to enable rolling releases
+**and** add a `latexmkrc` file to your project, with the following content:
+```
+$max_repeat = 1;
+$force_mode = 1;
+$pdflatex='pdflatex-dev -synctex=1 -interaction=nonstopmode';
+$lualatex='lualatex-dev -synctex=1 -interaction=nonstopmode';
+```
+This will enable you to use the LaTeX development releases which means you get
+at least the prerelease of 2026-06-01 (which is more or less identical with
+the version released in 1st of June).
+
+This file can be generally useful, because your projects then use the
+development versions which receive additional tagging support
+first. Thus, when 2026 is finally supported by Overleaf you also get the
+newest tagging features targeted for inclusion in 2026-11-01.
 
 If it is not possible to use the current release, instructions dated
 [2025-02-01](prototype-usage-instructions-2025-02-01)
