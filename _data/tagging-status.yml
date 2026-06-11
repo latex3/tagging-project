@@ -131,49 +131,50 @@
 
 - name: ae
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: aecompl
   ctan-pkg: ae
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: aeguill
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: ar
   type: package
-  status: unchecked
+  ctan-pkg: aspectratio
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1397]
+  updated: 2026-06-10
 
 - name: arcs
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-27
+  comments: Broken with current LaTeX.
+  updated: 2026-06-10
 
 - name: abntex2abrev
   ctan-pkg: abntex2
@@ -1948,12 +1949,12 @@
 
 - name: background
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1398]
+  updated: 2026-06-10
 
 - name: backref
   type: package
@@ -2026,12 +2027,12 @@
 
 - name: bchart
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1399]
+  updated: 2026-06-10
 
 - name: bclogo
   type: package
@@ -2647,12 +2648,23 @@
 
 - name: CJK
   type: package
+  subpackages: [CJKspace,CJKutf8,MULEenc]
   status: unchecked
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 4
   tests: false
+  compatible: "Only works with pdftex."
+  updated: 2026-06-10
+
+- name: CJKfntef
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
   tasks: needs tests
-  updated: 2026-01-25
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: CJKnumb
   ctan-pkg: cjk
@@ -2662,17 +2674,27 @@
   priority: 9
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
-- name: CJKutf8
+- name: CJKulem
   ctan-pkg: cjk
   type: package
   status: unchecked
-  included-in: [ol0.1]
   priority: 9
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
+
+- name: CJKvert
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: true
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: CharisSIL
   type: package
@@ -2956,12 +2978,12 @@
 
 - name: censor
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1400]
+  updated: 2026-06-10
 
 - name: centeredline
   type: package
@@ -10810,6 +10832,15 @@
   tasks: needs tests
   updated: 2024-08-01
 
+- name: pinyin
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-10
+
 - name: piton
   type: package
   status: currently-incompatible
@@ -11838,6 +11869,16 @@
   tests: false
   comments: "No luamml support."
   updated: 2026-02-10
+
+- name: ruby
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: runic
   type: package
