@@ -597,7 +597,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,1033,1341]
+  issues: [712,803,851,857,919,1033,1341,1407]
   closed-issues: [28,77,811,846,848,850,852,859,875,981]
   tests: true
   updated: 2026-03-14
@@ -644,6 +644,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol1]
   priority: 2
+  issues: [1406]
   external-issues: ["https://github.com/latex3/luamml/issues/5"]
   tests: true
   updated: 2024-07-12
@@ -2653,6 +2654,7 @@
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 4
   tests: false
+  issues: [1404]
   compatible: "Only works with pdftex."
   updated: 2026-06-10
 
@@ -3585,12 +3587,11 @@
 
 - name: commath
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-12
 
 - name: comment
   type: package
@@ -15461,11 +15462,11 @@
 - name: zref-titleref
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-02-13
+  tests: true
+  issues: [1408]
+  updated: 2026-06-12
 
 - name: zref-totpages
   ctan-pkg: zref
@@ -15530,16 +15531,25 @@
 
 #------------------------ AAA ----------------------------
 
+- name: achemso
+  type: class
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  tests: true
+  issues: [1412]
+  updated: 2026-06-12
+
 - name: acmart
   type: class
-  status: unchecked
+  status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
   package-repository: "https://github.com/borisveytsman/acmart"
-  tests: false
-  tasks: needs tests
-  comments: "See acmart-tagged.cls."
-  updated: 2024-08-28
+  tests: true
+  tasks: needs more tests
+  issues: [1409]
+  updated: 2026-06-12
 
 - name: amsart
   type: class
@@ -15715,12 +15725,11 @@
 - name: extletter
   ctan-pkg: extsizes
   type: class
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  comments: "letter+extsizes is partially incompatible"
-  updated: 2025-07-07
+  tests: true
+  comments: "Tagging is not ideal. See letter class."
+  updated: 2026-06-12
 
 - name: extproc
   ctan-pkg: extsizes
@@ -16068,13 +16077,13 @@
 
 - name: moderncv
   type: class
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   subpackages: [moderncvcollection,moderncvstyleclassic]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-26
+  tests: true
+  issues: [1410]
+  updated: 2026-06-12
 
 #------------------------ NNN ----------------------------
 
@@ -16185,12 +16194,12 @@
 
 - name: scrlttr2
   type: class
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  issues: [1118]
+  issues: [1118,1411]
   related-issues: [88]
-  tests: false
-  updated: 2025-12-11
+  tests: true
+  updated: 2026-06-12
 
 - name: scrreport
   type: class
