@@ -59,7 +59,7 @@ $lualatex='lualatex-dev -synctex=1 -interaction=nonstopmode';
 ```
 This will enable you to use the LaTeX development releases which means you get
 at least the prerelease of 2026-06-01 (which is more or less identical with
-the version released in 1st of June).
+the version released on 1st of June).
 
 This file can be generally useful, because your projects then use the
 development versions which receive additional tagging support
