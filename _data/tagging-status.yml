@@ -955,12 +955,12 @@
 
 - name: ascmac
   type: package
-  subpackage: [tascmac]
+  subpackages: [tascmac]
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: true
-  issues: 1375
+  issues: [1375]
   updated: 2026-06-08
 
 - name: askinclude
@@ -2655,7 +2655,7 @@
   priority: 4
   tests: false
   issues: [1404]
-  compatible: "Only works with pdftex."
+  comments: "Only works with pdftex."
   updated: 2026-06-10
 
 - name: CJKfntef
