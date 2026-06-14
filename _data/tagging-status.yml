@@ -654,7 +654,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232]
+  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370]
   closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
   tests: true
   updated: 2026-06-02
@@ -960,7 +960,7 @@
   included-in: [ol0.1]
   priority: 9
   tests: true
-  issues: 1375
+  issues: [1375]
   updated: 2026-06-08
 
 - name: askinclude
@@ -4600,7 +4600,10 @@
   priority: 9
   package-repository: "https://github.com/pablgonz/enumext"
   tests: true
-  updated: 2025-11-02
+  issues: [1364]
+  related-issues: [1337]
+  comments: "Temporary issue with footnotes after lists."
+  updated: 2026-06-14
 
 - name: enumitem
   type: package
@@ -5628,7 +5631,7 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [958]
+  issues: [958,1360]
   closed-issues: [12]
   tests: false
   updated: 2025-09-12
@@ -6142,6 +6145,7 @@
   tests: true
   comments: "Uses math where it doesn't need to. `\\ghspic` should have Alt text
              by default."
+  issues: [1373]
   updated: 2024-08-15
 
 - name: gillius
@@ -7580,7 +7584,10 @@
   priority: 9
   comments: "No luamml support."
   tests: true
-  updated: 2025-05-29
+  comments: "Faulty output with current LaTeX unrelated to tagging."
+  package-repository: "https://github.com/max-te/letterswitharrows"
+  external-issues: "https://github.com/max-te/letterswitharrows/issues/1"
+  updated: 2026-06-14
 
 - name: lettrine
   type: package
@@ -8673,7 +8680,7 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922]
+  issues: [139,922,1368]
   closed-issues: [734,1119]
   tests: true
   updated: 2025-12-11
@@ -10411,6 +10418,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
+  issues: [1356]
   package-repository: "https://github.com/ho-tex/pdflscape"
   tests: true
   updated: 2024-08-04
@@ -15349,7 +15357,8 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  updated: 2024-08-20
+  issues: "Issues with sibling counters unrelated to tagging."
+  updated: 2026-06-14
 
 - name: zref-counter
   ctan-pkg: zref
