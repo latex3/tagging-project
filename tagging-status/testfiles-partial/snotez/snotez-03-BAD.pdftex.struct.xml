@@ -13,7 +13,7 @@
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
-     <?MarkedContent page="1" ?>text
+     <?MarkedContent page="1" ?>Some text with a shifted side note.
      <Span xmlns="http://iso.org/pdf2/ssn"
         id="ID.007"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -21,42 +21,34 @@
        >
       <?MarkedContent page="1" ?>1
      </Span>
-     <?MarkedContent page="1" ?>1some sidenotetext
+     <?MarkedContent page="1" ?>
+     <?MarkedContent page="1" ?>
+    </text>
+    <Aside xmlns="http://iso.org/pdf2/ssn"
+       id="ID.008"
+      >
      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.008"
+        id="ID.009"
         rolemaps-to="Part"
        >
       <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.009"
+         id="ID.010"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
+         Layout:TextAlign="Start"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.010"
-          rolemaps-to="Part"
+       <Span xmlns="http://iso.org/pdf2/ssn"
+          id="ID.011"
+          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+          Layout:TextPosition="Sup"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.011"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Start"
-           rolemaps-to="P"
-          >
-         <?MarkedContent page="1" ?>
-         <Span xmlns="http://iso.org/pdf2/ssn"
-            id="ID.012"
-            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-            Layout:TextPosition="Sup"
-           >
-          <?MarkedContent page="1" ?>1
-         </Span>
-         <?MarkedContent page="1" ?>some sidenotetext
-        </text>
-       </text-unit>
+        <?MarkedContent page="1" ?>1
+       </Span>
+       <?MarkedContent page="1" ?>A first.
       </text>
      </text-unit>
-    </text>
+    </Aside>
    </text-unit>
   </Document>
  </StructTreeRoot>
