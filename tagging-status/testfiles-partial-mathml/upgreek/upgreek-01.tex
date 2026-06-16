@@ -10,7 +10,7 @@
 \IfFileExists{\jobname-luamml-mathml.html}
 {\usepackage{upgreek}}
 {\ifdefined\Uchar
-    \usepackage{unicode-math}
+    \usepackage{lua-unicode-math}
     \def\Uplambda{\muplambda}
   \else
     \usepackage{upgreek}
