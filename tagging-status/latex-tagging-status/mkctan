@@ -1,6 +1,7 @@
 mkdir -p build/latex-tagging-status
 cd build/latex-tagging-status
 
+# https://codeberg.org/ManfredLotz/latex-tagging-status-lint/releases/
 
 if ! latex-tagging-status-lint lint --latex-tagging-status-file ../../../../_data/tagging-status.yml ; then
   echo "Bad or missing  YAML"

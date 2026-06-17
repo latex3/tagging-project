@@ -1,0 +1,21 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{syntax}
+
+\title{syntax tagging test}
+
+\begin{document}
+\begin{grammar}
+<statement> ::= <ident> `=' <expr>
+\alt `for' <ident> `=' <expr> `to' <expr> `do' <statement>
+\alt `{' <stat-list> `}'
+\alt <empty>
+<stat-list> ::= <statement> `;' <stat-list> | <statement>
+\end{grammar}
+\end{document}

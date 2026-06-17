@@ -19,7 +19,7 @@
  lang=en,
  pdfversion=2.0,
  pdfstandard=ua-2,
- pdfstandard=a-4,
+ pdfstandard=a-4f,
  tagging-setup={math/mathml/luamml/load=false}
 }
 %
@@ -34,7 +34,6 @@
   ]{memoir}
 
 
-
 \RequirePackage{geometry}
 % twoside letter paper but with equal margins for online reading
 \geometry{top=2cm,bottom=3cm,inner=1.75cm,outer=1.75cm,heightrounded}
@@ -46,8 +45,10 @@
 
 \makeatletter
 % Short book names in the PDF outline
-\AddToHookWithArguments{cmd/chapter/before}
-                       {\def\ch@pt@c{\texorpdfstring{#3}{#2}}}
+%\AddToHookWithArguments{cmd/chapter/before}
+%                       {\def\ch@pt@c{\texorpdfstring{#3}{#2}}}
+%\DeclareDocumentCommand \chapter {s ={shorttitle}o m}
+%{\ParseLaTeXeHeading{chapter}{#1}{#2}{#3}}
 \makeatother
 
 \newcounter{bookchapter}
