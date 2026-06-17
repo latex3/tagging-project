@@ -1,0 +1,37 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{longfbox}
+\usepackage{kantlipsum}
+
+\makeatletter % see https://tex.stackexchange.com/a/721749/208544
+\ifdefined\@tempdimd\else\newdimen\@tempdimd\fi
+\makeatother
+
+\title{longfbox tagging test}
+
+\begin{document}
+
+Here is an \lfbox{inline} box, just like an \fbox{fbox}.
+
+\begin{longfbox}[
+margin-right=6em,
+padding=1.5em,
+background-color=red,
+background-clip=padding-box,
+border-width=2pt,
+border-radius=15pt,
+border-top-left-radius=30pt,
+border-left-width=8pt,
+border-left-color=teal,
+border-right-style=double,
+]
+A \textsf{longfbox} example. A longfbox can contain much
+longer content and will by default be as\footnote{Some footnote}
+wide as the current line width.
+\end{longfbox}
+
+\begin{longfbox}[breakable]
+\kant[1-4]
+\end{longfbox}
+
+\end{document}

@@ -1,0 +1,31 @@
+\begin{filecontents}[noheader]{csum.py}
+def csum(iterable):
+return reduce(lambda res, x: res+[res[-1]+x], iterable, [0])[1:]
+\end{filecontents}
+\DocumentMetadata{tagging=on}
+\documentclass{article} 
+\usepackage{jvlisting}
+
+\title{jvlisting tagging test}
+
+\begin{document}
+Some text
+\begin{listing}
+def csum(iterable):
+return reduce(lambda res, x: res+[res[-1]+x], iterable, [0])[1:]
+\end{listing}
+more text
+\begin{figure}[h]
+\begin{listing}
+def csum(iterable):
+return reduce(lambda res, x: res+[res[-1]+x], iterable, [0])[1:]
+\end{listing}
+\caption{Some listing}
+\end{figure}
+\filelisting{csum.py}
+Compare with:
+\begin{verbatim}
+def csum(iterable):
+return reduce(lambda res, x: res+[res[-1]+x], iterable, [0])[1:]
+\end{verbatim}
+\end{document}

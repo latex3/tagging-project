@@ -131,49 +131,50 @@
 
 - name: ae
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: aecompl
   ctan-pkg: ae
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: aeguill
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Obsolete. Do not use in new documents."
+  updated: 2026-06-10
 
 - name: ar
   type: package
-  status: unchecked
+  ctan-pkg: aspectratio
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1397]
+  updated: 2026-06-10
 
 - name: arcs
   type: package
-  status: unchecked
+  status: no-support
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-27
+  comments: Broken with current LaTeX.
+  updated: 2026-06-10
 
 - name: abntex2abrev
   ctan-pkg: abntex2
@@ -211,6 +212,7 @@
   priority: 2
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/wgrundlingh/abraces"
   updated: 2024-05-28
 
 - name: abstract
@@ -221,6 +223,7 @@
   issues: [653]
   tests: true
   comments: Tagging is not ideal.
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-23
 
 - name: academicons
@@ -248,6 +251,7 @@
   comments: "amsmath must be loaded before accents.
              Incompatible with unicode-math. No luamml support."
   tests: true
+  package-repository: "https://github.com/jbezos/accents"
   updated: 2025-05-28
 
 - name: accsupp
@@ -257,6 +261,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/accsupp"
   updated: 2024-07-16
 
 - name: achemso
@@ -474,6 +479,7 @@
   issues: [229]
   comments: "Obsolete with June 2026 release."
   tests: true
+  package-repository: "https://github.com/ho-tex/aliascnt"
   updated: 2026-05-10
 
 - name: aligned-overset
@@ -591,7 +597,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,1033,1341]
+  issues: [712,803,851,857,919,1033,1341,1407]
   closed-issues: [28,77,811,846,848,850,852,859,875,981]
   tests: true
   updated: 2026-03-14
@@ -638,6 +644,7 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol1]
   priority: 2
+  issues: [1406]
   external-issues: ["https://github.com/latex3/luamml/issues/5"]
   tests: true
   updated: 2024-07-12
@@ -647,7 +654,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232]
+  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370]
   closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
   tests: true
   updated: 2026-06-02
@@ -677,6 +684,7 @@
   issues: [1191]
   tests: false
   tasks: needs tests
+  package-repository: "https://gitlab.com/agrahn/animate"
   updated: 2026-01-28
 
 - name: annotate-equations
@@ -690,11 +698,12 @@
 
 - name: anonchap
   type: package
-  status: partially-compatible
+  status: compatible
   priority: 9
   tests: true
-  issues: [1334]
-  updated: 2026-05-11
+  closed-issues: [1334]
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
+  updated: 2026-06-08
 
 - name: answers
   type: package
@@ -746,8 +755,8 @@
   priority: 6
   issues: [677]
   tests: true
-  comments: "`natbibapa` option errors."
-  updated: 2024-08-26
+  comments: "`natbibapa` option incompatible"
+  updated: 2026-06-08
 
 - name: apalike
   ctan-pkg: bibtex
@@ -765,6 +774,7 @@
   priority: 9
   issues: [1222]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-02-09
 
 - name: appendixnumberbeamer
@@ -791,6 +801,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/PierreSenellart/apxproof"
   updated: 2026-01-23
 
 - name: arabi
@@ -820,6 +831,7 @@
   luatex-only: true
   tests: true
   tasks: needs more tests
+  package-repository: "https://gitlab.com/ralessi/arabluatex/"
   updated: 2026-01-25
 
 - name: arabtex
@@ -943,12 +955,13 @@
 
 - name: ascmac
   type: package
-  status: unchecked
+  subpackages: [tascmac]
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1375]
+  updated: 2026-06-08
 
 - name: askinclude
   type: package
@@ -974,6 +987,7 @@
   priority: 7
   issues: [679]
   tests: true
+  package-repository: "https://github.com/vectorgraphics/asymptote"
   updated: 2024-08-28
 
 - name: atbegshi
@@ -1017,16 +1031,16 @@
   priority: 9
   issues: [511]
   tests: true
+  package-repository: "https://github.com/ho-tex/attachfile2"
   updated: 2024-08-06
 
 - name: attrib
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-08
 
 - name: atveryend
   type: package
@@ -1064,12 +1078,11 @@
 
 - name: authoraftertitle
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-08
 
 - name: authordate1-4
   ctan-pkg: authordate
@@ -1148,12 +1161,12 @@
 
 - name: awesomebox
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1376]
+  updated: 2026-06-08
 
 - name: axessibility
   type: package
@@ -1233,6 +1246,7 @@
   comments: Most likely compatible for many languages, but this needs tests for each language, so listed as unknown for now. For individual languages and dialects see the entries babel-xxx [in the full list](full#babel).
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/latex3/babel"
   updated: 2024-09-01
 
 - name: babel-afrikaans
@@ -1546,6 +1560,16 @@
   tasks: needs tests
   updated: 2025-04-07
 
+- name: babel-kazakh
+  ctan-pkg: babel-kazakh
+  type: library
+  status: unchecked
+  included-in: [tlc3]
+  priority: 2
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-05
+
 - name: babel-kurmanji
   ctan-pkg: babel-kurmanji
   type: library
@@ -1816,6 +1840,7 @@
   issues: [415]
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/babel-spanish"
   updated: 2024-09-01
 
 - name: babel-swedish
@@ -1925,12 +1950,12 @@
 
 - name: background
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1398]
+  updated: 2026-06-10
 
 - name: backref
   type: package
@@ -2003,12 +2028,12 @@
 
 - name: bchart
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1399]
+  updated: 2026-06-10
 
 - name: bclogo
   type: package
@@ -2059,6 +2084,7 @@
   priority: 9
   subpackages: [multiply]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: bezier
@@ -2097,6 +2123,7 @@
   references: [2]
   issues: [902]
   closed-issues: [18,1293]
+  package-repository: "https://github.com/plk/biblatex"
   external-issues: ["https://github.com/plk/biblatex/issues/1366"]
   tests: true
   tasks: needs more tests
@@ -2127,6 +2154,7 @@
   priority: 2
   comments: See biblatex.
   tests: false
+  package-repository: "https://github.com/moewew/biblatex-ext"
   updated: 2024-07-15
 
 - name: biblatex-juradiss
@@ -2152,6 +2180,7 @@
   priority: 2
   issues: [655]
   tests: true
+  package-repository: "https://gitlab.com/Nickkolok/biblatex2bibitem"
   updated: 2024-08-23
 
 - name: biblist
@@ -2245,6 +2274,7 @@
   priority: 2
   comments: "Relies on incompatible multirow. No luamml support in math mode."
   tests: true
+  package-repository: "https://github.com/pietvo/multirow"
   updated: 2025-11-22
 
 - name: bigfoot
@@ -2321,6 +2351,7 @@
   priority: 4
   issues: [181]
   tests: true
+  package-repository: "https://github.com/davidcarlisle/dpctex"
   updated: 2024-07-17
 
 - name: blowup
@@ -2356,12 +2387,12 @@
 
 - name: boites
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1377]
+  updated: 2026-06-08
 
 - name: bold-extra
   type: package
@@ -2394,6 +2425,7 @@
   priority: 9
   issues: [682]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: bookman
@@ -2475,6 +2507,7 @@
   tests: true
   tasks: needs more tests
   comments: "Incompatible with unicode-math. No luamml support."
+  package-repository: "https://github.com/wspr/breqn"
   updated: 2026-01-25
 
 - name: bussproofs
@@ -2526,6 +2559,7 @@
   priority: 9
   comments: "Relies on partially-compatible twemojis package."
   tests: true
+  package-repository: "https://github.com/zr-tex8r/BXcoloremoji"
   updated: 2025-12-15
 
 - name: bxdvidriver
@@ -2615,12 +2649,24 @@
 
 - name: CJK
   type: package
+  subpackages: [CJKspace,CJKutf8,MULEenc]
   status: unchecked
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 4
   tests: false
+  issues: [1404]
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
+
+- name: CJKfntef
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
   tasks: needs tests
-  updated: 2026-01-25
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: CJKnumb
   ctan-pkg: cjk
@@ -2630,17 +2676,27 @@
   priority: 9
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
-- name: CJKutf8
+- name: CJKulem
   ctan-pkg: cjk
   type: package
   status: unchecked
-  included-in: [ol0.1]
   priority: 9
   tests: false
   tasks: needs tests
-  updated: 2026-01-23
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
+
+- name: CJKvert
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: true
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: CharisSIL
   type: package
@@ -2696,6 +2752,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/arnomi/cryptocode"
   updated: 2026-01-23
 
 - name: cabin
@@ -2773,6 +2830,7 @@
   comments: "Incorrect reading order of captions."
   issues: [882]
   tests: true
+  package-repository: "https://github.com/rf-latex/capt-of"
   updated: 2024-07-22
 
 - name: captcont
@@ -2790,6 +2848,7 @@
   comments: "Incorrect reading order of captions."
   issues: [883]
   tests: true
+  package-repository: "https://github.com/rf-latex/captdef"
   updated: 2024-07-22
 
 - name: caption
@@ -2802,6 +2861,7 @@
             tagging code. Issue when hyperref and both listoffigures are used."
   issues: [84,720]
   tests: true
+  package-repository: "https://gitlab.com/axelsommerfeldt/caption"
   updated: 2024-09-30
 
 - name: caption2
@@ -2886,6 +2946,7 @@
   priority: 7
   issues: [562]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-14
 
 - name: ccfonts
@@ -2903,6 +2964,7 @@
   priority: 7
   comments: "Symbols need Alt/ActualText."
   tests: true
+  package-repository: "https://github.com/ummels/ccicons"
   updated: 2024-07-29
 
 - name: cellspace
@@ -2918,12 +2980,12 @@
 
 - name: censor
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1400]
+  updated: 2026-06-10
 
 - name: centeredline
   type: package
@@ -2940,6 +3002,7 @@
   priority: 6
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: cfr-lm
@@ -2985,6 +3048,7 @@
   issues: [566]
   tests: true
   comments: "Tagging of `adjustwidth` needs to be improved."
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-17
 
 - name: changes
@@ -2994,6 +3058,7 @@
   priority: 2
   tests: true
   comments: See todonotes and ulem.
+  package-repository: "https://gitlab.com/ekleinod/changes/"
   updated: 2024-08-02
 
 - name: chappg
@@ -3037,16 +3102,17 @@
   priority: 7
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: chemarrow
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: No luamml support.
+  updated: 2026-06-08
 
 - name: chemfig
   type: package
@@ -3064,6 +3130,7 @@
   priority: 6
   issues: [521]
   tests: true
+  package-repository: "https://github.com/cgnieder/chemformula/"
   updated: 2024-08-06
 
 - name: chemgreek
@@ -3081,6 +3148,7 @@
   priority: 7
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/cgnieder/chemmacros/"
   updated: 2024-07-18
 
 - name: chemnum
@@ -3096,6 +3164,7 @@
   priority: 9
   issues: [1149]
   tests: true
+  package-repository: "https://github.com/u-fischer/chessboard"
   updated: 2025-12-22
 
 - name: chessfss
@@ -3129,16 +3198,17 @@
   priority: 6
   tests: false
   comments: "Obsolete. Incorporated into the format."
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: chronology
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1378]
+  updated: 2026-06-08
 
 - name: chronosys
   type: package
@@ -3174,6 +3244,7 @@
   priority: 7
   tests: true
   comments: "Missing TextDecoration attributes. No luamml support in math mode."
+  package-repository: "https://github.com/Rmano/circledsteps"
   updated: 2025-11-20
 
 - name: circledtext
@@ -3182,6 +3253,7 @@
   priority: 9
   tests: true
   comments: "Missing TextDecoration attributes."
+  package-repository: "https://github.com/registor/circledtext"
   updated: 2025-11-20
 
 - name: circuitikz
@@ -3191,6 +3263,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/circuitikz/circuitikz"
   updated: 2026-01-23
 
 - name: cistercian
@@ -3207,6 +3280,7 @@
   priority: 9
   issues: [421]
   tests: true
+  package-repository: "https://github.com/zepinglee/citeproc-lua"
   updated: 2024-08-03
 
 - name: cite
@@ -3263,6 +3337,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: cleveref
@@ -3291,6 +3366,7 @@
   priority: 9
   issues: [528]
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_clrstrip"
   updated: 2024-08-07
 
 - name: cmap
@@ -3348,6 +3424,7 @@
   priority: 9
   issues: [1080]
   tests: true
+  package-repository: "https://github.com/lvjr/codehigh"
   updated: 2025-11-20
 
 - name: coelacanth
@@ -3392,6 +3469,7 @@
   priority: 7
   issues: [628]
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2024-08-20
 
 - name: colonequals
@@ -3401,6 +3479,7 @@
   priority: 2
   comments: "No luamml support."
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-05-29
 
 - name: colophon
@@ -3462,6 +3541,7 @@
   priority: 4
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/colorspace"
   updated: 2026-01-25
 
 - name: colortbl
@@ -3474,6 +3554,7 @@
   closed-issues: [80,90,379,749,1331]
   tests: true
   tasks: needs more tests
+  package-repository: "https://github.com/davidcarlisle/dpctex/"
   updated: 2026-05-11
 
 - name: combofont
@@ -3506,12 +3587,11 @@
 
 - name: commath
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-12
 
 - name: comment
   type: package
@@ -3555,6 +3635,7 @@
   priority: 2
   tests: true
   comments: Continuation marks should be tagged as Artifacts.
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-01
 
 - name: contour
@@ -3607,6 +3688,7 @@
   priority: 7
   tests: false
   tasks: needs tests
+  package-repository: "https://codeberg.org/jspitz/covington"
   updated: 2024-07-18
 
 - name: cprotect
@@ -3626,6 +3708,7 @@
   priority: 2
   issues: [341]
   tests: true
+  package-repository: "https://github.com/rrthomas/crop"
   updated: 2024-07-29
 
 - name: crossreftools
@@ -3645,6 +3728,7 @@
   issues: [1041]
   closed-issues: [3]
   tests: true
+  package-repository: "https://github.com/josephwright/csquotes"
   updated: 2026-05-20
 
 - name: csvsimple
@@ -3655,6 +3739,7 @@
   comments: "`\\csvautotabularray` etc. are not supported since tabularray is
             currently incompatible."
   tests: true
+  package-repository: "https://github.com/T-F-S/csvsimple"
   updated: 2024-07-20
 
 - name: ctable
@@ -3677,6 +3762,7 @@
 - name: ctex
   type: package
   status: currently-incompatible
+  subpackages: [ctexcap,ctexheading,ctexhook,ctexpatch,ctexsize]
   included-in: [tlc3, ol1]
   priority: 6
   issues: [673]
@@ -3684,6 +3770,7 @@
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
              with classes ctexart, ctexbook, and ctexrep."
+  package-repository: "https://github.com/CTeX-org/ctex-kit"
   updated: 2026-01-25
 
 - name: cuprum
@@ -3852,6 +3939,7 @@
   issues: [887]
   tests: true
   comments: "Missing TextDecoration attributes."
+  package-repository: "https://github.com/FrankMittelbach/fmitex-dashundergaps"
   updated: 2024-08-01
 
 - name: datatool
@@ -3956,6 +4044,7 @@
   priority: 7
   comments: "luamml support is not ideal."
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2025-05-29
 
 - name: derivative
@@ -3974,6 +4063,7 @@
   priority: 2
   issues: [453]
   tests: true
+  package-repository: "https://github.com/leo-liu/tex-pkg"
   updated: 2024-08-05
 
 - name: dialogue
@@ -4059,6 +4149,7 @@
   tests: true
   comments: "Graphics need Alt text. Metadata is set with hyperxmp which tagging
              code disables."
+  package-repository: "https://github.com/ypid/latex-packages/"
   updated: 2024-08-23
 
 - name: docmfp
@@ -4067,6 +4158,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-02-01
 
 - name: docmute
@@ -4108,6 +4200,7 @@
   priority: 4
   comments: "With unicode-math, wrong symbol in `\\mathrm`."
   tests: true
+  package-repository: "https://github.com/jbezos/dotlessi"
   updated: 2025-05-29
 
 - name: dotlessj
@@ -4116,6 +4209,7 @@
   priority: 9
   tests: true
   comments: "Symbols not correctly mapped to unicode."
+  package-repository: "https://github.com/davidcarlisle/dpctex"
   updated: 2026-04-26
 
 - name: dotseqn
@@ -4262,12 +4356,12 @@
 
 - name: easytable
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1382]
+  updated: 2026-06-09
 
 - name: ebgaramond
   type: package
@@ -4283,6 +4377,7 @@
   priority: 9
   comments: "Incompatible with unicode-math. No luamml support."
   tests: false
+  package-repository: "https://codeberg.org/cfr/ebgaramond-maths"
   updated: 2025-05-29
 
 - name: ebproof
@@ -4293,6 +4388,7 @@
   issues: [568,985]
   tests: true
   comments: "Tagging and mathml of `prooftree` is not correct."
+  package-repository: "https://framagit.org/manu/ebproof"
   updated: 2025-11-16
 
 - name: econlipsum
@@ -4341,6 +4437,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://git.sr.ht/~ralessi/ekdosis"
   updated: 2024-07-18
 
 - name: electrum
@@ -4388,6 +4485,7 @@
   priority: 4
   tests: true
   comments: Inserts and removes unnecessary spaces at pdf level.
+  package-repository: "https://github.com/cgnieder/embrac/"
   updated: 2026-01-25
 
 - name: emo
@@ -4397,6 +4495,7 @@
   tests: true
   comments: "Symbols disappear in tags with lualatex. Inserts images that need
              actualtext or ToUnicode values with pdflatex."
+  package-repository: "https://github.com/apparebit/emo"
   updated: 2025-12-15
 
 - name: emoji
@@ -4408,6 +4507,7 @@
   tests: true
   comments: "Compatible with some emoji fonts, however default Noto Color fonts
              are not supported at the PDF tagging level."
+  package-repository: "https://github.com/stone-zeng/latex-emoji"
   updated: 2025-12-16
 
 - name: empheq
@@ -4417,6 +4517,7 @@
   priority: 2
   issues: [138]
   tests: true
+  package-repository: "https://github.com/latex3/mathtools"
   updated: 2024-07-14
 
 - name: emptypage
@@ -4452,6 +4553,7 @@
   tests: true
   comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
   luatex-only: true
+  package-repository: "https://github.com/aminophen/endnotesj"
   updated: 2025-12-17
 
 - name: engord
@@ -4460,6 +4562,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-30
 
 - name: enotez
@@ -4470,6 +4573,7 @@
   tests: true
   comments: "`\\pagenote`s are not tagged as `<Note>`s. `\\ref` in `\\endnotemark`
              produces parent-child warnings."
+  package-repository: "https://github.com/cgnieder/enotez/"
   updated: 2024-08-01
 
 - name: enparen
@@ -4477,6 +4581,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: enumerate
@@ -4495,7 +4600,10 @@
   priority: 9
   package-repository: "https://github.com/pablgonz/enumext"
   tests: true
-  updated: 2025-11-02
+  issues: [1364]
+  related-issues: [1337]
+  comments: "Temporary issue with footnotes after lists."
+  updated: 2026-06-14
 
 - name: enumitem
   type: package
@@ -4510,6 +4618,7 @@
   issues: [61,1301]
   closed-issues: [4]
   tests: false
+  package-repository: "https://github.com/jbezos/enumitem"
   updated: 2026-06-02
 
 - name: environ
@@ -4543,6 +4652,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: epic
@@ -4562,6 +4672,7 @@
   issues: [455]
   comments: "Requires a blank line after `\\epigraph` command."
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2025-10-25
 
 - name: epsdice
@@ -4627,6 +4738,7 @@
              `\\math_register_halign_env:nn` to grab math contents.
              Adjustments towards final tagging interfaces likely necessary."
   tests: true
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2026-02-15
 
 - name: eqparbox
@@ -5045,12 +5157,12 @@
 
 - name: fcolumn
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3]
   priority: 2
   issues: [161]
   tests: true
-  updated: 2024-07-16
+  updated: 2026-06-08
 
 - name: fdsymbol
   type: package
@@ -5119,6 +5231,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: figcaps
@@ -5264,6 +5377,7 @@
   priority: 9
   tests: false
   comments: "Obsolete. See the bitset package."
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-02-12
 
 - name: fleqn
@@ -5507,6 +5621,7 @@
   priority: 9
   issues: [224]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-23
 
 - name: footmisc
@@ -5516,7 +5631,7 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [958]
+  issues: [958,1360]
   closed-issues: [12]
   tests: false
   updated: 2025-09-12
@@ -6030,6 +6145,7 @@
   tests: true
   comments: "Uses math where it doesn't need to. `\\ghspic` should have Alt text
              by default."
+  issues: [1373]
   updated: 2024-08-15
 
 - name: gillius
@@ -6065,6 +6181,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/jbezos/gindex"
   updated: 2024-07-18
 
 - name: gitinfo-lua
@@ -6156,6 +6273,7 @@
   priority: 6
   tests: true
   comments: "Inserts empty Div after every Figure."
+  package-repository: "https://github.com/nbeisert/latex-pkg-nb"
   updated: 2024-08-26
 
 - name: graphics
@@ -6277,6 +6395,7 @@
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-07
 
 - name: hanzibox
@@ -6450,6 +6569,7 @@
   included-in: [arxiv001]
   priority: 7
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2025-06-10
 
 - name: hypcap
@@ -6536,6 +6656,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: hyphenat
@@ -6544,6 +6665,7 @@
   included-in: [arxiv01, ol1]
   priority: 6
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-26
 
 - name: hyphsubst
@@ -6552,6 +6674,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 #------------------------ III ----------------------------
@@ -6623,6 +6746,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: iflang
@@ -6631,6 +6755,7 @@
   included-in: [tlc3, ol0.1]
   priority: 2
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: ifluatex
@@ -6647,6 +6772,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: ifoddpage
@@ -6780,6 +6906,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/T-F-S/incgraph"
   updated: 2024-07-18
 
 - name: inconsolata
@@ -7066,12 +7193,12 @@
 
 - name: jvlisting
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1384]
+  updated: 2026-06-09
 
 #------------------------ KKK ----------------------------
 
@@ -7081,6 +7208,7 @@
   priority: 9
   issues: [596]
   tests: true
+  luatex-only: true
   updated: 2024-08-16
 
 - name: kantlipsum
@@ -7356,6 +7484,7 @@
   priority: 2
   tests: true
   comments: "Drawn frames should be Artifacts. Pictures need Alt text."
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-05
 
 - name: lcg
@@ -7453,9 +7582,11 @@
   type: package
   status: partially-compatible
   priority: 9
-  comments: "No luamml support."
   tests: true
-  updated: 2025-05-29
+  comments: "No luamml support. Faulty output with current LaTeX unrelated to tagging."
+  package-repository: "https://github.com/max-te/letterswitharrows"
+  external-issues: "https://github.com/max-te/letterswitharrows/issues/1"
+  updated: 2026-06-14
 
 - name: lettrine
   type: package
@@ -7581,12 +7712,11 @@
 
 - name: linegoal
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-09
 
 - name: lineno
   type: package
@@ -7625,12 +7755,12 @@
 
 - name: listing
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1383]
+  updated: 2026-06-09
 
 - name: listings
   type: package
@@ -7647,12 +7777,12 @@
 
 - name: listingsutf8
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: See listings.
+  updated: 2026-06-09
 
 - name: listlbls
   type: package
@@ -7713,12 +7843,13 @@
 
 - name: longfbox
   type: package
-  status: unchecked
+  subpackages: [longbox]
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1385]
+  updated: 2026-06-09
 
 - name: longmath
   type: package
@@ -7758,12 +7889,12 @@
 
 - name: lpic
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  issues: [1386]
+  updated: 2026-06-09
 
 - name: lscape
   type: package
@@ -7776,13 +7907,22 @@
 - name: lstautogobble
   ctan-pkg: lstaddons
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: See listings.
+  updated: 2026-06-09
 
+- name: lstlinebgrd
+  ctan-pkg: lstaddons
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  comments: See listings.
+  updated: 2026-06-09
+  
 - name: ltablex
   type: package
   status: currently-incompatible
@@ -8029,12 +8169,11 @@
 - name: luatexja-adjust
   ctan-pkg: luatexja
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-05-18
+  updated: 2026-06-09
 
 - name: luatexja-ajmacros
   ctan-pkg: luatexja
@@ -8257,6 +8396,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-02-01
 
 - name: makeidx
@@ -8331,12 +8471,12 @@
 
 - name: marginnote
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [165]
   tests: true
-  updated: 2024-07-17
+  updated: 2026-06-16
 
 - name: markdown
   type: package
@@ -8539,7 +8679,7 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922]
+  issues: [139,922,1368]
   closed-issues: [734,1119]
   tests: true
   updated: 2025-12-11
@@ -8657,6 +8797,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/T-F-S/mercatormap"
   updated: 2024-07-18
 
 - name: menukeys
@@ -8774,6 +8915,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-06
 
 - name: minibox
@@ -9300,6 +9442,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-01-23
 
 - name: newfloat
@@ -9431,6 +9574,7 @@
   included-in: [tlc3]
   priority: 2
   tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-15
 
 - name: nfssext-cfr
@@ -9869,13 +10013,14 @@
 
 - name: otf
   ctan-pkg: japanese-otf
+  subpackages: [ajmacros,mlcid,mlutf,redeffont]
   type: package
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
   ptex-only: true
-  updated: 2026-01-28
+  updated: 2026-06-09
 
 - name: oubraces
   type: package
@@ -10039,6 +10184,7 @@
   priority: 9
   comments: "Does not error but `\\pagenote`s are not tagged as `<Note>`s."
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-25
 
 - name: pagesel
@@ -10091,6 +10237,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-01-23
 
 - name: papermas
@@ -10237,6 +10384,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcolparcolumns
@@ -10245,16 +10393,17 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcomment
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   issues: [465]
   tests: true
-  updated: 2024-08-05
+  updated: 2026-06-15
 
 - name: pdfescape
   type: package
@@ -10268,6 +10417,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
+  issues: [1356]
   package-repository: "https://github.com/ho-tex/pdflscape"
   tests: true
   updated: 2024-08-04
@@ -10690,6 +10840,15 @@
   tasks: needs tests
   updated: 2024-08-01
 
+- name: pinyin
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-10
+
 - name: piton
   type: package
   status: currently-incompatible
@@ -10864,6 +11023,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: program
@@ -10910,6 +11070,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-02-12
 
 - name: protosem
@@ -11226,12 +11387,13 @@
 
 - name: pxjahyper
   type: package
+  subpackages: [pxjahyper-enc]
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
   ptex-only: true
-  updated: 2026-01-28
+  updated: 2026-06-09
 
 - name: pxjodel
   type: package
@@ -11259,13 +11421,13 @@
 
 - name: pxrubrica
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
+  tests: true
   luatex-only: true
-  tasks: needs tests
-  updated: 2026-01-28
+  issues: [1387]
+  updated: 2026-06-09
 
 - name: pxtatescale
   type: package
@@ -11321,12 +11483,12 @@
 
 - name: pythonhighlight
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: See listings.
+  updated: 2026-06-09
 
 - name: pythontex
   type: package
@@ -11597,6 +11759,7 @@
   priority: 2
   issues: [352]
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-29
 
 - name: returntogrid
@@ -11646,6 +11809,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-06
 
 - name: rotate
@@ -11672,6 +11836,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: rotfloat
@@ -11712,6 +11877,16 @@
   tests: false
   comments: "No luamml support."
   updated: 2026-02-10
+
+- name: ruby
+  ctan-pkg: cjk
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  comments: "Only works with pdftex."
+  updated: 2026-06-10
 
 - name: runic
   type: package
@@ -11754,6 +11929,7 @@
   priority: 9
   closed-issues: [1044]
   tests: true
+  package-repository: "https://github.com/T-F-S/sanitize-umlaut"
   updated: 2025-11-06
 
 - name: sansmath
@@ -11868,13 +12044,12 @@
 
 - name: scrbase
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   subpackages: [scrkbase,scrlogo]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-09
 
 - name: scrextend
   type: package
@@ -11896,13 +12071,12 @@
 
 - name: scrlfile
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   subpackages: [scrlfile-hook]
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-09
 
 - name: scrlayer
   type: package
@@ -12048,6 +12222,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: setspace
@@ -12065,6 +12240,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-18
 
 - name: sfmath
@@ -12389,12 +12565,14 @@
 
 - name: snotez
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
   issues: [408]
   tests: true
-  updated: 2024-08-01
+  comments: "Sidenotes are missing `<Lbl>`s and `sidefigure`s and `sidetable`s
+             are not tagged correctly."
+  updated: 2026-06-16
 
 - name: somedefs
   type: package
@@ -12418,6 +12596,7 @@
   priority: 9
   tests: true
   comments: See soul.
+  package-repository: "https://github.com/jbezos/soulpos"
   updated: 2024-08-01
 
 - name: soulutf8
@@ -12566,6 +12745,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: true
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-29
 
 - name: stampinclude
@@ -12573,6 +12753,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-08-06
 
 - name: standardsectioning
@@ -12835,12 +13016,12 @@
 - name: syntax
   ctan-pkg: syntax-mdw
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1388]
+  updated: 2026-06-09
 
 - name: syntonly
   type: package
@@ -12918,12 +13099,12 @@
 
 - name: tablists
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1389]
+  updated: 2026-06-09
 
 - name: tabls
   type: package
@@ -13072,6 +13253,7 @@
   priority: 7
   comments: "Incompatible with unicode-math."
   tests: true
+  package-repository: "https://github.com/jbezos/tensind"
   updated: 2025-05-28
 
 - name: tensor
@@ -13127,13 +13309,12 @@
 - name: texnames
   ctan-pkg: biblio
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
   comments: "Obsolete. Use hologo or hvlogos."
-  updated: 2026-01-23
+  updated: 2026-06-09
 
 - name: texosquery
   type: package
@@ -13164,12 +13345,11 @@
 - name: textcmds
   ctan-pkg: amsrefs
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-09
 
 - name: textcomp
   type: package
@@ -13209,12 +13389,12 @@
 
 - name: tfrupee
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1390]
+  updated: 2026-06-09
 
 - name: tgadventor
   ctan-pkg: tex-gyre-adventor
@@ -13326,6 +13506,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2024-07-25
 
 - name: thm-restate
@@ -13352,7 +13533,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [229]
+  issues: [229,1403]
   tests: true
   comments: "Numbering with sibling key is wrong."
   updated: 2024-08-08
@@ -13407,12 +13588,12 @@
 
 - name: tikz-3dplot
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: See tikz.
+  updated: 2026-06-09
 
 - name: tikz-cd
   type: package
@@ -13643,6 +13824,7 @@
   issues: [24]
   tests: true
   tasks: needs more tests
+  package-repository: "https://github.com/jbezos/titlesec"
   updated: 2025-12-24
 
 - name: titletoc
@@ -13662,6 +13844,7 @@
   priority: 4
   issues: [687]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-28
 
 - name: tkz-base
@@ -13732,8 +13915,9 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [1338]
+  closed-issues: [1338]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2026-06-04
 
 - name: tocdata
@@ -13761,6 +13945,7 @@
   comments: "Package attempts to redefine `\\@starttoc`and fails."
   issues: [74]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-12
 
 - name: tocstyle
@@ -13778,6 +13963,7 @@
   included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-05
 
 - name: todonotes
@@ -13887,12 +14073,12 @@
 
 - name: trfsigns
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1391]
+  updated: 2026-06-09
 
 - name: trig
   type: package
@@ -13986,6 +14172,7 @@
   included-in: [ol0.1]
   priority: 9
   tests: false
+  package-repository: "https://github.com/ho-tex/oberdiek"
   updated: 2026-01-28
 
 - name: tx-ds
@@ -14280,12 +14467,12 @@
 
 - name: utfsym
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1392]
+  updated: 2026-06-09
 
 - name: utopia
   type: package
@@ -14332,6 +14519,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  comments: "Not distributed with texlive."
   updated: 2026-01-23
 
 - name: venndiagram
@@ -14387,6 +14575,7 @@
   closed-issues: [49]
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-06
 
 - name: version
@@ -14421,6 +14610,7 @@
   priority: 2
   tests: true
   comments: See lineno.
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-04
 
 - name: vietnam
@@ -14965,6 +15155,7 @@
   priority: 2
   issues: [183]
   tests: true
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-17
 
 - name: xtemplate
@@ -15013,6 +15204,7 @@
 - name: xy
   ctan-pkg: xypic
   type: package
+  subpackages: [xypic]
   status: currently-incompatible
   included-in: [tlc3, arxiv1, ol1]
   priority: 5
@@ -15022,15 +15214,6 @@
   issues: [899,1275]
   tests: true
   updated: 2025-06-09
-
-- name: xypic
-  type: package
-  status: unchecked
-  included-in: [ol0.02]
-  priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
 
 #------------------------ YYY ----------------------------
 
@@ -15095,12 +15278,11 @@
 
 - name: zhlipsum
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-09
 
 - name: zhnumber
   type: package
@@ -15176,7 +15358,8 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  updated: 2024-08-20
+  issues: "Issues with sibling counters unrelated to tagging."
+  updated: 2026-06-14
 
 - name: zref-counter
   ctan-pkg: zref
@@ -15289,11 +15472,11 @@
 - name: zref-titleref
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-02-13
+  tests: true
+  issues: [1408]
+  updated: 2026-06-12
 
 - name: zref-totpages
   ctan-pkg: zref
@@ -15358,16 +15541,25 @@
 
 #------------------------ AAA ----------------------------
 
+- name: achemso
+  type: class
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  tests: true
+  issues: [1412]
+  updated: 2026-06-12
+
 - name: acmart
   type: class
-  status: unchecked
+  status: partially-compatible
   included-in: [tlc3, arxiv1]
   priority: 2
   package-repository: "https://github.com/borisveytsman/acmart"
-  tests: false
-  tasks: needs tests
-  comments: "See acmart-tagged.cls."
-  updated: 2024-08-28
+  tests: true
+  tasks: needs more tests
+  issues: [1409]
+  updated: 2026-06-12
 
 - name: amsart
   type: class
@@ -15473,7 +15665,41 @@
   priority: 9
   tests: false
   tasks: needs tests
+  package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-07-18
+
+- name: ctexart
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
+
+- name: ctexbook
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
+
+- name: ctexrep
+  ctan-pkg: ctex
+  type: class
+  status: currently-incompatible
+  luatex-only: true
+  priority: 9
+  issues: [673]
+  tests: false
+  comments: See ctex.
+  updated: 2026-06-05
 
 #------------------------ EEE ----------------------------
 
@@ -15509,12 +15735,11 @@
 - name: extletter
   ctan-pkg: extsizes
   type: class
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  comments: "letter+extsizes is partially incompatible"
-  updated: 2025-07-07
+  tests: true
+  comments: "Tagging is not ideal. See letter class."
+  updated: 2026-06-12
 
 - name: extproc
   ctan-pkg: extsizes
@@ -15862,13 +16087,13 @@
 
 - name: moderncv
   type: class
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   subpackages: [moderncvcollection,moderncvstyleclassic]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-26
+  tests: true
+  issues: [1410]
+  updated: 2026-06-12
 
 #------------------------ NNN ----------------------------
 
@@ -15979,12 +16204,12 @@
 
 - name: scrlttr2
   type: class
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  issues: [1118]
+  issues: [1118,1411]
   related-issues: [88]
-  tests: false
-  updated: 2025-12-11
+  tests: true
+  updated: 2026-06-12
 
 - name: scrreport
   type: class

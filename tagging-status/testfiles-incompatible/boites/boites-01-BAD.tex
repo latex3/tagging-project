@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{boites}
+\usepackage{kantlipsum}
+
+\title{boites tagging test}
+
+\begin{document}
+
+\begin{breakbox}
+\begin{itemize}
+\item \kant[1]
+\item \kant[2]
+\end{itemize}
+\end{breakbox}
+
+\bkcounttrue
+\begin{breakbox}
+\kant[1]
+\end{breakbox}
+
+\end{document}
