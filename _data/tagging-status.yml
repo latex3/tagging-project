@@ -1833,16 +1833,16 @@
 - name: babel-spanish
   ctan-pkg: babel-spanish
   type: library
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  comments: active character issues
+  comments: "Active character issues with natbib, can be disabled with `shorthands=off.
+             `\\sptext` not ideally tagged."
   issues: [1422]
   closed-issues: [415]
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/jbezos/babel-spanish"
-  updated: 2024-09-01
+  updated: 2026-06-18
 
 - name: babel-swedish
   ctan-pkg: babel-swedish
