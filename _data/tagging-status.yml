@@ -750,13 +750,12 @@
 
 - name: apacite
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues: [677]
+  closed-issues: [677]
   tests: true
-  comments: "`natbibapa` option incompatible"
-  updated: 2026-06-08
+  updated: 2026-06-19
 
 - name: apalike
   ctan-pkg: bibtex
@@ -3088,6 +3087,13 @@
   comments: Obsolete package; suggested replacement `XCharter`.
   tests: false
   updated: 2026-01-25
+
+- name: chbibref
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-06-18
 
 - name: checkend
   type: package
@@ -6941,6 +6947,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  issues: [1429]
   package-repository: "https://github.com/T-F-S/incgraph"
   updated: 2024-07-18
 
@@ -7951,12 +7958,11 @@
 
 - name: lscapeenhanced
   type: package
-  status: unchecked
+  status: compatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/lscapeenhanced"
-  updated: 2026-06-17
+  updated: 2026-06-18
 
 - name: lstautogobble
   ctan-pkg: lstaddons
@@ -12322,12 +12328,11 @@
 
 - name: setspaceenhanced
   type: package
-  status: unchecked
+  status: compatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/setspaceenhanced"
-  updated: 2026-06-17
+  updated: 2026-06-18
 
 - name: settobox
   type: package
