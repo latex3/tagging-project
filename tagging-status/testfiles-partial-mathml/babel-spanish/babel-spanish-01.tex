@@ -1,0 +1,78 @@
+\DocumentMetadata{lang=es-CL,pdfversion=2.0,pdfstandard=ua-2,tagging=on,tagging-setup={math/setup={mathml-SE, mathml-AF}},}
+\documentclass{article}
+\usepackage[spanish]{babel}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\title{babel-spanish tagging test}
+
+\begin{document}
+
+"u "U "c "C "rr "RR "y "/ \'{\i}
+
+$\acute{\dotlessi}$
+
+\section{Comillas Latinas o Angulares}
+Las comillas latinas (« y ») son las preferidas por la RAE. Se activan con los
+atajos \verb+"<+ y \verb+">+:
+
+\begin{quotation}
+El autor afirmó: "<Esto es una cita textual con shorthands">.
+\end{quotation}
+
+\section{Gestión de Guiones e Hifenación}
+Babel introduce variantes del carácter guión para controlar cómo el motor de
+\LaTeX{} corta las palabras al final de las líneas.
+
+\begin{itemize}
+    \item \textbf{Guión compuesto libre:}  (\verb+"-+) Permite que el resto
+    de la palabra se divida si es necesario. \par
+    Ejemplo (físico"-químico): físico"-químico
+
+    \item \textbf{Guión compuesto rígido:} (\verb+"=+) Introduce un guión
+    pero prohíbe taxativamente separar las palabras contiguas. \par
+    Ejemplo (chileno"=argentina): chileno"=argentina
+
+    \item \textbf{Punto de rotura invisible:} (\verb+""+) Permite romper la
+    línea en ese punto exacto sin añadir ningún guión visual. \par
+    Ejemplo (kilómetros""/""hora): kilómetros""/""hora
+\end{itemize}
+
+\section{Signos de Interrogación y Exclamación}
+Los atajos introducen un microespacio tipográfico elástico automático:
+
+\begin{itemize}
+    \item \textbf{Interrogación:} (\verb+"?+) "?Cómo funciona esto?
+    \item \textbf{Exclamación:} (\verb+"!+) "!Qué excelente resultado!
+\end{itemize}
+
+\section{Comillas Curvas Auxiliares}
+Para anidar comillas dentro de las latinas, se usan los atajos \verb+"`+
+y \verb+"'+:
+
+\begin{quotation}
+<<El texto decía "`palabra"' dentro de comillas>>.
+\end{quotation}
+
+\section{Abreviaturas Estándar con Letras Voladas}
+La RAE exige que las letras voladas vayan precedidas de un punto. Para generar
+abreviaturas correctas en el ecosistema, se utiliza la macro nativa \verb+\sptext+:
+
+\begin{itemize}
+    \item \textbf{Abreviaturas comunes:} n\sptext{o}~1, art\sptext{o}~4, pág.~42.
+    \item \textbf{Ordinales y títulos:} 1\sptext{er} (Primer), 1\sptext{o} (Primero), Prof\sptext{a}.
+\end{itemize}
+
+\section{Operadores Matemáticos en Español}
+Babel redefine automáticamente los comandos de funciones trigonométricas y
+logarítmicas para que se impriman en castellano dentro del modo matemático:
+
+\begin{itemize}
+    \item \textbf{Seno:} $\sen(x)$ (en lugar del inglés \emph{sin}).
+    \item \textbf{Tangente:} $\tan(x)$ o también usando $\tg(x)$.
+    \item \textbf{Arcotangente:} $\arctg(x)$.
+    \item \textbf{Logaritmo neperiano:} $\ln(x)$.
+\end{itemize}
+
+\end{document}
