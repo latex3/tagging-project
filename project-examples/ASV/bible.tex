@@ -66,7 +66,7 @@
 \DeclareDocumentCommand \part {s ={shorttitle}o m}
       {\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
 \DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-     {\onecolumn\twocolumn[\ParseLaTeXeHeading {chapter}{#1} {#2} {#3}]}
+     {\onecolumn\twocolumn[\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}]}
 
 
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
