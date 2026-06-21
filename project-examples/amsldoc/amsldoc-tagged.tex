@@ -25,6 +25,8 @@
  pdfstandard=a-4f,
  uncompress
 }
+\let\openbox\relax
+\let\qedsymbol\relax
 %\tagpdfsetup{math/mathml/write-dummy}
 \documentclass[leqno,titlepage,openany]{amsldoc}
 
@@ -294,7 +296,7 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 %    remove a following \space or "{} " (both possibilities are present
 %    in book.cls).
 
-\renewcommand{\chaptername}[1]{}
+\renewcommand{\chaptername}{\ignorespaces}
 \newcommand{\chapnum}[1]{\mdash #1\mdash }
 \makeatletter
 \def\@makechapterhead#1{%
