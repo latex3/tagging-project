@@ -63,6 +63,12 @@
 
 \ExplSyntaxOff
 
+\DeclareDocumentCommand \part {s ={shorttitle}o m}
+      {\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
+\DeclareDocumentCommand \chapter {s ={shorttitle}o m}
+     {\onecolumn\twocolumn[\ParseLaTeXeHeading {chapter}{#1} {#2} {#3}]}
+
+
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
 \hypersetup{pdftitle=The Bible, pdfdisplaydoctitle}
 
@@ -270,8 +276,11 @@
     \chaptermark{\f@rhdr}
     \insertchapterspace
     \if@twocolumn
-      \@topnewpage[\ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}]%
+      \show2%
+      \onecolumn
+      \twocolumn[\ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}]%
     \else
+      \show1%
       \ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}%
     \fi
     \@afterheading
