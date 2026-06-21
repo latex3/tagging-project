@@ -1,14 +1,16 @@
 % !Mode:: "TeX:UTF-8:Main"
-
+% # Tagging notes 
+% \intertext example is not correctly tagged, see 
+% https://github.com/latex3/tagging-project/issues/1341
 \DocumentMetadata{
  lang=en, 
  tagging=on, 
- tagging-setup={math/setup=mathml-SE},
+ tagging-setup={math/setup=mathml-AF},
  pdfversion=2.0,
  pdfstandard=ua-2,
  pdfstandard=a-4f,
  uncompress
 }
 \renewcommand\DocumentMetadata[1]{}
-
+\AtBeginDocument{\taggingAFtrue}
 \input{amsldoc-tagged}

@@ -15,7 +15,8 @@
 %
 % The Current Maintainer of this work is the LaTeX Project.
 %
-
+\newif\iftaggingSE
+\newif\iftaggingAF
 %tagging: ======= added: use \DocumentMetadata
 \DocumentMetadata{
  lang=en, 
@@ -671,6 +672,11 @@ a& =b+c-d\\
 \end{equation}
 \end{verbatim}
 \producing
+% tagging ========
+\iftaggingSE
+\\\textbf{Suppressed as tagging with MathML-SE incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/1033} 
+\else 
 \begin{equation}\label{xx}
 \begin{split}
 a& =b+c-d\\
@@ -679,6 +685,8 @@ a& =b+c-d\\
  & =i
 \end{split}
 \end{equation}
+\fi 
+%endtagging =======
 \end{eqxample}
 
 \begin{eqxample}
@@ -830,6 +838,11 @@ structures, the \env{split} environment provides no numbering, because
 it is intended to be used \emph{only inside some other displayed
   equation structure}, usually an \env{equation}, \env{align}, or
 \env{gather} environment, which provides the numbering. For example:
+% tagging ========
+\iftaggingSE
+\\\textbf{Suppressed as tagging with MathML-SE incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/1033} 
+\else 
 \begin{equation}\label{e:barwq}\begin{split}
 H_c&=\frac{1}{2n} \sum^n_{l=0}(-1)^{l}(n-{l})^{p-2}
   \sum_{l _1+\dots+ l _p=l}\prod^p_{i=1} \binom{n_i}{l _i}\\
@@ -837,7 +850,8 @@ H_c&=\frac{1}{2n} \sum^n_{l=0}(-1)^{l}(n-{l})^{p-2}
   \Bigl[(n-l )^2-\sum^p_{j=1}(n_i-l _i)^2\Bigr].
   \kern-2em % adjust equation body to the right [mjd,13-Nov-1994]
 \end{split}\end{equation}
-
+\fi 
+%endtagging ==========
 \begin{verbatim}
 \begin{equation}\label{e:barwq}\begin{split}
 H_c&=\frac{1}{2n} \sum^n_{l=0}(-1)^{l}(n-{l})^{p-2}
@@ -1113,12 +1127,19 @@ which would not happen if you simply ended the display and then started
 it up again afterwards. \cn{intertext} may only appear right after a
 \cn{\\} or \cn{\\*} command. Notice the position of the word \qq{and} in
 this example.
+% tagging ========
+\iftaggingAF
+\\\textbf{Suppressed as tagging with MathML-AF incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/1033} 
+\else 
 \begin{align}
   A_1&=N_0(\lambda;\Omega')-\phi(\lambda;\Omega'),\\
   A_2&=\phi(\lambda;\Omega')-\phi(\lambda;\Omega),\\
 \intertext{and}
   A_3&=\mathcal{N}(\lambda;\omega).
 \end{align}
+\fi
+%endtagging =========
 \begin{verbatim}
 \begin{align}
   A_1&=N_0(\lambda;\Omega')-\phi(\lambda;\Omega'),\\
@@ -1480,9 +1501,16 @@ unusually wide subscripts or superscripts. These commands take one
 optional argument\index{options!behavior of particular options}
 (the subscript) and one mandatory argument (the
 superscript, possibly empty):
+% tagging ========
+\iftaggingSE
+\\\textbf{Suppressed as tagging with MathML-SE incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/919} 
+\else 
 \begin{equation}
 A\xleftarrow{n+\mu-1}B \xrightarrow[T]{n\pm i-1}C
 \end{equation}
+\fi 
+%endtagging 
 \begin{verbatim}
   \xleftarrow{n+\mu-1}\quad \xrightarrow[T]{n\pm i-1}
 \end{verbatim}
@@ -2035,6 +2063,15 @@ or \xypic/\index{XY-pic@\xypic/ package},
 but for simple diagrams without diagonal
 arrows\index{arrows!in commutative diagrams} the \pkg{amscd} commands
 may be more convenient. Here is one example.
+% tagging ========
+\iftaggingSE
+\\\textbf{Suppressed as tagging with MathML-SE incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/1437} 
+\else 
+\iftaggingAF
+\\\textbf{Suppressed as tagging with MathML-AF incorrect}\\
+\url{https://github.com/latex3/tagging-project/issues/1437} 
+\else 
 \begin{equation*}
 \begin{CD}
 S^{\mathcal{W}_\Lambda}\otimes T   @>j>>   T\\
@@ -2042,6 +2079,8 @@ S^{\mathcal{W}_\Lambda}\otimes T   @>j>>   T\\
 (S\otimes T)/I                  @=      (Z\otimes T)/J
 \end{CD}
 \end{equation*}
+\fi\fi
+%endtagging ==========
 \begin{verbatim}
 \begin{CD}
 S^{\mathcal{W}_\Lambda}\otimes T   @>j>>   T\\
@@ -2061,7 +2100,6 @@ A \qq{null arrow} command |@.| can be used instead of a visible arrow
 to fill out an array where needed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Using math fonts}
 
 \section{Introduction}
