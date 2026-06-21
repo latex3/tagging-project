@@ -16,52 +16,32 @@
 % The Current Maintainer of this work is the LaTeX Project.
 %
 
-
+%tagging: ======= added: use \DocumentMetadata
 \DocumentMetadata{
- lang=en,
+ lang=en, 
+ tagging=on,
  tagging-setup={math/mathml/luamml/load=false},
  pdfversion=2.0,
  pdfstandard=ua-2,
  pdfstandard=a-4f,
  uncompress
 }
-%\tagpdfsetup{math/mathml/write-dummy}
-\documentclass[leqno,titlepage,openany]{amsldoc}
+%tagging: ======== added: undefine the commands:
+\let\openbox\relax\let\qedsymbol\relax
+%endtagging ========
 
-% ======== new ==============%
-\AtBeginDocument{\prehyphenchar"AD }
-% load unicode-math
-\usepackage{unicode-math}
+\documentclass[leqno,titlepage,openany]{amsldoc}[1999/12/13]
+
+%tagging: ======== added: load unicode math fonts
+\usepackage{unicode-math} %lua-unicode-math errors because of missing varGamma
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
 \setmathfont{STIX Two Math}[version=bold, FakeBold=1.2]
 \AtBeginDocument{\renewcommand\mathbf{\symbf}}
+%end tagging ============================
 
-% enable if luamml should try to add structelem.
-% errors currently!!
-%\AssignSocketPlug{tagsupport/math/end}{luamml}
-
-% ============================
-% =========== changed ===========
-% * Index heading is missing a target.
+%tagging: =========== added: \@starttoc needs the configuration points
 \makeatletter
-\renewenvironment{theindex}
-               {\if@twocolumn
-                  \@restonecolfalse
-                \else
-                  \@restonecoltrue
-                \fi
-\twocolumn[{\MakeLinkTarget[chapter]{}\@makeschapterhead{\indexname}}]%
-                %\twocolumn[\@makeschapterhead{\indexname}]%
-                \@mkboth{\MakeUppercase\indexname}%
-                        {\MakeUppercase\indexname}%
-                \thispagestyle{plain}\parindent\z@
-                \parskip\z@ \@plus .3\p@\relax
-                \columnseprule \z@
-                \columnsep 35\p@
-                \let\item\@idxitem}
-               {\if@restonecol\onecolumn\else\clearpage\fi}
-% * \@starttoc needs the configuration points
 \def\@starttoc#1{\begingroup
   \let\autoindex\@gobble
   \makeatletter
@@ -72,10 +52,12 @@
              \immediate\openout
                  \csname tf@#1\endcsname \jobname.#1\relax
   \fi \global\@nobreakfalse \endgroup}
-\makeatother
+\makeatother  
+%endtagging ================  
 
+
+%tagging: =========  added: redefine ctag
 % Don't use a triv list with ctab and do not tag the table as table
-%
 \renewenvironment{ctab}[1][table-tagging=presentation]{%
   \par\topsep\medskipamount
   \begin{center}
@@ -86,9 +68,10 @@
   \end{tabular}%
   \end{center}
 }
+%endtagging
 
-% fbox. This is luatex only! with pdflatex it is much more difficult to get 
-% the mc-literal correct
+% tagging: ===== added: artifact the rules of fbox. 
+% This is luatex only! 
 \makeatletter
 \def\@frameb@x#1{%
   \@tempdima\fboxrule
@@ -112,14 +95,16 @@
         }%
 }
 \makeatother
-
-% lazy setting of mc as we are using luatex!
-\renewcommand{\errorbullet}{\tagstructbegin{tag=Span}\tagmcbegin{actualtext=⚠}\rule[-.5pt]{2.5pt}{7.5pt}%
-  \rule[-.5pt]{5pt}{2.5pt}\kern-2.5pt%
-  \rule[4.5pt]{2.5pt}{2.5pt}\tagstructend\tagmcbegin{}}
-
-
-%=======================
+%endtagging ================
+ 
+%tagging: ========== added: actualtext around the symbol
+\renewcommand{\errorbullet}{%
+   \UseTaggingSocket{inline/begin}{tag=Span,actualtext=⚠}%
+   \rule[-.5pt]{2.5pt}{7.5pt}%
+   \rule[-.5pt]{5pt}{2.5pt}\kern-2.5pt%
+   \rule[4.5pt]{2.5pt}{2.5pt}%
+   \UseTaggingSocket{inline/end}}
+%endtagging =======================
 
 \def\MaintainedByLaTeXTeam#1{%
 \begin{center}%
@@ -177,6 +162,7 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 % Very minor changes are not listed in the \date above:
 %
 % 2021-08-22: reported typo fixed mathools -> mathtools
+% 2025-05-23: drop spurious option list
 
 
 %    Use the amsmath package and amscd package in order to print
@@ -184,9 +170,7 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 \usepackage{amsmath}
 \usepackage{amscd}
 
-% ======= changed imakeidx does not work ========
-\usepackage{makeidx}
-% =============================
+\usepackage{imakeidx}
 %    Need alternate coding for vertical bar to get it into index.
 %    Based on \qcbang and \cnbang in amsldoc.cls, refined by David Carlisle.
 %    Give it a sort field that will be at the end of the symbols;
@@ -200,9 +184,7 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 \DeclareRobustCommand{\cnamp}{%
   \index{"!a@\texttt{\&}}}
 
-%========== changed =======
-\makeindex%[intoc] % generate index data
-%==================
+\makeindex[intoc] % generate index data
 \providecommand{\see}[2]{\textit{see} #1}
 
 %    The amsldoc class includes a number of features useful for
@@ -294,21 +276,42 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 %    remove a following \space or "{} " (both possibilities are present
 %    in book.cls).
 
-\renewcommand{\chaptername}[1]{}
-\newcommand{\chapnum}[1]{\mdash #1\mdash }
-\makeatletter
-\def\@makechapterhead#1{%
-  \vspace{1.5\baselineskip}%
-  {\parindent \z@ \raggedright \reset@font
-    \ifnum \c@secnumdepth >\m@ne
-      \large\bfseries \chapnum{\thechapter}%
-      \par\nobreak
-      \vskip.5\baselineskip\relax
-    \fi
-    #1\par\nobreak
-    \vskip\baselineskip
-  }}
-\makeatother
+%tagging: ======== removed: breaks, 
+%the new code does not expect `\chaptername` to take an argument
+%\renewcommand{\chaptername}[1]{}
+%end tagging =============
+
+%tagging: ======== removed, does nothing in the new code. 
+%\newcommand{\chapnum}[1]{\mdash #1\mdash }
+%\makeatletter
+%\def\@makechapterhead#1{%
+%  \vspace{1.5\baselineskip}%
+%  {\parindent \z@ \raggedright \reset@font
+%    \ifnum \c@secnumdepth >\m@ne
+%      \large\bfseries \chapnum{\thechapter}%
+%      \par\nobreak
+%      \vskip.5\baselineskip\relax
+%    \fi
+%    #1\par\nobreak
+%    \vskip\baselineskip
+%  }}
+%\makeatother
+%endtagging ==========
+
+%tagging: ========== added: reinstate chapter layout with new methods
+\EditInstance{heading}{chapter}
+{
+  ,prefix=
+  ,number-format= \mdash\theheading\mdash
+  ,heading-decls = \raggedright \parindent 0pt\bfseries \large
+  ,title-decls = \large
+}
+
+\EditInstance{headformat}{chapter}
+{
+  prefix-number-sep=0pt
+}
+%end tagging ===============
 
 %    A command for ragged-right parbox in a tabular.
 \newcommand{\rp}{\let\PBS\\\raggedright\let\\\PBS}
@@ -361,16 +364,13 @@ Bug reports can be opened (category \texttt{#1}) at\\%
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\xxx}{xxx}
 
-\usepackage[pdfdisplaydoctitle=true]{hyperref}
-\hypersetup{pdfborder=0 0 0,pdftitle=amsldoc}
+\usepackage{hyperref}
+\hypersetup{pdfborder=0 0 0}
 \makeatletter
 \let\oldcs\cs
 \def\cs#1{\texorpdfstring{\oldcs{#1}}{\@backslashchar\@backslashchar#1}}
 \let\cn\cs
 \makeatother
-
-\tagpdfsetup{newattribute = {list}{/O /List /ListNumbering/Unordered},}    
-
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -520,14 +520,6 @@ they occur in a displayed equation.
 \end{description}
 
 \goodbreak
-
-% ======== changed. List with empty body doesn't work well
-\begin{description}
-\item[\opt{alignedleftspaceyes}]\mbox{}
-\item[\opt{alignedleftspaceno}]\mbox{}
-\item[\opt{alignedleftspaceyesifneg}]\mbox{}
-\end{description}
-%================
 
 To use one of these package options, put the option name in the optional
 argument of the \cn{usepackage} command\mdash e.g.,
@@ -1321,7 +1313,7 @@ The \nipkg{amsmath} package slightly extends the set of math
 spacing\index{horizontal spacing} commands, as shown below.
 Both the spelled-out and abbreviated forms of these commands are robust,
 and they can also be used outside of math.
-%=========== changed. This is a real table
+%tagging: =========== changed. This is a real table
 \begin{ctab}[table-header-rows=1]{lll|lll}
 Abbrev.& Spelled out& Example & Abbrev.& Spelled out& Example\\
 \hline
@@ -1336,7 +1328,7 @@ Abbrev.& Spelled out& Example & Abbrev.& Spelled out& Example\\
 & \cn{quad}& \spx{\quad}\\
 & \cn{qquad}& \spx{\qquad}
 \end{ctab}
-%==========
+%end tagging ==========
 For the greatest possible control over math spacing, use \cn{mspace}
 and `math units'. One math unit, or |mu|, is equal to 1/18 em. Thus to
 get a negative \cn{quad} you could write |\mspace{-18.0mu}|.
@@ -1361,7 +1353,7 @@ example) you have to submit it to a publisher who insists on following
 house tradition in this respect. The default treatment for the various
 kinds follows American Mathematical Society conventions:
 \begin{center}
-% ============ changed. minipage in tabular doesn't work well
+%tagging: ============ changed. minipage in tabular doesn't work well
 %\begin{tabular}{@{}l@{}l@{}}
 \begin{minipage}[t]{.54\textwidth}
 \begin{verbatim}
@@ -1383,7 +1375,7 @@ and the infinite integral
 \[\int_{A_1}\int_{A_2}\dotsi.\]
 \end{minipage}
 %\end{tabular}
-% ====================
+%endtagging ====================
 \end{center}
 For most situations, the undifferentiated \cn{dots} can be used, and
 \nipkg{amsmath} will output the most suitable form based on the
@@ -1471,13 +1463,13 @@ Basic \latex/ provides \cn{overrightarrow} and \cn{overleftarrow}
 commands. Some additional over and under arrow commands are provided
 by the \nipkg{amsmath} package to extend the set:
 
-%======== changed tabbing into ctab as tabbing is not yet supported
+%tagging: ======== changed tabbing into ctab as tabbing is not yet supported
 \begin{ctab}{ll}
 \cn{overleftarrow}   & \cn{underleftarrow} \\
 \cn{overrightarrow}   & \cn{underrightarrow} \\
 \cn{overleftrightarrow}& \cn{underleftrightarrow}
 \end{ctab}
-
+%endtagging: =======
 %% ------------------------------------------------------------------ %%
 
 \section{Extensible arrows}
@@ -1597,15 +1589,14 @@ The continued fraction\index{continued fractions}
 }}}
 \end{equation}
 can be obtained by typing
-% =========== changed: \samepage -> \begin{samepage} for proper doendpe
-\begin{samepage}
+{\samepage
 \begin{verbatim}
 \cfrac{1}{\sqrt{2}+
  \cfrac{1}{\sqrt{2}+
   \cfrac{1}{\sqrt{2}+\dotsb
 }}}
 \end{verbatim}
-\end{samepage}
+}% End of \samepage
 This produces better-looking results than straightforward use of
 \cn{frac}. Left or right placement of any of the numerators is
 accomplished by using \cn{cfrac}|[l]| or \cn{cfrac}|[r]| instead of
@@ -1651,7 +1642,7 @@ jump of 3pt or so in normal-sized text. There are two or three
 situations where the delimiter size is commonly adjusted, using a set of
 commands that have `big' in their names.%
 \index{delimiters!fixed size|(}
-%======== changed, is a real tabular  
+%tagging: ======== changed, is a real tabular  
 \begin{ctab}[table-header-rows=2]{l|llllll}
 Delimiter&
   text& \ncn{left}& \ncn{bigl}& \ncn{Bigl}& \ncn{biggl}& \ncn{Biggl}\\
@@ -1666,7 +1657,7 @@ Result\vstrut{5ex}&
   $\displaystyle\biggl(b\biggr)\biggl(\frac{c}{d}\biggr)$&
   $\displaystyle\Biggl(b\Biggr)\Biggl(\frac{c}{d}\Biggr)$
 \end{ctab}
-%================ 
+%endtagging ================ 
 The first kind of situation is a cumulative operator with limits above
 and below. With \cn{left} and \cn{right} the delimiters usually turn out
 larger than necessary, and using the |Big| or |bigg|
@@ -1899,7 +1890,7 @@ spacing!around operator names} is applied automatically.
 The \cn{substack} command can be used to produce a multiline subscript
 or superscript:\index{subscripts and superscripts!multiline}\relax
 \index{superscripts|see{subscripts and superscripts}} for example
-% ========= changed minipage in tabular replaced by p-column
+%tagging: ========= changed minipage in tabular replaced by p-column
 \begin{ctab}{m{.6\columnwidth}l}
 %\begin{minipage}[t]{.6\columnwidth}
 \begin{verbatim}
@@ -1932,7 +1923,7 @@ $\displaystyle
       \end{subarray}}
  P(i,j)$
 \end{ctab}
-
+%endtagging =============
 %% ------------------------------------------------------------------ %%
 
 \section{The \cn{sideset} command}\label{sideset}
@@ -1955,6 +1946,7 @@ If, however, you want not only the prime but also something below or
 above the sum symbol, it's not so easy\mdash indeed, without
 \cn{sideset}, it would be downright difficult. With \cn{sideset}, you
 can write
+%tagging: ========= avoid minipage in table
 \begin{ctab}{m{.6\columnwidth}l}
 %\begin{minipage}[t]{.6\columnwidth}
 \begin{verbatim}
@@ -1976,7 +1968,7 @@ product symbol, you would type
 \sideset{_*^*}{_*^*}\prod
 \end{verbatim}
 %\end{minipage}
-% ==================================
+%endtagging ==================================
 &$\displaystyle
 \sideset{_*^*}{_*^*}\prod
 $
