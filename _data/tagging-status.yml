@@ -476,7 +476,7 @@
   status: compatible
   included-in: [arxiv01, ol1]
   priority: 6
-  issues: [229]
+  closed-issues: [229]
   comments: "Obsolete with June 2026 release."
   tests: true
   package-repository: "https://github.com/ho-tex/aliascnt"
@@ -654,7 +654,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232]
+  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370]
   closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
   tests: true
   updated: 2026-06-02
@@ -750,13 +750,12 @@
 
 - name: apacite
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  issues: [677]
+  closed-issues: [677]
   tests: true
-  comments: "`natbibapa` option incompatible"
-  updated: 2026-06-08
+  updated: 2026-06-19
 
 - name: apalike
   ctan-pkg: bibtex
@@ -1833,15 +1832,16 @@
 - name: babel-spanish
   ctan-pkg: babel-spanish
   type: library
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
-  comments: active character issues
-  issues: [415]
-  tests: false
-  tasks: needs tests
+  comments: "Active character issues with natbib, can be disabled with `shorthands=off.
+             `\\sptext` not ideally tagged."
+  issues: [1422]
+  closed-issues: [415]
+  tests: true
   package-repository: "https://github.com/jbezos/babel-spanish"
-  updated: 2024-09-01
+  updated: 2026-06-18
 
 - name: babel-swedish
   ctan-pkg: babel-swedish
@@ -3087,6 +3087,13 @@
   comments: Obsolete package; suggested replacement `XCharter`.
   tests: false
   updated: 2026-01-25
+
+- name: chbibref
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-06-18
 
 - name: checkend
   type: package
@@ -4600,7 +4607,10 @@
   priority: 9
   package-repository: "https://github.com/pablgonz/enumext"
   tests: true
-  updated: 2025-11-02
+  issues: [1364]
+  related-issues: [1337]
+  comments: "Temporary issue with footnotes after lists."
+  updated: 2026-06-14
 
 - name: enumitem
   type: package
@@ -5157,7 +5167,7 @@
   status: compatible
   included-in: [tlc3]
   priority: 2
-  issues: [161]
+  closed-issues: [161]
   tests: true
   updated: 2026-06-08
 
@@ -5414,6 +5424,15 @@
   tests: true
   updated: 2026-05-13
 
+- name: floatbytocbasic
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/floatbytocbasic"
+  updated: 2026-06-17
+
 - name: floatpag
   type: package
   status: currently-incompatible
@@ -5441,6 +5460,15 @@
   closed-issues: [497]
   tests: false
   updated: 2024-08-20
+
+- name: floatrowbytocbasic
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/floatrowbytocbasic"
+  updated: 2026-06-17
 
 - name: flowfram
   type: package
@@ -5628,7 +5656,7 @@
   priority: 2
   comments: Replacement code is in latex-lab
   tasks: integrate code properly into the package.
-  issues: [958]
+  issues: [958,1360]
   closed-issues: [12]
   tests: false
   updated: 2025-09-12
@@ -5992,6 +6020,15 @@
   comments: "Incompatible with unicode-math. No luamml support."
   updated: 2025-05-29
 
+- name: genealogytree
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  package-repository: "https://github.com/T-F-S/genealogytree"
+  updated: 2026-06-17
+
 - name: gensymb
   type: package
   status: partially-compatible
@@ -6142,6 +6179,7 @@
   tests: true
   comments: "Uses math where it doesn't need to. `\\ghspic` should have Alt text
              by default."
+  issues: [1373]
   updated: 2024-08-15
 
 - name: gillius
@@ -6353,6 +6391,7 @@
   status: compatible
   priority: 9
   closed-issues: [559]
+  package-repository: "https://github.com/komascript/gridset"
   tests: true
   updated: 2024-08-19
 
@@ -6425,6 +6464,12 @@
   tests: true
   comments: "No links with hyperref. No Reference structure for links."
   updated: 2026-01-26
+
+- name: hawkdraw
+  type: package
+  status: compatible
+  tests: true
+  updated: 2026-06-18
 
 - name: helvet
   type: package
@@ -6902,6 +6947,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  issues: [1429]
   package-repository: "https://github.com/T-F-S/incgraph"
   updated: 2024-07-18
 
@@ -7248,6 +7294,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [344]
+  package-repository: "https://github.com/bdtc/keyfloat"
   tests: true
   tasks: needs more tests
   updated: 2024-07-29
@@ -7578,9 +7625,10 @@
   type: package
   status: partially-compatible
   priority: 9
-  comments: "No luamml support."
   tests: true
-  updated: 2025-05-29
+  comments: "No luamml support."
+  package-repository: "https://github.com/max-te/letterswitharrows"
+  updated: 2026-06-20
 
 - name: lettrine
   type: package
@@ -7873,6 +7921,15 @@
   tasks: needs more tests
   updated: 2026-01-30
 
+- name: longtwocolumn
+  type: package
+  status: unchecked
+  priority: 9
+  package-repository: "https://gitlab.com/latex9343737/packages/longtwocolumn"
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-17
+
 - name: lparse
   type: package
   status: compatible
@@ -7897,6 +7954,14 @@
   priority: 2
   tests: true
   updated: 2024-08-04
+
+- name: lscapeenhanced
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/lscapeenhanced"
+  updated: 2026-06-18
 
 - name: lstautogobble
   ctan-pkg: lstaddons
@@ -8312,6 +8377,7 @@
   included-in: [tlc3]
   priority: 8
   issues: [1084]
+  package-repository: "https://github.com/bdtc/lwarp"
   tests: true
   comments: "Package errors if `\\DocumentMetadata` detected."
   updated: 2026-01-26
@@ -8401,6 +8467,15 @@
   tests: true
   updated: 2024-07-11
 
+- name: makelabels
+  type: package
+  status: unchecked
+  priority: 9
+  package-repository: "https://github.com/komascript/makelabels"
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-17
+
 - name: makerobust
   type: package
   status: compatible
@@ -8465,12 +8540,13 @@
 
 - name: marginnote
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [165]
+  closed-issues: [165]
+  package-repository: "https://codeberg.org/komascript/marginnote"
   tests: true
-  updated: 2024-07-17
+  updated: 2026-06-16
 
 - name: markdown
   type: package
@@ -8673,7 +8749,7 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922]
+  issues: [139,922,1368]
   closed-issues: [734,1119]
   tests: true
   updated: 2025-12-11
@@ -8827,6 +8903,7 @@
   status: partially-compatible
   priority: 9
   comments: Logos need ActualText.
+  package-repository: "https://github.com/bdtc/metalogox"
   tests: true
   updated: 2024-07-30
 
@@ -10395,9 +10472,9 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [465]
+  closed-issues: [465]
   tests: true
-  updated: 2024-08-05
+  updated: 2026-06-15
 
 - name: pdfescape
   type: package
@@ -10411,6 +10488,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
+  issues: [1356]
   package-repository: "https://github.com/ho-tex/pdflscape"
   tests: true
   updated: 2024-08-04
@@ -12035,12 +12113,22 @@
   tests: true
   updated: 2024-07-25
 
+- name: scraddr
+  type: package
+  status: unchecked
+  priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
+  tests: false
+  tasks: needs tests
+  updated: 2026-06-17
+
 - name: scrbase
   type: package
   status: compatible
   included-in: [ol0.1]
   subpackages: [scrkbase,scrlogo]
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2026-06-09
 
@@ -12049,6 +12137,7 @@
   status: unchecked
   included-in: [arxiv01, ol1]
   priority: 6
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-17
@@ -12058,6 +12147,7 @@
   status: unchecked
   included-in: [ol0.1]
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2026-01-23
@@ -12068,6 +12158,7 @@
   included-in: [ol0.1]
   priority: 9
   subpackages: [scrlfile-hook]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2026-06-09
 
@@ -12076,6 +12167,7 @@
   status: unchecked
   included-in: [tlc3, ol0.02]
   priority: 2
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-17
@@ -12084,6 +12176,7 @@
   type: package
   status: unchecked
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-17
@@ -12092,6 +12185,7 @@
   type: package
   status: unchecked
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-17
@@ -12101,6 +12195,7 @@
   status: unchecked
   included-in: [arxiv001, ol0.1]
   priority: 2
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-15
@@ -12110,6 +12205,7 @@
   status: unchecked
   priority: 9
   related-issues: [88]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-10
@@ -12119,6 +12215,7 @@
   status: unchecked
   included-in: [ol0.02]
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   comments: "Obsolete. Use scrlayer-scrpage instead."
@@ -12129,6 +12226,7 @@
   status: compatible
   included-in: [ol0.02]
   priority: 9
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2026-02-10
 
@@ -12137,6 +12235,7 @@
   status: compatible
   priority: 9
   closed-issues: [696]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: true
   updated: 2024-09-13
 
@@ -12225,6 +12324,14 @@
   priority: 2
   tests: true
   updated: 2024-08-01
+
+- name: setspaceenhanced
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/setspaceenhanced"
+  updated: 2026-06-18
 
 - name: settobox
   type: package
@@ -12558,12 +12665,14 @@
 
 - name: snotez
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 2
   issues: [408]
   tests: true
-  updated: 2024-08-01
+  comments: "Sidenotes are missing `<Lbl>`s and `sidefigure`s and `sidetable`s
+             are not tagged correctly."
+  updated: 2026-06-16
 
 - name: somedefs
   type: package
@@ -12751,6 +12860,7 @@
   type: package
   status: unchecked
   priority: 9
+  package-repository: "https://github.com/komascript/third-party-enhancements/tree/main/standardsectioning"
   tests: false
   tasks: needs tests
   updated: 2024-07-18
@@ -13650,6 +13760,15 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2025-11-19
 
+- name: tikzfill
+  type: package
+  subpackages: [tikzfill.geomarray,tikzfill.hexagon,tikzfill.image,tikzfill.rhombus]
+  status: unchecked
+  priority: 9
+  package-repository: "https://github.com/T-F-S/tikzfill"
+  tests: false
+  updated: 2026-06-17
+
 - name: tikzlibrary-external
   ctan-pkg: tikz
   type: library
@@ -13795,6 +13914,7 @@
   status: compatible
   included-in: [ol0.02]
   priority: 2
+  package-repository: "https://github.com/jbezos/titlesec"
   tests: true
   updated: 2024-07-12
 
@@ -13825,6 +13945,7 @@
   priority: 2
   comments: Mentioned in issue.
   issues: [24,1157]
+  package-repository: "https://github.com/jbezos/titlesec"
   tests: true
   updated: 2025-12-26
 
@@ -13898,6 +14019,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [701]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: true
   updated: 2024-09-10
 
@@ -13917,6 +14039,7 @@
   included-in: [tlc3]
   priority: 2
   issues: [557]
+  package-repository: "https://github.com/bdtc/tocdata"
   tests: true
   updated: 2024-08-14
 
@@ -14224,6 +14347,7 @@
   status: unchecked
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   tasks: needs tests
   updated: 2024-07-15
@@ -14557,6 +14681,13 @@
   tests: true
   updated: 2024-07-26
 
+- name: verifycommand
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-06-17
+
 - name: verse
   type: package
   status: compatible
@@ -14801,6 +14932,7 @@
   included-in: [ol0.02]
   priority: 9
   issues: [345,684]
+  closed-issues: [1423]
   tests: true
   updated: 2024-08-28
 
@@ -15086,7 +15218,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [959]
+  closed-issues: [959]
   tests: false
   updated: 2025-09-16
 
@@ -15349,7 +15481,8 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  updated: 2024-08-20
+  issues: "Issues with sibling counters unrelated to tagging."
+  updated: 2026-06-14
 
 - name: zref-counter
   ctan-pkg: zref
@@ -16017,12 +16150,13 @@
 - name: ltugboat
   ctan-pkg: tugboat
   type: class
+  subpackages: [ltugcomn]
   status: partially-compatible
   priority: 9
   closed-issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
-  updated: 2025-06-08
+  updated: 2026-06-18
 
 - name: ltx-talk
   type: class
@@ -16179,6 +16313,7 @@
   priority: 2
   issues: [1118]
   related-issues: [88]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2025-12-11
 
@@ -16189,6 +16324,7 @@
   priority: 2
   issues: [1118]
   related-issues: [88]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2025-12-11
 
@@ -16198,6 +16334,7 @@
   priority: 9
   issues: [1118,1411]
   related-issues: [88]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: true
   updated: 2026-06-12
 
@@ -16208,6 +16345,7 @@
   priority: 2
   issues: [1118]
   related-issues: [88]
+  package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
   updated: 2025-12-11
 

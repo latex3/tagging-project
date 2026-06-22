@@ -36,27 +36,7 @@
 \usepackage[mathscr]{euscript}
 \usepackage{pdfcomment}  % Use to insert alt-text for figures as tooltips
 \pagestyle{exambody}
-\ExplSyntaxOn
-\makeatletter
-\pdfxform_new:nnn {tooltip/AP}{}
-  { { \opacity_select:n{0}\rule{\paperwidth}{\paperheight} }}
-\pdf_object_new:n {tooltip/AP}
-\pdf_object_write:nne {tooltip/AP}{dict}{/N <</Yes~\pdfxform_ref:n{tooltip/AP}~/Off~\pdfxform_ref:n{tooltip/AP}>>}
-\renewcommand{\pc@annot@tooltip}%
-{%
-  /TU~(\pc@pdfenc@contents)\space%
-  /Contents~(\pc@pdfenc@contents)\space%<<<<<<<<<<<<
-  /T~(tooltip \thezref@unique)\space%
-  /C~[ ]\space%
-  /FT/Btn\space%
-  /F~516\space% Print=true + ToggleNoView = false instead of 768
-  /Ff~65536\space%
-  /H/N\space%
-  /BS~<< /W~0 >>\space%
-  /AP~\pdf_object_ref:n{tooltip/AP}
-}
-\ExplSyntaxOff
-\makeatother
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
