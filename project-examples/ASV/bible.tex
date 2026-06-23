@@ -66,7 +66,7 @@
 \DeclareDocumentCommand \part {s ={shorttitle}o m}
       {\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
 \DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-     {\onecolumn\twocolumn[\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}]}
+     {\onecolumn\twocolumn[\par\vspace*{0pt}\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}\par\vspace{4pt}]}
 
 
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
@@ -177,16 +177,12 @@
 %restore \@starttoc
 \let\@starttoc\ori@starttoc
 \renewcommand\tableofcontents{%
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapter*{\contentsname
+  \onecolumn
+  \chapter*{\contentsname
         \@mkboth{%
            \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
     \@starttoc{toc}%
-    \if@restonecol\twocolumn\fi
+    \twocolumn
     }
 \renewcommand*\l@part[2]{%
  \ifnum \c@tocdepth >-2\relax
@@ -243,77 +239,6 @@
     \endgroup
   \fi}
 
-% move the refstepcounter into the spanning head (general memoir issue)
-\def\@chapter[#1]#2{%
-  \m@mpn@new@chaptrue%
-  \m@mpn@new@schapfalse%
-  \def\f@rbdy{#2}%
-  \ifx\ch@pt@c\@empty % no optional args
-    \def\f@rtoc{#2}%
-    \def\f@rhdr{#2}%
-  \else                  % at least one opt arg
-    \let\f@rtoc\ch@pt@c
-    \ifx\@empty#1\@empty
-      \let\f@rhdr\ch@pt@c
-    \else
-      \def\f@rhdr{#1}%
-    \fi
-  \fi
-  \m@m@Andfalse
-  \ifnum \c@secnumdepth >\m@ne
-    \if@mainmatter
-      \m@m@Andtrue
-    \fi
-  \fi
-  \ifm@m@And
-    %\refstepcounter{chapter}%
-  \fi
-  \ifartopt
-    \@makechapterhead{#2}%
-    \@afterheading
-    \chaptermark{\f@rhdr}%
-  \else
-    \chaptermark{\f@rhdr}
-    \insertchapterspace
-    \if@twocolumn
-      \show2%
-      \onecolumn
-      \twocolumn[\ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}]%
-    \else
-      \show1%
-      \ifm@m@And\refstepcounter{chapter}\fi\@makechapterhead{#2}%
-    \fi
-    \@afterheading
-  \fi
-  \@nameuse{chapter@f@rtoc@before@write@hook}%
-  \mempreaddchaptertotochook%
-  \ifm@m@And
-    \ifanappendix
-      \addcontentsline{toc}{appendix}{%
-        \protect\chapternumberline{\thechapter}\f@rtoc}%
-      \memappchapinfo{\thechapter}{\f@rtoc}{\f@rhdr}{#2}%
-    \else
-      \addcontentsline{toc}{chapter}{%
-        \protect\chapternumberline{\thechapter}\f@rtoc}%
-      \memchapinfo{\thechapter}{\f@rtoc}{\f@rhdr}{#2}%
-    \fi
-  \else
-    \addcontentsline{toc}{chapter}{\f@rtoc}%
-    \ifanappendix
-      \memappchapinfo{}{\f@rtoc}{\f@rhdr}{#2}%
-    \else
-      \memchapinfo{}{\f@rtoc}{\f@rhdr}{#2}%
-    \fi
-  \fi
-  \mempostaddchaptertotochook%
-  \ifheadnameref\ExpandArgs{V}\M@gettitle\f@rhdr\else\ExpandArgs{V}\M@gettitle\f@rtoc\fi%
-  \memendofchapterhook%
-}
-
-% uses some internal memoir commands so revert them too
-\def\numberline#1{\hb@xt@\@tempdima{#1\hfil}}  
-\let\chapternumberline\numberline
-\let\partnumberline\numberline
 
 % don't use lmtt
 \def\UrlFont{\rmfamily}
