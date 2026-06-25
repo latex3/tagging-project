@@ -561,6 +561,7 @@
   included-in: [tlc3, arxiv5, ol1]
   priority: 2
   comments: "Breaks with unicode-math. No luamml support."
+  issues: [1437]
   external-issues: ["https://github.com/latex3/unicode-math/issues/657"]
   tests: true
   updated: 2025-07-16
@@ -3641,6 +3642,7 @@
   included-in: [tlc3]
   priority: 2
   tests: true
+  issues: [1434]
   comments: Continuation marks should be tagged as Artifacts.
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2024-08-01
@@ -4622,7 +4624,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61,1301]
+  issues: [61,1301,1441]
   closed-issues: [4]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
@@ -6943,13 +6945,16 @@
 
 - name: incgraph
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  comments: "`alt`, `artifact`, and `actualtext` keys can be used in second
+             optional argument of `\\incgraph`, `\\incmultigraph`, and `\\incmultipages`.
+             `inctext` environment is incompatible."
   issues: [1429]
   package-repository: "https://github.com/T-F-S/incgraph"
-  updated: 2024-07-18
+  external-issues: ["https://github.com/T-F-S/incgraph/issues/6"]
+  updated: 2026-06-24
 
 - name: inconsolata
   type: package
@@ -9695,7 +9700,7 @@
   status: currently-incompatible
   included-in: [arxiv01, ol0.1]
   priority: 2
-  issues: [179]
+  issues: [179,1440]
   tests: true
   comments: "Simple text-mode tabulars are tagged reasonably well. No luamml support."
   updated: 2026-04-26
