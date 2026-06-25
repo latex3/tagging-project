@@ -6945,13 +6945,16 @@
 
 - name: incgraph
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  comments: "`alt`, `artifact`, and `actualtext` keys can be used in second
+             optional argument of `\\incgraph`, `\\incmultigraph`, and `\\incmultipages`.
+             `inctext` environment is incompatible."
   issues: [1429]
   package-repository: "https://github.com/T-F-S/incgraph"
-  updated: 2024-07-18
+  external-issues: ["https://github.com/T-F-S/incgraph/issues/6"]
+  updated: 2026-06-24
 
 - name: inconsolata
   type: package
