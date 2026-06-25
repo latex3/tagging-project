@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE},
+  }
+\documentclass{article}
+
+\usepackage{mathtools}
+\ifdefined\Uchar\usepackage{unicode-math}\fi
+
+\newtagform{brackets}{[}{]}
+
+\begin{document}
+
+\mathtoolsset{showonlyrefs}
+\usetagform{brackets}
+\begin{align}
+a=a \label{eq:a} \\
+b=b \label{eq:b} %\tag{**}
+\end{align}
+This should refer to the equation containing $a=a$: \eqref{eq:a}.
+Then a switch of tag forms.
+\usetagform{default}
+\begin{align}
+c&=c \label{eq:c} \\
+d&=d \label{eq:d}
+\end{align}
+This should refer to the equation containing $d=d$: \eqref{eq:d}.
+
+\end{document}
