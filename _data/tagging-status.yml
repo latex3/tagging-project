@@ -339,6 +339,7 @@
 - name: adjcalc
   ctan-pkg: adjustbox
   type: package
+  package-repository: "https://github.com/MartinScharrer/adjustbox"
   status: compatible
   included-in: [arxiv1]
   priority: 5
@@ -3794,6 +3795,7 @@
   type: package
   status: compatible
   included-in: [arxiv001, ol0.1]
+  package-repository: "https://github.com/MartinScharrer/currfile"
   priority: 7
   tests: true
   updated: 2024-08-06
@@ -5270,6 +5272,7 @@
 - name: filehook
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/filehook"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -5279,6 +5282,7 @@
 - name: filemod
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/filemod"
   included-in: [tlc3, arxiv001]
   priority: 2
   tests: true
@@ -6821,6 +6825,7 @@
 - name: ifoddpage
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/ifoddpage"
   included-in: [arxiv5, ol0.02]
   priority: 4
   tests: true
@@ -7972,6 +7977,7 @@
   ctan-pkg: lstaddons
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/MartinScharrer/lstaddons"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -7982,6 +7988,7 @@
   ctan-pkg: lstaddons
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/MartinScharrer/lstaddons"
   priority: 9
   tests: false
   comments: See listings.
@@ -9321,6 +9328,7 @@
 - name: mwe
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/mwe"
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: false
@@ -9639,6 +9647,7 @@
 - name: newverbs
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/newverbs"
   included-in: [tlc3, ol0.02]
   priority: 2
   tests: true
@@ -10035,6 +10044,13 @@
   tests: false
   comments: "Text not correctly mapped to Unicode."
   updated: 2026-02-01
+
+- name: oldstyle
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-06-25
 
 - name: onepagem
   type: package
@@ -11700,6 +11716,14 @@
   tests: true
   updated: 2024-08-12
 
+- name: rcs-multi
+  type: package
+  status: compatible
+  package-repository: "https://github.com/MartinScharrer/rcs-multi"
+  priority: 9
+  tests: false
+  updated: 2026-06-25
+
 - name: readprov
   type: package
   status: compatible
@@ -13105,15 +13129,16 @@
 
 - name: svn-multi
   type: package
-  status: unchecked
+  status: compatible
+  package-repository: "https://github.com/MartinScharrer/svn-multi"
   priority: 2
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  updated: 2026-06-25
 
 - name: svn-prov
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/svn-prov"
   included-in: [arxiv001]
   priority: 7
   tests: false
@@ -13815,6 +13840,7 @@
 - name: tikzpagenodes
   type: package
   status: unchecked
+  package-repository: "https://github.com/MartinScharrer/tikzpagenodes"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -14210,6 +14236,7 @@
   ctan-pkg: adjustbox
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/MartinScharrer/adjustbox"
   included-in: [arxiv1, ol0.1]
   priority: 5
   comments: "Depends on partially-compatible collectbox. `\\clipbox` adds empty tags."
