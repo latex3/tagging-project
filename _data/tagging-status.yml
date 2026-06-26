@@ -261,7 +261,7 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/accsupp"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/accsupp"
   updated: 2024-07-16
 
 - name: achemso
@@ -339,6 +339,7 @@
 - name: adjcalc
   ctan-pkg: adjustbox
   type: package
+  package-repository: "https://github.com/MartinScharrer/adjustbox"
   status: compatible
   included-in: [arxiv1]
   priority: 5
@@ -479,18 +480,18 @@
   closed-issues: [229]
   comments: "Obsolete with June 2026 release."
   tests: true
-  package-repository: "https://github.com/ho-tex/aliascnt"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/aliascnt"
   updated: 2026-05-10
 
 - name: aligned-overset
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [1069]
   comments: "Produces warnings with mathml-SE."
   tests: true
-  updated: 2025-11-20
+  updated: 2026-06-25
 
 - name: alltt
   type: package
@@ -530,6 +531,7 @@
 - name: alphalph
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/alphalph"
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: false
@@ -666,9 +668,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1, ol0.1]
   priority: 2
-  comments: "`\\accentedsymbol` not supported by luamml."
+  issues: [1450]
+  comments: "`\\accentedsymbol` not supported by luamml and errors with mathml-SE."
   tests: true
-  updated: 2025-05-28
+  updated: 2026-06-25
 
 - name: andika
   type: package
@@ -966,6 +969,7 @@
 - name: askinclude
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/askinclude"
   included-in: [tlc3]
   priority: 2
   tests: true
@@ -993,6 +997,7 @@
 - name: atbegshi
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/atbegshi"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -1002,6 +1007,7 @@
 - name: atenddvi
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/atenddvi"
   priority: 9
   tests: false
   comments: "Obsolete. Use the kernel hooks."
@@ -1031,7 +1037,7 @@
   priority: 9
   issues: [511]
   tests: true
-  package-repository: "https://github.com/ho-tex/attachfile2"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/attachfile2"
   updated: 2024-08-06
 
 - name: attrib
@@ -1045,6 +1051,7 @@
 - name: atveryend
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/atveryend"
   included-in: [tlc3, arxiv01]
   priority: 8
   comments: "This is an obsolete package. The hooks it defines are available directly from the LaTeX kernel when using the `\\AddToHook` interface."
@@ -1144,6 +1151,7 @@
 - name: auxhook
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/auxhook"
   included-in: [arxiv01]
   priority: 6
   tests: false
@@ -2291,6 +2299,7 @@
 - name: bigintcalc
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/bigintcalc"
   included-in: [arxiv10]
   priority: 3
   tests: false
@@ -2324,6 +2333,7 @@
 - name: bitset
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/bitset"
   included-in: [arxiv10]
   priority: 3
   tests: true
@@ -2398,6 +2408,7 @@
 - name: bold-extra
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/bold-extra"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -2442,6 +2453,7 @@
 - name: bookmark
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/bookmark"
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
   tests: true
@@ -2831,7 +2843,7 @@
   comments: "Incorrect reading order of captions."
   issues: [882]
   tests: true
-  package-repository: "https://github.com/rf-latex/capt-of"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/capt-of"
   updated: 2024-07-22
 
 - name: captcont
@@ -2849,7 +2861,7 @@
   comments: "Incorrect reading order of captions."
   issues: [883]
   tests: true
-  package-repository: "https://github.com/rf-latex/captdef"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/captdef"
   updated: 2024-07-22
 
 - name: caption
@@ -2926,6 +2938,7 @@
 - name: catchfile
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/catchfile"
   included-in: [arxiv01, ol0.02]
   priority: 6
   tests: false
@@ -3003,7 +3016,7 @@
   priority: 6
   comments: "No luamml support."
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2025-05-29
 
 - name: cfr-lm
@@ -3066,6 +3079,7 @@
   type: package
   status: compatible
   included-in: [tlc3]
+  package-repository: "https://github.com/LaTeX-Package-Repositories/chappg"
   priority: 2
   tests: true
   updated: 2024-07-21
@@ -3110,7 +3124,8 @@
   priority: 7
   comments: "No luamml support."
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
+  issues: [1448]
   updated: 2025-05-29
 
 - name: chemarrow
@@ -3119,6 +3134,7 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
+  issues: [1449]
   comments: No luamml support.
   updated: 2026-06-08
 
@@ -3345,7 +3361,7 @@
   status: compatible
   priority: 9
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-08-06
 
 - name: cleveref
@@ -3487,7 +3503,7 @@
   priority: 2
   comments: "No luamml support."
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2025-05-29
 
 - name: colophon
@@ -3794,6 +3810,7 @@
   type: package
   status: compatible
   included-in: [arxiv001, ol0.1]
+  package-repository: "https://github.com/MartinScharrer/currfile"
   priority: 7
   tests: true
   updated: 2024-08-06
@@ -3844,6 +3861,7 @@
 - name: cutwin
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/cutwin"
   included-in: [arxiv001]
   priority: 7
   issues: [561]
@@ -4181,6 +4199,7 @@
 - name: doi
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/doi"
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: true
@@ -4483,6 +4502,7 @@
 - name: embedfile
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/embedfile"
   priority: 9
   tests: true
   updated: 2024-08-23
@@ -4548,6 +4568,7 @@
 - name: endnotes
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/endnotes"
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   comments: "Does not error but `\\endnote`s are not tagged as `<Note>`s."
@@ -4571,7 +4592,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-30
 
 - name: enotez
@@ -4590,7 +4611,7 @@
   status: compatible
   priority: 9
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-08-06
 
 - name: enumerate
@@ -4661,7 +4682,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: epic
@@ -4715,6 +4736,7 @@
   ctan-pkg: epstopdf-pkg
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/epstopdf"
   included-in: [arxiv5, ol5]
   priority: 4
   tests: true
@@ -4853,6 +4875,7 @@
 - name: etexcmds
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/etexcmds"
   priority: 9
   tests: false
   updated: 2026-02-12
@@ -5018,6 +5041,7 @@
   priority: 2
   comments: "Produces warnings with mathml-SE."
   issues: [919]
+  closed-issues: [1432]
   tests: true
   updated: 2026-02-28
 
@@ -5034,6 +5058,7 @@
   status: partially-compatible
   included-in: [ol0.02]
   priority: 9
+  issues: [919]
   comments: "Incomplete luamml support. Must be loaded before unicode-math."
   tests: true
   updated: 2025-06-03
@@ -5240,7 +5265,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: figcaps
@@ -5270,6 +5295,7 @@
 - name: filehook
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/filehook"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -5279,6 +5305,7 @@
 - name: filemod
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/filemod"
   included-in: [tlc3, arxiv001]
   priority: 2
   tests: true
@@ -5333,6 +5360,7 @@
 - name: fixfoot
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/fixfoot"
   included-in: [arxiv001]
   priority: 7
   tests: true
@@ -5386,7 +5414,7 @@
   priority: 9
   tests: false
   comments: "Obsolete. See the bitset package."
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2026-02-12
 
 - name: fleqn
@@ -5525,6 +5553,7 @@
 - name: fncylab
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/fncylab"
   priority: 9
   tests: false
   comments: Unnecessary with current LaTeX.
@@ -6088,6 +6117,7 @@
 - name: gettitlestring
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/gettitlestring"
   included-in: [arxiv10]
   priority: 3
   tests: true
@@ -6335,7 +6365,7 @@
     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
     An old issue with height appears to be fixed.
   references: [1]
-  closed-issues: [16,64]
+  closed-issues: [16,64,950]
   tests: false
   updated: 2024-07-06
 
@@ -6375,6 +6405,7 @@
 - name: grfext
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/grfext"
   priority: 9
   tests: false
   updated: 2024-08-06
@@ -6382,6 +6413,7 @@
 - name: grffile
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/grffile"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -6556,7 +6588,7 @@
   status: compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
-  package-repository: "https://github.com/ho-tex/hologo"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/hologo"
   comments: "Logos have proper ActualText."
   tests: true
   updated: 2025-11-14
@@ -6602,6 +6634,7 @@
 - name: hycolor
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/hycolor"
   priority: 9
   tests: false
   updated: 2026-01-30
@@ -6612,7 +6645,7 @@
   included-in: [arxiv001]
   priority: 7
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2025-06-10
 
 - name: hypcap
@@ -6620,7 +6653,7 @@
   status: compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
-  package-repository: "https://github.com/ho-tex/hypcap"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/hypcap"
   comments: "The tagging code already moves anchors to the top of floats
              so this package is unnecessary. package updated"
   tests: true
@@ -6629,6 +6662,7 @@
 - name: hypdestopt
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/hypdestopt"
   priority: 9
   closed-issues: [525]
   tests: false
@@ -6638,6 +6672,7 @@
 - name: hypdoc
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/hypdoc"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -6699,7 +6734,7 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-18
 
 - name: hyphenat
@@ -6717,7 +6752,7 @@
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-08-06
 
 #------------------------ III ----------------------------
@@ -6789,7 +6824,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: iflang
@@ -6798,7 +6833,7 @@
   included-in: [tlc3, ol0.1]
   priority: 2
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: ifluatex
@@ -6821,6 +6856,7 @@
 - name: ifoddpage
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/ifoddpage"
   included-in: [arxiv5, ol0.02]
   priority: 4
   tests: true
@@ -6945,16 +6981,15 @@
 
 - name: incgraph
   type: package
-  status: partially-compatible
+  status: compatible
   priority: 9
   tests: true
   comments: "`alt`, `artifact`, and `actualtext` keys can be used in second
-             optional argument of `\\incgraph`, `\\incmultigraph`, and `\\incmultipages`.
-             `inctext` environment is incompatible."
-  issues: [1429]
+             optional argument of `\\incgraph`, `\\incmultigraph`, and `\\incmultipages`."
+  closed-issues: [1429]
   package-repository: "https://github.com/T-F-S/incgraph"
   external-issues: ["https://github.com/T-F-S/incgraph/issues/6"]
-  updated: 2026-06-24
+  updated: 2026-06-26
 
 - name: inconsolata
   type: package
@@ -7000,6 +7035,7 @@
 - name: infwarerr
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/infwarerr"
   included-in: [arxiv10]
   priority: 3
   tests: false
@@ -7024,6 +7060,7 @@
 - name: inputenx
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/inputenx"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -7055,6 +7092,7 @@
 - name: intcalc
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/intcalc"
   included-in: [arxiv10, ol0.02]
   priority: 3
   tests: false
@@ -7394,6 +7432,7 @@
 - name: kvdefinekeys
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/kvdefinekeys"
   included-in: [tlc3, arxiv10, ol0.02]
   priority: 8
   tests: false
@@ -7402,6 +7441,7 @@
 - name: kvoptions
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/kvoptions"
   included-in: [tlc3, arxiv10, ol1]
   priority: 8
   tests: false
@@ -7410,6 +7450,7 @@
 - name: kvsetkeys
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/kvsetkeys"
   included-in: [tlc3, arxiv10, ol0.02]
   priority: 8
   tests: false
@@ -7562,6 +7603,7 @@
 - name: ledmac
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/ledmac"
   priority: 9
   tests: false
   tasks: needs tests
@@ -7571,6 +7613,7 @@
 - name: ledpar
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/ledmac"
   priority: 9
   tests: false
   tasks: needs tests
@@ -7612,6 +7655,7 @@
 - name: letltxmacro
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/letltxmacro"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -7825,6 +7869,7 @@
 - name: listingsutf8
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/listingsutf8"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -7972,6 +8017,7 @@
   ctan-pkg: lstaddons
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/MartinScharrer/lstaddons"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -7982,6 +8028,7 @@
   ctan-pkg: lstaddons
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/MartinScharrer/lstaddons"
   priority: 9
   tests: false
   comments: See listings.
@@ -8008,6 +8055,7 @@
 - name: ltxcmds
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/ltxcmds"
   included-in: [arxiv10, ol0.1]
   priority: 4
   tests: false
@@ -8093,6 +8141,7 @@
 - name: luacolor
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/luacolor"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -8434,6 +8483,7 @@
 - name: magicnum
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/magicnum"
   priority: 9
   tests: false
   updated: 2024-07-25
@@ -8484,6 +8534,7 @@
 - name: makerobust
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/makerobust"
   priority: 9
   tests: false
   comments: "Obsolete. The kernel provide `\\MakeRobust`."
@@ -8754,7 +8805,7 @@
   comments: "`mathic` key produces errors.
              `centercolon` incompatible with unicode-math.
              luamml support is limited to `multlined` and `\\shortintertext`."
-  issues: [139,922,1368]
+  issues: [139,922,1368,1445,1446]
   closed-issues: [734,1119]
   tests: true
   updated: 2025-12-11
@@ -9016,6 +9067,7 @@
 - name: minitoc
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/minitoc"
   included-in: [arxiv01, ol0.1]
   priority: 6
   issues: [649]
@@ -9051,6 +9103,7 @@
 - name: mleftright
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/mleftright"
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   tests: true
@@ -9130,6 +9183,7 @@
 - name: moreverb
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/moreverb"
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [361]
@@ -9321,6 +9375,7 @@
 - name: mwe
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/mwe"
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: false
@@ -9551,6 +9606,7 @@
 - name: newproof
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/piff"
   priority: 9
   comments: "Errors with 2026 format. Implements proofs as lists so tagging is not ideal."
   tests: true
@@ -9639,6 +9695,7 @@
 - name: newverbs
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/newverbs"
   included-in: [tlc3, ol0.02]
   priority: 2
   tests: true
@@ -10036,9 +10093,18 @@
   comments: "Text not correctly mapped to Unicode."
   updated: 2026-02-01
 
+- name: oldstyle
+  type: package
+  status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oldstyle"
+  priority: 9
+  tests: true
+  updated: 2026-06-25
+
 - name: onepagem
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/piff"
   included-in: [tlc3]
   priority: 2
   tests: true
@@ -10250,6 +10316,7 @@
 - name: pagegrid
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pagegrid"
   priority: 9
   tests: true
   updated: 2024-08-13
@@ -10266,6 +10333,7 @@
 - name: pagesel
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pagesel"
   priority: 9
   issues: [542]
   tests: true
@@ -10431,6 +10499,7 @@
 - name: pdfcol
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdfcol"
   included-in: [arxiv01]
   priority: 6
   tests: false
@@ -10440,6 +10509,7 @@
 - name: pdfcolfoot
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdfcolfoot"
   included-in: [tlc3]
   priority: 2
   issues: [297]
@@ -10460,7 +10530,7 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcolparcolumns
@@ -10469,12 +10539,13 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-18
 
 - name: pdfcomment
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdfcomment"
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   closed-issues: [465]
@@ -10484,6 +10555,7 @@
 - name: pdfescape
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdfescape"
   priority: 9
   tests: false
   updated: 2024-07-25
@@ -10494,7 +10566,7 @@
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
   issues: [1356]
-  package-repository: "https://github.com/ho-tex/pdflscape"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdflscape"
   tests: true
   updated: 2024-08-04
 
@@ -10530,6 +10602,7 @@
 - name: pdfrender
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdfrender"
   included-in: [arxiv001, ol0.02]
   priority: 7
   comments: Only works with luatex and pdftex.
@@ -10548,6 +10621,7 @@
 - name: pdftexcmds
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pdftexcmds"
   included-in: [arxiv10, ol0.1]
   priority: 3
   tests: false
@@ -10854,6 +10928,7 @@
 - name: picinpar
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/picinpar"
   included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [904]
@@ -10881,6 +10956,7 @@
 - name: picture
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/picture"
   included-in: [tlc3, arxiv01, ol0.02]
   priority: 2
   tests: true
@@ -10900,6 +10976,7 @@
 - name: pigpen
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pigpen"
   included-in: [arxiv001]
   priority: 7
   comments: "With pdftex, spaces are lost. Tagged as the input, not cipher, text."
@@ -10987,6 +11064,7 @@
 - name: pmboxdraw
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/pmboxdraw"
   included-in: [arxiv001, ol0.1]
   priority: 7
   comments: "Symbols are not correctly mapped to Unicode."
@@ -11146,7 +11224,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2026-02-12
 
 - name: protosem
@@ -11700,6 +11778,14 @@
   tests: true
   updated: 2024-08-12
 
+- name: rcs-multi
+  type: package
+  status: compatible
+  package-repository: "https://github.com/MartinScharrer/rcs-multi"
+  priority: 9
+  tests: false
+  updated: 2026-06-25
+
 - name: readprov
   type: package
   status: compatible
@@ -11740,6 +11826,7 @@
 - name: refcount
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/refcount"
   included-in: [arxiv10, ol1]
   priority: 3
   tests: true
@@ -11824,6 +11911,7 @@
 - name: rerunfilecheck
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/rerunfilecheck"
   priority: 9
   tests: false
   updated: 2024-08-06
@@ -11835,7 +11923,7 @@
   priority: 2
   issues: [352]
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-29
 
 - name: returntogrid
@@ -11912,7 +12000,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: rotfloat
@@ -12071,11 +12159,13 @@
 
 - name: scalerel
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
+  comments: "Only partially compatible with mathml-SE."
+  issues: [1443]
   tests: true
-  updated: 2024-07-29
+  updated: 2026-06-25
 
 - name: schemabloc
   type: package
@@ -12251,7 +12341,7 @@
   priority: 7
   tests: true
   closed-issues: [1335]
-  package-repository: "https://github.com/rf-latex/secdot"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/secdot"
   updated: 2026-06-02
 
 - name: sectionbreak
@@ -12283,6 +12373,7 @@
 - name: selinput
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/selinput"
   included-in: [arxiv001, ol0.02]
   priority: 7
   comments: "Only works with pdftex. Should not be necessary in new documents."
@@ -12319,12 +12410,13 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-18
 
 - name: setspace
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/setspace"
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
   tests: true
@@ -12345,7 +12437,7 @@
   priority: 9
   tests: false
   tasks: needs tests
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-18
 
 - name: sfmath
@@ -12689,6 +12781,7 @@
 - name: soul
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/soul"
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
   issues: [167]
@@ -12850,7 +12943,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 6
   tests: true
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-29
 
 - name: stampinclude
@@ -12858,7 +12951,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-08-06
 
 - name: standardsectioning
@@ -12946,6 +13039,7 @@
 - name: stringenc
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/stringenc"
   priority: 9
   tests: false
   updated: 2024-07-25
@@ -13105,15 +13199,16 @@
 
 - name: svn-multi
   type: package
-  status: unchecked
+  status: compatible
+  package-repository: "https://github.com/MartinScharrer/svn-multi"
   priority: 2
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  updated: 2026-06-25
 
 - name: svn-prov
   type: package
   status: compatible
+  package-repository: "https://github.com/MartinScharrer/svn-prov"
   included-in: [arxiv001]
   priority: 7
   tests: false
@@ -13262,6 +13357,7 @@
 - name: tabularht
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/tabularht"
   priority: 9
   tests: true
   updated: 2024-07-16
@@ -13338,7 +13434,7 @@
 - name: telprint
   type: package
   status: compatible
-  package-repository: "https://github.com/ho-tex/telprint"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/telprint"
   priority: 9
   comments: "Package updated"
   tests: true
@@ -13612,7 +13708,7 @@
   status: compatible
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
 - name: thm-restate
@@ -13815,6 +13911,7 @@
 - name: tikzpagenodes
   type: package
   status: unchecked
+  package-repository: "https://github.com/MartinScharrer/tikzpagenodes"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -13851,6 +13948,7 @@
 - name: time
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/piff"
   priority: 9
   tests: false
   updated: 2026-04-26
@@ -14097,6 +14195,7 @@
 - name: topcapt
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/topcapt"
   included-in: [arxiv001]
   priority: 7
   tests: true
@@ -14184,6 +14283,7 @@
 - name: transparent
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/transparent"
   included-in: [arxiv01, ol0.1]
   priority: 6
   comments: Transparency across page breaks only works with luatex and pdftex.
@@ -14210,6 +14310,7 @@
   ctan-pkg: adjustbox
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/MartinScharrer/adjustbox"
   included-in: [arxiv1, ol0.1]
   priority: 5
   comments: "Depends on partially-compatible collectbox. `\\clipbox` adds empty tags."
@@ -14291,7 +14392,7 @@
   included-in: [ol0.1]
   priority: 9
   tests: false
-  package-repository: "https://github.com/ho-tex/oberdiek"
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2026-01-28
 
 - name: tx-ds
@@ -14396,6 +14497,7 @@
 - name: ucs
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/ucs"
   included-in: [ol0.1]
   priority: 9
   tests: false
@@ -14432,6 +14534,7 @@
   included-in: [tlc3]
   priority: 3
   comments: "No luamml support."
+  issues: [1447]
   tests: true
   updated: 2024-07-26
 
@@ -14490,6 +14593,7 @@
 - name: uniquecounter
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/uniquecounter"
   priority: 9
   tests: false
   updated: 2024-07-25
@@ -14682,6 +14786,7 @@
 - name: verbdef
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/verbdef"
   priority: 9
   tests: true
   updated: 2024-07-26
@@ -15141,6 +15246,7 @@
 - name: xkeyval
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/xkeyval"
   included-in: [arxiv10, ol5]
   priority: 3
   tests: false
@@ -15449,6 +15555,7 @@
 - name: zref
   type: package
   status: partially-compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   included-in: [arxiv001, ol0.02]
   priority: 7
   subpackages: [zref-base]
@@ -15460,6 +15567,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -15468,6 +15576,7 @@
 - name: zref-abspos
   ctan-pkg: zref
   type: package
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   status: compatible
   priority: 9
   tests: false
@@ -15492,6 +15601,7 @@
 - name: zref-counter
   ctan-pkg: zref
   type: package
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   status: compatible
   priority: 9
   tests: false
@@ -15500,6 +15610,7 @@
 - name: zref-dotfill
   ctan-pkg: zref
   type: package
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   status: unchecked
   priority: 9
   tests: false
@@ -15509,6 +15620,7 @@
 - name: zref-env
   ctan-pkg: zref
   type: package
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   status: compatible
   priority: 9
   tests: false
@@ -15518,6 +15630,7 @@
   ctan-pkg: zref
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   tasks: needs tests
@@ -15527,6 +15640,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15535,6 +15649,7 @@
   ctan-pkg: zref
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   tasks: needs tests
@@ -15544,6 +15659,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15552,6 +15668,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15560,6 +15677,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15568,6 +15686,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15576,6 +15695,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15584,6 +15704,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   included-in: [ol1]
   priority: 9
   tests: false
@@ -15593,6 +15714,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   updated: 2026-02-13
@@ -15601,6 +15723,7 @@
   ctan-pkg: zref
   type: package
   status: currently-incompatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: true
   issues: [1408]
@@ -15610,6 +15733,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   included-in: [ol0.02]
   priority: 9
   tests: false
@@ -15619,6 +15743,7 @@
   ctan-pkg: zref
   type: package
   status: compatible
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   included-in: [ol1]
   priority: 9
   tests: false
@@ -15635,6 +15760,7 @@
   ctan-pkg: zref
   type: package
   status: unchecked
+  package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
   tasks: needs tests
