@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{oldstyle}
+
+\title{oldstyle tagging test}
+
+\begin{document}
+
+0123456789
+
+\textos{0123456789}
+
+\textbf{\textos{0123456789}}
+
+$0123456789$
+
+$\mathos{0123456789}$
+
+\end{document}
