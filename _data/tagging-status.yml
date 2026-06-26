@@ -484,13 +484,13 @@
 
 - name: aligned-overset
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
   issues: [1069]
   comments: "Produces warnings with mathml-SE."
   tests: true
-  updated: 2025-11-20
+  updated: 2026-06-25
 
 - name: alltt
   type: package
@@ -12071,11 +12071,13 @@
 
 - name: scalerel
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [arxiv01, ol0.1]
   priority: 6
+  comments: "Only partially compatible with mathml-SE."
+  issues: [1443]
   tests: true
-  updated: 2024-07-29
+  updated: 2026-06-25
 
 - name: schemabloc
   type: package
