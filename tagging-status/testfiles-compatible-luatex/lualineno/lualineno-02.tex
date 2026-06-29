@@ -1,0 +1,40 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{lualineno}
+\usepackage{graphicx}
+\usepackage{tikzducks}
+\usepackage{kantlipsum}
+
+\newcounter{lineno}
+\lualineno{
+define = {
+name = default
+toks = {\stepcounter{lineno}}
+left = {\SuspendTagging{lineno}%
+\tikz[scale=0.1,actualtext=\thelineno,transform shape]
+{\duck[signpost=\thelineno]}%
+\ResumeTagging{lineno}\quad}
+}
+set = default
+}
+
+\title{lualineno tagging test -- 2}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\includegraphics[alt=A duck!]{example-image-duck}
+\caption{Look, a duck!}
+\end{figure}
+
+\kant[1-4]
+
+\end{document}
