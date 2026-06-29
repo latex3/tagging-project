@@ -179,12 +179,11 @@
 - name: abntex2abrev
   ctan-pkg: abntex2
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-29
 
 - name: abntex2cite
   ctan-pkg: abntex2
@@ -3790,11 +3789,11 @@
   subpackages: [ctexcap,ctexheading,ctexhook,ctexpatch,ctexsize]
   included-in: [tlc3, ol1]
   priority: 6
-  issues: [673]
+  issues: [673,1458]
   luatex-only: true
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
-             with classes ctexart, ctexbook, and ctexrep."
+             with classes ctexart, ctexbook, and ctexrep. Breaks math environments."
   package-repository: "https://github.com/CTeX-org/ctex-kit"
   updated: 2026-01-25
 
@@ -5171,6 +5170,14 @@
   references: [1]
   tests: true
   updated: 2024-10-18
+
+- name: fapapersize
+  ctan-pkg: kotex-oblivoir
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-06-29
 
 - name: fbb
   type: package
@@ -9303,6 +9310,14 @@
   comments: "List is not tagged correctly."
   tests: true
   updated: 2024-08-20
+
+- name: multienv
+  type: package
+  status: compatible
+  priority: 9
+  package-repository: "https://github.com/MartinScharrer/multienv"
+  tests: false
+  updated: 2026-06-29
 
 - name: multiexpand
   type: package
@@ -15510,6 +15525,13 @@
   tests: false
   updated: 2025-12-16
 
+- name: zhlineskip
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-06-29
+
 - name: zhlipsum
   type: package
   status: compatible
@@ -15526,6 +15548,14 @@
   tests: excluded
   comments: Tests excluded because the results are font-dependent.
   updated: 2026-04-20
+
+- name: zhspacing
+  type: package
+  status: no-support
+  priority: 9
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-06-29
 
 - name: zi4
   ctan-pkg: inconsolata
@@ -15794,6 +15824,16 @@
 #-------------------------------- class files -----------------------
 
 #------------------------ AAA ----------------------------
+
+- name: abntex2
+  type: class
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  tests: false
+  tasks: needs tests
+  comments: "Extension of the incompatible memoir class."
+  updated: 2026-06-29
 
 - name: achemso
   type: class
@@ -16319,8 +16359,8 @@
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
   issues: [910]
   closed-issues: [1040]
-  tests: false
-  updated: 2025-11-10
+  tests: true
+  updated: 2026-06-29
 
 - name: minimal
   type: class
@@ -16367,6 +16407,12 @@
 - name: oblivoir
   ctan-pkg: kotex-oblivoir
   type: class
+  subpackages: [memhangul-common,memhangul-patch,memucs-enumerate,memucs-setspace,
+                obchapterstyles,obchaptertoc,ob-koreanappendix,oblivoir-misc,
+                ob-nokoreanappendix,ob-toclof,hfontsel,memhangul-ucs,memucs-gremph,
+                memucs-interword,nanumfontsel,memhangul-x,memucs-interword-x,
+                ob-mathleading,ob-unfontsdefault,xetexko-var,xob-amssymb,xob-dotemph,
+                xob-font,xob-hyper,xob-lwarp,xob-paralist]
   status: currently-incompatible
   priority: 9
   tests: false
@@ -16492,12 +16538,12 @@
 
 - name: simplecv
   type: class
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Tagging of title and headers is not ideal."
+  updated: 2026-06-29
 
 - name: standalone
   type: class
