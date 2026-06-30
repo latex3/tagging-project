@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{simplecv}
+
+\begin{document}
+
+\leftheader{123 Hamlet Street\\
+Stratford-upon-Avon}
+
+\rightheader{TEL: 888-PUCK\\
+\texttt{\small bill@globe.org}}
+
+\title{William Shakespeare}
+
+\maketitle
+
+Some people put a summary here. Note: there are many \LaTeX{}
+variables you can set in the preamble to change the look of the CV.
+
+\section{Work Experience}
+
+\begin{topic}
+\item[1593--1609] Wrote and produced plays for the Queen, and then for the
+King. He really liked them a lot, but they reminded him of plays by
+this guy, the Earl of Oxford.
+
+You can have several paragraphs in the same topic entry
+\end{topic}
+
+\section{Education}
+
+\begin{topic}
+\item[1577--78] My Dad taught me stuff.
+\item[April to May 1581] Tried high school. Hated my English teacher.
+[note how a linebreak is inserted if your subtitle is too long]
+\end{topic}
+
+\section{Publications}
+
+\begin{thebibliography}{1}
+\bibitem{firstref} First Folio. Me. 1623.
+\bibitem{secondref} These references could have been entered via
+Bib\TeX{}\ldots{} In any case, here I can cite my work of
+\cite{firstref}.
+\end{thebibliography}
+
+\end{document}
