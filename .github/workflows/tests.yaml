@@ -33,7 +33,7 @@ jobs:
     steps:
       # Boilerplate
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: libglut3
         run: sudo apt update; sudo apt-get install -y freeglut3-dev
       - name: Install TeX Live
@@ -158,11 +158,11 @@ jobs:
     steps:
       # Boilerplate
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: libglut3 and libpdf-api2-perl
         run: sudo apt update; sudo apt-get install -y freeglut3-dev libpdf-api2-perl
       - name: Restore TeX Live from cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: ~/texlive
           key: ${{ needs.texlive-cache.outputs.cache_key }}
