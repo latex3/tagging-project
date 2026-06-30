@@ -12509,12 +12509,13 @@
 
 - name: setouterhbox
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1466]
+  comments: "Only works with lualatex when tagging is loaded."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-06-30
 
 - name: setspace
   type: package
@@ -12535,13 +12536,12 @@
 
 - name: settobox
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-06-30
 
 - name: sfmath
   type: package
@@ -13167,7 +13167,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: Issue when hyperref and both listoffigures are used.
+  comments: Issue when both hyperref and listoffigures are used.
   issues: [85]
   tests: false
   tasks: needs tests
@@ -14108,12 +14108,11 @@
 
 - name: titlepic
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  updated: 2026-06-30
 
 - name: titleps
   type: package
@@ -15729,11 +15728,10 @@
   ctan-pkg: zref
   type: package
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
-  status: unchecked
+  status: compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-13
+  updated: 2026-06-30
 
 - name: zref-env
   ctan-pkg: zref
@@ -15747,12 +15745,11 @@
 - name: zref-hyperref
   ctan-pkg: zref
   type: package
-  status: unchecked
+  status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-13
+  updated: 2026-06-30
 
 - name: zref-lastpage
   ctan-pkg: zref
