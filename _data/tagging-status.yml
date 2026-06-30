@@ -179,12 +179,11 @@
 - name: abntex2abrev
   ctan-pkg: abntex2
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-29
 
 - name: abntex2cite
   ctan-pkg: abntex2
@@ -3790,11 +3789,11 @@
   subpackages: [ctexcap,ctexheading,ctexhook,ctexpatch,ctexsize]
   included-in: [tlc3, ol1]
   priority: 6
-  issues: [673]
+  issues: [673,1458]
   luatex-only: true
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
-             with classes ctexart, ctexbook, and ctexrep."
+             with classes ctexart, ctexbook, and ctexrep. Breaks math environments."
   package-repository: "https://github.com/CTeX-org/ctex-kit"
   updated: 2026-01-25
 
@@ -3825,12 +3824,12 @@
 
 - name: currvita
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  issues: [1459]
+  tests: true
+  updated: 2026-06-29
 
 - name: curve2e
   type: package
@@ -3842,12 +3841,11 @@
 
 - name: curves
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-06-29
 
 - name: cuted
   type: package
@@ -4326,6 +4324,14 @@
   priority: 7
   tests: true
   updated: 2024-08-12
+
+- name: duplicat
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/piff"
+  updated: 2026-06-29
 
 - name: dutchcal
   type: package
@@ -4889,6 +4895,14 @@
   tests: true
   updated: 2024-08-23
 
+- name: etl
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Skillmon/ltx_etl"
+  updated: 2026-06-30
+
 - name: etoc
   type: package
   status: currently-incompatible
@@ -5006,6 +5020,51 @@
   issues: [1128]
   tests: true
   updated: 2025-12-15
+
+- name: expkv
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-cs
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-def
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-opt
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-pop
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
 
 - name: expl3
   type: package
@@ -5171,6 +5230,14 @@
   references: [1]
   tests: true
   updated: 2024-10-18
+
+- name: fapapersize
+  ctan-pkg: kotex-oblivoir
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-06-29
 
 - name: fbb
   type: package
@@ -5943,6 +6010,8 @@
   priority: 2
   comments: "See fancyvrb."
   issues: [1060]
+  package-repository: "https://github.com/gpoore/fvextra"
+  external-issues: ["https://github.com/gpoore/fvextra/issues/29"]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -6324,13 +6393,23 @@
   tasks: needs tests
   updated: 2024-08-23
 
+- name: gobble
+  type: package
+  subpackages: [gobble-user]
+  status: compatible
+  priority: 9
+  package-repository: "https://github.com/MartinScharrer/gobble"
+  tests: false
+  updated: 2026-06-29
+
 - name: grabbox
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Boxes are not yet supported by the tagging code."
+  issues: [1462]
+  updated: 2026-06-30
 
 - name: graphbox
   type: package
@@ -6730,12 +6809,12 @@
 
 - name: hypgotoe
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1463]
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-06-30
 
 - name: hyphenat
   type: package
@@ -6764,7 +6843,7 @@
   priority: 9
   issues: [350]
   tests: true
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-29
 
 - name: InriaSans
@@ -6907,12 +6986,12 @@
 
 - name: isotope
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Tagging of isotopes in text mode is not ideal."
+  updated: 2026-06-30
 
 - name: ifsym
   type: package
@@ -7508,6 +7587,7 @@
 - name: latex2pydata
   type: package
   status: compatible
+  package-repository: "https://github.com/gpoore/latex2pydata"
   priority: 9
   tests: false
   updated: 2025-11-20
@@ -8934,6 +9014,7 @@
   issues: [907]
   comments: "None of the formatting is represented at the tag level; spaces between
              keywords are lost."
+  package-repository: "https://github.com/tweh/menukeys"
   tests: true
   updated: 2025-06-10
 
@@ -9079,6 +9160,7 @@
   status: currently-incompatible
   included-in: [arxiv01, ol1]
   priority: 4
+  package-repository: "https://github.com/gpoore/minted"
   tests: true
   comments: "Listings not tagged properly. See fvextra and fancyvrb."
   updated: 2025-11-11
@@ -9303,6 +9385,14 @@
   comments: "List is not tagged correctly."
   tests: true
   updated: 2024-08-20
+
+- name: multienv
+  type: package
+  status: compatible
+  priority: 9
+  package-repository: "https://github.com/MartinScharrer/multienv"
+  tests: false
+  updated: 2026-06-29
 
 - name: multiexpand
   type: package
@@ -10782,6 +10872,14 @@
   tests: false
   updated: 2024-08-02
 
+- name: pgfmath-xfp
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Skillmon/ltx_pgfmath-xfp"
+  updated: 2026-06-30
+
 - name: pgfmorepages
   type: package
   status: unchecked
@@ -11570,6 +11668,7 @@
   status: partially-compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_pxpic"
   comments: "pixpic's should be tagged as figures with Alt text."
   updated: 2024-08-07
 
@@ -11649,6 +11748,7 @@
   status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
+  package-repository: "https://github.com/gpoore/pythontex"
   tests: true
   comments: "Verbatim environments not tagged correctly. See fvextra."
   updated: 2025-11-06
@@ -15240,6 +15340,7 @@
   status: partially-compatible
   priority: 9
   comments: "Missing ToUnicode or ActualText for symbols."
+  package-repository: "https://github.com/Skillmon/ltx_xistercian"
   tests: true
   updated: 2024-07-26
 
@@ -15510,6 +15611,13 @@
   tests: false
   updated: 2025-12-16
 
+- name: zhlineskip
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-06-29
+
 - name: zhlipsum
   type: package
   status: compatible
@@ -15526,6 +15634,14 @@
   tests: excluded
   comments: Tests excluded because the results are font-dependent.
   updated: 2026-04-20
+
+- name: zhspacing
+  type: package
+  status: no-support
+  priority: 9
+  tests: false
+  comments: "Requires the incompatible xetex engine."
+  updated: 2026-06-29
 
 - name: zi4
   ctan-pkg: inconsolata
@@ -15794,6 +15910,16 @@
 #-------------------------------- class files -----------------------
 
 #------------------------ AAA ----------------------------
+
+- name: abntex2
+  type: class
+  status: currently-incompatible
+  included-in: [ol0.02]
+  priority: 9
+  tests: false
+  tasks: needs tests
+  comments: "Extension of the incompatible memoir class."
+  updated: 2026-06-29
 
 - name: achemso
   type: class
@@ -16319,8 +16445,8 @@
              [bible example](https://github.com/latex3/tagging-project/blob/main/project-examples/ASV/bible.tex)."
   issues: [910]
   closed-issues: [1040]
-  tests: false
-  updated: 2025-11-10
+  tests: true
+  updated: 2026-06-29
 
 - name: minimal
   type: class
@@ -16367,6 +16493,12 @@
 - name: oblivoir
   ctan-pkg: kotex-oblivoir
   type: class
+  subpackages: [memhangul-common,memhangul-patch,memucs-enumerate,memucs-setspace,
+                obchapterstyles,obchaptertoc,ob-koreanappendix,oblivoir-misc,
+                ob-nokoreanappendix,ob-toclof,hfontsel,memhangul-ucs,memucs-gremph,
+                memucs-interword,nanumfontsel,memhangul-x,memucs-interword-x,
+                ob-mathleading,ob-unfontsdefault,xetexko-var,xob-amssymb,xob-dotemph,
+                xob-font,xob-hyper,xob-lwarp,xob-paralist]
   status: currently-incompatible
   priority: 9
   tests: false
@@ -16492,12 +16624,12 @@
 
 - name: simplecv
   type: class
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Tagging of title and headers is not ideal."
+  updated: 2026-06-29
 
 - name: standalone
   type: class

@@ -1,0 +1,56 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{grabbox}
+\usepackage{duckuments}
+
+\newsavebox\ourbox
+\newcommand\examplecmd[2]
+{%
+\begingroup
+\grabbox\ourbox[\itshape]\hbox[ \sffamily is]{\examplecmdOut{#1}{#2}}
+}
+\newcommand\examplecmdOut[3]
+{%
+\begin{tabular}[t]{@{}ll@{}}
+Arg1: & #1\\
+Arg2: & #2\\
+Box: & \unhbox\ourbox\\
+Arg3: & #3
+\end{tabular}%
+\endgroup
+}
+
+\newsavebox\RectangleBox
+\newcommand\Rectangle[1][4]
+{%
+\begingroup
+\grabbox\RectangleBox\hbox
+{%
+% Since we don’t want to read more arguments after the box,
+% we don’t need a second macro and can put the output routine
+% here.
+\begin{minipage}{\dimexpr\wd\RectangleBox/#1\relax}
+\parfillskip0pt
+\unhbox\RectangleBox
+\end{minipage}%
+\endgroup
+}%
+}
+
+\title{grabbox tagging test}
+
+\begin{document}
+
+\examplecmd{Hi,}{my}{\verb|\name|}{Steve!}
+
+\begin{center}
+\Rectangle[9]{\blindduck}
+\end{center}
+
+\end{document}

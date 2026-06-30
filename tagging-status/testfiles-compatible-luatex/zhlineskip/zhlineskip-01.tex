@@ -1,0 +1,46 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage[fontset=fandol]{ctex}
+\usepackage{unicode-math}
+\usepackage[
+  bodytextleadingratio = 3,
+  footnoteleadingratio = 2,
+  ]{zhlineskip}
+\newenvironment{english} % 新建“英文”段落环境
+{\addvspace\medskipamount} % 段前间距，上文段落需结束
+{\par\addvspace\medskipamount}
+\begin{document}
+
+\setlength\parindent{2cm}
+\RestoreTextEnvironmentLeading{english}
+人人生而自由，在尊严和权利上一律平等。他们
+赋有理性和良心，并应以兄弟关系的精神相对待。
+\begin{english}
+All human beings are born free and equal in
+dignity and rights. They are endowed with
+reason and conscience and should act towards
+one another in a spirit of brotherhood.\footnote{Some footnote}
+\end{english}
+人人有资格享有本宣言所载的一切权利和自由，
+\begin{equation}
+A=B
+\end{equation}
+不分种族、肤色、性别、语言⋯⋯
+\begin{english}
+Everyone is entitled to all the rights and
+freedoms set forth in this
+\begin{equation}
+A=B
+\end{equation}
+Declaration,
+without distinction of any kind, such as
+race, colour, sex, language\dots
+\end{english}
+
+\end{document}
