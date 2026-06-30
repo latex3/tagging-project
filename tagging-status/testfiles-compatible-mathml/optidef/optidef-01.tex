@@ -1,0 +1,142 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{optidef}
+
+\title{optidef tagging test}
+
+\begin{document}
+
+\begin{mini}
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example1}}{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini*}
+{w}{f(w)+ R(w+6x)}
+{}{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6,}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini*}
+
+\begin{mini!}
+{w}{f(w)+ R(w+6x) \label{eq:ObjectiveExample1}}
+{\label{eq:Example11}}{}
+\addConstraint{g(w)}{=0 \label{eq:C1Example31}}
+\addConstraint{n(w)}{= 6 \label{eq:C2Example1}}
+\addConstraint{L(w)+r(x)}{=Kw+p \label{eq:C3Example1}}
+\addConstraint{h(x)}{=0. \label{eq:C4Example1}}
+\end{mini!}
+
+\begin{mini}
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example12}}
+{J(w^*)=}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini}|s|
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example13}}
+{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini}[1]
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example14}}
+{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini}[2]
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example15}}
+{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini}[3]
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example16}}
+{}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini*}
+{w,u}{f(w)+ R(w+6x)+ H(100w-x*w/500)}{}{}
+\breakObjective{-g(w^3-x^2*200+10000*w^5)}
+\addConstraint{g(w_k)+h(w_k)}{=0,}
+\addConstraint{l(w_k)}{=5u,\quad}
+\end{mini*}
+
+\begin{mini*}
+{w}{f(w)+ R(w+6x)}
+{}{}
+\addConstraint{g(w)}{=0,}{ \quad \text{(Dynamic constraint)}}
+\addConstraint{n(w)}{= 6,}{ \quad \text{(Boundary constraint)}}
+\addConstraint{L(w)+r(x)}{=Kw+p,}{ \quad \text{(Random constraint)}}
+\addConstraint{h(x)}{=0,}{ \quad \text{(Path constraint).}}
+\end{mini*}
+
+\begin{argmini}
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example17}}{w^*=}
+\addConstraint{g(w)}{=0}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{argmini}
+
+\begin{mini}<b>
+{w}{f(w)+ R(w+6x)}
+{\label{eq:Example18}}{}
+\addConstraint{g(w)}{=0}
+\addConstraint{p(w)}{=0}
+\addConstraint{q(w)}{=0}
+\addConstraint{r(w)}{=0\labelOP{testLabel}}
+\addConstraint{n(w)}{= 6}
+\addConstraint{L(w)+r(x)}{=Kw+p}
+\addConstraint{h(x)}{=0.}
+\end{mini}
+
+\begin{mini!}|s|[2]<b>
+{w}{f(w)+ R(w+6x)\label{eq:ObjectiveExample3}}
+{\label{eq:Example3}}
+{w^*=}
+\addConstraint{g(w)}{=0 \label{eq:C1Example3}}
+\addConstraint{n(w)}{= 6 \label{eq:C2Example3}}
+\addConstraint{L(w)+r(x)}{=Kw+p \label{eq:C3Example3}}
+\addConstraint{h(x)}{=0.\label{eq:C4Example3}}
+\end{mini!}
+
+\end{document}

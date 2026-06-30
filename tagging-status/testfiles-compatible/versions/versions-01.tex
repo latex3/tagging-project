@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{versions}
+
+\title{versions tagging test}
+
+\begin{document}
+
+\includeversion{abridged}
+\excludeversion{unabridged}
+\markversion{redact}
+Text for the
+\begin{abridged}
+short\footnote{Some footnote}%
+\end{abridged}
+\begin{unabridged}
+long and really longwinded, opaque and boring%
+\footnote{Another footnote}%
+\end{unabridged}
+version of the paper.\footnote{\processifversion{abridged}{Show this}\processifversion{unabridged}{Don't show this}}
+
+Punctuation works correctly\begin{unabridged}
+because sphack is used\end{unabridged}.
+\begin{comment} This is deleted by default. \end{comment}
+\begin{redact}This information was withdrawn\end{redact}
+
+\end{document}
