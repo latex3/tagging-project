@@ -4325,6 +4325,14 @@
   tests: true
   updated: 2024-08-12
 
+- name: duplicat
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/piff"
+  updated: 2026-06-29
+
 - name: dutchcal
   type: package
   status: partially-compatible
@@ -5949,6 +5957,8 @@
   priority: 2
   comments: "See fancyvrb."
   issues: [1060]
+  package-repository: "https://github.com/gpoore/fvextra"
+  external-issues: ["https://github.com/gpoore/fvextra/issues/29"]
   tests: true
   tasks: needs more tests
   updated: 2025-11-22
@@ -7514,6 +7524,7 @@
 - name: latex2pydata
   type: package
   status: compatible
+  package-repository: "https://github.com/gpoore/latex2pydata"
   priority: 9
   tests: false
   updated: 2025-11-20
@@ -9085,6 +9096,7 @@
   status: currently-incompatible
   included-in: [arxiv01, ol1]
   priority: 4
+  package-repository: "https://github.com/gpoore/minted"
   tests: true
   comments: "Listings not tagged properly. See fvextra and fancyvrb."
   updated: 2025-11-11
@@ -11663,6 +11675,7 @@
   status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
+  package-repository: "https://github.com/gpoore/pythontex"
   tests: true
   comments: "Verbatim environments not tagged correctly. See fvextra."
   updated: 2025-11-06
