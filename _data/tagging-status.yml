@@ -6340,6 +6340,15 @@
   tasks: needs tests
   updated: 2024-08-23
 
+- name: gobble
+  type: package
+  subpackages: [gobble-user]
+  status: compatible
+  priority: 9
+  package-repository: "https://github.com/MartinScharrer/gobble"
+  tests: false
+  updated: 2026-06-29
+
 - name: grabbox
   type: package
   status: unchecked
