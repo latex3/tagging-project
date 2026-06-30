@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+% Pass titlepage to the article class
+\documentclass[titlepage]{article}
+% Centre the picture and the title vertically with cc (only works with titlepage mode)
+\usepackage[cc]{titlepic}
+% For \includegraphics
+\usepackage{graphicx}
+\title{Example}
+\author{John Doe}
+\date{\today}
+% Now, put a picture on the title page!
+\titlepic{\includegraphics[width=\textwidth,alt=some alt text]{example-image}}
+\begin{document}
+\maketitle
+Some text
+\end{document}

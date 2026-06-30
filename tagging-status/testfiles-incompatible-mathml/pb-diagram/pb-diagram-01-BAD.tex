@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{pb-diagram}
+
+\title{pb-diagram tagging test}
+
+\begin{document}
+
+\[
+\begin{diagram}
+\node{A} \arrow{e,t}{a} \arrow{s,l}{c} \arrow{ese}
+\node{B^*} \arrow{e,t}{b^*}
+\node{C} \arrow{s,r}{d} \arrow{wsw} \\
+\node{D} \arrow[2]{e,b}{e} \node[2]{E}
+\end{diagram}
+\]
+
+\end{document}

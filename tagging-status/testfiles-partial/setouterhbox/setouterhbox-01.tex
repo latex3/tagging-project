@@ -1,0 +1,43 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass[a5paper]{article}
+\usepackage{hyperref}
+\usepackage{setouterhbox}
+
+\newsavebox{\testbox}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2em}
+
+\title{setouterhbox tagging test}
+
+\begin{document}
+\raggedright
+
+% good
+blub blub
+\url{http://this.is.a.very.long.host.name/followed/%
+by/a/very_long_long_long_path.html}%
+
+% not good
+\sbox\testbox{%
+  blub blub
+  \url{http://this.is.a.very.long.host.name/followed/%
+  by/a/very_long_long_long_path.html}%
+}%
+\unhbox\testbox
+
+% good
+\begin{setouterhbox}{\testbox}%
+blub blub
+\url{http://this.is.a.very.long.host.name/followed/%
+by/a/very_long_long_long_path.html}%
+\end{setouterhbox}
+\unhbox\testbox
+
+\end{document}

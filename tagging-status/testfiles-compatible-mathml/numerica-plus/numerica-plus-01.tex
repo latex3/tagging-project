@@ -1,0 +1,55 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{numerica}
+\usepackage{numerica-plus}
+
+\title{numerica-plus tagging test}
+
+\constants{ c=30,\omega=0.2 }
+
+\begin{document}
+
+\iter*{ c^{-1}\sqrt{r_1^2+r_3^2-2r_1 r_3
+\cos(\theta_3+\omega t)}
+}[ r_1=10,r_3=20,\theta_3=0.2,t=1 ],
+\quad\info{iter}.
+
+\iter[do=7,see=7,vv=]
+{\[ c^{-1}\sqrt{r_1^2+r_3^2-2r_1 r_3
+\cos(\theta_3+\omega t)} \]}
+[ r_1=10,r_3=20,\theta_3=0.2,t=1 ]
+
+\recur[env=multline*,vv={,}\\(vv)\\,
+do=8,see1=0,see2=5]
+{ f_{n+1}=c^{-1}\sqrt{r_1^2+r_3^2-2r_1 r_3
+\cos(\theta_3+\omega f_{n})} }
+[ r_1=10,r_3=20,\theta_3=0.2,f_{0}=1 ]
+
+\solve*{ c^{-1}\sqrt{r_1^2+r_3^2-2r_1 r_3
+\cos(\theta_3+\omega t)} - t }
+[ r_1=10,r_3=20,\theta_3=0.2,t=0 ],
+\quad \nmcInfo{solve}.
+
+\solve[env=multline*,p=.,var=\theta,+=1]
+{% circuit 1231
+2\times\iter[var=t,+=1]{ c^{-1}\sqrt{a^2+r^2-2ar
+\cos(\theta-\omega t)} }
++ \iter[var=t,+=1]{ c^{-1}\sqrt{2r^2-2r^2
+\cos(2\theta+\omega t)} }
+% circuit 1321
+- 2\times\iter[var=t,+=1]{ c^{-1}\sqrt{a^2+r^2-2ar
+\cos(\theta+\omega t)} }
+- \iter[var=t,+=1]{ c^{-1}\sqrt{2r^2-2r^2
+\cos(2\theta-\omega t)} }
+}[ a=10,r=20,\theta=0.1,t=1 ][4]
+
+\end{document}
