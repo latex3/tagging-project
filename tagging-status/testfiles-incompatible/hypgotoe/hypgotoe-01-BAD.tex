@@ -1,0 +1,65 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\begin{filecontents}{hypgotoe-child.tex}
+\NeedsTeXFormat{LaTeX2e}
+\documentclass{article}
+\usepackage{hypgotoe}[2019/12/29]
+\begin{document}
+\section{This is the child document.}
+\href{gotoe:%
+  dest={page.1},parent%
+}{Go to first page of main document}\\
+\href{gotoe:%
+  dest={page.2},parent%
+}{Go to second page of main document}
+\newpage
+\section{This is the second page of the child document.}
+\href{gotoe:%
+  dest={page.1},parent%
+}{Go to first page of main document}\\
+\href{gotoe:%
+  dest={page.2},parent%
+}{Go to second page of main document}
+
+\hypertarget{foobar}{}
+Anchor foobar is here.
+\end{document}
+\end{filecontents}
+\documentclass{article}
+\usepackage{hypgotoe}[2019/12/29]
+\usepackage{embedfile}
+\IfFileExists{hypgotoe-child.pdf}{%
+  \embedfile{hypgotoe-child.pdf}%
+}{%
+  \typeout{}%
+  \typeout{--> Run hypgotoe-child.tex through pdflatex}%
+  \typeout{}%
+}
+\begin{document}
+\section{First page of main document}
+\href{gotoe:%
+  dest=page.1,embedded=hypgotoe-child.pdf%
+}{Go to first page of child document}\\
+\href{gotoe:%
+  dest=page.2,embedded=hypgotoe-child.pdf%
+}{Go to second page of child document}\\
+\href{gotoe:%
+  dest=foobar,embedded=hypgotoe-child.pdf%
+}{Go to foobar in child document}
+\newpage
+\section{Second page of main document}
+\href{gotoe:%
+  dest=section.1,embedded=hypgotoe-child.pdf%
+}{Go to first section of child document}\\
+\href{gotoe:%
+  dest=section.2,embedded=hypgotoe-child.pdf%
+}{Go to second section of child document}\\
+\href{gotoe:%
+  dest=foobar,embedded=hypgotoe-child.pdf%
+}{Go to foobar in child document}
+\end{document}
