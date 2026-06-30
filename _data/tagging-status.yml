@@ -4895,6 +4895,14 @@
   tests: true
   updated: 2024-08-23
 
+- name: etl
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Skillmon/ltx_etl"
+  updated: 2026-06-30
+
 - name: etoc
   type: package
   status: currently-incompatible
@@ -5012,6 +5020,51 @@
   issues: [1128]
   tests: true
   updated: 2025-12-15
+
+- name: expkv
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-cs
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-def
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-opt
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
+
+- name: expkv-pop
+  ctan-pkg: expkv-bundle
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/islandoftex/texmf/expkv-bundle"
+  updated: 2026-06-30
 
 - name: expl3
   type: package
@@ -6351,11 +6404,12 @@
 
 - name: grabbox
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Boxes are not yet supported by the tagging code."
+  issues: [1462]
+  updated: 2026-06-30
 
 - name: graphbox
   type: package
@@ -6755,12 +6809,12 @@
 
 - name: hypgotoe
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1463]
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-06-30
 
 - name: hyphenat
   type: package
@@ -6789,7 +6843,7 @@
   priority: 9
   issues: [350]
   tests: true
-  tasks: needs tests
+  tasks: needs more tests
   updated: 2024-07-29
 
 - name: InriaSans
@@ -6932,12 +6986,12 @@
 
 - name: isotope
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Tagging of isotopes in text mode is not ideal."
+  updated: 2026-06-30
 
 - name: ifsym
   type: package
@@ -8960,6 +9014,7 @@
   issues: [907]
   comments: "None of the formatting is represented at the tag level; spaces between
              keywords are lost."
+  package-repository: "https://github.com/tweh/menukeys"
   tests: true
   updated: 2025-06-10
 
@@ -10817,6 +10872,14 @@
   tests: false
   updated: 2024-08-02
 
+- name: pgfmath-xfp
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Skillmon/ltx_pgfmath-xfp"
+  updated: 2026-06-30
+
 - name: pgfmorepages
   type: package
   status: unchecked
@@ -11605,6 +11668,7 @@
   status: partially-compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_pxpic"
   comments: "pixpic's should be tagged as figures with Alt text."
   updated: 2024-08-07
 
@@ -15276,6 +15340,7 @@
   status: partially-compatible
   priority: 9
   comments: "Missing ToUnicode or ActualText for symbols."
+  package-repository: "https://github.com/Skillmon/ltx_xistercian"
   tests: true
   updated: 2024-07-26
 
