@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{units}
+
+\title{units tagging test}
+
+\begin{document}
+
+\sffamily\bfseries\unit{m}\par
+\sffamily\bfseries$\unit{m}$\par
+\sffamily\itshape\unit[1]{m}\par
+\sffamily\itshape$\unit[1]{m}$\par
+\sffamily\bfseries\unitfrac{m}{s}\par
+\sffamily\bfseries$\unitfrac{m}{s}$\par
+\sffamily\itshape\unitfrac[1]{m}{s}\par
+\sffamily\itshape$\unitfrac[1]{m}{s}$\par
+\bfseries\itshape\nicefrac{1}{2}\par
+\bfseries\itshape$\nicefrac{1}{2}$\par
+\nicefrac[\texttt]{1}{2}\par
+\nicefrac[\texttt]{\textit{1}}{2}\par
+$\nicefrac[\mathcal]{A}{B}$\par
+
+\end{document}

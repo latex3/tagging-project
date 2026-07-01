@@ -1,0 +1,38 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{hyperref} 
+% leads to:
+% Package tagpdf Warning: Destination figure.caption.2 has no related structure.
+
+\title{subcaption tagging test}
+
+\begin{document}
+
+\listoffigures
+
+\section{Intro}
+
+\subsection{Subintro}
+
+\begin{figure}[b]
+	\begin{subfigure}[c]{0.495\textwidth}
+	\centering\includegraphics[alt={sample image},width=0.99\textwidth]{example-image-c}%
+	\subcaption{\label{fig:2a}}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.495\textwidth}
+	\centering{\includegraphics[alt={sample image},width=0.99\textwidth]{example-image-c}}%
+	\subcaption{\label{fig:2b}}%
+	\end{subfigure}%
+	\caption{A figure with two subfigures: (a) first subfigure; (b) second subfigure.\label{fig:2}}
+\end{figure}
+
+\end{document}
