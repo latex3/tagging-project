@@ -7905,7 +7905,8 @@
   priority: 2
   issues: [162,210]
   tests: true
-  comments: "loses linenumbers and doesn't tag line numbers"
+  comments: "Loses line numbers and line numbers are not tagged correctly.
+             See lualineno for a compatible alternative."
   tasks: needs more tests
   updated: 2024-07-19
 
@@ -8277,6 +8278,17 @@
   luatex-only: true
   tests: true
   updated: 2026-04-01
+
+- name: lualineno
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  comments: "Content with tagged structure in line numbers must have tagging suspended.
+             Regular line numbers are automatically tagged as artifacts."
+  related-issues: [210]
+  tests: true
+  updated: 2026-06-29
 
 - name: luamathalign
   type: package
