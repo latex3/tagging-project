@@ -32,15 +32,15 @@ runlatex.editorlines=45;
 ## hawkdraw
 
 ```latex
-{% include_relative "../testfiles-compatible/hawkdraw/hawkdraw-01.tex" &}
-
+{% include_relative testfiles-compatible/hawkdraw/hawkdraw-01.tex %}
+```
 
 
 
 ## titlesec
 
 ```latex
-{% include_relative "../testfiles-incompatible/titlesec/titlesec-01-BAD.tex" %}
+{% include_relative testfiles-incompatible/titlesec/titlesec-01-BAD.tex %}
 ```
 
 
