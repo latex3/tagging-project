@@ -1,0 +1,33 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{simpler-wick}
+
+\title{simpler-wick tagging test}
+
+\begin{document}
+
+\begin{equation}
+\wick{\c\phi A \c\phi}
+\end{equation}
+
+\begin{equation}
+\wick{
+\c1 a \c2 b \c3 c \c1 a \c4 d \c1 e
+\c1 e \c1 a \c2 b \c3 c \c1 a
+}
+\end{equation}
+
+\begin{equation}
+\wick[offset=2em]{\c\phi \int \frac{dx}{x} \c\phi}
+\end{equation} 
+
+\end{document}
