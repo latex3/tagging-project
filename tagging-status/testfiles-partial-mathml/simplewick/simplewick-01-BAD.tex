@@ -1,0 +1,37 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{simplewick}
+
+\title{simplewick tagging test}
+
+\begin{document}
+
+\[
+\contraction{}{a}{{}^{\dagger}_i(t_1)a^{\dagger}_j(t_1)}{a}
+%
+\contraction[2ex]{a^{\dagger}_i(t_1)}{a}{%
+{}^{\dagger}_j(t_1)a_j(t_1)a_i(t_1)%
+a^{\dagger}_i(t_2)a^{\dagger}_j(t_2)a_j(t_2)}{a}
+%
+\contraction[3ex]{a^{\dagger}_i(t_1)%
+a^{\dagger}_j(t_1)a_j(t_1)}{a}{{}_i(t_1)%
+a^{\dagger}_i(t_2)}{a}
+%
+\bcontraction{a^{\dagger}_i(t_1)%
+a^{\dagger}_j(t_1)a_j(t_1)a_i(t_1)}%
+{a}{{}^{\dagger}_i(t_2)a^{\dagger}_j(t_2)}{a}
+%
+a^{\dagger}_i(t_1)a^{\dagger}_j(t_1)a_j(t_1)a_i(t_1)
+a^{\dagger}_i(t_2)a^{\dagger}_j(t_2)a_j(t_2)a_i(t_2)\,.
+\]
+
+\end{document}

@@ -3757,6 +3757,7 @@
 
 - name: csvsimple
   type: package
+  subpackages: [csvsimple-l3,csvsimple-legacy]
   status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
@@ -11634,11 +11635,11 @@
 
 - name: pxgreeks
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-01
 
 - name: pxjahyper
   type: package
@@ -12773,21 +12774,21 @@
 
 - name: simplewick
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-07-01
 
 - name: simpler-wick
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-07-01
 
 - name: sistyle
   type: package
@@ -13016,12 +13017,12 @@
 
 - name: srcltx
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Not useful with pdflatex or lualatex."
+  updated: 2026-07-01
 
 - name: stabular
   type: package
@@ -13169,9 +13170,8 @@
   priority: 2
   comments: Issue when both hyperref and listoffigures are used.
   issues: [85]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-06
+  tests: true
+  updated: 2026-07-01
 
 - name: subdepth
   type: package
@@ -14472,12 +14472,12 @@
 - name: tweaklist
   ctan-pkg: moderncv
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Modifications of list environments are overwritten by the tagging code."
+  updated: 2026-07-01
 
 - name: twemojis
   type: package
@@ -14527,11 +14527,11 @@
 
 - name: txgreeks
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-01
 
 - name: txuprcal
   type: package
@@ -14709,12 +14709,12 @@
 
 - name: units
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support. Depends on incompatible nicefrac."
+  updated: 2026-07-01
 
 - name: universalis
   type: package
@@ -14840,13 +14840,13 @@
 
 - name: vector
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  comments: "Not distributed with texlive."
-  updated: 2026-01-23
+  tests: true
+  comments: "Not distributed with texlive. No luamml support for `\\uvec` and
+             `\\uuvec` with `wavy` package option."
+  updated: 2026-07-01
 
 - name: venndiagram
   type: package
@@ -14902,15 +14902,16 @@
 
 - name: verse
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  comments: firstaid is required for the fix of issue 49
+  comments: "firstaid is required for the fix of issue 49. `\\poemtitle` errors.
+             `\\flagverse` and line numbers not tagged ideally."
+  issues: [1468,1469]
   closed-issues: [49]
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2024-07-06
+  updated: 2026-07-01
 
 - name: version
   type: package
@@ -14958,12 +14959,11 @@
 
 - name: vmargin
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-07-01
 
 - name: vruler
   type: package

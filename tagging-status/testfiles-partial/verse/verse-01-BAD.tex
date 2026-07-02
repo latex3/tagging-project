@@ -1,0 +1,138 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{verse}
+
+\title{verse tagging test}
+
+\newcommand{\garden}{
+I used to love my garden \\
+But now my love is dead \\
+For I found a bachelor's button \\
+In black-eyed Susan's bed.
+}
+
+\begin{document}
+
+\tableofcontents
+
+\renewcommand{\poemtoc}{subsection}
+\poemtitle{A Limerick}
+\settowidth{\versewidth}{There was an old party of Lyme}
+\begin{verse}[\versewidth]
+There was an old party of Lyme \\
+Who married three wives at one time. \\
+\vin When asked: `Why the third?' \\
+\vin He replied: `One's absurd, \\
+And bigamy, sir, is a crime.' \\
+\end{verse}
+
+\settowidth{\versewidth}{But now my love is dead}
+\poemtitle{Love's lost}
+\begin{verse}[\versewidth]
+\begin{altverse}
+\garden
+\end{altverse}
+\end{verse}
+
+\settowidth{\versewidth}{There was a young lady of Ryde}
+\poemtitle{The Young Lady of Ryde}
+\begin{verse}[\versewidth]
+\poemlines{3}
+\indentpattern{00110}
+\begin{patverse}
+There was a young lady of Ryde \\
+Who ate some apples and died. \\
+The apples fermented \\
+Inside the lamented \\
+And made cider inside her inside. \\
+\end{patverse}
+\poemlines{0}
+\end{verse}
+
+\settowidth{\versewidth}{In a cavern, in a canyon,}
+\poemtitle{Clementine}
+\begin{verse}[\versewidth]
+\poemlines{2}
+\begin{altverse}
+\flagverse{1.} In a cavern, in a canyon, \\
+Excavating for a mine, \\
+Lived a miner, forty-niner, \label{vs:49} \\
+And his daughter, Clementine. \\!
+\end{altverse}
+\begin{altverse}
+\flagverse{\textsc{chorus}} Oh my darling, Oh my darling, \\
+Oh my darling Clementine. \\
+Thou art lost and gone forever, \\
+Oh my darling Clementine \\!
+\end{altverse}
+\poemlines{0}
+\end{verse}
+
+\poemtitle{Mouse's Tale}
+\settowidth{\versewidth}{a mouse that morning}
+\indentpattern{0135554322112346898779775545653222345544456688778899}
+\begin{verse}[\versewidth]
+\setlength{\vgap}{1em}
+\begin{patverse}
+\large Fury said to \\
+  a mouse, That \\
+  he met \\
+  in the \\
+  house, \\
+\normalsize `Let us \\
+  both go \\
+  to law: \\
+  \emph{I} will \\
+  prosecute \\
+  \textit{you.} --- \\
+  Come, I'll \\
+\small take no \\
+  denial; \\
+  We must \\
+  have a \\
+  trial: \\
+  For \\
+\footnotesize really \\
+  this \\
+  morning \\
+  I've \\
+  nothing \\
+  to do.' \\
+  Said the \\
+  mouse to \\
+\scriptsize the cur, \\
+  Such a \\
+  trial, \\
+  dear sir, \\
+  With no \\
+  jury or \\
+  judge, \\
+  would be \\
+  wasting \\
+  our breath.' \\
+\tiny  `I'll be \\
+  judge, \\
+  I'll be \\
+  jury.' \\
+  Said \\
+  cunning \\
+  old Fury; \\
+  `I'll try \\
+  the whole \\
+  cause \\
+  and \\
+  condemn \\
+  you \\
+  to \\
+  death.'  \par
+\end{patverse}
+\end{verse}
+
+\end{document}
