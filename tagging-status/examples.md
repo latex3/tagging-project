@@ -48,9 +48,10 @@ highlighted here, mostly corresponding to current workitems.
 The examples are presented in an online editor to allow you to
 experiment and change the examples. The resulting TeX files are _not_
 stored and all generated PDF are deleted from the server after an
-hour. Th ecurrent public release of `lualatex-dev` from TeXLive is
-used to process all examples. Devlopment code from the LaTeX git
-repositories is _not_ used here.
+hour. The current public release of `lualatex-dev` from
+[TeXLive](https://www.tug.org/texlive/) is used to process all
+examples. Development code from the LaTeX git repositories is _not_
+used here.
 
 </div>
 
