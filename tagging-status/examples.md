@@ -1,4 +1,5 @@
 ---
+title: "LaTeX tagged PDF Examples"
 ---
 
 <script src="https://texlive.net/cm6-test/cm6.bundle.min.js"></script>
