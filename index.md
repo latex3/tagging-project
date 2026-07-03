@@ -25,7 +25,7 @@ tagging is maintained with the help of a test suite run automatically
 in the CI system associated to this site.
 
 Some selected test examples are available on the [tagging status
-example page](tagging-status-examples) via an online editor, allowing
+example page](tagging-status/examples) via an online editor, allowing
 the examples to be run and validated online.
 
 
