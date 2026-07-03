@@ -26,7 +26,7 @@ runlatex.editorlines=45;
 
 # Tagging Examples
 
-<div style="margin:1em;padding:1em;border:solid thin black;">
+<div style="margin:1em;padding:1em;border:solid thin black;" markdown=1>
 
 This page allows selected LaTeX tagging examples to be processed with
 LaTeX to produce PDF which may then be viewed or validated to PDF/UA-2
