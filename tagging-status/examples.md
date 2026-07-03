@@ -26,6 +26,8 @@ runlatex.editorlines=45;
 
 # Tagging Examples
 
+<div style="margin:1em;padding:1em;border:solid thin black;">
+
 This page allows selected LaTeX tagging examples to be processed with
 LaTeX to produce PDF which may then be viewed or validated to PDF/UA-2
 accessibility standard.
@@ -43,6 +45,7 @@ The [tagging status page](../) lists many test files showing the the
 tagging status of over a thousand LaTeX packages. A small sample are
 highlighted here, mostly corresponding to current workitems.
 
+</div>
 
 ## hawkdraw
 
