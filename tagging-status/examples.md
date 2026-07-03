@@ -33,7 +33,7 @@ accessibility standard.
 Validation is provided by the open source
 [veraPDF](https://verapdf.org/) validator hosted at
 [texlive.net](https://texlive.net) and by the LaTeX project
-[show-pdf-tags](https://texlive.net/showtags) validation hosted on teh
+[show-pdf-tags](https://texlive.net/showtags) validation hosted on the
 same server.  As a convenience, a link is provided to open the
 generated PDF at [ngPDF](https://ngpdf.com). ngPDF is provided free of
 charge by its authors, although is not open source, it is not a
@@ -65,7 +65,7 @@ The [titlesec](https://ctan.org/pkg/titlesec) package is currently
 incompatible with the LaTeX tagging code, and this example
 demonstrates that no PDF is generated and just the error log is shown.
 
-It is included here as it is expected that an Accessible version of
+It is included here as it is expected that an accessible version of
 this package functionality will be developed soon as part of a wider
 effort to implement LaTeX section headings via a new temnplate
 interface producing accessible PDF outputs.
