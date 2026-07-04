@@ -113,11 +113,16 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 {% endfor %}
 
 
-```latex
-{% capture source %}
-{% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01.tex %}
-{% endcapture %}
-{% assign source2 = source | replace "{", "(" %}
-{{ source2 }}
+<pre id="mitthesis">
+</pre>
 
-```
+<script>
+fetch('testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
+	return response.text();
+}).then(function (t) {
+document.getElementById("mitthesis").innerText=t;
+}).catch(function (err) {
+	console.warn('Something went wrong.', err);
+});
+
+
