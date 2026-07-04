@@ -7788,11 +7788,11 @@
 
 - name: lgrmath
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-04
 
 - name: libertine
   type: package
@@ -7831,11 +7831,11 @@
 
 - name: libgreek
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-04
 
 - name: librebaskerville
   type: package
@@ -8063,12 +8063,11 @@
 
 - name: longtwocolumn
   type: package
-  status: unchecked
+  status: compatible
   priority: 9
   package-repository: "https://gitlab.com/latex9343737/packages/longtwocolumn"
-  tests: false
-  tasks: needs tests
-  updated: 2026-06-17
+  tests: true
+  updated: 2026-07-04
 
 - name: lparse
   type: package
@@ -8727,12 +8726,12 @@
 
 - name: mathcomp
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-07-04
 
 - name: mathalpha
   type: package
@@ -8903,12 +8902,12 @@
 
 - name: matlab-prettifier
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See listings package."
+  updated: 2026-07-04
 
 - name: mattens
   type: package
@@ -9723,15 +9722,16 @@
   related-issues: [1471]
   tests: true
   comments: "Incompatible with unicode-math. No luamml support."
-  updated: 2025-05-29
+  updated: 2024-08-05
 
 - name: newpx
   type: package
-  status: compatible
+  status: partially-compatible
   priority: 2
   related-issues: [1471]
   tests: false
-  updated: 2024-08-05
+  comments: "See newpxtext and newpxmath."
+  updated: 2026-07-04
 
 - name: newpxtext
   ctan-pkg: newpx
@@ -9745,12 +9745,13 @@
 
 - name: newtx
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 2
   related-issues: [1471]
   tests: false
-  updated: 2024-08-05
+  comments: "See newtxtext and newtxmath."
+  updated: 2026-07-04
 
 - name: newtxmath
   ctan-pkg: newtx
@@ -9775,11 +9776,12 @@
 
 - name: newtxsf
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   tests: true
-  updated: 2024-08-05
+  comments: "Incompatible with unicode-math. No luamml support."
+  updated: 2026-07-04
 
 - name: newtxtt
   type: package
@@ -10629,21 +10631,21 @@
 
 - name: pdfcolparallel
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "See parallel package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-07-04
 
 - name: pdfcolparcolumns
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "See parcolumns package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-07-04
 
 - name: pdfcomment
   type: package
@@ -14560,13 +14562,12 @@
 
 - name: typearea
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  updated: 2026-07-04
 
 - name: typed-checklist
   type: package
@@ -15462,6 +15463,7 @@
 
 - name: xsim
   type: package
+  subpackages: [xsimverb]
   status: unchecked
   priority: 9
   tests: false
