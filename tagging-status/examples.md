@@ -114,5 +114,5 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 
 
 ```latex
-{% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01 %}
+{% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01.tex %}
 ```
