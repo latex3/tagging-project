@@ -8063,9 +8063,11 @@
 
 - name: longtwocolumn
   type: package
-  status: compatible
+  status: partially-compatible
   priority: 9
   package-repository: "https://gitlab.com/latex9343737/packages/longtwocolumn"
+  issues: [1474]
+  comments: "Fully compatible with lualatex. Content lost with pdflatex."
   tests: true
   updated: 2026-07-04
 
