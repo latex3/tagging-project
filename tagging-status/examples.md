@@ -117,6 +117,7 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 {% capture source %}
 {% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01.tex %}
 {% endcapture %}
-{{ source | replace "{", "(" }}
+{% assign source2 = source | replace "{", "(" %}
+{{ source2 }}
 
 ```
