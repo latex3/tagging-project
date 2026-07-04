@@ -100,7 +100,7 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 %}
 
 {% for f in mitfiles %}
-{% assign ff t"estfiles-compatible-luatex/mitthesis/" | assign: f %}
+{% assign ff = "testfiles-compatible-luatex/mitthesis/" | append: f %}
 
 <pre class="norun" style="height:8em" markdown="1">
 
