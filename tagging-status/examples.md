@@ -117,7 +117,7 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 </pre>
 
 <script>
-fetch('testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
+fetch('https://raw.githubusercontent.com/latex3/tagging-project/refs/heads/main/tagging-status/testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
 	return response.text();
 }).then(function (t) {
 document.getElementById("mitthesis").innerText=t;
