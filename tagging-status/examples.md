@@ -104,7 +104,9 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 
 <pre class="norun" style="height:8em" markdown="1">
 
+{% raw %}
 {% include_relative  {{ff}} %}
+{% endraw %}
 
 </pre>
 
