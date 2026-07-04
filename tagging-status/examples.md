@@ -88,11 +88,12 @@ interface producing accessible PDF outputs.
 {% include_relative testfiles-incompatible/titlesec/titlesec-01-BAD.tex %}
 ```
 
+text here
 
 ## mitthesis
 
 A contributed class, producing accessible PDF with LuaLaTeX.
-Included here to test mult-file tests.
+Included here to test multi-file tests.
 
 
 {%
@@ -124,5 +125,4 @@ document.getElementById("mitthesis").innerHTML="<pre>" + t + "</pre>";
 }).catch(function (err) {
 	console.warn('Something went wrong.', err);
 });
-
-
+</script>
