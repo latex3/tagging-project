@@ -103,15 +103,20 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 
 <pre class="norun" style="height:8em" markdown="1">
 
-{% raw %}
 {% include_relative  {{ff}} %}
-{% endraw %}
 
 </pre>
 
 {% endfor %}
 
 
+```latex
+{% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01.tex %}
+```
+
+
+
+{% comment %}
 <div id="mitthesiswrap"><pre></pre></div>
 
 <script>
@@ -126,5 +131,7 @@ p.innerText=t;
 }
 });
 </script>
+
+{% endcomment %}
 
 
