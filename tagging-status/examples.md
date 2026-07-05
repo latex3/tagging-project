@@ -101,7 +101,7 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 <script>
 runlatex.preincludes = { "pre10": {
 {% for f in mitfiles %}
-"pre{{forloop.index + 2}}": "{{f}}",
+"pre{{forloop.index |plus: 1 }}": "{{f}}",
 {% endfor %}
 }}
 </script>
