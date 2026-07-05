@@ -118,7 +118,6 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 fetch('https://raw.githubusercontent.com/latex3/tagging-project/refs/heads/main/tagging-status/testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
 	return response.text();
 }).then(function (t) {
-if (
 const p = document.getElementById("mitthesiswrap").getElementsByTagName("pre")[0];
 if(p.id) {
 editors[p.id].setValue(t);
