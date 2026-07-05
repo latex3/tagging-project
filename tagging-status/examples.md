@@ -119,7 +119,7 @@ fetch('https://raw.githubusercontent.com/latex3/tagging-project/refs/heads/main/
 	return response.text();
 }).then(function (t) {
 if (document.getElementById("mitthesiswrap").firstElementChild.id) {
-editors[document.getElementById("mitthesiwraps").firstElementChild.id].setValue(t);
+editors[document.getElementById("mitthesiswraps").firstElementChild.id].setValue(t);
 } else {
 document.getElementById("mitthesiswrap").firstElementChild.innerText=t;
 }
