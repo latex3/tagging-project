@@ -101,7 +101,7 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 <script>
 runlatex.preincludes = { "pre10": {
 {% for f in mitfiles %}
-"pre{{forloop.index +1}}": "{{f}}",
+"pre{{forloop.index + 2}}": "{{f}}",
 {% endfor %}
 }}
 </script>
@@ -119,6 +119,7 @@ runlatex.preincludes = { "pre10": {
 
 {% endfor %}
 
+<p><b>mitthesis-01.tex</b></p>
 
 ```latex
 {% include_relative testfiles-compatible-luatex/mitthesis/mitthesis-01.tex %}
