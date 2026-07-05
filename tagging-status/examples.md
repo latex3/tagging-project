@@ -118,10 +118,12 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 fetch('https://raw.githubusercontent.com/latex3/tagging-project/refs/heads/main/tagging-status/testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
 	return response.text();
 }).then(function (t) {
-if (document.getElementById("mitthesiswrap").firstElementChild.id) {
-editors[document.getElementById("mitthesiswraps").firstElementChild.id].setValue(t);
+if (
+const p = document.getElementById("mitthesiswrap").getElementsByTagName("pre")[0];
+if(p.id) {
+editors[p.id].setValue(t);
 } else {
-document.getElementById("mitthesiswrap").firstElementChild.innerText=t;
+p.innerText=t;
 }
 });
 </script>
