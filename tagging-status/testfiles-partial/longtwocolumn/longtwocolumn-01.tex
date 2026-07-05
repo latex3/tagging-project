@@ -1,0 +1,25 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass[twocolumn]{article}
+\usepackage{longtwocolumn}
+\usepackage{kantlipsum}
+\begin{document}
+
+\title{Long One Column Abstract with Two Column Document}
+\author{Markus Kohm}
+
+\longtwocolumn[{
+ \maketitle
+ \begin{abstract}
+ \kant[1-6]
+ \end{abstract}
+ \vskip\baselineskip
+ }]
+ \section{Here we go}
+ \kant[1-7]
+ \end{document}
