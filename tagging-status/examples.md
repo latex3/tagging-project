@@ -3,27 +3,6 @@ title: "LaTeX tagged PDF Examples"
 ---
 
 <script src="https://texlive.net/cm6-test/cm6.bundle.min.js"></script>
-<script src="https://texlive.net/runlatex3-cm6.js"></script>
-<script>
-function generatepreamble(t,e) {return e.getValue();}
-      runlatex.overleafURI=null;
-      
-      runlatex.texts ={
-	  "Open in Overleaf": "",
-	  "TeXLive.net":      "Generate Tagged PDF", 
-	  "Delete Output":    "Delete Output",
-	  "Compiling PDF":    "Compiling Tagged PDF",
-          "Added Code":       "",
-	  "End Added Code":   "",
-	  "Top Caption":      "",
-	  "metadata":         ""
-      }
-
-runlatex.editorlines=45;
-
-
-
-</script>
 
 # Tagging Examples
 
@@ -125,4 +104,27 @@ document.getElementById("mitthesis").innerHTML="<pre>" + t + "</pre>";
 }).catch(function (err) {
 	console.warn('Something went wrong.', err);
 });
+</script>
+
+
+<script src="https://texlive.net/runlatex3-cm6.js"></script>
+<script>
+function generatepreamble(t,e) {return e.getValue();}
+      runlatex.overleafURI=null;
+      
+      runlatex.texts ={
+	  "Open in Overleaf": "",
+	  "TeXLive.net":      "Generate Tagged PDF", 
+	  "Delete Output":    "Delete Output",
+	  "Compiling PDF":    "Compiling Tagged PDF",
+          "Added Code":       "",
+	  "End Added Code":   "",
+	  "Top Caption":      "",
+	  "metadata":         ""
+      }
+
+runlatex.editorlines=45;
+
+
+
 </script>
