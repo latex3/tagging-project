@@ -93,16 +93,13 @@ assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgment
 {% endfor %}
 
 
-<div id="mitthesis">
-</div>
+<div id="mitthesis"><pre></pre></div>
 
 <script>
 fetch('https://raw.githubusercontent.com/latex3/tagging-project/refs/heads/main/tagging-status/testfiles-compatible-luatex/mitthesis/mitthesis-01.tex').then(function (response) {
 	return response.text();
 }).then(function (t) {
-document.getElementById("mitthesis").innerHTML="<pre>" + t + "</pre>";
-}).catch(function (err) {
-	console.warn('Something went wrong.', err);
+document.getElementById("mitthesis").childNodes[0].innerText=t;
 });
 </script>
 
