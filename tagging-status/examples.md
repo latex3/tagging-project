@@ -98,9 +98,19 @@ Included here to test multi-file tests.
 assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgments.ltx,chapter1.ltx,appendixb.ltx,biography.ltx,mitthesis-01.bbl" | split: "," 
 %}
 
+<script>
+runlatex.preincludes = { "pre10": {
+{% for f in mitfiles %}
+"pre{{forloop.index +1}}": "{{f}}",
+{% endfor %}
+}}
+</script>
+
+
 {% for f in mitfiles %}
 {% assign ff = "testfiles-compatible-luatex/mitthesis/" | append: f %}
 
+<p><b>{{f}}</b></p>
 <pre class="norun" style="height:8em" markdown="1">
 
 {% include_relative  {{ff}} %}
