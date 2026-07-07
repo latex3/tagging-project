@@ -656,7 +656,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370]
+  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370,1476]
   closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
   tests: true
   updated: 2026-06-02
@@ -3790,7 +3790,8 @@
   subpackages: [ctexcap,ctexheading,ctexhook,ctexpatch,ctexsize]
   included-in: [tlc3, ol1]
   priority: 6
-  issues: [673,1458]
+  issues: [673]
+  related-issues: [1458]
   luatex-only: true
   tests: true
   comments: "Option `heading=true` breaks section heading tagging. Same problem
@@ -4665,6 +4666,13 @@
   priority: 5
   tests: false
   updated: 2024-08-02
+
+- name: everyhook
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-07-04
 
 - name: everypage
   type: package
@@ -6011,6 +6019,13 @@
   priority: 5
   tests: true
   updated: 2024-08-05
+
+- name: futurans
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: fvextra
   type: package
@@ -7787,11 +7802,11 @@
 
 - name: lgrmath
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-04
 
 - name: libertine
   type: package
@@ -7830,11 +7845,11 @@
 
 - name: libgreek
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-02-03
+  comments: "Incompatible with unicode-math."
+  updated: 2026-07-04
 
 - name: librebaskerville
   type: package
@@ -7905,7 +7920,8 @@
   priority: 2
   issues: [162,210]
   tests: true
-  comments: "loses linenumbers and doesn't tag line numbers"
+  comments: "Loses line numbers and line numbers are not tagged correctly.
+             See lualineno for a compatible alternative."
   tasks: needs more tests
   updated: 2024-07-19
 
@@ -8062,12 +8078,13 @@
 
 - name: longtwocolumn
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
   package-repository: "https://gitlab.com/latex9343737/packages/longtwocolumn"
-  tests: false
-  tasks: needs tests
-  updated: 2026-06-17
+  issues: [1474]
+  comments: "Fully compatible with lualatex. Content lost with pdflatex."
+  tests: true
+  updated: 2026-07-04
 
 - name: lparse
   type: package
@@ -8085,6 +8102,13 @@
   tests: true
   issues: [1386]
   updated: 2026-06-09
+
+- name: lsabon
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: lscape
   type: package
@@ -8278,6 +8302,17 @@
   tests: true
   updated: 2026-04-01
 
+- name: lualineno
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  comments: "Content with tagged structure in line numbers must have tagging suspended.
+             Regular line numbers are automatically tagged as artifacts."
+  related-issues: [210]
+  tests: true
+  updated: 2026-06-29
+
 - name: luamathalign
   type: package
   status: currently-incompatible
@@ -8363,7 +8398,10 @@
   included-in: [tlc3, ol0.02]
   priority: 8
   comments: "Some extension packages may not be compatible, e.g. luatexja-ruby."
+  package-repository: "https://github.com/luatexja/luatexja"
+  issues: [1458]
   closed-issues: [87,713]
+  external-issues: ["https://github.com/luatexja/luatexja/issues/21","https://github.com/luatexja/luatexja/issues/46"]
   luatex-only: true
   tests: true
   updated: 2026-05-18
@@ -8491,6 +8529,7 @@
 
 - name: lucidabr
   type: package
+  subpackages: [lucbmath,lucidbrb,lucidbry,lucmin,lucmtime,luctime]
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
@@ -8725,12 +8764,12 @@
 
 - name: mathcomp
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-07-04
 
 - name: mathalpha
   type: package
@@ -8876,6 +8915,14 @@
   comments: "Requires the incompatible xetex engine."
   updated: 2026-01-28
 
+- name: mathstone
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: false
+  comments: "No luamml support. Incompatible with unicode-math."
+  updated: 2026-07-06
+
 - name: mathtext
   ctan-pkg: t2
   type: package
@@ -8885,6 +8932,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: mathtime
+  ctan-pkg: mathtime-ltx
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: false
+  comments: "No luamml support. Incompatible with unicode-math."
+  updated: 2026-07-06
 
 - name: mathtools
   type: package
@@ -8901,12 +8957,12 @@
 
 - name: matlab-prettifier
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "See listings package."
+  updated: 2026-07-04
 
 - name: mattens
   type: package
@@ -9718,16 +9774,19 @@
   status: partially-compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
+  related-issues: [1471]
   tests: true
   comments: "Incompatible with unicode-math. No luamml support."
-  updated: 2025-05-29
+  updated: 2024-08-05
 
 - name: newpx
   type: package
-  status: compatible
+  status: partially-compatible
   priority: 2
+  related-issues: [1471]
   tests: false
-  updated: 2024-08-05
+  comments: "See newpxtext and newpxmath."
+  updated: 2026-07-04
 
 - name: newpxtext
   ctan-pkg: newpx
@@ -9735,16 +9794,19 @@
   status: compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
+  related-issues: [1471]
   tests: true
   updated: 2024-08-05
 
 - name: newtx
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 2
+  related-issues: [1471]
   tests: false
-  updated: 2024-08-05
+  comments: "See newtxtext and newtxmath."
+  updated: 2026-07-04
 
 - name: newtxmath
   ctan-pkg: newtx
@@ -9752,6 +9814,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv1, ol1]
   priority: 2
+  related-issues: [1471]
   tests: true
   comments: "Incompatible with unicode-math. No luamml support."
   updated: 2025-05-29
@@ -9762,16 +9825,18 @@
   status: compatible
   included-in: [tlc3, arxiv1, ol1]
   priority: 2
+  related-issues: [1471]
   tests: true
   updated: 2024-08-05
 
 - name: newtxsf
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
   tests: true
-  updated: 2024-08-05
+  comments: "Incompatible with unicode-math. No luamml support."
+  updated: 2026-07-04
 
 - name: newtxtt
   type: package
@@ -10582,6 +10647,13 @@
   tests: true
   updated: 2024-11-18
 
+- name: pcarl
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
+
 - name: pdfbase
   ctan-pkg: media9
   type: package
@@ -10621,21 +10693,21 @@
 
 - name: pdfcolparallel
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "See parallel package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-07-04
 
 - name: pdfcolparcolumns
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "See parcolumns package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-18
+  updated: 2026-07-04
 
 - name: pdfcomment
   type: package
@@ -14552,13 +14624,12 @@
 
 - name: typearea
   type: package
-  status: unchecked
+  status: compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   package-repository: "https://sourceforge.net/projects/koma-script/"
   tests: false
-  tasks: needs tests
-  updated: 2024-07-15
+  updated: 2026-07-04
 
 - name: typed-checklist
   type: package
@@ -14587,6 +14658,14 @@
   updated: 2026-01-23
 
 #------------------------ UUU ----------------------------
+
+- name: uarial
+  ctan-pkg: urw-arial
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: ucharclasses
   type: package
@@ -14892,6 +14971,13 @@
   priority: 9
   tests: true
   updated: 2024-07-26
+
+- name: verdana
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: verifycommand
   type: package
@@ -15454,6 +15540,7 @@
 
 - name: xsim
   type: package
+  subpackages: [xsimverb]
   status: unchecked
   priority: 9
   tests: false
@@ -15953,23 +16040,21 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737]
+  issues: [443,737,1477]
   closed-issues: [970]
-  tests: false
-  tasks: needs further tests
-  updated: 2026-06-02
+  tests: true
+  updated: 2026-07-05
 
 - name: amsbook
   type: class
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737]
+  issues: [443,737,1477]
   closed-issues: [970]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  tests: false
-  tasks: needs further tests
-  updated: 2026-06-02
+  tests: true
+  updated: 2026-07-05
 
 - name: amsldoc
   ctan-pkg: amscls
@@ -15988,11 +16073,10 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737]
+  issues: [443,737,1477]
   closed-issues: [970]
-  tests: false
-  tasks: needs further tests
-  updated: 2026-06-02
+  tests: true
+  updated: 2026-07-05
 
 - name: article
   type: class
@@ -16154,10 +16238,9 @@
   status: currently-incompatible
   included-in: [arxiv5]
   priority: 4
-  issues: [350]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-29
+  issues: [350,1480]
+  tests: true
+  updated: 2026-07-06
 
 #------------------------ JJJ ----------------------------
 
