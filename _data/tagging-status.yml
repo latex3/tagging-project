@@ -6020,6 +6020,13 @@
   tests: true
   updated: 2024-08-05
 
+- name: futurans
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
+
 - name: fvextra
   type: package
   status: currently-incompatible
@@ -8095,6 +8102,13 @@
   issues: [1386]
   updated: 2026-06-09
 
+- name: lsabon
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
+
 - name: lscape
   type: package
   status: compatible
@@ -8503,6 +8517,7 @@
 
 - name: lucidabr
   type: package
+  subpackages: [lucbmath,lucidbrb,lucidbry,lucmin,lucmtime,luctime]
   status: partially-compatible
   included-in: [tlc3]
   priority: 2
@@ -8888,6 +8903,14 @@
   comments: "Requires the incompatible xetex engine."
   updated: 2026-01-28
 
+- name: mathstone
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: false
+  comments: "No luamml support. Incompatible with unicode-math."
+  updated: 2026-07-06
+
 - name: mathtext
   ctan-pkg: t2
   type: package
@@ -8897,6 +8920,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: mathtime
+  ctan-pkg: mathtime-ltx
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: false
+  comments: "No luamml support. Incompatible with unicode-math."
+  updated: 2026-07-06
 
 - name: mathtools
   type: package
@@ -10602,6 +10634,13 @@
   closed-issues: [628]
   tests: true
   updated: 2024-11-18
+
+- name: pcarl
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: pdfbase
   ctan-pkg: media9
@@ -14608,6 +14647,14 @@
 
 #------------------------ UUU ----------------------------
 
+- name: uarial
+  ctan-pkg: urw-arial
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
+
 - name: ucharclasses
   type: package
   status: no-support
@@ -14912,6 +14959,13 @@
   priority: 9
   tests: true
   updated: 2024-07-26
+
+- name: verdana
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-07-06
 
 - name: verifycommand
   type: package
@@ -16172,10 +16226,9 @@
   status: currently-incompatible
   included-in: [arxiv5]
   priority: 4
-  issues: [350]
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-29
+  issues: [350,1480]
+  tests: true
+  updated: 2026-07-06
 
 #------------------------ JJJ ----------------------------
 
