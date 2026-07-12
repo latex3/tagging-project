@@ -47,7 +47,7 @@ generated PDF at [ngPDF](https://ngpdf.com). ngPDF is provided free of
 charge by its authors, although is not open source, it is not a
 necessary component of the validation services shown on this page.
 
-The [tagging status page](/tagging-status) lists many test files showing the the
+The [tagging status page]({{site.url}}/tagging-status) lists many test files showing the the
 tagging status of over a thousand LaTeX packages. A small sample are
 highlighted here, corresponding to current work items.
 
