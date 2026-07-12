@@ -47,9 +47,9 @@ generated PDF at [ngPDF](https://ngpdf.com). ngPDF is provided free of
 charge by its authors, although is not open source, it is not a
 necessary component of the validation services shown on this page.
 
-The [tagging status page](../) lists many test files showing the the
+The [tagging status page](/tagging-status) lists many test files showing the the
 tagging status of over a thousand LaTeX packages. A small sample are
-highlighted here, mostly corresponding to current work items.
+highlighted here, corresponding to current work items.
 
 The examples are presented in an online editor to allow you to
 experiment and change the examples. The resulting TeX files are _not_
@@ -102,5 +102,5 @@ interface producing accessible PDF outputs.
 ## KOMA-Script Classes
 
 
-## memoir
+## memoir      
 
