@@ -25,6 +25,18 @@ runlatex.editorlines=45;
 
 # Tagging Heading Structures
 
+<div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
+
+  [generic headings](#generic-heading-template-implementation)
+
+  [Package Reimplementations](#package-reimplementations)
+
+  [KOMA](#koma-script-classes)
+
+  [Memoir](#memoir)
+
+</div>
+
 <div style="margin:1em;padding:1em;border:solid thin black;" markdown=1>
 
 Current work on the LaTeX Tagging project is centered around providing
