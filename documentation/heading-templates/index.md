@@ -29,7 +29,7 @@ runlatex.editorlines=45;
 
   [generic headings](#generic-heading-template-implementation)
 
-  [Package Reimplementations](#package-reimplementations)
+  [Package Reimplementations](#package-reimplementationsadjustments)
 
   [KOMA](#koma-script-classes)
 
@@ -80,6 +80,15 @@ Parts of this work are supported by a
 
 
 ## Generic Heading Template Implementation
+
+The standard `article` class will already use the heading templates as shown in the example below.
+This is included here to demonstrate this test infrastructure, before the emulation of the
+heading packages has been undertaken.
+
+```latex
+{% include_relative article-01.tex %}
+```
+
 
 ## Package Reimplementations/adjustments
 
