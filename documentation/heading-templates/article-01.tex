@@ -1,0 +1,27 @@
+%{% raw %}
+\DocumentMetadata{tagging=on,pdfstandard=ua-2}
+\documentclass{article}
+
+\EditInstance{heading}{section}{
+ number-format=\fbox{\theheading},
+ before-vspace=2cm
+}
+\EditInstance{heading}{subsection}
+{number-format=\fbox{\theheading}}
+
+\title{Heading templates example}
+\author{L. Team}
+\begin{document}
+\maketitle
+\section{Introduction}
+some text
+
+\subsection{subsec a}
+some text
+\subsection{subsec b}
+some text
+
+\section{Main section}
+more text
+\end{document}
+%{% endraw %}
