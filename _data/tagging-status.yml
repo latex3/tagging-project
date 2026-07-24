@@ -7148,9 +7148,9 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  tests: excluded
-  comments: "See harvard and index packages. Not distributed with texlive. so tests excluded"
-  updated: 2026-01-26
+  tests: true
+  comments: "See harvard and index packages. Not distributed with texlive."
+  updated: 2026-07-24
 
 - name: infwarerr
   type: package
@@ -9539,10 +9539,10 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  tests: excluded
+  tests: true
   comments: "Does not use section command for index headings. Not distributed
-             with texlive, tests excluded."
-  updated: 2025-10-21
+             with texlive."
+  updated: 2026-07-24
 
 - name: multirow
   type: package
@@ -11892,7 +11892,7 @@
   priority: 9
   luatex-only: true
   tests: excluded
-  comments: "test file requires shell escape and is excluded by default"
+  comments: "Test file requires shell escape and is excluded."
   updated: 2024-07-25
 
 - name: pythonhighlight
@@ -12756,7 +12756,7 @@
   priority: 7
   issues: [630,1014]
   tests: excluded
-  comments: test currently excluded as it loops with pdftex
+  comments: "Test currently excluded as it loops with pdftex."
   updated: 2025-10-21
 
 - name: shellesc
@@ -13793,7 +13793,7 @@
   status: compatible
   priority: 9
   tests: excluded
-  comments: tests currently excluded
+  comments: "Tests currently excluded since they depend on OS."
   updated: 2025-10-20
 
 - name: textalpha
@@ -15186,7 +15186,7 @@
   type: package
   status: currently-incompatible
   priority: 2
-  comments: tests excluded as loops (no error raised).
+  comments: "Tests excluded as loops (no error raised)."
   issues: [186]
   tests: excluded
   updated: 2024-07-17
@@ -15446,7 +15446,7 @@
   status: no-support
   priority: 9
   tests: excluded
-  comments: tests excluded as package requires xetex
+  comments: "Tests excluded as package requires xetex."
   updated: 2024-08-07
 
 - name: xfakebold
