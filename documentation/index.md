@@ -44,6 +44,16 @@ in the CI system associated to this site.
 In  general one can use the command `texdoc <package-name>` on the command line to get documentation about a specific package. Instead of using `texdoc` on your machine you can also use the online version at [https://texdoc.org](https://texdoc.org/index.html).
 
 
+## Tagging of Heading Structures in LaTeX"
+
+A Focus of current acctivity is the tagging of heading structures for docuemnt sections.
+
+[Tagging of Heading Structures in LaTeX](heading-templates) shows current activity and provides
+online editable test files for various related packages.
+
+
+## Documentation Overview
+
 The following list gives an overview about different packages related to tagging and some details on the contents of each:
 
 + [`ltnews.pdf`](https://texdoc.org/serve/ltnews/0) (or `ltnews<number>.pdf`)
@@ -80,7 +90,7 @@ Please also note that most of the documentation (as well as this page) is  "work
 
 ## Testing Tagged PDF documents
 
-If you have a tagged PDF document and want to check the of the tagging you can try
+If you have a tagged PDF document and want to check the tagging you can try
 
 +    [`VeraPDF`](https://dev.verapdf-rest.duallab.com/) - online -  has a good validation mechanism
 +    [`PAC`](https://pac.pdf-accessibility.org/) - Windows only; it only understands PDF1.7 and PDF/UA-1 documents but not PDF2-0 and PDF/UA-2
