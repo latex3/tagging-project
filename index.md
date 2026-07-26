@@ -20,7 +20,7 @@ be updated as new features become available.
 #### Status of Contributed LaTeX Classes and Packages
 
 The [Tagging Status](tagging-status/) pages document the current
-status of over 1800 Contributed packages. This status with respect to
+status of over 1800 contributed packages. This status with respect to
 tagging is maintained with the help of a test suite run automatically
 in the CI system associated with this site.
 
