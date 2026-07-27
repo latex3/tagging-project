@@ -1,0 +1,90 @@
+%%
+%% This is file `indxcite.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% indxcite.dtx  (with options: `package')
+%% 
+%%    Package `indxcite' for use with LaTeX2e
+%%    Copyright (C) 1996 James Ashton (email `James.Ashton@anu.edu.au').
+%%    All rights reserved.  You may not alter the contents of this file
+%%    unless you also change its name.
+%% 
+\def\fileversion{1.1}
+\def\filedate{1996/11/22}
+\def\docdate{1996/11/22}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{indxcite}[\filedate\space\fileversion\space Index citation package]
+\RequirePackage{index}
+\RequirePackage{harvard}
+\typeout{Package `indxcite' \fileversion\space<\filedate>}
+\renewcommand{\harvarditem}[5][\null]{\item[]%
+\if@filesw{ \def\protect##1{\string ##1\space}%
+\ifthenelse{\equal{#1}{\null}}
+  {\def\next{{#4}{#2}{#2}{#3}{#5}}}
+  {\def\next{{#4}{#2}{#1}{#3}{#5}}}
+\immediate\write\@auxout{\string\harvardcite\codeof\next}%
+}\fi%
+\protect\hspace*{-\labelwidth}\protect\hspace*{-\labelsep}\ignorespaces%
+}
+\renewcommand{\harvardcite}[5]{
+  \global\@namedef{HAR@fn@#1}{#2}
+  \global\@namedef{HAR@an@#1}{#3}
+  \global\@namedef{HAR@yr@#1}{#4}
+  \global\@namedef{HAR@df@#1}{\csname HAR@fn@#1\endcsname}
+  \global\@namedef{HAR@ix@#1}{#5}
+}
+\renewcommand{\HAR@checkcitations}[5]{
+  \def\HAR@tempa{#2}\expandafter
+  \ifx \csname HAR@fn@#1\endcsname \HAR@tempa
+    \def\HAR@tempa{#3}\expandafter
+    \ifx \csname HAR@an@#1\endcsname \HAR@tempa
+      \def\HAR@tempa{#4}\expandafter
+      \ifx \csname HAR@yr@#1\endcsname \HAR@tempa
+        \def\HAR@tempa{#5}\expandafter
+        \ifx \csname HAR@ix@#1\endcsname \HAR@tempa
+        \else
+          \@tempswatrue
+        \fi
+      \else
+        \@tempswatrue
+      \fi
+    \else
+      \@tempswatrue
+    \fi
+  \else
+    \@tempswatrue
+  \fi
+}
+\newcommand{\indexcite}[2][]{%
+{\def\\{\@ifnextchar[{\@HARex[#1]}{\@HARey[#1]}}%
+\csname HAR@ix@#2\endcsname}}
+\long\def\@HARex[#1][#2]#3{\ifthenelse{\equal{#2}{#3}}%
+{\def\HAR@ixtmp{{#2|#1}}}%
+{\def\HAR@ixtmp{{#2@#3|#1}}}%
+\expandafter\HAR@index\HAR@ixtmp}
+\def\@HARey[#1]#2{\@HARex[#1][#2]{#2}}
+\def\HAR@index#1{\index[\HAR@citeindex]{#1}}
+\newcommand{\HAR@citeindex}{\default}
+\newcommand{\citationindex}[1]{\renewcommand{\HAR@citeindex}{#1}}
+\catcode`\?=0 \catcode`\\=12%
+?newcommand{?citationformat}[2][]{?@citationformat[#1]{#2}{\}}%
+?catcode`?\=0 \catcode`\?=12%
+\newcommand{\@citationformat}[3][]{%
+  \ifthenelse{\equal{#1}{}}%
+      {\long\def\@HARex[##1][##2]##3{\ifthenelse{\equal{##2}{##3}}%
+         {\def\HAR@ixtmp{{##2|##1#2}}}%
+         {\def\HAR@ixtmp{{##2@##3|##1#2}}}%
+       \expandafter\HAR@index\HAR@ixtmp}}%
+      {\long\def\@HARex[##1][##2]##3{\def\HAR@ixtmp{{##2@#3#1{##3}|##1#2}}\expandafter\HAR@index\HAR@ixtmp}}%
+}
+\newcommand{\icite}[2][]{\ifthenelse{\equal{#1}{}}{\cite{#2}}{\cite[#1]{#2}}\indexcite{#2}}
+\newcommand{\iciteaffixed}[2][]{\ifthenelse{\equal{#1}{}}{\citeaffixed{#2}}{\citeaffixed[#1]{#2}}\indexcite{#2}}
+\newcommand{\iciteasnoun}[2][]{\ifthenelse{\equal{#1}{}}{\citeasnoun{#2}}{\citeasnoun[#1]{#2}}\indexcite{#2}}
+\newcommand{\ipossessivecite}[2][]{\ifthenelse{\equal{#1}{}}{\possessivecite{#2}}{\possessivecite[#1]{#2}}\indexcite{#2}}
+\newcommand{\icitename}[2][]{\ifthenelse{\equal{#1}{}}{\citename{#2}}{\citename[#1]{#2}}\indexcite{#2}}
+\newcommand{\iciteyear}[2][]{\ifthenelse{\equal{#1}{}}{\citeyear{#2}}{\citeyear[#1]{#2}}\indexcite{#2}}
+\endinput
+%%
+%% End of file `indxcite.sty'.

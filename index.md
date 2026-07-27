@@ -20,9 +20,9 @@ be updated as new features become available.
 #### Status of Contributed LaTeX Classes and Packages
 
 The [Tagging Status](tagging-status/) pages document the current
-status of over 1000 Contributed packages. This status with respect to
+status of over 1800 contributed packages. This status with respect to
 tagging is maintained with the help of a test suite run automatically
-in the CI system associated to this site.
+in the CI system associated with this site.
 
 
 ### Reporting Issues
@@ -30,8 +30,8 @@ in the CI system associated to this site.
 In the [Issues area](https://github.com/latex3/tagging-project/issues)
 users can open issues for any part of the tagging project without worrying
 about which code repository holds the code which needs to be fixed.
-Wwe can move issues to opther repositories when appropiate.
-Issues are also used to document package incompatibilites with examples .
+We can move issues to other repositories when appropriate.
+Issues are also used to document package incompatibilities with examples.
 
 
 

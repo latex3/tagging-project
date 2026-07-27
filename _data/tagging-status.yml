@@ -5094,12 +5094,14 @@
 
 - name: exscale
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
+  issues: [1499]
   closed-issues: [1154]
+  comments: "Currently errors with unicode-math and mathml-SE."
   tests: true
-  updated: 2026-06-02
+  updated: 2026-07-25
 
 - name: exsheets
   type: package
@@ -5422,9 +5424,10 @@
   status: currently-incompatible
   priority: 9
   tests: true
+  issues: [1485]
   comments: "`fitchproof` is tagged as combined list/table."
   package-repository: "https://github.com/OpenLogicProject/fitch/"
-  updated: 2024-08-13
+  updated: 2026-07-25
 
 - name: fix-cm
   type: package
@@ -6482,9 +6485,10 @@
     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
     An old issue with height appears to be fixed.
   references: [1]
+  issues: [1500]
   closed-issues: [16,64,950]
   tests: false
-  updated: 2024-07-06
+  updated: 2026-07-25
 
 - name: graphpap
   type: package
@@ -7148,9 +7152,9 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  tests: excluded
-  comments: "See harvard and index packages. Not distributed with texlive. so tests excluded"
-  updated: 2026-01-26
+  tests: true
+  comments: "See harvard and index packages. Not distributed with texlive."
+  updated: 2026-07-24
 
 - name: infwarerr
   type: package
@@ -9539,10 +9543,10 @@
   status: partially-compatible
   included-in: [arxiv001]
   priority: 7
-  tests: excluded
+  tests: true
   comments: "Does not use section command for index headings. Not distributed
-             with texlive, tests excluded."
-  updated: 2025-10-21
+             with texlive."
+  updated: 2026-07-24
 
 - name: multirow
   type: package
@@ -11892,7 +11896,7 @@
   priority: 9
   luatex-only: true
   tests: excluded
-  comments: "test file requires shell escape and is excluded by default"
+  comments: "Test file requires shell escape and is excluded."
   updated: 2024-07-25
 
 - name: pythonhighlight
@@ -12756,7 +12760,7 @@
   priority: 7
   issues: [630,1014]
   tests: excluded
-  comments: test currently excluded as it loops with pdftex
+  comments: "Test currently excluded as it loops with pdftex."
   updated: 2025-10-21
 
 - name: shellesc
@@ -13793,7 +13797,7 @@
   status: compatible
   priority: 9
   tests: excluded
-  comments: tests currently excluded
+  comments: "Tests currently excluded since they depend on OS."
   updated: 2025-10-20
 
 - name: textalpha
@@ -15186,7 +15190,7 @@
   type: package
   status: currently-incompatible
   priority: 2
-  comments: tests excluded as loops (no error raised).
+  comments: "Tests excluded as loops (no error raised)."
   issues: [186]
   tests: excluded
   updated: 2024-07-17
@@ -15446,7 +15450,7 @@
   status: no-support
   priority: 9
   tests: excluded
-  comments: tests excluded as package requires xetex
+  comments: "Tests excluded as package requires xetex."
   updated: 2024-08-07
 
 - name: xfakebold
@@ -16377,10 +16381,10 @@
   type: class
   status: currently-incompatible
   priority: 9
-  issues: [719]
+  issues: [719,1482]
   luatex-only: true
   tests: true
-  updated: 2024-10-18
+  updated: 2026-07-25
 
 - name: jltxdoc
   ctan-pkg: platex
