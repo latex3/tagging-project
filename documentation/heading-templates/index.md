@@ -27,13 +27,13 @@ runlatex.editorlines=45;
 
 <div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
-  [generic headings](#generic-heading-template-implementation)
+  [Generic headings](#generic-heading-template-implementation)
 
-  [Package Reimplementations](#package-reimplementationsadjustments)
+  [Packages](#package-reimplementationsadjustments)
 
-  [KOMA](#koma-script-classes)
+  [  KOMA](#koma-script-classes)
 
-  [Memoir](#memoir)
+  [  Memoir](#memoir)
 
 </div>
 
