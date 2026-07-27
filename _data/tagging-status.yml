@@ -5094,12 +5094,14 @@
 
 - name: exscale
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
+  issues: [1499]
   closed-issues: [1154]
+  comments: "Currently errors with unicode-math and mathml-SE."
   tests: true
-  updated: 2026-06-02
+  updated: 2026-07-25
 
 - name: exsheets
   type: package
@@ -5422,9 +5424,10 @@
   status: currently-incompatible
   priority: 9
   tests: true
+  issues: [1485]
   comments: "`fitchproof` is tagged as combined list/table."
   package-repository: "https://github.com/OpenLogicProject/fitch/"
-  updated: 2024-08-13
+  updated: 2026-07-25
 
 - name: fix-cm
   type: package
@@ -6482,9 +6485,10 @@
     The alternative text will be ignored if tagging is not used. It seems that draft mode doesn’t work at present.
     An old issue with height appears to be fixed.
   references: [1]
+  issues: [1500]
   closed-issues: [16,64,950]
   tests: false
-  updated: 2024-07-06
+  updated: 2026-07-25
 
 - name: graphpap
   type: package
@@ -16377,10 +16381,10 @@
   type: class
   status: currently-incompatible
   priority: 9
-  issues: [719]
+  issues: [719,1482]
   luatex-only: true
   tests: true
-  updated: 2024-10-18
+  updated: 2026-07-25
 
 - name: jltxdoc
   ctan-pkg: platex
