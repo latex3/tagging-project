@@ -31,9 +31,9 @@ runlatex.editorlines=45;
 
   [Packages](#package-reimplementationsadjustments)
 
-  [  KOMA](#koma-script-classes)
+  [KOMA](#koma-script-classes)
 
-  [  Memoir](#memoir)
+  [Memoir](#memoir)
 
 </div>
 
