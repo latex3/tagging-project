@@ -27,9 +27,9 @@ runlatex.editorlines=45;
 
 <div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
-  [generic headings](#generic-heading-template-implementation)
+  [Generic headings](#generic-heading-template-implementation)
 
-  [Package Reimplementations](#package-reimplementationsadjustments)
+  [Packages](#package-reimplementationsadjustments)
 
   [KOMA](#koma-script-classes)
 
@@ -59,7 +59,7 @@ generated PDF at [ngPDF](https://ngpdf.com). ngPDF is provided free of
 charge by its authors, although is not open source, it is not a
 necessary component of the validation services shown on this page.
 
-The [tagging status page](https://latex3.github.io/tagging-project/tagging-status) lists many test files showing the the
+The [tagging status page](https://latex3.github.io/tagging-project/tagging-status) lists many test files showing the
 tagging status of over a thousand LaTeX packages. A small sample are
 highlighted here, corresponding to current work items.
 
@@ -73,8 +73,11 @@ used here.
 
 ---
 
-Parts of this work are supported by a
-[grant from NGI0 Commons Fund](https://nlnet.nl/project/LaTeX-Ecosystem-A11y/).
+We are grateful that a part of this project
+is funded through [NGI0 Commons Fund](https://nlnet.nl/commonsfund), a fund established by [NLnet](https://nlnet.nl) with financial support from the European Commission's [Next Generation Internet](https://ngi.eu) program. Learn more at the [NLnet project page](https://nlnet.nl/project/LaTeX-Ecosystem-A11y).
+
+[<img src="https://nlnet.nl/logo/banner.png" alt="NLnet foundation logo" width="20%" />](https://nlnet.nl)
+[<img src="https://nlnet.nl/image/logos/NGI0_tag.svg" alt="NGI Zero Logo" width="20%" />](https://nlnet.nl/commonsfund)
 
 </div>
 
