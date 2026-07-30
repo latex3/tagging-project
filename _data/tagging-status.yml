@@ -11191,13 +11191,13 @@
 
 - name: picins
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1506]
   comments: Not distributed with texlive.
-  updated: 2024-07-18
+  updated: 2026-07-29
 
 - name: pict2e
   type: package
@@ -16619,11 +16619,12 @@
   subpackages: [ltugcomn]
   status: partially-compatible
   priority: 9
+  issues: [1503]
   closed-issues: [1274]
   tests: true
   comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
   package-repository: "https://github.com/TeXUsersGroup/tugboat"
-  updated: 2026-06-18
+  updated: 2026-07-29
 
 - name: ltx-talk
   type: class
