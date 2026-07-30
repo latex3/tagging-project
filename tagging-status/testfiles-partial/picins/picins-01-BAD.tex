@@ -1,0 +1,52 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{picins}
+\usepackage{graphicx}
+\usepackage{kantlipsum}
+
+\title{picins tagging test}
+
+\begin{document}
+
+%\listoffigures % makes parent-child warnings disappear
+
+\parpic{\includegraphics[scale=0.2,alt=some alt text]{example-image}}
+some normal text
+
+\kant[1-2]
+
+\parpic(3cm,2.5cm)[x]{\includegraphics[scale=0.2,alt=some alt text]{example-image}}
+\kant[1-2]
+
+\parpic{\includegraphics[scale=0.2,alt=some alt text]{example-image}}
+\picskip{10}
+\kant[1-2]
+
+\piccaption[short]{Some caption}
+\parpic{\includegraphics[scale=0.2,alt=some alt text]{example-image}}
+\kant[1-2]
+
+\piccaptionside
+\piccaption{\label{foo}Some caption}
+\parpic{\includegraphics[scale=0.2,alt=some alt text]{example-image}}
+\kant[1-2]
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4,alt=some alt text]{example-image}
+\newcaption{A ``hanging'' caption. A ``hanging'' caption. A ``hanging'' caption. A ``hanging'' caption. A ``hanging'' caption.}
+\end{figure}
+
+\begin{shadowenv}
+\kant[1-2]
+\end{shadowenv}
+
+\begin{figure}
+\hpic{\includegraphics[scale=0.2,alt=image A]{example-image-a}}
+\hpic{\includegraphics[scale=0.2,alt=image B]{example-image-b}}
+\hpic{\includegraphics[scale=0.2,alt=image B]{example-image-c}}
+\end{figure}
+
+\ref{foo}
+\end{document}
