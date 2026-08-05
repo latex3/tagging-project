@@ -5487,6 +5487,13 @@
   tests: false
   updated: 2026-01-26
 
+- name: fixltxhyph
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-05
+
 - name: fixmath
   type: package
   status: compatible
@@ -8304,6 +8311,16 @@
   tests: false
   luatex-only: true
   updated: 2026-01-28
+
+- name: luadraw
+  type: package
+  status: partially-compatible
+  priority: 9
+  comments: "One of the TikZ keys `alt`, `actualtext`, or `artifact` must be given in `pictureoptions`"
+  tests: true
+  package-repository: "https://github.com/pfradin/luadraw"
+  luatex-only: true
+  updated: 2026-08-05
 
 - name: luahyphenrules
   type: package
@@ -13755,6 +13772,14 @@
   luatex-only: true
   tests: false
   updated: 2024-07-21
+
+- name: testhyphens
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1510]
+  updated: 2026-08-05
 
 - name: tex-locale
   type: package
