@@ -4332,12 +4332,22 @@
   tests: false
   updated: 2025-05-29
 
+- name: ducksay
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1511]
+  package-repository: "https://github.com/Skillmon/ltx_ducksay"
+  updated: 2026-08-06
+
 - name: duckuments
   type: package
   status: compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_duckuments"
   updated: 2024-08-12
 
 - name: duplicat
@@ -4671,6 +4681,15 @@
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
   updated: 2026-06-02
+
+- name: enverb
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  package-repository: "https://gitlab.com/islandoftex/texmf/enverb"
+  comments: "Works with fancyvrb environments but not standard `verbatim`."
+  updated: 2026-08-06
 
 - name: environ
   type: package

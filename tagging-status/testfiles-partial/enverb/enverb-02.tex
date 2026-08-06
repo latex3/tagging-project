@@ -1,0 +1,35 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{enverb}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+
+\newenvironment{myenv}
+{\enverb{}}
+{%
+\par\noindent
+\begin{minipage}{0.48\linewidth}
+\enverbListing{Verbatim}{}
+\end{minipage}%
+\hfill
+\colorbox{yellow}
+{%
+\begin{minipage}{\dimexpr0.48\linewidth-2\fboxsep\relax}
+\enverbExecute
+\end{minipage}%
+}%
+\par
+}
+
+\title{enverb tagging test -- Verbatim}
+
+\begin{document}
+
+\begin{myenv}
+  This%
+  is%
+  great.%
+\end{myenv}
+
+\end{document}
