@@ -19,19 +19,19 @@
      </section-number>
      <?MarkedContent page="1" ?>A normal page
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.009"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>text
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.011"
@@ -49,11 +49,11 @@
      </section-number>
      <?MarkedContent page="2" ?>A landscape page
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.014"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.015"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
@@ -66,13 +66,14 @@
          referenced-as="2"
         >
         <?References objects="1" ?>
-       <Span xmlns="http://iso.org/pdf2/ssn"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.017"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="2" ?>1
-       </Span>
+       </text-fragment>
       </footnotemark>
       <footnote xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.018"
@@ -84,43 +85,44 @@
           id="ID.021"
           rolemaps-to="Lbl"
          >
-        <Span xmlns="http://iso.org/pdf2/ssn"
+        <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.022"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextPosition="Sup"
+           rolemaps-to="Span"
           >
          <?MarkedContent page="2" ?>1
-        </Span>
+        </text-fragment>
        </footnotelabel>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.019"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.020"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="2" ?>a footnote on a landscape page
-        </text>
-       </text-unit>
+        </text-block>
+       </semantic-para>
       </footnote>
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </text-block>
+    </semantic-para>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.029"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.030"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="3" ?>even more landscape text
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
    </Sect>
    <figures xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.004"
@@ -138,28 +140,28 @@
         >
        <?MarkedContent page="2" ?>Figure 1: 
       </Lbl>
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.028"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Center"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Some caption
-      </text>
+      </text-block>
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.024"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.025"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Center"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Some figure
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </float>
    </figures>
   </Document>
