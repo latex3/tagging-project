@@ -4332,12 +4332,22 @@
   tests: false
   updated: 2025-05-29
 
+- name: ducksay
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1511]
+  package-repository: "https://github.com/Skillmon/ltx_ducksay"
+  updated: 2026-08-06
+
 - name: duckuments
   type: package
   status: compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: true
+  package-repository: "https://github.com/Skillmon/ltx_duckuments"
   updated: 2024-08-12
 
 - name: duplicat
@@ -4671,6 +4681,16 @@
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
   updated: 2026-06-02
+
+- name: enverb
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  package-repository: "https://gitlab.com/islandoftex/texmf/enverb"
+  issues: [1512]
+  comments: "Works with fancyvrb environments but not standard `verbatim`."
+  updated: 2026-08-06
 
 - name: environ
   type: package
@@ -5486,6 +5506,13 @@
   comments: This is an obsolete package which should not be needed
   tests: false
   updated: 2026-01-26
+
+- name: fixltxhyph
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-05
 
 - name: fixmath
   type: package
@@ -8304,6 +8331,16 @@
   tests: false
   luatex-only: true
   updated: 2026-01-28
+
+- name: luadraw
+  type: package
+  status: partially-compatible
+  priority: 9
+  comments: "One of the TikZ keys `alt`, `actualtext`, or `artifact` must be given in `pictureoptions`"
+  tests: true
+  package-repository: "https://github.com/pfradin/luadraw"
+  luatex-only: true
+  updated: 2026-08-05
 
 - name: luahyphenrules
   type: package
@@ -13756,6 +13793,14 @@
   tests: false
   updated: 2024-07-21
 
+- name: testhyphens
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1510]
+  updated: 2026-08-05
+
 - name: tex-locale
   type: package
   status: compatible
@@ -14869,13 +14914,14 @@
 
 - name: unicodefonttable
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3]
   priority: 4
   issues: [175]
   luatex-only: true
   tests: true
-  updated: 2024-07-17
+  comments: "Headings are incorrectly marked as data cells."
+  updated: 2026-08-07
 
 - name: uninormalize
   type: package
