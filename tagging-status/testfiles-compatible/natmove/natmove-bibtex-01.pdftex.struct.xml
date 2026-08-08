@@ -3,21 +3,22 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Some text
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.007"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextPosition="Sup"
+        rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>
       <Reference xmlns="http://iso.org/pdf/ssn"
@@ -34,25 +35,26 @@
        <?MarkedContent page="1" ?>
       </Reference>
       <?MarkedContent page="1" ?>
-     </Span>
+     </text-fragment>
      <?MarkedContent page="1" ?>some more text.
-    </text>
-   </text-unit>
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    </text-block>
+   </semantic-para>
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.010"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.011"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Some text ending a sentence.
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.012"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextPosition="Sup"
+        rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>
       <Reference xmlns="http://iso.org/pdf/ssn"
@@ -69,10 +71,10 @@
        <?MarkedContent page="1" ?>
       </Reference>
       <?MarkedContent page="1" ?>
-     </Span>
+     </text-fragment>
      <?MarkedContent page="1" ?>
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.015"
      >
@@ -83,7 +85,7 @@
       >
      <?MarkedContent page="1" ?>References
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.017"
        rolemaps-to="Part"
       >
@@ -108,11 +110,11 @@
           id="ID.021"
           rolemaps-to="LBody"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.022"
            rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.023"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
@@ -125,12 +127,12 @@
            <?MarkedContent page="1" ?>Annalen der Physik
           </Em>
           <?MarkedContent page="1" ?>, 322(10):891–921,1905. doi: http://dx.doi.org/10.1002/andp.19053221004.
-         </text>
-        </text-unit>
+         </text-block>
+        </semantic-para>
        </itembody>
       </item>
      </list>
-    </text-unit>
+    </semantic-para>
    </Sect>
   </Document>
  </StructTreeRoot>

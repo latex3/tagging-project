@@ -3,39 +3,39 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
       rolemaps-to="Part"
      >
     <Title xmlns="http://iso.org/pdf2/ssn"
        id="ID.007"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Center"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>ctex tagging test
-     </text>
+     </text-block>
     </Title>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.009"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?> Some author
-    </text>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    </text-block>
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.010"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>2016 年 5 月 20 日
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.011"
      >
@@ -144,39 +144,40 @@
          >
         <?MarkedContent page="1" ?>Some subparagraph
        </subparagraph>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.031"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.032"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="1" ?>Body text
-        </text>
-       </text-unit>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        </text-block>
+       </semantic-para>
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.033"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.034"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="1" ?>C
-         <Span xmlns="http://iso.org/pdf2/ssn"
+         <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.035"
             actualtext="TeX"
+            rolemaps-to="Span"
            >
           <?MarkedContent page="1" ?>T
           <?MarkedContent page="1" ?>EX
-         </Span>
-        </text>
-       </text-unit>
+         </text-fragment>
+        </text-block>
+       </semantic-para>
       </Sect>
      </Sect>
     </Sect>

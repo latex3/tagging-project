@@ -8,11 +8,11 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.003"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.007"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.008"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
@@ -20,8 +20,8 @@
       >
      <?MarkedContent page="1" ?>Some text 
      <?MarkedContent page="1" ?>Some more text
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
    <figures xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
       rolemaps-to="Sect"
@@ -38,28 +38,28 @@
         >
        <?MarkedContent page="1" ?>Figure 1: 
       </Lbl>
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.014"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Some caption
-      </text>
+      </text-block>
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.011"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Some figure
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </float>
    </figures>
   </Document>
