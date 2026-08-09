@@ -44,9 +44,9 @@ in the CI system associated to this site.
 In  general one can use the command `texdoc <package-name>` on the command line to get documentation about a specific package. Instead of using `texdoc` on your machine you can also use the online version at [https://texdoc.org](https://texdoc.org/index.html).
 
 
-## Tagging of Heading Structures in LaTeX"
+## Tagging of Heading Structures in LaTeX
 
-A Focus of current acctivity is the tagging of heading structures for docuemnt sections.
+A focus of current activity is the tagging of heading structures for document sections.
 
 [Tagging of Heading Structures in LaTeX](heading-templates) shows current activity and provides
 online editable test files for various related packages.
