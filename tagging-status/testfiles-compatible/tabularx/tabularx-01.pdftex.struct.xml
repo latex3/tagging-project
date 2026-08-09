@@ -3,18 +3,18 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>
-    </text>
+    </text-block>
     <Table xmlns="http://iso.org/pdf2/ssn"
        id="ID.007"
       >
@@ -39,14 +39,14 @@
        <Div xmlns="http://iso.org/pdf2/ssn"
           id="ID.012"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.013"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="1" ?>FOURab␣c$#^
-        </text>
+        </text-block>
        </Div>
       </TD>
      </TR>
@@ -64,7 +64,7 @@
        <Div xmlns="http://iso.org/pdf2/ssn"
           id="ID.017"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.018"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Start"
@@ -78,17 +78,18 @@
            >
            <?References objects="1" ?>
           <?MarkedContent page="1" ?>
-          <Span xmlns="http://iso.org/pdf2/ssn"
+          <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.020"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextPosition="Sup"
+             rolemaps-to="Span"
             >
            <?MarkedContent page="1" ?>1
-          </Span>
+          </text-fragment>
           <?MarkedContent page="1" ?>
          </footnotemark>
          <?MarkedContent page="1" ?>
-        </text>
+        </text-block>
        </Div>
       </TD>
       <TD xmlns="http://iso.org/pdf2/ssn"
@@ -102,19 +103,19 @@
        <Div xmlns="http://iso.org/pdf2/ssn"
           id="ID.023"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.024"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Start"
            rolemaps-to="P"
           >
          <?MarkedContent page="1" ?>Column four willact in the sameway as columntwo, with thesame width.
-        </text>
+        </text-block>
        </Div>
       </TD>
      </TR>
     </Table>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.025"
        rolemaps-to="P"
       >
@@ -130,20 +131,21 @@
          rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>
-       <Span xmlns="http://iso.org/pdf2/ssn"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.030"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="1" ?>1
-       </Span>
+       </text-fragment>
        <?MarkedContent page="1" ?>
       </footnotelabel>
-      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.027"
          rolemaps-to="Part"
         >
-       <text xmlns="https://www.latex-project.org/ns/dflt"
+       <text-block xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.028"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
@@ -153,12 +155,12 @@
         <?MarkedContent page="1" ?>
         <?MarkedContent page="1" ?>You can now usefootnote insidetabularx!
         <?MarkedContent page="1" ?>
-       </text>
-      </text-unit>
+       </text-block>
+      </semantic-para>
      </footnote>
      <?MarkedContent page="1" ?>
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
   </Document>
  </StructTreeRoot>
 </PDF>

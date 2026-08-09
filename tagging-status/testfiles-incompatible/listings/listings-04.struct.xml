@@ -18,20 +18,21 @@
       <?MarkedContent page="1" ?>1 
      </section-number>
      <?MarkedContent page="1" ?>Inline 
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.009"
         actualtext="LaTeX"
         phoneme="[ˈlaːtɛx]"
+        rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>LATEX
-     </Span>
+     </text-fragment>
      <?MarkedContent page="1" ?> code
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.010"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.011"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
@@ -44,8 +45,8 @@
        <?MarkedContent page="1" ?>\lstinline
       </Code>
       <?MarkedContent page="1" ?> with the code wrapped in pipes.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
    </Sect>
   </Document>
  </StructTreeRoot>

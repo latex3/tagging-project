@@ -3,11 +3,11 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
@@ -17,8 +17,8 @@
      <?MarkedContent page="2" ?>authors’ names to appear in small caps in the index with a typewriter font used for the page numbers thusly.  And make the citation (Goossens et al., 1993, Chapter 5). You can then reset the format back to a more conventional setting. Using a format other than roman can be a good idea so that automatically generated index entries are distinguishible from manually generated ones. Note that if the authors’ names are indexed with more than one format as in this document (i.e., usually in roman but once in small caps) then multiple index entries will be generated.  If a citation is refered to over several paragraphs 
      <?MarkedContent page="3" ?>you may want to index the whole range of text. In this case you need to use three commands: one to generate the citation(Goossens et al., 1993); one to mark the begining of the text to be indexed and one to mark the end of the text to be indexed.  Then, if the indexed text runs over multiple pages, this will be 
      <?MarkedContent page="4" ?>reflected in the index entry. It is a good idea to reset the citation format before the bibliography is processed so that index entries for the bibliography can be easily distinguished for those for the rest of the document.
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.008"
      >
@@ -29,7 +29,7 @@
       >
      <?MarkedContent page="4" ?>References
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.010"
        rolemaps-to="Part"
       >
@@ -53,31 +53,32 @@
           id="ID.014"
           rolemaps-to="LBody"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.015"
            rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.016"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
           <?MarkedContent page="4" ?>Goossens, M., Mittelbach, F. and Samarin, A. (1993).  The 
-          <Span xmlns="http://iso.org/pdf2/ssn"
+          <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.017"
              actualtext="LaTeX"
              phoneme="[ˈlaːtɛx]"
+             rolemaps-to="Span"
             >
            <?MarkedContent page="4" ?>LATEX
-          </Span>
+          </text-fragment>
           <?MarkedContent page="4" ?> Companion, Addison-Wesley, Reading, Massachusetts.
-         </text>
-        </text-unit>
+         </text-block>
+        </semantic-para>
        </itembody>
       </item>
      </list>
-    </text-unit>
+    </semantic-para>
    </Sect>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.018"
@@ -89,19 +90,19 @@
       >
      <?MarkedContent page="5" ?>Author Index
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.020"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.021"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="5" ?>Goossens, M., 2
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
    </Sect>
   </Document>
  </StructTreeRoot>

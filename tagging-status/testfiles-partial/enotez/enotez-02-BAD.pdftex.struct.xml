@@ -3,21 +3,22 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>The next endnote
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.007"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextPosition="Sup"
+        rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>
       <Link xmlns="http://iso.org/pdf2/ssn"
@@ -27,7 +28,7 @@
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
       <?MarkedContent page="1" ?>
-     </Span>
+     </text-fragment>
      <?MarkedContent page="1" ?>has the number
      <Link xmlns="http://iso.org/pdf2/ssn"
         id="ID.009"
@@ -36,10 +37,11 @@
       <?ReferencedObject type="Annot" page="1" ?>
      </Link>
      <?MarkedContent page="1" ?>. Let’s now test
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextPosition="Sup"
+        rolemaps-to="Span"
        >
       <?MarkedContent page="1" ?>
       <Link xmlns="http://iso.org/pdf2/ssn"
@@ -56,10 +58,10 @@
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
       <?MarkedContent page="1" ?>
-     </Span>
+     </text-fragment>
      <?MarkedContent page="1" ?>.
-    </text>
-   </text-unit>
+    </text-block>
+   </semantic-para>
    <Sect xmlns="http://iso.org/pdf2/ssn"
       id="ID.013"
      >
@@ -70,19 +72,19 @@
       >
      <?MarkedContent page="1" ?>Notes
     </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.015"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.016"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>1. This endnote gets a label.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
    </Sect>
   </Document>
  </StructTreeRoot>
