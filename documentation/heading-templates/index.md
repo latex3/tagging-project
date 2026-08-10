@@ -106,7 +106,7 @@ To allow for such variations within a single template, the concept of
 augmented to offer a `\template_process_order_clist:nnn` command that
 takes an order key defined by the template and processes its comma
 list to typeset the items (and generate approriate tagging for them).
-You find the documentation in [latex-lab on
+You may find the documentation in [latex-lab on
 CTAN](https://ctan.org/tex-archive/macros/latex-dev/required/latex-lab)
 or on your LaTeX installation with `texdoc latex-lab-template`.
 
@@ -115,7 +115,7 @@ or on your LaTeX installation with `texdoc latex-lab-template`.
 > update.
 
 The test file below defines a small template (that is not doing much)
-but let's you experiment with the mechanism and its results.
+but lets you experiment with the mechanism and its results.
 
 
 ```latex
