@@ -95,15 +95,15 @@ heading packages has been undertaken.
 ### Implement generic order key handling
 
 In layouts for headings, captions, etc. the placement of individual
-data items, such as fixed strings (like "Chapter"), a generated
-number, the title, a sub-title, some punctuation, etc. needs a
-flexible solution in templates to avoid the need for different
-templates just because, the order of title and number got swapped, or
-similar minor difference.
+data items (such as fixed strings like "Chapter", a generated number,
+the title, an optional sub-title, some punctuation, etc.) needs a
+flexible solution in templates. This avoids the need for different
+templates just because the order of title and number got swapped or
+because of similar minor differences.
 
 To allow for such variations within a single template, the concept of
 "order" keys has been developed. The template support code was
-augmented to offer a `\template_process_order_clist:nnn` command, that
+augmented to offer a `\template_process_order_clist:nnn` command that
 takes an order key defined by the template and processes its comma
 list to typeset the items (and generate approriate tagging for them).
 You find the documentation in [latex-lab on
