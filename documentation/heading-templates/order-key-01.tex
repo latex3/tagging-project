@@ -193,8 +193,15 @@
 
 \begin{document}
 
+\title{Testing order keys}
+\author{Frank Mittelbach, \LaTeX{} Project}
+\maketitle
+
+% A bit of tracing (\checkstatus needs to be disabled because it currently
+% does a \show which signals to to online server that the run has an error):
+
 \DebugTemplatesOn
-\scrollmode         % because of the debugging
+\renewcommand\checkstatus[1]{\typeout{----- #1 ------}}
 
 \head{default}
      {Title}[default result] 
