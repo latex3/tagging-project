@@ -19,7 +19,7 @@ function generatepreamble(t,e) {return e.getValue();}
 	  "metadata":         ""
       }
 
-runlatex.editorlines=45;
+runlatex.editorlines=20;
 
 </script>
 
@@ -91,6 +91,38 @@ heading packages has been undertaken.
 ```latex
 {% include_relative article-01.tex %}
 ```
+
+### Implement generic order key handling
+
+In layouts for headings, captions, etc. the placement of individual
+data items (such as fixed strings like "Chapter", a generated number,
+the title, an optional sub-title, some punctuation, etc.) needs a
+flexible solution in templates. This avoids the need for different
+templates just because the order of title and number got swapped or
+because of similar minor differences.
+
+To allow for such variations within a single template, the concept of
+"order" keys has been developed. The template support code was
+augmented to offer a `\template_process_order_clist:nnn` command that
+takes an order key defined by the template and processes its comma
+list to typeset the items (and generate approriate tagging for them).
+You may find the documentation in [latex-lab on
+CTAN](https://ctan.org/tex-archive/macros/latex-dev/required/latex-lab)
+or on your LaTeX installation with `texdoc latex-lab-template`.
+
+> At the moment only the .dtx file was added to the last dev release
+> but not the .pdf documentation. That will happen with the next
+> update.
+
+The test file below defines a small template (that is not doing much)
+but lets you experiment with the mechanism and its results.
+
+
+```latex
+{% include_relative order-key-01.tex %}
+```
+
+
 
 
 ## Package Reimplementations/adjustments

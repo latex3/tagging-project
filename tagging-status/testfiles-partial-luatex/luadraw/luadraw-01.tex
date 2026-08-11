@@ -1,0 +1,32 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{luadraw}
+
+\title{luadraw tagging test}
+
+\begin{document}
+
+Some text
+\begin{luadraw}{name=delaunay}
+local ld = luadraw
+local g = ld.graph:new{bbox=false, pictureoptions="scale=2,alt=Delaunay Triangulation"}
+local i = ld.cpx.I; g:Linewidth(6)
+local L = {0.285+1.46*i,1.556-0.142*i,2.344+1.313*i,-2.38+1.218*i,1.548-0.624*i,
+0.969+1.819*i, -0.086-2.191*i,-0.477+1.834*i,-0.904+1.322*i,-2.892+0.025*i}
+local T = ld.delaunay(L) -- list of triangles
+local n = #T
+local num = 7 --we choose a triangle
+local colors = ld.getpalette(ld.palGasFlame,n)
+for k = 1, n do
+g:Dpolyline(T[k],true,'fill='..colors[k])
+end
+g:Ddots(L)
+g:Dcircle( {ld.circumcircle(T[num])}, "line width=0.4pt,gray,dashed" )
+g:Ddots(T[num],"gray")
+g:Show()
+\end{luadraw}
+
+Some more text
+
+\end{document}

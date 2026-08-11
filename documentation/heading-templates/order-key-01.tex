@@ -1,0 +1,249 @@
+%{% raw %}
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+
+% not doing math
+  
+\tagpdfsetup {math/mathml/luamml/load=false}
+
+% next dev release will have this autoinstalled when tagging=on is used
+% at the moment we still have to manually load it
+
+
+\RequirePackage{latex-lab-testphase-template}
+  
+\documentclass{article}
+
+
+%
+%  Define and implement a simple template that takes 3 arguments:
+%   #1  key/value list for overwriting instance parameter settings
+%   #2  a title
+%   #3  a note
+%
+%  Internally it generates a number (or rather it has one hardwired in as this is
+%  only for testing purposes.
+
+
+% ---------------------------- define a template for testing ---------------------
+
+\ExplSyntaxOn
+
+\NewTemplateType{threeargs}{3}
+
+\DeclareTemplateInterface{threeargs}{trial}{3}{
+%
+%  In the order key it supports ordering of prefix,number,title,punct,note and
+%  3 customizable separators. The default makes use of all of them, but as prefix
+%  is \NoValue and separator-1 is empty nothing is typeset for them
+%
+  ,order       : commalist = {prefix,separator-1,number,separator-2,title,
+                              punct,separator-3,note}
+  ,prefix      : tokenlist = \NoValue
+  ,number      : tokenlist = 4711
+  ,punct       : tokenlist = .
+  ,separator-1 : tokenlist = 
+  ,separator-2 : tokenlist = \
+  ,separator-3 : tokenlist = \quad
+%
+% title and note have no keys because they are part of the arguments.
+%
+% Declarations (like font setting) that can be used:
+%
+  ,heading-decls: tokenlist = 
+%
+  ,prefix-decls : tokenlist = 
+  ,number-decls : tokenlist = 
+  ,punct-decls  : tokenlist =
+  ,note-decls   : tokenlist = 
+  ,title-decls  : tokenlist =
+%
+%
+% Alternatively, or in addition, formatting commands can be used.
+% The punct-format ensures that a punctuation is only added if there isn't one
+% already at this point.
+% The one for note adds (...) by default.
+%
+  ,prefix-format : function{1} = #1
+  ,number-format : function{1} = #1
+  ,punct-format  : function{1} = \AddPunctuation{#1}  % to be renamed to \AddPunct in next dev release
+  ,note-format   : function{1} = (#1)
+  ,title-format  : function{1} = #1
+%  
+%  This is for surounding the number with a Lbl structure for tagging (see documentation).
+%  
+  ,number-tag  : tokenlist = Lbl
+}
+
+\DeclareTemplateCode{threeargs}{trial}{3}{
+%  
+%  Key bindings have to have standard names to work with order process, the conventions
+%  are straight forward (see documentation).
+%  
+  ,order       = \l__trial_order_clist
+  ,prefix      = \l__trial_prefix_tl
+  ,number      = \l__trial_number_tl
+  ,punct       = \l__trial_punct_tl
+  ,separator-1 = name {l__trial_separator-1_tl} % special because of - in name
+  ,separator-2 = name {l__trial_separator-2_tl}
+  ,separator-3 = name {l__trial_separator-3_tl}
+%
+  ,heading-decls = \l__trial_heading_decls_tl
+%
+  ,prefix-decls  = \l__trial_prefix_decls_tl
+  ,number-decls  = \l__trial_number_decls_tl
+  ,punct-decls   = \l__trial_punct_decls_tl
+  ,title-decls   = \l__trial_title_decls_tl
+  ,note-decls    = \l__trial_note_decls_tl
+%
+  ,prefix-format = \__trial_prefix_format:n
+  ,number-format = \__trial_number_format:n
+  ,punct-format  = \__trial_punct_format:n
+  ,title-format  = \__trial_title_format:n
+  ,note-format   = \__trial_note_format:n
+%
+  ,number-tag  = \l__trial_number_tag_tl
+}
+{
+%  This now implementes the template.
+%
+%  Process the key/value list is any and overwrite settings:
+%  
+  \SetKnownTemplateKeys{threeargs}{trial}{#1}
+%  
+% Set the missing variables for title and note from the mandatory arguments
+% of the template: 
+%  
+  \tl_set:Nn \l__trial_title_tl {#2}  % save title arg
+  \tl_set:Nn \l__trial_note_tl  {#3}  % save note arg
+%  
+%  Then typeset the whole thing as a simple paragraph, with order
+%  key processing in the middle.
+%  
+  \par \noindent
+  %
+  \group_begin:
+    \l__trial_heading_decls_tl
+    \template_process_order_clist:nnn
+     { trial }{ order }
+     { note, number, prefix, punct, separator-1, separator-2, separator-3, title }
+  %
+    \par
+  \group_end:
+  \bigskip
+  \hrule
+  \bigskip
+}
+
+
+% ---------------------------- define a few instances  ---------------------
+
+
+
+\DeclareInstance{threeargs}{default}{trial}{
+  % no parameter settings, just use what the template has a defaults
+}
+
+
+\DeclareInstance{threeargs}{section}{trial}{
+    prefix        = §
+   ,separator-1   =       % no space
+   ,heading-decls = \large\bfseries
+   ,title-decls   = \scshape
+   ,note-decls    = \mdseries\normalshape
+}
+
+\DeclareInstance{threeargs}{chapter}{trial}{
+    prefix        = Chapter
+   ,separator-1   = \ \rule[-10pt]{2pt}{50pt}\
+   ,separator-2   = \\[10pt]
+   ,order         = {number,separator-1,prefix,separator-2,title,punct} % no note
+   ,heading-decls = \Large\bfseries
+   ,title-decls   = \Huge\mdseries\scshape
+}
+
+
+% -------- define a simple command to use one of the instances  ---------------------
+
+%
+% Arguments are
+%   #1  instance name
+%   #1  key/value list with parameters (optional)
+%   #3  title
+%   #4  note (optional
+
+
+\NewDocumentCommand\head{m O{} m o }
+{ \UseInstance{threeargs}
+              {#1}            % instance name
+              {#2}{#3}{#4}    % template arguments
+}
+
+
+\newcommand\mynotes[1]{\par\noindent\texttt{\itshape #1}\par\medskip}
+
+\ExplSyntaxOff
+
+
+
+\begin{document}
+
+\title{Testing order keys}
+\author{Frank Mittelbach, \LaTeX{} Project}
+\maketitle
+
+% A bit of tracing (\checkstatus needs to be disabled because it currently
+% does a \show which signals to to online server that the run has an error):
+
+\DebugTemplatesOn
+\renewcommand\checkstatus[1]{\typeout{----- #1 ------}}
+
+\head{default}
+     {Title}[default result] 
+
+\head{default}
+     {Title ending in punctuation!}[no period added] 
+
+
+\mynotes{Use the optional argument for parameter changes:}
+     
+\head{default}
+     [prefix=Chapter,separator-1=\ ,title-decls=\itshape]
+     {Title}[prefix added]
+
+
+\mynotes{Use section template instead:}
+     
+\head{section}
+     {Title}[default result] 
+
+\head{section}
+     {Title ending in punctuation!}[no period added] 
+
+
+\head{section}
+     [prefix=Chapter,separator-1=\ ,title-decls=\itshape]
+     {Title}[prefix added]
+
+
+\head{default}
+    [order={title,separator-2,number,separator-3,note}]
+    {Title and number swapped}[and punctuation always dropped] 
+
+
+\mynotes{Use (strange) chapter template instead:}
+     
+\head{chapter}
+     {Title}[default result] 
+
+\head{chapter}
+     {Title ending in punctuation!}[no period added] 
+
+
+\end{document}
+%{% endraw %}
