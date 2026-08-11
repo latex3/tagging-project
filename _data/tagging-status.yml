@@ -8647,11 +8647,11 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  issues: [1084]
+  issues: [1084,1516]
   package-repository: "https://github.com/bdtc/lwarp"
   tests: true
   comments: "Package errors if `\\DocumentMetadata` detected."
-  updated: 2026-01-26
+  updated: 2026-08-08
 
 - name: lxfonts
   type: package
@@ -15798,11 +15798,12 @@
   included-in: [tlc3, arxiv1, ol1]
   priority: 5
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
-             No luamml support. Requires luatex85 with luatex.
+             No luamml support. Requires luatex85 with luatex and output is wrong.
              unicode-math must be loaded after xy."
-  issues: [899,1275]
+  issues: [899]
+  closed-issues: [1275]
   tests: true
-  updated: 2025-06-09
+  updated: 2026-08-08
 
 #------------------------ YYY ----------------------------
 
@@ -15966,8 +15967,7 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  comments: "Issues with sibling counters unrelated to tagging."
-  updated: 2026-06-14
+  updated: 2026-08-08
 
 - name: zref-counter
   ctan-pkg: zref
