@@ -139,7 +139,7 @@ in the order processing implementation where such variables are
 constructed from key names that may contain such characters.
 
 As an example testing the implementation for the new keyword look at
-the test in section [1a](#1a-Implement-generic-order-key-handling)
+the test in section [1a](#1a-implement-generic-order-key-handling)
 which makes use of the functionality in 3 places.
 
 
