@@ -3873,13 +3873,13 @@
 
 - name: cutwin
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/cutwin"
   included-in: [arxiv001]
   priority: 7
   issues: [561]
   tests: true
-  updated: 2024-08-14
+  updated: 2026-08-11
 
 - name: cwpuzzle
   ctan-pkg: crossword
@@ -4268,7 +4268,8 @@
   priority: 9
   issues: [873]
   tests: true
-  updated: 2025-06-04
+  comments: "Package is not compatible with the current LaTeX output routine."
+  updated: 2026-08-11
 
 - name: draftwatermark
   type: package
@@ -4676,7 +4677,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61,1301,1441]
+  issues: [61,1301,1441,1518]
   closed-issues: [4]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
@@ -10012,11 +10013,11 @@
 
 - name: niceframe
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   issues: [220]
   tests: true
-  updated: 2024-07-23
+  updated: 2026-08-11
 
 - name: nicematrix
   type: package
@@ -12029,12 +12030,12 @@
 
 - name: quoting
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [507]
   tests: true
-  updated: 2024-08-06
+  updated: 2026-08-11
 
 #------------------------ RRR ----------------------------
 
@@ -15152,13 +15153,12 @@
   status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  comments: "firstaid is required for the fix of issue 49. `\\poemtitle` errors.
-             `\\flagverse` and line numbers not tagged ideally."
-  issues: [1468,1469]
-  closed-issues: [49]
+  comments: "`\\flagverse` and line numbers not tagged ideally."
+  issues: [1469]
+  closed-issues: [49,1468]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2026-07-01
+  updated: 2026-08-10
 
 - name: version
   type: package

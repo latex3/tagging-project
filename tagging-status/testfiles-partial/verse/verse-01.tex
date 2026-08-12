@@ -1,0 +1,51 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{verse}
+
+\title{verse tagging test}
+
+\newcommand{\garden}{
+I used to love my garden \\
+But now my love is dead \\
+For I found a bachelor's button \\
+In black-eyed Susan's bed.
+}
+
+\begin{document}
+
+\tableofcontents
+
+\renewcommand{\poemtoc}{subsection}
+\poemtitle[Something beside ``A Limerick'' in the ToC]{A Limerick}
+\settowidth{\versewidth}{There was an old party of Lyme}
+\begin{verse}[\versewidth]
+There was an old party of Lyme \\
+Who married three wives at one time. \\
+\vin When asked: `Why the third?' \\
+\vin He replied: `One's absurd, \\
+And bigamy, sir, is a crime.' \\
+\end{verse}
+
+\settowidth{\versewidth}{But now my love is dead}
+\poemtitle{Love's lost}
+\begin{verse}[\versewidth]
+\begin{altverse}
+\garden
+\end{altverse}
+\end{verse}
+
+\poemtitle*{Yet another love's lost}
+\begin{verse}[\versewidth]
+\begin{altverse}
+\garden
+\end{altverse}
+\end{verse}
+
+\end{document}

@@ -19,7 +19,7 @@ function generatepreamble(t,e) {return e.getValue();}
 	  "metadata":         ""
       }
 
-runlatex.editorlines=45;
+runlatex.editorlines=20;
 
 </script>
 
