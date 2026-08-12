@@ -82,7 +82,7 @@ is funded through [NGI0 Commons Fund](https://nlnet.nl/commonsfund), a fund esta
 </div>
 
 
-## Generic Heading Template Implementation
+## 1. Generic Heading Template Implementation
 
 The standard `article` class will already use the heading templates as shown in the example below.
 This is included here to demonstrate this test infrastructure, before the emulation of the
@@ -92,7 +92,7 @@ heading packages has been undertaken.
 {% include_relative article-01.tex %}
 ```
 
-### Implement generic order key handling
+### 1a. Implement generic order key handling
 
 In layouts for headings, captions, etc. the placement of individual
 data items (such as fixed strings like "Chapter", a generated number,
@@ -123,10 +123,30 @@ but lets you experiment with the mechanism and its results.
 ```
 
 
+### 1e. Extend key binding setup
+
+In some templates the variable names in the key binds need to contain
+characters normally not directly usable, e.g., a number or a
+hyphen. To support this the template declaration syntax was extended
+with the keyword `name` so that one can write
+```
+ separator-1 = name {l__trial_separator-1_tl}
+```
+which generates `\__trial_separator-1_tl` a macro name that can't be
+written directly because of the number and the hyphen, both of which
+are normally not allowed in macro names. This is, for example, needed
+in the order processing implementation where such variables are
+constructed from key names that may contain such characters.
+
+As an example testing the implementation for the new keyword look at
+the test in section 1a which makes use of the functionality in 3
+places.
 
 
-## Package Reimplementations/adjustments
 
+
+
+## 2. Package Reimplementations/adjustments
 
 
 ### titlesec
@@ -155,8 +175,8 @@ interface producing accessible PDF outputs.
 ### tocloft
 
 
-## KOMA-Script Classes
+## 3. KOMA-Script Classes
 
 
-## memoir      
+## 4. memoir Class     
 
