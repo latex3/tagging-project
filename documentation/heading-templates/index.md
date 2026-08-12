@@ -27,13 +27,13 @@ runlatex.editorlines=20;
 
 <div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
-  [Generic headings](#generic-heading-template-implementation)
+  [Generic headings](#1-generic-heading-template-implementation)
 
-  [Packages](#package-reimplementationsadjustments)
+  [Packages](#2-package-reimplementationsadjustments)
 
-  [KOMA](#koma-script-classes)
+  [KOMA](#3-koma-script-classes)
 
-  [Memoir](#memoir)
+  [Memoir](#4-memoir)
 
 </div>
 
@@ -139,8 +139,8 @@ in the order processing implementation where such variables are
 constructed from key names that may contain such characters.
 
 As an example testing the implementation for the new keyword look at
-the test in section 1a which makes use of the functionality in 3
-places.
+the test in section [1a](#1a-Implement-generic-order-key-handling)
+which makes use of the functionality in 3 places.
 
 
 
