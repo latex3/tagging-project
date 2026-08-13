@@ -177,8 +177,9 @@ interface producing accessible PDF outputs.
 ### 2h. The `tocloft` package
 
 The [tocloft](https://ctan.org/pkg/tocloft) package is currently
-incompatible with the LaTeX tagging code, and this example
-demonstrates that no PDF is generated and just the error log is shown.
+incompatible with the LaTeX tagging code and this example demonstrates
+one of the issues with it: the doc data is incomplete and not
+correctly tagged.
 
 
 ```latex
