@@ -149,7 +149,7 @@ which makes use of the functionality in 3 places.
 ## 2. Package Reimplementations/adjustments
 
 
-### titlesec
+### 2a-2e. titlesec
 
 The [titlesec](https://ctan.org/pkg/titlesec) package is currently
 incompatible with the LaTeX tagging code, and this example
@@ -167,12 +167,23 @@ interface producing accessible PDF outputs.
 
 
 
-### fncychap
-
-### quotechap
+### 2f. The `fncychap` package
 
 
-### tocloft
+### 2g. The `quotechap`package
+
+
+
+### 2h. The `tocloft` package
+
+The [tocloft](https://ctan.org/pkg/tocloft) package is currently
+incompatible with the LaTeX tagging code, and this example
+demonstrates that no PDF is generated and just the error log is shown.
+
+
+```latex
+{% include_relative tocloft-01.tex %}
+```
 
 
 ## 3. KOMA-Script Classes
