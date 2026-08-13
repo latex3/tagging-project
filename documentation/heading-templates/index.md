@@ -33,7 +33,7 @@ runlatex.editorlines=20;
 
   [KOMA](#3-koma-script-classes)
 
-  [Memoir](#4-memoir)
+  [Memoir](#4-memoir-class)
 
 </div>
 
