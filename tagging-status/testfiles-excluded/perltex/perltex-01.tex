@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{perltex}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+
+\title{perltex tagging test}
+
+\begin{document}
+\perlnewcommand{\hilbertmatrix}[1]{
+  my $result = '
+\[
+\renewcommand{\arraystretch}{1.3}
+';
+  $result .= '\begin{array}{' . 'c' x $_[0] . "}\n";
+  foreach $j (0 .. $_[0]-1) {
+    my @row;
+    foreach $i (0 .. $_[0]-1) {
+      push @row, ($i+$j) ? (sprintf '\frac{1}{%d}', $i+$j+1) : '1';
+    }
+    $result .= join (' & ', @row) . " \\\\\n";
+  }
+  $result .= '\end{array}
+\]';
+  return $result;
+}
+
+\hilbertmatrix{20}
+
+\perlnewcommand{\substr}[3]{substr $_[0], $_[1], $_[2]}
+
+\newcommand{\str}{superlative}
+A sample substring of ``\str'' is ``\substr{\str}{2}{4}''.
+
+\end{document}

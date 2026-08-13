@@ -1,0 +1,28 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{program}
+
+\title{program tagging test}
+
+\begin{document}
+
+\begin{program}
+t := \set{x | \displaystyle\frac{x}{y} = z};
+t := t \setminus u;
+z := a \tab {} + b + c + d
+	    {} + e + f + g
+	    {} + h + i + j; \untab
+\IF x = 0 \THEN y :=0 \FI
+\end{program}
+
+\end{document}

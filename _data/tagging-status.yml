@@ -3873,13 +3873,13 @@
 
 - name: cutwin
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/cutwin"
   included-in: [arxiv001]
   priority: 7
   issues: [561]
   tests: true
-  updated: 2024-08-14
+  updated: 2026-08-11
 
 - name: cwpuzzle
   ctan-pkg: crossword
@@ -4268,7 +4268,8 @@
   priority: 9
   issues: [873]
   tests: true
-  updated: 2025-06-04
+  comments: "Package is not compatible with the current LaTeX output routine."
+  updated: 2026-08-11
 
 - name: draftwatermark
   type: package
@@ -10012,11 +10013,11 @@
 
 - name: niceframe
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   issues: [220]
   tests: true
-  updated: 2024-07-23
+  updated: 2026-08-11
 
 - name: nicematrix
   type: package
@@ -10811,19 +10812,19 @@
   type: package
   status: currently-incompatible
   priority: 9
-  tests: false
+  tests: true
   comments: "See parallel package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2026-07-04
+  updated: 2026-08-12
 
 - name: pdfcolparcolumns
   type: package
   status: currently-incompatible
   priority: 9
-  tests: false
+  tests: true
   comments: "See parcolumns package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2026-07-04
+  updated: 2026-08-12
 
 - name: pdfcomment
   type: package
@@ -10931,11 +10932,10 @@
 
 - name: perltex
   type: package
-  status: unchecked
+  status: compatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: excluded
+  updated: 2026-08-12
 
 - name: perpage
   type: package
@@ -11484,31 +11484,31 @@
 
 - name: program
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1524]
+  updated: 2026-08-12
 
 - name: progressbar
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No way to pass alt text to underlying tikzpicture."
+  updated: 2026-08-12
 
 - name: proof
   ctan-pkg: lkproof
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-08-12
 
 - name: prooftrees
   type: package
@@ -11539,12 +11539,12 @@
 
 - name: pseudocode
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1525]
+  updated: 2026-08-12
 
 - name: psfrag
   type: package
@@ -11967,12 +11967,12 @@
 
 - name: qcircuit
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "See xy package."
+  updated: 2026-08-12
 
 - name: qrcode
   type: package
@@ -11985,21 +11985,21 @@
 
 - name: qtree
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1526]
+  updated: 2026-08-12
 
 - name: quantikz
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "See tikz-cd."
+  updated: 2026-08-12
 
 - name: quattrocento
   type: package
@@ -12029,12 +12029,12 @@
 
 - name: quoting
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [507]
   tests: true
-  updated: 2024-08-06
+  updated: 2026-08-11
 
 #------------------------ RRR ----------------------------
 
@@ -12490,12 +12490,12 @@
 
 - name: schemata
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Schema are tagged as math but there is no luamml support."
+  updated: 2026-08-12
 
 - name: schola-otf
   type: package
