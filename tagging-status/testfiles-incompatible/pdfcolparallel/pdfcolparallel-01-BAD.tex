@@ -1,0 +1,22 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage{pdfcolparallel}
+
+\title{pdfcolparallel tagging test}
+
+\begin{document}
+text % this produces parent-child warnings
+\begin{Parallel}{5cm}{5cm}  
+\ParallelLText{Jisu thakddunsi pulo, \textcolor{red}{``Philip, ne lapu-an arni keding nangtum along nangkedodun anta nangtum nephan nechininelangma? Nephan nekethek-long abang ke Po aphanta thek-long-lo. Tangte nang kopisi, `Netum aphan Po nepaklangtha,' pu kepulangma?}}
+\ParallelRText{Jesus said to him, \textcolor{red}{``Have I been with you all this time, Philip, and you still do not know me? Whoever has seen me has seen the Father. How can you say, `Show us the Father'?}}
+\ParallelPar
+\end{Parallel}
+\end{document}
