@@ -8,18 +8,13 @@
 \documentclass{article}
 
 \usepackage{tcolorbox}
-\tagpdfsetup{role/user-NS=tcolorbox}% stable User NS
+\tcbuselibrary{most}
 
-\title{tcolorbox tagging test}
+\title{tcolorbox tagging test -- 5}
 
 \begin{document}
-
-\begin{tcolorbox}
-Some text
+\begin{tcolorbox}[enhanced,title=My title,
+attach boxed title to top left]
+This is a \textbf{tcolorbox}.
 \end{tcolorbox}
-
-\begin{tcolorbox}[title=A title]
-A tcolorbox with a title.
-\end{tcolorbox}
-
 \end{document}

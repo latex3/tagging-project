@@ -6,20 +6,23 @@
     tagging=on,
   }
 \documentclass{article}
-
 \usepackage{tcolorbox}
-\tagpdfsetup{role/user-NS=tcolorbox}% stable User NS
+\tcbuselibrary{most}
 
-\title{tcolorbox tagging test}
+\title{tcolorbox tagging test -- 2}
 
 \begin{document}
 
-\begin{tcolorbox}
-Some text
+before text
+\begin{tcolorbox}[]
+box text
 \end{tcolorbox}
+after text
 
-\begin{tcolorbox}[title=A title]
-A tcolorbox with a title.
+before text
+\begin{tcolorbox}[capture=hbox]
+box text
 \end{tcolorbox}
+after text
 
 \end{document}
