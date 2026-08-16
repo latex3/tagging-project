@@ -8424,6 +8424,7 @@
   subpackages: [luamml-patches-amsmath,luamml-patches-kernel,luamml-pdf]
   tests: false
   luatex-only: true
+  issues: [1528]
   comments: "Should not need to be loaded directly. Loaded with `tagging=on`
              when luatex is detected."
   updated: 2026-01-30
@@ -10850,7 +10851,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [1356]
+  closed-issues: [1356]
   package-repository: "https://github.com/LaTeX-Package-Repositories/pdflscape"
   tests: true
   updated: 2024-08-04
@@ -15800,7 +15801,8 @@
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
              No luamml support. Requires luatex85 with luatex.
              unicode-math must be loaded after xy."
-  issues: [899,1275]
+  issues: [899]
+  closed-issues: [1275]
   tests: true
   updated: 2025-06-09
 
