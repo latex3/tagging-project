@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+\title{tcolorbox tagging test -- 7}
+
+\begin{document}
+
+\begin{tcbposter}[poster={height=10cm,spacing=2mm}]
+\posterbox{name=A,column=3,row=2}{My first box}
+\posterbox{name=B,column=2,span=2,below=A}{My second box}
+\posterbox{name=C,column=2,between=B and bottom}{My third box}
+\end{tcbposter}
+
+\end{document}
