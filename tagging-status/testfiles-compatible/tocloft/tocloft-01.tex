@@ -1,0 +1,48 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\usepackage{tocloft}
+\usepackage{hyperref}
+
+\newcommand{\listanswername}{List of Answers}
+\newlistof[section]{answer}{ans}{\listanswername}
+
+\newcommand{\answer}[1]{%
+\refstepcounter{answer}
+\par\noindent\textbf{Answer \theanswer. #1}
+\addcontentsline{ans}{answer}{\protect\numberline{\theanswer}#1}\par}
+
+\newlistentry[answer]{subanswer}{ans}{1}
+\cftsetindents{subanswer}{1.5em}{3.0em}
+\renewcommand{\thesubanswer}{\theanswer.\alph{subanswer}}
+\newcommand{\subanswer}[1]{%
+\refstepcounter{subanswer}%
+\par\textbf{\thesubanswer) #1}%
+\addcontentsline{ans}{subanswer}{\protect\numberline{\thesubanswer}#1}}%
+\setcounter{ansdepth}{2}%
+
+\begin{document}
+
+text
+
+\listofanswer
+
+\answer{Some answer}
+text
+\answer{Another answer}
+more text
+
+\tableofcontents
+
+\section{blub}
+
+\answer{Harder} The \ldots
+\subanswer{Reformulate the problem} It assists \ldots
+
+\end{document}

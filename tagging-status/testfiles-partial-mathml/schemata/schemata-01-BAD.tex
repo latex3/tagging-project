@@ -1,0 +1,77 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{schemata}
+
+\title{schemata tagging test}
+
+\begin{document}
+
+Some text has \schemabox{line 1\\ line 2}.
+
+ \schema
+   {\schemabox{A}}
+   {\schemabox{B\\C}}
+
+ \DoBrackets
+ \schema
+   {\schemabox{A}}
+   {\NudgeSB[left]\schemabox{B\\C}}
+
+ \DoParens
+ \schema[close]
+   {\NudgeSB\schemabox{A\\B}}
+   {\schemabox{C}}
+
+ \DoGroups
+ \Schema{0ex}{3ex}
+   {\smallskip\schemabox{A}}
+   {\Schema[close]{0ex}{3ex}
+     {\NudgeSB\schemabox{B\\C}}
+     {\smallskip\schemabox{D}}
+ }
+ 
+  \schema
+  {
+    \schemabox{Subjectum theo-\\
+      logi\ae{} est Notitia\\
+      Dei. Considerat\\
+      ergo, Dei, vel}
+  }
+  {
+    \schema
+    {
+      \schemabox{\textsc{Essentiam},}
+    }
+    {
+      \schemabox{Unitate natur\ae{}.\\
+      Trinitate personarum.\\
+      Operibus ad intra.}
+    }
+    \schema
+    {
+      \schemabox{\textsc{Voluntatem},\\
+      manifestatam in\\
+      operibus ad extra;\\
+      ut in}
+    }
+    {
+      \schemabox{Creatione.\\
+      Sustentatione natur\ae{} laps\ae{}.\\
+      Reparatione.\\
+      Conversione.\\
+      Justificatione.\\
+      Sanctificatione \&\\
+      Glorificatione ejusdem.}
+    }
+  }
+\end{document}

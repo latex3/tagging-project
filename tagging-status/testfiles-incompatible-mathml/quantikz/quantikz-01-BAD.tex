@@ -1,0 +1,34 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{quantikz}
+
+\title{quantikz tagging test}
+
+\begin{document}
+
+\begin{quantikz}
+& \ctrl{1} & \targ{} & \swap{1} & \ctrl[vertical
+wire=c]{2} &&\\
+& \control{} & \ctrl[open]{-1} & \targX{} && \gate{X} &\\
+&&&& \gate{U} & \meter{} \wire[u][1]{c}
+\end{quantikz}
+
+\[
+\begin{quantikz}
+& \ctrl{2} & \gate{U} & \\
+& \targ{} & \ctrl{1}\wire[u]{q} & \\
+& \targ{} & \gate{V} &
+\end{quantikz}
+\]
+
+\end{document}

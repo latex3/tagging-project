@@ -3873,13 +3873,13 @@
 
 - name: cutwin
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/cutwin"
   included-in: [arxiv001]
   priority: 7
   issues: [561]
   tests: true
-  updated: 2024-08-14
+  updated: 2026-08-11
 
 - name: cwpuzzle
   ctan-pkg: crossword
@@ -4268,7 +4268,8 @@
   priority: 9
   issues: [873]
   tests: true
-  updated: 2025-06-04
+  comments: "Package is not compatible with the current LaTeX output routine."
+  updated: 2026-08-11
 
 - name: draftwatermark
   type: package
@@ -4676,7 +4677,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61,1301,1441]
+  issues: [61,1301,1441,1518]
   closed-issues: [4]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
@@ -7667,6 +7668,7 @@
 
 - name: lastpage
   type: package
+  subpackages: [lastpage2e,lastpage209,lastpageclassic,lastpagemodern]
   status: compatible
   included-in: [tlc3, arxiv1, ol5]
   priority: 8
@@ -8422,6 +8424,7 @@
   subpackages: [luamml-patches-amsmath,luamml-patches-kernel,luamml-pdf]
   tests: false
   luatex-only: true
+  issues: [1528]
   comments: "Should not need to be loaded directly. Loaded with `tagging=on`
              when luatex is detected."
   updated: 2026-01-30
@@ -10012,11 +10015,11 @@
 
 - name: niceframe
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   issues: [220]
   tests: true
-  updated: 2024-07-23
+  updated: 2026-08-11
 
 - name: nicematrix
   type: package
@@ -10811,19 +10814,19 @@
   type: package
   status: currently-incompatible
   priority: 9
-  tests: false
+  tests: true
   comments: "See parallel package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2026-07-04
+  updated: 2026-08-12
 
 - name: pdfcolparcolumns
   type: package
   status: currently-incompatible
   priority: 9
-  tests: false
+  tests: true
   comments: "See parcolumns package."
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2026-07-04
+  updated: 2026-08-12
 
 - name: pdfcomment
   type: package
@@ -10848,7 +10851,7 @@
   status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [1356]
+  closed-issues: [1356]
   package-repository: "https://github.com/LaTeX-Package-Repositories/pdflscape"
   tests: true
   updated: 2024-08-04
@@ -10931,11 +10934,10 @@
 
 - name: perltex
   type: package
-  status: unchecked
+  status: compatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: excluded
+  updated: 2026-08-12
 
 - name: perpage
   type: package
@@ -11311,6 +11313,14 @@
   tests: true
   updated: 2024-07-26
 
+- name: pl46-fonts
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  luatex-only: true
+  updated: 2026-08-19
+
 - name: placeins
   type: package
   status: compatible
@@ -11484,31 +11494,31 @@
 
 - name: program
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1524]
+  updated: 2026-08-12
 
 - name: progressbar
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No way to pass alt text to underlying tikzpicture."
+  updated: 2026-08-12
 
 - name: proof
   ctan-pkg: lkproof
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-08-12
 
 - name: prooftrees
   type: package
@@ -11539,12 +11549,12 @@
 
 - name: pseudocode
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1525]
+  updated: 2026-08-12
 
 - name: psfrag
   type: package
@@ -11967,12 +11977,12 @@
 
 - name: qcircuit
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "See xy package."
+  updated: 2026-08-12
 
 - name: qrcode
   type: package
@@ -11985,21 +11995,21 @@
 
 - name: qtree
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1526]
+  updated: 2026-08-12
 
 - name: quantikz
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "See tikz-cd."
+  updated: 2026-08-12
 
 - name: quattrocento
   type: package
@@ -12029,12 +12039,12 @@
 
 - name: quoting
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
   issues: [507]
   tests: true
-  updated: 2024-08-06
+  updated: 2026-08-11
 
 #------------------------ RRR ----------------------------
 
@@ -12490,12 +12500,12 @@
 
 - name: schemata
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Schema are tagged as math but there is no luamml support."
+  updated: 2026-08-12
 
 - name: schola-otf
   type: package
@@ -13742,12 +13752,11 @@
   package-repository: "https://github.com/T-F-S/tcolorbox"
   comments: "Simple boxes are now tagged correctly.
              Not yet fully supported, but some suggestions in the listed issues"
-  issues: [88,1101,1103,1104,1105,1106,1107,1110,1114]
-  closed-issues: [1066]
+  issues: [88,1101,1103,1104,1105,1106,1107,1110]
+  closed-issues: [1066,1114]
   tests: true
-  tasks: needs further tests
   external-issues: ["https://github.com/T-F-S/tcolorbox/issues/283","https://github.com/T-F-S/tcolorbox/issues/358"]
-  updated: 2025-12-06
+  updated: 2026-08-16
 
 - name: telprint
   type: package
@@ -14484,14 +14493,14 @@
 
 - name: tocloft
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  comments: "Package attempts to redefine `\\@starttoc`and fails."
-  issues: [74]
+  closed-issues: [74]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2024-07-12
+  external-issues: ["https://github.com/LaTeX-Package-Repositories/herries-press/issues/63"]
+  updated: 2026-08-14
 
 - name: tocstyle
   type: package
@@ -14691,6 +14700,7 @@
 
 - name: turnthepage
   type: package
+  subpackages: [turnpagewoetex,turnpageetex]
   status: compatible
   included-in: [tlc3]
   priority: 2
@@ -15152,13 +15162,12 @@
   status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  comments: "firstaid is required for the fix of issue 49. `\\poemtitle` errors.
-             `\\flagverse` and line numbers not tagged ideally."
-  issues: [1468,1469]
-  closed-issues: [49]
+  comments: "`\\flagverse` and line numbers not tagged ideally."
+  issues: [1469]
+  closed-issues: [49,1468]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2026-07-01
+  updated: 2026-08-10
 
 - name: version
   type: package
