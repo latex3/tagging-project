@@ -1,0 +1,27 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{luatex85}
+  \usepackage{unicode-math}
+\fi
+\usepackage{qcircuit}
+
+\begin{document}
+
+\Qcircuit @C=1em @R=.7em {
+& \gate{H} & \gate{Z} & \gate{H} & \qw \\
+& \qw & \gate{X} & \qw & \qw
+}
+
+\[ \Qcircuit @C=1em @R=.7em {
+& \gate{U} & \qwa \\
+& \gate{U^\dag} & \qwa
+} \]
+
+\end{document}

@@ -1,0 +1,32 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+\documentclass{article}
+\usepackage{cutwin}
+\usepackage{kantlipsum}
+
+\title{cutwin tagging test}
+
+\begin{document}
+\opencutleft
+\begin{cutout}{5}{0pt}{0.5\textwidth}{10}
+\kant[1-2]
+\end{cutout}
+
+\opencutcenter
+\newcommand*{\mycut}{%
+  0.1\textwidth, 0.3\textwidth,
+  0.2\textwidth, 0.4\textwidth,
+  0.3\textwidth, 0.5\textwidth}
+\renewcommand*{\putstuffinpic}{%
+  \put(0,-8){\makebox(0,0){\Huge\bfseries \$}}}
+
+\begin{shapedcutout}{2}{3}{\mycut}%
+\kant[1]
+\end{shapedcutout}
+
+\end{document}
