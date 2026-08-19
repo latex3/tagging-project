@@ -1,1 +1,50 @@
-<run-error code="1" />
+<PDF>
+ <StructTreeRoot>
+  <Document xmlns="http://iso.org/pdf2/ssn"
+     id="ID.02"
+    >
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.05"
+      rolemaps-to="Part"
+     >
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.06"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <?MarkedContent page="1" ?>text
+    </text>
+   </text-unit>
+   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.07"
+      rolemaps-to="Part"
+     >
+    <text xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.08"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Justify"
+       rolemaps-to="P"
+      >
+     <?MarkedContent page="1" ?>
+     <Formula xmlns="http://iso.org/pdf2/ssn"
+        id="ID.09"
+        title="math"
+        af="mathml-1.xml tag-AFfile1.tex"
+        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+        Layout:Placement="Inline"
+       >
+       <AssociatedFile name="mathml-1.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext> � <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝐴</mi> <mo lspace="0.222em" rspace="0.222em">×</mo> <mi>𝐵</mi> <mo lspace="0.222em" rspace="0.222em">×</mo> <mi>𝐶</mi> <mo lspace="0.222em" rspace="0.222em">×</mo> <mi>𝐷</mi> </math> <math xmlns="http://www.w3.org/1998/Math/MathML"> <mstyle displaystyle="false" scriptlevel="1"> <mi mathvariant="normal">+</mi> </mstyle> </math> // <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝐵</mi> </math> </mtext> </math>
+       </AssociatedFile>
+       <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+       $\xymatrix @1{ A\times B\times C\times D \ar [r]^-{+} &amp;B }$
+       </AssociatedFile>
+      <?MarkedContent page="1" ?>A×B×C×D+[TEXT]
+     </Formula>
+     <?MarkedContent page="1" ?>
+    </text>
+   </text-unit>
+  </Document>
+ </StructTreeRoot>
+</PDF>
