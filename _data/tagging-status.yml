@@ -3685,6 +3685,13 @@
   tests: true
   updated: 2024-07-25
 
+- name: coordsys
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-20
+
 - name: countriesofeurope
   type: package
   status: partially-compatible
@@ -4423,6 +4430,13 @@
   issues: [1382]
   updated: 2026-06-09
 
+- name: ebezier
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-20
+
 - name: ebgaramond
   type: package
   status: compatible
@@ -4983,6 +4997,14 @@
   comments: "Incompatible with unicode-math. No luamml support."
   tests: false
   updated: 2025-05-29
+
+- name: euclideangeometry
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  comments: "See curve2e."
+  updated: 2026-08-20
 
 - name: eufrak
   ctan-pkg: amsfonts
@@ -8101,6 +8123,13 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: logsys
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-20
+
 - name: longdivision
   type: package
   status: currently-incompatible
@@ -9515,6 +9544,14 @@
   tests: true
   updated: 2024-08-22
 
+- name: multibox
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Not included in texlive."
+  updated: 2026-08-20
+
 - name: multicol
   type: package
   status: compatible
@@ -9698,11 +9735,13 @@
 
 - name: nameref
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
-  tests: false
-  updated: 2024-07-15
+  issues: [1538]
+  tests: true
+  comments: "Fully compatible except for theorem notes and description labels."
+  updated: 2026-08-20
 
 - name: nar
   type: package
@@ -11381,6 +11420,14 @@
   comments: "Symbols are not correctly mapped to Unicode."
   tests: true
   updated: 2024-07-26
+
+- name: poemscol
+  type: package
+  status: currently-incompatible
+  priority: 9
+  issues: [1539]
+  tests: true
+  updated: 2026-08-20
 
 - name: poetry
   type: package
@@ -14493,14 +14540,15 @@
 
 - name: tocloft
   type: package
-  status: compatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
+  issues: [1537]
   closed-issues: [74]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   external-issues: ["https://github.com/LaTeX-Package-Repositories/herries-press/issues/63"]
-  updated: 2026-08-14
+  updated: 2026-08-20
 
 - name: tocstyle
   type: package
@@ -15677,6 +15725,14 @@
   comments: "Missing Alt text for graphic."
   tests: true
   updated: 2024-07-26
+
+- name: xpicture
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: "See curve2e."
+  updated: 2026-08-20
 
 - name: xpinyin
   type: package

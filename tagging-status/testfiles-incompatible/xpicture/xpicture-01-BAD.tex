@@ -1,0 +1,31 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{xpicture}
+
+\title{xpicture tagging test}
+
+\begin{document}
+
+\setlength{\unitlength}{3cm}
+\begin{Picture}(-1.3,-1.3)(1.3,1.3)
+\polarreference
+\degreesangles
+\renewcommand{\Pictlabelsep}{0.1}
+\multiPut(1,0)(0,30){12}{\circle*{0.05}}
+% Put twelve dots, one unit apart,
+% at 0, 30, 60, ..., 330 degrees
+\cPut{90}(1,90){\textsc{xii}}
+\cPut{0}(1,0){\textsc{iii}}
+\cPut{270}(1,270){\textsc{vi}}
+\cPut{180}(1,180){\textsc{ix}}
+\pictcolor{blue}\thicklines
+\arrowsize{8}{2}
+\xtrivVECTOR(0,0)(0.5,37.5)
+\xtrivVECTOR(0,0)(0.9,180)
+\Put(0,0){\circle*{0.1}}
+\linethickness{4pt}
+\Circle{1.3}
+\end{Picture}
+
+\end{document}
