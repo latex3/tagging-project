@@ -93,7 +93,7 @@ examples.
 {% include_relative tutorial-example-section.tex %}
 ```
 
-## 3. Tagging of graphicx
+## 3. Tagging of graphics
 Graphics can be 
 * images with an alternative text
 * images representing text given as actual text
