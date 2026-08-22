@@ -25,26 +25,15 @@ runlatex.editorlines=20;
 
 # Tagging Examples
 
-<div style="float:right; width: 15em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
+<div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
-  [Generic example](#1-generic-example)
+  [Generic headings](#1-generic-heading-template-implementation)
 
-  [Configuration of headings](#2-configuration-of-headings)
+  [Packages](#2-package-reimplementationsadjustments)
 
-  [Tagging of graphics](#3-tagging-of-graphics)
+  [KOMA](#3-koma-script-classes)
 
-  [Tagging of tables](#4-tagging-of-tables)
-
-  [Tagging of math](#5-tagging-of-math)
-
-  [Checking the package status](#6-checking-the-package-status)
-
-  [Parent-child warnings](#7-parent-child-warnings-from-faulty-nesting-of-structures)
-
-  [Unbalanced para structures](#8-errors-from-unbalanced-para-structures)
-
-  [Still open structures](#9-warnings-about-still-open-structures)
-
+  [Memoir](#4-memoir-class)
 
 </div>
 
@@ -60,7 +49,7 @@ Validation is provided by the open source
 [veraPDF](https://verapdf.org/) validator hosted at
 [texlive.net](https://texlive.net) and by the LaTeX project
 [show-pdf-tags](https://texlive.net/showtags) validation hosted on the
-same server.  As a convenience, a link is provided to open the
+same server.  A link is provided to open the
 generated PDF at [ngPDF](https://ngpdf.com). ngPDF is provided free of
 charge by its authors.
 
@@ -70,8 +59,7 @@ experiment and change the examples. The resulting TeX files are _not_
 stored and all generated PDF are deleted from the server after an
 hour. The current public release of `lualatex-dev` from
 [TeXLive](https://www.tug.org/texlive/) is used to process all
-examples. Development code from the LaTeX git repositories is _not_
-used here.
+examples. 
 
 </div>
 
@@ -94,7 +82,7 @@ used here.
 {% include_relative tutorial-example-section.tex %}
 ```
 
-## 3. Tagging of graphics
+## 3. Tagging of graphicx
 Graphics can be 
 * images with an alternative text
 * images representing text given as actual text

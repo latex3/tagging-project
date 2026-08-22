@@ -1,10 +1,7 @@
-% !Mode:: "TeX:DE:UTF-8:Main"
-%% EXAMPLE tables %%
 % !TEX lualatex-dev
 \DocumentMetadata
   {
     lang=en-US,
-    pdfversion=2.0,
     pdfstandard=ua-2,
     tagging=on,
     tagging-setup={math/setup=mathml-SE}
@@ -13,8 +10,13 @@
 \documentclass{article}
 \usepackage{graphics}
 \usepackage{lua-unicode-math}
+
+\title{Tagging of tables}
+
 \begin{document}
+
 \tagpdfsetup{table/header-rows=1,table/header-columns={1,2}}
+
 \begin{tabular}{llll}
   &               &\textbf{Lemon} & \textbf{Banana} \\\hline 
 \tagpdfsetup{table/multirow=3}%
