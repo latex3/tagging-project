@@ -25,7 +25,7 @@ runlatex.editorlines=20;
 
 # Tagging Examples
 
-<div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
+<div style="float:right; width: 15em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
   [Generic example](#1-generic-example)
 
