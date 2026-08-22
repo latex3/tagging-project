@@ -1,0 +1,23 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+%% EXAMPLE 1 Prototype %%
+% !TEX lualatex-dev
+\DocumentMetadata{
+ tagging=on,
+ pdfversion=2.0,
+ pdfstandard=ua-2,
+ tagging-setup={math/setup=mathml-SE} %or mathml-AF
+}
+\documentclass{article}
+\usepackage{unicode-math}
+\begin{document}
+
+\section{Example}
+Some text
+\begin{itemize}
+\item one
+\item two
+\end{itemize}
+\[
+ax^2+b^x+c=0
+\]
+\end{document}

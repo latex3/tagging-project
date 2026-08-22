@@ -1,0 +1,35 @@
+% !Mode:: "TeX:DE:UTF-8:Main"
+
+%% EXAMPLE graphics %%
+
+% !TEX lualatex-dev
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+  }
+
+\documentclass{article}
+\usepackage{lua-unicode-math}
+\usepackage{xcolor}
+\EditInstance{heading}{section}{heading-decls=\color{red}}
+\begin{document}
+\section{A duck}
+
+\section
+  [
+    placement    =top, %at top of page
+    number-format=\fbox{\theheading},
+    prefix       =Part~,
+    title-decls  =\scshape,
+    toc          =TOC,
+    bookmark     =BOOKMARK
+  ]
+  {The Bear}
+
+
+\end{document}
+
