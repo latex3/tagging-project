@@ -27,13 +27,24 @@ runlatex.editorlines=20;
 
 <div style="float:right; width: 8em; padding:1em;border:solid thin black; background-color:#EFEFEF" markdown=1>
 
-  [Generic headings](#1-generic-heading-template-implementation)
+  [Generic example](#1-generic-example)
 
-  [Packages](#2-package-reimplementationsadjustments)
+  [Configuration of headings](#2-configuration-of-headings)
 
-  [KOMA](#3-koma-script-classes)
+  [Tagging of graphics](#3-tagging-of-graphics)
 
-  [Memoir](#4-memoir-class)
+  [Tagging of tables](#4-tagging-of-tables)
+
+  [Tagging of math](#5-tagging-of-math)
+
+  [Checking the package status](#6-checking-the-package-status)
+
+  [Parent-child warnings](#7-parent-child-warnings-from-faulty-nesting-of-structures)
+
+  [Unbalanced para structures](#8-errors-from-unbalanced-para-structures)
+
+  [Still open structures](#9-warnings-about-still-open-structures)
+
 
 </div>
 
@@ -83,7 +94,7 @@ used here.
 {% include_relative tutorial-example-section.tex %}
 ```
 
-## 3. Tagging of graphicx
+## 3. Tagging of graphics
 Graphics can be 
 * images with an alternative text
 * images representing text given as actual text
