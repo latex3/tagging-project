@@ -3304,6 +3304,7 @@
   priority: 9
   comments: "Provides actualtext for `\\cistercian` command."
   tests: true
+  package-repository: "https://github.com/samcarter/cistercian"
   updated: 2025-06-03
 
 - name: citation-style-language
@@ -5618,7 +5619,7 @@
   priority: 2
   comments: "[H] floats are now tagged correctly."
   references: [1]
-  issues: [890]
+  issues: [890,1549]
   tests: true
   updated: 2026-05-13
 
@@ -5793,6 +5794,17 @@
   package-repository: "https://github.com/braniii/fontawesome"
   updated: 2025-06-10
 
+- name: fontawesome7
+  type: package
+  subpackages: [fontawesome7-generic-helper,fontawesome7-utex-helper]
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols missing ToUnicode with pdftex.
+             Fully compatible with luatex."
+  package-repository: "https://github.com/braniii/fontawesome"
+  updated: 2026-08-23
+
 - name: fontaxes
   type: package
   status: compatible
@@ -5808,6 +5820,16 @@
   priority: 2
   tests: false
   updated: 2024-07-06
+
+- name: fontmfizz
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols missing ToUnicode or ActualText."
+  package-repository: "https://github.com/kdungs/latex-fontmfizz/"
+  luatex-only: true
+  updated: 2026-08-23
 
 - name: fontsetup
   type: package
@@ -6564,6 +6586,14 @@
   tests: false
   updated: 2026-07-25
 
+- name: graphicxpsd
+  type: package
+  status: compatible
+  package-repository: "https://github.com/munepi/graphicxpsd"
+  priority: 9
+  tests: false
+  updated: 2026-08-23
+
 - name: graphpap
   type: package
   status: partially-compatible
@@ -6909,7 +6939,7 @@
   priority: 2
   subpackages: [nohyperref]
   references: [2]
-  issues: [892]
+  issues: [892,1550]
   closed-issues: [1197]
   tests: true
   comments: "Forms not supported; use l3pdffield-testphase for forms."
@@ -7393,6 +7423,15 @@
   luatex-only: true
   tests: false
   updated: 2025-06-03
+
+- name: jigsaw
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/samcarter/jigsaw"
+  updated: 2026-08-23
 
 - name: jlreq-deluxe
   type: package
@@ -8181,6 +8220,14 @@
   issues: [1385]
   updated: 2026-06-09
 
+- name: longfigure
+  type: package
+  status: currently-incompatible
+  priority: 9
+  issues: [1551]
+  tests: true
+  updated: 2026-08-23
+
 - name: longmath
   type: package
   status: currently-incompatible
@@ -8393,6 +8440,7 @@
   included-in: [ol0.02]
   priority: 9
   tests: false
+  issues: [1550]
   luatex-only: true
   updated: 2026-01-28
 
@@ -10725,6 +10773,15 @@
   comments: Obsolete package; suggested replacement `tgpagella`.
   tests: false
   updated: 2024-07-28
+
+- name: panda
+  type: package
+  subpackages: [BusyPanda,CleverPanda]
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/samcarter/panda"
+  updated: 2026-08-23
 
 - name: pandora
   ctan-pkg: mfnfss
@@ -13630,6 +13687,14 @@
   tests: false
   updated: 2024-08-20
 
+- name: swfigure
+  type: package
+  status: currently-incompatible
+  priority: 9
+  issues: [1552]
+  tests: true
+  updated: 2026-08-23
+
 - name: syntax
   ctan-pkg: syntax-mdw
   type: package
@@ -14293,6 +14358,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: tikzbricks
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/samcarter/tikzbricks"
+  updated: 2026-08-23
+
 - name: tikzducks
   type: package
   status: compatible
@@ -14300,6 +14374,7 @@
   priority: 2
   tests: true
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/samcarter/tikzducks"
   updated: 2025-11-19
 
 - name: tikzfill
@@ -14330,6 +14405,16 @@
   comments: "`\\tikzfading` must be declared in the preamble."
   updated: 2026-02-06
 
+- name: tikzlibrary-marmots
+  ctan-pkg: tikzmarmots
+  type: library
+  status: compatible
+  package-repository: "https://github.com/samcarter/tikzmarmots"
+  priority: 9
+  tests: false
+  comments: "TikZ library version of the tikzmarmots package."
+  updated: 2026-08-23
+
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
   type: library
@@ -14339,15 +14424,43 @@
   tests: true
   updated: 2025-09-12
 
+- name: tikzlibrary-tikzlings
+  type: library
+  status: compatible
+  included-in: [tlc3]
+  priority: 2
+  tests: false
+  comments: "TikZ library version of the tikzlings package."
+  package-repository: "https://github.com/samcarter/tikzlings"
+  updated: 2026-08-23
+
 - name: tikzlings
   type: package
+  subpackages: [tikzlings-addons,tikzlings-anteaters,tikzlings-apes,tikzlings-bats
+                tikzlings-bears,tikzlings-bees,tikzlings-bugs,tikzlings-cats,
+                tikzlings-chickens,tikzlings-coatis,tikzlings-dogs,tikzlings-elephants,
+                tikzlings-hippos,tikzlings-koalas,tikzlings-list,tikzlings-marmots,
+                tikzlings-meerkats,tikzlings-mice,tikzlings-moles,tikzlings-owls,
+                tikzlings-pandas,tikzlings-penguins,tikzlings-pigs,tikzlings-rhinos,
+                tikzlings-sheep,tikzlings-sloths,tikzlings-snowmen,tikzlings-squirrels,
+                tikzlings-turkeys,tikzlings-wolves]
   status: compatible
   included-in: [tlc3]
   priority: 2
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`.
              See also tikzducks."
-  updated: 2025-11-19
+  package-repository: "https://github.com/samcarter/tikzlings"
+  updated: 2026-08-23
+
+- name: tikzmarmots
+  type: package
+  status: compatible
+  package-repository: "https://github.com/samcarter/tikzmarmots"
+  priority: 9
+  tests: false
+  comments: "See tikzlings."
+  updated: 2026-08-23
 
 - name: tikzpagenodes
   type: package
