@@ -5773,6 +5773,7 @@
 
 - name: fontawesome5
   type: package
+  subpackages: [fontawesome5-generic-helper,fontawesome5-utex-helper]
   status: partially-compatible
   included-in: [tlc3, arxiv001, ol5]
   priority: 2
@@ -5783,6 +5784,7 @@
 
 - name: fontawesome6
   type: package
+  subpackages: [fontawesome6-generic-helper,fontawesome6-utex-helper]
   status: partially-compatible
   priority: 9
   tests: true
@@ -16568,6 +16570,7 @@
 
 - name: jlreq
   type: class
+  subpackages: [jlreq-complements,jlreq-helpers,jlreq-trimmarks]
   status: currently-incompatible
   priority: 9
   issues: [719,1482]
