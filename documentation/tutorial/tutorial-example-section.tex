@@ -1,0 +1,35 @@
+% !TEX lualatex-dev
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+  }
+
+\documentclass{article}
+\usepackage{lua-unicode-math}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\title{Configure headings}
+
+\EditInstance{heading}{section}{heading-decls=\color{red}}
+
+\begin{document}
+\section{A duck}
+
+\section
+  [
+    placement    =top, %at top of page
+    number-format=\fbox{\theheading},
+    prefix       =Part~,
+    title-decls  =\scshape,
+    toc          =TOC,
+    bookmark     =BOOKMARK
+  ]
+  {The Bear}
+
+
+\end{document}
+

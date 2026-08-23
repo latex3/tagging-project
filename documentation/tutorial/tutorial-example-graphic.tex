@@ -1,0 +1,39 @@
+% !TEX lualatex-dev
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+  }
+
+\documentclass{article}
+\usepackage{lua-unicode-math}
+\usepackage{graphicx,tikzducks,hawkdraw,todonotes,pdfpages}
+\usepackage{lettrine}
+\usepackage[skip=2\baselineskip]{parskip}
+
+\title{Tagging of graphics}
+\begin{document}
+
+A graphic with an alternative text: 
+\includegraphics[alt=a duck,width=2cm]{example-image-duck}
+
+\includegraphics[actualtext=A,height=2\baselineskip]{example-image-a}
+ graphic representing a text
+
+A hidden graphics (artifact) \includegraphics[artifact,width=1cm]{example-image}
+
+\lettrine[image=true,actualtext=I]{letter-I}{t is a truth universally} acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+
+\begin{hawkdraw}[alt=a circle]
+\fill[color fill={blue}](0cm,0cm) circle[radius={0.5cm}] ;
+\end{hawkdraw}
+
+\tikz[alt=A duck]{\duck}
+
+Most graphic packages now support the keys \texttt{alt}, \texttt{actualtext} and \texttt{artifact}\todo{Check that!}
+
+\includepdf[pages=1,alt=A duck]{example-image-duck}
+\end{document}
+

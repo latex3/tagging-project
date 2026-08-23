@@ -1,0 +1,32 @@
+% !TEX lualatex-dev
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+  }
+
+\documentclass{article}
+\usepackage{graphics}
+\usepackage{lua-unicode-math}
+
+\title{Tagging of tables}
+
+\begin{document}
+
+\tagpdfsetup{table/header-rows=1,table/header-columns={1,2}}
+
+\begin{tabular}{llll}
+  &               &\textbf{Lemon} & \textbf{Banana} \\\hline 
+\tagpdfsetup{table/multirow=3}%
+\raisebox{-1.5\normalbaselineskip}[0pt][0pt]{\rotatebox{90}{\textbf{data}}}  
+  &\textbf{Color} &   red         & yellow    \\
+  &\textbf{Flavor}&  \multicolumn{2}{c}{sweet} \\ 
+  &\textbf{Form}  &  round        & curved
+\end{tabular}
+
+% later perhaps 
+%\begin{tabular}[header-rows=1,header-columns=1]{lll}
+\end{document}
+
