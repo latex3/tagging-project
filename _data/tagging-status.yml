@@ -266,13 +266,13 @@
 
 - name: achemso
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/josephwright/achemso"
-  updated: 2026-01-23
+  comments: "Note the achemso class is not compatible, only the package."
+  updated: 2026-08-22
 
 - name: acro
   type: package
@@ -401,16 +401,6 @@
   tests: false
   updated: 2024-07-21
 
-- name: algcompatible
-  ctan-pkg: algorithmicx
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: algolrevived
   type: package
   status: compatible
@@ -449,11 +439,12 @@
 
 - name: algorithmicx
   type: package
+  subpackages: [algc,algcompatible,algmatlab,algpascal]
   status: compatible
   included-in: [tlc3, arxiv5, ol1]
   priority: 4
   tests: false
-  updated: 2024-08-06
+  updated: 2026-08-22
 
 - name: algpseudocode
   ctan-pkg: algorithmicx
@@ -801,13 +792,13 @@
 
 - name: apxproof
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1548]
   package-repository: "https://github.com/PierreSenellart/apxproof"
-  updated: 2026-01-23
+  updated: 2026-08-22
 
 - name: arabi
   type: package

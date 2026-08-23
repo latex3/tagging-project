@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{apxproof}
+\usepackage{amsthm}
+
+\newtheoremrep{theorem}{Theorem}
+
+\renewcommand{\appendixproofname}[2]{Proof of #1~#2}
+
+\begin{document}
+The \texttt{\textbackslash appendixproofname} hook applies even with
+unstarred \texttt{\textbackslash newtheoremrep}: the appendix proof is
+titled \emph{both} below the restated theorem.
+
+\begin{theoremrep}\label{thm:first}
+  First repeated theorem.
+\end{theoremrep}
+\begin{proof}
+  Body of the proof of Theorem~\ref{thm:first}.
+\end{proof}
+
+\begin{theoremrep}\label{thm:second}
+  Second repeated theorem.
+\end{theoremrep}
+\begin{proof}
+  Body of the proof of Theorem~\ref{thm:second}.
+\end{proof}
+
+\end{document}
