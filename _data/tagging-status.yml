@@ -266,13 +266,13 @@
 
 - name: achemso
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
   package-repository: "https://github.com/josephwright/achemso"
-  updated: 2026-01-23
+  comments: "Note the achemso class is not compatible, only the package."
+  updated: 2026-08-22
 
 - name: acro
   type: package
@@ -401,16 +401,6 @@
   tests: false
   updated: 2024-07-21
 
-- name: algcompatible
-  ctan-pkg: algorithmicx
-  type: package
-  status: unchecked
-  included-in: [ol0.1]
-  priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
-
 - name: algolrevived
   type: package
   status: compatible
@@ -449,11 +439,12 @@
 
 - name: algorithmicx
   type: package
+  subpackages: [algc,algcompatible,algmatlab,algpascal]
   status: compatible
   included-in: [tlc3, arxiv5, ol1]
   priority: 4
   tests: false
-  updated: 2024-08-06
+  updated: 2026-08-22
 
 - name: algpseudocode
   ctan-pkg: algorithmicx
@@ -801,13 +792,13 @@
 
 - name: apxproof
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  issues: [1548]
   package-repository: "https://github.com/PierreSenellart/apxproof"
-  updated: 2026-01-23
+  updated: 2026-08-22
 
 - name: arabi
   type: package
@@ -2593,6 +2584,13 @@
   tests: true
   updated: 2024-08-02
 
+- name: bxenclose
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-22
+
 - name: bxghost
   type: package
   status: compatible
@@ -2637,6 +2635,13 @@
   priority: 9
   tests: false
   updated: 2026-04-08
+
+- name: bxnewfont
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-22
 
 - name: bxpapersize
   type: package
@@ -4112,6 +4117,15 @@
   tests: true
   package-repository: "https://github.com/leo-liu/tex-pkg"
   updated: 2024-08-05
+
+- name: diagram
+  ctan-pkg: chess-problem-diagrams
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1544]
+  updated: 2026-08-22
 
 - name: dialogue
   type: package
@@ -7230,6 +7244,14 @@
   tests: false
   updated: 2026-04-25
 
+- name: innerscript
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  luatex-only: true
+  updated: 2026-08-22
+
 - name: inputenc
   type: package
   status: compatible
@@ -7664,6 +7686,15 @@
   priority: 9
   tests: false
   updated: 2024-07-21
+
+- name: l3draw
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Not meant for document-level use. See hawkdraw for a compatible
+             user interface to l3draw."
+  updated: 2026-08-22
 
 - name: l3keys2e
   type: package
@@ -9234,6 +9265,15 @@
   package-repository: "https://github.com/bdtc/metalogox"
   tests: true
   updated: 2024-07-30
+
+- name: metrix
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1547]
+  package-repository: "https://github.com/tweh/metrix"
+  updated: 2026-08-22
 
 - name: mfb-oldstyle
   type: package
@@ -13890,6 +13930,14 @@
   tests: false
   updated: 2026-02-05
 
+- name: texmate
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: See skak and chessfss.
+  updated: 2026-08-22
+
 - name: texnames
   ctan-pkg: biblio
   type: package
@@ -13962,6 +14010,13 @@
   priority: 6
   tests: true
   updated: 2024-07-30
+
+- name: textmerg
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-22
 
 - name: textpos
   type: package
@@ -15747,6 +15802,14 @@
   tests: true
   comments: "Missing correct Ruby annotation. Only works with pdftex and xetex."
   updated: 2024-07-30
+
+- name: xq
+  type: package
+  status: no-support
+  priority: 9
+  tests: false
+  issues: [1545]
+  updated: 2026-08-22
 
 - name: xr
   type: package
