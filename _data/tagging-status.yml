@@ -2056,6 +2056,14 @@
   comments: "beamer is not a supported class."
   updated: 2026-01-30
 
+- name: bearwear
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
+
 - name: bera
   type: package
   status: compatible
@@ -2516,6 +2524,13 @@
   comments: "Incompatible with unicode-math. No luamml support."
   package-repository: "https://github.com/wspr/breqn"
   updated: 2026-01-25
+
+- name: broydensolve
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-24
 
 - name: bussproofs
   type: package
@@ -8046,6 +8061,14 @@
   tests: false
   updated: 2024-07-26
 
+- name: liftarm
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
+
 - name: ligtype
   type: package
   status: compatible
@@ -11246,12 +11269,20 @@
 
 - name: pgfornament
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No way to add alt text to a `\\pgfornament`."
+  updated: 2026-08-24
+
+- name: pgfornament-han
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "See pgfornament."
+  updated: 2026-08-24
 
 - name: pgfpages
   ctan-pkg: pgf
@@ -11572,6 +11603,14 @@
   issues: [612]
   tests: true
   updated: 2024-08-20
+
+- name: polyomino
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
 
 - name: polytable
   type: package
@@ -14297,12 +14336,12 @@
 
 - name: tikz-3dplot
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  comments: See tikz.
-  updated: 2026-06-09
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
 
 - name: tikz-cd
   type: package
@@ -14315,30 +14354,31 @@
 
 - name: tikz-dependency
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to the containing `dependency` environment."
+  updated: 2026-08-24
 
 - name: tikz-dimline
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
 
 - name: tikz-feynman
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to `\\feynmandiagram
+             or the containing `tikzpicture`."
+  updated: 2026-08-24
 
 - name: tikz-network
   type: package
@@ -14381,11 +14421,12 @@
 - name: tikzfill
   type: package
   subpackages: [tikzfill.geomarray,tikzfill.hexagon,tikzfill.image,tikzfill.rhombus]
-  status: unchecked
+  status: compatible
   priority: 9
   package-repository: "https://github.com/T-F-S/tikzfill"
   tests: false
-  updated: 2026-06-17
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
 
 - name: tikzlibrary-external
   ctan-pkg: tikz
@@ -14424,6 +14465,24 @@
   issues: [30]
   tests: true
   updated: 2025-09-12
+
+- name: tikzlibrary-nfold
+  ctan-pkg: tikz-nfold
+  type: library
+  status: compatible
+  package-repository: "https://github.com/jonschz/tikz-nfold"
+  priority: 9
+  tests: false
+  updated: 2026-08-24
+
+- name: tikzlibrary-shadows.blur
+  ctan-pkg: pgf-blur
+  type: library
+  status: compatible
+  package-repository: "https://github.com/norbusan/pgf-blur"
+  priority: 9
+  tests: false
+  updated: 2026-08-24
 
 - name: tikzlibrary-tikzlings
   ctan-pkg: tikzlings
@@ -14476,12 +14535,29 @@
 
 - name: tikzpeople
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
+
+- name: tikzpingus
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/EagleoutIce/tikzpingus"
+  updated: 2026-08-24
+
+- name: tikzrput
+  type: package
+  ctan-pkg: pgfornament
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-24
 
 - name: tikzscale
   type: package
@@ -15494,6 +15570,14 @@
   tests: true
   updated: 2024-08-23
 
+- name: wheelchart
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-24
+
 - name: widetable
   type: package
   status: currently-incompatible
@@ -15728,6 +15812,7 @@
 
 - name: xetexko
   type: package
+  subpackages: [xetexko-font,xetexko-hanging,xetexko-josa,xetexko-space,xetexko-vertical]
   status: no-support
   priority: 9
   tests: false
@@ -16144,6 +16229,7 @@
 
 - name: zhspacing
   type: package
+  subpackages: [zhfont,zhmath,zhulem]
   status: no-support
   priority: 9
   tests: false
