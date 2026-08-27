@@ -4388,6 +4388,14 @@
   package-repository: "https://github.com/Skillmon/ltx_duckuments"
   updated: 2024-08-12
 
+- name: duerer
+  type: package
+  ctan-pkg: duerer-latex
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-26
+
 - name: duplicat
   type: package
   status: compatible
@@ -4797,6 +4805,15 @@
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
   updated: 2025-10-25
+
+- name: epigraph-keys
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1558]
+  related-issues: [1557]
+  updated: 2026-08-26
 
 - name: epsdice
   type: package
@@ -5778,6 +5795,21 @@
   comments: See numprint.
   updated: 2024-08-07
 
+- name: foekfont
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-26
+
+- name: fonetika
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Text not correctly mapped to Unicode."
+  updated: 2026-08-26
+
 - name: fontawesome
   type: package
   status: partially-compatible
@@ -5794,7 +5826,7 @@
   included-in: [tlc3, arxiv001, ol5]
   priority: 2
   tests: true
-  comments: "Symbols missing ToUnicode.
+  comments: "Symbols missing ToUnicode or ActualText.
              Produces reasonable replacement text in ngPDF with luatex."
   updated: 2025-06-03
 
@@ -5804,8 +5836,8 @@
   status: partially-compatible
   priority: 9
   tests: true
-  comments: "Symbols missing ToUnicode with pdftex.
-             Fully compatible with luatex."
+  comments: "Symbols missing ToUnicode or ActualText.
+             Produces reasonable replacement text in ngPDF with luatex."
   package-repository: "https://github.com/braniii/fontawesome"
   updated: 2025-06-10
 
@@ -5815,8 +5847,8 @@
   status: partially-compatible
   priority: 9
   tests: true
-  comments: "Symbols missing ToUnicode with pdftex.
-             Fully compatible with luatex."
+  comments: "Symbols missing ToUnicode or ActualText.
+             Produces reasonable replacement text in ngPDF with luatex."
   package-repository: "https://github.com/braniii/fontawesome"
   updated: 2026-08-23
 
@@ -6255,6 +6287,15 @@
   tasks: needs tests
   package-repository: "https://github.com/zepinglee/gbt7714-bibtex-style"
   updated: 2026-01-23
+
+- name: geist
+  type: package
+  ctan-pkg: geist-font
+  subpackages: [geistmono,geistmono-nfss,geist-nfss]
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2025-06-03
 
 - name: gelasio
   type: package
@@ -6835,6 +6876,14 @@
   tests: true
   updated: 2025-11-14
 
+- name: holtpolt
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-08-26
+
 - name: humanist
   type: package
   status: compatible
@@ -6932,11 +6981,12 @@
 
 - name: hyperbar
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  comments: "Requires luatex85 with luatex."
+  issues: [1556]
+  updated: 2026-08-26
 
 - name: hypernat
   type: package
@@ -7052,6 +7102,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: ifdraft
+  type: package
+  status: compatible
+  included-in: [arxiv01, ol0.1]
+  priority: 6
+  tests: false
+  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
+  updated: 2024-07-25
+
 - name: ifetex
   type: package
   status: compatible
@@ -7061,14 +7120,12 @@
   tests: false
   updated: 2026-01-26
 
-- name: ifdraft
+- name: iffont
   type: package
   status: compatible
-  included-in: [arxiv01, ol0.1]
-  priority: 6
+  priority: 9
   tests: false
-  package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-25
+  updated: 2026-08-26
 
 - name: iflang
   type: package
@@ -11367,6 +11424,15 @@
   tests: true
   updated: 2024-08-06
 
+- name: phosphoricons
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols missing ToUnicode or ActualText."
+  package-repository: "https://github.com/braniii/phosphoricons"
+  updated: 2026-08-26
+
 - name: physics
   type: package
   status: unchecked
@@ -11540,6 +11606,14 @@
   priority: 9
   tests: false
   updated: 2024-07-21
+
+- name: plimsoll
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-08-26
 
 - name: pmboxdraw
   type: package
@@ -11982,6 +12056,14 @@
   tests: false
   comments: "Requires the incompatible xetex engine."
   updated: 2026-01-28
+
+- name: punk
+  ctan-pkg: punk-latex
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-26
 
 - name: pxbase
   type: package
@@ -13228,6 +13310,14 @@
   tests: true
   updated: 2024-08-20
 
+- name: skull
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-08-26
+
 - name: slantsc
   type: package
   status: compatible
@@ -14256,6 +14346,13 @@
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2024-07-25
 
+- name: thinsp
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-26
+
 - name: thm-restate
   ctan-pkg: thmtools
   type: package
@@ -14428,6 +14525,34 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-24
 
+- name: tikzlibrary-braids
+  type: library
+  ctan-pkg: braids
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/braids"
+  updated: 2026-08-26
+
+- name: tikzlibrary-calligraphy
+  type: library
+  ctan-pkg: spath3
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/spath3"
+  updated: 2026-08-26
+
+- name: tikzlibrary-celtic
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-26
+
 - name: tikzlibrary-external
   ctan-pkg: tikz
   type: library
@@ -14446,6 +14571,26 @@
   tests: true
   comments: "`\\tikzfading` must be declared in the preamble."
   updated: 2026-02-06
+
+- name: tikzlibrary-hobby
+  type: library
+  ctan-pkg: hobby
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/hobby"
+  updated: 2026-08-26
+
+- name: tikzlibrary-knots
+  type: library
+  ctan-pkg: spath3
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/spath3"
+  updated: 2026-08-26
 
 - name: tikzlibrary-marmots
   ctan-pkg: tikzmarmots
@@ -14475,6 +14620,15 @@
   tests: false
   updated: 2026-08-24
 
+- name: tikzlibrary-rulercompass
+  type: library
+  ctan-pkg: rulercompass
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-08-26
+
 - name: tikzlibrary-shadows.blur
   ctan-pkg: pgf-blur
   type: library
@@ -14483,6 +14637,17 @@
   priority: 9
   tests: false
   updated: 2026-08-24
+
+- name: tikzlibrary-spath3
+  type: library
+  ctan-pkg: spath3
+  subpackages: [spath3]
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/spath3"
+  updated: 2026-08-26
 
 - name: tikzlibrary-tikzlings
   ctan-pkg: tikzlings
@@ -14494,6 +14659,46 @@
   comments: "TikZ library version of the tikzlings package."
   package-repository: "https://github.com/samcarter/tikzlings"
   updated: 2026-08-23
+
+- name: tikzlibrary-tilings
+  type: library
+  ctan-pkg: tilings
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/tilings"
+  updated: 2026-08-26
+
+- name: tikzlibrary-tilings.penrose
+  type: library
+  ctan-pkg: tilings
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tilings."
+  package-repository: "https://github.com/loopspace/tilings"
+  updated: 2026-08-26
+
+- name: tikzlibrary-tilings.polykite
+  type: library
+  ctan-pkg: tilings
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tilings."
+  package-repository: "https://github.com/loopspace/tilings"
+  updated: 2026-08-26
+
+- name: tikzlibrary-tqft
+  type: library
+  ctan-pkg: tqft
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/loopspace/TQFT"
+  updated: 2026-08-26
 
 - name: tikzlings
   type: package
