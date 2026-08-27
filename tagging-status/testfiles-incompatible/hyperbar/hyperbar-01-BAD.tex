@@ -1,0 +1,19 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\UseName{sys_if_engine_luatex:T}{\usepackage{luatex85}}
+\usepackage{hyperbar}
+
+\title{hyperbar tagging test}
+
+\begin{document}
+
+\begin{Form}
+\TextField[name=first,width=3cm,charsize=12pt]{Prename}\\
+\TextField[name=last,width=3cm,charsize=12pt]{Name}\\
+\BarcodeField[width=10cm,height=1cm,tsv={first,last}]{BarcodeField}\\
+\BarcodeField[datamatrix,symwidth=10,width=3cm,height=3cm,tsv={first,last}]{BarcodeField2}
+\BarcodeField[qr,width=3cm,height=3cm,tsv={first,last}]{BarcodeField3}
+\end{Form}
+
+\end{document}
