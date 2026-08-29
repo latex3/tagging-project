@@ -1,0 +1,53 @@
+%tasks: mpost pics.mp
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\usepackage[metapost]{mfpic}
+
+\opengraphsfile{pics}
+
+\setlength{\mfpframesep}{0pt}
+\headshape{1}{1}{true}
+
+\begin{document}
+
+Before text
+
+\mftitle{Commutative Diagram example.}
+\noindent
+\begin{mfpframe}
+\begin{mfpic}[12]{0}{10}{0}{10}
+\tlabeljustify{cc}
+\tcaption[2.0,1.0]{{\it Figure 1:}  A commutative diagram example with a long caption.}
+\tlabels{(1,9){A}
+         (1,1){B}
+         (3,5){C}
+         (9,9){D}
+         (9,1){E}
+         (7,5){F}}
+\setrender{\arrow\draw\trimpath{6pt}}
+\lines{(1,9), (1,1)}  % A -> B.
+\lines{(1,9), (3,5)}  % A -> C.
+\lines{(3,5), (1,1)}  % C -> B.
+\lines{(1,9), (9,9)}  % A -> D.
+\lines{(9,9), (9,1)}  % D -> E.
+\lines{(9,9), (7,5)}  % D -> F.
+\lines{(7,5), (9,1)}  % F -> E.
+\lines{(3,5), (7,5)}  % C -> F.
+% B- - ->E :
+%\dotted\arrow[r90][b-12pt]\arrow[b15pt]\reverse\arrow\lines{(1.5,1), (8.5,1)}
+\arrow\arrow[b10pt]\reverse\arrow\dotted\trimpath{6pt}\lines{(1,1), (9,1)}
+\end{mfpic}
+\end{mfpframe}
+
+After text
+
+\closegraphsfile
+
+\end{document}

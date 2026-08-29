@@ -8747,6 +8747,7 @@
   priority: 9
   tests: true
   issues: [1562]
+  external-issues: ["https://github.com/luatexja/luatexja/issues/50"]
   luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
   updated: 2026-08-29
@@ -9313,21 +9314,21 @@
 
 - name: mdwlist
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1566]
+  updated: 2026-08-29
 
 - name: mdwmath
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1567]
+  updated: 2026-08-29
 
 - name: mdwtab
   type: package
@@ -9352,12 +9353,13 @@
 
 - name: memoize
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
   tests: false
-  tasks: needs tests
+  tasks: "Needs tests and adjusted l3build configuration."
+  issues: [1568]
   package-repository: "https://github.com/sasozivanovic/memoize"
-  updated: 2024-07-18
+  updated: 2026-08-29
 
 - name: mercatormap
   type: package
@@ -9365,6 +9367,7 @@
   priority: 9
   tests: false
   tasks: needs tests
+  issues: [1569]
   package-repository: "https://github.com/T-F-S/mercatormap"
   updated: 2024-07-18
 
@@ -9439,12 +9442,12 @@
 
 - name: mfpic
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [arxiv001]
   priority: 7
-  tests: false
-  tasks: needs tests
-  updated: 2024-08-23
+  tests: true
+  issues: [1570]
+  updated: 2026-08-29
 
 - name: mhchem
   type: package
