@@ -1,0 +1,52 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{array}
+\usepackage{logix}
+
+\title{logix tagging test}
+
+\begin{document}
+
+\begin{KnotGrid}
+\KntLFC \KntTSN \KntHXSOSU \KntTSFN \KntTRSC \\
+\KntNF \KntHXSUSO \KntNN \KntRQC \KntNQ \KntRSN \\
+\KntLFC \KntBSN \KntHXSOSU \KntBSFN \KntRBSC \\
+\end{KnotGrid}
+
+\begin{LogixDefn}
+\Line{Neg} {1}{\symsau{p}}{\symsau{q}}
+\Line{Conj}{} {\symsau{p}}{\symsau{q}}
+\end{LogixDefn}
+
+\begin{LogixAxiom}
+\Line{Rp} {12} {\symsai{NegationFree}\OpnParn \symsau{p} \WkEquv \symsau{q}
+\ClsParn, \symsau{p} \WkEquv \symsau{q}, \symsau{e} \Seq
+\symsau{e}\OpnBrkt \symsau{q} \RightSlash \symsau{p}
+\ClsBrkt }
+\Line{Rp} {2} {\symsai{NegationFree}\OpnParn \symsau{p} \WkEquv \symsau{q}
+\ClsParn, \symsau{p} \WkEquv \symsau{q} \Seq \symsau{e}
+\WkEquv \symsau{e}\OpnBrkt \symsau{q} \RightSlash \symsau{p}
+\ClsBrkt }
+\end{LogixAxiom}
+
+\begin{LogixTable}{c | c c c c }
+\Nd & \meta{f} & \meta{u} & \meta{o} & \meta{t} \\ \hline
+\meta{f} & \meta{f} & \meta{f} & \meta{f} & \meta{f} \\
+\meta{u} & \meta{f} & \meta{u} & \meta{f} & \meta{u} \\
+\meta{o} & \meta{f} & \meta{f} & \meta{o} & \meta{o} \\
+\meta{t} & \meta{f} & \meta{u} & \meta{o} & \meta{t} \\
+\end{LogixTable}
+
+$\OpnTortoiseBar$
+
+$\ClsDblGrp$
+
+$\OpnCircBrktS\sum_i^j f_i\ClsCircBrktS$
+
+\end{document}

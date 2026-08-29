@@ -8269,11 +8269,12 @@
 
 - name: logix
   type: package
-  status: unchecked
+  status: currently-incompatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2024-07-18
+  tests: true
+  issues: [1561]
+  luatex-only: true
+  updated: 2026-08-29
 
 - name: logsys
   type: package
@@ -8688,6 +8689,8 @@
   included-in:
   priority: 9
   tests: false
+  luatex-only: true
+  package-repository: "https://github.com/luatexja/luatexja"
   updated: 2026-06-09
 
 - name: luatexja-ajmacros
@@ -8698,19 +8701,20 @@
   priority: 9
   tests: false
   tasks: needs tests
+  luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
   updated: 2026-05-18
 
 - name: luatexja-fontspec
   ctan-pkg: luatexja
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
-  updated: 2026-01-23
+  updated: 2026-08-29
 
 - name: luatexja-otf
   ctan-pkg: luatexja
@@ -8720,40 +8724,43 @@
   priority: 9
   tests: false
   tasks: needs tests
+  luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
   updated: 2026-05-18
 
 - name: luatexja-preset
   ctan-pkg: luatexja
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   tests: false
-  tasks: needs tests
+  luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
-  updated: 2026-05-18
+  updated: 2026-08-29
 
 - name: luatexja-ruby
   ctan-pkg: luatexja
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in:
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-05-18
+  tests: true
+  issues: [1562]
+  luatex-only: true
+  package-repository: "https://github.com/luatexja/luatexja"
+  updated: 2026-08-29
 
 - name: luatexja-zhfonts
   ctan-pkg: luatexja
   type: package
-  status: unchecked
+  status: compatible
   included-in:
   priority: 9
   tests: false
-  tasks: needs tests
+  luatex-only: true
   package-repository: "https://github.com/luatexja/luatexja"
-  updated: 2026-05-18
+  updated: 2026-08-29
 
 - name: luatexko
   type: package
@@ -9103,22 +9110,24 @@
   updated: 2025-05-29
 
 - name: mathenv
-  ctan-pkg: mdwtools
+  ctan-pkg: mdwtab
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1564]
+  updated: 2026-08-29
 
 - name: mathfont
   type: package
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-29
+  tests: true
+  comments: "Requires `tagging-setup={math/mathml/luamml/load}` to produce MathML."
+  issues: [1565]
+  luatex-only: true
+  updated: 2026-08-29
 
 - name: mathpartir
   type: package
@@ -9183,12 +9192,13 @@
 - name: mathscinet
   ctan-pkg: amsrefs
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  tasks: "Should not be used in new documents. Some commands don't produce proper
+          Unicode points. `\\polhk` and `\\soft` error with luatex."
+  updated: 2026-08-29
 
 - name: mathspec
   type: package
@@ -9321,12 +9331,12 @@
 
 - name: mdwtab
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  issues: [1563]
+  updated: 2026-08-29
 
 - name: media9
   type: package

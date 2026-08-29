@@ -1,0 +1,87 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{mathenv}
+
+\title{mathenv tagging test}
+
+\begin{document}
+
+\begin{eqnarray}[*3{rc}rl]
+10w & + & 3x & + & 3y & + & 18z & = 1 \\
+6w & - & 17x & & & - & 5z & = 2
+\end{eqnarray}
+
+\begin{eqnarray}[rl:rl:lq]
+V_i &= v_i - q_i v_j, & X_i &= x_i - q_i x_j, &
+U_i = u_i, \qquad \mbox{for $i \ne j$} \\
+V_j &= v_j, & X_j &= x_j &
+U_j u_j + \sum_{i \ne j} q_i u_i. \label{eq:A}
+\end{eqnarray}
+
+\begin{eqnarray}[rlqqTl]
+x &= y & by (\ref{eq:A}) \\
+x' &= y' & by definition \\
+\tabpause{and}
+x + x' &= y + y' & by Axiom~1
+\end{eqnarray}
+
+\begin{eqnarray*}[Ll]
+w+x+y+z = \\
+& a+b+c+d+e+ \\
+& f+g+h+i+j
+\end{eqnarray*}
+
+\[
+\left\{ \begin{eqnalign}[rl]
+\alpha &= f(z) \\ \beta &= f(z^2) \\
+\gamma &= f(z^3)
+\end{eqnalign} \right\}
+\qquad
+\left\{ \begin{eqnalign}[rl]
+x &= \alpha^2 - \beta \\ y &= 2\gamma
+\end{eqnalign} \right\}.
+\]
+
+\begin{equation}
+\frac{
+\begin{subsplit}
+q^{\frac{1}{2} n(n+1)}(ea; q^2)_\infty (eq/a; q^2)_\infty \\
+(caq/e; q^2)_\infty (cq^2/ae; q^2)_\infty
+\end{subsplit}
+}{
+(e; q)_\infty (cq/e; q)_\infty
+}
+\end{equation}
+
+\[ \begin{matrix} 1 & 0 \\ 0 & -1 \end{matrix} \quad
+\begin{pmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{pmatrix} \quad
+\begin{dmatrix}[] 0 & -i \\ i & 0 \end{dmatrix}
+\]
+
+\[ \mathop{{\sum}'}_{x \in A}
+f(x)
+\stackrel{\mathrm{def}}{=}
+\sum_{\begin{script}
+x \in A \\ x \ne 0
+\end{script}} f(x)
+\]
+
+\[ P_{r-j} = \begin{cases}
+0 & if $r-j$ is odd \\
+r!\,(-1)^{(r-j)/2} & if $r-j$ is even
+\end{cases}
+\]
+
+\end{document}

@@ -1,0 +1,63 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{amsfonts}
+\usepackage{mathscinet}
+
+\title{mathscinet tagging test}
+
+\begin{document}
+
+$
+\bold{ABC}
+\scr{ABC}
+\germ{ABC}
+\hslash
+$
+
+abc\romsup{text}
+
+abc\asup{text}
+
+a\rasp
+
+a\lasp
+
+\Dbar
+
+\dbar
+
+\cprime
+
+\cdprime
+
+\bud
+
+\cydot
+
+\utilde{a}
+
+\uarc{a}
+
+\lfhook{a}
+
+\dudot{a}
+
+\udot{a}
+
+\ifdefined\Uchar
+\else
+\polhk{a}
+
+\soft{a}
+\fi
+
+\end{document}
