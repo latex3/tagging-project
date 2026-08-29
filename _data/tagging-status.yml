@@ -6990,12 +6990,12 @@
 
 - name: hypernat
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "No longer seems necessary."
+  updated: 2026-08-27
 
 - name: hyperref
   type: package
@@ -7629,13 +7629,13 @@
 
 - name: karnaugh-map
   type: package
-  status: unchecked
+  status: currently-incompatible
   included-in: [ol0.02]
   priority: 9
-  tests: false
-  tasks: needs tests
+  tests: true
+  comments: "No way to add Alt text to the diagrams. Some examples error with pdftex."
   package-repository: "https://github.com/2pi/karnaugh-map"
-  updated: 2026-01-23
+  updated: 2026-08-27
 
 - name: kbordermatrix
   type: package
@@ -7888,12 +7888,11 @@
 
 - name: layaureo
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  updated: 2026-08-27
 
 - name: layout
   type: package
