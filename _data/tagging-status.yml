@@ -9446,12 +9446,23 @@
   type: package
   subpackages: [memoizable,nomemoize]
   status: partially-compatible
+  comments: "Tagging requires third-party package memoize-ext."
   priority: 9
   tests: false
-  tasks: "Compatible if used with memoize-ext. Needs tests and adjusted l3build configuration."
+  tasks: "Needs tests."
   issues: [1568]
   package-repository: "https://github.com/sasozivanovic/memoize"
-  updated: 2026-08-30
+  updated: 2026-08-31
+
+- name: memoize-ext
+  type: package
+  status: compatible
+  priority: 9
+  package-repository: "https://codeberg.org/cfr/ltx-logic"
+  tests: true
+  comments: "Adds sockets to the utilisation of externs created by Memoize.
+             actualtext/alt/artifact supported for TikZ pictures."
+  updated: 2026-03-20
 
 - name: mercatormap
   type: package
