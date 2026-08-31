@@ -6,8 +6,9 @@
   uncompress,
 }
 \documentclass{article}
-\usepackage{memoize-ext}	
-\mmzset{prefix=./}
+\usepackage{memoize}
+\mmzset{prefix=./,include context in ccmemo,trace}
+\usepackage{memoize-ext-tag-debug}
 \usepackage{tikz}
 \title{memoize-ext: 01}
 \begin{document}
