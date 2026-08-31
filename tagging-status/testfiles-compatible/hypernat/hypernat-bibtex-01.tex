@@ -1,0 +1,63 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\begin{filecontents}{hypernat-sample.bib}
+@article{einstein,
+    author =       "Albert Einstein",
+    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+        [{On} the electrodynamics of moving bodies]",
+    journal =      "Annalen der Physik",
+    volume =       "322",
+    number =       "10",
+    pages =        "891--921",
+    year =         "1905",
+    DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+}
+@ARTICLE{Arduengo1992,
+  author = {Arduengo, III, Anthony J. and H. V. Rasika Dias and
+    Richard L. Harlow and Michael Kline},
+  title = {Electronic stabilization of nucleophilic carbenes},
+  journal = {J.~Am.\ Chem.\ Soc.},
+  year = {1992},
+  volume = {114},
+  pages = {5530--5534},
+  number = {14},
+  doi = {10.1021/ja00040a007},
+}
+
+@ARTICLE{Arduengo1994,
+  author = {Arduengo, III, Anthony J. and Siegfried F. Gamper and
+    Joseph C. Calabrese and Fredric Davidson},
+  title = {{Low}-coordinate carbene complexes of nickel(0) and
+    platinum(0)},
+  journal = {jacsat},
+  year = {1994},
+  volume = {116},
+  pages = {4391--4394},
+  number = {10},
+  doi = {10.1021/ja00089a029},
+}
+\end{filecontents}
+
+\documentclass{article}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{hypernat}
+
+\title{hypernat tagging test}
+
+\begin{document}
+
+Some text \cite{einstein,Arduengo1992} some more text.
+
+Some text ending a sentence \cite{einstein,Arduengo1992,Arduengo1994}.
+
+\bibliographystyle{plainnat}
+\bibliography{hypernat-sample}
+
+\end{document}
