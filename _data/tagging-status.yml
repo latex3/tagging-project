@@ -1654,6 +1654,15 @@
   tasks: needs tests
   updated: 2024-09-01
 
+- name: babel-malagasy
+  ctan-pkg: babel-malagasy
+  type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-08-31
+
 - name: babel-malay
   ctan-pkg: babel-malay
   type: library
@@ -9448,8 +9457,7 @@
   status: partially-compatible
   comments: "Tagging requires third-party package memoize-ext."
   priority: 9
-  tests: false
-  tasks: "Needs tests."
+  tests: true
   issues: [1568]
   package-repository: "https://github.com/sasozivanovic/memoize"
   updated: 2026-08-31
