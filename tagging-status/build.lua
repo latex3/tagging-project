@@ -187,5 +187,5 @@ function runtest_tasks(name,run)
 end
 
 -- list of extensions to keep between runs (should check if all these are still needed)
-auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf", "*.mmz", "*.memo"}
+auxfiles = {"*.aux", "*.lof", "*.lot", "*.toc","*.bbl","*.bcf"}
 
