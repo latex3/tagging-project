@@ -376,6 +376,13 @@
   tests: false
   updated: 2026-01-30
 
+- name: advice
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-30
+
 - name: afterpackage
   type: package
   status: compatible
@@ -3081,6 +3088,16 @@
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2025-05-29
 
+- name: cfr-initials
+  type: package
+  subpackages: [Acorn,AnnSton,ArtNouv,ArtNouvc,Carrickc,Eichenla,Eileen,EileenBl,
+                Elzevier,GotIn,GoudyIn,Kinigcap,Konanur,Kramer,MorrisIn,Nouveaud,
+                Romantik,Rothdn,Royal,Sanremo,Starburst,Typocaps,Zallman]
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-08-30
+
 - name: cfr-lm
   type: package
   status: compatible
@@ -3530,6 +3547,13 @@
   priority: 2
   tests: false
   updated: 2024-07-14
+
+- name: collargs
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-08-30
 
 - name: collcell
   type: package
@@ -5646,6 +5670,13 @@
   priority: 2
   tests: true
   updated: 2024-07-28
+
+- name: fixtounicode
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  updated: 2026-08-30
 
 - name: flafter
   ctan-pkg: latex-base
@@ -9413,13 +9444,14 @@
 
 - name: memoize
   type: package
-  status: currently-incompatible
+  subpackages: [memoizable,nomemoize]
+  status: partially-compatible
   priority: 9
   tests: false
-  tasks: "Needs tests and adjusted l3build configuration."
+  tasks: "Compatible if used with memoize-ext. Needs tests and adjusted l3build configuration."
   issues: [1568]
   package-repository: "https://github.com/sasozivanovic/memoize"
-  updated: 2026-08-29
+  updated: 2026-08-30
 
 - name: mercatormap
   type: package
@@ -13665,6 +13697,14 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: starfont
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols not correctly mapped to Unicode."
+  updated: 2026-08-30
+
 - name: steinmetz
   type: package
   status: partially-compatible
@@ -15371,6 +15411,14 @@
              Incompatible with unicode-math. No luamml support."
   tests: false
   updated: 2025-05-28
+
+- name: txfontsb
+  type: package
+  status: partially-compatible
+  priority: 9
+  comments: "Incompatible with unicode-math. No luamml support."
+  tests: false
+  updated: 2026-08-30
 
 - name: txgreeks
   type: package
