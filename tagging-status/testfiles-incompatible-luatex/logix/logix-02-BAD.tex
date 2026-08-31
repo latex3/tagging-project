@@ -1,0 +1,51 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{array}
+\usepackage{logix}
+
+\title{logix tagging test -- 2}
+
+\begin{document}
+
+\begin{LogixDefn}[5em]
+\Line{Df}{1}{\symsau{p}}{\symsau{q}}{Some comment}
+\Line{Df}{2}{\symsau{p}}{\symsau{q}}{Yet another comment}
+\end{LogixDefn}
+
+\begin{LogixAxiom}[10em]
+\Line{Ax} {1} {\symsau{p} \Equv \symsau{q}, \symsau{e} \Seq \symsau{e}
+\OpnBrkt \symsau{q} \RightSlash \symsau{p} \ClsBrkt }{ Sequent replacement rule. }
+\Line{Ax} {2} {\symsau{p} \Equv \symsau{q} \Seq \symsau{e} \Equv \symsau{e}
+\OpnBrkt \symsau{q} \RightSlash \symsau{p} \ClsBrkt }
+{ Equivalence replacement rule. }
+\end{LogixAxiom}
+
+\begin{LogixProof} {Th 46} {AC} {\prop{p} \Nd \prop{q}}
+\Blnk {1} {Th 41} {} {\prop{p} \Impl \prop{q}}
+\Dash {2} {Cn 2} {} {\prop{p} \Impl \prop{q}}
+\end{LogixProof}
+
+\begin{LogixProof}[5em] {Th 46} {} {\prop{p} \Nd \prop{q}}
+\Line {1} {Th 41} {} {\prop{p} \Impl \prop{q}} {First comment}
+\Line {2} {Cn 2} {} {\prop{p} \Impl \prop{q}} {}
+\Line {3} {Th 38} {2,1} {\prop{p} \Impl \prop{q}} {Last comment}
+\end{LogixProof}
+
+\begin{LogixSeqnt} {Th 46} {AC} {\prop{p} \Seq \prop{q}}
+\Dash {1} {Th 41} {} {\prop{p}} {\prop{q}}
+\Line {2} {Cn 2} {} {\prop{p}} {\prop{q}}
+\end{LogixSeqnt}
+
+\begin{LogixSeqnt}[3em] {Th 46} {} {\prop{p} \Seq \prop{r}}
+\Blnk {1} {Th 41} {} {\prop{p}} {\prop{r}} {First comment}
+\Blnk {2} {Cn 2} {} {\prop{p}} {\prop{r}} {}
+\Line {3} {Th 38} {2,1} { } {\prop{r}} {Last comment}
+\end{LogixSeqnt}
+
+\end{document}

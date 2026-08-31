@@ -16,15 +16,18 @@
      <Formula xmlns="http://iso.org/pdf2/ssn"
         id="ID.08"
         title="math"
-        af="tag-AFfile1.tex"
+        af="mathml-1.xml tag-AFfile1.tex"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:Placement="Inline"
        >
+       <AssociatedFile name="mathml-1.xml" xmlns="">
+       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mi>𝐴</mi> <mi mathvariant="normal">A</mi> <mi>𝐵</mi> </math>
+       </AssociatedFile>
        <AssociatedFile name="tag-AFfile1.tex" xmlns="">
        $A\skull B$
        </AssociatedFile>
       <!-- UTF16 to UTF8 conversion failure -->
-      <?MarkedContent page="1" ?>A??B
+      <?MarkedContent page="1" ?>𝐴??𝐵
      </Formula>
     </text>
    </text-unit>

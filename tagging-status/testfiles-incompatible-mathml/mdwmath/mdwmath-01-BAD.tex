@@ -1,0 +1,29 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{mdwmath}
+
+\title{mdwmath tagging test}
+
+\begin{document}
+
+% content lost in mathml, output wrong
+$\sqrt{ABC}\sqrt*{ABC}$
+
+$\sqrt[3]{ABC}\sqrt*[3]{ABC}$
+
+% these seem fine
+$\&\bitand\bitor\dblor\dbland$
+
+% this errors regardless of tagging
+%$\bigl\{a| a\in X\bigr\}$
+
+\end{document}
