@@ -3031,6 +3031,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: causets
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  comments: "Compatible as long as `alt` text is given to `\\pcauset`, etc.
+  package-repository: "https://github.com/c-minz/LaTeX-causets"
+  updated: 2026-08-31
+
 - name: ccaption
   type: package
   status: currently-incompatible
@@ -3731,6 +3740,16 @@
   priority: 2
   tests: true
   updated: 2024-07-18
+
+- name: commutative-diagrams
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  related-issues: [30]
+  comments: "Uses incompatible matrix tikzlibrary."
+  package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
+  updated: 2026-08-31
 
 - name: complexity
   type: package
@@ -12421,6 +12440,7 @@
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
+  related-issues: [30]
   tests: true
   comments: "See tikz-cd."
   updated: 2026-08-12
@@ -12438,6 +12458,7 @@
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
+  related-issues: [30]
   tests: false
   comments: "See tikz-cd."
   updated: 2026-01-28
@@ -14716,6 +14737,16 @@
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-26
+
+- name: tikzlibrary-commutative-diagrams
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  related-issues: [30]
+  comments: "TikZ library version of the commutative-diagrams package."
+  package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
+  updated: 2026-08-31
 
 - name: tikzlibrary-external
   ctan-pkg: tikz
