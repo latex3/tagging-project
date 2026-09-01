@@ -1654,6 +1654,15 @@
   tasks: needs tests
   updated: 2024-09-01
 
+- name: babel-malagasy
+  ctan-pkg: babel-malagasy
+  type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: needs tests
+  updated: 2026-08-31
+
 - name: babel-malay
   ctan-pkg: babel-malay
   type: library
@@ -3022,6 +3031,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: causets
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  comments: "Compatible as long as `alt` text is given to `\\pcauset`, etc."
+  package-repository: "https://github.com/c-minz/LaTeX-causets"
+  updated: 2026-08-31
+
 - name: ccaption
   type: package
   status: currently-incompatible
@@ -3722,6 +3740,16 @@
   priority: 2
   tests: true
   updated: 2024-07-18
+
+- name: commutative-diagrams
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  related-issues: [30]
+  comments: "Uses incompatible matrix tikzlibrary."
+  package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
+  updated: 2026-08-31
 
 - name: complexity
   type: package
@@ -8618,13 +8646,13 @@
 
 - name: luadraw
   type: package
-  status: partially-compatible
+  status: compatible
   priority: 9
   comments: "One of the TikZ keys `alt`, `actualtext`, or `artifact` must be given in `pictureoptions`"
   tests: true
   package-repository: "https://github.com/pfradin/luadraw"
   luatex-only: true
-  updated: 2026-08-05
+  updated: 2026-08-31
 
 - name: luahyphenrules
   type: package
@@ -9448,14 +9476,15 @@
   status: partially-compatible
   comments: "Tagging requires third-party package memoize-ext."
   priority: 9
-  tests: false
-  tasks: "Needs tests."
+  tests: true
   issues: [1568]
   package-repository: "https://github.com/sasozivanovic/memoize"
   updated: 2026-08-31
 
 - name: memoize-ext
   type: package
+  subpackages: [memoize-ext-debug,memoize-ext-expl3,memoize-ext-expl3-common,memoize-ext-expl3-common-debug,memoize-ext-expl3-debug,
+                memoize-ext-l3draw,memoize-ext-l3draw-debug,memoize-ext-tag,memoize-ext-tag-debug,memoize-ext-talk,memoize-ext-talk-debug]
   status: compatible
   priority: 9
   package-repository: "https://codeberg.org/cfr/ltx-logic"
@@ -11303,25 +11332,34 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2024-07-28
 
+- name: pgf-PeriodicTable
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1574]
+  package-repository: "https://github.com/HugoPGomes/pgf-periodictable"
+  updated: 2026-08-31
+
 - name: pgf-pie
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible if `alt` text given to containing `tikzpicture`."
   package-repository: "https://github.com/pgf-tikz/pgf-pie"
-  updated: 2026-01-23
+  updated: 2026-08-31
 
 - name: pgf-umlcd
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible if `alt` text given to containing `tikzpicture`."
   package-repository: "https://github.com/pgf-tikz/pgf-umlcd"
-  updated: 2026-01-23
+  updated: 2026-08-31
 
 - name: pgfarrows
   ctan-pkg: pgf
@@ -11380,12 +11418,13 @@
 
 - name: pgfgantt
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Compatible if used within a `tikzpicture` given `alt` text.
+             No way to pass `alt` directly to a `ganttchart` environment."
+  updated: 2026-08-31
 
 - name: pgfheaps
   ctan-pkg: pgf
@@ -11625,6 +11664,15 @@
   priority: 2
   tests: true
   updated: 2024-07-23
+
+- name: pictex
+  type: package
+  subpackages: [pictexwd,piccorr,tree]
+  status: currently-incompatible
+  priority: 9
+  issues: [1575]
+  tests: true
+  updated: 2026-08-31
 
 - name: picture
   type: package
@@ -12411,6 +12459,7 @@
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
+  related-issues: [30]
   tests: true
   comments: "See tikz-cd."
   updated: 2026-08-12
@@ -12428,6 +12477,7 @@
   status: currently-incompatible
   included-in: [ol0.1]
   priority: 9
+  related-issues: [30]
   tests: false
   comments: "See tikz-cd."
   updated: 2026-01-28
@@ -14706,6 +14756,16 @@
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-26
+
+- name: tikzlibrary-commutative-diagrams
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  related-issues: [30]
+  comments: "TikZ library version of the commutative-diagrams package."
+  package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
+  updated: 2026-08-31
 
 - name: tikzlibrary-external
   ctan-pkg: tikz
