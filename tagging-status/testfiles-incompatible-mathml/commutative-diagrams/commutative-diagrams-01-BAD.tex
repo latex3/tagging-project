@@ -1,0 +1,14 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{commutative-diagrams}
+\title{commutative-diagrams tagging test}
+\begin{document}
+\begin{codi}
+\obj { A & B \\ C & D \\ };
+\mor A -> B -> D;
+\mor * -> C -> *;
+\end{codi}
+\end{document}
