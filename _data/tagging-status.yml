@@ -316,6 +316,7 @@
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   closed-issues: [1131]
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adfbullets
@@ -326,6 +327,7 @@
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   closed-issues: [1131]
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adforn
@@ -335,6 +337,7 @@
   priority: 2
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adjcalc
@@ -2013,6 +2016,16 @@
   tests: true
   updated: 2024-08-28
 
+- name: bardiag
+  type: package
+  subpackages: [pstfp]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: baskervald
   ctan-pkg: baskervaldadf
   type: package
@@ -2020,6 +2033,7 @@
   included-in: [arxiv001]
   priority: 7
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: baskervillef
@@ -2116,6 +2130,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: beton
@@ -3122,6 +3137,7 @@
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: chancery
@@ -4457,6 +4473,16 @@
   tests: true
   updated: 2025-05-29
 
+- name: dsptricks
+  type: package
+  subpackages: [dspblocks,dspfunctions]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: dsserif
   type: package
   status: partially-compatible
@@ -4640,6 +4666,15 @@
   tests: false
   updated: 2026-02-01
 
+- name: egpeirce
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: ekdosis
   type: package
   status: unchecked
@@ -4655,6 +4690,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: ellipsis
@@ -5704,6 +5740,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-08-30
 
 - name: flafter
@@ -8232,6 +8269,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: liftarm
@@ -10340,6 +10378,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: ngerman
@@ -12009,6 +12048,15 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: psgo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pslatex
   type: package
   status: unchecked
@@ -12017,6 +12065,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: pst-2dplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-3d
   type: package
@@ -12027,6 +12084,24 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-3dplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-abspos
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-all
   ctan-pkg: pstricks
@@ -12039,6 +12114,60 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-am
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-antiprism
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-arrow
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-art-led
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-asr
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-bar
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-barcode
   type: package
   status: currently-incompatible
@@ -12049,6 +12178,33 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-bezier
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-blur
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-bspline
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-calculate
   type: package
   status: partially-compatible
@@ -12056,6 +12212,42 @@
   tests: false
   comments: "See siunitx."
   updated: 2026-02-01
+
+- name: pst-calendar
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-chladni
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-cie
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-circ
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-coil
   type: package
@@ -12066,6 +12258,89 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-contourplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-coxcoor
+  ctan-pkg: pst-cox
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-coxeterp
+  ctan-pkg: pst-cox
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-dart
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-dbicons
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-diffraction
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-electricfield
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-electrolysis
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ellipsoid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-eps
   type: package
   status: currently-incompatible
@@ -12074,6 +12349,15 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-eqhz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-eucl
   type: package
@@ -12085,6 +12369,23 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-exa
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: Needs tests.
+  updated: 2026-09-01
+
+- name: pst-feyn
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-fill
   type: package
   status: currently-incompatible
@@ -12093,6 +12394,61 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-fit
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-flags
+  type: package
+  subpackages: [pst-flags-colors-html]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fourbarlinkage
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fr3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fractal
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fun
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-func
   type: package
@@ -12104,6 +12460,51 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-gantt
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-gears
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-geo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-geometrictools
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-gr3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-grad
   type: package
   status: currently-incompatible
@@ -12113,6 +12514,167 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-hertz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hsb
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hyperboloid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hypertiling
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-infixplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-intersect
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-jtree
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-kepler
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-key
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  updated: 2026-09-01
+
+- name: pst-knot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-labo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-layout
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-lens
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-light3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-lsystem
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-magneticfield
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-marble
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-massspring
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-math
   type: package
@@ -12124,6 +12686,24 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-mirror
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-moire
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-node
   type: package
   status: currently-incompatible
@@ -12134,6 +12714,60 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-nutation
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ob3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ode
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-optexp
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-optic
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-osci
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-ovl
   type: package
   status: currently-incompatible
@@ -12143,6 +12777,15 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-pad
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-pdf
   type: package
   status: currently-incompatible
@@ -12151,6 +12794,33 @@
   tasks: needs tests
   comments: See pstricks.
   updated: 2025-11-24
+
+- name: pst-pdgr
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-perspective
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-platon
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-plot
   type: package
@@ -12162,6 +12832,168 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-poker
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-poly
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-pulley
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-qtree
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-rputover
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-rubans
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-shell
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-sigsys
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-slpe
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-solarsystem
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-solides3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-soroban
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spectra
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spectrum
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-sphericaltrochoid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spinner
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spirograph
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-stru
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-text
   type: package
   status: currently-incompatible
@@ -12172,6 +13004,33 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-thick
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-titration
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-tools
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-tree
   type: package
   status: currently-incompatible
@@ -12181,6 +13040,60 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-turtle
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-tvz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-uml
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-vehicle
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-venn
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-vowel
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-xkey
   ctan-pkg: xkeyval
@@ -12741,6 +13654,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: romannum
@@ -13218,6 +14132,15 @@
   tests: false
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2026-06-30
+
+- name: sfg
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: sfmath
   type: package
@@ -14682,13 +15605,13 @@
 
 - name: tikz-network
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/hackl/tikz-network"
-  updated: 2026-01-23
+  updated: 2026-09-01
 
 - name: tikz-qtree
   type: package
@@ -14699,6 +15622,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: tikz-timing
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "`Use of `\\timing` is compatible as long as `alt` text given to the containing `tikzpicture`. Similarly for `tikztimingtable`. No way to pass Alt text to `\\\texttiming` or the `T` column type of the `columntype` library."
+  package-repository: "https://github.com/MartinScharrer/tikz-timing"
+  updated: 2026-09-01
 
 - name: tikzbricks
   type: package
@@ -15597,6 +16529,15 @@
   tests: true
   updated: 2024-07-26
 
+- name: uml
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: uncial
   type: package
   status: compatible
@@ -15787,6 +16728,16 @@
 
 #------------------------ VVV ----------------------------
 
+- name: VocalTract
+  type: package
+  subpackages: [vaucanson]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+  
 - name: varioref
   type: package
   status: compatible
@@ -15806,6 +16757,16 @@
   tasks: adjustments in block code needed?
   tests: true
   updated: 2024-07-10
+
+- name: vaucanson-g
+  type: package
+  subpackages: [vaucanson]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: vcell
   type: package
@@ -15842,6 +16803,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: verbatim
