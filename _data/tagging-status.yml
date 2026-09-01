@@ -8646,13 +8646,13 @@
 
 - name: luadraw
   type: package
-  status: partially-compatible
+  status: compatible
   priority: 9
   comments: "One of the TikZ keys `alt`, `actualtext`, or `artifact` must be given in `pictureoptions`"
   tests: true
   package-repository: "https://github.com/pfradin/luadraw"
   luatex-only: true
-  updated: 2026-08-05
+  updated: 2026-08-31
 
 - name: luahyphenrules
   type: package
@@ -11332,25 +11332,34 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2024-07-28
 
+- name: pgf-PeriodicTable
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1574]
+  package-repository: "https://github.com/HugoPGomes/pgf-periodictable"
+  updated: 2026-08-31
+
 - name: pgf-pie
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible if `alt` text given to containing `tikzpicture`."
   package-repository: "https://github.com/pgf-tikz/pgf-pie"
-  updated: 2026-01-23
+  updated: 2026-08-31
 
 - name: pgf-umlcd
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible if `alt` text given to containing `tikzpicture`."
   package-repository: "https://github.com/pgf-tikz/pgf-umlcd"
-  updated: 2026-01-23
+  updated: 2026-08-31
 
 - name: pgfarrows
   ctan-pkg: pgf
@@ -11409,12 +11418,13 @@
 
 - name: pgfgantt
   type: package
-  status: unchecked
+  status: partially-compatible
   included-in: [ol0.1]
   priority: 9
-  tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  tests: true
+  comments: "Compatible if used within a `tikzpicture` given `alt` text.
+             No way to pass `alt` directly to a `ganttchart` environment."
+  updated: 2026-08-31
 
 - name: pgfheaps
   ctan-pkg: pgf
@@ -11654,6 +11664,15 @@
   priority: 2
   tests: true
   updated: 2024-07-23
+
+- name: pictex
+  type: package
+  subpackages: [pictexwd,piccorr,tree]
+  status: currently-incompatible
+  priority: 9
+  issues: [1575]
+  tests: true
+  updated: 2026-08-31
 
 - name: picture
   type: package
