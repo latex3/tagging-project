@@ -820,6 +820,9 @@
 
 - name: arabi
   type: package
+  subpackages: [translit,lagally,haparabica,frfonts,fnum,fmultico,farsifnt,
+                calendrierfpmodified,calendrierfpar,arfonts,arabnovowel,arabipoetry,
+                arabiftoday,arabicore,arabicfnt,PPRarabic]
   status: no-support
   included-in: [tlc3]
   priority: 8
@@ -8527,6 +8530,15 @@
   tests: false
   updated: 2026-07-06
 
+- name: lsc
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
+
 - name: lscape
   type: package
   status: compatible
@@ -9105,6 +9117,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-06-17
+
+- name: makeplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
 
 - name: makerobust
   type: package
@@ -10047,6 +10068,15 @@
   updated: 2026-02-03
 
 #------------------------ NNN ----------------------------
+
+- name: NumericPlots
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
 
 - name: nabatean
   type: package
@@ -14947,6 +14977,15 @@
   issues: [1552]
   tests: true
   updated: 2026-08-23
+
+- name: synproof
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: syntax
   ctan-pkg: syntax-mdw
