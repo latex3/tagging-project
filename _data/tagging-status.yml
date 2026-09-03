@@ -3486,10 +3486,9 @@
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
-  issues: [1166]
-  closed-issues: [2]
+  issues: [1580]
+  closed-issues: [2,1166]
   tests: true
-  tasks: More tests needed
   updated: 2026-01-19
 
 - name: clipboard
@@ -8641,9 +8640,10 @@
 
 - name: lua-ul
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 2
   comments: "Missing TextDecoration attributes."
+  issues: [1581]
   package-repository: "https://github.com/zauguin/luaul"
   luatex-only: true
   tests: true
@@ -14980,6 +14980,33 @@
   package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
   updated: 2026-08-31
 
+- name: tikzlibrary-datavisualization
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-datavisualization.formats.functions
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-datavisualization.polar
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-decorations.footprints
   ctan-pkg: tikz
   type: library
@@ -14997,6 +15024,15 @@
   tests: false
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2026-09-02
+
+- name: tikzlibrary-decorations
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-decorations.markings
   ctan-pkg: tikz
@@ -15091,6 +15127,15 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2026-09-02
 
+- name: tikzlibrary-folding
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-fpu
   ctan-pkg: tikz
   type: library
@@ -15157,6 +15202,15 @@
   comments: "TikZ library version of the tikzmarmots package."
   updated: 2026-08-23
 
+- name: tikzlibrary-math
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
   type: library
@@ -15167,6 +15221,15 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2025-09-12
 
+- name: tikzlibrary-mindmap
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-nfold
   ctan-pkg: tikz-nfold
   type: library
@@ -15175,6 +15238,69 @@
   priority: 9
   tests: false
   updated: 2026-08-24
+
+- name: tikzlibrary-patterns
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-patterns.meta
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-perspective
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-petri
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-plothandlers
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-plotmarks
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-profiler
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-quantikz
   type: library
@@ -15194,6 +15320,15 @@
   comments: "TikZ library version of the quantikz package."
   updated: 2026-09-02
 
+- name: tikzlibrary-rdf
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-rulercompass
   type: library
   ctan-pkg: rulercompass
@@ -15202,6 +15337,24 @@
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-26
+
+- name: tikzlibrary-shadings
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shadows
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-shadows.blur
   ctan-pkg: pgf-blur
@@ -15257,6 +15410,60 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2026-09-02
 
+- name: tikzlibrary-shapes.arrows
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.callouts
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.geometric
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.misc
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.multipart
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.symbols
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-spath3
   type: library
   ctan-pkg: spath3
@@ -15267,6 +15474,24 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/loopspace/spath3"
   updated: 2026-08-26
+
+- name: tikzlibrary-spy
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-svg.path
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-tikzlings
   ctan-pkg: tikzlings
@@ -15309,6 +15534,24 @@
   package-repository: "https://github.com/loopspace/tilings"
   updated: 2026-08-26
 
+- name: tikzlibrary-through
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-topaths
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
 - name: tikzlibrary-tqft
   type: library
   ctan-pkg: tqft
@@ -15318,6 +15561,33 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/loopspace/TQFT"
   updated: 2026-08-26
+
+- name: tikzlibrary-trees
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-turtle
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-views
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-zx-calculus
   type: library
