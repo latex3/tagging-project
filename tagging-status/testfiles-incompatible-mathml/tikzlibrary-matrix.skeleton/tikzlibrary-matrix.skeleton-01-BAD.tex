@@ -1,0 +1,48 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{tikz}
+\usetikzlibrary{matrix.skeleton}
+
+\title{matrix.skeleton tagging test}
+
+\begin{document}
+
+% okay
+\begin{tikzpicture}[alt=checkerboard picture]
+\matrix (m) [draw, matrix of nodes, row sep=2mm, column sep=1mm,
+nodes={draw, thick, circle, inner sep=1pt}, label skeleton] {
+& 1 & &[2mm]|[gray]|1\\
+& & 2 &|[gray]|2\\
+|[gray]|2 & & &|[gray]|2\\[4mm]
+3 & & & 3\\
+};
+\foreach \row in {1, ..., 4} {
+\foreach \col in {1, ..., 4} {
+\pgfmathparse{Mod(\row + \col, 2) ? "red!25" : "yellow!30"}
+\colorlet{squarebg}{\pgfmathresult}
+\fitandstyle[background]{(m-tiling-cell-\row-\col)}{fill = squarebg}
+}
+}
+\end{tikzpicture}
+
+% errors
+\begin{tikzpicture}[alt=a table]
+\matrix (m) [matrix of math nodes, style contour = {draw, very thick},
+style grid = {draw, thin}] {
+1 & \frac{\frac{16}{4}}{1 + \frac{2}{2}} & 3 \\
+3.999999 & 5 & 6 \\
+7 & 8.000001 & 3 + 3 + 3 \\
+};
+\end{tikzpicture}
+
+\end{document}

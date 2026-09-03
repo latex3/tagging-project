@@ -1,0 +1,36 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\usepackage{atableau}
+\usetikzlibrary{decorations.pathmorphing}
+\title{atableau tagging test}
+
+\begin{document}
+
+some text
+
+\Abacus{4}{4^3,2,1^2,0} \qquad
+\Tableau{1239,456{10},78}
+
+\begin{tikzpicture}[alt=some diagrams,wave/.style={thick,red,->,decorate,decoration=snake}]
+\aTabset{ribbon style={fill=blue!20, opacity=0.4}}
+\Diagram(0,2.2)[e=2,entries=residues,ribbons={13crc}]{3,2}
+\Diagram(0,0)[e=2,entries=residues,ribbons={12rcr},name=B]{2^2,1}
+\draw[wave](A-2-1.south east)--(B-1-1.north east);
+\end{tikzpicture}
+
+\aTabset{scale=0.7}
+\Multidiagram[left delimiter=\langle,
+right delimiter={]}]{2,1|1} \quad
+\Multidiagram[delimiters={\|}{\}} ]{1^2|2}
+
+\end{document}
