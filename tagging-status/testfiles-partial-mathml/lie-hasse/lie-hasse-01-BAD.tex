@@ -1,0 +1,22 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{lie-hasse}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\title{lie-hasse tagging test}
+\begin{document}
+
+The Hasse diagram of \(F_4\) is
+\begin{center}
+\hasse F4
+\end{center}
+
+\begin{tikzpicture}[alt=A Hasse diagram]
+\hasse A4
+\draw (4;1) circle (5pt);
+\draw[red] (2;3) circle (5pt);
+\end{tikzpicture}
+
+\end{document}
