@@ -1,0 +1,28 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{sparklines}
+
+\title{sparklines tagging test}
+\begin{document}
+
+Some text
+\begin{sparkline}{10}
+\sparkrectangle 0.3 0.8
+\sparkdot 0.5 0.62 blue
+\sparkdot 1 0.2 red
+\spark 0.1 0.95 0.2 0.8 0.3 0.3 0.4 0.52 0.5 0.62
+       0.6 0.7 0.7 0.5 0.8 0.4 0.9 0.25 1 0.2 /
+\end{sparkline}
+and more text
+
+\begin{sparkline}{5}
+\sparkspike .083 .18
+\sparkspike .25 .55
+\sparkspike .417 1
+\sparkspike .583 .62
+\sparkspike .75 .42
+\sparkspike .917 .5
+\end{sparkline}
+
+\end{document}

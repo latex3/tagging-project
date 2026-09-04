@@ -1,0 +1,25 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{arrayjob}
+
+\title{arrayjob tagging test}
+
+\begin{document}
+
+\newarray\Values
+\readarray{Values}{A&B&C&D}
+\verb+\Values(3)+ = `\Values(3)'
+
+\newarray\Actors
+\readarray{Actors}{Louise Brooks&Marlene Dietrich&Clark Gable}
+\verb+\Actors(2)+ = `\Actors(2)'
+
+\readarray{Actors}{%
+Louise Brooks & Marlene Dietrich & Clark Gable}
+\verb+\Actors(2)+ = `\Actors(2)'
+
+\Actors(4)={\textit{\underline{Ida Lupino}}}
+\verb+\Actors(4)+ = `\Actors(4)'
+
+\end{document}

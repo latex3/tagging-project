@@ -316,6 +316,7 @@
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   closed-issues: [1131]
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adfbullets
@@ -326,6 +327,7 @@
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   closed-issues: [1131]
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adforn
@@ -335,6 +337,7 @@
   priority: 2
   comments: "The fonts must be loaded via the package for correct ToUnicode values."
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-02-26
 
 - name: adjcalc
@@ -603,8 +606,8 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,803,851,857,919,1033,1341,1407]
-  closed-issues: [28,77,811,846,848,850,852,859,875,981]
+  issues: [712,851,857,919,1033,1341,1407]
+  closed-issues: [28,77,803,811,846,848,850,852,859,875,981]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
   updated: 2026-03-14
@@ -817,6 +820,9 @@
 
 - name: arabi
   type: package
+  subpackages: [translit,lagally,haparabica,frfonts,fnum,fmultico,farsifnt,
+                calendrierfpmodified,calendrierfpar,arfonts,arabnovowel,arabipoetry,
+                arabiftoday,arabicore,arabicfnt,PPRarabic]
   status: no-support
   included-in: [tlc3]
   priority: 8
@@ -914,6 +920,22 @@
   package-repository: "https://github.com/latex3/latex2e"
   updated: 2024-07-06
 
+- name: arrayjob
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1579]
+  comments: "Obsolete. Use the arrayjobx package instead."
+  updated: 2026-09-02
+
+- name: arrayjobx
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-02
+
 - name: arsclassica
   type: package
   status: unchecked
@@ -1003,6 +1025,14 @@
   package-repository: "https://github.com/vectorgraphics/asymptote"
   updated: 2024-08-28
 
+- name: atableau
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "No way to add alt text to tableau used outside a `tikzpicture`."
+  updated: 2026-09-03
+
 - name: atbegshi
   type: package
   status: compatible
@@ -1059,6 +1089,7 @@
 
 - name: atveryend
   type: package
+  subpackages: [atveryend-ltx]
   status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/atveryend"
   included-in: [tlc3, arxiv01]
@@ -2013,6 +2044,16 @@
   tests: true
   updated: 2024-08-28
 
+- name: bardiag
+  type: package
+  subpackages: [pstfp]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: baskervald
   ctan-pkg: baskervaldadf
   type: package
@@ -2020,6 +2061,7 @@
   included-in: [arxiv001]
   priority: 7
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: baskervillef
@@ -2116,6 +2158,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: beton
@@ -3122,6 +3165,7 @@
   included-in: [arxiv001, ol0.1]
   priority: 7
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: chancery
@@ -3469,10 +3513,9 @@
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   comments: "Must be loaded after amsmath."
-  issues: [1166]
-  closed-issues: [2]
+  issues: [1580]
+  closed-issues: [2,1166]
   tests: true
-  tasks: More tests needed
   updated: 2026-01-19
 
 - name: clipboard
@@ -4165,6 +4208,15 @@
   package-repository: "https://github.com/latex3/latex2e"
   updated: 2025-06-09
 
+- name: dcpic
+  type: package
+  status: currently-incompatible
+  priority: 9
+  related-issues: [1575]
+  tests: true
+  comments: "No way to add Alt text to diagram; see pictex."
+  updated: 2026-09-02
+
 - name: decorule
   type: package
   status: currently-incompatible
@@ -4457,6 +4509,16 @@
   tests: true
   updated: 2025-05-29
 
+- name: dsptricks
+  type: package
+  subpackages: [dspblocks,dspfunctions]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: dsserif
   type: package
   status: partially-compatible
@@ -4508,6 +4570,15 @@
   comments: "Incompatible with unicode-math. No luamml support."
   tests: false
   updated: 2025-05-29
+
+- name: dynkin-diagrams
+  type: package
+  status: partially-compatible
+  priority: 9
+  comments: "No way to pass Alt text to `\\dynkin` or a `dynkinDiagram` outside
+             of a `tikzpicture`."
+  tests: true
+  updated: 2026-09-02
 
 #------------------------ EEE ----------------------------
 
@@ -4640,6 +4711,15 @@
   tests: false
   updated: 2026-02-01
 
+- name: egpeirce
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: ekdosis
   type: package
   status: unchecked
@@ -4655,6 +4735,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: ellipsis
@@ -5704,6 +5785,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2026-08-30
 
 - name: flafter
@@ -8232,8 +8314,17 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
+- name: lie-hasse
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "See dynkin-diagrams."
+  updated: 2026-09-02
+  
 - name: liftarm
   type: package
   status: compatible
@@ -8489,6 +8580,15 @@
   tests: false
   updated: 2026-07-06
 
+- name: lsc
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
+
 - name: lscape
   type: package
   status: compatible
@@ -8598,9 +8698,10 @@
 
 - name: lua-ul
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 2
   comments: "Missing TextDecoration attributes."
+  issues: [1581]
   package-repository: "https://github.com/zauguin/luaul"
   luatex-only: true
   tests: true
@@ -9068,6 +9169,15 @@
   tasks: needs tests
   updated: 2026-06-17
 
+- name: makeplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
+
 - name: makerobust
   type: package
   status: compatible
@@ -9457,6 +9567,15 @@
   tests: true
   issues: [1563]
   updated: 2026-08-29
+
+- name: media4svg
+  type: package
+  status: no-support
+  priority: 9
+  tests: false
+  package-repository: "https://gitlab.com/agrahn/media4svg"
+  comments: "Requires unsupported svg output via `dvisvgm`."
+  updated: 2026-09-02
 
 - name: media9
   type: package
@@ -10010,6 +10129,15 @@
 
 #------------------------ NNN ----------------------------
 
+- name: NumericPlots
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-02
+
 - name: nabatean
   type: package
   status: partially-compatible
@@ -10340,6 +10468,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: ngerman
@@ -11351,6 +11480,14 @@
   package-repository: "https://github.com/pgf-tikz/pgf-pie"
   updated: 2026-08-31
 
+- name: pgf-spectra
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: "No way to add Alt text to spectra; poor tagging for `\\pgfspectratable`."
+  updated: 2026-09-02
+
 - name: pgf-umlcd
   type: package
   status: compatible
@@ -11395,6 +11532,15 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2024-08-02
 
+- name: pgfcalendar-ext
+  ctan-pkg: tikz-ext
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
 - name: pgfcore
   ctan-pkg: pgf
   type: package
@@ -11415,6 +11561,15 @@
   tests: false
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2024-08-02
+
+- name: pgffor-ext
+  ctan-pkg: tikz-ext
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
 
 - name: pgfgantt
   type: package
@@ -12009,6 +12164,15 @@
   tasks: needs tests
   updated: 2024-07-18
 
+- name: psgo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pslatex
   type: package
   status: unchecked
@@ -12017,6 +12181,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: pst-2dplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-3d
   type: package
@@ -12027,6 +12200,24 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-3dplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-abspos
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-all
   ctan-pkg: pstricks
@@ -12039,6 +12230,60 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-am
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-antiprism
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-arrow
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-art-led
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-asr
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-bar
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-barcode
   type: package
   status: currently-incompatible
@@ -12049,6 +12294,33 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-bezier
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-blur
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-bspline
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-calculate
   type: package
   status: partially-compatible
@@ -12056,6 +12328,42 @@
   tests: false
   comments: "See siunitx."
   updated: 2026-02-01
+
+- name: pst-calendar
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-chladni
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-cie
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-circ
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-coil
   type: package
@@ -12066,6 +12374,89 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-contourplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-coxcoor
+  ctan-pkg: pst-cox
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-coxeterp
+  ctan-pkg: pst-cox
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-dart
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-dbicons
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-diffraction
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-electricfield
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-electrolysis
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ellipsoid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-eps
   type: package
   status: currently-incompatible
@@ -12074,6 +12465,15 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-eqhz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-eucl
   type: package
@@ -12085,6 +12485,23 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-exa
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: Needs tests.
+  updated: 2026-09-01
+
+- name: pst-feyn
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-fill
   type: package
   status: currently-incompatible
@@ -12093,6 +12510,61 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-fit
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-flags
+  type: package
+  subpackages: [pst-flags-colors-html]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fourbarlinkage
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fr3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fractal
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-fun
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-func
   type: package
@@ -12104,6 +12576,51 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-gantt
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-gears
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-geo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-geometrictools
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-gr3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-grad
   type: package
   status: currently-incompatible
@@ -12113,6 +12630,167 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-hertz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hsb
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hyperboloid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-hypertiling
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-infixplot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-intersect
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-jtree
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-kepler
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-key
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  updated: 2026-09-01
+
+- name: pst-knot
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-labo
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-layout
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-lens
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-light3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-lsystem
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-magneticfield
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-marble
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-massspring
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-math
   type: package
@@ -12124,6 +12802,24 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-mirror
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-moire
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-node
   type: package
   status: currently-incompatible
@@ -12134,6 +12830,60 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-nutation
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ob3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-ode
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-optexp
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-optic
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-osci
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-ovl
   type: package
   status: currently-incompatible
@@ -12143,6 +12893,15 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-pad
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-pdf
   type: package
   status: currently-incompatible
@@ -12151,6 +12910,33 @@
   tasks: needs tests
   comments: See pstricks.
   updated: 2025-11-24
+
+- name: pst-pdgr
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-perspective
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-platon
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-plot
   type: package
@@ -12162,6 +12948,168 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-poker
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-poly
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-pulley
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-qtree
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-rputover
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-rubans
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-shell
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-sigsys
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-slpe
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-solarsystem
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-solides3d
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-soroban
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spectra
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spectrum
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-sphericaltrochoid
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spinner
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-spirograph
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-stru
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-text
   type: package
   status: currently-incompatible
@@ -12172,6 +13120,33 @@
   comments: "See pstricks."
   updated: 2026-02-01
 
+- name: pst-thick
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-titration
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-tools
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: pst-tree
   type: package
   status: currently-incompatible
@@ -12181,6 +13156,60 @@
   tests: false
   comments: "See pstricks."
   updated: 2026-02-01
+
+- name: pst-turtle
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-tvz
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-uml
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-vehicle
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-venn
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
+- name: pst-vowel
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: pst-xkey
   ctan-pkg: xkeyval
@@ -12536,6 +13565,14 @@
   tests: false
   updated: 2026-04-01
 
+- name: rank-2-roots
+  type: package
+  status: compatible
+  priority: 9
+  comments: "Compatible as long as `alt` text is given to the containing `tikzpicture`."
+  tests: false
+  updated: 2026-09-02
+
 - name: rawfonts
   type: package
   status: compatible
@@ -12741,6 +13778,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: romannum
@@ -12873,6 +13911,14 @@
   tests: true
   package-repository: "https://github.com/T-F-S/sanitize-umlaut"
   updated: 2025-11-06
+
+- name: sankey
+  type: package
+  status: unchecked
+  priority: 9
+  tests: false
+  tasks: Needs tests.
+  updated: 2026-09-03
 
 - name: sansmath
   type: package
@@ -13218,6 +14264,15 @@
   tests: false
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
   updated: 2026-06-30
+
+- name: sfg
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: sfmath
   type: package
@@ -13652,6 +14707,14 @@
   comments: "Spark charts need to be tagged as figure with Alt text."
   updated: 2024-08-07
 
+- name: sparklines
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: "No way to add Alt text to the `sparkline` environment."
+  updated: 2026-09-02
+
 - name: spectral
   type: package
   status: compatible
@@ -14024,6 +15087,15 @@
   issues: [1552]
   tests: true
   updated: 2026-08-23
+
+- name: synproof
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: syntax
   ctan-pkg: syntax-mdw
@@ -14650,6 +15722,7 @@
   priority: 2
   issues: [30]
   tests: true
+  package-repository: "https://github.com/astoff/tikz-cd/"
   updated: 2025-05-08
 
 - name: tikz-dependency
@@ -14682,13 +15755,13 @@
 
 - name: tikz-network
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/hackl/tikz-network"
-  updated: 2026-01-23
+  updated: 2026-09-01
 
 - name: tikz-qtree
   type: package
@@ -14699,6 +15772,15 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: tikz-timing
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "`Use of `\\timing` is compatible as long as `alt` text given to the containing `tikzpicture`. Similarly for `tikztimingtable`. No way to pass Alt text to `\\\texttiming` or the `T` column type of the `columntype` library."
+  package-repository: "https://github.com/MartinScharrer/tikz-timing"
+  updated: 2026-09-01
 
 - name: tikzbricks
   type: package
@@ -14729,9 +15811,97 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-24
 
-- name: tikzlibrary-braids
+- name: tikzlibrary-3d
+  ctan-pkg: tikz
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-angles
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-animations
+  ctan-pkg: tikz
+  type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-automata
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-babel
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-backgrounds
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-bayesnet
+  ctan-pkg: tikz-bayesnet
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-bbox
+  ctan-pkg: tikz-bbox
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/marmotghost/tikz-bbox"
+  updated: 2026-09-03
+
+- name: tikzlibrary-bending
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-bpmn
+  ctan-pkg: tikz-bpmn
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-braids
   ctan-pkg: braids
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14739,9 +15909,27 @@
   package-repository: "https://github.com/loopspace/braids"
   updated: 2026-08-26
 
-- name: tikzlibrary-calligraphy
+- name: tikzlibrary-calc
+  ctan-pkg: tikz
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-calendar
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-calligraphy
   ctan-pkg: spath3
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14749,7 +15937,18 @@
   package-repository: "https://github.com/loopspace/spath3"
   updated: 2026-08-26
 
+- name: tikzlibrary-cd
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  issues: [30]
+  comments: "TikZ library version of the tikz-cd package."
+  package-repository: "https://github.com/astoff/tikz-cd/"
+  updated: 2026-09-02
+
 - name: tikzlibrary-celtic
+  ctan-pkg: celtic
   type: library
   status: compatible
   priority: 9
@@ -14757,7 +15956,113 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-26
 
+- name: tikzlibrary-chains
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.ee
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.ee.IEC
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.ee.IEC.relay
+  ctan-pkg: tikz-relay
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-circuits.logic
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.logic.CDH
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.logic.IEC
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-circuits.logic.US
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-circuits.plc.ladder
+  ctan-pkg: tikz-ladder
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-circuits.plc.sfc
+  ctan-pkg: tikz-sfc
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-colorbrewer
+  ctan-pkg: pgfplots
+  type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgfplots"
+  updated: 2026-09-03
+
 - name: tikzlibrary-commutative-diagrams
+  ctan-pkg: commutative-diagrams
   type: library
   status: currently-incompatible
   priority: 9
@@ -14766,6 +16071,358 @@
   comments: "TikZ library version of the commutative-diagrams package."
   package-repository: "https://github.com/paolobrasolin/commutative-diagrams"
   updated: 2026-08-31
+
+- name: tikzlibrary-curvilinear
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-datavisualization
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-datavisualization.formats.functions
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-datavisualization.polar
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-decorations
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-decorations.footprints
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.fractals
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.markings
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.pathmorphing
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.pathreplacing
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.shapes
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-decorations.text
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-dubins
+  ctan-pkg: sankey
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-ducks
+  ctan-pkg: tikzducks
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "TikZ library version of the tikzducks package."
+  package-repository: "https://github.com/samcarter/tikzducks"
+  updated: 2026-09-03
+
+- name: tikzlibrary-er
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-ext.arrows
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.arrows-plus
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.beamer
+  ctan-pkg: tikz-ext
+  type: library
+  status: no-support
+  priority: 9
+  tests: false
+  comments: "beamer is not a supported class."
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.calendar-plus
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.layers
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.misc
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.node-families
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.node-families.shapes.geometric
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.nodes
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.paths.arcto
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.paths.ortho
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.paths.timer
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.patterns.images
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.positioning-plus
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.scalepicture
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.circlearrow
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.circlecrosssplit
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.heatmark
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.rectangleroundedcorners
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.superellipse
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.shapes.uncenteredrectangle
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.topaths.arcthrough
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.topaths.autobend
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
+
+- name: tikzlibrary-ext.transformations.mirror
+  ctan-pkg: tikz-ext
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/Qrrbrbirlbel/tikz-extensions"
+  updated: 2026-09-03
 
 - name: tikzlibrary-external
   ctan-pkg: tikz
@@ -14788,9 +16445,112 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2026-02-06
 
-- name: tikzlibrary-hobby
+- name: tikzlibrary-fill.geomarray
+  ctan-pkg: tikzfill
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tikzfill."
+  package-repository: "https://github.com/T-F-S/tikzfill"
+  updated: 2026-09-03
+
+- name: tikzlibrary-fill.hexagon
+  ctan-pkg: tikzfill
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tikzfill."
+  package-repository: "https://github.com/T-F-S/tikzfill"
+  updated: 2026-09-03
+
+- name: tikzlibrary-fill.image
+  ctan-pkg: tikzfill
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tikzfill."
+  package-repository: "https://github.com/T-F-S/tikzfill"
+  updated: 2026-09-03
+
+- name: tikzlibrary-fill.rhombus
+  ctan-pkg: tikzfill
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "See tikzfill."
+  package-repository: "https://github.com/T-F-S/tikzfill"
+  updated: 2026-09-03
+
+- name: tikzlibrary-fit
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-fixedpointarithmetic
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-folding
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-fpu
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-graphdrawing
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-graphs
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-graphs.standard
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-hobby
   ctan-pkg: hobby
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14798,15 +16558,41 @@
   package-repository: "https://github.com/loopspace/hobby"
   updated: 2026-08-26
 
-- name: tikzlibrary-knots
+- name: tikzlibrary-intersections
+  ctan-pkg: tikz
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-karnaugh
+  ctan-pkg: tikz-karnaugh
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-knots
   ctan-pkg: spath3
+  type: library
   status: compatible
   priority: 9
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/loopspace/spath3"
   updated: 2026-08-26
+
+- name: tikzlibrary-lindenmayersystems
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
 
 - name: tikzlibrary-marmots
   ctan-pkg: tikzmarmots
@@ -14818,6 +16604,15 @@
   comments: "TikZ library version of the tikzmarmots package."
   updated: 2026-08-23
 
+- name: tikzlibrary-math
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
 - name: tikzlibrary-matrix
   ctan-pkg: tikz
   type: library
@@ -14828,6 +16623,34 @@
   package-repository: "https://github.com/pgf-tikz/pgf"
   updated: 2025-09-12
 
+- name: tikzlibrary-matrix.skeleton
+  ctan-pkg: matrix-skeleton
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: "See matrix tikzlibrary."
+  package-repository: "https://github.com/dudebout/matrix.skeleton"
+  updated: 2026-09-03
+
+- name: tikzlibrary-mindmap
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-nef
+  ctan-pkg: tikz-nef
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/jgosmann/tikz-nef"
+  updated: 2026-09-03
+
 - name: tikzlibrary-nfold
   ctan-pkg: tikz-nfold
   type: library
@@ -14837,14 +16660,185 @@
   tests: false
   updated: 2026-08-24
 
-- name: tikzlibrary-rulercompass
+- name: tikzlibrary-ocgx
+  ctan-pkg: ocgx
   type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-optics
+  ctan-pkg: tikz-optics
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/fruchart/tikz-optics"
+  updated: 2026-09-03
+
+- name: tikzlibrary-overlay-beamer-styles
+  ctan-pkg: aobs-tikz
+  type: library
+  status: no-support
+  priority: 9
+  tests: false
+  comments: "beamer is not a supported class."
+  updated: 2026-09-03
+
+- name: tikzlibrary-patterns
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-patterns.meta
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-penrose
+  ctan-pkg: penrose
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Obsolete. Use the tilings TikZ library instead."
+  package-repository: "https://github.com/loopspace/penrose"
+  updated: 2026-09-03
+
+- name: tikzlibrary-perspective
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-petri
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-plothandlers
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-plotmarks
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-positioning
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-profiler
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-quantikz
+  type: library
+  status: currently-incompatible
+  priority: 9
+  related-issues: [30]
+  tests: false
+  comments: "Deprecated TikZ library version of the quantikz package."
+  updated: 2026-09-02
+
+- name: tikzlibrary-quantikz2
+  type: library
+  status: currently-incompatible
+  priority: 9
+  related-issues: [30]
+  tests: false
+  comments: "TikZ library version of the quantikz package."
+  updated: 2026-09-02
+
+- name: tikzlibrary-quotes
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-rdf
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-rulercompass
   ctan-pkg: rulercompass
+  type: library
   status: compatible
   priority: 9
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-26
+
+- name: tikzlibrary-scopes
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shadings
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shadows
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-shadows.blur
   ctan-pkg: pgf-blur
@@ -14855,9 +16849,117 @@
   tests: false
   updated: 2026-08-24
 
-- name: tikzlibrary-spath3
+- name: tikzlibrary-shapes
+  ctan-pkg: tikz
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.arrows
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.callouts
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.gates.ee
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-shapes.gates.ee.IEC
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-shapes.gates.logic
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-shapes.gates.logic.IEC
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-shapes.gates.logic.US
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-02
+
+- name: tikzlibrary-shapes.geometric
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.misc
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.multipart
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-shapes.symbols
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-spath3
   ctan-pkg: spath3
+  type: library
   subpackages: [spath3]
   status: compatible
   priority: 9
@@ -14865,6 +16967,49 @@
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/loopspace/spath3"
   updated: 2026-08-26
+
+- name: tikzlibrary-spy
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-svg.path
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-swigs
+  ctan-pkg: tikz-swigs
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-switching-architectures
+  ctan-pkg: sa-tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-03
+
+- name: tikzlibrary-through
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
 
 - name: tikzlibrary-tikzlings
   ctan-pkg: tikzlings
@@ -14877,9 +17022,27 @@
   package-repository: "https://github.com/samcarter/tikzlings"
   updated: 2026-08-23
 
-- name: tikzlibrary-tilings
+- name: tikzlibrary-tikzmark
+  ctan-pkg: tikzmark
   type: library
+  status: unchecked
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/loopspace/tikzmark"
+  updated: 2026-09-03
+
+- name: tikzlibrary-tikzphysics
+  ctan-pkg: tikzphysics
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "TikZ library version of the tikzphysics package."
+  updated: 2026-09-03
+
+- name: tikzlibrary-tilings
   ctan-pkg: tilings
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14888,8 +17051,8 @@
   updated: 2026-08-26
 
 - name: tikzlibrary-tilings.penrose
-  type: library
   ctan-pkg: tilings
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14898,8 +17061,8 @@
   updated: 2026-08-26
 
 - name: tikzlibrary-tilings.polykite
-  type: library
   ctan-pkg: tilings
+  type: library
   status: compatible
   priority: 9
   tests: false
@@ -14907,15 +17070,70 @@
   package-repository: "https://github.com/loopspace/tilings"
   updated: 2026-08-26
 
-- name: tikzlibrary-tqft
+- name: tikzlibrary-topaths
+  ctan-pkg: tikz
   type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-tqft
   ctan-pkg: tqft
+  type: library
   status: compatible
   priority: 9
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   package-repository: "https://github.com/loopspace/TQFT"
   updated: 2026-08-26
+
+- name: tikzlibrary-trainmap
+  ctan-pkg: trainmap
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  comments: "TikZ library version of the trainmap package."
+  updated: 2026-09-03
+
+- name: tikzlibrary-trees
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-turtle
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-views
+  ctan-pkg: tikz
+  type: library
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/pgf-tikz/pgf"
+  updated: 2026-09-03
+
+- name: tikzlibrary-zx-calculus
+  type: library
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  related-issues: [30]
+  comments: "TikZ library version of the zx-calculus package."
+  package-repository: "https://github.com/leo-colisson/zx-calculus"
+  updated: 2026-09-02
 
 - name: tikzlings
   type: package
@@ -14963,6 +17181,14 @@
   tests: false
   comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-08-24
+
+- name: tikzphysics
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-09-03
 
 - name: tikzpingus
   type: package
@@ -15312,6 +17538,14 @@
   tests: false
   updated: 2024-08-06
 
+- name: trainmap
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  comments: "No way to add Alt text to a `trainmap`."
+  updated: 2026-09-03
+
 - name: trajan
   type: package
   status: compatible
@@ -15597,6 +17831,15 @@
   tests: true
   updated: 2024-07-26
 
+- name: uml
+  type: package
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+
 - name: uncial
   type: package
   status: compatible
@@ -15787,6 +18030,16 @@
 
 #------------------------ VVV ----------------------------
 
+- name: VocalTract
+  type: package
+  subpackages: [vaucanson]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
+  
 - name: varioref
   type: package
   status: compatible
@@ -15806,6 +18059,16 @@
   tasks: adjustments in block code needed?
   tests: true
   updated: 2024-07-10
+
+- name: vaucanson-g
+  type: package
+  subpackages: [vaucanson]
+  status: currently-incompatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  comments: "See pstricks."
+  updated: 2026-09-01
 
 - name: vcell
   type: package
@@ -15842,6 +18105,7 @@
   status: compatible
   priority: 9
   tests: false
+  package-repository: "https://codeberg.org/cfr/nfssext"
   updated: 2024-07-26
 
 - name: verbatim
@@ -16618,6 +18882,23 @@
   tests: true
   updated: 2024-08-06
 
+- name: yquant
+  type: package
+  subpackages: [yquantlanguage-groups,yquantlanguage-qasm]
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible if `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/projekter/yquant"
+  updated: 2026-09-02
+
+- name: ysabeau
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2024-07-29
+
 - name: ytableau
   type: package
   status: currently-incompatible
@@ -16626,13 +18907,6 @@
   issues: [499]
   tests: true
   updated: 2024-08-06
-
-- name: ysabeau
-  type: package
-  status: compatible
-  priority: 9
-  tests: false
-  updated: 2024-07-29
 
 #------------------------ ZZZ ----------------------------
 
@@ -16921,6 +19195,16 @@
   priority: 9
   tests: false
   updated: 2026-06-30
+
+- name: zx-calculus
+  type: package
+  status: currently-incompatible
+  priority: 9
+  related-issues: [30]
+  tests: true
+  comments: "See tikz-cd."
+  package-repository: "https://github.com/leo-colisson/zx-calculus"
+  updated: 2026-09-02
 
 - name: zxjafbfont
   type: package
