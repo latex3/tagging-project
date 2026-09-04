@@ -1,0 +1,26 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{dynkin-diagrams}
+\ifdefined\Uchar
+  \usepackage{unicode-math}
+\fi
+\title{dynkin-diagrams tagging test}
+\begin{document}
+The Dynkin diagram of \(B_3\) is \dynkin B3.
+
+The Dynkin diagram of \(B_3\) is
+\tikz[alt=A Dynkin diagram] \dynkin B3;
+
+The Dynkin diagram of \(B_3\) is
+\begin{dynkinDiagram}B3
+\draw[very thick,red] (root 1) to [out=-45, in=-135] (root 3);
+\end{dynkinDiagram}
+
+\dynkinName[label,extended]B7
+\dynkinName A[2]{even}
+\dynkinName[Coxeter]B7
+\dynkinName[label,extended]B{}
+\dynkinName D[3]4
+
+\end{document}
