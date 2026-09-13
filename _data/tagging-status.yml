@@ -371,6 +371,16 @@
   tasks: more tests needed
   updated: 2025-04-05
 
+- name: adobeornaments
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: false
+  comments: "Symbols missing ActualText or ToUnicode values.
+             Package not in texlive."
+  package-repository: "https://www.github.com/ezgranet/adobeornaments"
+  updated: 2026-09-09
+
 - name: advdate
   type: package
   status: compatible
@@ -2036,6 +2046,15 @@
   tests: true
   updated: 2024-08-20
 
+- name: bahaistar
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "`\\bahaistar` not correctly mapped to Unicode."
+  package-repository: "https://github.com/LaPingvino/latex-bahaistar"
+  updated: 2026-09-09
+
 - name: balance
   type: package
   status: compatible
@@ -3526,6 +3545,13 @@
   tests: false
   updated: 2026-02-13
 
+- name: clrdblpg
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-09
+
 - name: clrstrip
   type: package
   status: currently-incompatible
@@ -3841,6 +3867,23 @@
   issues: [884]
   tests: true
   updated: 2024-07-25
+
+- name: cookingsymbols
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Missing ActualText or ToUnicode values for symbols."
+  updated: 2026-09-09
+
+- name: coolfn
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  comments: "Redefines `\\@makefntext` incompatibly."
+  package-repository: "https://github.com/ezgranet/coolfn"
+  updated: 2026-09-09
 
 - name: coordsys
   type: package
@@ -4207,6 +4250,13 @@
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
   updated: 2025-06-09
+
+- name: dcounter
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-12
 
 - name: dcpic
   type: package
@@ -5231,6 +5281,14 @@
   tests: false
   comments: "See curve2e."
   updated: 2026-08-20
+
+- name: euflag
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1587]
+  updated: 2026-09-09
 
 - name: eufrak
   ctan-pkg: amsfonts
@@ -8867,6 +8925,15 @@
   luatex-only: true
   updated: 2026-02-12
 
+- name: luaquotes
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  tests: false
+  package-repository: "https://github.com/ezgranet/luaquotes"
+  updated: 2026-09-12
+
 - name: luarandom
   type: package
   status: compatible
@@ -9133,6 +9200,13 @@
   priority: 9
   tests: false
   updated: 2024-07-25
+
+- name: makebase
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-09
 
 - name: makebox
   type: package
@@ -9855,6 +9929,13 @@
   priority: 9
   tests: false
   updated: 2026-01-30
+
+- name: modulus
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-12
 
 - name: monaspace-otf
   type: package
@@ -15111,6 +15192,24 @@
   tests: true
   updated: 2026-08-23
 
+- name: swungdash
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  package-repository: "https://github.com/ezgranet/swungdash"
+  luatex-only: true
+  updated: 2026-09-09
+
+- name: symbats3
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: excluded
+  comments: "Symbols missing ActualText or ToUnicode values.
+             Tests excluded since font not included in texlive."
+  updated: 2026-09-09
+
 - name: synproof
   type: package
   status: currently-incompatible
@@ -17579,6 +17678,15 @@
   priority: 9
   tests: false
   updated: 2026-01-29
+
+- name: tramlines
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "`\\tramlines` incorrectly tagged as a table."
+  package-repository: "https://github.com/ezgranet/tramlines"
+  updated: 2026-09-09
 
 - name: translations
   type: package
