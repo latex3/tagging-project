@@ -3216,14 +3216,13 @@
 
 - name: changepage
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [arxiv01, ol5]
   priority: 6
-  issues: [566]
+  closed-issues: [566]
   tests: true
-  comments: "Tagging of `adjustwidth` needs to be improved."
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2024-08-17
+  updated: 2026-09-16
 
 - name: changes
   type: package
@@ -4958,7 +4957,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61,1301,1441,1518]
+  issues: [61,1301,1441,1518,1595]
   closed-issues: [4]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
@@ -5757,13 +5756,13 @@
 
 - name: fitch
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   tests: true
   issues: [1485]
-  comments: "`fitchproof` is tagged as combined list/table."
+  comments: "Validates but proof structure is not clear from the current tagging."
   package-repository: "https://github.com/OpenLogicProject/fitch/"
-  updated: 2026-07-25
+  updated: 2026-09-16
 
 - name: fix-cm
   type: package
@@ -17150,11 +17149,12 @@
 - name: tikzlibrary-tikzmark
   ctan-pkg: tikzmark
   type: library
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
+  issues: [1597]
+  tests: true
   package-repository: "https://github.com/loopspace/tikzmark"
-  updated: 2026-09-03
+  updated: 2026-09-16
 
 - name: tikzlibrary-tikzphysics
   ctan-pkg: tikzphysics
