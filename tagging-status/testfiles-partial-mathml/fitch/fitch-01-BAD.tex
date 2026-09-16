@@ -17,7 +17,7 @@
 
 \begin{document}
 
-$\begin{nd}
+\begin{nd}[arrayenv=tabular]
 \hypo {1} {P\vee Q}
 \hypo {2} {\neg Q}
 \open
@@ -31,10 +31,9 @@ $\begin{nd}
 \have {8} {P} \be{7}
 \close
 \have {9} {P} \oe{1,3-4,aa-8}
-\end{nd}$
+\end{nd}
 
-$
-\begin{nd}
+\begin{nd}[arrayenv=tabular]
 \hypo {a} {A \Rightarrow B}
 \by{Premise}{}
 \hypo {b} {A} \by{Premise}{}
@@ -43,7 +42,6 @@ $
 (but \emph{how?})}{}
 \have {d} {A \wedge B} \by{}{b,c}
 \end{nd}
-$
 
 \begin{fitchproof}[arrayenv=tabular]
 \hypo {1} {P\vee Q}
