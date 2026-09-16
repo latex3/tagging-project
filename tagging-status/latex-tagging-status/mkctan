@@ -13,14 +13,35 @@ chmod a-x latex-tagging-status.ltx
 
 cp ../../README.md .
 
+DT=`date -I`
+
+echo "
+module = \"latex-tagging-status\"
+
+ctanzip = \"latex-tagging-status\"
+
+uploadconfig = {
+pkg = \"latex-tagging-status\",
+repository = \"https://github.com/latex3/tagging-project\",
+version = \"$DT\",
+author = \"The LaTeX Project Team\",
+uploader = \"David Carlisle\",
+email = \"latex-team@latex-project.org\",
+license = \"lppl1.3c\",
+summary = \"The LaTeX Tagging Status data\",
+ctanPath = \"/macros/latex/contrib/latex-tagging-status\",
+announcement_file = \"ctan.ann\",
+note = \"updated via l3build upload\",
+update = \"true\"
+}
+" > ../build.lua
+
 sed -i -e "s/{{ site.time | date: \"%Y-%m-%d\" }}/`date -I`/" README.md
 sed -i -e "s/\[[0-9-]*\]/[`date -I`]/" latex-tagging-status.ltx
 
-echo ""
-echo "Changes to the tagging status of"
-echo ""
-diff `kpsewhich --all latex-tagging-status.ltx` | grep kernel@ | sed -e 's/.*status{\([^{}]*\)}.*/\1/' | sort | uniq | tr '\n' ' ' | sed -e 's/\([ ][^ ]*[ ][^ ]*[ ][^ ]*\) /\1\n/g'
-echo -e "\n"
+echo -e "\nChanges to the tagging status of\n" | tee ../ctan.ann
+diff `kpsewhich --all latex-tagging-status.ltx` | grep kernel@ | sed -e 's/.*status{\([^{}]*\)}.*/\1/' | sort | uniq | tr '\n' ' ' | sed -e 's/\([ ][^ ]*[ ][^ ]*[ ][^ ]*\) /\1\n/g' | tee -a ../ctan.ann
+echo -e "\n" | tee -a ../ctan.ann
 
 cd ..
 zip -q latex-tagging-status.zip latex-tagging-status/latex-tagging-status.ltx latex-tagging-status/README.md
