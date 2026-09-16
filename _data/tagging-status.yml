@@ -4958,7 +4958,7 @@
              can use, for example, `\\begin{itemize}[...]` out of the box."
   tasks: Check which keys are not yet supported and what else is missing.
   references: [1]
-  issues: [61,1301,1441,1518]
+  issues: [61,1301,1441,1518,1595]
   closed-issues: [4]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
@@ -17150,11 +17150,12 @@
 - name: tikzlibrary-tikzmark
   ctan-pkg: tikzmark
   type: library
-  status: unchecked
+  status: partially-compatible
   priority: 9
-  tests: false
+  issues: [1597]
+  tests: true
   package-repository: "https://github.com/loopspace/tikzmark"
-  updated: 2026-09-03
+  updated: 2026-09-16
 
 - name: tikzlibrary-tikzphysics
   ctan-pkg: tikzphysics

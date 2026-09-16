@@ -1,0 +1,31 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{lua-unicode-math}
+\fi
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{fit,tikzmark}
+\usetikzmarklibrary{ams}
+
+\title{tikzmark tagging test -- ams library}
+
+\begin{document}
+
+\begin{tikzmarkmath}[pythagoras]
+\begin{gather}
+a^2 = b^2 + c^2
+\end{gather}
+\begin{gather}
+a = \sqrt[2]{b^2 + c^2}
+\end{gather}
+\end{tikzmarkmath}
+\begin{tikzpicture}[remember picture, overlay]
+\foreach \k in {1,2,3,4} {
+\draw[red] (pic cs:pythagoras-\k) -- ++(135:1)
+node[draw,red,circle,font=\tiny,above left] {\k};
+\node[draw,blue,fit=(pythagoras-\k),inner sep=0pt] {};
+}
+\end{tikzpicture}
+
+\end{document}
