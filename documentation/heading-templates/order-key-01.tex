@@ -7,15 +7,10 @@
     tagging=on,
   }
 
-% not doing math
+% not doing math so set this to use less run resources
   
 \tagpdfsetup {math/mathml/luamml/load=false}
 
-% next dev release will have this autoinstalled when tagging=on is used
-% at the moment we still have to manually load it
-
-
-\RequirePackage{latex-lab-testphase-template}
   
 \documentclass{article}
 
@@ -40,16 +35,16 @@
 %
 %  In the order key it supports ordering of prefix,number,title,punct,note and
 %  3 customizable separators. The default makes use of all of them, but as prefix
-%  is \NoValue and separator-1 is empty nothing is typeset for them
+%  is \NoValue and separator-a is empty nothing is typeset for them
 %
-  ,order       : commalist = {prefix,separator-1,number,separator-2,title,
-                              punct,separator-3,note}
+  ,order       : commalist = {prefix,separator-a,number,separator-b,title,
+                              punct,separator-c,note}
   ,prefix      : tokenlist = \NoValue
   ,number      : tokenlist = 4711
   ,punct       : tokenlist = .
-  ,separator-1 : tokenlist = 
-  ,separator-2 : tokenlist = \
-  ,separator-3 : tokenlist = \quad
+  ,separator-a : tokenlist = 
+  ,separator-b : tokenlist = \
+  ,separator-c : tokenlist = \quad
 %
 % title and note have no keys because they are part of the arguments.
 %
@@ -71,7 +66,7 @@
 %
   ,prefix-format : function{1} = #1
   ,number-format : function{1} = #1
-  ,punct-format  : function{1} = \AddPunctuation{#1}  % to be renamed to \AddPunct in next dev release
+  ,punct-format  : function{1} = \AddPunct{#1}
   ,note-format   : function{1} = (#1)
   ,title-format  : function{1} = #1
 %  
@@ -89,9 +84,9 @@
   ,prefix      = \l__trial_prefix_tl
   ,number      = \l__trial_number_tl
   ,punct       = \l__trial_punct_tl
-  ,separator-1 = name {l__trial_separator-1_tl} % special because of 1 and - in the name
-  ,separator-2 = name {l__trial_separator-2_tl}
-  ,separator-3 = name {l__trial_separator-3_tl}
+  ,separator-a = name {l__trial_separator-a_tl} % special because of 1 and - in the name
+  ,separator-b = name {l__trial_separator-b_tl}
+  ,separator-c = name {l__trial_separator-c_tl}
 %
   ,heading-decls = \l__trial_heading_decls_tl
 %
@@ -131,7 +126,7 @@
     \l__trial_heading_decls_tl
     \template_process_order_clist:nnn
      { trial }{ order }
-     { note, number, prefix, punct, separator-1, separator-2, separator-3, title }
+     { note, number, prefix, punct, separator-a, separator-b, separator-c, title }
   %
     \par
   \group_end:
@@ -152,7 +147,7 @@
 
 \DeclareInstance{threeargs}{section}{trial}{
     prefix        = §
-   ,separator-1   =       % no space
+   ,separator-a   =       % no space
    ,heading-decls = \large\bfseries
    ,title-decls   = \scshape
    ,note-decls    = \mdseries\normalshape
@@ -160,9 +155,9 @@
 
 \DeclareInstance{threeargs}{chapter}{trial}{
     prefix        = Chapter
-   ,separator-1   = \ \rule[-10pt]{2pt}{50pt}\
-   ,separator-2   = \\[10pt]
-   ,order         = {number,separator-1,prefix,separator-2,title,punct} % no note
+   ,separator-a   = \ \rule[-10pt]{2pt}{50pt}\
+   ,separator-b   = \\[10pt]
+   ,order         = {number,separator-a,prefix,separator-b,title,punct} % no note
    ,heading-decls = \Large\bfseries
    ,title-decls   = \Huge\mdseries\scshape
 }
@@ -213,7 +208,7 @@
 \mynotes{Use the optional argument for parameter changes:}
      
 \head{default}
-     [prefix=Chapter,separator-1=\ ,title-decls=\itshape]
+     [prefix=Chapter,separator-a=\ ,title-decls=\itshape]
      {Title}[prefix added]
 
 
@@ -227,12 +222,12 @@
 
 
 \head{section}
-     [prefix=Chapter,separator-1=\ ,title-decls=\itshape]
+     [prefix=Chapter,separator-a=\ ,title-decls=\itshape]
      {Title}[prefix added]
 
 
 \head{default}
-    [order={title,separator-2,number,separator-3,note}]
+    [order={title,separator-b,number,separator-c,note}]
     {Title and number swapped}[and punctuation always dropped] 
 
 
