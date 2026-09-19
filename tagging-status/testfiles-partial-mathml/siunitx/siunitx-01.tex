@@ -7,7 +7,7 @@ tagging=on,
 
 \documentclass{article}
 \ifdefined\Uchar
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
   % generate mathml for pdftex version
   \IfFileExists{\jobname-luamml-mathml.html}{}{\AtEndDocument{$\mathrm {\TextOrMath {°}{{}^{\circ }}}$}}
 \fi
