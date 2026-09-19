@@ -8398,6 +8398,16 @@
   tests: false
   updated: 2026-04-08
 
+- name: lilyglyphs
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols missing Alt text or Unicode mappings."
+  luatex-only: true
+  package-repository: "https://github.com/uliska/lilyglyphs"
+  updated: 2026-09-18
+
 - name: linearb
   type: package
   status: partially-compatible
@@ -14174,6 +14184,14 @@
   tests: false
   tasks: needs tests
   updated: 2026-01-23
+
+- name: scripture
+  type: package
+  status: currently-incompatible
+  priority: 9
+  package-repository: "https://github.com/dcpurton/scripture"
+  tests: true
+  updated: 2026-09-18
 
 - name: scrlfile
   type: package
