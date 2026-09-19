@@ -7933,9 +7933,11 @@
   priority: 9
   tests: true
   comments: "tcolorbox theorems disabled when tagging is loaded.
-             `headformat` key not fully implemented with tagging."
+             `headformat` key not fully implemented with tagging.
+             `auto-qed` not fully compatible with tagging."
   package-repository: "https://github.com/mbertucci47/keytheorems"
-  updated: 2026-06-03
+  external-issues: ["https://github.com/mbertucci47/keytheorems/issues/68"]
+  updated: 2026-09-19
 
 - name: keyval
   type: package
@@ -8397,6 +8399,16 @@
   priority: 9
   tests: false
   updated: 2026-04-08
+
+- name: lilyglyphs
+  type: package
+  status: partially-compatible
+  priority: 9
+  tests: true
+  comments: "Symbols missing Alt text or Unicode mappings."
+  luatex-only: true
+  package-repository: "https://github.com/uliska/lilyglyphs"
+  updated: 2026-09-18
 
 - name: linearb
   type: package
@@ -14175,6 +14187,15 @@
   tasks: needs tests
   updated: 2026-01-23
 
+- name: scripture
+  type: package
+  status: currently-incompatible
+  priority: 9
+  package-repository: "https://github.com/dcpurton/scripture"
+  tests: true
+  issues: [1601]
+  updated: 2026-09-19
+
 - name: scrlfile
   type: package
   status: compatible
@@ -19280,12 +19301,12 @@
 - name: zref-titleref
   ctan-pkg: zref
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: true
   issues: [1408]
-  updated: 2026-06-12
+  updated: 2026-09-19
 
 - name: zref-totpages
   ctan-pkg: zref
@@ -19418,7 +19439,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737,1477]
+  issues: [443,737,1477,1600]
   closed-issues: [970]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: true
