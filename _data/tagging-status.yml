@@ -293,6 +293,13 @@
              should be tagged as artifact."
   updated: 2026-02-15
 
+- name: addfont
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-20
+
 - name: addliga
   type: package
   status: compatible
@@ -676,7 +683,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370,1476]
+  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370,1476,1602,1609]
   closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
   tests: true
   updated: 2026-06-02
@@ -8484,6 +8491,13 @@
   tests: false
   updated: 2024-07-15
 
+- name: lips
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-20
+
 - name: lipsum
   type: package
   status: compatible
@@ -8974,6 +8988,15 @@
   tests: false
   luatex-only: true
   updated: 2026-02-12
+
+- name: luasseq
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1610]
+  luatex-only: true
+  updated: 2026-09-20
 
 - name: luatex85
   type: package
@@ -9994,6 +10017,13 @@
   tests: false
   updated: 2024-07-15
 
+- name: moredefs
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  updated: 2026-09-20
+
 - name: moreenum
   type: package
   status: compatible
@@ -10359,6 +10389,14 @@
   tests: false
   tasks: needs tests
   updated: 2024-07-18
+
+- name: nccbbb
+  type: package
+  status: partialy-compatible
+  priority: 9
+  tests: true
+  comments: "No luamml support."
+  updated: 2026-09-20
 
 - name: ncccomma
   type: package
@@ -14911,6 +14949,15 @@
   tests: false
   updated: 2024-07-21
 
+- name: spectralsequences
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1611]
+  package-repository: "https://github.com/SpectralSequences/latex"
+  updated: 2026-09-20
+
 - name: splentinex
   type: package
   status: compatible
@@ -14966,6 +15013,14 @@
   tests: false
   comments: "Not useful with pdflatex or lualatex."
   updated: 2026-07-01
+
+- name: sseq
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1610]
+  updated: 2026-09-20
 
 - name: stabular
   type: package
@@ -15995,6 +16050,15 @@
   comments: "`Use of `\\timing` is compatible as long as `alt` text given to the containing `tikzpicture`. Similarly for `tikztimingtable`. No way to pass Alt text to `\\\texttiming` or the `T` column type of the `columntype` library."
   package-repository: "https://github.com/MartinScharrer/tikz-timing"
   updated: 2026-09-01
+
+- name: tikz-truchet
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/mscroggs/truchet"
+  updated: 2026-09-20
 
 - name: tikzbricks
   type: package
@@ -17572,21 +17636,32 @@
 
 - name: tkz-berge
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.02]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  updated: 2026-09-20
+
+- name: tkz-elements
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  luatex-only: true
+  package-repository: "https://github.com/al-ma-dev/tkz-elements"
+  updated: 2026-09-20
 
 - name: tkz-euclide
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
-  updated: 2026-01-23
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
+  package-repository: "https://github.com/al-ma-dev/tkz-euclide"
+  updated: 2026-09-20
 
 - name: tkz-fct
   type: package
@@ -17599,11 +17674,11 @@
 
 - name: tkz-graph
   type: package
-  status: unchecked
+  status: compatible
   included-in: [ol0.1]
   priority: 9
   tests: false
-  tasks: needs tests
+  comments: "Compatible as long as `alt` text given to the containing `tikzpicture`."
   updated: 2026-01-23
 
 - name: tkz-tab
