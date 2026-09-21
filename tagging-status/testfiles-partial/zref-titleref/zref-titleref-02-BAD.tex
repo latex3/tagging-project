@@ -1,0 +1,13 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{zref-user}
+\usepackage{zref-titleref}
+\newtheorem{theorem}{Theorem}
+
+\title{zref-titleref tagging test -- theorems}
+\begin{document}
+\begin{theorem}[some note]\zlabel{foo}
+Some theorem
+\end{theorem}
+\ztitleref{foo}
+\end{document}

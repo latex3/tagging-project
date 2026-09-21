@@ -3,17 +3,16 @@ lang=en-US,
 pdfversion=2.0,
 pdfstandard=ua-2,
 tagging=on,
-uncompress
 }
 
 \documentclass{article}
 \ifdefined\Uchar
-  \usepackage{unicode-math}
+  \usepackage{lua-unicode-math}
   % generate mathml for pdftex version
   \IfFileExists{\jobname-luamml-mathml.html}{}{\AtEndDocument{$\mathrm {\TextOrMath {°}{{}^{\circ }}}$}}
 \fi
 
-\usepackage{siunitx,comment}
+\usepackage{siunitx}
 \sisetup{table-auto-round=true, separate-uncertainty=true}
 
 \title{siunitx tagging test}

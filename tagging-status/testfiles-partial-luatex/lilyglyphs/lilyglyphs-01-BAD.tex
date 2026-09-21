@@ -1,0 +1,14 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article} % Should work with any documentclass
+\usepackage{fontspec} % Is necessary to access OpenType fonts
+\usepackage{lilyglyphs} % Currently there are no package options available
+\title{lilyglyphs tagging test}
+\begin{document}
+\flatflat{} or \clefGInline. % Predefined commands,
+% Use {} to allow trailing whitespace
+\lilyGlyph[scale=1.2, raise=.5]{timesig.neomensural64}
+% Access "Emmentaler" glyphs by their name
+% Generic commands have one mandatory
+% and one optional (placement) argument.
+\twoBeamedQuavers % Commands that include images instead of font glyphs.
+\end{document}

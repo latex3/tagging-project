@@ -1,0 +1,34 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{spectralsequences}
+
+\ifdefined\Uchar
+  \usepackage{lua-unicode-math}
+\fi
+\title{spectralsequences tagging test}
+
+\begin{document}
+
+% this errors
+\begin{sseqdata}[ name = basic, xscale = 0.6,
+cohomological Serre grading ]
+\class(0,0)
+\class(0,2)
+\class(3,0)
+\class(3,2)
+\d3(0,2)
+\end{sseqdata}
+\printpage[ name = basic, page = 3 ] \quad
+\printpage[ name = basic, page = 4 ]
+
+% so does this
+\begin{sseqpage}[ no axes, ymirror, yscale = 0.8 ]
+\class(0,0)
+\class(1,0) \class(1,0)
+\class(0,1) \class(0,1) \class(0,1)
+\class(1,1) \class(1,1) \class(1,1) \class(1,1)
+\class(0,2) \class(0,2) \class(0,2) \class(0,2) \class(0,2)
+\class(1,2) \class(1,2) \class(1,2) \class(1,2) \class(1,2) \class(1,2)
+\end{sseqpage}
+
+\end{document}
