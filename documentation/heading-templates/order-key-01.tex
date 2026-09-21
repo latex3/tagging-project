@@ -141,7 +141,7 @@
 
 
 \DeclareInstance{threeargs}{default}{trial}{
-  % no parameter settings, just use what the template has a defaults
+  % no parameter settings, just use what the template has default values
 }
 
 
@@ -192,11 +192,9 @@
 \author{Frank Mittelbach, \LaTeX{} Project}
 \maketitle
 
-% A bit of tracing (\checkstatus needs to be disabled because it currently
-% does a \show which signals to to online server that the run has an error):
+% A bit of tracing (you find the output in the .log file):
 
 \DebugTemplatesOn
-\renewcommand\checkstatus[1]{\typeout{----- #1 ------}}
 
 \head{default}
      {Title}[default result] 
