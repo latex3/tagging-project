@@ -45,10 +45,8 @@
 
 \makeatletter
 % Short book names in the PDF outline
-%\AddToHookWithArguments{cmd/chapter/before}
-%                       {\def\ch@pt@c{\texorpdfstring{#3}{#2}}}
-%\DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-%{\ParseLaTeXeHeading{chapter}{#1}{#2}{#3}}
+\AddToHookWithArguments{cmd/chapter/before}
+                       {\def\ch@pt@c{\texorpdfstring{#3}{#2}}}
 \makeatother
 
 \newcounter{bookchapter}
@@ -63,10 +61,18 @@
 
 \ExplSyntaxOff
 
+
+
+\EditInstance{heading}{chapter}
+   {
+     after-vspace = 45pt
+   }
+
+
 \DeclareDocumentCommand \part {s ={shorttitle}o m}
-      {\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
+      {\par\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
 \DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-     {\onecolumn\twocolumn[\par\vspace*{0pt}\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}\par\vspace{4pt}]}
+     {\par\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}}
 
 
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
@@ -75,7 +81,7 @@
 \usepackage{titlesec}
 
 
-\hyphenation{hypocr-is-ies meshel-em-iah}
+\hyphenation{hypocr-is-ies meshel-em-iah philis-tines}
 
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{\MakeUppercase{#1}}}
 
@@ -258,6 +264,7 @@
 
 %%% End tagging adaptions.
 \emergencystretch=8pt
+\hbadness=1500
 
 % looseness is needed in some cases if a new chapter falls at top of
 % a column and the previous column is a line short with no stretch.

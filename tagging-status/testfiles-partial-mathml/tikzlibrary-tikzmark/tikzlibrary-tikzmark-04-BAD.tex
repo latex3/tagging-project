@@ -1,0 +1,30 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usetikzmarklibrary{highlighting}
+
+\title{tikzmark tagging test -- highlighting library}
+
+\begin{document}
+
+The sun was shining on the sea, shining with all its might. \\
+\StartHighlighting[fill=cyan!50]%
+And this was very odd because it was the middle of the night. \\
+\StopHighlighting%
+The moon was up there sulkily because she thought the sun \\
+had no business to be there after the day was done. \\
+\StartHighlighting[fill=magenta!50,direction=vertical]%
+``It's very rude of him,'' she said, ``to come and spoil the fun.''
+\StopHighlighting%
+\noindent The sun was shining on the sea, shining with all its
+might. \\
+And this was very odd because it was the middle of the night. \\
+\StartHighlighting[fill=yellow!50,direction=box]%
+The moon was up there sulkily because she thought the sun \\
+had no business to be there after the day was
+done\StopHighlighting. \\
+``It's very rude of him,'' she said, ``to come and spoil the fun.''
+
+\end{document}

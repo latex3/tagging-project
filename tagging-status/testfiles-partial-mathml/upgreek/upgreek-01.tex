@@ -10,12 +10,13 @@
 \IfFileExists{\jobname-luamml-mathml.html}
 {\usepackage{upgreek}}
 {\ifdefined\Uchar
-    \usepackage{unicode-math}
+    \usepackage{lua-unicode-math}
     \def\Uplambda{\muplambda}
+    \def\upalpha{\mupalpha}
+    \def\upmu{\mupmu}
   \else
     \usepackage{upgreek}
   \fi}
-
 
 \title{upgreek tagging test}
 

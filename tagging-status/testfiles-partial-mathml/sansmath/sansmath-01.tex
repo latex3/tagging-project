@@ -10,7 +10,7 @@
 \IfFileExists{\jobname-luamml-mathml.html}
 {\usepackage{sansmath}}
 {\ifdefined\Uchar
-    \usepackage{unicode-math}
+    \usepackage{lua-unicode-math}
     \let\sansmath\empty
   \else
     \usepackage{sansmath}

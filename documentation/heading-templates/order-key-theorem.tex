@@ -1,0 +1,60 @@
+%{% raw %}
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+  }
+
+\documentclass{article}
+
+\title{Theorem examples with order key}
+
+\newtheorem{thm}{Theorem}[section]
+
+\begin{document}
+
+\section{A section}
+
+\DebugTemplatesOn  % to see the processing in the log
+
+\begin{thm}[It has a name]
+  A theorem with default layout.
+\end{thm}
+
+\EditInstance{thmstyle}{plain}{
+    order         =  {title,separator-a,number,punct,separator-b,note}
+  , caption-decls = \sffamily\bfseries
+  , note-decls    = \mdseries
+  , after-hspace  = 20pt plus 2pt
+}  
+
+\begin{thm}[It has a name]
+  A theorem with period after number and not after the note and a wide
+  space separating it from th body text.
+\end{thm}
+
+\EditInstance{thmstyle}{plain}{
+  , order       =  {number,separator-a,title,separator-b,note,separator}
+  , separator-b = \\
+  , separator   = \\[5pt]
+  , after-hspace = 0pt
+  , note-format = #1
+  , note-decls = \footnotesize
+}  
+
+\begin{thm}[It has a name too]
+  A theorem with number and title swapped and the note on a line by
+  itself (if present).  No claim that this looks good :-)
+\end{thm}
+
+\begin{thm}
+  As before, but without a note. Therefore \texttt{separator-b} in
+  front of the non-existent note is dropped but the final
+  \texttt{separator} remains.
+\end{thm}
+
+\end{document}
+
+%{% endraw %}

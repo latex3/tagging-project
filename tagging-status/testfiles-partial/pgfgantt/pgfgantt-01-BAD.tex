@@ -1,0 +1,42 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{pgfgantt}
+\usetikzlibrary{shapes}
+
+\title{pgfgantt tagging test}
+
+\begin{document}
+
+% not good
+\begin{ganttchart}{1}{12}
+\gantttitle{2011}{12} \\
+\gantttitlelist{1,...,12}{1} \\
+\ganttgroup{Group 1}{1}{7} \\
+\ganttbar{Task 1}{1}{2} \\
+\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+\ganttmilestone{Milestone}{7} \ganttnewline
+\ganttbar{Final Task}{8}{12}
+\ganttlink{elem2}{elem3}
+\ganttlink{elem3}{elem4}
+\end{ganttchart}
+
+% good
+\begin{tikzpicture}[alt=A Gantt chart]
+\begin{ganttchart}[
+canvas/.style=%
+{shape=chamfered rectangle, fill=yellow!25,
+draw=blue, dashed, very thick}
+]{1}{6}
+\gantttitle{Title}{6} \\
+\ganttbar{}{1}{2} \\
+\ganttbar{}{3}{6}
+\end{ganttchart}
+\end{tikzpicture}
+
+\end{document}

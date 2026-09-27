@@ -1,0 +1,63 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{tikz-timing}
+\usetikztiminglibrary{columntype,counters,nicetabs}
+
+\title{tikz-timing tagging test}
+
+\begin{document}
+
+Some text\texttiming{HLZDZLH} some more text
+
+\tikz[alt=a timing diagram] \timing [green] at (1,2) {HLZDZLH};
+
+\tikztimingmetachar{Y}{2D 0.5U 2D{}}
+\texttiming{ZZ Y Z 3Y ZZ}
+
+Some intervening text
+
+\begin{tikztimingtable}[
+  alt=A timing table,
+  timing/d/background/.style={fill=white},
+  timing/lslope=0.2,
+  timing/counter/new={char=Q,reset char=R},
+ ]
+         CPOL=0 & LL 15{T} LL \\
+         CPOL=1 & HH 15{T} HH \\
+                & H 17L H     \\
+ \\
+       Cycle \# & U     R 8{2Q} 2U    \\
+           MISO & D{z}  R 8{2Q} 2D{z} \\
+           MOSI & D{z}  R 8{2Q} 2D{z} \\
+ \\
+       Cycle \# & UU    R 8{2Q} U    \\
+           MISO & D{z}U R 8{2Q} D{z} \\
+           MOSI & D{z}U R 8{2Q} D{z} \\
+\extracode
+ % Add vertical lines in two colors
+ \begin{pgfonlayer}{background}
+   \begin{scope}[semitransparent,semithick]
+     \vertlines[red]{2.1,4.1,...,17.1}
+     \vertlines[blue]{3.1,5.1,...,17.1}
+   \end{scope}
+ \end{pgfonlayer}
+ % Add big group labels
+ \begin{scope}
+   [font=\sffamily\Large,shift={(-6em,-0.5)},anchor=east]
+   \node at (  0, 0) {SCK};    \node at (  0,-3 ) {SS};
+   \node at (1ex,-9) {CPHA=0}; \node at (1ex,-17) {CPHA=1};
+ \end{scope}
+\end{tikztimingtable}%
+
+\begin{tabular}{lcT}
+\toprule
+Description & Num & \multicolumn{1}{l}{Signal} \\
+\midrule
+Example & A & HLHZLHL \\
+Example & B & [][green] HLHZLHL \\
+Example & C & [green] HLHZLHL \\
+\bottomrule
+\end{tabular}
+\end{document}

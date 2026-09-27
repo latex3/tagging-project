@@ -1,0 +1,30 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{fixtounicode}
+\fixtounicode{%
+  tfm = umvs,
+  mappings = {%
+    Coffeecup = 2615,
+    Radioactivity = 2622,
+    Football = 26BD,
+    },
+  }
+\usepackage{marvosym}
+
+\title{fixtounicode tagging test}
+
+\begin{document}
+
+\Coffeecup
+
+\Radioactivity
+
+\Football
+
+\end{document}

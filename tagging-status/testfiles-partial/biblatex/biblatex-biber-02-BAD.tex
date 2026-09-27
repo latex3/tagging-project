@@ -1,0 +1,39 @@
+\DocumentMetadata{tagging=on} % Comment this line out to get the correct behavior. Uncomment to see the bug.
+\begin{filecontents*}[overwrite]{\jobname.bib}
+	@book{refone,
+		author    = {Alpha, Alice},
+		title     = {First Book},
+		publisher = {Publisher One},
+		date      = {2020},
+	}
+	@book{reftwo,
+		author    = {Beta, Bob},
+		title     = {Second Book},
+		publisher = {Publisher Two},
+		date      = {2021},
+	}
+\end{filecontents*}
+\documentclass{report}
+
+\usepackage[backend=biber, style=authoryear, refsection=chapter]{biblatex}
+\addbibresource{\jobname.bib}
+
+\title{biblatex tagging test -- refsection}
+
+\begin{document}
+	
+	\chapter{One}
+	*** REFSECTION AFTER CHAPTER ONE = \therefsection  % The bug gives "= 0" here instead of "= 1"
+	
+	\cite{refone}
+	
+	\printbibliography[heading=subbibintoc,title={References}]
+	
+	\chapter{Two}
+	*** REFSECTION AFTER CHAPTER TWO = \therefsection *** % The bug gives "= 0" here instead of "= 2"
+	
+	\cite{reftwo}
+	
+	\printbibliography[heading=subbibintoc,title={References}]
+	
+\end{document}

@@ -1,0 +1,93 @@
+%{% raw %}
+\DocumentMetadata
+  { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
+
+\documentclass[twocolumn]{report}
+
+\usepackage{kantlipsum}
+
+\title{Heading examples with order key}
+
+\begin{document}
+
+
+\chapter{Default headings}            \kant[1]
+\section{A section title}             \kant[2]
+\subsection{A subsection title}       \kant[3]
+\subsubsection{A subsubsection title} \kant[4]
+\paragraph{A paragraph title}         \kant[5]
+\subparagraph{A subparagraph title}   \kant[6]
+
+
+% Various spacing changes in the new \chapter
+%  + different fonts
+%  + title boxed
+
+\EditInstance{heading}{chapter}
+  { placement = normal,
+    column-spanning = false,
+    before-vspace   = 0pt,
+    penalty         = -300,
+    after-penalty-vspace = 20pt,
+    after-vspace    = 10pt,
+    heading-decls   = \raggedright \parindent 0pt \sffamily \bfseries \huge ,
+    title-format    = \parbox[t]{.7\linewidth}{\raggedleft #1}
+  }
+
+%  title and number flipped with some rules inbetween:
+
+\EditInstance{headformat}{chapter}
+ { heading-indent = 0em,
+   order = {title, separator-a, number},
+   separator-a = \ \rule[-20pt]{2pt}{60pt}\rule[-5pt]{3pt}{30pt}\ ,
+ }
+
+% 
+
+\EditInstance{heading}{section}
+ { prefix = Section,
+   heading-decls = \normalfont \sffamily \large \bfseries \centering ,
+   title-decls = \Large
+ }
+\DeclareInstance{headformat}{section}{display}
+ { heading-indent = 0pt,
+   order = { separator-a, prefix, separator-b, number, separator-c, title},
+   separator-a = \hspace*{1em}\hrulefill\ ,
+   separator-b = \nobreakspace,
+   separator-c = \ \hrulefill \hspace*{1em}\linebreak
+ }
+
+\EditInstance{heading}{subsection}
+ { prefix = \S,
+   punct = \AddPunct{.} ,
+   heading-decls = \sffamily \bfseries
+ }
+
+\EditInstance{headformat}{subsection}
+ { separator-a = \, ,
+   separator-b = \
+ }
+ 
+\EditInstance{heading}{subsubsection}
+ {  heading-decls = \sffamily \bfseries \itshape
+ }
+
+\chapter{Alternate}          \kant[1]
+\section{A section title}             \kant[2]
+\subsection{A subsection title}       \kant[3]
+\subsubsection{A subsubsection title} \kant[4]
+
+
+% To look at the current instance values one can use:
+%
+%   \ShowInstanceValues{heading}{chapter}
+%   \ShowInstanceValues{headformat}{chapter}
+%
+% However, This can't be used on the website installation of LaTeX as
+% it generates a non-zero return code! For this you need to run the
+% document locally.
+
+
+\end{document}
+
+%{% endraw %}

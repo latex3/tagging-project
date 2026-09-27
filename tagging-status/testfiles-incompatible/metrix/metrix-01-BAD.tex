@@ -1,0 +1,46 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{metrix}
+
+\title{metrix tagging test}
+
+\begin{document}
+\metricsymbols{/_ u u /_ _ /_}
+
+\metrics{_ u u _ _ _ | _ _ u u _ _ _ }
+{flos ve-te-ris vi-ni | meis na-ri-bus ob-iec-tust}
+
+\metrics
+[
+2=colored highlight,
+4={colored highlight=orange},
+5={colored highlight=blue},
+7=colored highlight,
+11=colored highlight
+]
+{_ u u _ _ _ | _ _ u u _ }
+{flos ve-te-ris vi-ni | meis na-ri-bus ob}
+
+\brv{a}m\acct{\lng{i}}c\brv{u}s pr\acct{\brv{o}}f\brv{u}g\brv{u}s
+
+mult\bow{um i}lle or d\bow{ei}nde
+
+Text text text ...
+\begin{symbolline}
+\metricsymbols{oo e _ u u _ e u _ e u _ u_}
+\end{symbolline}
+Text text text ...
+
+Text text text ...
+\begin{metricverses}
+\metrics{_ u u _ _ _ | _ _ u u _ _ _ }
+{flos ve-te-ris vi-ni | meis na-ri-bus ob-iec-tust}
+\verseref{Plaut. \emph{Curc.} 96f}
+\metrics{_ u u _ u u _ | _ _ u u
+_ u u _ }
+{ei-us a-mor cu-pi-dam | {m\bow{e h}uc} pro-li-cit
+per te-ne-bras}
+\end{metricverses}
+Text text text ...
+
+\end{document}

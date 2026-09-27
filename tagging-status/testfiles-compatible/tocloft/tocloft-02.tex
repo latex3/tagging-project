@@ -1,0 +1,20 @@
+\DocumentMetadata{tagging=on}
+\documentclass{report}
+\usepackage{tocloft}
+
+\renewcommand\cfttoctitlefont{\hfil\Huge\bfseries}
+\renewcommand\cftaftertoctitle{\hfill}   % classic tocloft centering idiom
+
+\renewcommand\cftloftitlefont{\hfill\Huge\bfseries}
+\renewcommand\cftafterloftitle{\hfill
+\addcontentsline{toc}{chapter}{\listfigurename}}
+
+\title{tocloft tagging test -- cftafterXtitle}
+
+\begin{document}
+\tableofcontents
+\listoffigures
+\chapter{Body}
+Placeholder.
+\begin{figure}\caption{x}\end{figure}
+\end{document}

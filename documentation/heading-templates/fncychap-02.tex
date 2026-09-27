@@ -1,0 +1,35 @@
+%{% raw %}
+\DocumentMetadata
+  { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
+
+\documentclass{report}
+
+\usepackage{fncychap}
+
+% A manually customized chapter heading (taken from the fncychap manual):
+
+\makeatletter % for \@chapapp
+
+\ChNameVar{\Large\rm}            % sets the style for name
+\ChNumVar{\Huge}                 % sets the style for digit
+\ChTitleVar{\Large\rm\centering} % sets the style for title
+\ChRuleWidth{4pt}
+\ChNameUpperCase % Make name uppercase
+\renewcommand{\DOCH}{%
+    \setlength{\fboxrule}{\RW}   % Let fbox lines be
+                                 % controlled by \ChRuleWidth
+    \fbox{\CNV\FmN{\@chapapp}\space \CNoV\thechapter}%
+    \par\nobreak
+    \vspace{40pt}}
+\makeatother
+
+\title{Testing custom fncychap headings}
+
+\begin{document}
+
+\chapter{Special chapter}  
+Some text.
+
+\end{document}
+
+%{% endraw %}
