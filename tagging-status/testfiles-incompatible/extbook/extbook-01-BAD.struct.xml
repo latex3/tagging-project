@@ -49,58 +49,53 @@
      <?MarkedContent page="1" ?>Some date
     </text-block>
    </semantic-para>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <chapter xmlns="https://www.latex-project.org/ns/book"
       id="ID.0014"
+      rolemaps-to="Sect"
      >
-    <chapter xmlns="https://www.latex-project.org/ns/book"
+    <chapter-heading xmlns="https://www.latex-project.org/ns/book"
        id="ID.0015"
        title="Contents"
        rolemaps-to="H1"
        referenced-as="1"
       >
-     <Span xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0016"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
-       >
-      <?MarkedContent page="3" ?>Contents
-     </Span>
-    </chapter>
+     <?MarkedContent page="3" ?>Contents
+    </chapter-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
-       id="ID.0017"
+       id="ID.0016"
        title="toc"
       >
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.0018"
+        id="ID.0017"
         title="Contents[]Contents[]Contents"
        >
        <?References objects="1" ?>
      </TOCI>
      <TOCI xmlns="http://iso.org/pdf/ssn"
-        id="ID.0019"
+        id="ID.0018"
         title="Heading on level0 (chapter)"
        >
        <?References objects="2" ?>
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0020"
+         id="ID.0019"
         >
        <?MarkedContent page="3" ?>1
       </Lbl>
       <?MarkedContent page="3" ?>Heading on level 0 (chapter)5
      </TOCI>
      <TOC xmlns="http://iso.org/pdf/ssn"
-        id="ID.0021"
+        id="ID.0020"
        >
       <TOCI xmlns="http://iso.org/pdf/ssn"
-         id="ID.0022"
+         id="ID.0021"
          title="Heading on level1 (section)"
         >
         <?References objects="3" ?>
        <Reference xmlns="http://iso.org/pdf/ssn"
-          id="ID.0023"
+          id="ID.0022"
          >
         <Lbl xmlns="http://iso.org/pdf2/ssn"
-           id="ID.0024"
+           id="ID.0023"
           >
          <?MarkedContent page="3" ?>1.1
         </Lbl>
@@ -109,18 +104,18 @@
        </Reference>
       </TOCI>
       <TOC xmlns="http://iso.org/pdf/ssn"
-         id="ID.0025"
+         id="ID.0024"
         >
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.0026"
+          id="ID.0025"
           title="Heading on level2 (subsection)"
          >
          <?References objects="4" ?>
         <Reference xmlns="http://iso.org/pdf/ssn"
-           id="ID.0027"
+           id="ID.0026"
           >
          <Lbl xmlns="http://iso.org/pdf2/ssn"
-            id="ID.0028"
+            id="ID.0027"
            >
           <?MarkedContent page="3" ?>1.1.1
          </Lbl>
@@ -130,15 +125,15 @@
        </TOCI>
       </TOC>
       <TOCI xmlns="http://iso.org/pdf/ssn"
-         id="ID.0029"
+         id="ID.0028"
          title="Lists"
         >
         <?References objects="5" ?>
        <Reference xmlns="http://iso.org/pdf/ssn"
-          id="ID.0030"
+          id="ID.0029"
          >
         <Lbl xmlns="http://iso.org/pdf2/ssn"
-           id="ID.0031"
+           id="ID.0030"
           >
          <?MarkedContent page="3" ?>1.2
         </Lbl>
@@ -147,18 +142,18 @@
        </Reference>
       </TOCI>
       <TOC xmlns="http://iso.org/pdf/ssn"
-         id="ID.0032"
+         id="ID.0031"
         >
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.0033"
+          id="ID.0032"
           title="Example for list(itemize)"
          >
          <?References objects="6" ?>
         <Reference xmlns="http://iso.org/pdf/ssn"
-           id="ID.0034"
+           id="ID.0033"
           >
          <Lbl xmlns="http://iso.org/pdf2/ssn"
-            id="ID.0035"
+            id="ID.0034"
            >
           <?MarkedContent page="3" ?>1.2.1
          </Lbl>
@@ -167,15 +162,15 @@
         </Reference>
        </TOCI>
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.0036"
+          id="ID.0035"
           title="Example for list(enumerate)"
          >
          <?References objects="7" ?>
         <Reference xmlns="http://iso.org/pdf/ssn"
-           id="ID.0037"
+           id="ID.0036"
           >
          <Lbl xmlns="http://iso.org/pdf2/ssn"
-            id="ID.0038"
+            id="ID.0037"
            >
           <?MarkedContent page="3" ?>1.2.2
          </Lbl>
@@ -184,15 +179,15 @@
         </Reference>
        </TOCI>
        <TOCI xmlns="http://iso.org/pdf/ssn"
-          id="ID.0039"
+          id="ID.0038"
           title="Example for list(description)"
          >
          <?References objects="8" ?>
         <Reference xmlns="http://iso.org/pdf/ssn"
-           id="ID.0040"
+           id="ID.0039"
           >
          <Lbl xmlns="http://iso.org/pdf2/ssn"
-            id="ID.0041"
+            id="ID.0040"
            >
           <?MarkedContent page="3" ?>1.2.3
          </Lbl>
@@ -203,37 +198,32 @@
       </TOC>
      </TOC>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0042"
+   </chapter>
+   <chapter xmlns="https://www.latex-project.org/ns/book"
+      id="ID.0041"
+      rolemaps-to="Sect"
      >
-    <chapter xmlns="https://www.latex-project.org/ns/book"
-       id="ID.0043"
+    <chapter-heading xmlns="https://www.latex-project.org/ns/book"
+       id="ID.0042"
        title="Heading on level0 (chapter)"
        rolemaps-to="H1"
        referenced-as="2"
       >
-     <Span xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0044"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
+     <?MarkedContent page="5" ?>Chapter  
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0043"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="5" ?>Chapter 1
-     </Span>
-     <Span xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0045"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
-       >
-      <?MarkedContent page="5" ?>Heading on level 0 (chapter)
-     </Span>
-    </chapter>
+      <?MarkedContent page="5" ?>1
+     </heading-number>
+     <?MarkedContent page="5" ?>Heading on level 0 (chapter)
+    </chapter-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0046"
+       id="ID.0044"
        rolemaps-to="Part"
       >
      <text-block xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0047"
+        id="ID.0045"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -241,29 +231,31 @@
       <?MarkedContent page="5" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
      </text-block>
     </semantic-para>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.0048"
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0046"
+       rolemaps-to="Sect"
       >
-     <section xmlns="https://www.latex-project.org/ns/book"
-        id="ID.0049"
+     <section-heading xmlns="https://www.latex-project.org/ns/book"
+        id="ID.0047"
         title="Heading on level1 (section)"
         rolemaps-to="H2"
+        referenced-as="3"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0050"
-         rolemaps-to="Span"
-         referenced-as="3"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0048"
+         rolemaps-to="Lbl"
         >
-       <?MarkedContent page="5" ?>1.1 
-      </section-number>
+       <?MarkedContent page="5" ?>1.1
+      </heading-number>
+      <?MarkedContent page="5" ?>  
       <?MarkedContent page="5" ?>Heading on level 1 (section)
-     </section>
+     </section-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0051"
+        id="ID.0049"
         rolemaps-to="Part"
        >
       <text-block xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0052"
+         id="ID.0050"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
@@ -271,29 +263,31 @@
        <?MarkedContent page="5" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
       </text-block>
      </semantic-para>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0053"
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0051"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.0054"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
+         id="ID.0052"
          title="Heading on level2 (subsection)"
          rolemaps-to="H3"
+         referenced-as="4"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0055"
-          rolemaps-to="Span"
-          referenced-as="4"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.0053"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="5" ?>1.1.1 
-       </section-number>
+        <?MarkedContent page="5" ?>1.1.1
+       </heading-number>
+       <?MarkedContent page="5" ?>  
        <?MarkedContent page="5" ?>Heading on level 2 (subsection)
-      </subsection>
+      </subsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0056"
+         id="ID.0054"
          rolemaps-to="Part"
         >
        <text-block xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0057"
+          id="ID.0055"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
@@ -302,22 +296,23 @@
         <?MarkedContent page="6" ?>ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
        </text-block>
       </semantic-para>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0058"
+      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0056"
+         rolemaps-to="Sect"
         >
-       <subsubsection xmlns="https://www.latex-project.org/ns/book"
-          id="ID.0059"
+       <subsubsection-heading xmlns="https://www.latex-project.org/ns/book"
+          id="ID.0057"
           title="Heading on level3 (subsubsection)"
           rolemaps-to="H4"
          >
         <?MarkedContent page="6" ?>Heading on level 3 (subsubsection)
-       </subsubsection>
+       </subsubsection-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0060"
+          id="ID.0058"
           rolemaps-to="Part"
          >
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0061"
+           id="ID.0059"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
@@ -325,23 +320,24 @@
          <?MarkedContent page="6" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
         </text-block>
        </semantic-para>
-       <Sect xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0062"
+       <paragraph xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.0060"
+          rolemaps-to="Sect"
          >
-        <paragraph xmlns="https://www.latex-project.org/ns/book"
-           id="ID.0063"
+        <paragraph-heading xmlns="https://www.latex-project.org/ns/book"
+           id="ID.0061"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="H5"
           >
          <?MarkedContent page="6" ?>Heading on level 4 (paragraph)
-        </paragraph>
+        </paragraph-heading>
         <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0064"
+           id="ID.0062"
            rolemaps-to="Part"
           >
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0065"
+            id="ID.0063"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
             rolemaps-to="P"
@@ -352,74 +348,78 @@
           <?MarkedContent page="6" ?>tudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
          </text-block>
         </semantic-para>
-       </Sect>
-      </Sect>
-     </Sect>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.0066"
+       </paragraph>
+      </subsubsection>
+     </subsection>
+    </section>
+    <section xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0064"
+       rolemaps-to="Sect"
       >
-     <section xmlns="https://www.latex-project.org/ns/book"
-        id="ID.0067"
+     <section-heading xmlns="https://www.latex-project.org/ns/book"
+        id="ID.0065"
         title="Lists"
         rolemaps-to="H2"
+        referenced-as="5"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0068"
-         rolemaps-to="Span"
-         referenced-as="5"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0066"
+         rolemaps-to="Lbl"
         >
-       <?MarkedContent page="6" ?>1.2 
-      </section-number>
+       <?MarkedContent page="6" ?>1.2
+      </heading-number>
+      <?MarkedContent page="6" ?>  
       <?MarkedContent page="6" ?>Lists
-     </section>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0069"
+     </section-heading>
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0067"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.0070"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
+         id="ID.0068"
          title="Example for list(itemize)"
          rolemaps-to="H3"
+         referenced-as="6"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0071"
-          rolemaps-to="Span"
-          referenced-as="6"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.0069"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="6" ?>1.2.1 
-       </section-number>
+        <?MarkedContent page="6" ?>1.2.1
+       </heading-number>
+       <?MarkedContent page="6" ?>  
        <?MarkedContent page="6" ?>Example for list (itemize)
-      </subsection>
+      </subsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0072"
+         id="ID.0070"
          rolemaps-to="Part"
         >
        <itemize xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0073"
+          id="ID.0071"
           xmlns:List="http://iso.org/pdf/ssn/List"
           List:ListNumbering="Unordered"
           rolemaps-to="L"
          >
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0074"
+           id="ID.0072"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0075"
+            id="ID.0073"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="6" ?>•
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0076"
+            id="ID.0074"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0077"
+             id="ID.0075"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0078"
+              id="ID.0076"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -430,25 +430,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0079"
+           id="ID.0077"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0080"
+            id="ID.0078"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="6" ?>•
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0081"
+            id="ID.0079"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0082"
+             id="ID.0080"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0083"
+              id="ID.0081"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -459,25 +459,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0084"
+           id="ID.0082"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0085"
+            id="ID.0083"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="6" ?>•
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0086"
+            id="ID.0084"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0087"
+             id="ID.0085"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0088"
+              id="ID.0086"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -488,25 +488,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0089"
+           id="ID.0087"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0090"
+            id="ID.0088"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="6" ?>•
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0091"
+            id="ID.0089"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0092"
+             id="ID.0090"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0093"
+              id="ID.0091"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -517,25 +517,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0094"
+           id="ID.0092"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0095"
+            id="ID.0093"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="6" ?>•
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0096"
+            id="ID.0094"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0097"
+             id="ID.0095"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0098"
+              id="ID.0096"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -547,46 +547,47 @@
         </item>
        </itemize>
       </semantic-para>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0099"
+      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0097"
+         rolemaps-to="Sect"
         >
-       <subsubsection xmlns="https://www.latex-project.org/ns/book"
-          id="ID.0100"
+       <subsubsection-heading xmlns="https://www.latex-project.org/ns/book"
+          id="ID.0098"
           title="Example for list(4*itemize)"
           rolemaps-to="H4"
          >
         <?MarkedContent page="7" ?>Example for list (4*itemize)
-       </subsubsection>
+       </subsubsection-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0101"
+          id="ID.0099"
           rolemaps-to="Part"
          >
         <itemize xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0102"
+           id="ID.0100"
            xmlns:List="http://iso.org/pdf/ssn/List"
            List:ListNumbering="Unordered"
            rolemaps-to="L"
           >
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0103"
+            id="ID.0101"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0104"
+             id="ID.0102"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="7" ?>•
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0105"
+             id="ID.0103"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0106"
+              id="ID.0104"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0107"
+               id="ID.0105"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -594,31 +595,31 @@
              <?MarkedContent page="7" ?>First itemtext
             </text-block>
             <itemize xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0108"
+               id="ID.0106"
                xmlns:List="http://iso.org/pdf/ssn/List"
                List:ListNumbering="Unordered"
                rolemaps-to="L"
               >
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0109"
+                id="ID.0107"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0110"
+                 id="ID.0108"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="7" ?>–
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0111"
+                 id="ID.0109"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0112"
+                  id="ID.0110"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0113"
+                   id="ID.0111"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -626,31 +627,31 @@
                  <?MarkedContent page="7" ?>First itemtext
                 </text-block>
                 <itemize xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0114"
+                   id="ID.0112"
                    xmlns:List="http://iso.org/pdf/ssn/List"
                    List:ListNumbering="Unordered"
                    rolemaps-to="L"
                   >
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0115"
+                    id="ID.0113"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0116"
+                     id="ID.0114"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="7" ?>∗
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0117"
+                     id="ID.0115"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0118"
+                      id="ID.0116"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0119"
+                       id="ID.0117"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -658,31 +659,31 @@
                      <?MarkedContent page="7" ?>First itemtext
                     </text-block>
                     <itemize xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0120"
+                       id="ID.0118"
                        xmlns:List="http://iso.org/pdf/ssn/List"
                        List:ListNumbering="Unordered"
                        rolemaps-to="L"
                       >
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0121"
+                        id="ID.0119"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0122"
+                         id="ID.0120"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="7" ?>·
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0123"
+                         id="ID.0121"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0124"
+                          id="ID.0122"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0125"
+                           id="ID.0123"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -693,25 +694,25 @@
                       </itembody>
                      </item>
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0126"
+                        id="ID.0124"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0127"
+                         id="ID.0125"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="7" ?>·
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0128"
+                         id="ID.0126"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0129"
+                          id="ID.0127"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0130"
+                           id="ID.0128"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -726,25 +727,25 @@
                   </itembody>
                  </item>
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0131"
+                    id="ID.0129"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0132"
+                     id="ID.0130"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="7" ?>∗
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0133"
+                     id="ID.0131"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0134"
+                      id="ID.0132"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0135"
+                       id="ID.0133"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -759,25 +760,25 @@
               </itembody>
              </item>
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0136"
+                id="ID.0134"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0137"
+                 id="ID.0135"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="7" ?>–
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0138"
+                 id="ID.0136"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0139"
+                  id="ID.0137"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0140"
+                   id="ID.0138"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -792,25 +793,25 @@
           </itembody>
          </item>
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0141"
+            id="ID.0139"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0142"
+             id="ID.0140"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="7" ?>•
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0143"
+             id="ID.0141"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0144"
+              id="ID.0142"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0145"
+               id="ID.0143"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -822,55 +823,57 @@
          </item>
         </itemize>
        </semantic-para>
-      </Sect>
-     </Sect>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0146"
+      </subsubsection>
+     </subsection>
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0144"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.0147"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
+         id="ID.0145"
          title="Example for list(enumerate)"
          rolemaps-to="H3"
+         referenced-as="7"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0148"
-          rolemaps-to="Span"
-          referenced-as="7"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.0146"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="7" ?>1.2.2 
-       </section-number>
+        <?MarkedContent page="7" ?>1.2.2
+       </heading-number>
+       <?MarkedContent page="7" ?>  
        <?MarkedContent page="7" ?>Example for list (enumerate)
-      </subsection>
+      </subsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0149"
+         id="ID.0147"
          rolemaps-to="Part"
         >
        <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0150"
+          id="ID.0148"
           xmlns:List="http://iso.org/pdf/ssn/List"
           List:ListNumbering="Ordered"
           rolemaps-to="L"
          >
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0151"
+           id="ID.0149"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0152"
+            id="ID.0150"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>1.
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0153"
+            id="ID.0151"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0154"
+             id="ID.0152"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0155"
+              id="ID.0153"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -881,25 +884,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0156"
+           id="ID.0154"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0157"
+            id="ID.0155"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>2.
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0158"
+            id="ID.0156"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0159"
+             id="ID.0157"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0160"
+              id="ID.0158"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -910,25 +913,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0161"
+           id="ID.0159"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0162"
+            id="ID.0160"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>3.
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0163"
+            id="ID.0161"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0164"
+             id="ID.0162"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0165"
+              id="ID.0163"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -939,25 +942,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0166"
+           id="ID.0164"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0167"
+            id="ID.0165"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>4.
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0168"
+            id="ID.0166"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0169"
+             id="ID.0167"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0170"
+              id="ID.0168"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -968,25 +971,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0171"
+           id="ID.0169"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0172"
+            id="ID.0170"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>5.
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0173"
+            id="ID.0171"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0174"
+             id="ID.0172"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0175"
+              id="ID.0173"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -998,46 +1001,47 @@
         </item>
        </enumerate>
       </semantic-para>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0176"
+      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0174"
+         rolemaps-to="Sect"
         >
-       <subsubsection xmlns="https://www.latex-project.org/ns/book"
-          id="ID.0177"
+       <subsubsection-heading xmlns="https://www.latex-project.org/ns/book"
+          id="ID.0175"
           title="Example for list(4*enumerate)"
           rolemaps-to="H4"
          >
         <?MarkedContent page="7" ?>Example for list (4*enumerate)
-       </subsubsection>
+       </subsubsection-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0178"
+          id="ID.0176"
           rolemaps-to="Part"
          >
         <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0179"
+           id="ID.0177"
            xmlns:List="http://iso.org/pdf/ssn/List"
            List:ListNumbering="Ordered"
            rolemaps-to="L"
           >
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0180"
+            id="ID.0178"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0181"
+             id="ID.0179"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="7" ?>1.
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0182"
+             id="ID.0180"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0183"
+              id="ID.0181"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0184"
+               id="ID.0182"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -1045,31 +1049,31 @@
              <?MarkedContent page="7" ?>First itemtext
             </text-block>
             <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0185"
+               id="ID.0183"
                xmlns:List="http://iso.org/pdf/ssn/List"
                List:ListNumbering="Ordered"
                rolemaps-to="L"
               >
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0186"
+                id="ID.0184"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0187"
+                 id="ID.0185"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="7" ?>(a)
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0188"
+                 id="ID.0186"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0189"
+                  id="ID.0187"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0190"
+                   id="ID.0188"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -1077,31 +1081,31 @@
                  <?MarkedContent page="7" ?>First itemtext
                 </text-block>
                 <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0191"
+                   id="ID.0189"
                    xmlns:List="http://iso.org/pdf/ssn/List"
                    List:ListNumbering="Ordered"
                    rolemaps-to="L"
                   >
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0192"
+                    id="ID.0190"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0193"
+                     id="ID.0191"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="7" ?>i.
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0194"
+                     id="ID.0192"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0195"
+                      id="ID.0193"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0196"
+                       id="ID.0194"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -1109,31 +1113,31 @@
                      <?MarkedContent page="7" ?>First itemtext
                     </text-block>
                     <enumerate xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0197"
+                       id="ID.0195"
                        xmlns:List="http://iso.org/pdf/ssn/List"
                        List:ListNumbering="Ordered"
                        rolemaps-to="L"
                       >
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0198"
+                        id="ID.0196"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0199"
+                         id="ID.0197"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="7" ?>A.
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0200"
+                         id="ID.0198"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0201"
+                          id="ID.0199"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0202"
+                           id="ID.0200"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -1144,25 +1148,25 @@
                       </itembody>
                      </item>
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0203"
+                        id="ID.0201"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0204"
+                         id="ID.0202"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="7" ?>B.
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0205"
+                         id="ID.0203"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0206"
+                          id="ID.0204"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0207"
+                           id="ID.0205"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -1177,25 +1181,25 @@
                   </itembody>
                  </item>
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0208"
+                    id="ID.0206"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0209"
+                     id="ID.0207"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="7" ?>ii.
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0210"
+                     id="ID.0208"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0211"
+                      id="ID.0209"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0212"
+                       id="ID.0210"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -1210,25 +1214,25 @@
               </itembody>
              </item>
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0213"
+                id="ID.0211"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0214"
+                 id="ID.0212"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="7" ?>(b)
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0215"
+                 id="ID.0213"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0216"
+                  id="ID.0214"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0217"
+                   id="ID.0215"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -1243,25 +1247,25 @@
           </itembody>
          </item>
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0218"
+            id="ID.0216"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0219"
+             id="ID.0217"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="7" ?>2.
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0220"
+             id="ID.0218"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0221"
+              id="ID.0219"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0222"
+               id="ID.0220"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -1273,55 +1277,57 @@
          </item>
         </enumerate>
        </semantic-para>
-      </Sect>
-     </Sect>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0223"
+      </subsubsection>
+     </subsection>
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0221"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
-         id="ID.0224"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
+         id="ID.0222"
          title="Example for list(description)"
          rolemaps-to="H3"
+         referenced-as="8"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0225"
-          rolemaps-to="Span"
-          referenced-as="8"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.0223"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="7" ?>1.2.3 
-       </section-number>
+        <?MarkedContent page="7" ?>1.2.3
+       </heading-number>
+       <?MarkedContent page="7" ?>  
        <?MarkedContent page="7" ?>Example for list (description)
-      </subsection>
+      </subsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0226"
+         id="ID.0224"
          rolemaps-to="Part"
         >
        <description xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0227"
+          id="ID.0225"
           xmlns:List="http://iso.org/pdf/ssn/List"
           List:ListNumbering="Description"
           rolemaps-to="L"
          >
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0228"
+           id="ID.0226"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0229"
+            id="ID.0227"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>First
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0230"
+            id="ID.0228"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0231"
+             id="ID.0229"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0232"
+              id="ID.0230"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -1332,25 +1338,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0233"
+           id="ID.0231"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0234"
+            id="ID.0232"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>Second
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0235"
+            id="ID.0233"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0236"
+             id="ID.0234"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0237"
+              id="ID.0235"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -1361,25 +1367,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0238"
+           id="ID.0236"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0239"
+            id="ID.0237"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>Last
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0240"
+            id="ID.0238"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0241"
+             id="ID.0239"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0242"
+              id="ID.0240"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -1390,25 +1396,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0243"
+           id="ID.0241"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0244"
+            id="ID.0242"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>First
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0245"
+            id="ID.0243"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0246"
+             id="ID.0244"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0247"
+              id="ID.0245"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -1419,25 +1425,25 @@
          </itembody>
         </item>
         <item xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0248"
+           id="ID.0246"
            rolemaps-to="LI"
           >
          <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0249"
+            id="ID.0247"
             rolemaps-to="Lbl"
            >
           <?MarkedContent page="7" ?>Second
          </itemlabel>
          <itembody xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0250"
+            id="ID.0248"
             rolemaps-to="LBody"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0251"
+             id="ID.0249"
              rolemaps-to="Part"
             >
            <text-block xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0252"
+              id="ID.0250"
               xmlns:Layout="http://iso.org/pdf/ssn/Layout"
               Layout:TextAlign="Justify"
               rolemaps-to="P"
@@ -1449,46 +1455,47 @@
         </item>
        </description>
       </semantic-para>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0253"
+      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0251"
+         rolemaps-to="Sect"
         >
-       <subsubsection xmlns="https://www.latex-project.org/ns/book"
-          id="ID.0254"
+       <subsubsection-heading xmlns="https://www.latex-project.org/ns/book"
+          id="ID.0252"
           title="Example for list(4*description)"
           rolemaps-to="H4"
          >
         <?MarkedContent page="8" ?>Example for list (4*description)
-       </subsubsection>
+       </subsubsection-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0255"
+          id="ID.0253"
           rolemaps-to="Part"
          >
         <description xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0256"
+           id="ID.0254"
            xmlns:List="http://iso.org/pdf/ssn/List"
            List:ListNumbering="Description"
            rolemaps-to="L"
           >
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0257"
+            id="ID.0255"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0258"
+             id="ID.0256"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="8" ?>First
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0259"
+             id="ID.0257"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0260"
+              id="ID.0258"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0261"
+               id="ID.0259"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -1496,31 +1503,31 @@
              <?MarkedContent page="8" ?>itemtext
             </text-block>
             <description xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0262"
+               id="ID.0260"
                xmlns:List="http://iso.org/pdf/ssn/List"
                List:ListNumbering="Description"
                rolemaps-to="L"
               >
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0263"
+                id="ID.0261"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0264"
+                 id="ID.0262"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="8" ?>First
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0265"
+                 id="ID.0263"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0266"
+                  id="ID.0264"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0267"
+                   id="ID.0265"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -1528,31 +1535,31 @@
                  <?MarkedContent page="8" ?>itemtext
                 </text-block>
                 <description xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0268"
+                   id="ID.0266"
                    xmlns:List="http://iso.org/pdf/ssn/List"
                    List:ListNumbering="Description"
                    rolemaps-to="L"
                   >
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0269"
+                    id="ID.0267"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0270"
+                     id="ID.0268"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="8" ?>First
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0271"
+                     id="ID.0269"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0272"
+                      id="ID.0270"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0273"
+                       id="ID.0271"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -1560,31 +1567,31 @@
                      <?MarkedContent page="8" ?>itemtext
                     </text-block>
                     <description xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0274"
+                       id="ID.0272"
                        xmlns:List="http://iso.org/pdf/ssn/List"
                        List:ListNumbering="Description"
                        rolemaps-to="L"
                       >
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0275"
+                        id="ID.0273"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0276"
+                         id="ID.0274"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="8" ?>First
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0277"
+                         id="ID.0275"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0278"
+                          id="ID.0276"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0279"
+                           id="ID.0277"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -1595,25 +1602,25 @@
                       </itembody>
                      </item>
                      <item xmlns="https://www.latex-project.org/ns/dflt"
-                        id="ID.0280"
+                        id="ID.0278"
                         rolemaps-to="LI"
                        >
                       <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0281"
+                         id="ID.0279"
                          rolemaps-to="Lbl"
                         >
                        <?MarkedContent page="8" ?>Second
                       </itemlabel>
                       <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                         id="ID.0282"
+                         id="ID.0280"
                          rolemaps-to="LBody"
                         >
                        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                          id="ID.0283"
+                          id="ID.0281"
                           rolemaps-to="Part"
                          >
                         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                           id="ID.0284"
+                           id="ID.0282"
                            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                            Layout:TextAlign="Justify"
                            rolemaps-to="P"
@@ -1628,25 +1635,25 @@
                   </itembody>
                  </item>
                  <item xmlns="https://www.latex-project.org/ns/dflt"
-                    id="ID.0285"
+                    id="ID.0283"
                     rolemaps-to="LI"
                    >
                   <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0286"
+                     id="ID.0284"
                      rolemaps-to="Lbl"
                     >
                    <?MarkedContent page="8" ?>Last
                   </itemlabel>
                   <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                     id="ID.0287"
+                     id="ID.0285"
                      rolemaps-to="LBody"
                     >
                    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                      id="ID.0288"
+                      id="ID.0286"
                       rolemaps-to="Part"
                      >
                     <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                       id="ID.0289"
+                       id="ID.0287"
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:TextAlign="Justify"
                        rolemaps-to="P"
@@ -1661,25 +1668,25 @@
               </itembody>
              </item>
              <item xmlns="https://www.latex-project.org/ns/dflt"
-                id="ID.0290"
+                id="ID.0288"
                 rolemaps-to="LI"
                >
               <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0291"
+                 id="ID.0289"
                  rolemaps-to="Lbl"
                 >
                <?MarkedContent page="8" ?>First
               </itemlabel>
               <itembody xmlns="https://www.latex-project.org/ns/dflt"
-                 id="ID.0292"
+                 id="ID.0290"
                  rolemaps-to="LBody"
                 >
                <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-                  id="ID.0293"
+                  id="ID.0291"
                   rolemaps-to="Part"
                  >
                 <text-block xmlns="https://www.latex-project.org/ns/dflt"
-                   id="ID.0294"
+                   id="ID.0292"
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:TextAlign="Justify"
                    rolemaps-to="P"
@@ -1694,25 +1701,25 @@
           </itembody>
          </item>
          <item xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0295"
+            id="ID.0293"
             rolemaps-to="LI"
            >
           <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0296"
+             id="ID.0294"
              rolemaps-to="Lbl"
             >
            <?MarkedContent page="8" ?>Second
           </itemlabel>
           <itembody xmlns="https://www.latex-project.org/ns/dflt"
-             id="ID.0297"
+             id="ID.0295"
              rolemaps-to="LBody"
             >
            <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-              id="ID.0298"
+              id="ID.0296"
               rolemaps-to="Part"
              >
             <text-block xmlns="https://www.latex-project.org/ns/dflt"
-               id="ID.0299"
+               id="ID.0297"
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:TextAlign="Justify"
                rolemaps-to="P"
@@ -1724,10 +1731,10 @@
          </item>
         </description>
        </semantic-para>
-      </Sect>
-     </Sect>
-    </Sect>
-   </Sect>
+      </subsubsection>
+     </subsection>
+    </section>
+   </chapter>
   </Document>
  </StructTreeRoot>
 </PDF>

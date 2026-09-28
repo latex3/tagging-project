@@ -110,36 +110,39 @@
       <?MarkedContent page="3" ?>Some chapter
      </text-block>
     </semantic-para>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.022"
+       rolemaps-to="Sect"
       >
-     <section xmlns="https://www.latex-project.org/ns/book"
+     <section-heading xmlns="https://www.latex-project.org/ns/book"
         id="ID.023"
         title="Some section"
         rolemaps-to="H2"
+        referenced-as="3"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.024"
-         rolemaps-to="Span"
-         referenced-as="3"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="3" ?>1.1
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="3" ?> 
       <?MarkedContent page="3" ?>Some section
-     </section>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     </section-heading>
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.025"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
          id="ID.026"
          title="Some subsection"
          rolemaps-to="H3"
          referenced-as="4"
         >
        <?MarkedContent page="3" ?>Some subsection
-      </subsection>
-     </Sect>
-    </Sect>
+      </subsection-heading>
+     </subsection>
+    </section>
    </TOC>
   </Document>
  </StructTreeRoot>
