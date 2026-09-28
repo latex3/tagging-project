@@ -3,90 +3,84 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Part xmlns="http://iso.org/pdf2/ssn"
+   <part xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Part"
      >
-    <part xmlns="https://www.latex-project.org/ns/dflt"
+    <part-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="my part"
        rolemaps-to="Title"
       >
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <?MarkedContent page="1" ?>Part  
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Center"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>Part I
-     </Span>
-     <Span xmlns="http://iso.org/pdf2/ssn"
-        id="ID.009"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Center"
-       >
-      <?MarkedContent page="1" ?>my part
-     </Span>
-    </part>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.010"
+      <?MarkedContent page="1" ?>I
+     </heading-number>
+     <?MarkedContent page="1" ?>my part
+    </part-heading>
+    <chapter xmlns="https://www.latex-project.org/ns/book"
+       id="ID.009"
+       rolemaps-to="Sect"
       >
-     <chapter xmlns="https://www.latex-project.org/ns/book"
-        id="ID.011"
+     <chapter-heading xmlns="https://www.latex-project.org/ns/book"
+        id="ID.010"
         title="blub"
         rolemaps-to="H1"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.012"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
+      <?MarkedContent page="3" ?>Chapter  
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.011"
+         rolemaps-to="Lbl"
         >
-       <?MarkedContent page="3" ?>Chapter 1
-      </Span>
-      <Span xmlns="http://iso.org/pdf2/ssn"
-         id="ID.013"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Start"
-        >
-       <?MarkedContent page="3" ?>blub
-      </Span>
-     </chapter>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
-        id="ID.014"
+       <?MarkedContent page="3" ?>1
+      </heading-number>
+      <?MarkedContent page="3" ?>blub
+     </chapter-heading>
+     <section xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.012"
+        rolemaps-to="Sect"
        >
-      <section xmlns="https://www.latex-project.org/ns/book"
-         id="ID.015"
+      <section-heading xmlns="https://www.latex-project.org/ns/book"
+         id="ID.013"
          title="Some section heading"
          rolemaps-to="H2"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.016"
-          rolemaps-to="Span"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.014"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="3" ?>1.1 
-       </section-number>
+        <?MarkedContent page="3" ?>1.1
+       </heading-number>
+       <?MarkedContent page="3" ?>  
        <?MarkedContent page="3" ?>Some section heading
-      </section>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
-         id="ID.017"
+      </section-heading>
+      <subsection xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.015"
+         rolemaps-to="Sect"
         >
-       <subsection xmlns="https://www.latex-project.org/ns/book"
-          id="ID.018"
+       <subsection-heading xmlns="https://www.latex-project.org/ns/book"
+          id="ID.016"
           title="Some subsection heading"
           rolemaps-to="H3"
          >
-        <section-number xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.019"
-           rolemaps-to="Span"
+        <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.017"
+           rolemaps-to="Lbl"
           >
-         <?MarkedContent page="3" ?>1.1.1 
-        </section-number>
+         <?MarkedContent page="3" ?>1.1.1
+        </heading-number>
+        <?MarkedContent page="3" ?>  
         <?MarkedContent page="3" ?>Some subsection heading
-       </subsection>
+       </subsection-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.020"
+          id="ID.018"
           rolemaps-to="Part"
          >
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.021"
+           id="ID.019"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
@@ -94,10 +88,10 @@
          <?MarkedContent page="3" ?>normal text
         </text-block>
        </semantic-para>
-      </Sect>
-     </Sect>
-    </Sect>
-   </Part>
+      </subsection>
+     </section>
+    </chapter>
+   </part>
   </Document>
  </StructTreeRoot>
 </PDF>
