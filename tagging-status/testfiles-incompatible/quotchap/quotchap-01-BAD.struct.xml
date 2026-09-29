@@ -4,8 +4,9 @@
      id="ID.002"
     >
   </Document>
-  <Div xmlns="http://iso.org/pdf2/ssn"
+  <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
      id="ID.006"
+     rolemaps-to="Div"
     >
    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.007"
@@ -72,35 +73,30 @@
      <?MarkedContent page="1" ?>Cookie Monster 
     </text-block>
    </semantic-para>
-  </Div>
+  </text-minipage>
   <text-block xmlns="https://www.latex-project.org/ns/dflt"
      id="ID.017"
      rolemaps-to="P"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <chapter xmlns="https://www.latex-project.org/ns/book"
       id="ID.018"
+      rolemaps-to="Sect"
      >
-    <chapter xmlns="https://www.latex-project.org/ns/book"
+    <chapter-heading xmlns="https://www.latex-project.org/ns/book"
        id="ID.019"
        title="Classic Sesame Street"
        rolemaps-to="H1"
       >
-     <Span xmlns="http://iso.org/pdf2/ssn"
+     <?MarkedContent page="2" ?>Chapter  
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.020"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="2" ?>Chapter 1
-     </Span>
-     <Span xmlns="http://iso.org/pdf2/ssn"
-        id="ID.021"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Start"
-       >
-      <?MarkedContent page="2" ?>Classic Sesame Street
-     </Span>
-    </chapter>
-   </Sect>
+      <?MarkedContent page="2" ?>1
+     </heading-number>
+     <?MarkedContent page="2" ?>Classic Sesame Street
+    </chapter-heading>
+   </chapter>
   </text-block>
  </StructTreeRoot>
 </PDF>
