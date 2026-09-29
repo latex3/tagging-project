@@ -30,8 +30,9 @@
       >
      <?MarkedContent page="1" ?>
     </text-block>
-    <Div xmlns="http://iso.org/pdf2/ssn"
+    <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
+       rolemaps-to="Div"
       >
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
@@ -46,7 +47,7 @@
        <?MarkedContent page="1" ?>The Name of the Title Is Hope
       </text-block>
      </semantic-para>
-    </Div>
+    </text-parbox>
     <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.010"
        rolemaps-to="P"
@@ -461,22 +462,24 @@
      <?MarkedContent page="1" ?>
     </text-block>
    </semantic-para>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.069"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.070"
        title="Introduction"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.071"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Introduction
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.072"
        rolemaps-to="Part"
@@ -521,7 +524,7 @@
       <?MarkedContent page="1" ?>Received 20 February 2007; revised 12 March 2009; accepted 5 June 2009
      </text-block>
     </semantic-para>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>
