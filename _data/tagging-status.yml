@@ -5057,12 +5057,13 @@
 
 - name: epigraph-keys
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   tests: true
   issues: [1558]
   related-issues: [1557]
-  updated: 2026-08-26
+  comments: "Incorrectly tagged as a list."
+  updated: 2026-09-29
 
 - name: epsdice
   type: package
@@ -7915,9 +7916,9 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  comments: "No way to add Alt text to the diagrams. Some examples error with pdftex."
+  comments: "No way to add Alt text to the diagrams."
   package-repository: "https://github.com/2pi/karnaugh-map"
-  updated: 2026-08-27
+  updated: 2026-09-29
 
 - name: kbordermatrix
   type: package
@@ -8183,13 +8184,14 @@
 
 - name: layout
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [111]
+  closed-issues: [111]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
-  updated: 2024-07-11
+  comments: "Provides alt text for diagram but needs better tagging for table of dimensions."
+  updated: 2026-09-29
 
 - name: layouts
   type: package
@@ -8518,26 +8520,26 @@
 
 - name: listings
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   subpackages: [lstpatch]
-  comments: See definition in tagpdfdocu-patches.sty.
+  comments: "Mostly compatible; open questions about frames and `mathescape`."
   references: [1]
   issues: [70,1074]
   closed-issues: [41]
   tests: true
-  updated: 2024-07-12
+  updated: 2026-09-29
 
 - name: listingsutf8
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/listingsutf8"
   included-in: [ol0.1]
   priority: 9
   tests: false
   comments: See listings.
-  updated: 2026-06-09
+  updated: 2026-09-29
 
 - name: listlbls
   type: package
@@ -10341,13 +10343,12 @@
 
 - name: nameref
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
   issues: [1538]
   tests: true
-  comments: "Fully compatible except for theorem notes and description labels."
-  updated: 2026-08-20
+  updated: 2026-09-29
 
 - name: nar
   type: package
@@ -13942,13 +13943,14 @@
 
 - name: resizegather
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [352]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-29
+  comments: "Redefinition of `displaymath` is overwritten."
+  updated: 2026-09-29
 
 - name: returntogrid
   type: package
@@ -18441,12 +18443,11 @@
   status: partially-compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: "verbatim environment from package overwritten by tagging code;
-            content input with `\\verbatiminput` is tagged as normal text, not Code."
-  issues: [156]
+  comments: "verbatim environment from package overwritten by tagging code."
+  issues: [156,1615]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
-  updated: 2024-07-17
+  updated: 2026-09-29
 
 - name: verbatimbox
   type: package
@@ -19486,12 +19487,12 @@
 - name: zref-titleref
   ctan-pkg: zref
   type: package
-  status: partially-compatible
+  status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: true
   issues: [1408]
-  updated: 2026-09-19
+  updated: 2026-09-29
 
 - name: zref-totpages
   ctan-pkg: zref

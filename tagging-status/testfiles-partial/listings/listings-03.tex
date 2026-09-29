@@ -1,0 +1,42 @@
+\begin{filecontents}{lua-listing.lua}
+local kpse = kpse or require 'kpse'
+
+kpse.set_program('luatex')
+
+return kpse.in_name_ok(arg[1])
+\end{filecontents}
+\DocumentMetadata{
+    lang=en-US,
+    tagging=on,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    uncompress
+}
+
+\documentclass{article}
+
+%\usepackage{amsmath}
+\usepackage{listings}
+
+\title{Listing Examples}
+\author{Dom}
+\date{\today}
+
+
+\begin{document}
+
+    \section{\LaTeX\ code}
+
+    Testing \verb|\lstinputlisting| with the Lua language.
+
+    \lstinputlisting[language={[5.3]Lua}]{lua-listing.lua}
+
+    Testing a \texttt{caption}.
+
+    \lstinputlisting[language={[5.3]Lua},caption={The Lua file}]{lua-listing.lua}
+
+    Testing a upper \texttt{caption}.
+
+    \lstinputlisting[language={[5.3]Lua},caption={The Lua file},captionpos=b]{lua-listing.lua}
+
+\end{document}
