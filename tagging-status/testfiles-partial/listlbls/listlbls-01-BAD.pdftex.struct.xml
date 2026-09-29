@@ -1,18 +1,19 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.007"
        title="toc"
@@ -91,18 +92,19 @@
       </TOCI>
      </TOC>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.020"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.021"
        title="List of Labels"
        rolemaps-to="H1"
        referenced-as="1"
       >
      <?MarkedContent page="1" ?>List of Labels
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.022"
        rolemaps-to="Part"
@@ -177,43 +179,47 @@
       <?MarkedContent page="1" ?>
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.033"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.034"
        title="Some section"
        rolemaps-to="H1"
+       referenced-as="2"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.035"
-        rolemaps-to="Span"
-        referenced-as="2"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Some section
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.036"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.037"
         title="Some subsection"
         rolemaps-to="H2"
+        referenced-as="3"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.038"
-         rolemaps-to="Span"
-         referenced-as="3"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>1.1
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="1" ?> 
       <?MarkedContent page="1" ?>Some subsection
-     </subsection>
-    </Sect>
-   </Sect>
+     </subsection-heading>
+    </subsection>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

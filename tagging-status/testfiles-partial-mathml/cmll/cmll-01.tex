@@ -7,8 +7,8 @@
   }
 \documentclass{article}
 
-\UseName{sys_if_engine_opentype:T}{\usepackage{unicode-math}}
-\usepackage{cmll}
+\usepackage{cmll} % must be loaded before lua-unicode-math
+\UseName{sys_if_engine_opentype:T}{\usepackage{lua-unicode-math}}
 
 \title{cmll tagging test}
 

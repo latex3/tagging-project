@@ -1,18 +1,19 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.008"
        title="toc"
@@ -41,24 +42,26 @@
       </Reference>
      </TOCI>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.013"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.014"
        title="A section"
        rolemaps-to="H1"
+       referenced-as="1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.015"
-        rolemaps-to="Span"
-        referenced-as="1"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>1 
-     </section-number>
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>A section
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.016"
        rolemaps-to="Part"
@@ -364,17 +367,18 @@
       <?MarkedContent page="1" ?>, p. 11)
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.065"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.066"
        title="References"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>References
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.067"
        rolemaps-to="Part"
@@ -502,7 +506,7 @@
       </item>
      </list>
     </semantic-para>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

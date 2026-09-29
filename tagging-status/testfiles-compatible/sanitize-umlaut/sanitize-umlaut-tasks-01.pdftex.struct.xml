@@ -1,24 +1,26 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        title="Basic Example"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.007"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Basic Example
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.008"
        rolemaps-to="Part"
@@ -32,17 +34,18 @@
       <?MarkedContent page="1" ?>Test äöüÄÖÜß. Test äöüÄÖÜß.
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.010"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.011"
        title="Index"
        rolemaps-to="H1"
       >
      <?MarkedContent page="2" ?>Index
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.012"
        rolemaps-to="Part"
@@ -252,7 +255,7 @@
       <?MarkedContent page="2" ?>
      </text-block>
     </semantic-para>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

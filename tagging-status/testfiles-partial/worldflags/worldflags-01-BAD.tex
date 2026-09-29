@@ -1,0 +1,23 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{worldflags}
+
+\title{worldflags tagging test}
+
+\begin{document}
+
+\flagsdefault[framecolor=blue]
+\worldflag[grid]{IT}
+\worldflag[framewidth=1mm]{IT}
+
+\begin{tikzpicture}[alt=the German flag]
+\pic (de) [country=DE,emblem] {worldflag};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,152 @@
+% adapted from mathfont-example-roboto.tex provided by the package
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/mathml/luamml/load},
+  }
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{innerscript}
+\usepackage{multicol}
+\usepackage{amsmath}
+\DeclareMathOperator{\Res}{Res}
+\usepackage[Roboto]{mathfont}
+%\mathfont[radical]{Overpass}
+%\mathfontshapes{STIXGeneral}
+%\DeclareMathSymbol{\otimes}{\mathbin}{M5-m/n}{"2297}
+\rulethicknessfactor=1600
+\IntegralItalicFactor{500}
+\hsurdfactor=800
+\parindent=0pt\relax
+
+\title{mathfont tagging test}
+
+\begin{document}
+
+\multicolsep=0pt\relax
+\bigskip
+\begin{multicols*}{2}
+
+Black-Scholes Equation
+\[
+\frac{\partial V}{\partial t}+
+  \frac12\sigma^2S^2\frac{\partial^2V}{\partial S^2}
+  =rV-rS\frac{\partial V}{\partial X}
+\]
+
+\vfill
+
+Cardano's Formula/Cubic Formula
+\begin{align*}
+t_i&=\omega_i\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}}\\
+  &\qquad\qquad{}+\omega_i^2\sqrt[3]{-\frac q2-\sqrt{\frac{q^2}4+\frac{p^3}{27}}}
+\end{align*}
+
+\vfill
+
+Einstein's Field Equation (General Relativity)
+\[
+R_{\mu\nu}-\frac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}
+\]
+
+\vfill
+
+First Isomorphism Theorem
+\[
+\phi(X)\cong X/\ker(\phi)
+\]
+
+\vfill
+
+Gauss-Bonnet Formula
+\[
+\int_MK\ dA+\int_{\partial M}k_g\ ds=2\pi\chi(M)
+\]
+
+\vfill
+
+Maxwell's Equations
+\begin{align*}
+\nabla\bullet\mathbf E&=\frac\rho{\epsilon_0}&
+\nabla\bullet\mathbf B&=0\\
+\nabla\times\mathbf E&=-\frac{\partial\mathbf B}{\partial t}&
+\nabla\times\mathbf B&=\mu_0\left(\mathbf J+
+  \epsilon_0\frac{\partial\mathbf E}{\partial t}\right)
+\end{align*}
+
+\vfill
+
+Michaelis-Menten Model
+\bgroup
+\belowdisplayskip=0pt\relax
+\belowdisplayshortskip=0pt\relax
+\[
+v=\frac{d[P]}{dt}=V\frac{[S]}{K_M+[S]}
+\]
+\par\egroup
+\hrule height 0pt
+\columnbreak
+%% next column begins here
+
+Navier-Stokes Equation
+\begin{align*}
+\frac{\partial}{\partial t}(\rho\mathbf{u})+\nabla\bullet
+  (\rho \mathbf{u}\otimes \mathbf{u})={}
+  &{-}\nabla\bar p+\mu\nabla^2\mathbf{u}\\
+  &+\frac13\mu\nabla(\nabla\bullet u)+
+  \rho\mathbf{g}
+\end{align*}
+
+\vfill
+
+Quadratic Formula
+\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\]
+
+\vfill
+
+Ramanujan's Approximation for $\Gamma$
+\[
+\Gamma(1+x)\approx\sqrt\pi\,x^xe^{-x}\,\sqrt[6]{8x^3+4x^2+x+\frac1{30}}
+\]
+
+\vfill
+
+Residue Theorem
+\[
+\frac1{2i\pi}\int_{\gamma}f(z)\ dz=\sum_{k=1}^n\Res_{a_k}(f)
+\]
+
+\vfill
+
+Riemann Zeta Function
+\begin{align*}
+\zeta(z)&=\sum_{i=1}^\infty\frac1{z^i}
+  =\frac1{\Gamma(z)}\int_0^\infty\frac{x^{z-1}}{e^x-1}\ dx\\
+  &=2^z\pi^{z-1}\sin\left(\frac{\pi z}2\right)\,\Gamma(1-z)\,\zeta(1-z)
+\end{align*}
+
+\vfill
+
+Schrodinger Equation
+\[
+i\hbar\frac d{dt}|\Psi(t)\fakerangle=\hat H|\Psi(t)\fakerangle
+\]
+
+\vfill
+
+Lorentz Transformation (Special Relativity)
+\belowdisplayskip=0pt\relax
+\belowdisplayshortskip=0pt\relax
+\[
+t'=\left(t-\frac{vx}{c^2}\right)\frac1{\sqrt{1-\frac{v^2}{c^2}}}
+\]
+\hrule height 0pt
+
+\end{multicols*}
+
+\end{document}

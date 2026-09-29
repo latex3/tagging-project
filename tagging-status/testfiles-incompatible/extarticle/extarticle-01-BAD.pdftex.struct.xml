@@ -1,4 +1,4 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.0002"
@@ -51,16 +51,17 @@
      <?MarkedContent page="1" ?>Some date
     </text-block>
    </semantic-para>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0013"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0014"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.0015"
        title="toc"
@@ -294,26 +295,29 @@
       </TOC>
      </TOC>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0050"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0051"
        title="Heading on level1 (section)"
        rolemaps-to="H1"
+       referenced-as="1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0052"
-        rolemaps-to="Span"
-        referenced-as="1"
+        rolemaps-to="Lbl"
        >
       <!-- Referenced marked content sequence not found -->
       <?MarkedContent page="1" ?>[missing]
-     </section-number>
+     </heading-number>
      <!-- Referenced marked content sequence not found -->
      <?MarkedContent page="1" ?>[missing]
-    </section>
+     <!-- Referenced marked content sequence not found -->
+     <?MarkedContent page="1" ?>[missing]
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0053"
        rolemaps-to="Part"
@@ -328,25 +332,28 @@
       <?MarkedContent page="1" ?>[missing]
      </text-block>
     </semantic-para>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0055"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0056"
         title="Heading on level2 (subsection)"
         rolemaps-to="H2"
+        referenced-as="2"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0057"
-         rolemaps-to="Span"
-         referenced-as="2"
+         rolemaps-to="Lbl"
         >
        <!-- Referenced marked content sequence not found -->
        <?MarkedContent page="1" ?>[missing]
-      </section-number>
+      </heading-number>
       <!-- Referenced marked content sequence not found -->
       <?MarkedContent page="1" ?>[missing]
-     </subsection>
+      <!-- Referenced marked content sequence not found -->
+      <?MarkedContent page="1" ?>[missing]
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0058"
         rolemaps-to="Part"
@@ -362,23 +369,25 @@
        <?MarkedContent page="2" ?>amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdumlibero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elitsit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesentlectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia loremsit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
       </text-block>
      </semantic-para>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0060"
+        rolemaps-to="Sect"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+      <subsubsection-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0061"
          title="Heading on level3 (subsubsection)"
          rolemaps-to="H3"
+         referenced-as="3"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0062"
-          rolemaps-to="Span"
-          referenced-as="3"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="2" ?>1.1.1
-       </section-number>
+       </heading-number>
+       <?MarkedContent page="2" ?> 
        <?MarkedContent page="2" ?>Heading on level 3 (subsubsection)
-      </subsubsection>
+      </subsubsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0063"
          rolemaps-to="Part"
@@ -392,17 +401,18 @@
         <?MarkedContent page="2" ?>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisissem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi necante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue,a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultriciesvel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sitamet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdumlibero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elitsit amet ante lobortis sollicitudin. Praesent blandit blandit mauris. Praesentlectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia loremsit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
        </text-block>
       </semantic-para>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
+      <paragraph xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0065"
+         rolemaps-to="Sect"
         >
-       <paragraph xmlns="https://www.latex-project.org/ns/dflt"
+       <paragraph-heading xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0066"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="H4"
          >
         <?MarkedContent page="2" ?>Heading on level 4 (paragraph)
-       </paragraph>
+       </paragraph-heading>
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0067"
           rolemaps-to="Part"
@@ -416,44 +426,48 @@
          <?MarkedContent page="2" ?>Lorem ipsum dolor sit amet, consectetueradipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque phare-tra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis nonsodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placeratpede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut port-titor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesqueplacerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollici-tudin. Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam,luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urnadictum turpis accumsan semper.
         </text-block>
        </semantic-para>
-      </Sect>
-     </Sect>
-    </Sect>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+      </paragraph>
+     </subsubsection>
+    </subsection>
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0069"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0070"
        title="Lists"
        rolemaps-to="H1"
+       referenced-as="4"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0071"
-        rolemaps-to="Span"
-        referenced-as="4"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="2" ?>2
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="2" ?> 
      <?MarkedContent page="2" ?>Lists
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0072"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0073"
         title="Example for list(itemize)"
         rolemaps-to="H2"
+        referenced-as="5"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0074"
-         rolemaps-to="Span"
-         referenced-as="5"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="2" ?>2.1
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="2" ?> 
       <?MarkedContent page="2" ?>Example for list (itemize)
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0075"
         rolemaps-to="Part"
@@ -611,23 +625,25 @@
        </item>
       </itemize>
      </semantic-para>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0102"
+        rolemaps-to="Sect"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+      <subsubsection-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0103"
          title="Example for list(4*itemize)"
          rolemaps-to="H3"
+         referenced-as="6"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0104"
-          rolemaps-to="Span"
-          referenced-as="6"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="3" ?>2.1.1
-       </section-number>
+       </heading-number>
+       <?MarkedContent page="3" ?> 
        <?MarkedContent page="3" ?>Example for list (4*itemize)
-      </subsubsection>
+      </subsubsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0105"
          rolemaps-to="Part"
@@ -893,25 +909,27 @@
         </item>
        </itemize>
       </semantic-para>
-     </Sect>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+     </subsubsection>
+    </subsection>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0150"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0151"
         title="Example for list(enumerate)"
         rolemaps-to="H2"
+        referenced-as="7"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0152"
-         rolemaps-to="Span"
-         referenced-as="7"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="3" ?>2.2
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="3" ?> 
       <?MarkedContent page="3" ?>Example for list (enumerate)
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0153"
         rolemaps-to="Part"
@@ -1069,23 +1087,25 @@
        </item>
       </enumerate>
      </semantic-para>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0180"
+        rolemaps-to="Sect"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+      <subsubsection-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0181"
          title="Example for list(4*enumerate)"
          rolemaps-to="H3"
+         referenced-as="8"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0182"
-          rolemaps-to="Span"
-          referenced-as="8"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="3" ?>2.2.1
-       </section-number>
+       </heading-number>
+       <?MarkedContent page="3" ?> 
        <?MarkedContent page="3" ?>Example for list (4*enumerate)
-      </subsubsection>
+      </subsubsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0183"
          rolemaps-to="Part"
@@ -1351,25 +1371,27 @@
         </item>
        </enumerate>
       </semantic-para>
-     </Sect>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+     </subsubsection>
+    </subsection>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0228"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0229"
         title="Example for list(description)"
         rolemaps-to="H2"
+        referenced-as="9"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0230"
-         rolemaps-to="Span"
-         referenced-as="9"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="3" ?>2.3
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="3" ?> 
       <?MarkedContent page="3" ?>Example for list (description)
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0231"
         rolemaps-to="Part"
@@ -1527,23 +1549,25 @@
        </item>
       </description>
      </semantic-para>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0258"
+        rolemaps-to="Sect"
        >
-      <subsubsection xmlns="https://www.latex-project.org/ns/dflt"
+      <subsubsection-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0259"
          title="Example for list(4*description)"
          rolemaps-to="H3"
+         referenced-as="10"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.0260"
-          rolemaps-to="Span"
-          referenced-as="10"
+          rolemaps-to="Lbl"
          >
         <?MarkedContent page="4" ?>2.3.1
-       </section-number>
+       </heading-number>
+       <?MarkedContent page="4" ?> 
        <?MarkedContent page="4" ?>Example for list (4*description)
-      </subsubsection>
+      </subsubsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0261"
          rolemaps-to="Part"
@@ -1809,9 +1833,9 @@
         </item>
        </description>
       </semantic-para>
-     </Sect>
-    </Sect>
-   </Sect>
+     </subsubsection>
+    </subsection>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

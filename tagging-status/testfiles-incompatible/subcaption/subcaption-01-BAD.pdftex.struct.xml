@@ -1,18 +1,19 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        title="List of Figures"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>List of Figures
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.007"
        title="lof"
@@ -42,41 +43,45 @@
       </Reference>
      </TOCI>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.012"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.013"
        title="Intro"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.014"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Intro
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.015"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.016"
         title="Subintro"
         rolemaps-to="H2"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.017"
-         rolemaps-to="Span"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>1.1
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="1" ?> 
       <?MarkedContent page="1" ?>Subintro
-     </subsection>
-    </Sect>
-   </Sect>
+     </subsection-heading>
+    </subsection>
+   </section>
    <figures xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.003"
       rolemaps-to="Sect"
@@ -114,8 +119,9 @@
         >
        <?MarkedContent page="1" ?>
       </text-block>
-      <Div xmlns="http://iso.org/pdf2/ssn"
+      <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.021"
+         rolemaps-to="Div"
         >
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.022"
@@ -151,8 +157,9 @@
           >
          <?MarkedContent page="1" ?>
         </text-block>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.027"
+           rolemaps-to="Div"
           >
          <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.028"
@@ -167,7 +174,7 @@
            <?MarkedContent page="1" ?>(a)
           </text-block>
          </semantic-para>
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.030"
            rolemaps-to="P"
@@ -175,15 +182,16 @@
          <?MarkedContent page="1" ?>
         </text-block>
        </semantic-para>
-      </Div>
+      </text-minipage>
       <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.031"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>
       </text-block>
-      <Div xmlns="http://iso.org/pdf2/ssn"
+      <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.032"
+         rolemaps-to="Div"
         >
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.033"
@@ -219,8 +227,9 @@
           >
          <?MarkedContent page="1" ?>
         </text-block>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.038"
+           rolemaps-to="Div"
           >
          <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.039"
@@ -235,7 +244,7 @@
            <?MarkedContent page="1" ?>(b)
           </text-block>
          </semantic-para>
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.041"
            rolemaps-to="P"
@@ -243,7 +252,7 @@
          <?MarkedContent page="1" ?>
         </text-block>
        </semantic-para>
-      </Div>
+      </text-minipage>
       <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.042"
          rolemaps-to="P"

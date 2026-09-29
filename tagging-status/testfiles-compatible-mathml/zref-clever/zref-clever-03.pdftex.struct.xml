@@ -1,24 +1,26 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        title="Section 1"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.007"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Section 1
-    </section>
+    </section-heading>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.008"
        rolemaps-to="Sect"
@@ -26,7 +28,7 @@
      <Caption xmlns="http://iso.org/pdf2/ssn"
         id="ID.009"
        >
-      <?MarkedContent page="1" ?>Theorem
+      <?MarkedContent page="1" ?>Theorem 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
          id="ID.010"
         >
@@ -55,7 +57,7 @@
      <Caption xmlns="http://iso.org/pdf2/ssn"
         id="ID.014"
        >
-      <?MarkedContent page="1" ?>Proposition
+      <?MarkedContent page="1" ?>Proposition 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
          id="ID.015"
         >
@@ -77,23 +79,25 @@
       </text-block>
      </semantic-para>
     </theorem-like>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.018"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.019"
        title="Some section"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.020"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>2
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Some section
-    </section>
+    </section-heading>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.021"
        rolemaps-to="Sect"
@@ -101,7 +105,7 @@
      <Caption xmlns="http://iso.org/pdf2/ssn"
         id="ID.022"
        >
-      <?MarkedContent page="1" ?>Proposition
+      <?MarkedContent page="1" ?>Proposition 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
          id="ID.023"
         >
@@ -177,7 +181,7 @@
       <?MarkedContent page="1" ?>
      </text-block>
     </semantic-para>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

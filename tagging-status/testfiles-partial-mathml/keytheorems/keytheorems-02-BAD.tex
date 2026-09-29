@@ -1,0 +1,26 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\ifdefined\Uchar
+  \usepackage{lua-unicode-math}
+\fi
+\usepackage[auto-qed]{keytheorems}
+
+\title{keytheorems tagging test -- auto-qed}
+
+\begin{document}
+
+% this is fine
+\begin{proof}
+A list:
+\begin{enumerate}
+\item blub
+\end{enumerate}
+\end{proof}
+
+% this errors
+\begin{proof}
+An equation:
+\[ a=b \]
+\end{proof}
+
+\end{document}

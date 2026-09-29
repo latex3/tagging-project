@@ -1,24 +1,26 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
        title="A first section"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.007"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>A first section
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.008"
        rolemaps-to="Part"
@@ -64,23 +66,25 @@
       <?MarkedContent page="1" ?>
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.014"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.015"
        title="Second section"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.016"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>2
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Second section
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.017"
        rolemaps-to="Part"
@@ -110,27 +114,29 @@
       <?MarkedContent page="1" ?>text for this section also with a note.
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.021"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.022"
        title="Notes"
        rolemaps-to="H1"
       >
      <?MarkedContent page="2" ?>Notes
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.023"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.024"
         title="Notes for section 1"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 1
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.025"
         rolemaps-to="Part"
@@ -215,17 +221,18 @@
        </item>
       </itemize>
      </semantic-para>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </subsection>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.039"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.040"
         title="Notes for section 2"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 2
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.041"
         rolemaps-to="Part"
@@ -274,8 +281,8 @@
        </item>
       </itemize>
      </semantic-para>
-    </Sect>
-   </Sect>
+    </subsection>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

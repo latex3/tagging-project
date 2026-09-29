@@ -1,18 +1,19 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.008"
       >
@@ -77,45 +78,49 @@
         </text-block>
        </semantic-para>
       </TOCI>
-      <Sect xmlns="http://iso.org/pdf2/ssn"
+      <section xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.020"
+         rolemaps-to="Sect"
         >
-       <section xmlns="https://www.latex-project.org/ns/dflt"
+       <section-heading xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.021"
           title="blub"
           rolemaps-to="H1"
+          referenced-as="1"
          >
-        <section-number xmlns="https://www.latex-project.org/ns/dflt"
+        <heading-number xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.022"
-           rolemaps-to="Span"
-           referenced-as="1"
+           rolemaps-to="Lbl"
           >
-         <?MarkedContent page="1" ?>1 
-        </section-number>
+         <?MarkedContent page="1" ?>1
+        </heading-number>
+        <?MarkedContent page="1" ?>  
         <?MarkedContent page="1" ?>blub
-       </section>
-       <Sect xmlns="http://iso.org/pdf2/ssn"
+       </section-heading>
+       <subsection xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.023"
+          rolemaps-to="Sect"
          >
-        <subsection xmlns="https://www.latex-project.org/ns/dflt"
+        <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.024"
            title="blub blub"
            rolemaps-to="H2"
+           referenced-as="2"
           >
-         <section-number xmlns="https://www.latex-project.org/ns/dflt"
+         <heading-number xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.025"
-            rolemaps-to="Span"
-            referenced-as="2"
+            rolemaps-to="Lbl"
            >
-          <?MarkedContent page="1" ?>1.1 
-         </section-number>
+          <?MarkedContent page="1" ?>1.1
+         </heading-number>
+         <?MarkedContent page="1" ?>  
          <?MarkedContent page="1" ?>blub blub
-        </subsection>
-       </Sect>
-      </Sect>
+        </subsection-heading>
+       </subsection>
+      </section>
      </TOC>
     </TOC>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

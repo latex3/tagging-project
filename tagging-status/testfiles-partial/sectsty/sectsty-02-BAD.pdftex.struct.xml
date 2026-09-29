@@ -1,54 +1,50 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.006"
-       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-       Layout:TextAlign="Justify"
-       rolemaps-to="H1"
-      >
-     <?MarkedContent page="1" ?>
-    </section>
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.007"
        title="Some section heading"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.008"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.007"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Some section heading
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
-       id="ID.009"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.008"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.010"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.009"
         title="Some subsection heading"
         rolemaps-to="H2"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.011"
-         rolemaps-to="Span"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.010"
+         rolemaps-to="Lbl"
         >
        <?MarkedContent page="1" ?>1.1
-      </section-number>
+      </heading-number>
+      <?MarkedContent page="1" ?> 
       <?MarkedContent page="1" ?>Some subsection heading
-     </subsection>
+     </subsection-heading>
      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.012"
+        id="ID.011"
         rolemaps-to="Part"
        >
       <text-block xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.013"
+         id="ID.012"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
@@ -56,8 +52,8 @@
        <?MarkedContent page="1" ?>normal text
       </text-block>
      </semantic-para>
-    </Sect>
-   </Sect>
+    </subsection>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

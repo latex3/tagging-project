@@ -145,14 +145,16 @@ That & 2
 \end{tabular}
 ```
 
-
 If a table should not be tagged as table, for example, because it is
-merely used to ensure that the content is properly aligned, it should
-be turned into a presentation table with the `table/tagging=presentation`
-key as shown below.
+merely used to ensure that the content is properly aligned, it can
+be turned into a presentation table by adding an ARIA-role as
+attribute with the `table/tagging=presentation` key as shown below.
 ```latex
-\tagpdfsetup{table/tagging=presentation}
-\begin{tabular}{ccc}
+\tagpdfsetup{table/tagging=presentation}   % add ARIA-role
+%\tagpdfsetup{table/tagging=false}         % no tagging (only for simple tables with l, c or r columns)
+%\tagpdfsetup{table/tagging=div}           % Div tags instead of Table tags
+
+\begin{tabular}{lcr}
 \textbullet & \textbullet & \textbullet \\
 --- & --- & ---
 \end{tabular}
@@ -162,6 +164,10 @@ At the moment this isn't transferred well by the derivation algorithm
 from PDF to HTML, but this area will see improvements. (The PDF structure
 is already correct, as one can see in ngPDF, but the HTML/CSS
 styling currently loses the grid layout.)
+
+Other options are `false` or `div` each with some restrictions (see
+`texdoc latex-lab-table` for details).
+
 
 ## Handling lists and other block structures
 

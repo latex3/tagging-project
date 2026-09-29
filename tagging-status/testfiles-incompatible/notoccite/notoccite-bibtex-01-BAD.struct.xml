@@ -1,18 +1,19 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.008"
       >
@@ -52,16 +53,17 @@
        </text-block>
       </semantic-para>
      </TOCI>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     <section xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.015"
+        rolemaps-to="Sect"
        >
-      <section xmlns="https://www.latex-project.org/ns/dflt"
+      <section-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.016"
          title="List of Figures"
          rolemaps-to="H1"
         >
        <?MarkedContent page="1" ?>List of Figures
-      </section>
+      </section-heading>
       <TOCI xmlns="http://iso.org/pdf/ssn"
          id="ID.017"
          title="Cite again: phdthesis-minimal"
@@ -118,22 +120,24 @@
         <?MarkedContent page="1" ?>]
        </text-block>
       </semantic-para>
-     </Sect>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     </section>
+     <section xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.026"
+        rolemaps-to="Sect"
        >
-      <section xmlns="https://www.latex-project.org/ns/dflt"
+      <section-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.027"
          title="Let's cite: inproceedings-full"
          rolemaps-to="H1"
+         referenced-as="1"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.028"
-          rolemaps-to="Span"
-          referenced-as="1"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="1" ?>1 
-       </section-number>
+        <?MarkedContent page="1" ?>1
+       </heading-number>
+       <?MarkedContent page="1" ?>  
        <?MarkedContent page="1" ?>Let’s cite: [
        <Reference xmlns="http://iso.org/pdf/ssn"
           id="ID.029"
@@ -142,7 +146,7 @@
         <?MarkedContent page="1" ?>2
        </Reference>
        <?MarkedContent page="1" ?>]
-      </section>
+      </section-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.030"
          rolemaps-to="Part"
@@ -163,17 +167,18 @@
         <?MarkedContent page="1" ?>] 
        </text-block>
       </semantic-para>
-     </Sect>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     </section>
+     <section xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.040"
+        rolemaps-to="Sect"
        >
-      <section xmlns="https://www.latex-project.org/ns/dflt"
+      <section-heading xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.041"
          title="References"
          rolemaps-to="H1"
         >
        <?MarkedContent page="1" ?>References
-      </section>
+      </section-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.042"
          rolemaps-to="Part"
@@ -309,7 +314,7 @@
         </item>
        </list>
       </semantic-para>
-     </Sect>
+     </section>
      <figures xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.004"
         rolemaps-to="Sect"
@@ -359,7 +364,7 @@
       </float>
      </figures>
     </TOC>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

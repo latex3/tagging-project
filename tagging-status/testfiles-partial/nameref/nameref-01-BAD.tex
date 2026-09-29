@@ -1,0 +1,13 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{nameref}
+\newtheorem{theorem}{Theorem}
+
+\title{nameref tagging test -- theorems}
+
+\begin{document}
+\begin{theorem}[some note]\label{foo}
+Some theorem
+\end{theorem}
+\nameref{foo}
+\end{document}

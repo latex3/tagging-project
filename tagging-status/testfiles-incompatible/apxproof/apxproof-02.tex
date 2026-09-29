@@ -1,0 +1,36 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{apxproof}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+Some text
+\begin{toappendix}
+This content is in the appendix.
+\end{toappendix}
+\begin{theorem}
+Some theorem
+\end{theorem}
+\begin{appendixproof}
+This proof is in the appendix.
+\end{appendixproof}
+\begin{theorem}
+Some other theorem
+\end{theorem}
+\begin{proof}
+This proof is not in the appendix.
+\end{proof}
+\begin{theorem}
+Yet another theorem
+\end{theorem}
+\begin{proofsketch}
+Some proof sketch
+\end{proofsketch}
+\begin{inlineproof}
+This is an inline proof.
+\end{inlineproof}
+\end{document}

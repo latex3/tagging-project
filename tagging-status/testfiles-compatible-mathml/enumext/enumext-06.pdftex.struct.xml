@@ -1,24 +1,26 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.0002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0005"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0006"
        title="Fake itemize environment"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0007"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Fakeitemize environment
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0008"
        rolemaps-to="Part"
@@ -31,8 +33,9 @@
        >
       <?MarkedContent page="1" ?>
      </text-block>
-     <Div xmlns="http://iso.org/pdf2/ssn"
+     <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0010"
+        rolemaps-to="Div"
        >
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0011"
@@ -212,15 +215,16 @@
         </item>
        </list>
       </semantic-para>
-     </Div>
+     </text-minipage>
      <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0041"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>
      </text-block>
-     <Div xmlns="http://iso.org/pdf2/ssn"
+     <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0042"
+        rolemaps-to="Div"
        >
       <Formula xmlns="http://iso.org/pdf2/ssn"
          id="ID.0043"
@@ -229,13 +233,13 @@
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:Placement="Inline"
         >
-        <AssociatedFile name="mathml-1.xml" xmlns="">
+        <AssociatedFile name="mathml-1.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
         <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">∗</mo> </math>
         </AssociatedFile>
-        <AssociatedFile name="tag-AFfile1.tex" xmlns="">
+        <AssociatedFile name="tag-AFfile1.tex" relationship="Source" media-type="application/x-tex" xmlns="">
         $\ast $
         </AssociatedFile>
-       <?MarkedContent page="1" ?>Fakeitemize environment
+       <?MarkedContent page="1" ?> 
       </Formula>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.0044"
@@ -263,10 +267,10 @@
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:Placement="Inline"
             >
-            <AssociatedFile name="mathml-1.xml" xmlns="">
+            <AssociatedFile name="mathml-1.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
             <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">∗</mo> </math>
             </AssociatedFile>
-            <AssociatedFile name="tag-AFfile2.tex" xmlns="">
+            <AssociatedFile name="tag-AFfile2.tex" relationship="Source" media-type="application/x-tex" xmlns="">
             $\ast $
             </AssociatedFile>
            <?MarkedContent page="1" ?>∗
@@ -295,15 +299,15 @@
                xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                Layout:Placement="Inline"
               >
-              <AssociatedFile name="mathml-3.xml" xmlns="">
+              <AssociatedFile name="mathml-3.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
               <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">⋄</mo> </math>
               </AssociatedFile>
-              <AssociatedFile name="tag-AFfile3.tex" xmlns="">
+              <AssociatedFile name="tag-AFfile3.tex" relationship="Source" media-type="application/x-tex" xmlns="">
               $\diamond $
               </AssociatedFile>
-             <?MarkedContent page="1" ?>Fakeitemize environment
+             <?MarkedContent page="1" ?> 
             </Formula>
-            <?MarkedContent page="1" ?>Fakeitemize environment
+            <?MarkedContent page="1" ?> 
            </text-block>
            <list xmlns="https://www.latex-project.org/ns/dflt"
               id="ID.0053"
@@ -327,10 +331,10 @@
                  xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                  Layout:Placement="Inline"
                 >
-                <AssociatedFile name="mathml-3.xml" xmlns="">
+                <AssociatedFile name="mathml-3.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
                 <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">⋄</mo> </math>
                 </AssociatedFile>
-                <AssociatedFile name="tag-AFfile4.tex" xmlns="">
+                <AssociatedFile name="tag-AFfile4.tex" relationship="Source" media-type="application/x-tex" xmlns="">
                 $\diamond $
                 </AssociatedFile>
                <?MarkedContent page="1" ?>⋄
@@ -359,15 +363,15 @@
                    xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                    Layout:Placement="Inline"
                   >
-                  <AssociatedFile name="mathml-5.xml" xmlns="">
+                  <AssociatedFile name="mathml-5.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
                   <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">∘</mo> </math>
                   </AssociatedFile>
-                  <AssociatedFile name="tag-AFfile5.tex" xmlns="">
+                  <AssociatedFile name="tag-AFfile5.tex" relationship="Source" media-type="application/x-tex" xmlns="">
                   $\circ $
                   </AssociatedFile>
-                 <?MarkedContent page="1" ?>Fakeitemize environment
+                 <?MarkedContent page="1" ?> 
                 </Formula>
-                <?MarkedContent page="1" ?>Fakeitemize environment
+                <?MarkedContent page="1" ?> 
                </text-block>
                <list xmlns="https://www.latex-project.org/ns/dflt"
                   id="ID.0061"
@@ -391,10 +395,10 @@
                      xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                      Layout:Placement="Inline"
                     >
-                    <AssociatedFile name="mathml-5.xml" xmlns="">
+                    <AssociatedFile name="mathml-5.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
                     <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">∘</mo> </math>
                     </AssociatedFile>
-                    <AssociatedFile name="tag-AFfile6.tex" xmlns="">
+                    <AssociatedFile name="tag-AFfile6.tex" relationship="Source" media-type="application/x-tex" xmlns="">
                     $\circ $
                     </AssociatedFile>
                    <?MarkedContent page="1" ?>◦
@@ -423,15 +427,15 @@
                        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                        Layout:Placement="Inline"
                       >
-                      <AssociatedFile name="mathml-7.xml" xmlns="">
+                      <AssociatedFile name="mathml-7.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
                       <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">⋆</mo> </math>
                       </AssociatedFile>
-                      <AssociatedFile name="tag-AFfile7.tex" xmlns="">
+                      <AssociatedFile name="tag-AFfile7.tex" relationship="Source" media-type="application/x-tex" xmlns="">
                       $\star $
                       </AssociatedFile>
-                     <?MarkedContent page="1" ?>Fakeitemize environment
+                     <?MarkedContent page="1" ?> 
                     </Formula>
-                    <?MarkedContent page="1" ?>Fakeitemize environment
+                    <?MarkedContent page="1" ?> 
                    </text-block>
                    <list xmlns="https://www.latex-project.org/ns/dflt"
                       id="ID.0069"
@@ -455,10 +459,10 @@
                          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
                          Layout:Placement="Inline"
                         >
-                        <AssociatedFile name="mathml-7.xml" xmlns="">
+                        <AssociatedFile name="mathml-7.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
                         <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">⋆</mo> </math>
                         </AssociatedFile>
-                        <AssociatedFile name="tag-AFfile8.tex" xmlns="">
+                        <AssociatedFile name="tag-AFfile8.tex" relationship="Source" media-type="application/x-tex" xmlns="">
                         $\star $
                         </AssociatedFile>
                        <?MarkedContent page="1" ?>⋆
@@ -512,10 +516,10 @@
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:Placement="Inline"
             >
-            <AssociatedFile name="mathml-1.xml" xmlns="">
+            <AssociatedFile name="mathml-1.xml" relationship="Supplement" media-type="application/mathml+xml" xmlns="">
             <math xmlns="http://www.w3.org/1998/Math/MathML"> <mo lspace="0" rspace="0">∗</mo> </math>
             </AssociatedFile>
-            <AssociatedFile name="tag-AFfile9.tex" xmlns="">
+            <AssociatedFile name="tag-AFfile9.tex" relationship="Source" media-type="application/x-tex" xmlns="">
             $\ast $
             </AssociatedFile>
            <?MarkedContent page="1" ?>∗
@@ -543,7 +547,7 @@
         </item>
        </list>
       </semantic-para>
-     </Div>
+     </text-minipage>
      <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0082"
         rolemaps-to="P"
@@ -551,23 +555,25 @@
       <?MarkedContent page="1" ?>
      </text-block>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0083"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0084"
        title="Fake description environment"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0085"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>2
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Fakedescription environment
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0086"
        rolemaps-to="Part"
@@ -748,17 +754,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0117"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0118"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0119"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0120"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0121"
@@ -773,7 +778,7 @@
             <?MarkedContent page="1" ?>A short one-line description.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0123"
             rolemaps-to="P"
@@ -793,17 +798,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0126"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0127"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0128"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0129"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0130"
@@ -824,7 +828,7 @@
             <?MarkedContent page="1" ?>a label.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0133"
             rolemaps-to="P"
@@ -844,17 +848,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0136"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0137"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0138"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0139"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0140"
@@ -875,7 +878,7 @@
             <?MarkedContent page="1" ?>description text.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0143"
             rolemaps-to="P"
@@ -895,17 +898,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0146"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0147"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0148"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0149"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0150"
@@ -939,7 +941,7 @@
             <?MarkedContent page="1" ?>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
         </text-unit>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0155"
@@ -1130,17 +1132,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0187"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0188"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0189"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0190"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0191"
@@ -1155,7 +1156,7 @@
             <?MarkedContent page="1" ?>A short one-line description.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0193"
             rolemaps-to="P"
@@ -1175,17 +1176,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0196"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0197"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0198"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0199"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0200"
@@ -1206,7 +1206,7 @@
             <?MarkedContent page="1" ?>a label.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0203"
             rolemaps-to="P"
@@ -1226,17 +1226,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0206"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0207"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0208"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0209"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0210"
@@ -1257,7 +1256,7 @@
             <?MarkedContent page="1" ?>description text.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0213"
             rolemaps-to="P"
@@ -1277,17 +1276,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0216"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0217"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0218"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0219"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0220"
@@ -1321,7 +1319,7 @@
             <?MarkedContent page="1" ?>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
         </text-unit>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0225"
@@ -1332,23 +1330,25 @@
       </LI>
      </list>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0226"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0227"
        title="Fake description environment in margin"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0228"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>3
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Fakedescription environment in margin
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0229"
        rolemaps-to="Part"
@@ -1498,17 +1498,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0255"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0256"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0257"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0258"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0259"
@@ -1523,7 +1522,7 @@
             <?MarkedContent page="1" ?>A short one-line description.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0261"
             rolemaps-to="P"
@@ -1543,17 +1542,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0264"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0265"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0266"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0267"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0268"
@@ -1568,7 +1566,7 @@
             <?MarkedContent page="1" ?>This is an entry without a label.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0270"
             rolemaps-to="P"
@@ -1588,17 +1586,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0273"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0274"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0275"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0276"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0277"
@@ -1613,7 +1610,7 @@
             <?MarkedContent page="1" ?>A short one-line description.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
          <text-block xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0279"
             rolemaps-to="P"
@@ -1633,17 +1630,16 @@
        <LBody xmlns="http://iso.org/pdf2/ssn"
           id="ID.0282"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+        <text-unit
            id="ID.0283"
-           rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
+         <text
             id="ID.0284"
-            rolemaps-to="P"
            >
          </text>
-         <Div xmlns="http://iso.org/pdf2/ssn"
+         <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.0285"
+            rolemaps-to="Div"
            >
           <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.0286"
@@ -1658,7 +1654,7 @@
             <?MarkedContent page="1" ?>A much longer description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
            </text-block>
           </semantic-para>
-         </Div>
+         </text-minipage>
         </text-unit>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.0288"
@@ -1669,23 +1665,25 @@
       </LI>
      </list>
     </semantic-para>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0289"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0290"
        title="Fake description with multi-line labels"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.0291"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>4
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Fakedescription with multi-line labels
-    </section>
+    </section-heading>
     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0292"
        rolemaps-to="Part"
@@ -1869,7 +1867,7 @@
       </item>
      </list>
     </semantic-para>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

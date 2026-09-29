@@ -1,4 +1,4 @@
-<PDF>
+<PDF version="2.0">
  <StructTreeRoot>
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
@@ -32,8 +32,9 @@
         >
        <?MarkedContent page="1" ?>
       </text-block>
-      <Div xmlns="http://iso.org/pdf2/ssn"
+      <text-minipage xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.011"
+         rolemaps-to="Div"
         >
        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.012"
@@ -48,7 +49,7 @@
          <?MarkedContent page="1" ?>[1] Fix!
         </text-block>
        </semantic-para>
-      </Div>
+      </text-minipage>
       <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.014"
          rolemaps-to="P"
@@ -58,16 +59,17 @@
      </semantic-para>
     </Aside>
    </semantic-para>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.015"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.016"
        title="List of changes"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>List of changes
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.017"
       >
@@ -90,10 +92,11 @@
           >
          <?MarkedContent page="1" ?>Added: 
         </Reference>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.022"
+           rolemaps-to="Div"
           >
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.023"
            rolemaps-to="P"
@@ -122,10 +125,11 @@
           >
          <?MarkedContent page="1" ?>Replaced: 
         </Reference>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.028"
+           rolemaps-to="Div"
           >
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.029"
            rolemaps-to="P"
@@ -154,10 +158,11 @@
           >
          <?MarkedContent page="1" ?>Deleted: 
         </Reference>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.034"
+           rolemaps-to="Div"
           >
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.035"
            rolemaps-to="P"
@@ -186,10 +191,11 @@
           >
          <?MarkedContent page="1" ?>Commented: 
         </Reference>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.040"
+           rolemaps-to="Div"
           >
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.041"
            rolemaps-to="P"
@@ -218,10 +224,11 @@
           >
          <?MarkedContent page="1" ?>Highlighted: 
         </Reference>
-        <Div xmlns="http://iso.org/pdf2/ssn"
+        <text-parbox xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.046"
+           rolemaps-to="Div"
           >
-        </Div>
+        </text-parbox>
         <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.047"
            rolemaps-to="P"
@@ -232,7 +239,7 @@
       </semantic-para>
      </TOCI>
     </TOC>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>
