@@ -134,6 +134,7 @@ end
 -- associate with the commandline l3build save option
 target_list.save.func=tagging_save
 
+local extra_runcmd = async_runcmd or runcmd
 -- Execute allowed commands as specified in `% tasks: ` comments.
 -- shell command separator and redirects are not allowed
 function find_tasks(name)
@@ -149,7 +150,7 @@ function find_tasks(name)
         and
         not(task:match("[;&<>]"))
       then
-        runcmd(task:gsub("%%",name).."",testdir)
+        extra_runcmd(task:gsub("%%",name).."",testdir)
       else
         error("Unsafe task detected: " .. task)
       end
@@ -169,16 +170,16 @@ function runtest_tasks(name,run)
      find_tasks(name)
    else
      if name:match("-biber") then
-       runcmd(biberexe .. " " .. name,testdir)
+       extra_runcmd(biberexe .. " " .. name,testdir)
      end
      if name:match("-bibtex") then
-       runcmd(bibtexexe .. " " .. name,testdir)
+       extra_runcmd(bibtexexe .. " " .. name,testdir)
      end
    end
    local lualatexcmd="lualatex -interaction=nonstopmode"
    if options.dev then lualatexcmd="lualatex-dev -interaction=nonstopmode" end
    if extra_lualatex_run then
-     runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
+     extra_runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
      rm(testdir,name .. ".toc")
      rm(testdir,name .. ".aux")
    end
