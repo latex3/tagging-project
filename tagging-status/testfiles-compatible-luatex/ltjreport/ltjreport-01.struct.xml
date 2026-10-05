@@ -3,16 +3,17 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <chapter xmlns="https://www.latex-project.org/ns/book"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <chapter xmlns="https://www.latex-project.org/ns/book"
+    <chapter-heading xmlns="https://www.latex-project.org/ns/book"
        id="ID.007"
        title="目 次"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>目 次
-    </chapter>
+    </chapter-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.008"
        title="toc"
@@ -77,58 +78,64 @@
       </TOC>
      </TOC>
     </TOC>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </chapter>
+   <chapter xmlns="https://www.latex-project.org/ns/book"
       id="ID.020"
+      rolemaps-to="Sect"
      >
-    <chapter xmlns="https://www.latex-project.org/ns/book"
+    <chapter-heading xmlns="https://www.latex-project.org/ns/book"
        id="ID.021"
        title="Chapter"
        rolemaps-to="H1"
+       referenced-as="1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.022"
-        rolemaps-to="Span"
-        referenced-as="1"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="2" ?>第 1 章 
-     </section-number>
+      <?MarkedContent page="2" ?>第 1 章
+     </heading-number>
+     <?MarkedContent page="2" ?>  
      <?MarkedContent page="2" ?>Chapter
-    </chapter>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </chapter-heading>
+    <section xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.023"
+       rolemaps-to="Sect"
       >
-     <section xmlns="https://www.latex-project.org/ns/book"
+     <section-heading xmlns="https://www.latex-project.org/ns/book"
         id="ID.024"
         title="Section"
         rolemaps-to="H2"
+        referenced-as="2"
        >
-      <section-number xmlns="https://www.latex-project.org/ns/dflt"
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.025"
-         rolemaps-to="Span"
-         referenced-as="2"
+         rolemaps-to="Lbl"
         >
-       <?MarkedContent page="2" ?>1.1 
-      </section-number>
+       <?MarkedContent page="2" ?>1.1
+      </heading-number>
+      <?MarkedContent page="2" ?>  
       <?MarkedContent page="2" ?>Section
-     </section>
-     <Sect xmlns="http://iso.org/pdf2/ssn"
+     </section-heading>
+     <subsection xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.026"
+        rolemaps-to="Sect"
        >
-      <subsection xmlns="https://www.latex-project.org/ns/book"
+      <subsection-heading xmlns="https://www.latex-project.org/ns/book"
          id="ID.027"
          title="Subsection"
          rolemaps-to="H3"
+         referenced-as="3"
         >
-       <section-number xmlns="https://www.latex-project.org/ns/dflt"
+       <heading-number xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.028"
-          rolemaps-to="Span"
-          referenced-as="3"
+          rolemaps-to="Lbl"
          >
-        <?MarkedContent page="2" ?>1.1.1 
-       </section-number>
+        <?MarkedContent page="2" ?>1.1.1
+       </heading-number>
+       <?MarkedContent page="2" ?>  
        <?MarkedContent page="2" ?>Subsection
-      </subsection>
+      </subsection-heading>
       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.029"
          rolemaps-to="Part"
@@ -142,9 +149,9 @@
         <?MarkedContent page="2" ?>text
        </text-block>
       </semantic-para>
-     </Sect>
-    </Sect>
-   </Sect>
+     </subsection>
+    </section>
+   </chapter>
   </Document>
  </StructTreeRoot>
 </PDF>
