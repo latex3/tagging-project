@@ -13,6 +13,7 @@ tagging=on,
 \fi
 
 \usepackage{siunitx}
+\usepackage{booktabs}
 \sisetup{table-auto-round=true, separate-uncertainty=true}
 
 \title{siunitx tagging test}
@@ -32,6 +33,21 @@ tagging=on,
 \numlist{23 34 5}
 \numproduct{3 4 5}
 
+\begin{table}
+\caption{Standard behavior of the \texttt{S} column type.}
+\begin{tabular}{@{}S@{}}
+\toprule
+{Some Values} \\
+\midrule
+2.3456 \\
+34.2345 \\
+-6.7835 \\
+90.473 \\
+5642.5 \\
+1.2e3 \\
+e4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \end{document}
-
-
