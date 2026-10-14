@@ -352,13 +352,13 @@
 %% Sectional units %%
 % Typographical abstraction
 \newcommand{\SectTitle}[2][\large]{%
-  \section*{\centering#1\normalfont #2}
+  \chapter*{\centering#1\normalfont #2}
 }
 \newcommand{\SubsectTitle}[2][\normalsize]{%
-  \subsection*{\centering#1\normalfont #2}
+  \section*{\centering#1\normalfont #2}
 }
 \newcommand{\SubsubsectTitle}[2][\small]{%
-  \subsubsection*{\centering#1\normalfont #2}
+  \subsection*{\centering#1\normalfont #2}
 }
 
 % For internal cross-referencing
@@ -396,8 +396,8 @@
   \SubsubsectTitle{#1 \MakeUppercase{#2}}
 }
 
-\newcommand{\Section}[1]{
-  \paragraph*{\indent #1}
+\newcommand{\Section}[1]{%
+  \subsection*{\indent #1}
   \refstepcounter{SecNo}
   \label{section:\theSecNo}
   \addtocontents{toc}{\protect\ToCLine{}{section:\theSecNo}{#1}}
