@@ -278,23 +278,32 @@
 
 \vspace*{1cm}
 
-% Switch to center
-% (as a \hbox/\centerline it doesn't trigger para tagging)
-\begin{center}
-\tagstructbegin{tag=title}
 
-{\HUGE\leavevmode\MakeLinkTarget*{title}\bookmark[dest=title]{The Bible}\textbf{THE BIBLE}}
+\tagstructbegin{tag=title-block}%
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{\HUGE\leavevmode\MakeLinkTarget*{title}\bookmark[dest=title]{The Bible}\textbf{THE BIBLE}}
+\tagmcend
+\tagstructend
 
 \vspace{1cm}
-{\huge\textbf{American Standard Version}}
-
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{\huge\textbf{American Standard Version}}
+\tagmcend
 \tagstructend
+
 
 \vspace{2in}
 
-Original publication 1901 by Thomas Nelson \& Sons
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{Original publication 1901 by Thomas Nelson \& Sons}
+\tagmcen
+\tagstructend
 
-\end{center}
+\tagstructend % block
+
 
 \clearpage
 \thispagestyle{empty}
