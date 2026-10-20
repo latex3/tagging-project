@@ -205,10 +205,17 @@ shows the main options.
 {% include_relative titlesec-options-01.tex %}
 ```
 
+Another example using the article class and some other options by default:
+
+```latex`
+{% include_relative titlesec-options-02.tex %}
+```
+
 There are a few more options, e.g., those related to page styles. These
 are currently accepted but not acted upon, because they all need
 additional support in the heading templates (which is provided by a
 different milestone in the project).
+
 
 ### 2d. Emulate titlesec's `\titleline` and `\titlerule`
 
