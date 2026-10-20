@@ -185,6 +185,7 @@ interface producing accessible PDF outputs.
 
 ### 2c. Emulate `titlesec`'s package options 
 
+Main package options
 
 ```latex`
 {% include_relative titlesec-options-01.tex %}
