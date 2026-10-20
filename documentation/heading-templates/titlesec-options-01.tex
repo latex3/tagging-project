@@ -1,0 +1,103 @@
+%{% raw %}
+\DocumentMetadata
+  { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
+
+\documentclass[twoside]{book}
+
+
+\usepackage
+  [
+%--------- selecting font aspects (family) --- select 0 or 1
+%    rm ,
+    sf ,
+%    tt ,
+%---------
+%
+%--------- selecting font aspects (series) --- select 0 or 1
+    bf ,
+%    md ,
+%---------
+%
+%--------- selecting font aspects (shape)  --- select 0 or 1
+    it ,
+%    sc ,
+%    sl ,
+%    up ,
+%---------
+%
+%--------- selecting font aspects (size)   --- select 0 or 1
+%    big ,
+%    medium ,
+%    small ,
+    tiny ,
+%---------
+%
+%--------- horizontal placement            --- select 0 or 1
+    raggedleft ,
+%    center ,
+%    raggedright ,
+%---------
+%
+%--------- vertical placement              --- select 0 or 1
+   compact ,
+%---------
+%
+%--------- title casing                    --- select 0 or 1
+%   uppercase
+%---------
+%
+%--------- optional argument only for running header?    
+  ,toctitles
+%---------
+%
+%--------- make generated verso page fully empty  
+  ,clearempty
+%---------
+  ]
+  {titlesec}
+
+\usepackage{kantlipsum}
+
+\pagestyle{headings}
+
+\begin{document}
+
+\title{A titlesec option test}
+\author{Emanuel Enrico Kant}
+
+\maketitle
+
+\part{A part}
+
+\chapter[Just for running header]{A chapter}
+
+With the option \texttt{toctitles} enabled the optional chapter title
+should show up only in the running header (on the next page) but not in the TOC entry.
+
+\kant[1][1-2]
+
+\section{A section}
+
+Some text. \kant[2][1-2]
+
+\subsection{A subsection}
+
+Some text. \kant[3][1-2]
+
+\subsubsection{A subsubsection}
+
+Some text. \kant[4][1-2]
+
+\paragraph{And a paragraph} 
+
+Also with some text. \kant[5][1-2]
+
+\subparagraph{And a subparagraph}
+
+Also with some text. \kant[6][1-2]
+
+
+\tableofcontents
+
+\end{document}
+%{% endraw %}

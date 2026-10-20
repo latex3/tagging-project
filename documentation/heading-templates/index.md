@@ -179,8 +179,20 @@ effort to implement LaTeX section headings via a new template
 interface producing accessible PDF outputs.
 
 
-```latex
+```latex`
 {% include_relative titlesec-01.tex %}
+```
+
+### 2c. Emulate `titlesec`'s package options 
+
+
+```latex`
+{% include_relative titlesec-options-01.tex %}
+```
+
+
+```latex`
+{% include_relative titlesec-options-02.tex %}
 ```
 
 
