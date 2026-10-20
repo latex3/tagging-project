@@ -185,16 +185,20 @@ interface producing accessible PDF outputs.
 
 ### 2c. Emulate `titlesec`'s package options 
 
-Main package options ...
+The titlesec package offers a number of options that allows simple
+customizations of all document headings. These include setting font
+attributes, placing the headings flushleft/right or center,
+uppercasing all headings and a few others. The Test document below
+shows the main options.
 
 ```latex`
 {% include_relative titlesec-options-01.tex %}
 ```
 
-
-```latex`
-{% include_relative titlesec-options-02.tex %}
-```
+There are a few more options, e.g., those related to page styles that
+are currently accepted but not acted upon, because they all need
+additional support in the heading templates (which is provided by a
+different milestone).
 
 
 
