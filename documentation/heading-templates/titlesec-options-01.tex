@@ -1,0 +1,114 @@
+%{% raw %}
+\DocumentMetadata
+  { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
+
+\documentclass[twoside]{book}
+
+
+\usepackage
+  [
+%--------- selecting font aspects (family) --- select 0 or 1
+%    rm ,
+    sf ,
+%    tt ,
+%---------
+%
+%--------- selecting font aspects (series) --- select 0 or 1
+    bf ,
+%    md ,
+%---------
+%
+%--------- selecting font aspects (shape)  --- select 0 or 1
+    it ,
+%    sc ,
+%    sl ,
+%    up ,
+%---------
+%
+%--------- selecting font aspects (size)   --- select 0 or 1
+%    big ,
+%    medium ,
+%    small ,
+    tiny ,
+%---------
+%
+%--------- horizontal placement            --- select 0 or 1
+    raggedleft ,
+%    center ,
+%    raggedright ,
+%---------
+%
+%--------- vertical placement              --- select 0 or 1
+   compact ,
+%---------
+%
+%--------- title casing                    --- select 0 or 1
+%   uppercase ,
+%---------
+%
+%--------- indent para after heading       --- select 0 or 1
+%   indentafter ,
+   noindentafter ,
+%---------
+%
+%--------- optional argument only for running header?    
+  toctitles ,
+%---------
+%
+%--------- make generated verso page fully empty  
+  clearempty
+%---------
+  ]
+  {titlesec}
+
+\usepackage{kantlipsum}
+
+\pagestyle{headings}
+
+\begin{document}
+
+\title{A titlesec option test}
+\author{Emanuel Enrico Kant}
+\date{2026-10-20}
+
+\maketitle
+
+\part{A part}
+
+\chapter[Testing the \texttt{toctitles} option (or not)]{A chapter}
+
+With the option \texttt{clearempty} the page after the \verb=\part=
+will be completely empty.
+
+With the option \texttt{toctitles} enabled, the optional argument of
+the heading command will show up only in the running header (on the
+next page here) but not in the TOC entry. The table of contents is at the
+very end of the document.
+
+\kant[1][1-2]
+
+\section{A section}
+
+\kant[2][1-2]
+
+\subsection{A subsection}
+
+\kant[3][1-2]
+
+\subsubsection{A subsubsection}
+
+\kant[4][1-2]
+
+\paragraph{And a paragraph} 
+
+\kant[5][1-2]
+
+\subparagraph{And a subparagraph}
+
+\kant[6][1-2]
+
+
+\tableofcontents
+
+\end{document}
+%{% endraw %}

@@ -179,10 +179,52 @@ effort to implement LaTeX section headings via a new template
 interface producing accessible PDF outputs.
 
 
-```latex
+```latex`
 {% include_relative titlesec-01.tex %}
 ```
 
+### 2a. Emulate titlesec's `\titleformat`
+
+Not yet done.
+
+
+### 2b. Emulate titlesec's `\titlespacing`
+
+Not yet done.
+
+
+### 2c. Emulate titlesec's package options 
+
+The titlesec package offers a number of options that allows simple
+customizations of all document headings. These include setting font
+attributes, placing the headings flushleft/right or center,
+uppercasing all headings and a few others. The test document below
+shows the main options.
+
+```latex`
+{% include_relative titlesec-options-01.tex %}
+```
+
+Another example using the article class and some other options by default:
+
+```latex`
+{% include_relative titlesec-options-02.tex %}
+```
+
+There are a few more options, e.g., those related to page styles. These
+are currently accepted but not acted upon, because they all need
+additional support in the heading templates (which is provided by a
+different milestone in the project).
+
+
+### 2d. Emulate titlesec's `\titleline` and `\titlerule`
+
+Not yet done.
+
+
+### 2e. Emulate titlesec's `\titleclass`
+
+Not yet done.
 
 
 ### 2f. The `fncychap` package
