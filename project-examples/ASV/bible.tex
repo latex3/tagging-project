@@ -72,7 +72,7 @@
 \DeclareDocumentCommand \part {s ={shorttitle}o m}
       {\par\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
 \DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-     {\par\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}}
+     {\par\refstepcounter{chapter}\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}}
 
 
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
