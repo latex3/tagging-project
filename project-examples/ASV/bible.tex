@@ -72,7 +72,7 @@
 \DeclareDocumentCommand \part {s ={shorttitle}o m}
       {\par\ParseLaTeXeHeading {part} {#1} {#2} {#3}}
 \DeclareDocumentCommand \chapter {s ={shorttitle}o m}
-     {\par\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}}
+     {\par\refstepcounter{chapter}\ParseLaTeXeHeading {chapter}{\BooleanTrue} {#2} {#3}}
 
 
 \usepackage[pdfpagelabels,bookmarks,hyperindex,hyperfigures,hidelinks]{hyperref}
@@ -87,7 +87,7 @@
 
 \usepackage[lining]{ebgaramond}
 
-% 8pt extra space restores baseline grid for the following two column text
+% extra space restores baseline grid for the following two column text
  \EditInstance{heading}{chapter}{
   , prefix = \NoValue
   , heading-decls=\setlength\parindent{0pt}\normalfont\bfseries
@@ -95,7 +95,6 @@
   , title-format=\strut #1\par\vspace{3pt}
   , number-format=\strut                  % titlesec puts struts everywhere 
 }
-
 
 
 \usepackage{microtype}
