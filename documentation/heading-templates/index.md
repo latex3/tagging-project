@@ -140,6 +140,25 @@ next example:
 ```
 
 
+
+### 1b. Implement layout styles
+
+
+
+
+### 1c. Interface to page styles
+
+
+
+
+### 1d. Implement layouts based on verso/recto page and numbering
+
+```latex
+{% include_relative conditional-templates-01.tex %}
+```
+
+
+
 ### 1e. Extend key binding setup
 
 In some templates the variable names in the key binds need to contain
