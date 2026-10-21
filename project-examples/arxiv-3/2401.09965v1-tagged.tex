@@ -19,12 +19,17 @@
 \usepackage{amsmath,
   %dpc amsthm,
   amscd,amsfonts,amssymb,graphicx,color}
+
 \def\theoremstyle#1{}
 \ExplSyntaxOn
 \tl_set:Nn\l_color_fixed_model_tl{rgb}
 \ExplSyntaxOff
+\definecolor{citecol}{RGB}{0, 109, 170}% for WCAG contrast, was cyan
+\definecolor{refcol}{RGB}{221, 0, 0}% for WCAG contrast, was red
 \usepackage[bookmarksnumbered,colorlinks,plainpages]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=red,anchorcolor=green,citecolor=cyan,urlcolor=red,filecolor=magenta,pdftoolbar=true}
+\hypersetup{colorlinks=true,
+  linkcolor=refcol,anchorcolor=green,citecolor=citecol,urlcolor=refcol,
+  filecolor=magenta,pdftoolbar=true}
 
 \usepackage{mathrsfs}
 

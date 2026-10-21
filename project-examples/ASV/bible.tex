@@ -88,8 +88,14 @@
 \usepackage[lining]{ebgaramond}
 
 % 8pt extra space restores baseline grid for the following two column text
- \titleformat{\chapter}[display]
-  {\normalfont\bfseries}{}{8pt}{\huge}
+ \EditInstance{heading}{chapter}{
+  , prefix = \NoValue
+  , heading-decls=\setlength\parindent{0pt}\normalfont\bfseries
+  , title-decls=\huge
+  , title-format=\strut #1\par\vspace{3pt}
+  , number-format=\strut                  % titlesec puts struts everywhere 
+}
+
 
 
 \usepackage{microtype}
@@ -278,23 +284,32 @@
 
 \vspace*{1cm}
 
-% Switch to center
-% (as a \hbox/\centerline it doesn't trigger para tagging)
-\begin{center}
-\tagstructbegin{tag=title}
 
-{\HUGE\leavevmode\MakeLinkTarget*{title}\bookmark[dest=title]{The Bible}\textbf{THE BIBLE}}
+\tagstructbegin{tag=title-block}%
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{\HUGE\leavevmode\MakeLinkTarget*{title}\bookmark[dest=title]{The Bible}\textbf{THE BIBLE}}
+\tagmcend
+\tagstructend
 
 \vspace{1cm}
-{\huge\textbf{American Standard Version}}
-
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{\huge\textbf{American Standard Version}}
+\tagmcend
 \tagstructend
+
 
 \vspace{2in}
 
-Original publication 1901 by Thomas Nelson \& Sons
+\tagstructbegin{tag=title-text}%
+\tagmcbegin{}%
+\centerline{Original publication 1901 by Thomas Nelson \& Sons}
+\tagmcend
+\tagstructend
 
-\end{center}
+\tagstructend % block
+
 
 \clearpage
 \thispagestyle{empty}
