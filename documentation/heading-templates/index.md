@@ -151,14 +151,15 @@ next example:
 
 
 
-### 1d. Implement layouts based on verso/recto page and numbering
+### 1d. Implement layouts based on verso/recto pages and numbered/unnumbered
 
 In some document designs, different layouts for headings are used depending on the page they are placed on. For example, the heading text always extends into the outer margin, i.e., to the right on recto (odd) pages and to the left on verso pages. The design of headings without a number is also fairly often quite different from that for headings with a number.
 
 Capturing such variations in every heading template is possible but fairly complicated and inefficient. For that reason we offer a different interface (similar to that for document “contexts”). If the heading template instance for the heading command is `⟨name⟩` then
 
 - `⟨name⟩:recto` if defined is the instance name for recto (odd) pages;
-- `⟨name⟩:verso` is the instance name for verso pages; `⟨name⟩:⟨recto-or-verso-or-empty⟩:unnumbered` is the instance name for unnumbered headings on recto, verso, or all pages.
+- `⟨name⟩:verso` is the instance name for verso pages;
+- `⟨name⟩:⟨recto-or-verso-or-empty⟩:unnumbered` is the instance name for unnumbered headings on recto, verso, or all pages.
 
 If some of these instances are defined then the most specific one matching the current context is used, e.g., a `\section*` command on an odd page will try to use `section:recto:unnumbered` or `section::unnumbered` or `section:recto` or `section` in that order.
 
