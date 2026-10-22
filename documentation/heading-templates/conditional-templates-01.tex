@@ -4,27 +4,74 @@
 
 \documentclass[a4paper,twoside]{article}
 
-\title{Conditional heading layouts}
+\usepackage{kantlipsum}
+
+%\DebugTemplatesOn
+\DebugHeadingsOn
+
+\begin{document}
+\title{Testing conditional heading layouts}
 \author{Frank Mittelbach, \LaTeX{} Project}
 \maketitle
 
-\DebugTemplatesOn
+\section{The declarations for conditional layout}
 
-\DeclareInstance{heading}{section:recto}{display}
- {level=1,name=section,title-decls=\sffamily\bfseries,
-   headformat-instance = section:recto}
-\DeclareInstance{heading}{section::unnumbered}{display}
- {level=1,name=section,title-decls=\ttfamily,
-   headformat-instance = section}
+This section heading still has its normal layout.
+But from now on we will apply the following declarations:
+\begin{verbatim}
+\DeclareInstanceCopy{heading}{section:recto}{section} % make copy
+\EditInstance{heading}{section:recto}                 % edit it
+   {heading-decls=\sffamily\bfseries\Large\raggedleft,
+    headformat-instance=section:recto}
+\DeclareInstance{headformat}{section:recto}{hang}
+   {right-margin=-1cm}
 
-\DeclareInstance{headformat}{section:recto}{hang}{left-margin=4cm}
+\DeclareInstanceCopy{heading}{section::unnumbered}{section}
+\EditInstance{heading}{section::unnumbered}
+  {title-decls=\ttfamily\centering}
+\end{verbatim}
 
-\begin{document}
+\DeclareInstanceCopy{heading}{section:recto}{section}
+\EditInstance{heading}{section:recto}
+   {heading-decls=\sffamily\bfseries\Large\raggedleft,
+    headformat-instance=section:recto}
+\DeclareInstance{headformat}{section:recto}{hang}
+   {right-margin=-1cm}
 
-\section{A section heading}             text
-\section*{An unnumered section heading} text
+\DeclareInstanceCopy{heading}{section::unnumbered}{section}
+\EditInstance{heading}{section::unnumbered}
+  {title-decls=\ttfamily\centering}
+
+
+\section{A section heading}             
+
+On a recto page we now get our \texttt{section:recto} layout which
+shifts the heading into the outside margin and applies a different
+font.
+
+\kant[1][1-2]
+
+\section*{An unnumered section heading} 
+
+Unnumbered sections have the same layout on all pages (because we
+used \texttt{section::unnumbered}). It differs from those of numbered
+sections.
+
+\kant[1][3-4]
+
 \newpage 
-\section{A section heading}             text
-\section*{An unnumered section heading} text
+\section{A section heading} 
+
+On a verso page we get the normal \texttt{section} layout because we
+haven't set up anything for \texttt{section:verso}.
+
+\kant[2][1-2]
+
+\section*{An unnumered section heading} 
+
+Unnumbered sections have the same layout on all pages.
+
+\kant[1][3-4]
+
 \end{document}
 %{% endraw %}
