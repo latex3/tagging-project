@@ -2,21 +2,29 @@
 \DocumentMetadata
   { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
 
-% not doing math so set this to use less run resources
-  
-\tagpdfsetup {math/mathml/luamml/load=false}
+\documentclass[a4paper,twoside]{article}
 
-  
-\documentclass{article}
-
-
-\begin{document}
-
-\title{}
+\title{Conditional heading layouts}
 \author{Frank Mittelbach, \LaTeX{} Project}
 \maketitle
 
+\DebugTemplatesOn
 
+\DeclareInstance{heading}{section:recto}{display}
+ {level=1,name=section,title-decls=\sffamily\bfseries,
+   headformat-instance = section:recto}
+\DeclareInstance{heading}{section::unnumbered}{display}
+ {level=1,name=section,title-decls=\ttfamily,
+   headformat-instance = section}
 
+\DeclareInstance{headformat}{section:recto}{hang}{left-margin=4cm}
+
+\begin{document}
+
+\section{A section heading}             text
+\section*{An unnumered section heading} text
+\newpage 
+\section{A section heading}             text
+\section*{An unnumered section heading} text
 \end{document}
 %{% endraw %}
