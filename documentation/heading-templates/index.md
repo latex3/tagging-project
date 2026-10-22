@@ -165,7 +165,7 @@ If some of these instances are defined then the most specific one matching the c
 The example below sets up such instances and lets you experiment with them:
 
 ```latex
-{% include_relative conditional-templates-01.tex %}
+{% include_relative 1d-conditional-templates-01.tex %}
 ```
 
 
