@@ -2574,6 +2574,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   comments: "Requires the firstaid module which contains a fix."
+  issues: [1657]
   closed-issues: [69]
   tests: true
   updated: 2025-06-13
@@ -17599,14 +17600,16 @@
 
 - name: titlesec
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues: [24]
   tests: true
   tasks: needs more tests
+  comments: "The package is partially but not yet fully emulated by the latex-lab code.
+             See latex-lab-titlesec.pdf."
   package-repository: "https://github.com/jbezos/titlesec"
-  updated: 2025-12-24
+  updated: 2026-10-23
 
 - name: titletoc
   type: package
@@ -19616,7 +19619,7 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737,1477,1632]
+  issues: [443,737,1477,1632,1656]
   closed-issues: [970]
   tests: true
   updated: 2026-07-05
@@ -19626,7 +19629,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737,1477,1600,1632]
+  issues: [443,737,1477,1600,1632,1656]
   closed-issues: [970]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: true
@@ -19649,7 +19652,7 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737,1477,1632]
+  issues: [443,737,1477,1632,1656]
   closed-issues: [970]
   tests: true
   updated: 2026-07-05
