@@ -17590,14 +17590,16 @@
 
 - name: titlesec
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues: [24]
   tests: true
   tasks: needs more tests
+  comments: "The package is partially but not yet fully emulated by the latex-lab code.
+             See latex-lab-titlesec.pdf."
   package-repository: "https://github.com/jbezos/titlesec"
-  updated: 2025-12-24
+  updated: 2026-10-23
 
 - name: titletoc
   type: package
