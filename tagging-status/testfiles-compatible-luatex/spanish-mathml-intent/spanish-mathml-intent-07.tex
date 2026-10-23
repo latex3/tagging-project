@@ -1,0 +1,122 @@
+% spintent-07.tex
+% Guía de ejercicios de geometría: ángulos, áreas y perímetros.
+%
+% Ejemplo real: guía para estudiantes de octavo básico.
+%
+% Las lecturas en los comentarios `% doc:` son las de NVDA 2026.2 con
+% MathCAT, idénticas en mathml-SE y en mathml-AF: una por cada fórmula,
+% en el orden en que aparece. «a» y «b» (en el vector) y «centímetros
+% cuadrado» son lectura propia de MathCAT, no del paquete.
+%
+% Compilar con: lualatex-dev spintent-07.tex
+\DocumentMetadata
+  {
+    lang=es-CL,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup={mathml-SE}},
+  }
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{spanish-mathml-intent, hyperref}
+\hypersetup
+  {
+    pdfdisplaydoctitle = true,
+    pdftitle           = {Guía de geometría},
+  }
+
+\begin{document}
+
+\section*{Guía \spshort{n.o} 5: ángulos, áreas y perímetros}
+
+Preparada por la \spshort{prof.a} Pérez para el curso de \spshort{8.o} básico.
+Use regla y compás cuando se le indique.
+
+\subsection*{Ángulos}
+
+\begin{enumerate}
+  % doc: «A B C»
+  % doc: «medida del ángulo en A es igual a 40 grados»
+  % doc: «medida del ángulo en B es igual a 65 grados»
+  % doc: «medida del ángulo en C»
+  \item En el triángulo $\spPoly[concept=false]{ABC}$ se cumple que $\spmangle{A} = \spang{40}$ y $\spmangle{B} = \spang{65}$. Calcule $\spmangle{C}$.
+  % doc: «A O B»
+  % doc: «37 grados 30 minutos»
+  \item Mida con un transportador el ángulo $\spangle[concept=false]{AOB}$ y escriba su medida con minutos: $\spang{37:30}$.
+  % doc: «90 grados»
+  % doc: «medida del ángulo alfa es igual a 35 grados»
+  % doc: «medida del ángulo beta»
+  \item Dos ángulos son complementarios si suman $\spang{90}$. Si $\spmangle{\alpha} = \spang{35}$, calcule $\spmangle{\beta}$.
+  % doc: «A O B»
+  \item Dibuje un ángulo recto $\spangle[recto=true,concept=false]{AOB}$ y trace su bisectriz.
+\end{enumerate}
+
+\subsection*{Puntos, rectas y segmentos}
+
+\begin{enumerate}
+  % doc: «A 1 coma 2»
+  % doc: «B 4 coma 2»
+  % doc: «C 4 coma 6»
+  \item Ubique en el plano cartesiano los puntos $\spPoint[concept=false]{A}(1,2)$, $\spPoint[concept=false]{B}(4,2)$ y $\spPoint[concept=false]{C}(4,6)$.
+  % doc: «A B»
+  % doc: «B C»
+  \item Trace la recta $\sprecta[concept=false]{AB}$ y el rayo $\sprayo[concept=false]{BC}$.
+  % doc: «A C»
+  % doc: «medida del lado A B es igual a 3 centímetros»
+  % doc: «medida del lado B C es igual a 4 centímetros»
+  \item Calcule la medida del segmento $\spside[concept=false]{AC}$ sabiendo que $\spmside{AB} = \spunit{3 cm}$ y $\spmside{BC} = \spunit{4 cm}$.
+  % doc: «a»
+  % doc: «b»
+  % doc: «vector A B es igual a 3 coma 0»
+  \item Escriba el vector de $A$ a $B$: $\spvec{AB}(3,0)$.
+\end{enumerate}
+
+\subsection*{Áreas y perímetros}
+
+\begin{enumerate}
+  % doc: «A B C»
+  % doc: «6 centímetros»
+  % doc: «4 centímetros»
+  % doc: «área del triángulo A B C es igual a 12 centímetros cuadrado»
+  \item El triángulo $\spPoly[concept=false]{ABC}$ tiene base $\spunit{6 cm}$ y altura $\spunit{4 cm}$. Calcule su área: $\spAfig(ABC) = \spunit{12 cm^{2}}$.
+  % doc: «A B C D»
+  % doc: «5 centímetros»
+  % doc: «perímetro del cuadrado A B C D es igual a 20 centímetros»
+  \item Un cuadrado $\spPoly[concept=false]{ABCD}$ tiene lado $\spunit{5 cm}$. Calcule su perímetro: $\spPfig(ABCD) = \spunit{20 cm}$.
+  % doc: «8 centímetros»
+  % doc: «3 centímetros»
+  \item Calcule el área de un rectángulo de lados $\spunit{8 cm}$ y $\spunit{3 cm}$.
+  % doc: «n»
+  % doc: «perímetro del polígono»
+  \item Escriba la fórmula del perímetro de un polígono de $n$ lados iguales: $\spPfig(P)$.
+\end{enumerate}
+
+\subsection*{Circunferencia y círculo}
+
+\begin{enumerate}
+  % doc: «circunferencia de centro en O y radio r»
+  % doc: «radio es igual a 3 centímetros»
+  \item Dibuje $\spcirc(O, r)$ con $\sprad = \spunit{3 cm}$.
+  % doc: «diámetro es igual a 6 centímetros»
+  \item Calcule su diámetro: $\spdiam = \spunit{6 cm}$.
+  % doc: «área del círculo con centro en O»
+  % doc: «perímetro de la circunferencia con centro en O»
+  \item Escriba la fórmula para calcular $\spAcirc[read-sty=circulo](O)$ y $\spPcirc(O)$.
+  % doc: «A B»
+  % doc: «medida del arco A B»
+  \item Marque el arco $\sparc[concept=false]{AB}$ y escriba $\spmarc{AB}$.
+\end{enumerate}
+
+\subsection*{Volumen}
+
+\begin{enumerate}
+  % doc: «5 centímetros»
+  % doc: «volumen es igual a 125 centímetros al cubo»
+  \item Un cubo tiene arista $\spunit{5 cm}$. Calcule su volumen: $\spVol = \spunit{125 cm^{3}}$.
+\end{enumerate}
+
+% doc: «dos de mayo de dos mil veintisiete»
+Entregue esta guía el $\spdate{02/05/2027}$.
+
+\end{document}

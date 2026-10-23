@@ -1,0 +1,115 @@
+% spintent-06.tex
+% Guía de ejercicios de divisibilidad, fracciones, razones y enteros.
+%
+% Ejemplo real: guía para estudiantes de séptimo básico.
+%
+% Las lecturas en los comentarios `% doc:` son las de NVDA 2026.2 con
+% MathCAT, idénticas en mathml-SE y en mathml-AF: una por cada fórmula,
+% en el orden en que aparece. «5 ochos» y «1 mitad» son lectura propia
+% de MathCAT, no del paquete.
+%
+% Compilar con: lualatex-dev spintent-06.tex
+\DocumentMetadata
+  {
+    lang=es-CL,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup={mathml-SE}},
+  }
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{spanish-mathml-intent, hyperref}
+\hypersetup
+  {
+    pdfdisplaydoctitle = true,
+    pdftitle           = {Guía de divisibilidad, fracciones, razones y enteros},
+  }
+
+\begin{document}
+
+\section*{Guía \spshort{n.o} 3: divisibilidad, fracciones, razones y enteros}
+
+Preparada por la \spshort{prof.a} Pérez para el curso de \spshort{7.o} básico.
+Lea cada enunciado con atención y responda en su cuaderno.
+
+\subsection*{Divisores y múltiplos}
+
+\begin{enumerate}
+  % doc: «12»
+  % doc: «divisores de 12 son 1 2 3 4 6 y 12»
+  \item Escriba los divisores de $\spnum{12}$ y complete: $\spnD[result=true](12)$.
+  % doc: «7»
+  % doc: «múltiplos de 7 son 7 14 21 28 35 puntos suspensivos»
+  \item Escriba los primeros múltiplos de $\spnum{7}$ y complete: $\spnM[result=true](7)$.
+  % doc: «12»
+  % doc: «18»
+  % doc: «24»
+  % doc: «máximo común divisor entre 12 18 y 24 es igual a 6»
+  \item Calcule el máximo común divisor de $\spnum{12}$, $\spnum{18}$ y $\spnum{24}$: $\spmcd[result=true](12, 18, 24)$.
+  % doc: «4»
+  % doc: «6»
+  % doc: «10»
+  % doc: «mínimo común múltiplo entre 4 6 y 10 es igual a 60»
+  \item Calcule el mínimo común múltiplo de $\spnum{4}$, $\spnum{6}$ y $\spnum{10}$: $\spmcm[result=true](4, 6, 10)$.
+  % doc: «m»
+  % doc: «n»
+  % doc: «máximo común divisor entre m y n es igual a 1»
+  \item Si $m$ y $n$ son números naturales, explique qué significa $\spmcd(m, n) = 1$.
+\end{enumerate}
+
+\subsection*{Fracciones y números mixtos}
+
+\begin{enumerate}
+  % doc: «17 quintos»
+  % doc: «3 y 2 quintos»
+  % doc: «11 cuartos»
+  \item Ejemplo: la fracción $\frac{17}{5}$ equivale al número mixto $\spmQ{3}{2}{5}$. Escriba ahora $\frac{11}{4}$ como número mixto.
+  % doc: «2 y 1 cuarto»
+  \item Represente en una recta numérica el número mixto $\spmQ{2}{1}{4}$.
+  % doc: «1 y 3 cuartos»
+  % doc: «1 y 5 ochos»
+  \item Compare los números mixtos $\spmQ{1}{3}{4}$ y $\spmQ{1}{5}{8}$.
+  % doc: «1 y 1 mitad»
+  % doc: «2 y 3 cuartos»
+  \item Una receta usa $\spmQ{1}{1}{2}$ tazas de harina y otra usa $\spmQ{2}{3}{4}$ tazas. ¿Cuál usa más?
+\end{enumerate}
+
+\subsection*{Razones y proporciones}
+
+\begin{enumerate}
+  % doc: «12»
+  % doc: «18»
+  % doc: «12 es a 18»
+  \item En el curso hay $\spnum{12}$ niñas y $\spnum{18}$ niños. Escriba la razón entre niñas y niños: $\sprazon{12}{18}$.
+  % doc: «12 es a 18 es igual a 2 es a 3»
+  \item Simplifique la razón anterior: $\sprazon{12}{18} = \sprazon{2}{3}$.
+  % doc: «2 es a 3 como 4 es a 6»
+  \item Complete la proporción: $\spProp{2}{3}{4}{6}$.
+  % doc: «1200 pesos»
+  % doc: «5»
+  % doc: «5 por 1200»
+  \item Un cuaderno cuesta $\spmoney{1200}$. ¿Cuánto cuestan $\spnum{5}$ cuadernos? Escriba la multiplicación: $\spmul{5}{1200}$.
+  % doc: «60 kilogramos»
+  % doc: «4»
+  % doc: «60 dividido entre 4»
+  \item Reparta $\spunit{60 kg}$ de arroz en partes iguales entre $\spnum{4}$ familias: $\spdiv[read-sym=dividido-entre]{60}{4}$.
+\end{enumerate}
+
+\subsection*{Números enteros}
+
+\begin{enumerate}
+  % doc: «menos 3»
+  % doc: «0»
+  % doc: «5»
+  \item Ubique en la recta numérica los números $\spnZ{-3}$, $\spnZ{0}$ y $\spnZ{5}$.
+  % doc: «se abren paréntesis menos 3 se cierran paréntesis más se abren paréntesis menos 5 se cierran paréntesis»
+  \item Calcule: $\spnZ[wrap-parens=true]{-3} + \spnZ[wrap-parens=true]{-5}$.
+  % doc: «menos 2 grados Celsius»
+  % doc: «7 grados Celsius»
+  \item En Punta Arenas la temperatura mínima fue de $\spunit{-2 °C}$ y la máxima de $\spunit{7 °C}$. ¿Cuál fue la diferencia?
+\end{enumerate}
+
+Esta guía se corrige en conjunto en la clase del \spshort{1.o} de abril.
+
+\end{document}
