@@ -47,7 +47,7 @@ display, a bibliography, a generated cross reference and citations,
   lang          = en,
   pdfversion    = 2.0,  % or 1.7 if desired pdfstandard = UA-1
   pdfstandard   = UA-2, % or UA-1 if pdfversion = 1.7
-  pdfstandard   = A-4f, % 4f allows embedd CSS files.
+  pdfstandard   = A-4f, % 4f allows embedded CSS files.
   tagging-setup = {math/setup=mathml-SE} % Or mathml-AF (see below)
 }
 
