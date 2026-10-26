@@ -108,7 +108,7 @@ To allow for such variations within a single template, the concept of
 "order" keys has been developed. The template support code was
 augmented to offer a `\template_process_order_clist:nnn` command that
 takes an order key defined by the template and processes its comma
-list to typeset the items (and generate approriate tagging for them).
+list to typeset the items (and generate appropriate tagging for them).
 You may find the documentation in [latex-lab on
 CTAN](https://ctan.org/tex-archive/macros/latex-dev/required/latex-lab)
 or on your LaTeX installation with `texdoc latex-lab-template`.
@@ -269,7 +269,7 @@ with LaTeX's new heading code that enables tagging.
 
 We have now provided adjustments to the package code that are
 automatically loaded when the package is used in a document. With
-these adjustements all chapter layouts offered by the package become
+these adjustments all chapter layouts offered by the package become
 tagging-aware and the package can thus be used when producing
 accessible documents.
 
