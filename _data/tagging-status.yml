@@ -449,12 +449,11 @@
 - name: algorithm
   ctan-pkg: algorithms
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [arxiv5, ol10]
   priority: 4
   tests: true
-  comments: "`algorithm` environments not tagged as floats. See float package."
-  updated: 2024-08-06
+  updated: 2026-10-31
 
 - name: algorithmic
   ctan-pkg: algorithms
@@ -683,10 +682,10 @@
   status: partially-compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  issues: [1199,1201,1216,1218,1221,1225,1232,1362,1370,1476,1602,1609,1633]
-  closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1224]
+  issues: [1199,1201,1218,1221,1225,1602,1633]
+  closed-issues: [83,733,736,759,790,792,835,944,1083,1162,1166,1196,1200,1202,1203,1207,1216,1224,1232,1362,1370,1476,1609]
   tests: true
-  updated: 2026-06-02
+  updated: 2026-10-31
 
 - name: amsxtra
   ctan-pkg: latex-amsmath
@@ -4977,13 +4976,13 @@
   comments: "The package itself can't be loaded right now. However, the tagging code
              supports (most of) the document-level  syntax of `enumitem`, so that one
              can use, for example, `\\begin{itemize}[...]` out of the box."
-  tasks: Check which keys are not yet supported and what else is missing.
+  tasks: Check which keys are not yet supported and what else is missing. Add tests.
   references: [1]
-  issues: [61,1301,1441,1518,1595]
-  closed-issues: [4]
+  issues: [61,1301]
+  closed-issues: [4,1441,1518,1595]
   tests: false
   package-repository: "https://github.com/jbezos/enumitem"
-  updated: 2026-06-02
+  updated: 2026-10-31
 
 - name: enverb
   type: package
@@ -5733,8 +5732,9 @@
   type: package
   status: compatible
   priority: 9
+  closed-issues: [1342]
   tests: true
-  updated: 2024-08-07
+  updated: 2026-10-31
 
 - name: filedate
   type: package
@@ -5916,14 +5916,14 @@
 
 - name: float
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
-  comments: "[H] floats are now tagged correctly."
   references: [1]
-  issues: [890,1549]
+  issues: [1549]
+  closed-issues: [890]
   tests: true
-  updated: 2026-05-13
+  updated: 2026-10-31
 
 - name: floatbytocbasic
   type: package
@@ -6044,8 +6044,9 @@
   status: compatible
   included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
+  closed-issues: [1514]
   tests: true
-  updated: 2025-06-11
+  updated: 2026-10-31
 
 - name: fnpos
   type: package
@@ -8527,6 +8528,7 @@
   subpackages: [lstpatch]
   comments: "Mostly compatible; open questions about frames and `mathescape`."
   references: [1]
+  issues: [1677]
   closed-issues: [41,70,1074]
   tests: true
   updated: 2026-10-31
@@ -10340,9 +10342,9 @@
   status: compatible
   included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
-  issues: [1538]
+  closed-issues: [1538]
   tests: true
-  updated: 2026-09-29
+  updated: 2026-10-31
 
 - name: nar
   type: package
@@ -14028,12 +14030,11 @@
 
 - name: rotfloat
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3, arxiv001, ol0.1]
   priority: 2
   tests: true
-  comments: See float.
-  updated: 2024-08-04
+  updated: 2026-10-31
 
 - name: rotpages
   type: package
@@ -15925,10 +15926,11 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [229,1403]
+  issues: [229]
+  closed-issues: [1403]
   tests: true
   comments: "Numbering with sibling key is wrong."
-  updated: 2024-08-08
+  updated: 2026-10-31
 
 - name: threeparttable
   type: package
@@ -17935,12 +17937,11 @@
 
 - name: trivfloat
   type: package
-  status: currently-incompatible
+  status: compatible
   priority: 9
   tests: true
-  comments: "Environments defined with `\\trivfloat` not tagged as floats. See float package."
   package-repository: "https://github.com/josephwright/trivfloat"
-  updated: 2024-08-07
+  updated: 2026-10-31
 
 - name: trsym
   type: package
@@ -18443,14 +18444,15 @@
 
 - name: verbatim
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: "verbatim environment from package overwritten by tagging code."
-  issues: [156,1615]
+  comments: "Fully compatible other than the package's documented method of defining new verbatim environments."
+  issues: [1615]
+  closed-issues: [156]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
-  updated: 2026-09-29
+  updated: 2026-10-31
 
 - name: verbatimbox
   type: package
@@ -19495,8 +19497,8 @@
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: true
-  issues: [1408]
-  updated: 2026-09-29
+  closed-issues: [1408]
+  updated: 2026-10-31
 
 - name: zref-totpages
   ctan-pkg: zref
@@ -19619,8 +19621,8 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737,1477,1656]
-  closed-issues: [970,1632]
+  issues: [443,737,1656]
+  closed-issues: [970,1477,1632]
   tests: true
   updated: 2026-10-31
 
@@ -19629,8 +19631,8 @@
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737,1477,1600,1656]
-  closed-issues: [970,1632]
+  issues: [443,737,1656]
+  closed-issues: [970,1477,1600,1632]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: true
   updated: 2026-10-31
@@ -19652,8 +19654,8 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737,1477,1656]
-  closed-issues: [970,1632]
+  issues: [443,737,1656]
+  closed-issues: [970,1477,1632]
   tests: true
   updated: 2026-10-31
 
@@ -19896,10 +19898,11 @@
   subpackages: [jlreq-complements,jlreq-helpers,jlreq-trimmarks]
   status: currently-incompatible
   priority: 9
-  issues: [719,1482]
+  issues: [719]
+  closed-issues: [1482]
   luatex-only: true
   tests: true
-  updated: 2026-07-25
+  updated: 2026-10-31
 
 - name: jltxdoc
   ctan-pkg: platex
@@ -20132,12 +20135,13 @@
   subpackages: [ltugcomn]
   status: partially-compatible
   priority: 9
-  issues: [1503]
-  closed-issues: [1274]
+  issues: [1679]
+  closed-issues: [1274,1503]
   tests: true
-  comments: "`\\bull` needs proper Unicode mapping. Optional argument to verbatim leads to errors"
+  comments: "`\\bull` needs proper Unicode mapping. `\\ruled`
+             in `verbatim` optional arg errors."
   package-repository: "https://github.com/TeXUsersGroup/tugboat"
-  updated: 2026-07-29
+  updated: 2026-10-31
 
 - name: ltx-talk
   type: class
