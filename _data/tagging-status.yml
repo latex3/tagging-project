@@ -6016,11 +6016,10 @@
   status: compatible
   included-in: [arxiv001, ol0.1]
   priority: 7
-  issues: [1668]
-  closed-issues: [570]
+  closed-issues: [570,1668]
   tests: true
   comments: "Compatible when used with a -dev format or with a LaTeX release of 2026/11/01 or newer."
-  updated: 2026-10-29
+  updated: 2026-10-31
 
 - name: fncylab
   type: package
@@ -7916,9 +7915,10 @@
   included-in: [ol0.02]
   priority: 9
   tests: true
-  comments: "No way to add Alt text to the diagrams. Some examples error with pdftex."
+  closed-issues: [1560]
+  comments: "No way to add Alt text to the diagrams."
   package-repository: "https://github.com/2pi/karnaugh-map"
-  updated: 2026-08-27
+  updated: 2026-10-31
 
 - name: kbordermatrix
   type: package
@@ -8525,10 +8525,9 @@
   subpackages: [lstpatch]
   comments: See definition in tagpdfdocu-patches.sty.
   references: [1]
-  issues: [70,1074]
-  closed-issues: [41]
+  closed-issues: [41,70,1074]
   tests: true
-  updated: 2024-07-12
+  updated: 2026-10-31
 
 - name: listingsutf8
   type: package
@@ -19606,21 +19605,21 @@
   included-in: [tlc3, arxiv10]
   priority: 2
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment. Used by project example arxiv3."
-  issues: [443,737,1477,1632,1656]
-  closed-issues: [970]
+  issues: [443,737,1477,1656]
+  closed-issues: [970,1632]
   tests: true
-  updated: 2026-07-05
+  updated: 2026-10-31
 
 - name: amsbook
   type: class
   status: partially-compatible
   included-in: [tlc3, arxiv001]
   priority: 2
-  issues: [443,737,1477,1600,1632,1656]
-  closed-issues: [970]
+  issues: [443,737,1477,1600,1656]
+  closed-issues: [970,1632]
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
   tests: true
-  updated: 2026-07-05
+  updated: 2026-10-31
 
 - name: amsldoc
   ctan-pkg: amscls
@@ -19639,10 +19638,10 @@
   included-in: [arxiv01]
   priority: 6
   comments: "Currently `\\maketitle` and `\\@starttoc` will need adjustment."
-  issues: [443,737,1477,1632,1656]
-  closed-issues: [970]
+  issues: [443,737,1477,1656]
+  closed-issues: [970,1632]
   tests: true
-  updated: 2026-07-05
+  updated: 2026-10-31
 
 - name: article
   type: class
@@ -19792,10 +19791,11 @@
   type: class
   status: currently-incompatible
   priority: 9
-  issues: [979,980,1050,1241,1281]
+  issues: [979,1050,1241,1281]
+  closed-issues: [980]
   tests: true
   tasks: needs more tests
-  updated: 2025-11-10
+  updated: 2026-10-31
 
 - name: extarticle
   ctan-pkg: extsizes
