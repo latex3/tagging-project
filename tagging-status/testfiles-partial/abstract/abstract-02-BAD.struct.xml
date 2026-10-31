@@ -3,18 +3,18 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Abstract
-    </text>
+    </text-block>
     <list xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.008"
        xmlns:List="http://iso.org/pdf/ssn/List"
@@ -34,33 +34,34 @@
          id="ID.011"
          rolemaps-to="LBody"
         >
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.012"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
            id="ID.013"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="1" ?>Some abstract text
-        </text>
-       </text-unit>
+        </text-block>
+       </semantic-para>
       </itembody>
      </item>
     </list>
-   </text-unit>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   </semantic-para>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.014"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.015"
        title="Contents"
        rolemaps-to="H1"
       >
      <?MarkedContent page="1" ?>Contents
-    </section>
+    </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.016"
        title="toc"
@@ -77,7 +78,7 @@
       </Reference>
      </TOCI>
     </TOC>
-   </Sect>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

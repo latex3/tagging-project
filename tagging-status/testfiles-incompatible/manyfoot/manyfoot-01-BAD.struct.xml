@@ -3,11 +3,11 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
@@ -20,13 +20,14 @@
         referenced-as="2"
        >
        <?References objects="1" ?>
-      <Span xmlns="http://iso.org/pdf2/ssn"
+      <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.009"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextPosition="Sup"
+         rolemaps-to="Span"
         >
        <?MarkedContent page="1" ?>1
-      </Span>
+      </text-fragment>
      </footnotemark>
      <footnote xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
@@ -38,47 +39,49 @@
          id="ID.021"
          rolemaps-to="Lbl"
         >
-       <Span xmlns="http://iso.org/pdf2/ssn"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.022"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="1" ?>a
-       </Span>
+       </text-fragment>
       </footnotelabel>
       <footnotelabel xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.013"
          rolemaps-to="Lbl"
         >
-       <Span xmlns="http://iso.org/pdf2/ssn"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.014"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="1" ?>1
-       </Span>
+       </text-fragment>
       </footnotelabel>
-      <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.011"
          rolemaps-to="Part"
         >
-       <text xmlns="https://www.latex-project.org/ns/dflt"
+       <text-block xmlns="https://www.latex-project.org/ns/dflt"
           id="ID.012"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextAlign="Justify"
           rolemaps-to="P"
          >
         <?MarkedContent page="1" ?>normal footnote
-       </text>
-      </text-unit>
+       </text-block>
+      </semantic-para>
      </footnote>
-    </text>
-   </text-unit>
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    </text-block>
+   </semantic-para>
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.015"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.016"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
@@ -89,29 +92,30 @@
         id="ID.017"
         rolemaps-to="Lbl"
        >
-      <Span xmlns="http://iso.org/pdf2/ssn"
+      <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.018"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextPosition="Sup"
+         rolemaps-to="Span"
         >
        <?MarkedContent page="1" ?>a
-      </Span>
+      </text-fragment>
      </footnotemark>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.019"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.020"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>A-type footnote
-      </text>
-     </text-unit>
-    </text>
-   </text-unit>
+      </text-block>
+     </semantic-para>
+    </text-block>
+   </semantic-para>
   </Document>
  </StructTreeRoot>
 </PDF>

@@ -3,91 +3,90 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.0002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <title-block xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.0005"
-      rolemaps-to="Part"
+      xmlns:ARIA-1.1="http://iso.org/pdf/ssn/ARIA-1.1"
+      ARIA-1.1:role="banner"
+      rolemaps-to="Div"
      >
-    <Title xmlns="http://iso.org/pdf2/ssn"
+    <title-text xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.0006"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Center"
+       rolemaps-to="Title"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0007"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Center"
-        rolemaps-to="P"
-       >
-      <?MarkedContent page="1" ?>Newtheorem and theoremstyle test
-     </text>
-    </Title>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0008"
+     <?MarkedContent page="1" ?>Newtheorem and theoremstyle test
+    </title-text>
+    <title-author xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0007"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>Michael Downesupdated by Barbara Beeton
-    </text>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0009"
+    </title-author>
+    <title-date xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0008"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>May 20, 2016
-    </text>
-   </text-unit>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0010"
+    </title-date>
+   </title-block>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.0009"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0011"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0010"
        title="Test of standard theorem styles"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0012"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0011"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>1
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Test of standard theorem styles
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0013"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0012"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0014"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0013"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>Ahlfors’ Lemma gives the principal criterion for obtaining lower bounds on theKobayashi metric.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0015"
+       id="ID.0014"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0016"
+        id="ID.0015"
        >
-      <?MarkedContent page="1" ?>Ahlfors’ Lemma
-      <?MarkedContent page="1" ?>.
+      <?MarkedContent page="1" ?>Ahlfors’ Lemma.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0017"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0016"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0018"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0017"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0019"
+          id="ID.0018"
           title="math"
           af="mathml-1.xml tag-AFfile1.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -103,7 +102,7 @@
        </Formula>
        <?MarkedContent page="1" ?>be a Hermitian pseudo-metric on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0020"
+          id="ID.0019"
           title="math"
           af="mathml-2.xml tag-AFfile2.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -119,7 +118,7 @@
        </Formula>
        <?MarkedContent page="1" ?>,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0021"
+          id="ID.0020"
           title="math"
           af="mathml-3.xml tag-AFfile3.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -135,7 +134,7 @@
        </Formula>
        <?MarkedContent page="1" ?>, with
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0022"
+          id="ID.0021"
           title="math"
           af="mathml-4.xml tag-AFfile4.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -151,7 +150,7 @@
        </Formula>
        <?MarkedContent page="1" ?>the associated
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0023"
+          id="ID.0022"
           title="math"
           af="mathml-5.xml tag-AFfile5.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -167,7 +166,7 @@
        </Formula>
        <?MarkedContent page="1" ?>-form. If
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0024"
+          id="ID.0023"
           title="math"
           af="mathml-6.xml tag-AFfile6.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -183,7 +182,7 @@
        </Formula>
        <?MarkedContent page="1" ?>on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0025"
+          id="ID.0024"
           title="math"
           af="mathml-2.xml tag-AFfile7.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -199,7 +198,7 @@
        </Formula>
        <?MarkedContent page="1" ?>, then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0026"
+          id="ID.0025"
           title="math"
           af="mathml-8.xml tag-AFfile8.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -215,7 +214,7 @@
        </Formula>
        <?MarkedContent page="1" ?>on all of
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0027"
+          id="ID.0026"
           title="math"
           af="mathml-2.xml tag-AFfile9.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -231,7 +230,7 @@
        </Formula>
        <?MarkedContent page="1" ?>(or equivalently,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0028"
+          id="ID.0027"
           title="math"
           af="mathml-10.xml tag-AFfile10.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -246,38 +245,37 @@
         <?MarkedContent page="1" ?>ds2≤ds2r
        </Formula>
        <?MarkedContent page="1" ?>).
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0029"
+       id="ID.0028"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0030"
+        id="ID.0029"
        >
-      <?MarkedContent page="1" ?>Lemma
+      <?MarkedContent page="1" ?>Lemma 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0031"
+         id="ID.0030"
         >
        <?MarkedContent page="1" ?>1.1
       </Lbl>
-      <?MarkedContent page="1" ?>(negatively curved families)
-      <?MarkedContent page="1" ?>.
+      <?MarkedContent page="1" ?> (negatively curved families).
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0032"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0031"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0033"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0032"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0034"
+          id="ID.0033"
           title="math"
           af="mathml-11.xml tag-AFfile11.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -293,7 +291,7 @@
        </Formula>
        <?MarkedContent page="1" ?>be a negatively curvedfamily of metrics on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0035"
+          id="ID.0034"
           title="math"
           af="mathml-2.xml tag-AFfile12.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -309,7 +307,7 @@
        </Formula>
        <?MarkedContent page="1" ?>, with associated forms
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0036"
+          id="ID.0035"
           title="math"
           af="mathml-13.xml tag-AFfile13.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -325,7 +323,7 @@
        </Formula>
        <?MarkedContent page="1" ?>, ...,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0037"
+          id="ID.0036"
           title="math"
           af="mathml-14.xml tag-AFfile14.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -341,7 +339,7 @@
        </Formula>
        <?MarkedContent page="1" ?>. Then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0038"
+          id="ID.0037"
           title="math"
           af="mathml-15.xml tag-AFfile15.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -357,7 +355,7 @@
        </Formula>
        <?MarkedContent page="1" ?>for all
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0039"
+          id="ID.0038"
           title="math"
           af="mathml-16.xml tag-AFfile16.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -372,50 +370,50 @@
         <?MarkedContent page="1" ?>i
        </Formula>
        <?MarkedContent page="1" ?>.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0040"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0039"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0041"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0040"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>Then our main theorem:
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0042"
+       id="ID.0041"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0043"
+        id="ID.0042"
        >
-      <?MarkedContent page="1" ?>Theorem
+      <?MarkedContent page="1" ?>Theorem 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0044"
+         id="ID.0043"
         >
        <?MarkedContent page="1" ?>1.2
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0045"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0044"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0046"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0045"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0047"
+          id="ID.0046"
           title="math"
           af="mathml-17.xml tag-AFfile17.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -431,7 +429,7 @@
        </Formula>
        <?MarkedContent page="1" ?>and
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0048"
+          id="ID.0047"
           title="math"
           af="mathml-18.xml tag-AFfile18.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -447,7 +445,7 @@
        </Formula>
        <?MarkedContent page="1" ?>be the maximum, resp. minimum distancebetween any two adjacent vertices of a quadrilateral
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0049"
+          id="ID.0048"
           title="math"
           af="mathml-19.xml tag-AFfile19.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -463,7 +461,7 @@
        </Formula>
        <?MarkedContent page="1" ?>. Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0050"
+          id="ID.0049"
           title="math"
           af="mathml-20.xml tag-AFfile20.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -479,7 +477,7 @@
        </Formula>
        <?MarkedContent page="1" ?>be the diagonalpigspan of a pig
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0051"
+          id="ID.0050"
           title="math"
           af="mathml-21.xml tag-AFfile21.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -495,7 +493,7 @@
        </Formula>
        <?MarkedContent page="1" ?>with four legs. Then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0052"
+          id="ID.0051"
           title="math"
           af="mathml-21.xml tag-AFfile22.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -511,7 +509,7 @@
        </Formula>
        <?MarkedContent page="1" ?>is capable of standing on the cornersof
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0053"
+          id="ID.0052"
           title="math"
           af="mathml-19.xml tag-AFfile23.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -526,9 +524,9 @@
         <?MarkedContent page="1" ?>Q
        </Formula>
        <?MarkedContent page="1" ?>iff
-      </text>
+      </text-block>
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0054"
+         id="ID.0053"
          title="equation"
          af="mathml-24.xml tag-AFfile24.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -542,42 +540,42 @@
         </AssociatedFile>
        <?MarkedContent page="1" ?>σ≥√︂d2max+d2min.
        <Lbl xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0055"
+          id="ID.0054"
          >
         <?MarkedContent page="1" ?>(1)
        </Lbl>
        <?MarkedContent page="1" ?>
       </Formula>
-     </text-unit>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0056"
+       id="ID.0055"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0057"
+        id="ID.0056"
        >
-      <?MarkedContent page="1" ?>Corollary
+      <?MarkedContent page="1" ?>Corollary 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0058"
+         id="ID.0057"
         >
        <?MarkedContent page="1" ?>1.3
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0059"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0058"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0060"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0059"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Admitting reflection and rotation, a three-legged pig
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0061"
+          id="ID.0060"
           title="math"
           af="mathml-21.xml tag-AFfile25.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -593,7 +591,7 @@
        </Formula>
        <?MarkedContent page="1" ?>is capableof standing on the corners of a triangle
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0062"
+          id="ID.0061"
           title="math"
           af="mathml-26.xml tag-AFfile26.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -608,32 +606,31 @@
         <?MarkedContent page="1" ?>T
        </Formula>
        <?MarkedContent page="1" ?>iff (1) holds.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0063"
+       id="ID.0062"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0064"
+        id="ID.0063"
        >
-      <?MarkedContent page="1" ?>Remark
-      <?MarkedContent page="1" ?>.
+      <?MarkedContent page="1" ?>Remark.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0065"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0064"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0066"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0065"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>As two-legged pigs generally fall over, the case of a polygon of order
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0067"
+          id="ID.0066"
           title="math"
           af="mathml-27.xml tag-AFfile27.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -648,270 +645,269 @@
         <?MarkedContent page="1" ?>2
        </Formula>
        <?MarkedContent page="1" ?>is uninteresting.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0068"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.0067"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0069"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0068"
        title="Custom theorem styles"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0070"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0069"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="1" ?>2
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="1" ?> 
      <?MarkedContent page="1" ?>Custom theorem styles
-    </section>
+    </section-heading>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0071"
+       id="ID.0070"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0072"
+        id="ID.0071"
        >
-      <?MarkedContent page="1" ?>Exercise
+      <?MarkedContent page="1" ?>Exercise 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0073"
-        >
-       <?MarkedContent page="1" ?>1
-      </Lbl>
-      <?MarkedContent page="1" ?>.
-     </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0074"
-        rolemaps-to="Part"
-       >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0075"
-         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-         Layout:TextAlign="Justify"
-         rolemaps-to="P"
-        >
-       <?MarkedContent page="1" ?>Generalize Theorem 1.2 to three and four dimensions.
-      </text>
-     </text-unit>
-    </theorem-like>
-    <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0076"
-       rolemaps-to="Sect"
-      >
-     <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0077"
-       >
-      <?MarkedContent page="1" ?>Note
-      <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0078"
+         id="ID.0072"
         >
        <?MarkedContent page="1" ?>1
       </Lbl>
       <?MarkedContent page="1" ?>:
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0079"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0073"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0080"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0074"
+         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+         Layout:TextAlign="Justify"
+         rolemaps-to="P"
+        >
+       <?MarkedContent page="1" ?>Generalize Theorem 1.2 to three and four dimensions.
+      </text-block>
+     </semantic-para>
+    </theorem-like>
+    <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0075"
+       rolemaps-to="Sect"
+      >
+     <Caption xmlns="http://iso.org/pdf2/ssn"
+        id="ID.0076"
+       >
+      <?MarkedContent page="1" ?>Note 
+      <Lbl xmlns="http://iso.org/pdf2/ssn"
+         id="ID.0077"
+        >
+       <?MarkedContent page="1" ?>1
+      </Lbl>
+      <?MarkedContent page="1" ?>:
+     </Caption>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0078"
+        rolemaps-to="Part"
+       >
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0079"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>This is a test of the custom theorem style ‘note’. It is supposed to havevariant fonts and other differences.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0081"
+       id="ID.0080"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0082"
+        id="ID.0081"
        >
-      <?MarkedContent page="1" ?>B-Theorem
+      <?MarkedContent page="1" ?>B-Theorem 
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0083"
+         id="ID.0082"
         >
        <?MarkedContent page="1" ?>1
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0084"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0083"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0085"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0084"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>Test of the ‘linebreak’ style of theorem heading.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0086"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0085"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0087"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0086"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="2" ?>This is a test of a citing theorem to cite a theorem from some other source.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0088"
+       id="ID.0087"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0089"
+        id="ID.0088"
        >
       <?MarkedContent page="2" ?>Theorem 3.6 in [
       <Reference xmlns="http://iso.org/pdf/ssn"
-         id="ID.0090"
+         id="ID.0089"
         >
         <?References objects="1" ?>
        <?MarkedContent page="2" ?>1
       </Reference>
-      <?MarkedContent page="2" ?>]
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>].
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0091"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0090"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0092"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0091"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>No hyperlinking available here yet ... but that’s not a badidea for the future.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0093"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.0092"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0094"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0093"
        title="The proof environment"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0095"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0094"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="2" ?>3
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="2" ?> 
      <?MarkedContent page="2" ?>The proof environment
-    </section>
+    </section-heading>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0096"
+       id="ID.0095"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0097"
+        id="ID.0096"
        >
-      <?MarkedContent page="2" ?>Proof
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>Proof.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0098"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0097"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0099"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0098"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Here is a test of the proof environment.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0100"
+       id="ID.0099"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0101"
+        id="ID.0100"
        >
-      <?MarkedContent page="2" ?>Proof of Theorem 1.2
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>Proof of Theorem 1.2.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0102"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0101"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0103"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0102"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>And another test.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0104"
+       id="ID.0103"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0105"
+        id="ID.0104"
        >
-      <?MarkedContent page="2" ?>Proof (necessity)
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>Proof (necessity).
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0106"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0105"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0107"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0106"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>And another.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0108"
+       id="ID.0107"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0109"
+        id="ID.0108"
        >
-      <?MarkedContent page="2" ?>Proof (sufficiency)
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>Proof (sufficiency).
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0110"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0109"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0111"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0110"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>And another, ending with a display:
-      </text>
+      </text-block>
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0112"
+         id="ID.0111"
          title="equation*"
          af="mathml-28.xml tag-AFfile28.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -925,74 +921,75 @@
         </AssociatedFile>
        <?MarkedContent page="2" ?>1 + 1 = 2.
       </Formula>
-     </text-unit>
+     </semantic-para>
     </theorem-like>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0113"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.0112"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0114"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0113"
        title="Test of number-swapping"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0115"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0114"
+        rolemaps-to="Lbl"
        >
       <?MarkedContent page="2" ?>4
-     </section-number>
+     </heading-number>
+     <?MarkedContent page="2" ?> 
      <?MarkedContent page="2" ?>Test of number-swapping
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0116"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0115"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0117"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0116"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="2" ?>This is a repeat of the first section but with numbers in theorem heads swappedto the left.
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0118"
+     </text-block>
+    </semantic-para>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0117"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0119"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0118"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="2" ?>Ahlfors’ Lemma gives the principal criterion for obtaining lower bounds onthe Kobayashi metric.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0120"
+       id="ID.0119"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0121"
+        id="ID.0120"
        >
-      <?MarkedContent page="2" ?>Ahlfors’ Lemma
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?>Ahlfors’ Lemma.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0122"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0121"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0123"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0122"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0124"
+          id="ID.0123"
           title="math"
           af="mathml-1.xml tag-AFfile29.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1008,7 +1005,7 @@
        </Formula>
        <?MarkedContent page="2" ?>be a Hermitian pseudo-metric on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0125"
+          id="ID.0124"
           title="math"
           af="mathml-2.xml tag-AFfile30.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1024,7 +1021,7 @@
        </Formula>
        <?MarkedContent page="2" ?>,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0126"
+          id="ID.0125"
           title="math"
           af="mathml-3.xml tag-AFfile31.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1040,7 +1037,7 @@
        </Formula>
        <?MarkedContent page="2" ?>, with
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0127"
+          id="ID.0126"
           title="math"
           af="mathml-4.xml tag-AFfile32.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1056,7 +1053,7 @@
        </Formula>
        <?MarkedContent page="2" ?>the associated
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0128"
+          id="ID.0127"
           title="math"
           af="mathml-5.xml tag-AFfile33.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1072,7 +1069,7 @@
        </Formula>
        <?MarkedContent page="2" ?>-form. If
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0129"
+          id="ID.0128"
           title="math"
           af="mathml-6.xml tag-AFfile34.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1088,7 +1085,7 @@
        </Formula>
        <?MarkedContent page="2" ?>on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0130"
+          id="ID.0129"
           title="math"
           af="mathml-2.xml tag-AFfile35.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1104,7 +1101,7 @@
        </Formula>
        <?MarkedContent page="2" ?>, then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0131"
+          id="ID.0130"
           title="math"
           af="mathml-8.xml tag-AFfile36.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1120,7 +1117,7 @@
        </Formula>
        <?MarkedContent page="2" ?>on all of
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0132"
+          id="ID.0131"
           title="math"
           af="mathml-2.xml tag-AFfile37.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1136,7 +1133,7 @@
        </Formula>
        <?MarkedContent page="2" ?>(or equivalently,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0133"
+          id="ID.0132"
           title="math"
           af="mathml-10.xml tag-AFfile38.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1151,38 +1148,36 @@
         <?MarkedContent page="2" ?>ds2≤ds2r
        </Formula>
        <?MarkedContent page="2" ?>).
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0134"
+       id="ID.0133"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0135"
+        id="ID.0134"
        >
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0136"
+         id="ID.0135"
         >
        <?MarkedContent page="2" ?>4.1
       </Lbl>
-      <?MarkedContent page="2" ?>Lemma
-      <?MarkedContent page="2" ?>(negatively curved families)
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?> Lemma (negatively curved families).
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0137"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0136"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0138"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0137"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0139"
+          id="ID.0138"
           title="math"
           af="mathml-11.xml tag-AFfile39.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1198,7 +1193,7 @@
        </Formula>
        <?MarkedContent page="2" ?>be a negatively curvedfamily of metrics on
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0140"
+          id="ID.0139"
           title="math"
           af="mathml-2.xml tag-AFfile40.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1214,7 +1209,7 @@
        </Formula>
        <?MarkedContent page="2" ?>, with associated forms
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0141"
+          id="ID.0140"
           title="math"
           af="mathml-13.xml tag-AFfile41.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1230,7 +1225,7 @@
        </Formula>
        <?MarkedContent page="2" ?>, ...,
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0142"
+          id="ID.0141"
           title="math"
           af="mathml-14.xml tag-AFfile42.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1246,7 +1241,7 @@
        </Formula>
        <?MarkedContent page="2" ?>. Then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0143"
+          id="ID.0142"
           title="math"
           af="mathml-15.xml tag-AFfile43.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1262,7 +1257,7 @@
        </Formula>
        <?MarkedContent page="2" ?>for all
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0144"
+          id="ID.0143"
           title="math"
           af="mathml-16.xml tag-AFfile44.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1277,50 +1272,49 @@
         <?MarkedContent page="2" ?>i
        </Formula>
        <?MarkedContent page="2" ?>.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0145"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0144"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0146"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0145"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="2" ?>Then our main theorem:
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0147"
+       id="ID.0146"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0148"
+        id="ID.0147"
        >
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0149"
+         id="ID.0148"
         >
        <?MarkedContent page="2" ?>4.2
       </Lbl>
-      <?MarkedContent page="2" ?>Theorem
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?> Theorem.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0150"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0149"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0151"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0150"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0152"
+          id="ID.0151"
           title="math"
           af="mathml-17.xml tag-AFfile45.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1336,7 +1330,7 @@
        </Formula>
        <?MarkedContent page="2" ?>and
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0153"
+          id="ID.0152"
           title="math"
           af="mathml-18.xml tag-AFfile46.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1352,7 +1346,7 @@
        </Formula>
        <?MarkedContent page="2" ?>be the maximum, resp. minimum distancebetween any two adjacent vertices of a quadrilateral
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0154"
+          id="ID.0153"
           title="math"
           af="mathml-19.xml tag-AFfile47.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1368,7 +1362,7 @@
        </Formula>
        <?MarkedContent page="2" ?>. Let
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0155"
+          id="ID.0154"
           title="math"
           af="mathml-20.xml tag-AFfile48.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1384,7 +1378,7 @@
        </Formula>
        <?MarkedContent page="2" ?>be the diagonalpigspan of a pig
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0156"
+          id="ID.0155"
           title="math"
           af="mathml-21.xml tag-AFfile49.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1400,7 +1394,7 @@
        </Formula>
        <?MarkedContent page="2" ?>with four legs. Then
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0157"
+          id="ID.0156"
           title="math"
           af="mathml-21.xml tag-AFfile50.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1416,7 +1410,7 @@
        </Formula>
        <?MarkedContent page="2" ?>is capable of standing on the cornersof
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0158"
+          id="ID.0157"
           title="math"
           af="mathml-19.xml tag-AFfile51.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1431,9 +1425,9 @@
         <?MarkedContent page="2" ?>Q
        </Formula>
        <?MarkedContent page="2" ?>iff
-      </text>
+      </text-block>
       <Formula xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0159"
+         id="ID.0158"
          title="equation"
          af="mathml-52.xml tag-AFfile52.tex"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1447,42 +1441,41 @@
         </AssociatedFile>
        <?MarkedContent page="2" ?>σ≥√︂d2max+d2min.
        <Lbl xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0160"
+          id="ID.0159"
          >
         <?MarkedContent page="2" ?>(2)
        </Lbl>
        <?MarkedContent page="2" ?>
       </Formula>
-     </text-unit>
+     </semantic-para>
     </theorem-like>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0161"
+       id="ID.0160"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.0162"
+        id="ID.0161"
        >
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.0163"
+         id="ID.0162"
         >
        <?MarkedContent page="2" ?>4.3
       </Lbl>
-      <?MarkedContent page="2" ?>Corollary
-      <?MarkedContent page="2" ?>.
+      <?MarkedContent page="2" ?> Corollary.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0164"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.0163"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0165"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.0164"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Admitting reflection and rotation, a three-legged pig
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0166"
+          id="ID.0165"
           title="math"
           af="mathml-21.xml tag-AFfile53.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1498,7 +1491,7 @@
        </Formula>
        <?MarkedContent page="2" ?>is capableof standing on the corners of a triangle
        <Formula xmlns="http://iso.org/pdf2/ssn"
-          id="ID.0167"
+          id="ID.0166"
           title="math"
           af="mathml-26.xml tag-AFfile54.tex"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
@@ -1513,63 +1506,64 @@
         <?MarkedContent page="2" ?>T
        </Formula>
        <?MarkedContent page="2" ?>iff (2) holds.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.0168"
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.0167"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0169"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0168"
        title="References"
        rolemaps-to="H1"
       >
      <?MarkedContent page="2" ?>References
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.0170"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.0169"
        rolemaps-to="Part"
       >
      <list xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.0171"
+        id="ID.0170"
         xmlns:List="http://iso.org/pdf/ssn/List"
         List:ListNumbering="Ordered"
         rolemaps-to="L"
        >
       <item xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.0172"
+         id="ID.0171"
          rolemaps-to="LI"
          referenced-as="1"
         >
        <itemlabel xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0173"
+          id="ID.0172"
           rolemaps-to="Lbl"
          >
         <?MarkedContent page="2" ?>[1]
        </itemlabel>
        <itembody xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.0174"
+          id="ID.0173"
           rolemaps-to="LBody"
          >
-        <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.0175"
+        <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.0174"
            rolemaps-to="Part"
           >
-         <text xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.0176"
+         <text-block xmlns="https://www.latex-project.org/ns/dflt"
+            id="ID.0175"
             xmlns:Layout="http://iso.org/pdf/ssn/Layout"
             Layout:TextAlign="Justify"
             rolemaps-to="P"
            >
           <?MarkedContent page="2" ?>Dummy entry.
-         </text>
-        </text-unit>
+         </text-block>
+        </semantic-para>
        </itembody>
       </item>
      </list>
-    </text-unit>
-   </Sect>
+    </semantic-para>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

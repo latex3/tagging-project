@@ -3,22 +3,24 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="Section 1"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>1 
-     </section-number>
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>Section 1
-    </section>
+    </section-heading>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.009"
        rolemaps-to="Sect"
@@ -26,33 +28,33 @@
      <Caption xmlns="http://iso.org/pdf2/ssn"
         id="ID.010"
        >
-      <?MarkedContent page="1" ?>Lemma
+      <?MarkedContent page="1" ?>Lemma  
       <Lbl xmlns="http://iso.org/pdf2/ssn"
          id="ID.011"
         >
-       <?MarkedContent page="1" ?> 1.1
+       <?MarkedContent page="1" ?>1.1
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.012"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.013"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>A lemma.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.014"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.015"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
@@ -64,8 +66,8 @@
        <?MarkedContent page="1" ?>lemma 1.1
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.017"
        rolemaps-to="Sect"
@@ -73,33 +75,33 @@
      <Caption xmlns="http://iso.org/pdf2/ssn"
         id="ID.018"
        >
-      <?MarkedContent page="1" ?>Conjecture
+      <?MarkedContent page="1" ?>Conjecture  
       <Lbl xmlns="http://iso.org/pdf2/ssn"
          id="ID.019"
         >
-       <?MarkedContent page="1" ?> 1.1
+       <?MarkedContent page="1" ?>1.1
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.020"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.021"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
         >
        <?MarkedContent page="1" ?>A conjecture.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.022"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.023"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
@@ -111,9 +113,9 @@
        <?MarkedContent page="1" ?>conjecture 1.1
        <?ReferencedObject type="Annot" page="1" ?>
       </Link>
-     </text>
-    </text-unit>
-   </Sect>
+     </text-block>
+    </semantic-para>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

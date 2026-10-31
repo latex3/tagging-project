@@ -1,0 +1,453 @@
+% spintent-04.tex
+% Pruebas de las utilidades para geometría: \spcoord, \spPoint, \spvec,
+% \sprecta, \sprayo, \spside, \spmside, \spangle, \spmangle, \spang,
+% \sparc, \spmarc, \spPoly, \spAfig, \spPfig, \sprad, \spdiam, \spcirc,
+% \spAcirc, \spPcirc y \spVol.
+%
+% Las lecturas en los comentarios `% doc:` son las de NVDA 2026.2 con
+% MathCAT, idénticas en mathml-SE y en mathml-AF: una por cada fórmula,
+% en el orden en que aparece.
+%
+% Compilar con: lualatex-dev spintent-04.tex
+\DocumentMetadata
+  {
+    lang=es-CL,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup={mathml-SE}},
+  }
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{spanish-mathml-intent, hyperref}
+\hypersetup
+  {
+    pdfdisplaydoctitle = true,
+    pdftitle           = {spintent-04: utilidades para geometría},
+  }
+
+\begin{document}
+
+\section*{Utilidades para geometría}
+
+\subsection*{Los comandos \texttt{\textbackslash spcoord} y \texttt{\textbackslash spPoint}}
+
+\begin{itemize}
+  % doc: «menos 3 coma 4»
+  \item Coordenadas: $\spcoord{-3, 4}$.
+  % doc: «x subíndice 1 coma y subíndice 1»
+  \item Coordenadas con subíndices: $\spcoord{x_{1},y_{1}}$.
+  % doc: «(silencio)»
+  \item Coordenadas silenciadas: $\spcoord[silent=true]{-3, 4}$.
+  % doc: «punto A»
+  \item Punto: $\spPoint{A}$.
+  % doc: «punto A sub uno»
+  \item Punto con subíndice: $\spPoint{A_{1}}$.
+  % doc: «punto A menos 3 coma 4»
+  \item Punto con coordenadas: $\spPoint{A}(-3,4)$.
+  % doc: «punto A sub uno menos 3 coma 4»
+  \item Punto con subíndice y coordenadas: $\spPoint{A_{1}}(-3,4)$.
+  % doc: «punto A 1 coma 5 punto y coma 2»
+  \item Punto con coordenadas decimales: $\spPoint{A}(1,5;2)$.
+  % doc: «punto A sub uno»
+  \item Punto con lectura \texttt{school}: $\spPoint[read-cmd=school]{A_{1}}$.
+  % doc: «punto a subíndice 1»
+  \item Punto con lectura \texttt{mathcat}: $\spPoint[read-cmd=mathcat]{A_{1}}$.
+  % doc: «sea punto A»
+  \item Punto con prefijo: $\spPoint[prefix={sea}]{A}$.
+  % doc: «A»
+  \item Punto sin el concepto: $\spPoint[concept=false]{A}$.
+  % doc: «(silencio)»
+  \item Punto silenciado: $\spPoint[silent=true]{A}$.
+\end{itemize}
+
+\subsection*{El comando \texttt{\textbackslash spvec}}
+
+\begin{itemize}
+  % doc: «vector a»
+  \item Vector con una letra: $\spvec{a}$.
+  % doc: «vector A B»
+  \item Vector con dos puntos: $\spvec{AB}$.
+  % doc: «vector A B»
+  \item Vector con dos puntos separados: $\spvec{A,B}$.
+  % doc: «vector a es igual a menos 3 coma 4»
+  \item Vector con componentes: $\spvec{a}(-3,4)$.
+  % doc: «vector A B es igual a menos 3 coma 4»
+  \item Vector entre puntos con componentes: $\spvec{AB}(-3,4)$.
+  % doc: «vector A B»
+  \item Vector con lectura \texttt{school}: $\spvec[read-cmd=school]{AB}$.
+  % doc: «sea vector a»
+  \item Vector con prefijo: $\spvec[prefix={sea}]{a}$.
+  % doc: «vector A B»
+  \item Vector con ajuste automático: $\spvec[autofit=true]{AB}$.
+  % doc: «a»
+  \item Vector sin el concepto: $\spvec[concept=false]{a}$.
+  % doc: «(silencio)»
+  \item Vector silenciado: $\spvec[silent=true]{a}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash sprecta}, \texttt{\textbackslash sprayo}, \texttt{\textbackslash spside} y \texttt{\textbackslash spmside}}
+
+\begin{itemize}
+  % doc: «recta A B»
+  \item Recta por dos puntos: $\sprecta{AB}$.
+  % doc: «recta A B»
+  \item Recta por dos puntos separados: $\sprecta{A,B}$.
+  % doc: «recta m»
+  \item Recta con una letra: $\sprecta{m}$.
+  % doc: «recta A B»
+  \item Recta con lectura \texttt{school}: $\sprecta[read-cmd=school]{AB}$.
+  % doc: «sea recta A B»
+  \item Recta con prefijo: $\sprecta[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Recta sin el concepto: $\sprecta[concept=false]{AB}$.
+  % doc: «(silencio)»
+  \item Recta silenciada: $\sprecta[silent=true]{AB}$.
+  % doc: «rayo A B»
+  \item Rayo: $\sprayo{AB}$.
+  % doc: «semirrecta A B»
+  \item Rayo con lectura \texttt{semirrecta}: $\sprayo[read-sty=semirrecta]{AB}$.
+  % doc: «rayo A B»
+  \item Rayo con lectura \texttt{school}: $\sprayo[read-cmd=school]{AB}$.
+  % doc: «sea rayo A B»
+  \item Rayo con prefijo: $\sprayo[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Rayo sin el concepto: $\sprayo[concept=false]{AB}$.
+  % doc: «(silencio)»
+  \item Rayo silenciado: $\sprayo[silent=true]{AB}$.
+  % doc: «lado A B»
+  \item Lado: $\spside{AB}$.
+  % doc: «segmento A B»
+  \item Lado con lectura \texttt{segmento}: $\spside[read-sty=segmento]{AB}$.
+  % doc: «trazo A B»
+  \item Lado con lectura \texttt{trazo}: $\spside[read-sty=trazo]{AB}$.
+  % doc: «lado A B»
+  \item Lado con lectura \texttt{school}: $\spside[read-cmd=school]{AB}$.
+  % doc: «sea lado A B»
+  \item Lado con prefijo: $\spside[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Lado sin el concepto: $\spside[concept=false]{AB}$.
+  % doc: «lado base A B»
+  \item Lado con verbalización propia: $\spside[read-arg={lado base}]{AB}$.
+  % doc: «(silencio)»
+  \item Lado silenciado: $\spside[silent=true]{AB}$.
+  % doc: «medida del lado A B»
+  \item Medida del lado: $\spmside{AB}$.
+  % doc: «medida del lado A B»
+  \item Medida del lado con la letra m: $\spmside[print-sym=true]{AB}$.
+  % doc: «medida del segmento A B»
+  \item Medida del lado con lectura \texttt{segmento}: $\spmside[read-sty=segmento]{AB}$.
+  % doc: «medida del lado A B»
+  \item Medida del lado con lectura \texttt{school}: $\spmside[read-cmd=school]{AB}$.
+  % doc: «sea medida del lado A B»
+  \item Medida del lado con prefijo: $\spmside[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Medida del lado sin el concepto: $\spmside[concept=false]{AB}$.
+  % doc: «medida de la base A B»
+  \item Medida del lado con verbalización propia: $\spmside[concept=false,read-arg={medida de la base}]{AB}$.
+  % doc: «(silencio)»
+  \item Medida del lado silenciada: $\spmside[silent=true]{AB}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash spangle}, \texttt{\textbackslash spmangle} y \texttt{\textbackslash spang}}
+
+\begin{itemize}
+  % doc: «ángulo en A»
+  \item Ángulo en un punto: $\spangle{A}$.
+  % doc: «ángulo alfa»
+  \item Ángulo con letra griega: $\spangle{\alpha}$.
+  % doc: «ángulo 1»
+  \item Ángulo con número: $\spangle{1}$.
+  % doc: «ángulo A O B»
+  \item Ángulo con tres puntos: $\spangle{AOB}$.
+  % doc: «ángulo A O B»
+  \item Ángulo con tres puntos separados: $\spangle{A,O,B}$.
+  % doc: «ángulo recto A O B»
+  \item Ángulo recto: $\spangle[recto=true]{AOB}$.
+  % doc: «ángulo A O B»
+  \item Ángulo con lectura \texttt{school}: $\spangle[read-cmd=school]{AOB}$.
+  % doc: «sea ángulo A O B»
+  \item Ángulo con prefijo: $\spangle[prefix={sea}]{AOB}$.
+  % doc: «A O B»
+  \item Ángulo sin el concepto: $\spangle[concept=false]{AOB}$.
+  % doc: «(silencio)»
+  \item Ángulo silenciado: $\spangle[silent=true]{AOB}$.
+  % doc: «medida del ángulo en A»
+  \item Medida del ángulo en un punto: $\spmangle{A}$.
+  % doc: «medida del ángulo alfa»
+  \item Medida del ángulo con letra griega: $\spmangle{\alpha}$.
+  % doc: «medida del ángulo 1»
+  \item Medida del ángulo con número: $\spmangle{1}$.
+  % doc: «medida del ángulo A O B»
+  \item Medida del ángulo con tres puntos: $\spmangle{AOB}$.
+  % doc: «medida del ángulo recto A O B»
+  \item Medida del ángulo recto: $\spmangle[recto=true]{AOB}$.
+  % doc: «medida del ángulo A O B»
+  \item Medida del ángulo con la letra m: $\spmangle[print-sym=true]{AOB}$.
+  % doc: «medida del ángulo A O B»
+  \item Medida del ángulo con lectura \texttt{school}: $\spmangle[read-cmd=school]{AOB}$.
+  % doc: «sea medida del ángulo A O B»
+  \item Medida del ángulo con prefijo: $\spmangle[prefix={sea}]{AOB}$.
+  % doc: «A O B»
+  \item Medida del ángulo sin el concepto: $\spmangle[concept=false]{AOB}$.
+  % doc: «(silencio)»
+  \item Medida del ángulo silenciada: $\spmangle[silent=true]{AOB}$.
+  % doc: «45 grados»
+  \item Grados: $\spang{45}$.
+  % doc: «45 grados 30 minutos»
+  \item Grados y minutos: $\spang{45:30}$.
+  % doc: «45 grados 30 minutos 15 segundos»
+  \item Grados, minutos y segundos: $\spang{45:30:15}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash sparc} y \texttt{\textbackslash spmarc}}
+
+\begin{itemize}
+  % doc: «arco A B»
+  \item Arco: $\sparc{AB}$.
+  % doc: «arco A B C»
+  \item Arco con tres puntos: $\sparc{ABC}$.
+  % doc: «arco A B»
+  \item Arco con lectura \texttt{school}: $\sparc[read-cmd=school]{AB}$.
+  % doc: «sea arco A B»
+  \item Arco con prefijo: $\sparc[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Arco sin el concepto: $\sparc[concept=false]{AB}$.
+  % doc: «(silencio)»
+  \item Arco silenciado: $\sparc[silent=true]{AB}$.
+  % doc: «medida del arco A B»
+  \item Medida del arco: $\spmarc{AB}$.
+  % doc: «medida del arco A B C»
+  \item Medida del arco con tres puntos: $\spmarc{ABC}$.
+  % doc: «medida del arco A B»
+  \item Medida del arco con lectura \texttt{school}: $\spmarc[read-cmd=school]{AB}$.
+  % doc: «sea medida del arco A B»
+  \item Medida del arco con prefijo: $\spmarc[prefix={sea}]{AB}$.
+  % doc: «A B»
+  \item Medida del arco sin el concepto: $\spmarc[concept=false]{AB}$.
+  % doc: «(silencio)»
+  \item Medida del arco silenciada: $\spmarc[silent=true]{AB}$.
+\end{itemize}
+
+\subsection*{El comando \texttt{\textbackslash spPoly}}
+
+\begin{itemize}
+  % doc: «triángulo A B C»
+  \item Triángulo: $\spPoly{ABC}$.
+  % doc: «cuadrado A B C D»
+  \item Cuadrilátero: $\spPoly{ABCD}$.
+  % doc: «pentágono A B C D E»
+  \item Pentágono: $\spPoly{ABCDE}$.
+  % doc: «triángulo A B C»
+  \item Triángulo sin símbolo: $\spPoly[print-sym=false]{ABC}$.
+  % doc: «cuadrado A B C D»
+  \item Cuadrilátero sin símbolo: $\spPoly[print-sym=false]{ABCD}$.
+  % doc: «triángulo A B C»
+  \item Polígono con lectura \texttt{school}: $\spPoly[read-cmd=school]{ABC}$.
+  % doc: «sea triángulo A B C»
+  \item Polígono con prefijo: $\spPoly[prefix={sea}]{ABC}$.
+  % doc: «A B C»
+  \item Polígono sin el concepto: $\spPoly[concept=false]{ABC}$.
+  % doc: «(silencio)»
+  \item Polígono silenciado: $\spPoly[silent=true]{ABC}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash spAfig} y \texttt{\textbackslash spPfig}}
+
+\begin{itemize}
+  % doc: «área»
+  \item Área sin argumento: $\spAfig$.
+  % doc: «área uno»
+  \item Área de la figura número uno: $\spAfig(1)$.
+  % doc: «área n»
+  \item Área de la figura número \emph{n}: $\spAfig(n)$.
+  % doc: «área del triángulo A B C»
+  \item Área de un triángulo: $\spAfig(ABC)$.
+  % doc: «área del cuadrado A B C D»
+  \item Área de un cuadrilátero: $\spAfig(ABCD)$.
+  % doc: «área del pentágono A B C D E»
+  \item Área de un pentágono: $\spAfig(ABCDE)$.
+  % doc: «área de la figura»
+  \item Área de una figura: $\spAfig(F)$.
+  % doc: «área de la figura uno»
+  \item Área de una figura con subíndice: $\spAfig(F_{1})$.
+  % doc: «área del polígono»
+  \item Área de un polígono: $\spAfig(P)$.
+  % doc: «área basal»
+  \item Área basal: $\spAfig(B)$.
+  % doc: «área lateral»
+  \item Área lateral: $\spAfig(L)$.
+  % doc: «área total»
+  \item Área total: $\spAfig(T)$.
+  % doc: «área del trapecio A B C D»
+  \item Área con nombre propio: $\spAfig[read-arg={trapecio}](ABCD)$.
+  % doc: «área sub uno»
+  \item Área con subíndice leído: $\spAfig[read-sub=true](1)$.
+  % doc: «área del triángulo A B C»
+  \item Área sin símbolo: $\spAfig[print-sym=none](ABC)$.
+  % doc: «área del triángulo uno»
+  \item Área con símbolo de triángulo: $\spAfig[print-sym=triangle](1)$.
+  % doc: «área del cuadrado uno»
+  \item Área con símbolo de cuadrado: $\spAfig[print-sym=square](1)$.
+  % doc: «área del triángulo A B C»
+  \item Área con lectura \texttt{school}: $\spAfig[read-cmd=school](ABC)$.
+  % doc: «calcule área del triángulo A B C»
+  \item Área con prefijo: $\spAfig[prefix={calcule}](ABC)$.
+  % doc: «A B C»
+  \item Área sin el concepto: $\spAfig[concept=false](ABC)$.
+  % doc: «(silencio)»
+  \item Área silenciada: $\spAfig[silent=true](ABC)$.
+  % doc: «perímetro»
+  \item Perímetro sin argumento: $\spPfig$.
+  % doc: «perímetro uno»
+  \item Perímetro de la figura número uno: $\spPfig(1)$.
+  % doc: «perímetro n»
+  \item Perímetro de la figura número \emph{n}: $\spPfig(n)$.
+  % doc: «perímetro del triángulo A B C»
+  \item Perímetro de un triángulo: $\spPfig(ABC)$.
+  % doc: «perímetro del cuadrado A B C D»
+  \item Perímetro de un cuadrilátero: $\spPfig(ABCD)$.
+  % doc: «perímetro del pentágono A B C D E»
+  \item Perímetro de un pentágono: $\spPfig(ABCDE)$.
+  % doc: «perímetro de la figura»
+  \item Perímetro de una figura: $\spPfig(F)$.
+  % doc: «perímetro de la figura uno»
+  \item Perímetro de una figura con subíndice: $\spPfig(F_{1})$.
+  % doc: «perímetro del polígono»
+  \item Perímetro de un polígono: $\spPfig(P)$.
+  % doc: «perímetro basal»
+  \item Perímetro basal: $\spPfig(B)$.
+  % doc: «perímetro lateral»
+  \item Perímetro lateral: $\spPfig(L)$.
+  % doc: «perímetro total»
+  \item Perímetro total: $\spPfig(T)$.
+  % doc: «perímetro del trapecio A B C D»
+  \item Perímetro con nombre propio: $\spPfig[read-arg={trapecio}](ABCD)$.
+  % doc: «perímetro sub uno»
+  \item Perímetro con subíndice leído: $\spPfig[read-sub=true](1)$.
+  % doc: «perímetro del triángulo A B C»
+  \item Perímetro sin símbolo: $\spPfig[print-sym=none](ABC)$.
+  % doc: «perímetro del triángulo uno»
+  \item Perímetro con símbolo de triángulo: $\spPfig[print-sym=triangle](1)$.
+  % doc: «perímetro del cuadrado uno»
+  \item Perímetro con símbolo de cuadrado: $\spPfig[print-sym=square](1)$.
+  % doc: «perímetro del triángulo A B C»
+  \item Perímetro con lectura \texttt{school}: $\spPfig[read-cmd=school](ABC)$.
+  % doc: «calcule perímetro del triángulo A B C»
+  \item Perímetro con prefijo: $\spPfig[prefix={calcule}](ABC)$.
+  % doc: «A B C»
+  \item Perímetro sin el concepto: $\spPfig[concept=false](ABC)$.
+  % doc: «(silencio)»
+  \item Perímetro silenciado: $\spPfig[silent=true](ABC)$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash sprad} y \texttt{\textbackslash spdiam}}
+
+\begin{itemize}
+  % doc: «radio»
+  \item Radio: $\sprad$.
+  % doc: «diámetro»
+  \item Diámetro: $\spdiam$.
+  % doc: «radio»
+  \item Radio en mayúscula: $\sprad[upper-case=true]$.
+  % doc: «diámetro»
+  \item Diámetro en mayúscula: $\spdiam[upper-case=true]$.
+  % doc: «diámetro»
+  \item Diámetro con símbolo: $\spdiam[print-sym=true]$.
+  % doc: «radio 1»
+  \item Radio con subíndice: $\sprad[sub-index={1}]$.
+  % doc: «radio sub 1»
+  \item Radio con subíndice leído: $\sprad[sub-index={1},read-sub=true]$.
+  % doc: «radio»
+  \item Radio con lectura \texttt{school}: $\sprad[read-cmd=school]$.
+  % doc: «r»
+  \item Radio sin el concepto: $\sprad[concept=false]$.
+  % doc: «medida del radio»
+  \item Radio con verbalización propia: $\sprad[concept=false,read-arg={medida del radio}]$.
+  % doc: «(silencio)»
+  \item Radio silenciado: $\sprad[silent=true]$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash spcirc}, \texttt{\textbackslash spAcirc} y \texttt{\textbackslash spPcirc}}
+
+\begin{itemize}
+  % doc: «circunferencia»
+  \item Circunferencia: $\spcirc$.
+  % doc: «circunferencia de centro en O»
+  \item Circunferencia con centro: $\spcirc(O)$.
+  % doc: «circunferencia de centro en O y radio 3»
+  \item Circunferencia con centro y radio: $\spcirc(O,3)$.
+  % doc: «circunferencia de centro en O y radio medida del lado A B»
+  \item Circunferencia con radio dado por un segmento: $\spcirc(O, AB)$.
+  % doc: «circunferencia de centro en O y radio lado A B»
+  \item Circunferencia con radio dado por un segmento (\texttt{side}): $\spcirc[radio-sty=side](O, AB)$.
+  % doc: «circunferencia de centro en O y radio r»
+  \item Circunferencia con radio dado por una letra: $\spcirc(O, r)$.
+  % doc: «circunferencia de centro en O y radio 3 centímetros»
+  \item Circunferencia con radio como medida: $\spcirc(O,3 cm)$.
+  % doc: «circunferencia de centro en O sub uno»
+  \item Circunferencia con centro con subíndice: $\spcirc(O_{1})$.
+  % doc: «circunferencia de centro en O»
+  \item Circunferencia con símbolo usual: $\spcirc[print-sym=usual](O)$.
+  % doc: «circunferencia de centro en O y diámetro 3»
+  \item Circunferencia con diámetro: $\spcirc[diameter=true](O,3)$.
+  % doc: «círculo de centro en O»
+  \item Circunferencia con lectura \texttt{circulo}: $\spcirc[read-sty=circulo](O)$.
+  % doc: «circunferencia 1 de centro en O y radio medida del lado A B»
+  \item Circunferencia con subíndice: $\spcirc[sub-index={1}](O, AB)$.
+  % doc: «circunferencia de centro en O»
+  \item Circunferencia con lectura \texttt{school}: $\spcirc[read-cmd=school](O)$.
+  % doc: «sea circunferencia de centro en O»
+  \item Circunferencia con prefijo: $\spcirc[prefix={sea}](O)$.
+  % doc: «O»
+  \item Circunferencia sin el concepto: $\spcirc[concept=false](O)$.
+  % doc: «circunferencia unidad de centro en O»
+  \item Circunferencia con verbalización propia: $\spcirc[read-arg={circunferencia unidad}](O)$.
+  % doc: «(silencio)»
+  \item Circunferencia silenciada: $\spcirc[silent=true](O)$.
+  % doc: «área de la circunferencia»
+  \item Área del círculo: $\spAcirc$.
+  % doc: «área de la circunferencia con centro en O»
+  \item Área del círculo con centro: $\spAcirc(O)$.
+  % doc: «área de la circunferencia uno»
+  \item Área del círculo número uno: $\spAcirc(1)$.
+  % doc: «área de la circunferencia con centro en O»
+  \item Área del círculo con símbolo usual: $\spAcirc[print-sym=usual](O)$.
+  % doc: «área de la circunferencia 1 con centro en O»
+  \item Área del círculo con subíndice: $\spAcirc[sub-index={1}](O)$.
+  % doc: «área del círculo con centro en O»
+  \item Área del círculo con lectura \texttt{circulo}: $\spAcirc[read-sty=circulo](O)$.
+  % doc: «perímetro de la circunferencia»
+  \item Perímetro de la circunferencia: $\spPcirc$.
+  % doc: «perímetro de la circunferencia con centro en O»
+  \item Perímetro de la circunferencia con centro: $\spPcirc(O)$.
+  % doc: «perímetro de la circunferencia uno»
+  \item Perímetro de la circunferencia número uno: $\spPcirc(1)$.
+  % doc: «perímetro de la circunferencia con centro en O»
+  \item Perímetro de la circunferencia con símbolo usual: $\spPcirc[print-sym=usual](O)$.
+  % doc: «perímetro de la circunferencia 1 con centro en O»
+  \item Perímetro de la circunferencia con subíndice: $\spPcirc[sub-index={1}](O)$.
+  % doc: «perímetro del círculo con centro en O»
+  \item Perímetro de la circunferencia con lectura \texttt{circulo}: $\spPcirc[read-sty=circulo](O)$.
+\end{itemize}
+
+\subsection*{El comando \texttt{\textbackslash spVol}}
+
+\begin{itemize}
+  % doc: «volumen»
+  \item Volumen: $\spVol$.
+  % doc: «volumen 1»
+  \item Volumen con subíndice: $\spVol[sub-index={1}]$.
+  % doc: «volumen sub 1»
+  \item Volumen con subíndice leído: $\spVol[sub-index={1},read-sub=true]$.
+  % doc: «volumen»
+  \item Volumen con lectura \texttt{school}: $\spVol[read-cmd=school]$.
+  % doc: «V»
+  \item Volumen sin el concepto: $\spVol[concept=false]$.
+  % doc: «volumen del cilindro»
+  \item Volumen con verbalización propia: $\spVol[concept=false,read-arg={volumen del cilindro}]$.
+  % doc: «(silencio)»
+  \item Volumen silenciado: $\spVol[silent=true]$.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,114 @@
+% spintent-08.tex
+% Guía de ejercicios de estadística y probabilidad.
+%
+% Ejemplo real: guía para estudiantes de primero medio.
+%
+% Las lecturas en los comentarios `% doc:` son las de NVDA 2026.2 con
+% MathCAT, idénticas en mathml-SE y en mathml-AF: una por cada fórmula,
+% en el orden en que aparece. «a» y «b» (en los sucesos) son lectura
+% propia de MathCAT, no del paquete.
+%
+% Compilar con: lualatex-dev spintent-08.tex
+\DocumentMetadata
+  {
+    lang=es-CL,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup={mathml-SE}},
+  }
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{spanish-mathml-intent, hyperref}
+\hypersetup
+  {
+    pdfdisplaydoctitle = true,
+    pdftitle           = {Guía de estadística y probabilidad},
+  }
+
+\begin{document}
+
+\section*{Guía \spshort{n.o} 7: estadística y probabilidad}
+
+Preparada por la \spshort{prof.a} Pérez para el curso de \spshort{1.o} medio.
+Los datos corresponden a las notas de una prueba de matemática.
+
+\subsection*{Medidas de tendencia central}
+
+% doc: «4 coma 5»
+% doc: «5 coma 0»
+% doc: «5 coma 5»
+% doc: «5 coma 5»
+% doc: «6 coma 0»
+% doc: «6 coma 5»
+% doc: «7 coma 0»
+Las notas de siete estudiantes fueron $\spnum{4,5}$; $\spnum{5,0}$; $\spnum{5,5}$; $\spnum{5,5}$; $\spnum{6,0}$; $\spnum{6,5}$ y $\spnum{7,0}$.
+
+\begin{enumerate}
+  % doc: «promedio de x»
+  % doc: «media aritmética es igual a 5 coma 7»
+  \item Calcule $\spProm{x}$ y escríbalo como $\spmedia = \spnum{5,7}$.
+  % doc: «mediana es igual a 5 coma 5»
+  \item Determine la mediana: $\spmediana = \spnum{5,5}$.
+  % doc: «moda es igual a 5 coma 5»
+  \item Determine la moda: $\spmoda = \spnum{5,5}$.
+  % doc: «rango es igual a 2 coma 5»
+  \item Calcule el rango: $\sprango = \spnum{2,5}$.
+  % doc: «desviación estándar s»
+  % doc: «varianza s al cuadrado»
+  \item Calcule $\spdesv$ y $\spvarz$.
+\end{enumerate}
+
+\subsection*{Cuartiles y frecuencias}
+
+\begin{enumerate}
+  % doc: «cuartil 1»
+  % doc: «cuartil 3»
+  \item Calcule $\spcuartil{1}$ y $\spcuartil{3}$.
+  % doc: «rango intercuartil»
+  \item Calcule $\spriq$.
+  % doc: «mínimo»
+  % doc: «máximo»
+  \item Escriba $\spmin$ y $\spmax$ de los datos.
+  % doc: «frecuencia absoluta»
+  % doc: «frecuencia relativa»
+  % doc: «frecuencia porcentual»
+  \item Complete la tabla de frecuencias con $\spFrec{f}$, $\spFrec{f_{r}}$ y $\spFrec{f_{r}\%}$.
+\end{enumerate}
+
+\subsection*{Probabilidad}
+
+Se lanza un dado equilibrado de seis caras.
+
+\begin{enumerate}
+  % doc: «espacio muestral»
+  % doc: «cardinalidad del espacio muestral»
+  \item Escriba $\spOmega$ y $\spOmega[card=true]$.
+  % doc: «a»
+  % doc: «probabilidad de a»
+  \item Sea $A$ el suceso «salir un número par». Calcule $\spProb{A}$.
+  % doc: «3 de 6»
+  \item Escriba la probabilidad como fracción de casos favorables sobre casos posibles: $\spPval{3}{6}$.
+  % doc: «probabilidad de complemento de a»
+  \item Calcule la probabilidad de que no salga un número par: $\spProb{\spcomp{A}}$.
+  % doc: «b»
+  % doc: «probabilidad de a y b»
+  % doc: «probabilidad de a o b»
+  \item Sea $B$ el suceso «salir un número mayor que cuatro». Calcule $\spProb{A \cap B}$ y $\spProb{A \cup B}$.
+\end{enumerate}
+
+\subsection*{Conteo}
+
+\begin{enumerate}
+  % doc: «5 factorial»
+  \item ¿De cuántas maneras se pueden ordenar cinco libros en un estante? Escriba $\spfact{5}$.
+  % doc: «5 sobre 2»
+  \item ¿Cuántos grupos de dos estudiantes se pueden formar con cinco estudiantes? Escriba $\spcomb{5,2}$.
+  % doc: «variación de 5 elementos tomados de a 2»
+  \item ¿Cuántas claves de dos dígitos distintos se pueden formar con cinco dígitos? Escriba $\spcomb[kind=variation]{5,2}$.
+\end{enumerate}
+
+% doc: «10 coma 5 porciento»
+Esta guía vale un $\spnum{10,5}\,{\%}$ de la nota final del semestre.
+
+\end{document}

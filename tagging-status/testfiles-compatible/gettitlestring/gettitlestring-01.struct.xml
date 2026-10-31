@@ -3,38 +3,41 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="Foo"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>1 
-     </section-number>
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>Foo
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <paragraph xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.009"
+       rolemaps-to="Sect"
       >
-     <paragraph xmlns="https://www.latex-project.org/ns/dflt"
+     <paragraph-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="H4"
        >
       <?MarkedContent page="1" ?>1
-     </paragraph>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </paragraph-heading>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.011"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.012"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
@@ -46,25 +49,26 @@
         <?MarkedContent page="1" ?>Foo
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </text>
-     </text-unit>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+      </text-block>
+     </semantic-para>
+    </paragraph>
+    <paragraph xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.014"
+       rolemaps-to="Sect"
       >
-     <paragraph xmlns="https://www.latex-project.org/ns/dflt"
+     <paragraph-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.015"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="H4"
        >
       <?MarkedContent page="1" ?>2
-     </paragraph>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </paragraph-heading>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.016"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.017"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
@@ -76,25 +80,26 @@
         <?MarkedContent page="1" ?>Bar
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </text>
-     </text-unit>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+      </text-block>
+     </semantic-para>
+    </paragraph>
+    <paragraph xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.019"
+       rolemaps-to="Sect"
       >
-     <paragraph xmlns="https://www.latex-project.org/ns/dflt"
+     <paragraph-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.020"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="H4"
        >
       <?MarkedContent page="1" ?>3
-     </paragraph>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </paragraph-heading>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.021"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.022"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
@@ -106,10 +111,10 @@
         <?MarkedContent page="1" ?>Bar
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </text>
-     </text-unit>
-    </Sect>
-   </Sect>
+      </text-block>
+     </semantic-para>
+    </paragraph>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>

@@ -1,0 +1,201 @@
+% spintent-03.tex
+% Pruebas de las utilidades para números: \spdiv, \spmul, \spnD, \spnM,
+% \spmcd, \spmcm, \spnZ, \spmQ, \sprazon y \spProp.
+%
+% Las lecturas en los comentarios `% doc:` son las de NVDA 2026.2 con
+% MathCAT, idénticas en mathml-SE y en mathml-AF: una por cada fórmula,
+% en el orden en que aparece.
+%
+% Compilar con: lualatex-dev spintent-03.tex
+\DocumentMetadata
+  {
+    lang=es-CL,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on,
+    tagging-setup={math/setup={mathml-SE}},
+  }
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{spanish-mathml-intent, hyperref}
+\hypersetup
+  {
+    pdfdisplaydoctitle = true,
+    pdftitle           = {spintent-03: utilidades para números},
+  }
+
+\begin{document}
+
+\section*{Utilidades para números}
+
+\subsection*{Los comandos \texttt{\textbackslash spdiv} y \texttt{\textbackslash spmul}}
+
+\begin{itemize}
+  % doc: «20 dividido 26»
+  \item División: $\spdiv{20}{26}$.
+  % doc: «se abren paréntesis 20 dividido 26 se cierran paréntesis»
+  \item División con paréntesis: $\spdiv[wrap-parens=true]{20}{26}$.
+  % doc: «20 dividido 26»
+  \item División con paréntesis sin leerlos: $\spdiv[wrap-parens=true,read-parens=false]{20}{26}$.
+  % doc: «20 dividido 26»
+  \item División con barra: $\spdiv[set-sym=slash]{20}{26}$.
+  % doc: «20 dividido por 26»
+  \item División con otra lectura: $\spdiv[read-sym=dividido-por]{20}{26}$.
+  % doc: «20 negativo dividido 5»
+  \item División con signo leído: $\spdiv[read-sign=clear]{-20}{5}$.
+  % doc: «20 por 26»
+  \item Multiplicación: $\spmul{20}{26}$.
+  % doc: «se abren paréntesis 20 por 26 se cierran paréntesis»
+  \item Multiplicación con paréntesis: $\spmul[wrap-parens=true]{20}{26}$.
+  % doc: «20 por 26»
+  \item Multiplicación con paréntesis sin leerlos: $\spmul[wrap-parens=true,read-parens=false]{20}{26}$.
+  % doc: «20 por 26»
+  \item Multiplicación con cruz: $\spmul[set-sym=cross]{20}{26}$.
+  % doc: «20 veces 26»
+  \item Multiplicación con otra lectura: $\spmul[read-sym=veces]{20}{26}$.
+  % doc: «20 negativo por 5»
+  \item Multiplicación con signo leído: $\spmul[read-sign=clear]{-20}{5}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash spnD} y \texttt{\textbackslash spnM}}
+
+\begin{itemize}
+  % doc: «divisores de n»
+  \item Divisores sin argumento: $\spnD$.
+  % doc: «divisores de 6»
+  \item Divisores de un número: $\spnD(6)$.
+  % doc: «divisores de m»
+  \item Divisores de una letra: $\spnD(m)$.
+  % doc: «divisores de 6 son 1 2 3 y 6»
+  \item Divisores con resultado: $\spnD[result=true](6)$.
+  % doc: «divisores de 12 son 1 2 puntos suspensivos»
+  \item Divisores con resultado acotado: $\spnD[result=true,result-num=2](12)$.
+  % doc: «6»
+  \item Divisores sin el concepto: $\spnD[concept=false](6)$.
+  % doc: «calcule divisores de 6»
+  \item Divisores con prefijo: $\spnD[prefix={calcule}](6)$.
+  % doc: «(silencio)»
+  \item Divisores silenciados: $\spnD[silent=true](6)$.
+  % doc: «múltiplos de n»
+  \item Múltiplos sin argumento: $\spnM$.
+  % doc: «múltiplos de 6»
+  \item Múltiplos de un número: $\spnM(6)$.
+  % doc: «múltiplos de m»
+  \item Múltiplos de una letra: $\spnM(m)$.
+  % doc: «múltiplos de 6 son 6 12 18 24 30 puntos suspensivos»
+  \item Múltiplos con resultado: $\spnM[result=true](6)$.
+  % doc: «múltiplos de 6 son 6 12 18 puntos suspensivos»
+  \item Múltiplos con resultado acotado: $\spnM[result=true,result-num=3](6)$.
+  % doc: «6»
+  \item Múltiplos sin el concepto: $\spnM[concept=false](6)$.
+  % doc: «calcule múltiplos de 6»
+  \item Múltiplos con prefijo: $\spnM[prefix={calcule}](6)$.
+  % doc: «(silencio)»
+  \item Múltiplos silenciados: $\spnM[silent=true](6)$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash spmcd} y \texttt{\textbackslash spmcm}}
+
+\begin{itemize}
+  % doc: «máximo común divisor»
+  \item Máximo común divisor sin argumento: $\spmcd$.
+  % doc: «máximo común divisor entre 2 3 y 6»
+  \item Máximo común divisor de números: $\spmcd(2, 3, 6)$.
+  % doc: «máximo común divisor entre m y n»
+  \item Máximo común divisor de letras: $\spmcd(m, n)$.
+  % doc: «máximo común divisor entre 2 3 y 6 es igual a 1»
+  \item Máximo común divisor con resultado: $\spmcd[result=true](2, 3, 6)$.
+  % doc: «mcd entre 2 3 y 6»
+  \item Máximo común divisor abreviado: $\spmcd[read-sty=terse](2, 3, 6)$.
+  % doc: «máximo común divisor entre 2 3 y 6»
+  \item Máximo común divisor en mayúsculas: $\spmcd[upper-case=true](2, 3, 6)$.
+  % doc: «2 3 y 6»
+  \item Máximo común divisor sin el concepto: $\spmcd[concept=false](2, 3, 6)$.
+  % doc: «calcule máximo común divisor entre 2 3 y 6»
+  \item Máximo común divisor con prefijo: $\spmcd[prefix={calcule}](2, 3, 6)$.
+  % doc: «(silencio)»
+  \item Máximo común divisor silenciado: $\spmcd[silent=true](2, 3, 6)$.
+  % doc: «mínimo común múltiplo»
+  \item Mínimo común múltiplo sin argumento: $\spmcm$.
+  % doc: «mínimo común múltiplo entre 2 3 y 6»
+  \item Mínimo común múltiplo de números: $\spmcm(2, 3, 6)$.
+  % doc: «mínimo común múltiplo entre m y n»
+  \item Mínimo común múltiplo de letras: $\spmcm(m, n)$.
+  % doc: «mínimo común múltiplo entre 2 3 y 6 es igual a 6»
+  \item Mínimo común múltiplo con resultado: $\spmcm[result=true](2, 3, 6)$.
+  % doc: «mcm entre 2 3 y 6»
+  \item Mínimo común múltiplo abreviado: $\spmcm[read-sty=terse](2, 3, 6)$.
+  % doc: «mínimo común múltiplo entre 2 3 y 6»
+  \item Mínimo común múltiplo en mayúsculas: $\spmcm[upper-case=true](2, 3, 6)$.
+  % doc: «2 3 y 6»
+  \item Mínimo común múltiplo sin el concepto: $\spmcm[concept=false](2, 3, 6)$.
+  % doc: «calcule mínimo común múltiplo entre 2 3 y 6»
+  \item Mínimo común múltiplo con prefijo: $\spmcm[prefix={calcule}](2, 3, 6)$.
+  % doc: «(silencio)»
+  \item Mínimo común múltiplo silenciado: $\spmcm[silent=true](2, 3, 6)$.
+\end{itemize}
+
+\subsection*{El comando \texttt{\textbackslash spnZ}}
+
+\begin{itemize}
+  % doc: «23»
+  \item Entero positivo: $\spnZ{23}$.
+  % doc: «menos 23»
+  \item Entero negativo: $\spnZ{-23}$.
+  % doc: «se abren paréntesis menos 23 se cierran paréntesis»
+  \item Entero con paréntesis: $\spnZ[wrap-parens=true]{-23}$.
+  % doc: «menos 23»
+  \item Entero con paréntesis sin leerlos: $\spnZ[wrap-parens=true,read-parens=false]{-23}$.
+  % doc: «23 negativo»
+  \item Entero con signo leído: $\spnZ[read-sign=clear]{-23}$.
+  % doc: «1000000»
+  \item Entero grande: $\spnZ{1000000}$.
+  % doc: «1000000»
+  \item Entero grande sin separación: $\spnZ[cifras-sep=false]{1000000}$.
+\end{itemize}
+
+\subsection*{El comando \texttt{\textbackslash spmQ}}
+
+\begin{itemize}
+  % doc: «2 y 5 séptimos»
+  \item Número mixto: $\spmQ{2}{5}{7}$.
+  % doc: «1 entero 5 séptimos»
+  \item Unión con \emph{entero}: $\spmQ[join-word=entero]{1}{5}{7}$.
+  % doc: «2 enteros 5 séptimos»
+  \item Unión con \emph{enteros}: $\spmQ[join-word=enteros]{2}{5}{7}$.
+  % doc: «2 y 5 séptimos»
+  \item Unión con \emph{y}: $\spmQ[join-word=y]{2}{5}{7}$.
+  % doc: «2 y 5 séptimos»
+  \item Sin semántica de entero: $\spmQ[use-spnZ=false]{2}{5}{7}$.
+  % doc: «2 y 5 séptimos»
+  \item Fracción en tamaño \emph{display}: $\spmQ[use-dfrac=true]{2}{5}{7}$.
+  % doc: «se abren paréntesis 2 y 5 séptimos se cierran paréntesis»
+  \item Con paréntesis: $\spmQ[wrap-parens=true]{2}{5}{7}$.
+  % doc: «2 y 5 séptimos»
+  \item Con paréntesis sin leerlos: $\spmQ[wrap-parens=true,read-parens=false]{2}{5}{7}$.
+  % doc: «(silencio)»
+  \item Silenciado: $\spmQ[silent=true]{2}{5}{7}$.
+\end{itemize}
+
+\subsection*{Los comandos \texttt{\textbackslash sprazon} y \texttt{\textbackslash spProp}}
+
+\begin{itemize}
+  % doc: «3 es a 4»
+  \item Razón: $\sprazon{3}{4}$.
+  % doc: «3 es a 4»
+  \item Razón en tamaño \emph{display}: $\sprazon[use-dfrac=true]{3}{4}$.
+  % doc: «3 es a 4»
+  \item Razón en línea: $\sprazon[inline=true]{3}{4}$.
+  % doc: «(silencio)»
+  \item Razón silenciada: $\sprazon[silent=true]{3}{4}$.
+  % doc: «3 es a 4 como 6 es a 8»
+  \item Proporción: $\spProp{3}{4}{6}{8}$.
+  % doc: «3 es a 4 como 6 es a 8»
+  \item Proporción en tamaño \emph{display}: $\spProp[use-dfrac=true]{3}{4}{6}{8}$.
+  % doc: «3 es a 4 como 6 es a 8»
+  \item Proporción en línea: $\spProp[inline=true]{3}{4}{6}{8}$.
+  % doc: «(silencio)»
+  \item Proporción silenciada: $\spProp[silent=true]{3}{4}{6}{8}$.
+\end{itemize}
+
+\end{document}

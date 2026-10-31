@@ -3,45 +3,43 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <title-block xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
-      rolemaps-to="Part"
+      xmlns:ARIA-1.1="http://iso.org/pdf/ssn/ARIA-1.1"
+      ARIA-1.1:role="banner"
+      rolemaps-to="Div"
      >
-    <Title xmlns="http://iso.org/pdf2/ssn"
+    <title-text xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
+       xmlns:Layout="http://iso.org/pdf/ssn/Layout"
+       Layout:TextAlign="Center"
+       rolemaps-to="Title"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.008"
-        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-        Layout:TextAlign="Center"
-        rolemaps-to="P"
-       >
-      <?MarkedContent page="1" ?>balance tagging test
-     </text>
-    </Title>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.009"
+     <?MarkedContent page="1" ?>balance tagging test
+    </title-text>
+    <title-author xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.008"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?> Some author
-    </text>
-    <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.010"
+    </title-author>
+    <title-date xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.009"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Center"
        rolemaps-to="P"
       >
      <?MarkedContent page="1" ?>May 20, 2016
-    </text>
-   </text-unit>
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-      id="ID.011"
+    </title-date>
+   </title-block>
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.010"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.012"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.011"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
        rolemaps-to="P"
@@ -50,30 +48,32 @@
      <?MarkedContent page="1" ?>lentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean fau
      <?MarkedContent page="1" ?>cibus. Morbi dolor nulla, malesuada eu, pul
      <?MarkedContent page="1" ?>vinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
-    </text>
-   </text-unit>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
-      id="ID.013"
+    </text-block>
+   </semantic-para>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.012"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.014"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.013"
        title="Using balance"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.015"
-        rolemaps-to="Span"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.014"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>1 
-     </section-number>
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>Using balance
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.016"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.015"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.017"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.016"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -84,29 +84,29 @@
       <?MarkedContent page="1" ?>pendisse ut massa. Cras nec ante. Pellen
       <?MarkedContent page="1" ?>tesque a nulla. Cum sociis natoque penati
       <?MarkedContent page="1" ?>bus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.018"
+       id="ID.017"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.019"
+        id="ID.018"
        >
-      <?MarkedContent page="1" ?>Theorem
+      <?MarkedContent page="1" ?>Theorem  
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.020"
+         id="ID.019"
         >
-       <?MarkedContent page="1" ?> 1.1
+       <?MarkedContent page="1" ?>1.1
       </Lbl>
       <?MarkedContent page="1" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.021"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.020"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.022"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.021"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
@@ -118,15 +118,15 @@
        <?MarkedContent page="1" ?>lestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euis
        <?MarkedContent page="1" ?>mod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibu
        <?MarkedContent page="1" ?>lum pellentesque felis eu massa.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.023"
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.022"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.024"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.023"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -137,57 +137,59 @@
       <?MarkedContent page="1" ?>mentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio plac
       <?MarkedContent page="1" ?>erat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta ve
       <?MarkedContent page="1" ?>hicula.
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.025"
+     </text-block>
+    </semantic-para>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.024"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.026"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.025"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>Consider the following drawing
       <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.027"
+         id="ID.026"
          rolemaps-to="Lbl"
          referenced-as="2"
         >
         <?References objects="1" ?>
-       <Span xmlns="http://iso.org/pdf2/ssn"
-          id="ID.028"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.027"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="1" ?>1
-       </Span>
+       </text-fragment>
       </footnotemark>
       <footnote xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.029"
+         id="ID.028"
          rolemaps-to="FENote"
          referenced-as="1"
         >
         <?References objects="2" ?>
        <footnotelabel xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.032"
+          id="ID.031"
           rolemaps-to="Lbl"
          >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.033"
+        <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.032"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextPosition="Sup"
+           rolemaps-to="Span"
           >
          <?MarkedContent page="1" ?>1
-        </Span>
+        </text-fragment>
        </footnotelabel>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.030"
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.029"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.031"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.030"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
@@ -199,18 +201,18 @@
          <?MarkedContent page="1" ?>tor diam, tempus id, tristique eget, sodales vel, nulla. Praesent tellus mi, condimentum sed, viverra at, con
          <?MarkedContent page="1" ?>sectetuer quis, lectus. In auctor vehicula orci. Sed pede sapien, euismod in, suscipit in, pharetra placerat, 
          <?MarkedContent page="2" ?>metus. Vivamus commodo dui non odio. Donec et felis.
-        </text>
-       </text-unit>
+        </text-block>
+       </semantic-para>
       </footnote>
       <?MarkedContent page="1" ?>. 
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.041"
+     </text-block>
+    </semantic-para>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.040"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.042"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.041"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
@@ -223,88 +225,90 @@
       <?MarkedContent page="2" ?>dui. Mauris tempor ligula sed lacus. Duis cur
       <?MarkedContent page="2" ?>sus enim ut augue. Cras ac magna. Cras nulla. Nulla egestas. Curabitur a leo. Quisque eges
       <?MarkedContent page="2" ?>tas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
-     </text>
-    </text-unit>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.043"
+     </text-block>
+    </semantic-para>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.042"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.044"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.043"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="2" ?>As a consequence, we have
       <footnotemark xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.045"
+         id="ID.044"
          rolemaps-to="Lbl"
          referenced-as="4"
         >
         <?References objects="3" ?>
-       <Span xmlns="http://iso.org/pdf2/ssn"
-          id="ID.046"
+       <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.045"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:TextPosition="Sup"
+          rolemaps-to="Span"
          >
         <?MarkedContent page="2" ?>2
-       </Span>
+       </text-fragment>
       </footnotemark>
       <footnote xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.047"
+         id="ID.046"
          rolemaps-to="FENote"
          referenced-as="3"
         >
         <?References objects="4" ?>
        <footnotelabel xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.050"
+          id="ID.049"
           rolemaps-to="Lbl"
          >
-        <Span xmlns="http://iso.org/pdf2/ssn"
-           id="ID.051"
+        <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.050"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextPosition="Sup"
+           rolemaps-to="Span"
           >
          <?MarkedContent page="2" ?>2
-        </Span>
+        </text-fragment>
        </footnotelabel>
-       <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.048"
+       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+          id="ID.047"
           rolemaps-to="Part"
          >
-        <text xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.049"
+        <text-block xmlns="https://www.latex-project.org/ns/dflt"
+           id="ID.048"
            xmlns:Layout="http://iso.org/pdf/ssn/Layout"
            Layout:TextAlign="Justify"
            rolemaps-to="P"
           >
          <?MarkedContent page="2" ?>Well, well! It appears in an unexpected place.
-        </text>
-       </text-unit>
+        </text-block>
+       </semantic-para>
       </footnote>
-     </text>
-    </text-unit>
+     </text-block>
+    </semantic-para>
     <theorem-like xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.052"
+       id="ID.051"
        rolemaps-to="Sect"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.053"
+        id="ID.052"
        >
-      <?MarkedContent page="2" ?>Lemma
+      <?MarkedContent page="2" ?>Lemma  
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.054"
+         id="ID.053"
         >
-       <?MarkedContent page="2" ?> 1.2
+       <?MarkedContent page="2" ?>1.2
       </Lbl>
       <?MarkedContent page="2" ?>.
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.055"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.054"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.056"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.055"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Justify"
          rolemaps-to="P"
@@ -313,55 +317,55 @@
        <?MarkedContent page="2" ?>suada sit amet, fermentum eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et convallis elit erat sed nulla. Donec luc
        <?MarkedContent page="2" ?>tus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non, pharetra in, velit. Integer arcu est, nonummy in, fermen
        <?MarkedContent page="2" ?>tum faucibus, egestas vel, odio.
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </theorem-like>
-   </Sect>
+   </section>
    <figures xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.004"
       rolemaps-to="Sect"
      >
     <float xmlns="https://www.latex-project.org/ns/dflt"
-       id="ID.034"
+       id="ID.033"
        rolemaps-to="Aside"
       >
      <Caption xmlns="http://iso.org/pdf2/ssn"
-        id="ID.038"
+        id="ID.037"
        >
       <Lbl xmlns="http://iso.org/pdf2/ssn"
-         id="ID.039"
+         id="ID.038"
         >
        <?MarkedContent page="2" ?>Figure 1: 
       </Lbl>
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.040"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.039"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Center"
          rolemaps-to="P"
         >
        <?MarkedContent page="2" ?>Example image
-      </text>
+      </text-block>
      </Caption>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
-        id="ID.035"
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.034"
         rolemaps-to="Part"
        >
-      <text xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.036"
+      <text-block xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.035"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextAlign="Center"
          rolemaps-to="P"
         >
        <Figure xmlns="http://iso.org/pdf2/ssn"
-          id="ID.037"
+          id="ID.036"
           alt="example image"
           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
           Layout:BBox="{ 96.51314, 606.51578, 270.86314, 737.28205 }"
          >
         <?MarkedContent page="2" ?>
        </Figure>
-      </text>
-     </text-unit>
+      </text-block>
+     </semantic-para>
     </float>
    </figures>
   </Document>

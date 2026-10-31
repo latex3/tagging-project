@@ -5058,12 +5058,13 @@
 
 - name: epigraph-keys
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   priority: 9
   tests: true
   issues: [1558]
   related-issues: [1557]
-  updated: 2026-08-26
+  comments: "Incorrectly tagged as a list."
+  updated: 2026-09-29
 
 - name: epsdice
   type: package
@@ -8184,13 +8185,14 @@
 
 - name: layout
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
-  issues: [111]
+  closed-issues: [111]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
-  updated: 2024-07-11
+  comments: "Provides alt text for diagram but needs better tagging for table of dimensions."
+  updated: 2026-09-29
 
 - name: layouts
   type: package
@@ -8519,11 +8521,11 @@
 
 - name: listings
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   subpackages: [lstpatch]
-  comments: See definition in tagpdfdocu-patches.sty.
+  comments: "Mostly compatible; open questions about frames and `mathescape`."
   references: [1]
   closed-issues: [41,70,1074]
   tests: true
@@ -8531,13 +8533,13 @@
 
 - name: listingsutf8
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/listingsutf8"
   included-in: [ol0.1]
   priority: 9
   tests: false
   comments: See listings.
-  updated: 2026-06-09
+  updated: 2026-09-29
 
 - name: listlbls
   type: package
@@ -9193,11 +9195,11 @@
   status: currently-incompatible
   included-in: [tlc3]
   priority: 8
-  issues: [1084]
+  issues: [1084,1516]
   package-repository: "https://github.com/bdtc/lwarp"
   tests: true
   comments: "Package errors if `\\DocumentMetadata` detected."
-  updated: 2026-01-26
+  updated: 2026-08-08
 
 - name: lxfonts
   type: package
@@ -10335,13 +10337,12 @@
 
 - name: nameref
   type: package
-  status: partially-compatible
+  status: compatible
   included-in: [tlc3, arxiv10, ol0.1]
   priority: 2
   issues: [1538]
   tests: true
-  comments: "Fully compatible except for theorem notes and description labels."
-  updated: 2026-08-20
+  updated: 2026-09-29
 
 - name: nar
   type: package
@@ -13936,13 +13937,14 @@
 
 - name: resizegather
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv001, ol0.02]
   priority: 2
   issues: [352]
   tests: true
   package-repository: "https://github.com/LaTeX-Package-Repositories/oberdiek"
-  updated: 2024-07-29
+  comments: "Redefinition of `displaymath` is overwritten."
+  updated: 2026-09-29
 
 - name: returntogrid
   type: package
@@ -14172,12 +14174,12 @@
 
 - name: savetrees
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   tests: true
-  comments: "Redefines `\\maketitle` and uses titlesec to redefine section commands."
-  updated: 2024-08-05
+  comments: "Redefines `\\maketitle`."
+  updated: 2026-10-21
 
 - name: scalefnt
   type: package
@@ -14918,6 +14920,15 @@
   tests: true
   updated: 2025-06-03
 
+- name: spanish-mathml-intent
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  luatex-only: true
+  package-repository: "https://github.com/pablgonz/spanish-mathml-intent"
+  updated: 2026-10-23
+
 - name: spark-otf
   type: package
   status: partially-compatible
@@ -14946,10 +14957,11 @@
   type: package
   status: currently-incompatible
   priority: 9
-  tests: true
+  tests: excluded
   issues: [1611]
+  comments: "Tests loop so excluded."
   package-repository: "https://github.com/SpectralSequences/latex"
-  updated: 2026-09-20
+  updated: 2026-09-28
 
 - name: splentinex
   type: package
@@ -17588,14 +17600,16 @@
 
 - name: titlesec
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv1, ol10]
   priority: 2
   issues: [24]
   tests: true
   tasks: needs more tests
+  comments: "The package is partially but not yet fully emulated by the latex-lab code.
+             See latex-lab-titlesec.pdf."
   package-repository: "https://github.com/jbezos/titlesec"
-  updated: 2025-12-24
+  updated: 2026-10-23
 
 - name: titletoc
   type: package
@@ -18432,12 +18446,11 @@
   status: partially-compatible
   included-in: [tlc3, arxiv5, ol10]
   priority: 2
-  comments: "verbatim environment from package overwritten by tagging code;
-            content input with `\\verbatiminput` is tagged as normal text, not Code."
-  issues: [156]
+  comments: "verbatim environment from package overwritten by tagging code."
+  issues: [156,1615]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
-  updated: 2024-07-17
+  updated: 2026-09-29
 
 - name: verbatimbox
   type: package
@@ -18896,9 +18909,10 @@
   status: currently-incompatible
   included-in: [arxiv001, ol0.1]
   priority: 7
-  comments: "Drawn rules should be tagged as Artifacts."
+  comments: "Drawn rules should be tagged as Artifacts. Content disappears with pdftex."
   tests: true
-  updated: 2024-07-26
+  issues: [1629]
+  updated: 2026-09-29
 
 - name: xifthen
   type: package
@@ -19157,12 +19171,12 @@
   included-in: [tlc3, arxiv1, ol1]
   priority: 5
   comments: "In text mode, no tagging occurs for `\\xymatrix`.
-             No luamml support. Requires luatex85 with luatex.
+             No luamml support. Requires luatex85 with luatex and output is wrong.
              unicode-math must be loaded after xy."
   issues: [899]
   closed-issues: [1275]
   tests: true
-  updated: 2025-06-09
+  updated: 2026-08-08
 
 #------------------------ YYY ----------------------------
 
@@ -19353,7 +19367,7 @@
   priority: 9
   tests: true
   package-repository: "https://github.com/gusbrs/zref-clever"
-  updated: 2026-06-14
+  updated: 2026-08-08
 
 - name: zref-counter
   ctan-pkg: zref
@@ -19477,12 +19491,12 @@
 - name: zref-titleref
   ctan-pkg: zref
   type: package
-  status: partially-compatible
+  status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/zref"
   priority: 9
   tests: true
   issues: [1408]
-  updated: 2026-09-19
+  updated: 2026-09-29
 
 - name: zref-totpages
   ctan-pkg: zref

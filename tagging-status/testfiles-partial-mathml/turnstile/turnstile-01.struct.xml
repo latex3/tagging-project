@@ -3,11 +3,11 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
       rolemaps-to="Part"
      >
-    <text xmlns="https://www.latex-project.org/ns/dflt"
+    <text-block xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        xmlns:Layout="http://iso.org/pdf/ssn/Layout"
        Layout:TextAlign="Justify"
@@ -26,11 +26,15 @@
        <AssociatedFile name="tag-AFfile1.tex" relationship="Source" media-type="application/x-tex" xmlns="">
        $\Gamma \sststile {\mathrm {LPD}}{x,y} P$
        </AssociatedFile>
-      <?MarkedContent page="1" ?>ΓLPD𝑥,𝑦𝑃
+      <?MarkedContent page="1" ?>Γ
+      <?MarkedContent page="1" ?>LPD𝑥,𝑦
+      <?MarkedContent page="1" ?>
+      <?MarkedContent page="1" ?>
+      <?MarkedContent page="1" ?>𝑃
      </Formula>
-    </text>
-   </text-unit>
-   <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    </text-block>
+   </semantic-para>
+   <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.009"
       rolemaps-to="Part"
      >
@@ -47,9 +51,12 @@
       <AssociatedFile name="tag-AFfile2.tex" relationship="Source" media-type="application/x-tex" xmlns="">
       \begin {equation*}\Gamma \stststile {\mathrm {LC}}{x,y,z,w} P\end {equation*}
       </AssociatedFile>
-     <?MarkedContent page="1" ?>ΓLC𝑥,𝑦,𝑧,𝑤𝑃
+     <?MarkedContent page="1" ?>Γ
+     <?MarkedContent page="1" ?>LC𝑥,𝑦,𝑧,𝑤
+     <?MarkedContent page="1" ?>
+     <?MarkedContent page="1" ?>𝑃
     </Formula>
-   </text-unit>
+   </semantic-para>
   </Document>
  </StructTreeRoot>
 </PDF>

@@ -3,37 +3,40 @@
   <Document xmlns="http://iso.org/pdf2/ssn"
      id="ID.002"
     >
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.006"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.007"
        title="A first section"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.008"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>1 
-     </section-number>
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>A first section
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.009"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.010"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>This is simple text.
-      <Span xmlns="http://iso.org/pdf2/ssn"
+      <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.011"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextPosition="Sup"
+         rolemaps-to="Span"
         >
        <Link xmlns="http://iso.org/pdf2/ssn"
           id="ID.012"
@@ -41,12 +44,13 @@
         <?MarkedContent page="1" ?>1
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </Span>
+      </text-fragment>
       <?MarkedContent page="1" ?> Here is a bit more text.
-      <Span xmlns="http://iso.org/pdf2/ssn"
+      <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.013"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextPosition="Sup"
+         rolemaps-to="Span"
         >
        <Link xmlns="http://iso.org/pdf2/ssn"
           id="ID.014"
@@ -54,42 +58,45 @@
         <?MarkedContent page="1" ?>2
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </Span>
+      </text-fragment>
       <?MarkedContent page="1" ?>
-     </text>
-    </text-unit>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+     </text-block>
+    </semantic-para>
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.015"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.016"
        title="Second section"
        rolemaps-to="H1"
       >
-     <section-number xmlns="https://www.latex-project.org/ns/dflt"
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.017"
-        rolemaps-to="Span"
+        rolemaps-to="Lbl"
        >
-      <?MarkedContent page="1" ?>2 
-     </section-number>
+      <?MarkedContent page="1" ?>2
+     </heading-number>
+     <?MarkedContent page="1" ?>  
      <?MarkedContent page="1" ?>Second section
-    </section>
-    <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+    </section-heading>
+    <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.018"
        rolemaps-to="Part"
       >
-     <text xmlns="https://www.latex-project.org/ns/dflt"
+     <text-block xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.019"
         xmlns:Layout="http://iso.org/pdf/ssn/Layout"
         Layout:TextAlign="Justify"
         rolemaps-to="P"
        >
       <?MarkedContent page="1" ?>Some
-      <Span xmlns="http://iso.org/pdf2/ssn"
+      <text-fragment xmlns="https://www.latex-project.org/ns/dflt"
          id="ID.020"
          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
          Layout:TextPosition="Sup"
+         rolemaps-to="Span"
         >
        <Link xmlns="http://iso.org/pdf2/ssn"
           id="ID.021"
@@ -97,32 +104,34 @@
         <?MarkedContent page="1" ?>1
         <?ReferencedObject type="Annot" page="1" ?>
        </Link>
-      </Span>
+      </text-fragment>
       <?MarkedContent page="1" ?> text for this section also with a note.
-     </text>
-    </text-unit>
-   </Sect>
-   <Sect xmlns="http://iso.org/pdf2/ssn"
+     </text-block>
+    </semantic-para>
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
       id="ID.022"
+      rolemaps-to="Sect"
      >
-    <section xmlns="https://www.latex-project.org/ns/dflt"
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.023"
        title="Notes"
        rolemaps-to="H1"
       >
      <?MarkedContent page="2" ?>Notes
-    </section>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.024"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.025"
         title="Notes for section 1"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 1
-     </subsection>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </subsection-heading>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.026"
         rolemaps-to="Part"
        >
@@ -153,19 +162,19 @@
            id="ID.031"
            rolemaps-to="LBody"
           >
-         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+         <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.032"
             rolemaps-to="Part"
            >
-          <text xmlns="https://www.latex-project.org/ns/dflt"
+          <text-block xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.033"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
             >
            <?MarkedContent page="2" ?>An endnote.
-          </text>
-         </text-unit>
+          </text-block>
+         </semantic-para>
         </itembody>
        </item>
        <item xmlns="https://www.latex-project.org/ns/dflt"
@@ -189,35 +198,36 @@
            id="ID.037"
            rolemaps-to="LBody"
           >
-         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+         <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.038"
             rolemaps-to="Part"
            >
-          <text xmlns="https://www.latex-project.org/ns/dflt"
+          <text-block xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.039"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
             >
            <?MarkedContent page="2" ?>The second endnote with two lines.
-          </text>
-         </text-unit>
+          </text-block>
+         </semantic-para>
         </itembody>
        </item>
       </itemize>
-     </text-unit>
-    </Sect>
-    <Sect xmlns="http://iso.org/pdf2/ssn"
+     </semantic-para>
+    </subsection>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
        id="ID.040"
+       rolemaps-to="Sect"
       >
-     <subsection xmlns="https://www.latex-project.org/ns/dflt"
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.041"
         title="Notes for section 2"
         rolemaps-to="H2"
        >
       <?MarkedContent page="2" ?>Notes for section 2
-     </subsection>
-     <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+     </subsection-heading>
+     <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
         id="ID.042"
         rolemaps-to="Part"
        >
@@ -248,25 +258,25 @@
            id="ID.047"
            rolemaps-to="LBody"
           >
-         <text-unit xmlns="https://www.latex-project.org/ns/dflt"
+         <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
             id="ID.048"
             rolemaps-to="Part"
            >
-          <text xmlns="https://www.latex-project.org/ns/dflt"
+          <text-block xmlns="https://www.latex-project.org/ns/dflt"
              id="ID.049"
              xmlns:Layout="http://iso.org/pdf/ssn/Layout"
              Layout:TextAlign="Justify"
              rolemaps-to="P"
             >
            <?MarkedContent page="2" ?>A third note.
-          </text>
-         </text-unit>
+          </text-block>
+         </semantic-para>
         </itembody>
        </item>
       </itemize>
-     </text-unit>
-    </Sect>
-   </Sect>
+     </semantic-para>
+    </subsection>
+   </section>
   </Document>
  </StructTreeRoot>
 </PDF>
