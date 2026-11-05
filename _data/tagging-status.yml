@@ -14451,6 +14451,14 @@
   tests: false
   updated: 2026-01-28
 
+- name: sesameseeds
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  package-repository: "https://biocil.github.io/fun/sesameseeds/"
+  updated: 2026-11-04
+
 - name: setouterhbox
   type: package
   status: partially-compatible
@@ -20134,12 +20142,11 @@
   subpackages: [ltugcomn]
   status: compatible
   priority: 9
-  issues: [1679]
-  closed-issues: [1274,1503]
+  closed-issues: [1274,1503,1679]
   tests: true
   comments: "`\\bull` still needs proper Unicode mapping. `\\ruled` in `verbatim` optional arg is not supported in the future."
   package-repository: "https://github.com/TeXUsersGroup/tugboat"
-  updated: 2026-11-02
+  updated: 2026-11-04
 
 - name: ltx-talk
   type: class
