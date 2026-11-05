@@ -1,0 +1,92 @@
+\DocumentMetadata{pdfstandard=UA-2, tagging=on, lang=fr}
+\tagpdfsetup {math/mathml/luamml/load=false}
+\documentclass[british,french]{article}
+\usepackage{babel}
+\babeltags{en = british}
+\usepackage{iftex}
+\ifluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  \frenchsetup{og=«, fg=»}
+\fi
+\title{babel-french compatible with tagging?} %Added for VeraPDF validation
+\begin{document}
+
+\tableofcontents
+
+\clearpage
+
+\part{En français!}
+
+\section{Contexte}
+
+Les versions antérieures de babel-french%
+\footnote{Les changements ont commencé avec en juin 2026.}
+redéfinissaient plusieurs commandes et environnements:
+\begin{itemize}
+\item les listes, notamment les espacements verticaux,
+\item la commande \verb+\@footnotetext+,
+\item la commande \verb+\@makecaptions+
+\end{itemize}
+et, \emph{uniquement avec le moteur} \texttt{pdftex}, rendaient actifs les
+caractères de ponctuation \texttt{: ; ! ? « »} --~ce dernier point ne changera
+pas.
+
+\begin{figure}[hb]
+  \begin{center}
+    \fbox{FIGURE}
+    \caption{Ma figure!}
+    \label{fig-xx}
+  \end{center}
+\end{figure}
+
+Voir figure~\ref{fig-xx}.
+
+Les versions actuelles~4.1b (luatex) et 3.7g (pdftex) évitent complètement
+ces redéfinitions en utilisant à la place les possibilités offertes par les
+«New Templates».
+
+Est-elle maintenant compatible? Je l’espère!
+
+\clearpage
+\part{En anglais}
+
+\begin{en}
+\section{Context}
+
+Previous versions of babel-french%
+\footnote{Changes started in June 2026.}
+redefined several commands and environments:
+\begin{itemize}
+\item lists, specially to tune vertical spaces,
+\item the \verb+\@footnotetext+ command,
+\item the \verb+\@makecaptions+ command
+\end{itemize}
+and, but \emph{only with the} \texttt{pdftex} \emph{engine}, turned
+punctuation characters \texttt{: ; ! ? « »} into active ones (this will not
+change in the future).
+
+\begin{figure}[hb]
+  \begin{center}
+    \fbox{FIGURE}
+    \caption{My picture!}
+    \label{fig:yy}
+  \end{center}
+\end{figure}
+
+See figure~\ref{fig:yy}.
+
+Current versions~4.1b (luatex) and 3.7g (pdftex) completely drop these
+re-definitions, relying instead on customisation offered by the
+``New Templates’’.
+
+Is this version compatible now? I hope so!
+\end{en}
+
+\clearpage
+\addcontentsline{toc}{part}{Appendice}
+\part*{Appendice}
+
+\end{document}

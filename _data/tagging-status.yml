@@ -1511,15 +1511,12 @@
 - name: babel-french
   ctan-pkg: babel-french
   type: library
-  status: currently-incompatible
+  status: compatible
   included-in: [tlc3]
   priority: 2
-  comments: active character issues
-  issues: [932]
-  closed-issues: [414,694]
-  tests: false
-  tasks: needs tests
-  updated: 2025-07-02
+  closed-issues: [414,694,932,1688]
+  tests: true
+  updated: 2026-11-04
 
 - name: babel-friulan
   ctan-pkg: babel-friulan
@@ -18468,8 +18465,10 @@
   status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/verbdef"
   priority: 9
+  comments: "Visible spaces don't appear properly in tags with lualatex."
+  issues: [1689]
   tests: true
-  updated: 2024-07-26
+  updated: 2026-11-04
 
 - name: verdana
   type: package
