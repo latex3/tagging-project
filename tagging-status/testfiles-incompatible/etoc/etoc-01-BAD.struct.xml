@@ -16,110 +16,87 @@
     </section-heading>
     <TOC xmlns="http://iso.org/pdf/ssn"
        id="ID.008"
+       title="toc"
       >
      <TOCI xmlns="http://iso.org/pdf/ssn"
         id="ID.009"
         title="blub"
        >
        <?References objects="1" ?>
-      <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
+      <Reference xmlns="http://iso.org/pdf/ssn"
          id="ID.010"
-         rolemaps-to="Part"
         >
-       <text-block xmlns="https://www.latex-project.org/ns/dflt"
+       <Lbl xmlns="http://iso.org/pdf2/ssn"
           id="ID.011"
-          xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-          Layout:TextAlign="Justify"
-          rolemaps-to="P"
          >
-        <Reference xmlns="http://iso.org/pdf/ssn"
-           id="ID.012"
-          >
-         <Lbl xmlns="http://iso.org/pdf2/ssn"
-            id="ID.013"
-           >
-          <?MarkedContent page="1" ?>1
-         </Lbl>
-         <?MarkedContent page="1" ?>blub
-         <?MarkedContent page="1" ?>1
-        </Reference>
-       </text-block>
-      </semantic-para>
+        <?MarkedContent page="1" ?>1
+       </Lbl>
+       <?MarkedContent page="1" ?>blub
+       <?MarkedContent page="1" ?>1
+      </Reference>
      </TOCI>
      <TOC xmlns="http://iso.org/pdf/ssn"
-        id="ID.014"
+        id="ID.012"
        >
       <TOCI xmlns="http://iso.org/pdf/ssn"
-         id="ID.015"
+         id="ID.013"
          title="blub blub"
         >
         <?References objects="2" ?>
-       <semantic-para xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.016"
-          rolemaps-to="Part"
+       <Reference xmlns="http://iso.org/pdf/ssn"
+          id="ID.014"
          >
-        <text-block xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.017"
-           xmlns:Layout="http://iso.org/pdf/ssn/Layout"
-           Layout:TextAlign="Justify"
-           rolemaps-to="P"
+        <Lbl xmlns="http://iso.org/pdf2/ssn"
+           id="ID.015"
           >
-         <Reference xmlns="http://iso.org/pdf/ssn"
-            id="ID.018"
-           >
-          <Lbl xmlns="http://iso.org/pdf2/ssn"
-             id="ID.019"
-            >
-           <?MarkedContent page="1" ?>1.1
-          </Lbl>
-          <?MarkedContent page="1" ?>blub blub
-          <?MarkedContent page="1" ?>1
-         </Reference>
-        </text-block>
-       </semantic-para>
+         <?MarkedContent page="1" ?>1.1
+        </Lbl>
+        <?MarkedContent page="1" ?>blub blub
+        <?MarkedContent page="1" ?>1
+       </Reference>
       </TOCI>
-      <section xmlns="https://www.latex-project.org/ns/dflt"
-         id="ID.020"
-         rolemaps-to="Sect"
-        >
-       <section-heading xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.021"
-          title="blub"
-          rolemaps-to="H1"
-          referenced-as="1"
-         >
-        <heading-number xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.022"
-           rolemaps-to="Lbl"
-          >
-         <?MarkedContent page="1" ?>1
-        </heading-number>
-        <?MarkedContent page="1" ?>  
-        <?MarkedContent page="1" ?>blub
-       </section-heading>
-       <subsection xmlns="https://www.latex-project.org/ns/dflt"
-          id="ID.023"
-          rolemaps-to="Sect"
-         >
-        <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
-           id="ID.024"
-           title="blub blub"
-           rolemaps-to="H2"
-           referenced-as="2"
-          >
-         <heading-number xmlns="https://www.latex-project.org/ns/dflt"
-            id="ID.025"
-            rolemaps-to="Lbl"
-           >
-          <?MarkedContent page="1" ?>1.1
-         </heading-number>
-         <?MarkedContent page="1" ?>  
-         <?MarkedContent page="1" ?>blub blub
-        </subsection-heading>
-       </subsection>
-      </section>
      </TOC>
     </TOC>
+   </section>
+   <section xmlns="https://www.latex-project.org/ns/dflt"
+      id="ID.016"
+      rolemaps-to="Sect"
+     >
+    <section-heading xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.017"
+       title="blub"
+       rolemaps-to="H1"
+       referenced-as="1"
+      >
+     <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.018"
+        rolemaps-to="Lbl"
+       >
+      <?MarkedContent page="1" ?>1
+     </heading-number>
+     <?MarkedContent page="1" ?>  
+     <?MarkedContent page="1" ?>blub
+    </section-heading>
+    <subsection xmlns="https://www.latex-project.org/ns/dflt"
+       id="ID.019"
+       rolemaps-to="Sect"
+      >
+     <subsection-heading xmlns="https://www.latex-project.org/ns/dflt"
+        id="ID.020"
+        title="blub blub"
+        rolemaps-to="H2"
+        referenced-as="2"
+       >
+      <heading-number xmlns="https://www.latex-project.org/ns/dflt"
+         id="ID.021"
+         rolemaps-to="Lbl"
+        >
+       <?MarkedContent page="1" ?>1.1
+      </heading-number>
+      <?MarkedContent page="1" ?>  
+      <?MarkedContent page="1" ?>blub blub
+     </subsection-heading>
+    </subsection>
    </section>
   </Document>
  </StructTreeRoot>
