@@ -8194,13 +8194,13 @@
 
 - name: layouts
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [tlc3, arxiv01, ol0.1]
   priority: 2
   tests: true
-  comments: "Drawn frames should be Artifacts. Pictures need Alt text."
+  comments: "Provides alt text for diagram but needs better tagging for table of dimensions."
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2024-08-05
+  updated: 2026-11-11
 
 - name: lcg
   type: package
@@ -19121,13 +19121,14 @@
 
 - name: xtab
   type: package
-  status: currently-incompatible
+  status: partially-compatible
   included-in: [ol0.02]
   priority: 2
   issues: [183]
   tests: true
+  comments: "Starts a new table at page breaks which is not ideal. Captions error."
   package-repository: "https://github.com/LaTeX-Package-Repositories/herries-press"
-  updated: 2024-07-17
+  updated: 2026-11-11
 
 - name: xtemplate
   type: package
