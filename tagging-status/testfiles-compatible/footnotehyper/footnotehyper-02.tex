@@ -1,0 +1,26 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{footnotehyper}
+\usepackage{hyperref}
+
+\title{footnotehyper tagging test - minipage}
+
+\begin{document}
+
+text\footnote{normal footnote}
+
+\begin{savenotes}
+\begin{minipage}{3cm}
+text text\footnote{first} text text\footnote{second} text text\footnote{third} text text
+\end{minipage}
+\end{savenotes}
+
+text\footnote{another normal footnote}
+
+\end{document}

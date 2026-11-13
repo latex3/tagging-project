@@ -6216,7 +6216,7 @@
   included-in: [arxiv01, ol0.1]
   priority: 4
   tests: true
-  comments: To be supported or not?
+  comments: To be supported or not? See footnotehyper for a compatible replacement.
   issues: [240]
   updated: 2024-07-22
 
@@ -6232,12 +6232,11 @@
 
 - name: footnotehyper
   type: package
-  status: currently-incompatible
+  status: compatible
   included-in: [arxiv001, ol0.02]
   priority: 7
   tests: true
-  comments: "Similar issues as footnote package."
-  updated: 2024-08-07
+  updated: 2026-11-13
 
 - name: footnoterange
   type: package
@@ -18481,10 +18480,9 @@
   status: compatible
   package-repository: "https://github.com/LaTeX-Package-Repositories/verbdef"
   priority: 9
-  comments: "Visible spaces don't appear properly in tags with lualatex."
-  issues: [1689]
+  closed-issues: [1689]
   tests: true
-  updated: 2026-11-04
+  updated: 2026-11-13
 
 - name: verdana
   type: package
