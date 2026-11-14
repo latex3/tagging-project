@@ -1,0 +1,54 @@
+\DocumentMetadata
+  {
+    lang=en-US,
+    pdfversion=2.0,
+    pdfstandard=ua-2,
+    tagging=on
+  }
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{footnotehyper}
+% based upon test_tagging_{2,3}.tex from jfbu/footnotehyper as on 2026/11/14
+\title{footnotehyper tagging test - environments}
+\makesavenoteenv[minipage*]{minipage}
+
+\begin{document}
+
+% \footnote and footnote env in paragraphs
+Text\begin{footnote}env \verb|&$^%\[}$| form\end{footnote} and
+text\begin{footnote}[57]env with optional argument
+
+and a second paragraph\end{footnote} and a mark\footnotemark
+\begin{footnotetext}text env \verb|%|\label{fn:a}\end{footnotetext}
+and \footnotemark[99]\begin{footnotetext}[99]text env opt\end{footnotetext}
+and a macro\footnote{macro form} with a reference \ref{fn:a}.
+
+% savenotes->tabular->\footnote and footnote env
+\begin{savenotes}
+\begin{tabular}{cp{3cm}}
+cell11\footnote{tab first} & cell12\begin{footnote}tab second \verb|#|\end{footnote}
+ mark\footnotemark \\
+cell21\footnote[12]{tab fourth} & cell22
+\end{tabular}
+\end{savenotes}
+\footnotetext{tab third (mark)}
+
+% minipage->\footnote and footnote env
+% minipage->savenotes->tabular->\footnote and footnote nesting
+\begin{minipage}{5cm}
+mp start\footnote{mp first}
+text\begin{footnote}mp second \verb|#|\end{footnote}
+\begin{savenotes}
+\begin{tabular}{c}
+cell11\footnote{mp tab first}\begin{footnote}mp tab second\end{footnote}
+\end{tabular}
+\end{savenotes}
+\end{minipage}
+
+% minipage saving notes (savenotes->minipage->\footnote and footnoteenv)
+\begin{minipage*}{3cm}%<--narrower
+mp*start\footnote{mp* first} text\begin{footnote}mp* second\end{footnote}
+text\begin{footnote}[123]mp* third \verb|&#}| (123)\end{footnote}\par
+\end{minipage*}
+
+\end{document}
