@@ -8104,6 +8104,26 @@
   tests: false
   updated: 2024-07-21
 
+- name: LuaCJK
+  type: package
+  status: compatible
+  priority: 9
+  luatex-only: true
+  tests: true
+  package-repository: "https://github.com/myhsia/LuaCJK"
+  updated: 2026-11-15
+
+- name: LuaCJKfntef
+  ctan-pkg: LuaCJK
+  type: package
+  status: partially-compatible
+  priority: 9
+  luatex-only: true
+  tests: true
+  comments: "Commands are missing TextDecoration attributes."
+  package-repository: "https://github.com/myhsia/LuaCJK"
+  updated: 2026-11-15
+
 - name: l3draw
   ctan-pkg: l3experimental
   type: package

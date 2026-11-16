@@ -1,0 +1,32 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+
+\usepackage{LuaCJK}
+\usepackage{lua-unicode-math}
+
+\setCJKmainfont{FandolSong-Regular.otf}
+\LuaCJKsetup{CJKmath = true}
+
+\title{LuaCJK tagging test}
+
+\begin{document}
+
+$\frac{天}{地}(玄+x)2^黄$ and 天地玄黄
+
+中文 English 中文
+
+天 地 玄 黄 宇 宙
+
+{\LuaCJKsetup{CJKspace = true}天 地 玄 黄 宇 宙}
+
+中x中
+
+\normalspacedchars{x}中x中
+
+\verb|abc汉字abc|
+
+\begin{verbatim}
+abc汉 字a bc
+\end{verbatim}
+
+\end{document}
