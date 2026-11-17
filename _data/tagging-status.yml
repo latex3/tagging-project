@@ -630,7 +630,7 @@
   included-in: [tlc3, arxiv10, ol10]
   priority: 2
   references: [1,2]
-  issues: [712,851,857,919,1033,1341,1407]
+  issues: [712,851,857,919,1033,1341,1407,1696]
   closed-issues: [28,77,803,811,846,848,850,852,859,875,981,1638]
   tests: true
   package-repository: "https://github.com/latex3/latex2e"
@@ -2582,6 +2582,16 @@
   closed-issues: [69]
   tests: true
   updated: 2025-06-13
+
+- name: bounddvi
+  ctan-pkg: gentombox
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  ptex-only: true
+  package-repository: "https://github.com/aminophen/gentombow"
+  updated: 2026-11-16
 
 - name: boxedminipage
   type: package
@@ -5606,7 +5616,7 @@
   status: partially-compatible
   included-in: [tlc3, arxiv01, ol1]
   priority: 2
-  issues: [741]
+  issues: [741,1714]
   references: [1]
   tests: true
   updated: 2024-10-18
@@ -6248,6 +6258,16 @@
   package-repository: "https://github.com/jfbu/footnotehyper"
   updated: 2026-11-13
 
+- name: footnotenosplit
+  type: package
+  subpackages: [footnotenosplit-latex,footnotenosplit-ptex]
+  status: partially-compatible
+  package-repository: "https://github.com/munepi/footnotenosplit"
+  priority: 9
+  issues: [1715]
+  tests: true
+  updated: 2026-11-16
+
 - name: footnoterange
   type: package
   status: currently-incompatible
@@ -6640,6 +6660,7 @@
   status: compatible
   priority: 9
   tests: true
+  package-repository: "https://github.com/aminophen/gentombow"
   updated: 2024-07-24
 
 - name: geometry
@@ -8506,7 +8527,7 @@
   status: currently-incompatible
   included-in: [tlc3, arxiv5, ol5]
   priority: 2
-  issues: [162,210]
+  issues: [162,210,1692]
   tests: true
   package-repository: "https://github.com/latex-lineno/lineno"
   comments: "Loses line numbers and line numbers are not tagged correctly.
@@ -13605,6 +13626,15 @@
   ptex-only: true
   updated: 2026-01-28
 
+- name: pxpgftate
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: false
+  ptex-only: true
+  package-repository: "https://github.com/munepi/pxpgftate"
+  updated: 2026-11-16
+
 - name: pxpic
   type: package
   status: partially-compatible
@@ -14653,6 +14683,15 @@
   tests: true
   updated: 2024-08-06
 
+- name: showhanmengrid
+  type: package
+  status: compatible
+  priority: 9
+  tests: true
+  luatex-only: true
+  package-repository: "https://github.com/munepi/showhanmengrid"
+  updated: 2026-11-16
+
 - name: showhyphenation
   type: package
   status: compatible
@@ -15028,6 +15067,14 @@
   priority: 9
   tests: true
   updated: 2024-08-21
+
+- name: spotxcolor
+  type: package
+  status: compatible
+  priority: 9
+  tests: false
+  package-repository: "https://github.com/munepi/spotxcolor"
+  updated: 2026-11-16
 
 - name: spreadtab
   type: package
@@ -15609,6 +15656,15 @@
   issues: [370]
   tests: true
   updated: 2024-07-31
+
+- name: tcbpagefootnote
+  type: package
+  status: partially-compatible
+  package-repository: "https://github.com/munepi/tcbpagefootnote"
+  priority: 9
+  issues: [1709]
+  tests: true
+  updated: 2026-11-16
 
 - name: tcolorbox
   type: package

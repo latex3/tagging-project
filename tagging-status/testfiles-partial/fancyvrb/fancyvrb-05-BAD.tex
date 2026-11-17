@@ -1,0 +1,26 @@
+\DocumentMetadata{tagging=on}
+\documentclass{article}
+\usepackage{fancyvrb}
+
+\title{fancyvrb tagging test -- Verbatim in block environment}
+\begin{document}
+
+\begin{center}
+\begin{Verbatim}
+    \usepackage[hmargin=3cm]{geometry}
+    \begin{document}
+          L1
+    \newgeometry{left=3cm,right=1cm,bottom=0.1cm}
+    \savegeometry{L2}
+          L2 (new, saved)
+    \restoregeometry
+          L1 (restored)
+    \newgeometry{margin=1cm,includefoot}
+          L3 (new)
+    \loadgeometry{L2}
+          L2 (loaded)
+    \end{document}
+\end{Verbatim}
+\end{center}
+
+\end{document}

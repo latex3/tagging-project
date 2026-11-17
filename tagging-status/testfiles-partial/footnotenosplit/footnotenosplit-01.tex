@@ -1,0 +1,27 @@
+\DocumentMetadata{tagging=on}
+\documentclass{book}
+\usepackage{footnotenosplit}
+\footnotetopkern=2pt
+\raggedbottom
+\makeatletter
+\renewcommand\@makefntext[1]{%
+  \kern 2\p@
+  \parindent 1em\noindent
+  \hb@xt@1.8em{\hss\@makefnmark}#1}
+\makeatother
+\def\FILLN{73}
+
+\title{footnotenosplit tagging test}
+
+\begin{document}
+\chapter{Test}
+Start of the test\footnote{An ordinary footnote that fits on the same page.}.
+\newcount\mycount \mycount=0
+\loop
+  \advance\mycount by 1
+  This is a filler line of plain English text to fill the page.\par
+\ifnum\mycount<\FILLN \repeat
+REFLINE is the reference line at the very bottom of this page\footnote{LONGNOTE: this footnote is quite long, so it cannot fit on the current page and should move to the next page as a whole. This footnote is quite long, so it cannot fit on the current page and should move to the next page as a whole.}.
+
+Text on the next page.
+\end{document}
