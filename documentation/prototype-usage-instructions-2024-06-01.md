@@ -20,12 +20,12 @@ list:
   pdfversion  = 2.0,
   pdfstandard = ua-2,
   pdfstandard = a-4f, %or a-4
-  testphase   = 
+  testphase   =
    {phase-III,
     title,
     table,
     math,
-    firstaid}  
+    firstaid}
 }
 \documentclass{....}
 ```
@@ -45,7 +45,7 @@ Tagging is then enabled by loading various modules through the
   care that the title and author are added to the XMP metadata.
 
 - The `table` module adds tagging support to tables like `tabular`,
-  `tabularx`, `tabulary` and `longtable`. 
+  `tabularx`, `tabulary` and `longtable`.
 -  The `math` module enables basic tagging of equations.
 - Finally, the `firstaid` contains small fixes of
   external packages to make them compatible with the tagging code, e.g.,

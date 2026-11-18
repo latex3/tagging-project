@@ -3,10 +3,10 @@
   { lang=en-US, pdfversion=2.0, pdfstandard=ua-2, tagging=on }
 
 % not doing math so set this to use less run resources
-  
+
 \tagpdfsetup {math/mathml/luamml/load=false}
 
-  
+
 \documentclass{article}
 
 
@@ -36,7 +36,7 @@
   ,prefix      : tokenlist = \NoValue
   ,number      : tokenlist = 4711
   ,punct       : tokenlist = .
-  ,separator-a : tokenlist = 
+  ,separator-a : tokenlist =
   ,separator-b : tokenlist = \
   ,separator-c : tokenlist = \quad
 %
@@ -44,12 +44,12 @@
 %
 % Declarations (like font setting) that can be used:
 %
-  ,heading-decls: tokenlist = 
+  ,heading-decls: tokenlist =
 %
-  ,prefix-decls : tokenlist = 
-  ,number-decls : tokenlist = 
+  ,prefix-decls : tokenlist =
+  ,number-decls : tokenlist =
   ,punct-decls  : tokenlist =
-  ,note-decls   : tokenlist = 
+  ,note-decls   : tokenlist =
   ,title-decls  : tokenlist =
 %
 %
@@ -63,17 +63,17 @@
   ,punct-format  : function{1} = \AddPunct{#1}
   ,note-format   : function{1} = (#1)
   ,title-format  : function{1} = #1
-%  
+%
 %  This is for surrounding the number with a Lbl structure for tagging (see documentation).
-%  
+%
   ,number-tag  : tokenlist = Lbl
 }
 
 \DeclareTemplateCode{threeargs}{trial}{3}{
-%  
+%
 %  Key bindings have to have standard names to work with order process, the conventions
 %  are straight forward (see documentation).
-%  
+%
   ,order       = \l__trial_order_clist
   ,prefix      = \l__trial_prefix_tl
   ,number      = \l__trial_number_tl
@@ -102,18 +102,18 @@
 %  This now implements the template.
 %
 %  Process the key/value list is any and overwrite settings:
-%  
+%
   \SetKnownTemplateKeys{threeargs}{trial}{#1}
-%  
+%
 % Set the missing variables for title and note from the mandatory arguments
-% of the template: 
-%  
+% of the template:
+%
   \tl_set:Nn \l__trial_title_tl {#2}  % save title arg
   \tl_set:Nn \l__trial_note_tl  {#3}  % save note arg
-%  
+%
 %  Then typeset the whole thing as a simple paragraph, with order
 %  key processing in the middle.
-%  
+%
   \par \noindent
   %
   \group_begin:
@@ -191,26 +191,26 @@
 \DebugTemplatesOn
 
 \head{default}
-     {Title}[default result] 
+     {Title}[default result]
 
 \head{default}
-     {Title ending in punctuation!}[no period added] 
+     {Title ending in punctuation!}[no period added]
 
 
 \mynotes{Use the optional argument for parameter changes:}
-     
+
 \head{default}
      [prefix=Chapter,separator-a=\ ,title-decls=\itshape]
      {Title}[prefix added]
 
 
 \mynotes{Use section template instead:}
-     
-\head{section}
-     {Title}[default result] 
 
 \head{section}
-     {Title ending in punctuation!}[no period added] 
+     {Title}[default result]
+
+\head{section}
+     {Title ending in punctuation!}[no period added]
 
 
 \head{section}
@@ -220,16 +220,16 @@
 
 \head{default}
     [order={title,separator-b,number,separator-c,note}]
-    {Title and number swapped}[and punctuation always dropped] 
+    {Title and number swapped}[and punctuation always dropped]
 
 
 \mynotes{Use (strange) chapter template instead:}
-     
-\head{chapter}
-     {Title}[default result] 
 
 \head{chapter}
-     {Title ending in punctuation!}[no period added] 
+     {Title}[default result]
+
+\head{chapter}
+     {Title ending in punctuation!}[no period added]
 
 
 \end{document}

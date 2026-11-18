@@ -7,10 +7,10 @@ title: "Tagging of Heading Structures in LaTeX"
 <script>
 function generatepreamble(t,e) {return e.getValue();}
       runlatex.overleafURI=null;
-      
+
       runlatex.texts ={
 	  "Open in Overleaf": "",
-	  "TeXLive.net":      "Generate Tagged PDF", 
+	  "TeXLive.net":      "Generate Tagged PDF",
 	  "Delete Output":    "Delete Output",
 	  "Compiling PDF":    "Compiling Tagged PDF",
           "Added Code":       "",
@@ -224,7 +224,7 @@ Not yet done.
 Not yet done.
 
 
-### 2c. Emulate titlesec's package options 
+### 2c. Emulate titlesec's package options
 
 The titlesec package offers a number of options that allows simple
 customizations of all document headings. These include setting font
@@ -315,5 +315,5 @@ compatible with LaTeX's tagging functionality.
 ## 3. KOMA-Script Classes
 
 
-## 4. memoir Class     
+## 4. memoir Class
 

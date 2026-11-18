@@ -20,7 +20,7 @@
        \default@ds}%
       \@use@ption}%
 % don't do the next two lines so that the \ds@... commands aren't removed:
-%  
+%
 %  \@for\CurrentOption:=\@declaredoptions\do{%
 %    \expandafter\let\csname ds@\CurrentOption\endcsname\relax}%
 %
@@ -53,20 +53,20 @@
 
 \newcommand\testdata[1]{
 \typeout{================== #1 =============}
-% 
+%
 % Load the code of one option:
-% 
+%
   \csname ds@#1\endcsname
-% 
+%
 % Generate a chapter heading in front/main/appendix/backmatter each:
-% 
+%
   \frontmatter  \chapter{Frontmatter -- #1}  Some text.   \section*{A section} More text.
   \mainmatter   \chapter{Main -- #1}         Some text.   \section{A section} More text.
   \mainmatter   \chapter{More Main -- #1}    Some text.   \section{A section} More text.
   \appendix     \chapter{Appendix -- #1}     Some text. %  \section{A section} More text.
   \backmatter   \chapter{Backmatter -- #1}   Some text. %  \section{A section} More text.
 %
-% Undo the \appendix settings for next trial  
+% Undo the \appendix settings for next trial
 %
   \def\@chapapp{\chaptername}%
   \protected\def\thechapter{\thespecialchapter\arabic}%

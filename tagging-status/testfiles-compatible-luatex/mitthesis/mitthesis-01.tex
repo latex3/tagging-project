@@ -3,7 +3,7 @@
 % !TEX encoding = UTF-8 Unicode
 
 % {% raw %}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This TEST FILE should be run with mitthesis.cls version 1.19 (current CTAN release) or a later version.
 %
@@ -23,12 +23,12 @@
 %
 % Date: 11 February 2025
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\DocumentMetadata 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DocumentMetadata
 {
 	tagging=on,
 	lang		= en-US,
-	pdfstandard = ua-2,% a-4f,% 
+	pdfstandard = ua-2,% a-4f,%
 	pdfversion  = 2.0,
 }
 
@@ -37,21 +37,21 @@
 
 % The rest is the MIT-thesis template file, as in CTAN.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % This file is MIT-Thesis.tex, a LaTeX template for formatting an MIT thesis with the mitthesis class.
 %
 % Version: 1.19, 2025/01/28
 %
-% Author: John H. Lienhard, copyright 2025. Reuse under the MIT license: https://ctan.org/license/mit 
+% Author: John H. Lienhard, copyright 2025. Reuse under the MIT license: https://ctan.org/license/mit
 
 % Documentation is here: https://ctan.org/pkg/mitthesis
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[fontset=lmodern]{mitthesis}% fontset=newtx, fontset=libertine, fontset=libertinus, fontset=lmodern, 
-%						fontset=newtx-sans-text, fontset=fira-newtxsf, fontset=heros-stix2, fontset=stix2, 
+\documentclass[fontset=lmodern]{mitthesis}% fontset=newtx, fontset=libertine, fontset=libertinus, fontset=lmodern,
+%						fontset=newtx-sans-text, fontset=fira-newtxsf, fontset=heros-stix2, fontset=stix2,
 %						fontset=lmodern,fontset=lucida
 %
 % option [twoside]		gives facing-page behavior for printing; omitting twoside will eliminate even-numbered blank pages.
@@ -77,13 +77,13 @@
 \usepackage{lipsum}
 \IfPackageAtLeastTF{lipsum}{2021/09/20}{\setlipsum{auto-lang=false}}{}
 
-%% Table related packages  
+%% Table related packages
 
 \usepackage{booktabs}% publication quality tables (https://ctan.org/pkg/booktabs)
 
 \usepackage{array}% Additional options for column formats (https://ctan.org/pkg/array)
 
-\usepackage{dcolumn}% For alignment of numbers on the decimal place (https://ctan.org/pkg/dcolumn) 
+\usepackage{dcolumn}% For alignment of numbers on the decimal place (https://ctan.org/pkg/dcolumn)
   \newcolumntype{d}[1]{D{.}{.}{#1}}% use with dcolumn package. Note: dcolumns are set in math mode.
   % syntax: d{x.y} where x is max number of digits before decimal and y is max number after.
 
@@ -115,15 +115,15 @@
         \renewbibmacro{in:}{} % Removes "In:" for articles
       }{}
     }
-    
+
 %% IEEE style citations and references
 % \usepackage[style=ieee,maxbibnames=10,sorting=none]{biblatex}% style=ext-numeric-comp,articlein=false,giveninits=true
 %	 \DefineBibliographyStrings{english}{url= \textsc{url} ,  }% replaces the IEEE default "[Online]. Available" by "URL"
 
-%% author-year style citations and references 
+%% author-year style citations and references
 %% use \parencite, not \cite, when you want "(Author, year)"
 %% The sample files are not set up to include parentheses.
-% \usepackage[style=authoryear, maxbibnames=10]{biblatex} 
+% \usepackage[style=authoryear, maxbibnames=10]{biblatex}
 
 
 \addbibresource{mitthesis-sample.bib}%% <== change to YOUR bib file <= CHANGE
@@ -140,23 +140,23 @@
 %%%%%%%%%%  Option to use natbib   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\RequirePackage[numbers,sort&compress]{natbib}
- 
+
 %%% add bibliography to table of contents
 %\apptocmd{\bibliography}{\addcontentsline{toc}{chapter}{\protect\textbf{\bibname}}}{}{}
 
 %%% You can use this to rename the bibliography section
 %\renewcommand{\bibname}{References}
 
-%%% To adjust space between bibliography items 
+%%% To adjust space between bibliography items
 %\setlength\bibsep{4pt plus 1pt minus 1pt}
 %   change 4pt to something else; don't drop last two lengths (they are stretchable "glue")
 
 
 %%%%%%%%%%  Option for "double spacing" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Back in the typewriter era, double spaced lines were convenient for editing with a pencil. 
-%% In typography, the separation between lines is called "leading", and it is usually set in 
-%% proportion to the font size (i.e., when the font is loaded).  If you really feel the need 
+%% Back in the typewriter era, double spaced lines were convenient for editing with a pencil.
+%% In typography, the separation between lines is called "leading", and it is usually set in
+%% proportion to the font size (i.e., when the font is loaded).  If you really feel the need
 %% to change the line separation, the most attractive results will be obtained by changing the
 %% leading in proportion to the the current font size, rather than just doubling the space.
 
@@ -176,16 +176,16 @@
 
 %%%%%%%%%%%  Metadata  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Most of the document metadata is created automatically. 
+% Most of the document metadata is created automatically.
 % The following items should be adjusted to match your work. <================= !!!!!!!!!!
 
 \hypersetup{%
 	pdfsubject={Template for writing MIT theses with the mitthesis class},
-	% Change this to briefly state topic of your thesis 
-% 
+	% Change this to briefly state topic of your thesis
+%
 	pdfkeywords={Massachusetts Institute of Technology, MIT},
 	% Add keywords that will help search engines and libraries to find your work.
-	% Includes the name[s] of the author[s] 
+	% Includes the name[s] of the author[s]
 	% (If you used \DocumentMetadata at line 14, you can just put "\CopyrightAuthor," for the names.)
 %
 	pdfurl={},
@@ -288,7 +288,7 @@
 % Also, if you prefer to keep the text toward the top of the page with most white space at the bottom, you
 % can use this command to squash all of the vertical glue (stretchy space) with this command:
 %
-% \Squash 
+% \Squash
 %
 % This command is useful when the text has not already reach the bottom of the page, since the glue gets squashed automatically
 % when the page is too full.
@@ -300,22 +300,22 @@
 
 %%%%%%%%% Contents that you need to write follows! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \includeonly{acknowledgments,biography,chapter1,chapter2,...,appendixa,...} 
+% \includeonly{acknowledgments,biography,chapter1,chapter2,...,appendixa,...}
 %   for usage of includeonly, see https://latexref.xyz/_005cinclude-_0026-_005cincludeonly.html
 
 %%% Frontmatter (write this material in the mentioned files)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% This page is optional. Edit the file committee_members.tex 
+% This page is optional. Edit the file committee_members.tex
 %\include{committee_members}
 \clearpage\input{committee_members.ltx}\clearpage
 
-% The abstract environment creates all the required headings and footers. 
+% The abstract environment creates all the required headings and footers.
 % You only need to the text of the abstract in the file abstract.tex
 \begin{abstract}
 	\input{abstract.ltx}% use \input rather than \include because we're inside an environment
 \end{abstract}
 
-%\include{acknowledgments}% acknowledgments.tex (.tex extension is presumed by \include) 
+%\include{acknowledgments}% acknowledgments.tex (.tex extension is presumed by \include)
 \clearpage\input{acknowledgments.ltx}\clearpage
 
 %\include{biography}% biography.tex (optional, see https://libraries.mit.edu/distinctive-collections/thesis-specs/#format)
@@ -347,7 +347,7 @@
 
 %%% Bibliography (biblatex)  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\defbibheading{bibintoc}{\chapter*{#1}\addcontentsline{toc}{backmatter}{\refname}} 
+\defbibheading{bibintoc}{\chapter*{#1}\addcontentsline{toc}{backmatter}{\refname}}
 % this sets the title of contents name for bibliography to \refname (= References)
 % change "backmatter" to "chapter" if you prefer a bold face entry in the table of contents
 
@@ -364,5 +364,5 @@
 %\bibliographystyle{plainnat}
 %\bibliography{mitthesis-sample.bib}
 
-\end{document} 
+\end{document}
 % {% endraw %}

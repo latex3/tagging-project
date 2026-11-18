@@ -7,10 +7,10 @@ title: "Tagging Examples"
 <script>
 function generatepreamble(t,e) {return e.getValue();}
       runlatex.overleafURI=null;
-      
+
       runlatex.texts ={
 	  "Open in Overleaf": "",
-	  "TeXLive.net":      "Generate Tagged PDF", 
+	  "TeXLive.net":      "Generate Tagged PDF",
 	  "Delete Output":    "Delete Output",
 	  "Compiling PDF":    "Compiling Tagged PDF",
           "Added Code":       "",
@@ -70,7 +70,7 @@ experiment and change the examples. The resulting TeX files are _not_
 stored and all generated PDF are deleted from the server after an
 hour. The current public release of `lualatex-dev` from
 [TeXLive](https://www.tug.org/texlive/) is used to process all
-examples. 
+examples.
 
 </div>
 
@@ -87,14 +87,14 @@ examples.
 ## 2. Configuration of headings
 
 * headings have an extend optional argument
-* they can be configured by editing an instance 
+* they can be configured by editing an instance
 
 ```latex
 {% include_relative tutorial-example-section.tex %}
 ```
 
 ## 3. Tagging of graphics
-Graphics can be 
+Graphics can be
 * images with an alternative text
 * images representing text given as actual text
 * artifacts
@@ -107,7 +107,7 @@ Graphics can be
 ## 4. Tagging of tables
 
 * headers must be marked
-* multi rows must be marked 
+* multi rows must be marked
 * the package multirow is not yet compatible
 
 ```latex
@@ -140,10 +140,10 @@ ISO/TS 32005. The code warns if it detects a faulty nesting.
 ## 8. Errors from unbalanced para structures
 
 Paragraphs are automatically tagged, but not every `\par` should lead
-to a structure so the code suppresses the tagging in a number of places. 
+to a structure so the code suppresses the tagging in a number of places.
 The code errors if this leads to an inconsistent number of begins and ends of
-paragraph structures. 
- 
+paragraph structures.
+
 ```latex
 {% include_relative tutorial-error-para.tex %}
 ```

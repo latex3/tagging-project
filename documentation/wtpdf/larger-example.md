@@ -35,7 +35,7 @@ necessary document metadata, including main  document language, PDF version and 
 ISO-standardized subset(s) of PDF to which the document should comply.
 The final `tagging-setup` key controls the details of the tagging used:
 use Associated Files or Structure Elements for formulas,
-and the `verbatim-alt` test module (which improves the reading of verbatim code---this is still under development and not yet fully integrated). 
+and the `verbatim-alt` test module (which improves the reading of verbatim code---this is still under development and not yet fully integrated).
 
 ## Structure elements or Associated Files
 

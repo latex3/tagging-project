@@ -17,7 +17,7 @@
   \textrm{The quick brown fox jumped over the lazy dog}}
 \newlength{\bracecusplen}
 \settowidth{\bracecusplen}{$\braceru\bracelu$}
- 
+
 \begin{document}
 
 $\aoverbrace{\FnD}$
@@ -65,5 +65,5 @@ $\aunderbrace
 
 \newbracespec{a}{@{\hspace{-.5\bracecusplen}}D}%
 \newbracespec{z}{D@{\hspace{-.5\bracecusplen}}}%
-$\aunderbrace[l1r]{\FnD}[a1z]_{\text{\rlap{far left}} & \text{\llap{far right}}}$      
+$\aunderbrace[l1r]{\FnD}[a1z]_{\text{\rlap{far left}} & \text{\llap{far right}}}$
 \end{document}

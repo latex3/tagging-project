@@ -7,7 +7,7 @@ extrahead: youtube-head
 # Accessible STEM documents
 ## Generating Well-Tagged PDF from LaTeX
 
-STEM publishing requires precision; the content's visual appearance must precisely and reliably reflect the author's intention. Historically, this concern was limited simply to the content's visual appearance. To ensure equal access to users with disabilities, today it's vital to ensure that similar precision is applied to alternative representations and usage of the content. 
+STEM publishing requires precision; the content's visual appearance must precisely and reliably reflect the author's intention. Historically, this concern was limited simply to the content's visual appearance. To ensure equal access to users with disabilities, today it's vital to ensure that similar precision is applied to alternative representations and usage of the content.
 
 As an additional benefit, well-tagged PDF is optimized for reuse by software capable of directly leveraging the author's intent as expressed via PDF's tag tree.
 

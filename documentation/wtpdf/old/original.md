@@ -12,7 +12,7 @@ shows a small typical LaTeX article set in two columns with tables and figures.
 
 Here we show the effect of tagging on generated speech. All examples
 use the test release of NVDA 2025 (enabling interfacing to MathML
-readings), along with public versions of MathCat,  Foxit and 
+readings), along with public versions of MathCat,  Foxit and
 Acrobat Reader on Windows 11.
 
 To present something of the experience to users not familiar with screen

@@ -58,25 +58,25 @@ The following list gives an overview about different packages related to tagging
 
 + [`ltnews.pdf`](https://texdoc.org/serve/ltnews/0) (or `ltnews<number>.pdf`)
    LaTeX news (one for each LaTeX release) discusses relevant changes and enhancements in LaTeX in particular also updates and improvements for tagging of documents
-   
+
 + [`documentmetadata-support-code.pdf`](https://texdoc.org/serve/documentmetadata-support-code.pdf/0)
   Contain details about `\DocumentMetadata` and the various supported settings, e.g. pdfstandard, lang, pdfversion
-  
+
 + [`latex-lab-graphic.pdf`](https://texdoc.org/serve/latex-lab-graphic/0)
   Details on graphics tagging - including description for artifact, alt, actualtext, samples for tikz
-  
+
 + [`latex-lab-math.pdf`](https://texdoc.org/serve/latex-lab-math/0)
   Details on math tagging and special treatment capturing math contents
-  
+
 + [`latex-lab-table.pdf`](https://texdoc.org/serve/latex-lab-table/0)
   Details on table tagging - which table types are supported, which not; headers and rows, columns, etc.
-  
+
 + [`blocks-doc.pdf`](https://texdoc.org/serve/blocks-doc/0) (or [`blocks-code.pdf`](https://texdoc.org/serve/blocks-code/0))
   How to declare and customize block-level environments, such as `center` or lists, etc.
-  
+
 + [`l3pdfmeta.pdf`](https://texdoc.org/serve/l3pdfmetadata/0)
   Details on PDF-standards (from the perspective of LaTeX implementation)
-  
+
 + [`tagpdf.pdf`](https://texdoc.org/serve/tagpdf/0)
   Documentation of low-level tagging commands and methods; description of `\tagpdfsetup` and the key/values it supports
 

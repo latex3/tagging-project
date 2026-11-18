@@ -2,9 +2,9 @@
 
 
 
-This [tagging-project repository](https://github.com/latex3/tagging-project/) is meant to track issues and suggestions related to the "LaTeX Tagged PDF" 
-project. The code for this project is split over several other repositories 
-([latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to  keep any more general topics or issues that cut across the different repositories in a single place. 
+This [tagging-project repository](https://github.com/latex3/tagging-project/) is meant to track issues and suggestions related to the "LaTeX Tagged PDF"
+project. The code for this project is split over several other repositories
+([latex2e](https://github.com/latex3/latex2e), [latex3](https://github.com/latex3/latex3), [tagpdf](https://github.com/latex3/tagpdf), ... to name a few) and so this here is a convenient place to  keep any more general topics or issues that cut across the different repositories in a single place.
 
 ### Documentation for the LaTeX Tagged PDF project
 

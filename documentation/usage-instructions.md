@@ -87,7 +87,7 @@ list:
   pdfstandard = ua-2,
   pdfstandard = a-4f, %or a-4
   tagging=on,
-  tagging-setup={math/setup=mathml-SE} 
+  tagging-setup={math/setup=mathml-SE}
 }
 \documentclass{article}
 \begin{document}
@@ -97,17 +97,17 @@ abc
 ```
 The first three keys in the example set important document metadata,
 like the language and the standards the
-document should comply with. By default the PDF version will be set to 2.0. 
+document should comply with. By default the PDF version will be set to 2.0.
 The `pdfversion` key can be used to change this.
 
 Using `\DocumentMetaData` will load code to  support new interfaces.
 
 Tagging is then enabled through the `tagging` key.
-The value `on` will then enable tagging. The value `off` will disable it. 
+The value `on` will then enable tagging. The value `off` will disable it.
 
 The `tagging-setup` key allows configuration of the the tagging. It accepts all keys that can also be used in `\tagpdfsetup`. The value `math/setup=mathml-SE` shown in the above example is explained below.
 
- 
+
 
 ## Handling graphics in the document
 
@@ -266,7 +266,7 @@ A matrix equation.
 
 ### MathML Structure Element Tagging
 
-To use MathML Structure Element tagging you may use the `tagging-setup` key with 
+To use MathML Structure Element tagging you may use the `tagging-setup` key with
 the value `math/setup=mathml-SE` key as shown below. This suppresses
 adding the Associated Files, you can use `tagging-setup={math/setup={mathml-SE,mathml-AF}}` if you want to enable both methods.
 
@@ -453,4 +453,4 @@ provided by DANTE and Duallab respectively.
 Please do not over use the services, they aren't set up to process heavy loads
 but are intended just to run small examples in order to show how to use it on your local machine.</p>
 
-</details> 
+</details>

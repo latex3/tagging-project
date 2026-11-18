@@ -46,7 +46,7 @@ There are many ways to try to make PDF documents accessible. To highlight the im
 
 The recordings were made on Windows 11 using the test release of NVDA 2025 (which enables reading of MathML) and version 0.6.8-rc.9 of the MathCat plugin. Testing included three PDF viewers, Foxit, Adobe Acrobat and Firefox/PDF.js.
 
-For the recording of a [tagged PDF generated from LaTeX](#latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree. 
+For the recording of a [tagged PDF generated from LaTeX](#latex-tag), we used a PDF 2.0 file, which allows us to include MathML in an accessible manner. These recordings showcase two distinct routes to including MathML in PDF 2.0: PDF's Associated Files feature and MathML structure elements in the tags tree.
 
 Access the [LaTeX source](larger-example#example-doc) of the test file used to make these recordings.
 
@@ -115,7 +115,7 @@ The untagged PDF is basically incomprehensible.
  - The paragraph "Apart from ..." is read strangely: many words are suddenly read letter by letter
  - The footnote text is read as part of the column so appears in the middle of the paragraph text that is broken across the columns (here between the hyphenated word  _"docu-ment"_)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuation and other symbols are not read
- - Mathematics and text are read without a pause even if a new paragraph starts 
+ - Mathematics and text are read without a pause even if a new paragraph starts
  - The matrices are read top down, e.g., _"thirteen twenty four"_ without any indication that these are matrices
  - The lists are not announced as lists and their nesting is not made clear
  - Again, the sentence "Here we reference item 2" is read partially letter by letter (seems to be caused by the fact that the sentence contains a link)
@@ -177,7 +177,7 @@ The untagged PDF was auto-tagged by Adobe Acrobat Pro on Windows. The resulting 
  - Hyphenated words such as mathemat-ics are not rejoined correctly, e.g., read as _"mathemat I C S"_ (this is a reader issue which we expect to be resolved soon)
  - The footnote text is not correctly identified and read as part of the main paragraph in the middle of the hyphenated word _"docu- ment"_ (does not happen with the MacOS auto-tagged version)
  - Reading of math is garbled as sub- and superscripts are not announced and punctuation and other symbols are not read
- - Mathematics and text are read without a pause even if a new paragraph starts 
+ - Mathematics and text are read without a pause even if a new paragraph starts
  - The separate equations (on a single line) are joined and read without any pause despite the space in the source
  - Equation labels are read as numbers so difficult to understand
  - The matrices have a very strange reading order starting with _"Twenty-one three one four one one ..."_ and none of the matrices are announced
@@ -232,7 +232,7 @@ The sample document shown in the video was compiled with the above configuration
 #### Observations
 
  - The normal text structures are all handled correctly
- - The footnote is correctly identified and the footnote text is read in a suitable place 
+ - The footnote is correctly identified and the footnote text is read in a suitable place
  - All mathematics are read correctly and can be understood
  - Graphics are not dropped; instead their Alt text is read
  - Punctuation, symbols, and newlines are announced in verbatim text
@@ -398,7 +398,7 @@ Using ChatGPT4 a similar query produced a markdown document immediately displaye
 
 #### Summary
 
-ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination. 
+ChatGPT 4 does some things better than the trials we did with ChatGPT 3 and on the surface this appears to be a workable path to make an untagged PDF accessible. However, the tendency to rewrite the document content (which is in the nature of LLMs), the dropping of important information (such as graphics and labels) means that this approach is questionable---the fact that it "reads well" while at the same time presents corrupted information is a dangerous combination.
 
 ### Foxit Reading GitHub display of ChatGPT 4 markdown {#chatgpt4markdown}
 - Foxit Reader 2025.3.0.28197 (Windows 11)
@@ -445,16 +445,16 @@ Pronunciation of some technical words was improved by using the following
 settings in the NVDA speech dictionary:
 
 | Comment            | Pattern   | Replacement | case | Type       |
-|----                |----       |----         |----  |----        | 
+|----                |----       |----         |----  |----        |
 |                    | LaTeX     | lay-tech    | on   | whole word |
 |                    | alignat   | align-at    | on   | whole word |
 |                    | flalign   | f-l-align   | on   | whole word |
-|                    | notag     | no-tag      | on   | whole word | 
-|                    | bibTEX    | bib-tech    | off  | whole word | 
-|                    | unordered | un-ordered  | off  | whole word | 
+|                    | notag     | no-tag      | on   | whole word |
+|                    | bibTEX    | bib-tech    | off  | whole word |
+|                    | unordered | un-ordered  | off  | whole word |
 |                    | TeX       | tech        | on   | whole word |
 |                    | tugboat   |  tug-boat   | off  | Anywhere   |
-| Ignore softhyphens | ­         |             | off  | Anywhere   | 
+| Ignore softhyphens | ­         |             | off  | Anywhere   |
 | Hyphenation help   | cluding   | clueding    | off  | whole word |
 
 The _Ignore softhyphens_ row contains an invisible softhyphen character in the second column replaced by "nothing", which improved the reading of hyphenated words in the Foxit/NVDA workflow.

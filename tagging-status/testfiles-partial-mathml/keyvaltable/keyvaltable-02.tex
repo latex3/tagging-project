@@ -18,7 +18,7 @@
 \NewKeyValTable[backend=tabular,norules,norowbg,
                 headformat=\bfseries]
    {cities}{name; country; visited; note: hidden}
-   
+
 \kvtNewRowStyle{H}{}
 \NewKeyValTable{overview}{city: ; country: ; people: ; visited: hidden}
 \NewKeyValTable{visits}{country: ; city: ; people: hidden; visited: align=c}
@@ -63,7 +63,7 @@
 \note{one more with prio change, prio=low}
 My notes: \ShowCollectedTable{notes} And more text.
 \note[bg=blue!10]{and some afterthought}
-    
+
 \begin{KeyValTable}{autonum}
   \Row{text=First row} \Row{text=Second row, line=\thekvtRow*}
   \Row[uncounted]{text=Interlude, line=--} \Row{text=Last row}

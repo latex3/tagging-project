@@ -57,19 +57,19 @@ with an `Alt` attribute, and to add an empty `/Span` with an `/Alt` to announce 
 * Braille is severely impacted, the braille for the character names rather than the characters is generated.
 * Navigating with a screen reader by character is similarly impacted.
 * The Braille for the first line in the original source code (using default NVDA Braille settings)
-   
+
    <pre>
    main( ) {
    &#x280D; &#x2801; &#x280A; &#x281D; &#x2810; &#x2823; &#x00A0; &#x2810; &#x281C; &#x00A0; &#x2838; &#x2823; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
    </pre>
-   
+
    Becomes the two lines
-   
+
    <pre>
    new line  main open paren   close p
    &#x00A0; &#x281D; &#x2811; &#x283A; &#x00A0; &#x2807; &#x280A; &#x281D; &#x2811; &#x00A0; &#x00A0; &#x280D; &#x2801; &#x280A; &#x281D; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2809; &#x2807; &#x2815; &#x280E; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
-   
-   paren   open brace  
+
+   paren   open brace
    &#x280F; &#x2801; &#x2817; &#x2811; &#x281D; &#x00A0; &#x00A0; &#x00A0; &#x2815; &#x280F; &#x2811; &#x281D; &#x00A0; &#x2803; &#x2817; &#x2801; &#x2809; &#x2811; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0; &#x00A0;
    </pre>
 
