@@ -1,0 +1,37 @@
+\DocumentMetadata{tagging=on}
+\documentclass{smfbook}
+\title[short title]{Some title}
+\alttitle{alt title}
+\author[short author]{Some author}
+\address{line1\\line2}
+\email{blub@blub.com}
+\urladdr{some-address}
+
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\frontmatter
+\begin{abstract}
+Some abstract
+\end{abstract}
+\begin{altabstract}
+alt abstract
+\end{altabstract}
+\subjclass{foo}
+\keywords{keywords}
+\altkeywords{alt keywords}
+\translator{name name}
+\thanks{some thanks text}
+\dedicatory{dedication text}
+\maketitle % one parent-child warnings
+\tableofcontents % many parent-child warnings
+\mainmatter
+\chapter{Some chapter}
+\section{Some section}
+Main body of the text
+\begin{thm}
+Some theorem
+\end{thm}
+\backmatter
+Bibliography, index, etc.
+\end{document}

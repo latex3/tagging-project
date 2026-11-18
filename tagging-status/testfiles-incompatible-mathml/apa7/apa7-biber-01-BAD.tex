@@ -1,0 +1,116 @@
+% adapted from package-provided shortsample.tex
+\DocumentMetadata{tagging=on}
+\documentclass[jou,notimes]{apa7}
+
+\usepackage[american]{babel}
+\ifdefined\Uchar
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \usepackage{lum-termes}
+\else
+\usepackage{newtx}
+\fi
+
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
+\title{Sample APA-Style Document Using the \textsf{apa7} Package}
+\shorttitle{A short title}
+
+\authorsnames{Daniel A. Weiss}
+\authorsaffiliations{Department of Psychology, A University Somewhere}
+
+\leftheader{Weiss}
+
+\abstract{This demonstration paper uses the \textsf{apa7} \LaTeX\
+  class to format the document in compliance with the 7th Edition of
+  the American Psychological Assocation's \textit{Publication Manual.}
+  The references are managed using \textsf{biblatex}.}
+
+\keywords{APA style, demonstration}
+
+\authornote{\addORCIDlink{Daniel A. Weiss}{0000-0000-0000-0000}, Department of Psychology, A University Somewhere
+
+Changes of Affiliations and other info here to describe what needs to be said}
+
+\begin{document}
+\maketitle
+We begin with \textcite{Shotton1989}.  We can also cite this work in
+parenthesis, like this: \parencite{Lassen2006}.
+
+Note the use of five heading levels throughout this demonstration
+Method section.
+
+\section{Method}
+\subsection{Participants}
+We had a lot of people in this study, show in Figure \ref{fig:Figure1}.
+
+\begin{figure}[!htp]
+    \caption{This is my figure caption.}
+    \includegraphics[alt=an example image,width=1.4in]{example-image}
+    \figurenote{This is an awesome figure.}
+    \label{fig:Figure1}
+\end{figure}
+
+\subsection{Materials}
+Several materials were used for this project.  Some of them were
+already created for prior research.
+
+\subsubsection{Paper-and-Pencil Instrument}
+We used an instrument that we found to be highly successful.
+
+\paragraph{Reliability}
+The reliability of this instrument is extraordinary.
+
+\paragraph{Validity}
+We now discuss the validity of our instrument.
+
+\subparagraph{Face validity} The face validity is exceptionally
+strong.  Everyone should be impressed.
+
+\subparagraph{Construct validity} Also very strong.
+
+\subsection{Design}
+This section describes the study's design.
+
+\subsection{Procedure}
+The procedure was fairly straightforward, yet required
+attention to detail.
+
+\section{Results}
+Table \ref{tab:ComplexTable} contains some sample data.  Our
+statistical prowess in analyzing these data is unmatched.
+
+\begin{table}[htbp]
+  \vspace*{2em}
+  \begin{threeparttable}
+    \caption{A Complex Table}
+    \label{tab:ComplexTable}
+    \begin{tabular}{@{}lrrr@{}}         \toprule
+    Distribution type  & \multicolumn{2}{l}{Percentage of} & Total number   \\
+                       & \multicolumn{2}{l}{targets with}  & of trials per  \\
+                       & \multicolumn{2}{l}{segment in}    & participant    \\ \cmidrule(r){2-3}
+                                    &  Onset  &  Coda            &          \\ \midrule
+    Categorical -- onset\tabfnm{a}  &    100  &     0            &  196     \\
+    Probabilistic                   &     80  &    20\tabfnm{*}  &  200     \\
+    Categorical -- coda\tabfnm{b}   &      0  &   100\tabfnm{*}  &  196     \\ \midrule
+    \end{tabular}
+    \tablenote{All data are approximate.
+
+            \tabfnt{a}Categorical may be onset.
+            \tabfnt{b}Categorical may also be coda.
+
+            \tabfnt{*}\textit{p} < .05.
+            \tabfnt{**}\textit{p} < .01.
+         }
+  \end{threeparttable}
+\end{table}
+
+\section{Discussion}
+This is a lengthy and erudite discussion.  It demonstrates amazing
+skill in interpreting the results for the masses.
+
+\printbibliography
+
+\end{document}
