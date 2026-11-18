@@ -192,7 +192,7 @@ function filterRows() {
  const keywds = input.value.toUpperCase().split(' ');
  const tbdy= document.getElementById("tblbdy");
  const trs = tbdy.getElementsByTagName("tr");
- 
+
  // Loop through rows, and hide those who don't match all terms in the query
  for (let i = 0; i != trs.length; i++) {
   const rowtxt = trs[i].textContent.toUpperCase();

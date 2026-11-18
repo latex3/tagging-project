@@ -5,12 +5,12 @@
 %% The original source files were:
 %%
 %% indxcite.dtx  (with options: `dcu')
-%% 
+%%
 %%    Package `indxcite' for use with LaTeX2e
 %%    Copyright (C) 1996 James Ashton (email `James.Ashton@anu.edu.au').
 %%    All rights reserved.  You may not alter the contents of this file
 %%    unless you also change its name.
-%% 
+%%
  % Modified for use with the indxcite package.
  % dcu_ic.bst - harvard bibliography style indexing extension.
  %
@@ -1448,6 +1448,6 @@ FUNCTION {end.bib}
 }
 
 EXECUTE {end.bib}
-%% 
+%%
 %%
 %% End of file `dcu_ic.bst'.

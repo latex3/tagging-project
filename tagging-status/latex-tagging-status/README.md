@@ -15,16 +15,16 @@ the status with
 \DocumentMetadata{check-tagging-status}
 
 
-LaTeX Project  
+LaTeX Project
 Licence [LPPL](https://www.latex-project.org/lppl/lppl-1-3c/)
 
 ```
-Code Status                 Meaning  
----- -----                  -------  
-4   compatible             Works without any issues when tagging is enabled  
-3   partially-compatible   Currently partially compatible, see comments column  
-2   currently-incompatible Currently incompatible with the tagging code, may be updated eventually  
-1   no-support             Incompatible with the tagging code, not expected to be supported  
+Code Status                 Meaning
+---- -----                  -------
+4   compatible             Works without any issues when tagging is enabled
+3   partially-compatible   Currently partially compatible, see comments column
+2   currently-incompatible Currently incompatible with the tagging code, may be updated eventually
+1   no-support             Incompatible with the tagging code, not expected to be supported
 0   unknown                Status is not known
 100 unlisted               Subpackage entry
 ```

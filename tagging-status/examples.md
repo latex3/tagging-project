@@ -7,10 +7,10 @@ title: "LaTeX tagged PDF Examples"
 <script>
 function generatepreamble(t,e) {return e.getValue();}
       runlatex.overleafURI=null;
-      
+
       runlatex.texts ={
 	  "Open in Overleaf": "",
-	  "TeXLive.net":      "Generate Tagged PDF", 
+	  "TeXLive.net":      "Generate Tagged PDF",
 	  "Delete Output":    "Delete Output",
 	  "Compiling PDF":    "Compiling Tagged PDF",
           "Added Code":       "",
@@ -95,7 +95,7 @@ Included here to test multi-file tests.
 
 
 {%
-assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgments.ltx,chapter1.ltx,appendixb.ltx,biography.ltx,mitthesis-01.bbl" | split: "," 
+assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgments.ltx,chapter1.ltx,appendixb.ltx,biography.ltx,mitthesis-01.bbl" | split: ","
 %}
 
 <script>

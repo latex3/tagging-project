@@ -1229,7 +1229,7 @@ FUNCTION {article}
   new.block
   crossref missing$
     { journal field.or.null
-      format.vol.num.pages 
+      format.vol.num.pages
       format.date empty$
 	'skip$
 	{ duplicate$ empty$
