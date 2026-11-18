@@ -14431,6 +14431,15 @@
   tests: false
   updated: 2026-02-10
 
+- name: scsnowman
+  type: package
+  status: partially-compatible
+  priority: 9
+  package-repository: "https://github.com/aminophen/scsnowman"
+  tests: true
+  comments: "No way to add Alt text or ActualText to snowmen."
+  updated: 2026-11-17
+
 - name: scrwfile
   type: package
   status: compatible
@@ -14903,6 +14912,15 @@
   issues: [1343]
   tests: true
   updated: 2026-05-11
+
+- name: smfthm
+  ctan-pkg: smflatex
+  type: package
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1723]
+  updated: 2026-11-17
 
 - name: snapshot
   type: package
@@ -19768,6 +19786,25 @@
   tests: true
   updated: 2026-10-31
 
+- name: aomart
+  type: class
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1720]
+  updated: 2026-11-17
+
+- name: apa7
+  type: class
+  status: currently-incompatible
+  priority: 9
+  comments: "`jou` mode does not error but tagging is far from ideal. `man` and
+             `stu` modes error outright. Loads incompatible threeparttable package."
+  issues: [1577]
+  tests: true
+  package-repository: "https://github.com/dan-weiss/apa7-latex-cls-source"
+  updated: 2026-11-17
+
 - name: article
   type: class
   status: compatible
@@ -20466,6 +20503,24 @@
   tests: true
   comments: "Tagging of title and headers is not ideal."
   updated: 2026-06-29
+
+- name: smfart
+  ctan-pkg: smflatex
+  type: class
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1722]
+  updated: 2026-11-17
+
+- name: smfbook
+  ctan-pkg: smflatex
+  type: class
+  status: currently-incompatible
+  priority: 9
+  tests: true
+  issues: [1721]
+  updated: 2026-11-17
 
 - name: standalone
   type: class

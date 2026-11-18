@@ -1,0 +1,33 @@
+\DocumentMetadata{tagging=on}
+\documentclass{smfart}
+\title[short title]{Some title}
+\alttitle{alt title}
+\author[short author]{Some author}
+\address{line1\\line2}
+\email{blub@blub.com}
+\urladdr{some-address}
+
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{abstract}
+Some abstract
+\end{abstract}
+\begin{altabstract}
+alt abstract
+\end{altabstract}
+\subjclass{foo} % errors
+\keywords{keywords} % errors
+\altkeywords{alt keywords} % errors
+\translator{name name}
+\thanks{some thanks text} % errors
+\dedicatory{dedication text}
+\maketitle
+\tableofcontents % errors
+Main body of the text
+\section{Some section}
+\begin{thm}
+Some theorem
+\end{thm}
+Bibliography, index, etc.
+\end{document}
