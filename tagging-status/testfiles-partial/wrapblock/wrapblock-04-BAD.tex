@@ -1,0 +1,16 @@
+\DocumentMetadata{tagging=on, pdfstandard=ua-2, lang=en}
+\documentclass{article}
+\usepackage{kantlipsum}
+\usepackage{wrapblock}
+\title{wrapblock tagging test -- footnote}
+\begin{document}
+
+\kant[1]
+\begin{wrapblock}{text\footnotemark}
+\kant[2-3]
+more text
+\end{wrapblock}
+\footnotetext{abc}
+\kant[4]
+
+\end{document}

@@ -1,0 +1,36 @@
+% !TeX TXS-program:compile = txs:///lualatex
+\DocumentMetadata{tagging=on, pdfstandard=ua-2, lang=en}
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapblock}
+\newcommand\filler{The text of the item runs beside the image and is narrowed like any other paragraph of the block. }
+\title{wrapblock tagging test -- lists}
+\begin{document}
+
+\section{A list inside the block}
+
+\begin{wrapblock}{\includegraphics[width=4cm]{example-image-a}}
+A short introduction to the list.
+\begin{itemize}
+  \item \filler
+  \item \filler
+  \begin{enumerate}
+    \item \filler
+    \item \filler\filler
+  \end{enumerate}
+  \item \filler\filler\filler
+\end{itemize}
+\end{wrapblock}
+
+\section{A block at the start of an item}
+
+\begin{enumerate}
+  \item An ordinary item. \filler
+  \item \begin{wrapblock}[side=l]{\includegraphics[width=3cm]{example-image-b}}
+    The block comes first in this item: the label stays in the margin, beside the image. \filler\filler\filler\filler
+  \end{wrapblock}
+  \item The next item is full width again. \filler
+\end{enumerate}
+
+
+\end{document}

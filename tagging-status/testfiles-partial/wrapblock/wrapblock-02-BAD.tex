@@ -1,0 +1,29 @@
+\DocumentMetadata{tagging=on, pdfstandard=ua-2, lang=en}
+\documentclass{article}
+\usepackage{kantlipsum}
+\usepackage{wrapblock}
+\title{wrapblock tagging test -- minipage}
+\begin{document}
+
+\kant[1]
+\begin{wrapblock}{%
+  \begin{minipage}{0.3\textwidth}
+  \kant[5][1]
+  \end{minipage}}
+\kant[2-3]
+\end{wrapblock}
+\kant[4]
+
+\kant[1]
+\begin{wrapblock}{%
+  \begin{minipage}{0.3\textwidth}
+  \begin{itemize}
+  \item first
+  \item second
+  \end{itemize}
+  \end{minipage}}
+\kant[2-3]
+\end{wrapblock}
+\kant[4]
+
+\end{document}
