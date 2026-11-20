@@ -18783,6 +18783,18 @@
              as `\\pic`s within a `tikzpicture` given Alt text."
   updated: 2026-08-28
 
+- name: wrapblock
+  type: package
+  status: partially-compatible
+  priority: 9
+  comments: "Can currently only handle simple text and images being wrapped.
+             `\\parbox`, `minipage`, `tabular`, and footnotes are not tagged correctly
+             in the wrapped content."
+  external-issues: ["https://github.com/antnardo/wrapblock/issues/1"]
+  tests: true
+  package-repository: "https://github.com/antnardo/wrapblock"
+  updated: 2026-11-19
+
 - name: wrapfig
   type: package
   status: currently-incompatible
