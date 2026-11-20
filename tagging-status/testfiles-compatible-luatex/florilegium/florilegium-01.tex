@@ -8,6 +8,7 @@
 \documentclass{article}
 \usepackage[a4paper,left=68mm,right=22mm]{geometry}
 \usepackage[grown,sections]{florilegium}
+\usepackage{graphicx}
 
 \title{florilegium tagging test}
 
@@ -19,5 +20,7 @@ it grows a garden of its own.
 
 \clearpage
 
-text \florilegiumornament{leaf}
+text \florilegiumornament[alt=A leaf]{leaf}
+
+more text \florilegiumornament[actualtext=🍃]{leaf}
 \end{document}
