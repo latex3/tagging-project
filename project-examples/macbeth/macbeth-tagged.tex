@@ -138,7 +138,7 @@
 %		This is an emphasis block for at the start of an Act, and not inside a Scene
 %UF changed doenpe problem with grouping
 \newcommand{\SD}[1]{%\setlength\topsep{-0.5ex}
-\begin{trivlist}[begin-vspace=-0.5ex]\item[]\textit{\tagstructbegin{tag=SceneDescription}\tagmcbegin{}#1\tagmcend\tagstructend}\end{trivlist}}
+\begin{trivlist}[begin-vspace=-0.5ex]\item[]\textit{\tagstructbegin{tag=SceneDescription}\tagmcbegin{}\def\\{ \pdffakespace\newline}#1\tagmcend\tagstructend}\end{trivlist}}
 %		This is a compact italicised emphasis block: reduced space above and below and no indentation.
 %UF avoid group
 \newcommand{\IB}[1]{\begin{smallquote}\item[]#1\end{smallquote}}
@@ -168,10 +168,22 @@
 \pagenumbering{Roman} %to have unique package numbers
 \HideHeaderLine
 \vspace*{\stretch{2}}
-\HRule
-\begin{center}\Huge\itshape\bfseries \tagstructbegin{title=The Tragedy Of Macbeth}THE TRAGEDY OF MACBETH\tagstructend
-\ (1606)\end{center}
-\HRule
+
+
+\SuspendTagging\HRule\ResumeTagging
+
+{\Huge
+
+  \tagstructbegin{tag=title-block}
+  \tagstructbegin{tag=title-text,title=The Tragedy Of Macbeth}\tagmcbegin{}%
+  \centerline{\itshape\bfseries THE TRAGEDY OF MACBETH\ (1606)}
+  \tagmcend{}%
+  \tagstructend
+  \tagstructend
+
+ }
+
+\SuspendTagging\HRule\ResumeTagging
 
 \vspace*{\stretch{5}}
 \begin{center}\includegraphics[scale=1,alt=William Shakespeare]{william-shakespeare.jpg}\end{center}
