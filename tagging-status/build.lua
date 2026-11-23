@@ -18,12 +18,18 @@ checkconfigs = {
 }
 checkruns = 4
 checksuppfiles = {"texmf.cnf"}
+specialformats = specialformats or {}
+specialformats["latex-dev"] = specialformats["latex-dev"] or
+  {
+    luatex = {binary="luahbtex",format = "lualatex-nightly"},
+    pdftex = {binary="pdftex",format = "pdflatex-nightly"},
+  }
 
-installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
-                                            "*.eps","*eps-converted-to.pdf",
-                                            "*svg-tex.pdf","*.pdf_tex","*.ods",
-                                            "*.png","*.svg","*.mf","*.bbl","*.bst",
-					    "*mathml.html"}
+installfiles = installfiles or {"*.ltx","*.sty","*.cls","*.bib",
+                                "*.eps","*eps-converted-to.pdf",
+                                "*svg-tex.pdf","*.pdf_tex","*.ods",
+                                "*.png","*.svg","*.mf","*.bbl","*.bst",
+                                "*mathml.html"}
 
 
 local pdf_structure do
