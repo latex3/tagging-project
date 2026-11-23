@@ -17,6 +17,7 @@ checkconfigs = {
   'config-unchecked-luatex'
 }
 checkruns = 4
+checksuppfiles = {"texmf.cnf"}
 
 installfiles       = installfiles       or {"*.ltx","*.sty","*.cls","*.bib",
                                             "*.eps","*eps-converted-to.pdf",

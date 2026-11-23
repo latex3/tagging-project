@@ -1,0 +1,7 @@
+% adjustments for latex-nightly
+TEXINPUTS.latex-dev       = $TEXMFDOTDIR;$TEXMF/tex/{latex-nightly,latex-dev,latex,generic,}//
+TEXINPUTS.pdflatex-dev    = $TEXMFDOTDIR;$TEXMF/tex/{latex-nightly,latex-dev,latex,generic,}//
+TEXINPUTS.lualatex-dev    = $TEXMFDOTDIR;$TEXMF/tex/{latex-nightly,latex-dev,lualatex,latex,luatex,generic,}//
+TEXINPUTS.dvilualatex-dev = $TEXMFDOTDIR;$TEXMF/tex/{latex-nightly,latex-dev,lualatex,latex,luatex,generic,}//
+LUAINPUTS.lualatex-dev    = $TEXMFDOTDIR;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXMF/tex/{latex-nightly,latex-dev,lualatex,latex,luatex,generic,}//
+LUAINPUTS.dvilualatex-dev = $TEXMFDOTDIR;$TEXMF/scripts/{$progname,$engine,}/{lua,}//;$TEXMF/tex/{latex-nightly,latex-dev,lualatex,latex,luatex,generic,}//
