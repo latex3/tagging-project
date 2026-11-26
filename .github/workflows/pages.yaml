@@ -31,6 +31,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
+        with:
+          include-hidden-files: 'true'
 
   # Deployment job
   deploy:
