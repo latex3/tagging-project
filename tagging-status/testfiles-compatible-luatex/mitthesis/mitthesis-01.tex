@@ -50,7 +50,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[fontset=lmodern]{mitthesis}% fontset=newtx, fontset=libertine, fontset=libertinus, fontset=lmodern,
+\documentclass{mitthesis}% fontset=newtx, fontset=libertine, fontset=libertinus, fontset=lmodern,
 %						fontset=newtx-sans-text, fontset=fira-newtxsf, fontset=heros-stix2, fontset=stix2,
 %						fontset=lmodern,fontset=lucida
 %
@@ -208,8 +208,8 @@
 
 \DeclareMathOperator{\Erf}{erf}
 \DeclareMathOperator{\Erfc}{erfc}
-\DeclarePairedDelimiterXPP\erf[1]{\Erf\mkern1mu}(){}{#1}% increase to 2mu with stix2 font
-\DeclarePairedDelimiterXPP\erfc[1]{\Erfc\mkern1mu}(){}{#1}
+\DeclarePairedDelimiterXPP\erf[1]{\Erf\mkern1mu}{(}{)}{}{#1}% increase to 2mu with stix2 font
+\DeclarePairedDelimiterXPP\erfc[1]{\Erfc\mkern1mu}{(}{)}{}{#1}
 
 
 %%%%%%%%%%%%%%  End preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
