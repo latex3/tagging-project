@@ -95,7 +95,7 @@ Included here to test multi-file tests.
 
 
 {%
-assign mitfiles = "lmodern.ltx,committee_members.ltx,abstract.ltx,acknowledgments.ltx,chapter1.ltx,appendixb.ltx,biography.ltx,mitthesis-01.bbl" | split: ","
+assign mitfiles = "committee_members.ltx,abstract.ltx,acknowledgments.ltx,chapter1.ltx,appendixb.ltx,biography.ltx,mitthesis-01.bbl" | split: ","
 %}
 
 <script>
