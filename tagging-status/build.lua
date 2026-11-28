@@ -73,7 +73,7 @@ test_types = {
     rewrite = function(source, normalized, engine, errorcode)
       local output_file = assert(io.open(normalized, 'w'))
       if errorcode[1] == 0 then
-        local success, err = pdf_structure(output_file, '--xml', source)
+        local success, err = pdf_structure(output_file, '--xml', '--hideid', source)
         if not success then
           output_file:write(string.format('<run-error err=%q />\n', err:gsub(".*: ","")))
         end

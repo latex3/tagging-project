@@ -14,10 +14,10 @@ or
 [Discussions](https://github.com/latex3/tagging-project/discussions).
 It also hosts sources for the tagging project [GitHub pages site ](https://latex3.github.io/tagging-project) and the tagging test suite.
 
-If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories 
-sub-issues can then be opened (by us) in those repositories and linked back, 
-or, if such changes are confined to a single repository, the issue could be 
-transferred there – whatever is more appropriate. 
+If an [issue](https://github.com/latex3/tagging-project/issues) that is recorded here requires changes in the other repositories
+sub-issues can then be opened (by us) in those repositories and linked back,
+or, if such changes are confined to a single repository, the issue could be
+transferred there – whatever is more appropriate.
 
 ##
 ## License

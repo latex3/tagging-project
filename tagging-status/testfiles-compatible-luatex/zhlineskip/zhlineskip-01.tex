@@ -6,12 +6,13 @@
     tagging=on,
   }
 \documentclass{article}
-\usepackage[fontset=fandol]{ctex}
+\usepackage[fontset=none]{ctex}
 \usepackage{lua-unicode-math}
 \usepackage[
   bodytextleadingratio = 3,
   footnoteleadingratio = 2,
   ]{zhlineskip}
+\setCJKmainfont{LXGWZhuqueFangsong-Regular.ttf}
 \newenvironment{english} % 新建“英文”段落环境
 {\addvspace\medskipamount} % 段前间距，上文段落需结束
 {\par\addvspace\medskipamount}
