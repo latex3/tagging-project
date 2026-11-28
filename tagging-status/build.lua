@@ -17,7 +17,7 @@ checkconfigs = {
   'config-unchecked-luatex'
 }
 checkruns = 4
-checksuppfiles = {"texmf.cnf"}
+
 specialformats = specialformats or {}
 specialformats["latex-dev"] = specialformats["latex-dev"] or
   {
