@@ -184,7 +184,7 @@ function runtest_tasks(name,run)
      end
    end
    local lualatexcmd="lualatex -interaction=nonstopmode"
-   if options.dev then lualatexcmd="lualatex-dev -interaction=nonstopmode" end
+   if options.dev then lualatexcmd="lualatex -fmt=lualatex-nightly -interaction=nonstopmode" end
    if extra_lualatex_run then
      extra_runcmd(lualatexcmd  .. " " .. name,testdir) -- generate MathML
      rm(testdir,name .. ".toc")
